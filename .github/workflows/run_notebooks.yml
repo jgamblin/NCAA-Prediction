@@ -25,14 +25,17 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install Jupyter
+      run: |
+        pip install jupyter
+
     - name: Run All_Games notebook
       run: |
-        pip install nbconvert
-        jupyter nbconvert --to notebook --execute All_Games.ipynb --output All_Games.ipynb
+        jupyter nbconvert --to notebook --execute All_Games.ipynb --output All_Games.ipynb --ExecutePreprocessor.kernel_name=python3
 
     - name: Run NCAA_Predictions notebook
       run: |
-        jupyter nbconvert --to notebook --execute NCAA_Predictions.ipynb --output NCAA_Predictions.ipynb
+        jupyter nbconvert --to notebook --execute NCAA_Predictions.ipynb --output NCAA_Predictions.ipynb --ExecutePreprocessor.kernel_name=python3
 
     - name: Commit and push changes
       run: |
