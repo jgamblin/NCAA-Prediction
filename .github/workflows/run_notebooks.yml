@@ -1,0 +1,43 @@
+name: Run Notebooks
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # 0600 CST
+  push:
+    branches:
+      - main
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run All_Games notebook
+      run: |
+        pip install nbconvert
+        jupyter nbconvert --to notebook --execute /Users/gamblin/Code/NCAA-Prediction/All_Games.ipynb --output /Users/gamblin/Code/NCAA-Prediction/All_Games.ipynb
+
+    - name: Run NCAA_Predictions notebook
+      run: |
+        jupyter nbconvert --to notebook --execute /Users/gamblin/Code/NCAA-Prediction/NCAA_Predictions.ipynb --output /Users/gamblin/Code/NCAA-Prediction/NCAA_Predictions.ipynb
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add .
+        git commit -m 'Automated update of notebooks'
+        git push
