@@ -28,11 +28,11 @@ jobs:
     - name: Run All_Games notebook
       run: |
         pip install nbconvert
-        jupyter nbconvert --to notebook --execute /Users/gamblin/Code/NCAA-Prediction/All_Games.ipynb --output /Users/gamblin/Code/NCAA-Prediction/All_Games.ipynb
+        jupyter nbconvert --to notebook --execute All_Games.ipynb --output All_Games.ipynb
 
     - name: Run NCAA_Predictions notebook
       run: |
-        jupyter nbconvert --to notebook --execute /Users/gamblin/Code/NCAA-Prediction/NCAA_Predictions.ipynb --output /Users/gamblin/Code/NCAA-Prediction/NCAA_Predictions.ipynb
+        jupyter nbconvert --to notebook --execute NCAA_Predictions.ipynb --output NCAA_Predictions.ipynb
 
     - name: Commit and push changes
       run: |
