@@ -3,20 +3,20 @@
 This project aims to predict the outcomes of NCAA basketball games using machine learning models. The code leverages the `scikit-learn` library for building and evaluating the models, and the `cbbpy` library for scraping game data.
 
 ## High Confidence Predictions:
-| Game Day       | Home Team                         | Away Team                   | Predicted Winner                  |   Win Probability |
-|:---------------|:----------------------------------|:----------------------------|:----------------------------------|------------------:|
-| March 13, 2025 | Duke Blue Devils                  | Georgia Tech Yellow Jackets | Duke Blue Devils                  |              0.97 |
-| March 13, 2025 | St. John's Red Storm              | Butler Bulldogs             | St. John's Red Storm              |              0.95 |
-| March 13, 2025 | Utah State Aggies                 | UNLV Rebels                 | Utah State Aggies                 |              0.94 |
-| March 13, 2025 | Houston Cougars                   | Colorado Buffaloes          | Houston Cougars                   |              0.94 |
-| March 13, 2025 | New Mexico Lobos                  | San José State Spartans     | New Mexico Lobos                  |              0.94 |
-| March 13, 2025 | Creighton Bluejays                | DePaul Blue Demons          | Creighton Bluejays                |              0.92 |
-| March 13, 2025 | Akron Zips                        | Bowling Green Falcons       | Akron Zips                        |              0.92 |
-| March 13, 2025 | Wisconsin Badgers                 | Northwestern Wildcats       | Wisconsin Badgers                 |              0.92 |
-| March 13, 2025 | Louisville Cardinals              | Stanford Cardinal           | Louisville Cardinals              |              0.92 |
-| March 13, 2025 | George Washington Revolutionaries | Fordham Rams                | George Washington Revolutionaries |              0.91 |
+| Game Day       | Home Team              | Away Team                  | Predicted Winner       |   Win Probability |
+|:---------------|:-----------------------|:---------------------------|:-----------------------|------------------:|
+| March 14, 2025 | Grand Canyon Lopes     | California Baptist Lancers | Grand Canyon Lopes     |              0.95 |
+| March 14, 2025 | Memphis Tigers         | Wichita State Shockers     | Memphis Tigers         |              0.92 |
+| March 14, 2025 | Norfolk State Spartans | Morgan State Bears         | Norfolk State Spartans |              0.91 |
+| March 14, 2025 | UC San Diego Tritons   | UC Santa Barbara Gauchos   | UC San Diego Tritons   |              0.9  |
+| March 14, 2025 | Akron Zips             | Toledo Rockets             | Akron Zips             |              0.89 |
+| March 14, 2025 | North Texas Mean Green | Tulsa Golden Hurricane     | North Texas Mean Green |              0.88 |
+| March 14, 2025 | Auburn Tigers          | Ole Miss Rebels            | Auburn Tigers          |              0.87 |
+| March 14, 2025 | Utah Valley Wolverines | Seattle U Redhawks         | Utah Valley Wolverines |              0.86 |
+| March 14, 2025 | Quinnipiac Bobcats     | Iona Gaels                 | Quinnipiac Bobcats     |              0.83 |
+| March 14, 2025 | UC Irvine Anteaters    | Cal Poly Mustangs          | UC Irvine Anteaters    |              0.81 |
 
-Model Accuracy For 2025: 0.7536
+Model Accuracy For 2025: 0.7765
 
 ## Description
 
@@ -34,4 +34,4 @@ The main functionalities of this project include:
 - [scikit-learn](https://scikit-learn.org/stable/): A machine learning library for Python that provides simple and efficient tools for data mining and data analysis.
 - [cbbpy](https://pypi.org/project/cbbpy/): A Python library for scraping NCAA basketball data.
 
-**Last updated:** March 13, 2025 at 12:33 PM
+**Last updated:** March 14, 2025 at 12:38 PM
