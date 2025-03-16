@@ -3,17 +3,10 @@
 This project aims to predict the outcomes of NCAA basketball games using machine learning models. The code leverages the `scikit-learn` library for building and evaluating the models, and the `cbbpy` library for scraping game data.
 
 ## High Confidence Predictions:
-| Game Day       | Home Team            | Away Team                    | Predicted Winner     |   Win Probability |
-|:---------------|:---------------------|:-----------------------------|:---------------------|------------------:|
-| March 15, 2025 | Yale Bulldogs        | Princeton Tigers             | Yale Bulldogs        |              0.89 |
-| March 15, 2025 | Memphis Tigers       | Tulane Green Wave            | Memphis Tigers       |              0.86 |
-| March 15, 2025 | Liberty Flames       | Jacksonville State Gamecocks | Liberty Flames       |              0.85 |
-| March 15, 2025 | Bryant Bulldogs      | Maine Black Bears            | Bryant Bulldogs      |              0.85 |
-| March 15, 2025 | St. John's Red Storm | Creighton Bluejays           | St. John's Red Storm |              0.82 |
-| March 15, 2025 | Houston Cougars      | Arizona Wildcats             | Houston Cougars      |              0.8  |
-| March 15, 2025 | Cornell Big Red      | Dartmouth Big Green          | Cornell Big Red      |              0.8  |
+| Game Day   | Home Team   | Away Team   | Predicted Winner   | Win Probability   |
+|------------|-------------|-------------|--------------------|-------------------|
 
-Model Accuracy For 2025: 0.7507
+Model Accuracy For 2025: 0.7638
 
 ## Description
 
@@ -31,4 +24,4 @@ The main functionalities of this project include:
 - [scikit-learn](https://scikit-learn.org/stable/): A machine learning library for Python that provides simple and efficient tools for data mining and data analysis.
 - [cbbpy](https://pypi.org/project/cbbpy/): A Python library for scraping NCAA basketball data.
 
-**Last updated:** March 15, 2025 at 12:40 PM
+**Last updated:** March 16, 2025 at 12:39 PM
