@@ -21,4 +21,4 @@ The main functionalities of this project include:
 - [scikit-learn](https://scikit-learn.org/stable/): A machine learning library for Python that provides simple and efficient tools for data mining and data analysis.
 - [cbbpy](https://pypi.org/project/cbbpy/): A Python library for scraping NCAA basketball data.
 
-**Last updated:** September 11, 2025 at 12:43 PM
+**Last updated:** September 12, 2025 at 12:39 PM
