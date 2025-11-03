@@ -1,4 +1,4 @@
-name: Run Notebooks
+name: Run NCAA Predictions
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  run-notebooks:
+  run-predictions:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,22 +25,18 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Install Jupyter
+    - name: Fetch NCAA game data
       run: |
-        pip install jupyter
+        python collect_data.py
 
-    - name: Run All_Games notebook
+    - name: Generate predictions
       run: |
-        jupyter nbconvert --to notebook --execute All_Games.ipynb --output All_Games.ipynb --ExecutePreprocessor.kernel_name=python3
-
-    - name: Run NCAA_Predictions notebook
-      run: |
-        jupyter nbconvert --to notebook --execute NCAA_Predictions.ipynb --output NCAA_Predictions.ipynb --ExecutePreprocessor.kernel_name=python3
+        python run_predictions.py
 
     - name: Commit and push changes
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add .
-        git commit -m 'Automated update of notebooks'
+        git commit -m 'Automated update of NCAA predictions' || echo "No changes to commit"
         git push
