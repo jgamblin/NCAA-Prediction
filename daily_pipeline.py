@@ -141,6 +141,9 @@ def main():
         predictor.fit(train_df)
         predictions_df = predictor.predict(upcoming)
         
+        # Sort by confidence (highest first) for better readability
+        predictions_df = predictions_df.sort_values('confidence', ascending=False)
+        
         # Save predictions
         predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
         predictions_df.to_csv(predictions_path, index=False)

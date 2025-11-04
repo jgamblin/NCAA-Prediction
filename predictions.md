@@ -1,6 +1,6 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-04 08:58:27 UTC
+**Last Updated**: 2025-11-04 09:05:03 UTC
 
 ---
 
@@ -24,6 +24,12 @@
 - **Home Teams Favored**: 35
 - **Away Teams Favored**: 1
 - **Average Confidence**: 57.1%
+
+### 📋 View All Games
+
+**[→ See all 36 predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**
+
+The CSV includes game IDs, team names, probabilities, confidence scores, and game URLs.
 
 ---
 

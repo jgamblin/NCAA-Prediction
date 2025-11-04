@@ -89,6 +89,14 @@ def generate_predictions_md():
             md.append(f"- **Average Confidence**: {avg_conf:.1%}")
             md.append("")
             
+            # Link to full CSV
+            md.append("### 📋 View All Games")
+            md.append("")
+            md.append(f"**[→ See all {len(today_games)} predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**")
+            md.append("")
+            md.append("The CSV includes game IDs, team names, probabilities, confidence scores, and game URLs.")
+            md.append("")
+            
         else:
             md.append(f"*No predictions available for {today}*")
             md.append("")
