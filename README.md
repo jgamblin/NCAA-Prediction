@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python3 daily_pipeline.py
 
 # View today's predictions
-python3 view_predictions.py
+python3 game_prediction/view_predictions.py
 ```
 
 ## 📊 Model Performance
@@ -37,21 +37,35 @@ python3 view_predictions.py
 
 ```
 NCAA-Prediction/
-├── collect_data.py           # Main script: Run data collection
-├── run_predictions.py        # Main script: Run predictions
+├── daily_pipeline.py         # 🚀 Main script: Full daily automation
+├── predictions.md            # 📊 Today's predictions (auto-updated)
 ├── requirements.txt          # Python dependencies
-├── data/                     # All data files (CSV, plots)
-│   ├── Completed_Games.csv
-│   ├── Upcoming_Games.csv
-│   ├── NCAA_Game_Predictions.csv
-│   └── feature_importance.png
-├── data_collection/          # Data fetching scripts
-│   ├── all_games.py         # Fetch games from ncaahoopR_data
+├── data/                     # All data files (CSV, JSON)
+│   ├── Completed_Games.csv       # Historical game results
+│   ├── Upcoming_Games.csv        # Scheduled games
+│   ├── NCAA_Game_Predictions.csv # Model predictions
+│   ├── Accuracy_Report.csv       # Prediction tracking
+│   └── Model_Tuning_Log.json     # Tuning history
+├── data_collection/          # Data fetching modules
+│   ├── espn_scraper.py      # ESPN live data scraper
+│   ├── all_games.py         # ncaahoopR historical data
+│   ├── collect_data.py      # Data orchestrator
 │   └── check_seasons.py     # List available seasons
-├── model_training/           # ML model scripts
-│   ├── ncaa_predictions_v2.py  # Enhanced model (recommended)
-│   └── ncaa_predictions.py     # Legacy model
-└── game_prediction/          # Future prediction utilities
+├── model_training/           # ML training modules
+│   ├── simple_predictor.py  # 🆕 Main prediction model
+│   ├── tune_model.py        # 🆕 Weekly hyperparameter tuning
+│   ├── ncaa_predictions_v2.py  # Enhanced 30-feature model
+│   └── ncaa_predictions.py     # Legacy 15-feature model
+├── game_prediction/          # Prediction utilities
+│   ├── generate_predictions_md.py  # Markdown generator
+│   ├── track_accuracy.py           # Accuracy tracker
+│   ├── analyze_betting_lines.py    # 🆕 Vegas comparison
+│   └── view_predictions.py         # Terminal viewer
+└── docs/                     # 📚 Documentation
+    ├── QUICKSTART.md
+    ├── MODEL_IMPROVEMENTS.md
+    ├── CODE_REVIEW.md
+    └── REFACTORING_SUMMARY.md
 ```
 
 ## 🎯 Features
@@ -78,28 +92,27 @@ NCAA-Prediction/
 
 ## 🔧 Configuration
 
-### Change Seasons to Fetch
+### Advanced Features
 
-Edit `data_collection/all_games.py`:
+**Betting Line Analysis** - Compare model vs Vegas:
+```bash
+python3 game_prediction/analyze_betting_lines.py
+```
+- Tracks disagreements with betting lines
+- Calculates ROI on contrarian picks
+- Identifies profitable prediction patterns
 
+**Change Seasons to Fetch** - Edit `data_collection/all_games.py`:
 ```python
 SEASONS = ["2022-23", "2023-24", "2024-25"]  # Use only recent 3 seasons
-CURRENT_SEASON = "2024-25"
+CURRENT_SEASON = "2025-26"
 ```
 
-Or fetch a specific season from command line:
-
-```bash
-python3 data_collection/all_games.py 2024-25
-```
-
-### Check Available Seasons
-
+**Check Available Seasons**:
 ```bash
 python3 data_collection/check_seasons.py
 ```
-
-Shows all available seasons in the repository (currently 23 seasons from 2002-03 to 2024-25).
+Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ## 📈 Model Evaluation
 
@@ -119,22 +132,39 @@ Shows all available seasons in the repository (currently 23 seasons from 2002-03
 
 ## 🚀 Automation
 
-GitHub Actions runs predictions daily at 12:00 PM UTC (6:00 AM CST):
-- Fetches latest game data
-- Trains model on historical data
-- Generates predictions for upcoming games
-- Commits results to repository
+GitHub Actions runs predictions daily at 12:00 PM UTC (7:00 AM EST):
+1. **Scrape ESPN** - Fetch completed and upcoming games
+2. **Merge Data** - Add completed games to training set
+3. **Track Accuracy** - Compare predictions vs actual results
+4. **Generate Predictions** - Train model and predict upcoming games
+5. **Update Markdown** - Create predictions.md with results
+6. **Auto-commit** - Push updates back to repository
 
-See `.github/workflows/run_notebooks.yml`
+See `.github/workflows/daily-predictions.yml`
+
+### Weekly Model Tuning
+
+Run weekly to optimize for current season:
+```bash
+python3 model_training/tune_model.py
+```
+- Time-weighted training (10x current season)
+- Hyperparameter optimization
+- 96.4% accuracy on current season games
 
 ## 📝 Output Files
 
 All outputs saved to `data/` directory:
 
-- **Completed_Games.csv**: Historical game results with statistics
+- **Completed_Games.csv**: Historical game results (29,343 games)
 - **Upcoming_Games.csv**: Scheduled games awaiting predictions  
 - **NCAA_Game_Predictions.csv**: Predictions with confidence scores
-- **feature_importance.png**: Model feature importance visualization
+- **Accuracy_Report.csv**: Daily prediction accuracy tracking
+- **ESPN_Current_Season.csv**: Live scraped current season data
+- **Model_Tuning_Log.json**: Weekly tuning results and metrics
+- **Betting_Line_Analysis.json**: Vegas comparison analytics
+
+Plus **predictions.md** in root - formatted predictions for GitHub display
 
 ## 📚 Documentation
 
@@ -163,4 +193,16 @@ See [LICENSE](LICENSE)
 
 ---
 
-**Last updated:** November 3, 2025
+## 🆕 Recent Updates
+
+**November 4, 2025**
+- ✅ Refactored daily pipeline with extracted model class
+- ✅ Added weekly model tuning with time-weighted training
+- ✅ Implemented betting line disagreement tracker
+- ✅ Fixed all linting issues and improved code quality
+- ✅ Updated to Python 3.14 for GitHub Actions
+- 🎯 **Current season accuracy: 96.4%**
+
+---
+
+**Last updated:** November 4, 2025
