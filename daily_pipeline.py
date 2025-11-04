@@ -183,6 +183,23 @@ def main():
         print(f"✗ Error generating predictions.md: {e}")
     
     # =========================================================================
+    # STEP 6: Update README with current model stats
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 6: Updating README model statistics")
+    print("-"*80)
+    
+    try:
+        result = subprocess.run(['python3', 'game_prediction/update_readme_stats.py'], 
+                              capture_output=True, text=True, timeout=30)
+        if result.returncode == 0:
+            print(result.stdout)
+        else:
+            print(f"✗ Error updating README: {result.stderr}")
+    except Exception as e:
+        print(f"✗ Error updating README: {e}")
+    
+    # =========================================================================
     # Pipeline Complete
     # =========================================================================
     print("\n" + "="*80)
@@ -194,6 +211,7 @@ def main():
     print(f"  - {os.path.join(data_dir, 'NCAA_Game_Predictions.csv')}")
     print(f"  - {os.path.join(data_dir, 'Accuracy_Report.csv')}")
     print(f"  - predictions.md")
+    print(f"  - README.md (Model Evaluation section)")
     print(f"\nRun this script daily to keep predictions updated!")
     print("="*80)
 

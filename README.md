@@ -116,19 +116,23 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ## 📈 Model Evaluation
 
-### Top Features by Importance
+### Current Performance
 
-1. **Historical Win % Differential** (14.2%)
-2. **Historical Point Differential** (11.2%)
-3. **Historical OPPG Differential** (5.7%)
-4. **Away Team Historical Win %** (5.4%)
-5. **Home Team Historical Win %** (4.7%)
-6. **Recent Form (Last 5 games)** (4.2%)
+- **Overall Accuracy**: Testing in progress (0 predictions tracked)
+- **Current Season (2025-26) Tuning**: 96.4% accuracy on training data
+- **Training Data**: 29,343 games
+  - Current season: 338 games
+  - Historical: 29,005 games
 
-### Performance Metrics
-- **Precision**: Home wins (75%), Away wins (64%)
-- **Recall**: Home wins (86%), Away wins (47%)
-- **Log Loss**: 0.530 (lower is better)
+
+### Model Configuration
+
+- **Algorithm**: Random Forest Classifier
+- **Features**: Team embeddings, AP rankings, neutral site indicator (5 features)
+- **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
+- **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
+
+*Last updated: 2025-11-04 08:59 UTC*
 
 ## 🚀 Automation
 
