@@ -11,6 +11,7 @@ Run this script daily to:
 import sys
 import os
 import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
 
 # Add directories to path
@@ -93,6 +94,7 @@ def main():
         return
     
     # Save upcoming games
+    predictions_df = None  # will hold resulting predictions if generated
     if len(upcoming) > 0:
         upcoming_path = os.path.join(data_dir, 'Upcoming_Games.csv')
         upcoming.to_csv(upcoming_path, index=False)
@@ -130,16 +132,79 @@ def main():
     if len(upcoming) > 0:
         print(f"Generating predictions for {len(upcoming)} upcoming games...")
         
-        # Use simplified prediction model
+        # Attempt to use calibrated CatBoost model if present, else fallback
+        data_dir_abs = data_dir
+        calibrated_path = os.path.join(data_dir_abs, 'catboost_calibrated.pkl')
+        best_model_path = os.path.join(data_dir_abs, 'catboost_best_model.cbm')
+        predictor = None
+        model_type = 'SimplePredictor'
+        try:
+            if os.path.exists(calibrated_path):
+                import joblib
+                from catboost import CatBoostClassifier
+                from sklearn.calibration import CalibratedClassifierCV
+                calib = joblib.load(calibrated_path)
+                model_type = 'CalibratedCatBoost'
+                predictor = calib
+            elif os.path.exists(best_model_path):
+                from catboost import CatBoostClassifier
+                cat_model = CatBoostClassifier()
+                cat_model.load_model(best_model_path)
+                predictor = cat_model
+                model_type = 'CatBoost'
+        except Exception as e:
+            print(f"[WARN] CatBoost load failed, falling back to SimplePredictor: {e}")
+            predictor = None
+
         from simple_predictor import SimplePredictor
-        
-        # Load training data
         train_df = pd.read_csv(historical_path)
-        
-        # Train model and generate predictions
-        predictor = SimplePredictor()
-        predictor.fit(train_df)
-        predictions_df = predictor.predict(upcoming)
+
+        if predictor is None:
+            sp = SimplePredictor()
+            sp.fit(train_df)
+            predictions_df = sp.predict(upcoming)
+        else:
+            # Need to prepare upcoming in same style as simple predictor
+            sp_temp = SimplePredictor()
+            train_df_prep = sp_temp.prepare_data(train_df)
+            # Fit encoder on historical teams for consistent numeric mapping
+            all_teams_series = pd.concat([train_df_prep['home_team'], train_df_prep['away_team']])
+            all_teams = all_teams_series.unique()
+            sp_temp.team_encoder.fit(all_teams)
+            up_df = sp_temp.prepare_data(upcoming.copy())
+            up_df['home_team_encoded'] = up_df['home_team'].apply(lambda t: sp_temp.team_encoder.transform([t])[0] if t in sp_temp.team_encoder.classes_ else -1)
+            up_df['away_team_encoded'] = up_df['away_team'].apply(lambda t: sp_temp.team_encoder.transform([t])[0] if t in sp_temp.team_encoder.classes_ else -1)
+            X_up = up_df[sp_temp.feature_cols]
+            # CatBoost or calibrated model predictions
+            try:
+                proba = predictor.predict_proba(X_up)  # type: ignore
+            except Exception:
+                proba = predictor.predict(X_up)  # type: ignore
+                # If only raw predictions, synthesize probability columns
+                if proba.ndim == 1:
+                    proba = np.vstack([1 - proba, proba]).T
+            if proba.shape[1] == 2:
+                home_win_prob = proba[:,1]
+                away_win_prob = proba[:,0]
+            else:
+                # Fallback assume binary probability in single column
+                home_win_prob = proba.ravel()
+                away_win_prob = 1 - home_win_prob
+            preds = (home_win_prob >= 0.5).astype(int)
+            results_df = pd.DataFrame({
+                'game_id': up_df['game_id'],
+                'date': up_df['date'],
+                'away_team': up_df['away_team'],
+                'home_team': up_df['home_team'],
+                'predicted_home_win': preds,
+                'home_win_probability': home_win_prob,
+                'away_win_probability': away_win_prob,
+                'game_url': up_df.get('game_url','')
+            })
+            results_df['predicted_winner'] = results_df.apply(lambda r: r['home_team'] if r['predicted_home_win']==1 else r['away_team'], axis=1)
+            results_df['confidence'] = results_df[['home_win_probability','away_win_probability']].max(axis=1)
+            predictions_df = results_df
+        print(f"Using model type: {model_type}")
         
         # Sort by confidence (highest first) for better readability
         predictions_df = predictions_df.sort_values('confidence', ascending=False)
@@ -147,13 +212,11 @@ def main():
         # Save predictions
         predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
         predictions_df.to_csv(predictions_path, index=False)
-        
         print(f"✓ Generated {len(predictions_df)} predictions")
         print(f"  - Home team favored: {predictions_df['predicted_home_win'].sum()}")
         print(f"  - Away team favored: {len(predictions_df) - predictions_df['predicted_home_win'].sum()}")
         print(f"  - Average confidence: {predictions_df['confidence'].mean():.1%}")
-        
-        # Show high confidence predictions
+
         high_conf = predictions_df[predictions_df['confidence'] >= 0.7].sort_values('confidence', ascending=False)
         if len(high_conf) > 0:
             print(f"\n  High confidence predictions (≥70%):")
