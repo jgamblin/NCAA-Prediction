@@ -1,6 +1,13 @@
 # NCAA Basketball Game Predictions
 
-Predict NCAA basketball game outcomes using machine learning models trained on multi-season historical data. This project uses `scikit-learn` for modeling and fetches data from the [ncaahoopR_data repository](https://github.com/lbenz730/ncaahoopR_data).
+[![Daily Predictions](https://github.com/jgamblin/NCAA-Prediction/actions/workflows/daily-predictions.yml/badge.svg)](https://github.com/jgamblin/NCAA-Prediction/actions/workflows/daily-predictions.yml)
+
+Predict NCAA basketball game outcomes using machine learning models trained on multi-season historical data. This project uses `scikit-learn` for modeling and fetches data from [ncaahoopR_data](https://github.com/lbenz730/ncaahoopR_data) and ESPN.com.
+
+## 📅 [View Today's Predictions →](predictions.md)
+
+**Current Predictions**: 36 games for November 4, 2025  
+**Last Updated**: Automated daily at 12:00 PM UTC
 
 ## 🏀 Quick Start
 
@@ -8,22 +15,23 @@ Predict NCAA basketball game outcomes using machine learning models trained on m
 # Install dependencies
 pip install -r requirements.txt
 
-# Collect game data (fetches 5 seasons = ~29,000 games)
-python3 collect_data.py
+# Run the daily pipeline (scrape → train → predict → track)
+python3 daily_pipeline.py
 
-# Train model and generate predictions
-python3 run_predictions.py
+# View today's predictions
+python3 view_predictions.py
 ```
 
-## 📊 Current Model Performance
+## 📊 Model Performance
 
-- **Accuracy**: 72.4%
-- **ROC-AUC**: 0.774
-- **Cross-Validation**: 72.4% ± 0.5%
-- **Training Data**: 29,005 games across 5 seasons (2020-21 through 2024-25)
-- **Features**: 30 advanced features including rolling statistics, team embeddings, and momentum indicators
-
-> **⏳ Note**: Currently awaiting the 2025-26 season data to be added to the [ncaahoopR_data repository](https://github.com/lbenz730/ncaahoopR_data). Once available, predictions will begin for the new season. The 2025-26 season typically starts in November 2025.
+- **Training Data**: 29,343 games (2020-21 through Nov 3, 2025)
+- **Algorithm**: Random Forest Classifier
+- **Features**: Team embeddings, AP rankings, neutral site indicator
+- **Historical Accuracy**: 72.4% (on 29K games)
+- **Current Season**: 2025-26 (Nov 4, 2025 - ongoing)
+- **Data Sources**: 
+  - Historical: [ncaahoopR_data](https://github.com/lbenz730/ncaahoopR_data)
+  - Live: ESPN.com (real-time scraping)
 
 ## 📁 Project Structure
 
