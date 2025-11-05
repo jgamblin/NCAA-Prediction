@@ -172,6 +172,3 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-# Note: Completed_Games.csv needs to be tracked for GitHub Actions
-# Upcoming_Games.csv is generated daily so can be ignored
-Upcoming_Games.csv
