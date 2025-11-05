@@ -13,6 +13,52 @@ from datetime import datetime
 # Add current directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from calculate_streak import calculate_perfect_streak, get_streak_emoji
+try:  # pragma: no cover
+    from config.load_config import get_config_version
+    from config.versioning import get_commit_hash
+    _config_version = get_config_version()
+    _commit_hash = get_commit_hash()
+except Exception:  # noqa: BLE001
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
+
+def resolve_lineage(data_dir: str) -> tuple[str,str]:
+    """Return (config_version, commit_hash) with fallbacks.
+
+    Priority:
+      1. Imported values (if not 'unknown')
+      2. First non-null row in NCAA_Game_Predictions.csv
+      3. Accuracy_Report.csv (latest row)
+      4. Fallback 'unknown'
+    """
+    cfg = _config_version
+    ch = _commit_hash
+    try:
+        if (cfg == 'unknown' or ch == 'unknown'):
+            pred_path = os.path.join(data_dir,'NCAA_Game_Predictions.csv')
+            if os.path.exists(pred_path):
+                pred_df = pd.read_csv(pred_path, nrows=100)
+                if 'config_version' in pred_df.columns:
+                    cfg_val = pred_df['config_version'].dropna().astype(str).head(1)
+                    if not cfg_val.empty:
+                        cfg = cfg_val.iloc[0]
+                if 'commit_hash' in pred_df.columns:
+                    ch_val = pred_df['commit_hash'].dropna().astype(str).head(1)
+                    if not ch_val.empty:
+                        ch = ch_val.iloc[0]
+        if (cfg == 'unknown' or ch == 'unknown'):
+            acc_path = os.path.join(data_dir,'Accuracy_Report.csv')
+            if os.path.exists(acc_path):
+                acc_df = pd.read_csv(acc_path)
+                if not acc_df.empty:
+                    last = acc_df.tail(1)
+                    if cfg == 'unknown' and 'config_version' in last.columns and pd.notna(last['config_version'].iloc[0]):
+                        cfg = str(last['config_version'].iloc[0])
+                    if ch == 'unknown' and 'commit_hash' in last.columns and pd.notna(last['commit_hash'].iloc[0]):
+                        ch = str(last['commit_hash'].iloc[0])
+    except Exception:  # noqa: BLE001
+        pass
+    return cfg, ch
 
 def update_readme_model_stats():
     """Update the Model Evaluation section in README.md with current stats."""
@@ -130,44 +176,57 @@ def update_readme_model_stats():
     new_section.append("- **Training Strategy**: Time-weighted (10x current season, exponential decay for older)")
     new_section.append("- **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization")
     new_section.append("")
+    # Resolve lineage (fallback to predictions file values)
+    resolved_cfg, resolved_commit = resolve_lineage(data_dir)
     new_section.append(f"*Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M UTC')}*")
+    new_section.append("")
+    new_section.append("### Model Lineage")
+    new_section.append("")
+    new_section.append(f"- Config Version: `{resolved_cfg}`")
+    new_section.append(f"- Commit Hash: `{resolved_commit}`")
     
     # Read current README
     with open(readme_path, 'r') as f:
         readme_lines = f.readlines()
     
-    # Find Model Evaluation section
-    start_idx = None
-    end_idx = None
-    
-    for i, line in enumerate(readme_lines):
-        if '## 📈 Model Evaluation' in line:
-            start_idx = i
-        elif start_idx is not None and line.startswith('## '):
-            end_idx = i
-            break
-    
-    if start_idx is None:
+    # Identify ALL occurrences of Model Evaluation section
+    heading_flag = '## 📈 Model Evaluation'
+    indices = [i for i, line in enumerate(readme_lines) if heading_flag in line]
+    if not indices:
         print("✗ Could not find Model Evaluation section in README")
         return
-    
-    # If no end found, assume it goes to the next section or end of file
-    if end_idx is None:
-        # Look for next major section
-        for i in range(start_idx + 1, len(readme_lines)):
-            if readme_lines[i].startswith('## '):
-                end_idx = i
+    first_idx = indices[0]
+    # Determine end of first section (next top-level heading or EOF)
+    end_first = None
+    for i in range(first_idx + 1, len(readme_lines)):
+        if readme_lines[i].startswith('## ') and heading_flag not in readme_lines[i]:
+            end_first = i
+            break
+    if end_first is None:
+        end_first = len(readme_lines)
+    # Remove subsequent duplicate sections fully
+    to_remove_ranges = []
+    for dup_idx in indices[1:]:
+        # find its end
+        dup_end = None
+        for j in range(dup_idx + 1, len(readme_lines)):
+            if readme_lines[j].startswith('## '):
+                dup_end = j
                 break
-        if end_idx is None:
-            end_idx = len(readme_lines)
-    
-    # Replace section
-    new_readme = (
-        readme_lines[:start_idx] +
-        [line + '\n' for line in new_section] +
-        ['\n'] +
-        readme_lines[end_idx:]
-    )
+        if dup_end is None:
+            dup_end = len(readme_lines)
+        to_remove_ranges.append((dup_idx, dup_end))
+    # Build cleaned list excluding duplicate ranges
+    cleaned = []
+    skip_map = set()
+    for start, end in to_remove_ranges:
+        skip_map.update(range(start, end))
+    for idx, line in enumerate(readme_lines):
+        if idx in skip_map:
+            continue
+        cleaned.append(line)
+    # Replace first section content
+    new_readme = cleaned[:first_idx] + [l + '\n' for l in new_section] + ['\n'] + cleaned[end_first:]
     
     # Write updated README
     with open(readme_path, 'w') as f:

@@ -6,7 +6,7 @@ Predict NCAA basketball game outcomes using machine learning models trained on m
 
 ## 📅 [View Today's Predictions →](predictions.md)
 
-**Current Predictions**: 36 games for November 4, 2025  
+**Current Predictions**: 36 games for November 4, 2025**  
 **Last Updated**: Automated daily at 12:00 PM UTC
 
 ### 📋 Full Details
@@ -21,24 +21,13 @@ pip install -r requirements.txt
 
 # Run the daily pipeline (scrape → train → predict → track)
 python3 daily_pipeline.py
-
-# View today's predictions
-python3 game_prediction/view_predictions.py
 ```
 
-## 📊 Model Performance
-
-- **Training Data**: 29,343 games (2020-21 through Nov 3, 2025)
-- **Algorithm**: Random Forest Classifier
-- **Features**: Team embeddings, AP rankings, neutral site indicator
-- **Historical Accuracy**: 72.4% (on 29K games)
-- **Current Season**: 2025-26 (Nov 4, 2025 - ongoing)
-- **Data Sources**: 
-  - Historical: [ncaahoopR_data](https://github.com/lbenz730/ncaahoopR_data)
-  - Live: ESPN.com (real-time scraping)
+**Training Data**: 29,343 games (2020-21 through Nov 3, 2025)  
+**Algorithm**: Random Forest Classifier  
+**Features**: Team embeddings, AP rankings, neutral site indicator
 
 ## 📁 Project Structure
-
 ```
 NCAA-Prediction/
 ├── daily_pipeline.py         # 🚀 Main script: Full daily automation
@@ -85,14 +74,8 @@ NCAA-Prediction/
 - Currently fetches 5 seasons: 2020-21 through 2024-25
 - ~29,000 games, 1,287 unique teams
 - Data source: [ncaahoopR_data](https://github.com/lbenz730/ncaahoopR_data) (ESPN data)
-
-### Model Features (30 total)
-- **Team Identity**: Encoded team IDs
 - **Rankings**: AP poll rankings, differentials
 - **Historical Performance**: Win %, PPG, OPPG, point differential
-- **Recent Form**: Last 5/10 game averages, momentum
-- **Win Streaks**: Current win/loss streaks
-- **Context**: Home court advantage, neutral sites
 
 ### Training Strategy
 - **Time-Weighted Training**: Recent games weighted higher
@@ -140,7 +123,12 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-05 21:08 UTC*
+*Last updated: 2025-11-05 17:44 UTC*
+
+### Model Lineage
+
+- Config Version: `7dd58a0bb0e2`
+- Commit Hash: `9b0bbea`
 
 ## 🚀 Automation
 
@@ -178,7 +166,7 @@ All outputs saved to `data/` directory:
 
 Plus **predictions.md** in root - formatted predictions for GitHub display
 
-## � Stable Team Identifiers
+## 🔐 Stable Team Identifiers
 
 To ensure long-term consistency as team naming conventions shift (e.g., "Appalachian St" vs "Appalachian State Mountaineers"), the pipeline now captures stable team identifiers:
 
@@ -203,7 +191,7 @@ Planned follow-ups that will leverage IDs:
 2. Persisted per-team feature store (e.g., cached rolling averages) invalidated by ID rather than string.
 3. Cross-source reconciliation (KenPom / NCAA / ESPN) via lookup map.
 
-## �📚 Documentation
+## 📚 Documentation
 
 Each directory contains a detailed README:
 - [data/README.md](data/README.md) - Data file schemas
