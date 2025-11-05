@@ -1,65 +1,45 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-05 07:16:02 UTC
-
-## 🔥 High Confidence Streak
-
-**2 consecutive day(s)** with perfect high confidence (≥70%) predictions!
-*(Last miss: 2025-11-02)*
+**Last Updated**: 2025-11-05 15:02:10 UTC
 
 ---
 
 ## 📅 Today's Predictions
 
-**35 games** predicted for **2025-11-05**
+**12 games** predicted for **2025-11-05**
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **James Madison Dukes** | vs | Washington and Lee Generals | 93.1% |
-| 2 | **New Mexico Lobos** | vs | East Texas A&M Lions | 92.8% |
-| 3 | **La Salle Explorers** | vs | Coppin State Eagles | 90.5% |
-| 4 | **App State Mountaineers** | vs | Carolina University Bruins | 90.5% |
-| 5 | **Alabama A&M Bulldogs** | vs | Indiana Hoosiers | 88.8% |
-| 6 | **Utah Tech Trailblazers** | vs | Bethesda University Flames | 88.6% |
-| 7 | **Montana Grizzlies** | vs | Ottawa (AZ) Spirit | 87.4% |
-| 8 | **Creighton Bluejays** | vs | South Dakota Coyotes | 86.7% |
-| 9 | **Norfolk State Spartans** | vs | Regent Royals | 86.6% |
-| 10 | **UTSA Roadrunners** | vs | College Of Biblical Studies Ambassadors | 86.6% |
-| 11 | **Texas State Bobcats** | vs | Texas A&M-San Antonio Jaguars | 86.0% |
-| 12 | **Prairie View A&M Panthers** | vs | Dallas Crusaders | 85.0% |
-| 13 | **Mercer Bears** | vs | LaGrange Panthers | 84.1% |
-| 14 | **Queens University Royals** | vs | Lynchburg Hornets | 84.0% |
-| 15 | **Vermont Catamounts** | vs | Plattsburgh St Cardinals | 84.0% |
-| 16 | **Presbyterian Blue Hose** | vs | Bluefield University Ramblin' Rams | 80.1% |
-| 17 | **Marquette Golden Eagles** | vs | Southern Jaguars | 76.7% |
-| 18 | **Lafayette Leopards** | vs | Dickinson (PA) Red Devils | 75.1% |
-| 19 | **UC Davis Aggies** | vs | North Dakota State Bison | 74.9% |
-| 20 | **Loyola Marymount Lions** | vs | Eastern Washington Eagles | 74.4% |
-| 21 | **Life Pacific Warriors** | vs | Pacific Tigers | 74.2% |
-| 22 | **Montana State Bobcats** | vs | Northwest Indian RedHawks | 73.1% |
-| 23 | **Fresno State Bulldogs** | vs | South Carolina Upstate Spartans | 72.6% |
+| 1 | **Creighton** | vs | South Dakota | 99.3% |
+| 2 | **Indiana** | vs | Alabama A&M | 85.2% |
+| 3 | **Temple** | vs | Delaware State | 83.5% |
+| 4 | **Rutgers** | vs | Rider | 77.1% |
+| 5 | **Marquette** | vs | Southern | 76.8% |
+| 6 | **La Salle** | vs | Coppin State | 73.1% |
+| 7 | **Mississippi State** | vs | North Alabama | 70.5% |
 
 ### 📊 Medium Confidence Picks (60-70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **Georgia Bulldogs** | vs | Maryland Eastern Shore Hawks | 67.1% |
-| 2 | **Binghamton Bearcats** | vs | RIT Tigers | 66.8% |
-| 3 | **Mississippi University For Women Owls** | vs | Mississippi Valley State Delta Devils | 64.5% |
-| 4 | **LSU Tigers** | vs | Tarleton State Texans | 61.1% |
+| 1 | **Loyola Marymount** | vs | Eastern Washington | 68.9% |
+| 2 | **LSU** | vs | Tarleton | 68.8% |
+| 3 | **Fresno State** | vs | South Carolina Upstate | 68.3% |
+| 4 | **Butler** | vs | Southern Indiana | 65.7% |
+| 5 | **UC Davis** | vs | North Dakota State | 60.0% |
 
 ### 📈 Prediction Summary
 
-- **Total Games**: 35
-- **Home Teams Favored**: 31
-- **Away Teams Favored**: 4
-- **Average Confidence**: 74.1%
+- **Total Games**: 12
+- **Home Teams Favored**: 12
+- **Away Teams Favored**: 0
+- **Average Confidence**: 74.8%
 
 ### 📋 View All Games
 
-**[→ See all 35 predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**
+**[→ See all 12 predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**
 
 The CSV includes game IDs, team names, probabilities, confidence scores, and game URLs.
 
@@ -89,9 +69,9 @@ The CSV includes game IDs, team names, probabilities, confidence scores, and gam
 
 ## 🤖 Model Information
 
-- **Training Data**: 29,379 completed games
+- **Training Data**: 29,417 completed games
 - **Seasons**: 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
-- **Date Range**: 2020-11-25 to 2025-11-04
+- **Date Range**: 2020-11-25 to 2025-11-05
 - **Algorithm**: Random Forest Classifier
 - **Features**: Team embeddings, rankings, neutral site indicator
 

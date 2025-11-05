@@ -166,11 +166,11 @@ def calculate_rolling_stats(completed_games, windows=[5, 10]):
         team_data['win_streak'] = win_streak_series.shift(1, fill_value=0)
         team_data['loss_streak'] = loss_streak_series.shift(1, fill_value=0)
         
-        # Fill NaN values in first game with defaults
+        # Fill NaN values in first game with defaults (use .loc to avoid chained assignment)
         for window in windows:
-            team_data[f'last_{window}_ppg'].fillna(70, inplace=True)  # NCAA average
-            team_data[f'last_{window}_oppg'].fillna(70, inplace=True)
-            team_data[f'last_{window}_win_pct'].fillna(0.5, inplace=True)
+            team_data.loc[:, f'last_{window}_ppg'] = team_data[f'last_{window}_ppg'].fillna(70)  # NCAA average
+            team_data.loc[:, f'last_{window}_oppg'] = team_data[f'last_{window}_oppg'].fillna(70)
+            team_data.loc[:, f'last_{window}_win_pct'] = team_data[f'last_{window}_win_pct'].fillna(0.5)
         
         # Store in dictionary by game_id
         for _, row in team_data.iterrows():

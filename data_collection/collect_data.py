@@ -48,6 +48,8 @@ def main():
         current_season_df = current_season_df.drop_duplicates(subset=['game_id'])
         # Save ESPN data separately
         data_dir = os.path.join(os.path.dirname(__file__), 'data')
+        # Ensure directory exists (handles cleaned repo scenarios)
+        os.makedirs(data_dir, exist_ok=True)
         espn_path = os.path.join(data_dir, 'ESPN_Current_Season.csv')
         current_season_df.to_csv(espn_path, index=False)
         print(f"\nSaved {len(current_season_df)} current season games to: ESPN_Current_Season.csv")

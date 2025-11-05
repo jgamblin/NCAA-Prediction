@@ -53,8 +53,14 @@ def get_team_schedule_urls(season):
         return []
 
 
-def fetch_all_games(season):
-    """Fetch all NCAA basketball games for a given season from ncaahoopR_data repository."""
+def fetch_all_games(season, limit_teams=None):
+    """Fetch NCAA basketball games for a given season.
+
+    Args:
+        season: Season string (e.g. '2024-25')
+        limit_teams: Optional set/list of team names (normalized, whitespace-insensitive) to restrict schedules.
+                     Matching is done against the parsed schedule filename (spaces replaced by single space, case-insensitive).
+    """
     print(f"Fetching NCAA basketball games for {season} season...")
     
     # Check if season exists
@@ -78,6 +84,12 @@ def fetch_all_games(season):
     games_by_id = {}  # Track games by ID to avoid duplicates
     team_names = {}  # Track team names from file URLs
     
+    # Preprocess limit teams if provided
+    normalized_limit = None
+    if limit_teams:
+        normalized_limit = {" ".join(t.lower().split()) for t in limit_teams}
+        print(f"Team restriction enabled: {len(normalized_limit)} target teams")
+
     for idx, url in enumerate(schedule_urls, 1):
         try:
             # Show progress every 50 teams
@@ -86,6 +98,9 @@ def fetch_all_games(season):
             
             # Extract team name from URL
             team_name = url.split('/')[-1].replace('_schedule.csv', '').replace('_', ' ')
+            key_name = " ".join(team_name.lower().split())
+            if normalized_limit and key_name not in normalized_limit:
+                continue
             
             # Fetch team schedule
             df = pd.read_csv(url)
@@ -175,7 +190,7 @@ def fetch_all_games(season):
     return df_season_games
 
 
-def fetch_multiple_seasons(seasons=SEASONS):
+def fetch_multiple_seasons(seasons=SEASONS, limit_teams=None):
     """Fetch games from multiple seasons and combine them."""
     print("="*80)
     print("MULTI-SEASON DATA COLLECTION")
@@ -190,14 +205,14 @@ def fetch_multiple_seasons(seasons=SEASONS):
         print(f"\n{'='*60}")
         print(f"SEASON: {season}")
         print(f"{'='*60}")
-        df_season = fetch_all_games(season)
-        
+        df_season = fetch_all_games(season, limit_teams=limit_teams)
+
         if not df_season.empty:
             all_seasons_data.append(df_season)
             print(f"✓ Added {len(df_season)} games from {season}")
         else:
             print(f"✗ No games found for {season}")
-        
+
         # Brief pause between seasons
         time.sleep(1)
     
@@ -272,13 +287,26 @@ def main():
     print(f"Current prediction season: {CURRENT_SEASON}")
     
     # Allow command-line override to fetch single season
-    if len(sys.argv) > 1:
-        season_to_use = sys.argv[1]
-        print(f"\nCommand-line override: fetching single season {season_to_use}")
-        df_games = fetch_all_games(season_to_use)
+    # Simple CLI parsing for --teams=comma,separated,list
+    limit_teams = None
+    season_override = None
+    for arg in sys.argv[1:]:
+        if arg.startswith('--teams='):
+            raw = arg.split('=',1)[1]
+            limit_teams = [t.strip() for t in raw.split(',') if t.strip()]
+        elif arg.startswith('--season='):
+            season_override = arg.split('=',1)[1].strip()
+        else:
+            # backward compatible single season positional arg
+            if season_override is None and arg.count('-')==1:
+                season_override = arg
+
+    if season_override:
+        print(f"\nCommand-line override: fetching single season {season_override}")
+        df_games = fetch_all_games(season_override, limit_teams=limit_teams)
     else:
         # Default: fetch multiple seasons
-        df_games = fetch_multiple_seasons(SEASONS)
+        df_games = fetch_multiple_seasons(SEASONS, limit_teams=limit_teams)
     
     if df_games.empty:
         print("\nNo games fetched. Exiting.")

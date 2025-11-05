@@ -123,8 +123,15 @@ class ESPNScraper:
             away_comp = competitors[1]
             
             # Extract team info
-            home_team = home_comp.get('displayName', home_comp.get('team', {}).get('displayName', ''))
-            away_team = away_comp.get('displayName', away_comp.get('team', {}).get('displayName', ''))
+            # Prefer nested team object for stable fields
+            home_team_obj = home_comp.get('team', {}) or {}
+            away_team_obj = away_comp.get('team', {}) or {}
+            home_team = home_comp.get('displayName', home_team_obj.get('displayName', ''))
+            away_team = away_comp.get('displayName', away_team_obj.get('displayName', ''))
+
+            # Capture ESPN numeric team IDs for long-term stability (used later for modeling)
+            home_team_id = str(home_team_obj.get('id', '')).strip()
+            away_team_id = str(away_team_obj.get('id', '')).strip()
             
             if not home_team or not away_team:
                 return None
@@ -174,13 +181,15 @@ class ESPNScraper:
             # Format date for consistency
             formatted_date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
             
-            return {
+            record = {
                 'game_id': game_id,
                 'date': formatted_date,
                 'game_day': formatted_date,
                 'season': '2025-26',
                 'away_team': away_team,
                 'home_team': home_team,
+                'away_team_id': away_team_id,
+                'home_team_id': home_team_id,
                 'away_score': away_score,
                 'home_score': home_score,
                 'away_rank': away_rank,
@@ -192,6 +201,13 @@ class ESPNScraper:
                 'away_record': '',
                 'home_point_spread': ''
             }
+
+            # Basic validation: ensure IDs present; if missing fall back to name hash (deterministic)
+            if not home_team_id:
+                record['home_team_id'] = f"namehash_{abs(hash(home_team)) % 10**6}"
+            if not away_team_id:
+                record['away_team_id'] = f"namehash_{abs(hash(away_team)) % 10**6}"
+            return record
             
         except Exception as e:
             print(f"  Error parsing event: {e}")

@@ -11,6 +11,7 @@ Run this script daily to:
 import sys
 import os
 import pandas as pd
+import subprocess
 from datetime import datetime, timedelta
 
 # Add directories to path
@@ -92,9 +93,30 @@ def main():
         print("✗ Historical data file not found!")
         return
     
-    # Save upcoming games
+    # Inline normalization after merge (ensures modeling continuity)
+    try:
+        from data_collection.normalize_teams import team_name_mapping
+        # Apply mapping to historical file for modeling (in-place copy with normalized columns)
+        hist_df = pd.read_csv(historical_path)
+        for col in ['home_team', 'away_team']:
+            if col in hist_df.columns:
+                hist_df[col] = hist_df[col].replace(team_name_mapping)
+        normalized_hist_path = os.path.join(data_dir, 'Completed_Games_Normalized.csv')
+        hist_df.to_csv(normalized_hist_path, index=False)
+        print(f"✓ Normalized historical games written: {normalized_hist_path}")
+    except Exception as e:
+        print(f"⚠️ Normalization step failed (continuing): {e}")
+
+    # Save upcoming games (also normalize team display names for consistency)
     if len(upcoming) > 0:
         upcoming_path = os.path.join(data_dir, 'Upcoming_Games.csv')
+        try:
+            from data_collection.normalize_teams import team_name_mapping
+            for col in ['home_team', 'away_team']:
+                if col in upcoming.columns:
+                    upcoming[col] = upcoming[col].replace(team_name_mapping)
+        except Exception as e:
+            print(f"⚠️ Failed to normalize upcoming games: {e}")
         upcoming.to_csv(upcoming_path, index=False)
         print(f"✓ Saved {len(upcoming)} upcoming games for prediction")
         
@@ -134,7 +156,14 @@ def main():
         from simple_predictor import SimplePredictor
         
         # Load training data
-        train_df = pd.read_csv(historical_path)
+        # Prefer normalized historical file if available
+        normalized_hist_path = os.path.join(data_dir, 'Completed_Games_Normalized.csv')
+        if os.path.exists(normalized_hist_path):
+            train_df = pd.read_csv(normalized_hist_path)
+            print(f"✓ Using normalized training data ({len(train_df)} rows)")
+        else:
+            train_df = pd.read_csv(historical_path)
+            print(f"✓ Using raw training data ({len(train_df)} rows) - normalized file not found")
         
         # Train model and generate predictions
         predictor = SimplePredictor()
@@ -144,15 +173,25 @@ def main():
         # Sort by confidence (highest first) for better readability
         predictions_df = predictions_df.sort_values('confidence', ascending=False)
         
-        # Save predictions
+        # Enrich predictions with team IDs if present in upcoming games
+        try:
+            id_cols = [c for c in ['home_team_id', 'away_team_id'] if c in upcoming.columns]
+            if id_cols:
+                id_df = upcoming[['game_id'] + id_cols].drop_duplicates(subset=['game_id'])
+                predictions_df = predictions_df.merge(id_df, on='game_id', how='left')
+        except Exception as e:
+            print(f"⚠️ Failed to merge team IDs into predictions: {e}")
+
+        # Save predictions (persist with normalized flag)
         predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
+        predictions_df['normalized_input'] = os.path.exists(normalized_hist_path)
         predictions_df.to_csv(predictions_path, index=False)
-        
+
         print(f"✓ Generated {len(predictions_df)} predictions")
         print(f"  - Home team favored: {predictions_df['predicted_home_win'].sum()}")
         print(f"  - Away team favored: {len(predictions_df) - predictions_df['predicted_home_win'].sum()}")
         print(f"  - Average confidence: {predictions_df['confidence'].mean():.1%}")
-        
+
         # Show high confidence predictions
         high_conf = predictions_df[predictions_df['confidence'] >= 0.7].sort_values('confidence', ascending=False)
         if len(high_conf) > 0:
@@ -211,6 +250,7 @@ def main():
     print(f"\nFiles updated:")
     print(f"  - {os.path.join(data_dir, 'Completed_Games.csv')}")
     print(f"  - {os.path.join(data_dir, 'Upcoming_Games.csv')}")
+    print(f"  - {os.path.join(data_dir, 'Completed_Games_Normalized.csv')} (if normalization succeeded)")
     print(f"  - {os.path.join(data_dir, 'NCAA_Game_Predictions.csv')}")
     print(f"  - {os.path.join(data_dir, 'Accuracy_Report.csv')}")
     print(f"  - predictions.md")

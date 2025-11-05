@@ -44,6 +44,9 @@ NCAA-Prediction/
 ├── daily_pipeline.py         # 🚀 Main script: Full daily automation
 ├── predictions.md            # 📊 Today's predictions (auto-updated)
 ├── requirements.txt          # Python dependencies
+├── scripts/                  # One-off and historical debug utilities (not part of core pipeline)
+│   ├── debug_indiana_prediction.py  # Historical name drift investigation
+│   └── archive/check_team_ids.py    # Original ESPN team ID exploration (now integrated)
 ├── data/                     # All data files (CSV, JSON)
 │   ├── Completed_Games.csv       # Historical game results
 │   ├── Upcoming_Games.csv        # Scheduled games
@@ -54,7 +57,9 @@ NCAA-Prediction/
 │   ├── espn_scraper.py      # ESPN live data scraper
 │   ├── all_games.py         # ncaahoopR historical data
 │   ├── collect_data.py      # Data orchestrator
-│   └── check_seasons.py     # List available seasons
+│   ├── check_seasons.py     # List available seasons
+│   ├── normalize_teams.py   # Team name normalization with alias mapping
+│   └── check_unmatched_teams.py  # Identify unmatched teams for cleanup
 ├── model_training/           # ML training modules
 │   ├── simple_predictor.py  # 🆕 Main prediction model
 │   ├── tune_model.py        # 🆕 Weekly hyperparameter tuning
@@ -65,7 +70,8 @@ NCAA-Prediction/
 │   ├── track_accuracy.py           # Accuracy tracker
 │   ├── analyze_betting_lines.py    # 🆕 Vegas comparison
 │   └── view_predictions.py         # Terminal viewer
-└── docs/                     # 📚 Documentation
+├── docs/                     # 📚 Documentation
+└── tests/                    # Pytest unit tests (incl. Indiana prediction normalization)
     ├── QUICKSTART.md
     ├── MODEL_IMPROVEMENTS.md
     ├── CODE_REVIEW.md
@@ -123,10 +129,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Current Performance
 
 - **Overall Accuracy**: 91.7% (on 36 predictions)
-- **🔥 High Confidence Streak**: 2 consecutive day(s) with perfect high confidence (≥70%) picks
-- **Current Season (2025-26) Tuning**: 96.4% accuracy on training data
-- **Training Data**: 29,379 games
-  - Current season: 374 games
+- **Training Data**: 29,417 games
+  - Current season: 412 games
   - Historical: 29,005 games
 
 ### Model Configuration
@@ -136,7 +140,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-05 07:16 UTC*
+*Last updated: 2025-11-05 15:02 UTC*
 
 ## 🚀 Automation
 
@@ -174,7 +178,32 @@ All outputs saved to `data/` directory:
 
 Plus **predictions.md** in root - formatted predictions for GitHub display
 
-## 📚 Documentation
+## � Stable Team Identifiers
+
+To ensure long-term consistency as team naming conventions shift (e.g., "Appalachian St" vs "Appalachian State Mountaineers"), the pipeline now captures stable team identifiers:
+
+| Column | Files | Source | Fallback Behavior |
+| ------ | ------ | ------ | ---------------- |
+| `home_team_id` | `Upcoming_Games.csv`, `NCAA_Game_Predictions.csv` | ESPN event JSON (`competitors[].id`) | If missing, generates `namehash_<hash>` from normalized team name |
+| `away_team_id` | `Upcoming_Games.csv`, `NCAA_Game_Predictions.csv` | ESPN event JSON | Same as above |
+
+### Why This Matters
+* Provides a durable join key for future advanced features (e.g., roster tracking, conference drift, opponent strength caching).
+* Shields models from textual alias volatility and manual mapping churn.
+* Enables precise tracking of low-data teams across seasons regardless of name presentation.
+
+### Usage Notes
+* When an ESPN numeric ID exists it will be a short integer-like string (e.g., `313`); otherwise a deterministic `namehash_XXXXXX` placeholder appears.
+* Modeling still uses normalized textual names today; future iterations can switch embeddings or history joins to ID keys seamlessly.
+* If you add enrichment (rosters, coaches, pace metrics), prefer joining on these ID columns rather than raw names.
+
+### Future Enhancements
+Planned follow-ups that will leverage IDs:
+1. Drift monitoring keyed by `team_id` instead of name.
+2. Persisted per-team feature store (e.g., cached rolling averages) invalidated by ID rather than string.
+3. Cross-source reconciliation (KenPom / NCAA / ESPN) via lookup map.
+
+## �📚 Documentation
 
 Each directory contains a detailed README:
 - [data/README.md](data/README.md) - Data file schemas
