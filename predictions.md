@@ -1,6 +1,6 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-05 15:02:10 UTC
+**Last Updated**: 2025-11-05 21:08:30 UTC
 
 ---
 
@@ -13,29 +13,28 @@
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
 | 1 | **Creighton** | vs | South Dakota | 99.3% |
-| 2 | **Indiana** | vs | Alabama A&M | 85.2% |
-| 3 | **Temple** | vs | Delaware State | 83.5% |
-| 4 | **Rutgers** | vs | Rider | 77.1% |
-| 5 | **Marquette** | vs | Southern | 76.8% |
-| 6 | **La Salle** | vs | Coppin State | 73.1% |
-| 7 | **Mississippi State** | vs | North Alabama | 70.5% |
+| 2 | **Indiana** | vs | Alabama A&M | 85.7% |
+| 3 | **Temple** | vs | Delaware State | 83.4% |
+| 4 | **Rutgers** | vs | Rider | 76.9% |
+| 5 | **Marquette** | vs | Southern | 76.4% |
+| 6 | **La Salle** | vs | Coppin State | 72.5% |
+| 7 | **Mississippi State** | vs | North Alabama | 70.9% |
 
 ### 📊 Medium Confidence Picks (60-70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **Loyola Marymount** | vs | Eastern Washington | 68.9% |
-| 2 | **LSU** | vs | Tarleton | 68.8% |
-| 3 | **Fresno State** | vs | South Carolina Upstate | 68.3% |
-| 4 | **Butler** | vs | Southern Indiana | 65.7% |
-| 5 | **UC Davis** | vs | North Dakota State | 60.0% |
+| 1 | **LSU** | vs | Tarleton | 68.4% |
+| 2 | **Fresno State** | vs | South Carolina Upstate | 68.2% |
+| 3 | **Loyola Marymount** | vs | Eastern Washington | 68.0% |
+| 4 | **Butler** | vs | Southern Indiana | 66.0% |
 
 ### 📈 Prediction Summary
 
 - **Total Games**: 12
 - **Home Teams Favored**: 12
 - **Away Teams Favored**: 0
-- **Average Confidence**: 74.8%
+- **Average Confidence**: 74.6%
 
 ### 📋 View All Games
 

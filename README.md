@@ -140,7 +140,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-05 15:02 UTC*
+*Last updated: 2025-11-05 21:08 UTC*
 
 ## 🚀 Automation
 
