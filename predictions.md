@@ -1,6 +1,6 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-05 07:16:02 UTC
+**Last Updated**: 2025-11-05 14:16:56 UTC
 
 ## 🔥 High Confidence Streak
 
@@ -17,45 +17,44 @@
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **James Madison Dukes** | vs | Washington and Lee Generals | 93.1% |
-| 2 | **New Mexico Lobos** | vs | East Texas A&M Lions | 92.8% |
-| 3 | **La Salle Explorers** | vs | Coppin State Eagles | 90.5% |
-| 4 | **App State Mountaineers** | vs | Carolina University Bruins | 90.5% |
-| 5 | **Alabama A&M Bulldogs** | vs | Indiana Hoosiers | 88.8% |
-| 6 | **Utah Tech Trailblazers** | vs | Bethesda University Flames | 88.6% |
-| 7 | **Montana Grizzlies** | vs | Ottawa (AZ) Spirit | 87.4% |
-| 8 | **Creighton Bluejays** | vs | South Dakota Coyotes | 86.7% |
-| 9 | **Norfolk State Spartans** | vs | Regent Royals | 86.6% |
-| 10 | **UTSA Roadrunners** | vs | College Of Biblical Studies Ambassadors | 86.6% |
-| 11 | **Texas State Bobcats** | vs | Texas A&M-San Antonio Jaguars | 86.0% |
-| 12 | **Prairie View A&M Panthers** | vs | Dallas Crusaders | 85.0% |
-| 13 | **Mercer Bears** | vs | LaGrange Panthers | 84.1% |
-| 14 | **Queens University Royals** | vs | Lynchburg Hornets | 84.0% |
-| 15 | **Vermont Catamounts** | vs | Plattsburgh St Cardinals | 84.0% |
-| 16 | **Presbyterian Blue Hose** | vs | Bluefield University Ramblin' Rams | 80.1% |
-| 17 | **Marquette Golden Eagles** | vs | Southern Jaguars | 76.7% |
-| 18 | **Lafayette Leopards** | vs | Dickinson (PA) Red Devils | 75.1% |
-| 19 | **UC Davis Aggies** | vs | North Dakota State Bison | 74.9% |
-| 20 | **Loyola Marymount Lions** | vs | Eastern Washington Eagles | 74.4% |
-| 21 | **Life Pacific Warriors** | vs | Pacific Tigers | 74.2% |
-| 22 | **Montana State Bobcats** | vs | Northwest Indian RedHawks | 73.1% |
-| 23 | **Fresno State Bulldogs** | vs | South Carolina Upstate Spartans | 72.6% |
+| 1 | **La Salle Explorers** | vs | Coppin State Eagles | 94.7% |
+| 2 | **New Mexico Lobos** | vs | East Texas A&M Lions | 91.4% |
+| 3 | **James Madison Dukes** | vs | Washington and Lee Generals | 90.8% |
+| 4 | **Utah Tech Trailblazers** | vs | Bethesda University Flames | 89.7% |
+| 5 | **Alabama A&M Bulldogs** | vs | Indiana Hoosiers | 88.5% |
+| 6 | **App State Mountaineers** | vs | Carolina University Bruins | 88.4% |
+| 7 | **Texas State Bobcats** | vs | Texas A&M-San Antonio Jaguars | 87.9% |
+| 8 | **Mercer Bears** | vs | LaGrange Panthers | 87.1% |
+| 9 | **UTSA Roadrunners** | vs | College Of Biblical Studies Ambassadors | 86.9% |
+| 10 | **Creighton Bluejays** | vs | South Dakota Coyotes | 86.0% |
+| 11 | **Norfolk State Spartans** | vs | Regent Royals | 85.5% |
+| 12 | **Prairie View A&M Panthers** | vs | Dallas Crusaders | 84.6% |
+| 13 | **Vermont Catamounts** | vs | Plattsburgh St Cardinals | 83.5% |
+| 14 | **Presbyterian Blue Hose** | vs | Bluefield University Ramblin' Rams | 82.8% |
+| 15 | **Montana Grizzlies** | vs | Ottawa (AZ) Spirit | 82.4% |
+| 16 | **Marquette Golden Eagles** | vs | Southern Jaguars | 80.3% |
+| 17 | **Queens University Royals** | vs | Lynchburg Hornets | 79.7% |
+| 18 | **UC Davis Aggies** | vs | North Dakota State Bison | 74.5% |
+| 19 | **Loyola Marymount Lions** | vs | Eastern Washington Eagles | 74.5% |
+| 20 | **Montana State Bobcats** | vs | Northwest Indian RedHawks | 73.2% |
+| 21 | **Fresno State Bulldogs** | vs | South Carolina Upstate Spartans | 71.0% |
+| 22 | **Lafayette Leopards** | vs | Dickinson (PA) Red Devils | 70.6% |
 
 ### 📊 Medium Confidence Picks (60-70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **Georgia Bulldogs** | vs | Maryland Eastern Shore Hawks | 67.1% |
-| 2 | **Binghamton Bearcats** | vs | RIT Tigers | 66.8% |
-| 3 | **Mississippi University For Women Owls** | vs | Mississippi Valley State Delta Devils | 64.5% |
-| 4 | **LSU Tigers** | vs | Tarleton State Texans | 61.1% |
+| 1 | **Life Pacific Warriors** | vs | Pacific Tigers | 66.8% |
+| 2 | **Georgia Bulldogs** | vs | Maryland Eastern Shore Hawks | 66.1% |
+| 3 | **Binghamton Bearcats** | vs | RIT Tigers | 65.4% |
+| 4 | **Mississippi University For Women Owls** | vs | Mississippi Valley State Delta Devils | 63.4% |
 
 ### 📈 Prediction Summary
 
 - **Total Games**: 35
-- **Home Teams Favored**: 31
-- **Away Teams Favored**: 4
-- **Average Confidence**: 74.1%
+- **Home Teams Favored**: 30
+- **Away Teams Favored**: 5
+- **Average Confidence**: 73.7%
 
 ### 📋 View All Games
 
@@ -89,7 +88,7 @@ The CSV includes game IDs, team names, probabilities, confidence scores, and gam
 
 ## 🤖 Model Information
 
-- **Training Data**: 29,379 completed games
+- **Training Data**: 29,415 completed games
 - **Seasons**: 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
 - **Date Range**: 2020-11-25 to 2025-11-04
 - **Algorithm**: Random Forest Classifier
