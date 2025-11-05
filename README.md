@@ -123,12 +123,12 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-05 17:44 UTC*
+*Last updated: 2025-11-05 23:49 UTC*
 
 ### Model Lineage
 
-- Config Version: `7dd58a0bb0e2`
-- Commit Hash: `9b0bbea`
+- Config Version: `unknown`
+- Commit Hash: `unknown`
 
 ## 🚀 Automation
 
