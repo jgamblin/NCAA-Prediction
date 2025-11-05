@@ -1,33 +1,65 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-04 09:05:03 UTC
+**Last Updated**: 2025-11-05 07:16:02 UTC
+
+## 🔥 High Confidence Streak
+
+**2 consecutive day(s)** with perfect high confidence (≥70%) predictions!
+*(Last miss: 2025-11-02)*
 
 ---
 
 ## 📅 Today's Predictions
 
-**36 games** predicted for **2025-11-04**
+**35 games** predicted for **2025-11-05**
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **Rice Owls** | vs | College Of Biblical Studies Ambassadors | 87.9% |
-| 2 | **Kentucky Wildcats** | vs | Nicholls Colonels | 81.4% |
-| 3 | **Purdue Boilermakers** | vs | Evansville Purple Aces | 81.4% |
-| 4 | **Duke Blue Devils** | vs | Texas Longhorns | 81.4% |
-| 5 | **Texas Tech Red Raiders** | vs | Lindenwood Lions | 81.4% |
+| 1 | **James Madison Dukes** | vs | Washington and Lee Generals | 93.1% |
+| 2 | **New Mexico Lobos** | vs | East Texas A&M Lions | 92.8% |
+| 3 | **La Salle Explorers** | vs | Coppin State Eagles | 90.5% |
+| 4 | **App State Mountaineers** | vs | Carolina University Bruins | 90.5% |
+| 5 | **Alabama A&M Bulldogs** | vs | Indiana Hoosiers | 88.8% |
+| 6 | **Utah Tech Trailblazers** | vs | Bethesda University Flames | 88.6% |
+| 7 | **Montana Grizzlies** | vs | Ottawa (AZ) Spirit | 87.4% |
+| 8 | **Creighton Bluejays** | vs | South Dakota Coyotes | 86.7% |
+| 9 | **Norfolk State Spartans** | vs | Regent Royals | 86.6% |
+| 10 | **UTSA Roadrunners** | vs | College Of Biblical Studies Ambassadors | 86.6% |
+| 11 | **Texas State Bobcats** | vs | Texas A&M-San Antonio Jaguars | 86.0% |
+| 12 | **Prairie View A&M Panthers** | vs | Dallas Crusaders | 85.0% |
+| 13 | **Mercer Bears** | vs | LaGrange Panthers | 84.1% |
+| 14 | **Queens University Royals** | vs | Lynchburg Hornets | 84.0% |
+| 15 | **Vermont Catamounts** | vs | Plattsburgh St Cardinals | 84.0% |
+| 16 | **Presbyterian Blue Hose** | vs | Bluefield University Ramblin' Rams | 80.1% |
+| 17 | **Marquette Golden Eagles** | vs | Southern Jaguars | 76.7% |
+| 18 | **Lafayette Leopards** | vs | Dickinson (PA) Red Devils | 75.1% |
+| 19 | **UC Davis Aggies** | vs | North Dakota State Bison | 74.9% |
+| 20 | **Loyola Marymount Lions** | vs | Eastern Washington Eagles | 74.4% |
+| 21 | **Life Pacific Warriors** | vs | Pacific Tigers | 74.2% |
+| 22 | **Montana State Bobcats** | vs | Northwest Indian RedHawks | 73.1% |
+| 23 | **Fresno State Bulldogs** | vs | South Carolina Upstate Spartans | 72.6% |
+
+### 📊 Medium Confidence Picks (60-70%)
+
+| # | Winner | vs | Loser | Confidence |
+|---|--------|----|----|------------|
+| 1 | **Georgia Bulldogs** | vs | Maryland Eastern Shore Hawks | 67.1% |
+| 2 | **Binghamton Bearcats** | vs | RIT Tigers | 66.8% |
+| 3 | **Mississippi University For Women Owls** | vs | Mississippi Valley State Delta Devils | 64.5% |
+| 4 | **LSU Tigers** | vs | Tarleton State Texans | 61.1% |
 
 ### 📈 Prediction Summary
 
-- **Total Games**: 36
-- **Home Teams Favored**: 35
-- **Away Teams Favored**: 1
-- **Average Confidence**: 57.1%
+- **Total Games**: 35
+- **Home Teams Favored**: 31
+- **Away Teams Favored**: 4
+- **Average Confidence**: 74.1%
 
 ### 📋 View All Games
 
-**[→ See all 36 predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**
+**[→ See all 35 predictions with details (CSV)](data/NCAA_Game_Predictions.csv)**
 
 The CSV includes game IDs, team names, probabilities, confidence scores, and game URLs.
 
@@ -35,17 +67,31 @@ The CSV includes game IDs, team names, probabilities, confidence scores, and gam
 
 ## 📊 Historical Accuracy
 
-*No accuracy report found*
+### 🎯 Overall Performance
 
-Accuracy tracking will begin once predictions are made and games are completed.
+- **Total Predictions Evaluated**: 36
+- **Correct Predictions**: 33
+- **Overall Accuracy**: 91.7%
+
+### 📅 Recent Performance (Last 10 Days)
+
+- **Games Evaluated**: 36
+- **Correct Predictions**: 33
+- **Accuracy**: 91.7%
+
+### 📆 Daily Breakdown (Last 7 Days)
+
+| Date | Games | Correct | Accuracy | Avg Confidence |
+|------|-------|---------|----------|----------------|
+| 2025-11-05 | 36 | 33 | 91.7% | 57.1% |
 
 ---
 
 ## 🤖 Model Information
 
-- **Training Data**: 29,343 completed games
+- **Training Data**: 29,379 completed games
 - **Seasons**: 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
-- **Date Range**: 2020-11-25 to 2025-11-03
+- **Date Range**: 2020-11-25 to 2025-11-04
 - **Algorithm**: Random Forest Classifier
 - **Features**: Team embeddings, rankings, neutral site indicator
 

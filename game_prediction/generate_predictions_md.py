@@ -7,6 +7,11 @@ This file is updated after each daily pipeline run.
 import pandas as pd
 from datetime import datetime
 import os
+import sys
+
+# Add current directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from calculate_streak import calculate_perfect_streak, get_streak_emoji
 
 def generate_predictions_md():
     """Generate the predictions.md file."""
@@ -22,12 +27,26 @@ def generate_predictions_md():
     timestamp = now.strftime('%Y-%m-%d %H:%M:%S UTC')
     today = now.strftime('%Y-%m-%d')
     
+    # Calculate high confidence streak
+    streak, last_miss, total_perfect, streak_days = calculate_perfect_streak()
+    streak_emoji = get_streak_emoji(streak)
+    
     # Start building the markdown
     md = []
     md.append("# 🏀 NCAA Basketball Predictions")
     md.append("")
     md.append(f"**Last Updated**: {timestamp}")
     md.append("")
+    
+    # Add streak tracker if we have data
+    if streak > 0:
+        md.append(f"## {streak_emoji} High Confidence Streak")
+        md.append("")
+        md.append(f"**{streak} consecutive day(s)** with perfect high confidence (≥70%) predictions!")
+        if last_miss:
+            md.append(f"*(Last miss: {last_miss})*")
+        md.append("")
+    
     md.append("---")
     md.append("")
     

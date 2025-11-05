@@ -7,7 +7,12 @@ Run this after model tuning or when accuracy data changes.
 import pandas as pd
 import json
 import os
+import sys
 from datetime import datetime
+
+# Add current directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from calculate_streak import calculate_perfect_streak, get_streak_emoji
 
 def update_readme_model_stats():
     """Update the Model Evaluation section in README.md with current stats."""
@@ -30,19 +35,16 @@ def update_readme_model_stats():
         accuracy_df = pd.read_csv(accuracy_path)
         
         # Calculate current metrics if we have completed predictions
-        if len(accuracy_df) > 0:
+        if len(accuracy_df) > 0 and accuracy_df['games_completed'].sum() > 0:
             has_accuracy_data = True
-            overall_accuracy = accuracy_df['correct'].mean()
-            total_predictions = len(accuracy_df)
+            total_predictions = int(accuracy_df['games_completed'].sum())
+            total_correct = int(accuracy_df['correct_predictions'].sum())
+            overall_accuracy = total_correct / total_predictions if total_predictions > 0 else 0
             
-            # Calculate by confidence level
-            high_conf = accuracy_df[accuracy_df['confidence'] >= 0.7]
-            med_conf = accuracy_df[(accuracy_df['confidence'] >= 0.6) & (accuracy_df['confidence'] < 0.7)]
-            low_conf = accuracy_df[accuracy_df['confidence'] < 0.6]
-            
-            high_acc = high_conf['correct'].mean() if len(high_conf) > 0 else 0
-            med_acc = med_conf['correct'].mean() if len(med_conf) > 0 else 0
-            low_acc = low_conf['correct'].mean() if len(low_conf) > 0 else 0
+            # Note: Accuracy_Report.csv is daily aggregated data, 
+            # so we can't break down by confidence level here
+            high_conf = med_conf = low_conf = pd.DataFrame()
+            high_acc = med_acc = low_acc = 0
         else:
             print("⚠️  No completed predictions yet (games pending)")
             overall_accuracy = 0
@@ -81,6 +83,10 @@ def update_readme_model_stats():
                 latest_tune = tuning_log[-1]
                 current_season_accuracy = latest_tune.get('current_season_accuracy')
     
+    # Calculate high confidence streak
+    streak, last_miss, total_perfect, streak_days = calculate_perfect_streak()
+    streak_emoji = get_streak_emoji(streak)
+    
     print(f"✓ Loaded metrics:")
     if has_accuracy_data:
         print(f"  - Overall accuracy: {overall_accuracy:.1%} ({total_predictions} predictions)")
@@ -90,6 +96,8 @@ def update_readme_model_stats():
     print(f"  - Current season games: {current_season_games:,}")
     if current_season_accuracy:
         print(f"  - Current season tuning accuracy: {current_season_accuracy:.1%}")
+    if streak > 0:
+        print(f"  - High confidence streak: {streak} day(s) {streak_emoji}")
     
     # Build new Model Evaluation section
     new_section = []
@@ -103,23 +111,16 @@ def update_readme_model_stats():
     else:
         new_section.append(f"- **Overall Accuracy**: Testing in progress ({total_predictions} predictions tracked)")
     
+    # Add streak info if available
+    if streak > 0:
+        new_section.append(f"- **{streak_emoji} High Confidence Streak**: {streak} consecutive day(s) with perfect high confidence (≥70%) picks")
+    
     if current_season_accuracy:
         new_section.append(f"- **Current Season (2025-26) Tuning**: {current_season_accuracy:.1%} accuracy on training data")
     
     new_section.append(f"- **Training Data**: {total_training_games:,} games")
     new_section.append(f"  - Current season: {current_season_games:,} games")
     new_section.append(f"  - Historical: {total_training_games - current_season_games:,} games")
-    new_section.append("")
-    
-    if has_accuracy_data:
-        new_section.append("")
-        new_section.append("### Accuracy by Confidence Level")
-        new_section.append("")
-        new_section.append("| Confidence | Accuracy | Games |")
-        new_section.append("|------------|----------|-------|")
-        new_section.append(f"| High (≥70%) | {high_acc:.1%} | {len(high_conf):,} |")
-        new_section.append(f"| Medium (60-70%) | {med_acc:.1%} | {len(med_conf):,} |")
-        new_section.append(f"| Low (<60%) | {low_acc:.1%} | {len(low_conf):,} |")
     new_section.append("")
     
     new_section.append("### Model Configuration")

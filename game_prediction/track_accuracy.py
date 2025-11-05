@@ -111,7 +111,7 @@ def track_accuracy():
         if len(correct) > 10:
             print(f"  ... and {len(correct) - 10} more")
     
-    # Save accuracy report
+    # Save accuracy report (daily summary)
     report_path = os.path.join(data_dir, 'Accuracy_Report.csv')
     report_df = pd.DataFrame({
         'date': [datetime.now().strftime('%Y-%m-%d')],
@@ -129,6 +129,24 @@ def track_accuracy():
     
     report_df.to_csv(report_path, index=False)
     print(f"\n✓ Saved accuracy report to {report_path}")
+    
+    # Save detailed results for streak tracking
+    detailed_path = os.path.join(data_dir, 'Prediction_Details.csv')
+    detailed_df = merged[[
+        'date', 'game_id', 'home_team', 'away_team', 
+        'predicted_winner', 'actual_winner', 'confidence', 
+        'correct', 'home_score', 'away_score'
+    ]].copy()
+    
+    # Append to existing details if exists, otherwise create new
+    if os.path.exists(detailed_path):
+        existing_details = pd.read_csv(detailed_path)
+        # Remove duplicates (in case we run this multiple times)
+        existing_details = existing_details[~existing_details['game_id'].isin(detailed_df['game_id'])]
+        detailed_df = pd.concat([existing_details, detailed_df], ignore_index=True)
+    
+    detailed_df.to_csv(detailed_path, index=False)
+    print(f"✓ Saved detailed predictions to {detailed_path}")
     
     print("\n" + "="*80)
     print("TRACKING COMPLETE")
