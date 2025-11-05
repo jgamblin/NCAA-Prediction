@@ -1,6 +1,6 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-05 17:40:36 UTC
+**Last Updated**: 2025-11-05 23:52:24 UTC
 
 ---
 
@@ -14,15 +14,15 @@
 |---|--------|----|----|------------|
 | 1 | **Butler** | vs | Southern Indiana | 91.5% |
 | 2 | **Temple** | vs | Delaware State | 91.4% |
-| 3 | **Creighton** | vs | South Dakota | 91.3% |
+| 3 | **Creighton** | vs | South Dakota | 91.4% |
 | 4 | **Loyola Marymount** | vs | Eastern Washington | 91.2% |
 | 5 | **UC Davis** | vs | North Dakota State | 91.2% |
 | 6 | **La Salle** | vs | Coppin State | 91.1% |
 | 7 | **Rutgers** | vs | Rider | 91.0% |
-| 8 | **Marquette** | vs | Southern | 90.4% |
-| 9 | **Mississippi State** | vs | North Alabama | 90.4% |
-| 10 | **LSU** | vs | Tarleton | 89.5% |
-| 11 | **Fresno State** | vs | South Carolina Upstate | 89.4% |
+| 8 | **Mississippi State** | vs | North Alabama | 90.4% |
+| 9 | **Marquette** | vs | Southern | 90.3% |
+| 10 | **Fresno State** | vs | South Carolina Upstate | 89.9% |
+| 11 | **LSU** | vs | Tarleton | 89.3% |
 | 12 | **Indiana** | vs | Alabama A&M | 74.5% |
 
 ### 📈 Prediction Summary
