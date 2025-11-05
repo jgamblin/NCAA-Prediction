@@ -25,6 +25,16 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
+
+# Lineage / versioning (optional)
+try:  # pragma: no cover - defensive import
+    from config.load_config import get_config_version
+    from config.versioning import get_commit_hash
+    _config_version = get_config_version()
+    _commit_hash = get_commit_hash()
+except Exception:  # noqa: BLE001
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
 from sklearn.impute import SimpleImputer
 
 
@@ -273,7 +283,8 @@ def build_and_train_model(completed_games):
     
     plt.figure(figsize=(10, 8))
     plt.barh(range(len(sorted_idx)), feature_importance[sorted_idx], align='center')
-    plt.yticks(range(len(sorted_idx)), np.array(features)[sorted_idx])
+    # Ensure labels provided as list of strings for type safety
+    plt.yticks(range(len(sorted_idx)), [str(x) for x in np.array(features)[sorted_idx]])
     plt.title('Feature Importance')
     plt.tight_layout()
     plt.savefig('feature_importance.png', dpi=100, bbox_inches='tight')
@@ -343,6 +354,9 @@ def export_results_and_update_readme(prediction_results, upcoming_features):
     
     # Export predictions to CSV
     if not prediction_results.empty:
+        # Add lineage columns before export
+        prediction_results['config_version'] = _config_version
+        prediction_results['commit_hash'] = _commit_hash
         prediction_results.to_csv('NCAA_Game_Predictions.csv', index=False)
         print("Predictions exported to NCAA_Game_Predictions.csv")
     else:

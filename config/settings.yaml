@@ -1,0 +1,9 @@
+# Centralized configuration for NCAA Prediction pipeline
+# Thresholds & parameters can be tuned without code changes.
+
+row_inflation_guard_pct: 0.10            # Allow up to +10% rows after FS merge before guarding
+anomaly_accuracy_delta_threshold: 0.25    # Rolling vs cumulative accuracy delta to flag anomaly
+anomaly_min_games: 15                     # Minimum games before considering anomaly
+calibration_bins: 10                      # Number of bins for calibration curve
+team_drift_window: 25                     # Rolling window for per-team drift monitoring
+id_refresh_enabled_default: false         # Default behavior for ID refresh if flag absent

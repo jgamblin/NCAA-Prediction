@@ -11,8 +11,20 @@ Run this script daily to:
 import sys
 import os
 import pandas as pd
-import subprocess
+import subprocess  # type: ignore  # dynamic import resolution in runtime env
 from datetime import datetime, timedelta
+from pathlib import Path
+try:
+    from config.load_config import get_config, get_config_version
+    _cfg = get_config()
+    _config_version = get_config_version()
+    # Commit hash lineage
+    from config.versioning import get_commit_hash
+    _commit_hash = get_commit_hash()
+except Exception:
+    _cfg = {}
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
 
 # Add directories to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'data_collection'))
@@ -29,7 +41,28 @@ def main():
     print()
     
     data_dir = os.path.join(os.path.dirname(__file__), 'data')
+    row_guard_pct = float(_cfg.get('row_inflation_guard_pct', 0.10))
+    drift_window = int(_cfg.get('team_drift_window', 25))
+    refresh_ids_flag = ('--refresh-ids' in sys.argv) or bool(os.environ.get('REFRESH_ID_LOOKUP')) or bool(_cfg.get('id_refresh_enabled_default', False))
+    if refresh_ids_flag:
+        print("\nCONFIG: ID refresh enabled for this run.")
+    # Local alias to satisfy static analysis on subprocess usage
+    sp_run = subprocess.run  # type: ignore[attr-defined]
     
+    # Optional ID lookup refresh (behind flag)
+    if refresh_ids_flag:
+        print("\n" + "="*80)
+        print("OPTIONAL: Refreshing cross-source ID lookup")
+        print("-"*80)
+        try:
+            result = sp_run(['python3', 'data_collection/build_id_lookup.py'], capture_output=True, text=True, timeout=60)
+            if result.returncode == 0:
+                print("✓ ID lookup refresh complete")
+            else:
+                print(f"⚠️ ID lookup refresh failed: {result.stderr}")
+        except Exception as exc:
+            print(f"⚠️ ID lookup step skipped: {exc}")
+
     # =========================================================================
     # STEP 1: Scrape ESPN for recent games
     # =========================================================================
@@ -69,6 +102,8 @@ def main():
     upcoming = df[df['game_status'] == 'Scheduled'].copy()
     
     historical_path = os.path.join(data_dir, 'Completed_Games.csv')
+    # Predeclare normalized path to avoid potential unbound warnings later
+    normalized_hist_path = os.path.join(data_dir, 'Completed_Games_Normalized.csv')
     
     if os.path.exists(historical_path):
         historical_df = pd.read_csv(historical_path)
@@ -101,11 +136,45 @@ def main():
         for col in ['home_team', 'away_team']:
             if col in hist_df.columns:
                 hist_df[col] = hist_df[col].replace(team_name_mapping)
-        normalized_hist_path = os.path.join(data_dir, 'Completed_Games_Normalized.csv')
         hist_df.to_csv(normalized_hist_path, index=False)
         print(f"✓ Normalized historical games written: {normalized_hist_path}")
+    except Exception as exc:
+        print(f"⚠️ Normalization step failed (continuing): {exc}")
+
+    # =========================================================================
+    # STEP 2.5: Build / Update Per-Team Feature Store
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 2.5: Building per-team feature store (rolling performance)")
+    print("-"*80)
+    try:
+        from model_training.feature_store import build_feature_store, save_feature_store, load_feature_store
+        from model_training.team_id_utils import ensure_team_ids
+
+        # Use normalized historical games if available, else raw
+        hist_source_path = normalized_hist_path if os.path.exists(normalized_hist_path) else historical_path
+        hist_for_features = pd.read_csv(hist_source_path)
+
+        # Ensure required columns exist / fallback safe
+        needed_cols = {'home_team','away_team','home_score','away_score','game_id'}
+        if not needed_cols.issubset(set(hist_for_features.columns)):
+            raise ValueError(f"Historical games missing columns for feature store: {needed_cols - set(hist_for_features.columns)}")
+
+        # Filter to completed / final games if status column exists
+        if 'game_status' in hist_for_features.columns:
+            hist_for_features = hist_for_features[hist_for_features['game_status'] == 'Final']
+
+        # Ensure season column (fallback to existing if already present)
+        if 'season' not in hist_for_features.columns and 'Season' in hist_for_features.columns:
+            hist_for_features['season'] = hist_for_features['Season']
+
+        hist_for_features = ensure_team_ids(hist_for_features)
+        feature_store_df = build_feature_store(hist_for_features)
+        save_feature_store(feature_store_df)
+        print(f"✓ Feature store rows: {len(feature_store_df)} (stored at data/feature_store/feature_store.csv)")
+
     except Exception as e:
-        print(f"⚠️ Normalization step failed (continuing): {e}")
+        print(f"⚠️ Feature store build skipped: {e}")
 
     # Save upcoming games (also normalize team display names for consistency)
     if len(upcoming) > 0:
@@ -115,8 +184,35 @@ def main():
             for col in ['home_team', 'away_team']:
                 if col in upcoming.columns:
                     upcoming[col] = upcoming[col].replace(team_name_mapping)
-        except Exception as e:
-            print(f"⚠️ Failed to normalize upcoming games: {e}")
+        except Exception as exc:
+            print(f"⚠️ Failed to normalize upcoming games: {exc}")
+        # Enrich upcoming games with feature store aggregates (season-aware, no cartesian)
+        try:
+            from model_training.feature_store import load_feature_store
+            from model_training.team_id_utils import ensure_team_ids
+            upcoming = ensure_team_ids(upcoming)
+            fs_df = load_feature_store()
+            if not fs_df.empty:
+                # Reduce to one row per (season, team_id) keeping latest (highest games_played)
+                fs_df_reduced = fs_df.sort_values(['season','team_id','games_played']).drop_duplicates(['season','team_id'], keep='last')
+                fs_features = ['rolling_win_pct_5','rolling_win_pct_10','rolling_point_diff_avg_5','rolling_point_diff_avg_10','win_pct_last5_vs10','point_diff_last5_vs10','recent_strength_index_5']
+                keep_cols = ['season','team_id'] + [c for c in fs_features if c in fs_df_reduced.columns]
+                fs_df_reduced = fs_df_reduced[keep_cols]
+                if 'season' not in upcoming.columns:
+                    # If upcoming lacks season, attempt to infer most recent season from feature store; fallback: merge on team only
+                    inferred_season = fs_df_reduced['season'].max()
+                    upcoming['season'] = inferred_season
+                # Home merge
+                home_fs = fs_df_reduced.rename(columns={'team_id':'home_team_id'})
+                home_fs = home_fs.add_prefix('home_fs_').rename(columns={'home_fs_home_team_id':'home_team_id','home_fs_season':'season'})
+                upcoming = upcoming.merge(home_fs, on=['home_team_id','season'], how='left')
+                # Away merge
+                away_fs = fs_df_reduced.rename(columns={'team_id':'away_team_id'})
+                away_fs = away_fs.add_prefix('away_fs_').rename(columns={'away_fs_away_team_id':'away_team_id','away_fs_season':'season'})
+                upcoming = upcoming.merge(away_fs, on=['away_team_id','season'], how='left')
+                print("✓ Added feature store columns to upcoming games (season-aware)")
+        except Exception as exc:
+            print(f"⚠️ Skipped feature store enrichment for upcoming games: {exc}")
         upcoming.to_csv(upcoming_path, index=False)
         print(f"✓ Saved {len(upcoming)} upcoming games for prediction")
         
@@ -167,6 +263,56 @@ def main():
         
         # Train model and generate predictions
         predictor = SimplePredictor()
+        # Enrich training data with feature store stats similar to upcoming enrichment
+        try:
+            from model_training.feature_store import load_feature_store
+            from model_training.team_id_utils import ensure_team_ids
+            train_df = ensure_team_ids(train_df)
+            raw_training_rows = len(train_df)
+            fs_df = load_feature_store()
+            if not fs_df.empty:
+                # Reduce to one row per (season, team_id)
+                fs_df_reduced = (
+                    fs_df.sort_values(['season','team_id','games_played'])
+                         .drop_duplicates(['season','team_id'], keep='last')
+                )
+                fs_features = [
+                    'rolling_win_pct_5','rolling_win_pct_10',
+                    'rolling_point_diff_avg_5','rolling_point_diff_avg_10',
+                    'win_pct_last5_vs10','point_diff_last5_vs10','recent_strength_index_5'
+                ]
+                keep_cols = ['season','team_id'] + [c for c in fs_features if c in fs_df_reduced.columns]
+                fs_df_reduced = fs_df_reduced[keep_cols]
+                if 'season' not in train_df.columns and 'Season' in train_df.columns:
+                    train_df['season'] = train_df['Season']
+                if 'season' not in train_df.columns:
+                    inferred_season = fs_df_reduced['season'].max()
+                    train_df['season'] = inferred_season
+                # Merge home side
+                home_fs = fs_df_reduced.rename(columns={'team_id':'home_team_id'}).copy()
+                for col in list(home_fs.columns):
+                    if col not in ('home_team_id','season'):
+                        home_fs.rename(columns={col: f'home_fs_{col}'}, inplace=True)
+                train_df = train_df.merge(home_fs, on=['home_team_id','season'], how='left')
+                # Merge away side
+                away_fs = fs_df_reduced.rename(columns={'team_id':'away_team_id'})
+                for col in list(away_fs.columns):
+                    if col not in ('away_team_id','season'):
+                        away_fs.rename(columns={col: f'away_fs_{col}'}, inplace=True)
+                train_df = train_df.merge(away_fs, on=['away_team_id','season'], how='left')
+                # Guard against unexpected inflation
+                if len(train_df) > raw_training_rows * (1 + row_guard_pct):
+                    print(f"⚠️ Row inflation detected after FS merge: {len(train_df)} vs {raw_training_rows}. De-duplicating by game_id.")
+                    if 'game_id' in train_df.columns:
+                        before = len(train_df)
+                        train_df = train_df.drop_duplicates(subset=['game_id'])
+                        print(f"  De-dup reduced rows to {len(train_df)} (was {before}).")
+                    else:
+                        print("  Cannot de-dup (no game_id). Proceeding anyway.")
+                else:
+                    print(f"✓ Added feature store columns to training data (rows {len(train_df)})")
+        except Exception as exc:
+            print(f"⚠️ Skipped feature store enrichment for training data: {exc}")
         predictor.fit(train_df)
         predictions_df = predictor.predict(upcoming)
         
@@ -179,13 +325,25 @@ def main():
             if id_cols:
                 id_df = upcoming[['game_id'] + id_cols].drop_duplicates(subset=['game_id'])
                 predictions_df = predictions_df.merge(id_df, on='game_id', how='left')
-        except Exception as e:
-            print(f"⚠️ Failed to merge team IDs into predictions: {e}")
+        except Exception as exc:
+            print(f"⚠️ Failed to merge team IDs into predictions: {exc}")
 
         # Save predictions (persist with normalized flag)
         predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
         predictions_df['normalized_input'] = os.path.exists(normalized_hist_path)
+        predictions_df['config_version'] = _config_version
+        predictions_df['commit_hash'] = _commit_hash
         predictions_df.to_csv(predictions_path, index=False)
+        # Validation guard: ensure lineage columns present post-write
+        try:
+            _verify = pd.read_csv(predictions_path, nrows=5)
+            missing_cols = [c for c in ['config_version','commit_hash'] if c not in _verify.columns]
+            if missing_cols:
+                print(f"✗ Lineage columns missing after write: {missing_cols}")
+            else:
+                print("✓ Lineage columns verified in predictions CSV")
+        except Exception as _val_exc:
+            print(f"⚠️ Could not validate lineage columns: {_val_exc}")
 
         print(f"✓ Generated {len(predictions_df)} predictions")
         print(f"  - Home team favored: {predictions_df['predicted_home_win'].sum()}")
@@ -214,32 +372,62 @@ def main():
     print("-"*80)
     
     try:
-        import subprocess
-        result = subprocess.run(['python3', 'game_prediction/generate_predictions_md.py'], 
+        result = sp_run(['python3', 'game_prediction/generate_predictions_md.py'], 
                               capture_output=True, text=True, timeout=30)
         if result.returncode == 0:
             print(result.stdout)
         else:
             print(f"✗ Error generating predictions.md: {result.stderr}")
-    except Exception as e:
-        print(f"✗ Error generating predictions.md: {e}")
+    except Exception as exc:
+        print(f"✗ Error generating predictions.md: {exc}")
     
     # =========================================================================
-    # STEP 6: Update README with current model stats
+    # STEP 6: Per-Team Drift & Anomaly Summaries
     # =========================================================================
     print("\n" + "="*80)
-    print("STEP 6: Updating README model statistics")
+    print("STEP 6: Updating per-team drift & anomaly summaries")
     print("-"*80)
-    
     try:
-        result = subprocess.run(['python3', 'game_prediction/update_readme_stats.py'], 
-                              capture_output=True, text=True, timeout=30)
+        # Run drift monitor module
+        result = sp_run(
+            ['python3', '-m', 'model_training.team_drift_monitor', '--window', str(drift_window)],
+            capture_output=True, text=True, timeout=120
+        )
+        if result.returncode == 0:
+            print("✓ Drift monitor executed")
+        else:
+            print(f"⚠️ Drift monitor non-zero exit: {result.stderr}")
+        # Generate TEAM_ANOMALIES.md if anomalies exist
+        anomalies_csv = Path(data_dir) / 'Team_Anomalies.csv'
+        anomalies_md = Path(data_dir) / 'TEAM_ANOMALIES.md'
+        try:
+            from model_training.team_drift_monitor import write_anomalies_markdown
+            if write_anomalies_markdown(anomalies_csv, anomalies_md, drift_window):
+                print(f"✓ Anomalies markdown written: {anomalies_md}")
+            else:
+                print("✓ No anomalies markdown generated (missing or empty anomalies CSV)")
+        except Exception as sub_exc:
+            print(f"⚠️ Failed anomaly markdown generation: {sub_exc}")
+    except Exception as exc:
+        print(f"⚠️ Drift/anomaly summary skipped: {exc}")
+
+    # =========================================================================
+    # STEP 7: Update README with current model stats
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 7: Updating README model statistics")
+    print("-"*80)
+    try:
+        result = sp_run(
+            ['python3', 'game_prediction/update_readme_stats.py'],
+            capture_output=True, text=True, timeout=30
+        )
         if result.returncode == 0:
             print(result.stdout)
         else:
             print(f"✗ Error updating README: {result.stderr}")
-    except Exception as e:
-        print(f"✗ Error updating README: {e}")
+    except Exception as exc:
+        print(f"✗ Error updating README: {exc}")
     
     # =========================================================================
     # Pipeline Complete
@@ -251,7 +439,8 @@ def main():
     print(f"  - {os.path.join(data_dir, 'Completed_Games.csv')}")
     print(f"  - {os.path.join(data_dir, 'Upcoming_Games.csv')}")
     print(f"  - {os.path.join(data_dir, 'Completed_Games_Normalized.csv')} (if normalization succeeded)")
-    print(f"  - {os.path.join(data_dir, 'NCAA_Game_Predictions.csv')}")
+    print(f"  - {os.path.join(data_dir, 'NCAA_Game_Predictions.csv')} (config_version={_config_version})")
+    print(f"    commit_hash={_commit_hash}")
     print(f"  - {os.path.join(data_dir, 'Accuracy_Report.csv')}")
     print(f"  - predictions.md")
     print(f"  - README.md (Model Evaluation section)")

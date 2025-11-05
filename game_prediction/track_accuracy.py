@@ -9,6 +9,16 @@ import numpy as np
 from datetime import datetime
 import os
 
+# Lineage imports (defensive)
+try:  # pragma: no cover
+    from config.load_config import get_config_version
+    from config.versioning import get_commit_hash
+    _config_version = get_config_version()
+    _commit_hash = get_commit_hash()
+except Exception:  # noqa: BLE001
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
+
 def track_accuracy():
     """Compare predictions to actual results and calculate accuracy."""
     
@@ -119,7 +129,9 @@ def track_accuracy():
         'games_completed': [len(merged)],
         'correct_predictions': [merged['correct'].sum()],
         'accuracy': [accuracy],
-        'avg_confidence': [merged['confidence'].mean()]
+        'avg_confidence': [merged['confidence'].mean()],
+        'config_version': [_config_version],
+        'commit_hash': [_commit_hash]
     })
     
     # Append to existing report if it exists
@@ -137,6 +149,8 @@ def track_accuracy():
         'predicted_winner', 'actual_winner', 'confidence', 
         'correct', 'home_score', 'away_score'
     ]].copy()
+    detailed_df['config_version'] = _config_version
+    detailed_df['commit_hash'] = _commit_hash
     
     # Append to existing details if exists, otherwise create new
     if os.path.exists(detailed_path):

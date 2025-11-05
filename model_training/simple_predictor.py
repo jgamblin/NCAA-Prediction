@@ -10,6 +10,7 @@ import sys
 import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
+from sklearn.calibration import CalibratedClassifierCV
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -19,7 +20,8 @@ from data_collection.team_name_utils import normalize_team_name
 class SimplePredictor:
     """Simple prediction model for NCAA basketball games."""
     
-    def __init__(self, n_estimators=100, max_depth=20, min_samples_split=10, min_games_threshold=75):
+    def __init__(self, n_estimators=100, max_depth=20, min_samples_split=10, min_games_threshold=75,
+                 calibrate=True, calibration_method='sigmoid', feature_importance_path='data/Simple_Feature_Importance.csv'):
         """
         Initialize the predictor.
         
@@ -29,19 +31,26 @@ class SimplePredictor:
             min_samples_split: Minimum samples required to split a node
             min_games_threshold: Minimum number of historical games required to make a prediction (default: 75 = ~15 games/season over 5 seasons)
         """
-        self.model = RandomForestClassifier(
+        base_model = RandomForestClassifier(
             n_estimators=n_estimators,
             max_depth=max_depth,
             min_samples_split=min_samples_split,
             random_state=42,
             n_jobs=-1
         )
+        self._raw_model = base_model  # before optional calibration
+        self.model = base_model       # will be replaced by calibrated wrapper if enabled
         self.team_encoder = LabelEncoder()
-        self.feature_cols = ['home_team_encoded', 'away_team_encoded', 
-                            'is_neutral', 'home_rank', 'away_rank']
+        # Base features; additional derived feature store diffs appended dynamically
+        self.feature_cols = [
+            'home_team_encoded', 'away_team_encoded', 'is_neutral', 'home_rank', 'away_rank'
+        ]
         self.min_games_threshold = min_games_threshold
         self.team_game_counts = {}  # Store game counts per team
         self.training_data = None  # Store reference to training data
+        self.calibrate = calibrate
+        self.calibration_method = calibration_method
+        self.feature_importance_path = feature_importance_path
     
     def prepare_data(self, df):
         """
@@ -82,6 +91,24 @@ class SimplePredictor:
         else:
             df['away_rank'] = 99
         
+        # Feature store diff features (if enriched via pipeline)
+        # Expect columns like home_fs_rolling_win_pct_5, away_fs_rolling_win_pct_5, etc.
+        fs_pairs = [
+            ('rolling_win_pct_5','fs_win_pct5_diff'),
+            ('rolling_win_pct_10','fs_win_pct10_diff'),
+            ('rolling_point_diff_avg_5','fs_point_diff5_diff'),
+            ('rolling_point_diff_avg_10','fs_point_diff10_diff'),
+            ('win_pct_last5_vs10','fs_win_pct_last5_vs10_diff'),
+            ('point_diff_last5_vs10','fs_point_diff_last5_vs10_diff'),
+            ('recent_strength_index_5','fs_recent_strength_index5_diff'),
+        ]
+        for base, diff_name in fs_pairs:
+            h_col = f'home_fs_{base}'
+            a_col = f'away_fs_{base}'
+            if h_col in df.columns and a_col in df.columns:
+                df[diff_name] = df[h_col] - df[a_col]
+                if diff_name not in self.feature_cols:
+                    self.feature_cols.append(diff_name)
         return df
     
     def fit(self, train_df):
@@ -99,10 +126,8 @@ class SimplePredictor:
         
         # Calculate game counts per team
         print(f"Calculating game counts for {len(train_df)} training games...")
-        for team in pd.concat([train_df['home_team'], train_df['away_team']]).unique():
-            team_games = train_df[
-                (train_df['home_team'] == team) | (train_df['away_team'] == team)
-            ]
+        for team in pd.concat([train_df['home_team'], train_df['away_team']]).unique():  # type: ignore[attr-defined]
+            team_games = train_df[(train_df['home_team'] == team) | (train_df['away_team'] == team)]
             self.team_game_counts[team] = len(team_games)
         
         # Report teams with low game counts
@@ -120,15 +145,46 @@ class SimplePredictor:
         train_df['away_team_encoded'] = self.team_encoder.transform(train_df['away_team'])
         
         # Train model
-        X = train_df[self.feature_cols]
+        # Filter feature columns that exist (dynamic expansion with feature store)
+        available = [c for c in self.feature_cols if c in train_df.columns]
+        if set(self.feature_cols) - set(available):
+            missing = set(self.feature_cols) - set(available)
+            if missing:
+                print(f"Note: Skipping missing feature columns: {sorted(missing)}")
+        X = train_df[available]
         y = train_df['home_win']
         
         print(f"Training model on {len(train_df)} games...")
-        self.model.fit(X, y)
+        self._raw_model.fit(X, y)
+        if self.calibrate and self.calibration_method in ('sigmoid','isotonic'):
+            try:
+                self.model = CalibratedClassifierCV(self._raw_model, method=self.calibration_method, cv=5)
+                self.model.fit(X, y)  # calibration wrapper fit
+            except Exception as exc:
+                print(f"Calibration failed ({exc}); using raw model.")
+                self.model = self._raw_model
+        else:
+            self.model = self._raw_model
         
         # Calculate accuracy
         train_accuracy = self.model.score(X, y)
         print(f"Training accuracy: {train_accuracy:.1%}")
+        # Feature importance (only available on raw RandomForest)
+        try:
+            importances = self._raw_model.feature_importances_
+            imp_df = pd.DataFrame({
+                'feature': available,
+                'importance': importances[:len(available)]
+            }).sort_values('importance', ascending=False)
+            os.makedirs(os.path.dirname(self.feature_importance_path), exist_ok=True)
+            imp_df.to_csv(self.feature_importance_path, index=False)
+            top = imp_df.head(8)
+            print("Top features (simple predictor):")
+            for _, r in top.iterrows():
+                print(f"  {r['feature']}: {r['importance']:.4f}")
+            print(f"Feature importances written to {self.feature_importance_path}")
+        except Exception as exc:
+            print(f"Feature importance logging skipped: {exc}")
         
         return self
     
@@ -218,7 +274,13 @@ class SimplePredictor:
         )
         
         # Make predictions
-        X_upcoming = upcoming_valid[self.feature_cols]
+        trained_features = getattr(self.model, 'feature_names_in_', None)
+        if trained_features is not None:
+            # Align upcoming features exactly to trained feature ordering; fill missing with 0
+            X_upcoming = upcoming_valid.reindex(columns=list(trained_features), fill_value=0)
+        else:
+            available = [c for c in self.feature_cols if c in upcoming_valid.columns]
+            X_upcoming = upcoming_valid[available]
         predictions = self.model.predict(X_upcoming)
         probabilities = self.model.predict_proba(X_upcoming)
         

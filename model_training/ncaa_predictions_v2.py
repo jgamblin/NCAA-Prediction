@@ -23,6 +23,7 @@ os.environ['PYTHONWARNINGS'] = 'ignore::UserWarning'
 
 import pandas as pd
 import numpy as np
+from typing import List, Tuple
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -32,8 +33,21 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, log_loss, roc_auc_score
+from sklearn.metrics import brier_score_loss
 from sklearn.impute import SimpleImputer
 from scipy.stats import randint, uniform
+from model_training.feature_store import load_feature_store
+from model_training.team_id_utils import ensure_team_ids
+
+# Lineage / versioning (optional; resilient to missing config)
+try:  # pragma: no cover - defensive import
+    from config.load_config import get_config_version
+    from config.versioning import get_commit_hash
+    _config_version = get_config_version()
+    _commit_hash = get_commit_hash()
+except Exception:  # noqa: BLE001
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
 
 
 def load_data():
@@ -371,6 +385,52 @@ def preprocess_data(completed_games, upcoming_games):
     # Create target variable: did home team win?
     completed_games['home_team_won'] = (completed_games['home_score'] > completed_games['away_score']).astype(int)
     
+    # Integrate feature store (hashed deterministic IDs) BEFORE rolling stats to avoid leakage from later engineered stats
+    try:
+        fs = load_feature_store()
+        if not fs.empty:
+            # Ensure team ids (deterministic hashed) on copies
+            completed_games = ensure_team_ids(completed_games)
+            upcoming_games = ensure_team_ids(upcoming_games)
+            # Preserve hashed ids separately to avoid clash with label encoder later
+            completed_games.rename(columns={'home_team_id':'hashed_home_team_id','away_team_id':'hashed_away_team_id'}, inplace=True)
+            upcoming_games.rename(columns={'home_team_id':'hashed_home_team_id','away_team_id':'hashed_away_team_id'}, inplace=True)
+            # Filter feature store to relevant seasons if season column present
+            if 'season' in completed_games.columns and 'season' in fs.columns:
+                seasons = completed_games['season'].unique().tolist()
+                fs_filtered = fs[fs['season'].isin(seasons)] if seasons else fs
+            else:
+                fs_filtered = fs
+            # Prepare home/away prefixed frames
+            home_fs = fs_filtered.add_prefix('home_fs_').rename(columns={'home_fs_team_id':'hashed_home_team_id'})
+            away_fs = fs_filtered.add_prefix('away_fs_').rename(columns={'away_fs_team_id':'hashed_away_team_id'})
+            completed_games = completed_games.merge(home_fs, on='hashed_home_team_id', how='left')
+            completed_games = completed_games.merge(away_fs, on='hashed_away_team_id', how='left')
+            upcoming_games = upcoming_games.merge(home_fs, on='hashed_home_team_id', how='left')
+            upcoming_games = upcoming_games.merge(away_fs, on='hashed_away_team_id', how='left')
+            # Derive diff features from feature store metrics (rolling aggregates)
+            diff_specs = [
+                ('rolling_win_pct_5','fs_win_pct5_diff'),
+                ('rolling_win_pct_10','fs_win_pct10_diff'),
+                ('rolling_point_diff_avg_5','fs_point_diff5_diff'),
+                ('rolling_point_diff_avg_10','fs_point_diff10_diff'),
+                ('win_pct_last5_vs10','fs_win_pct_last5_vs10_diff'),
+                ('point_diff_last5_vs10','fs_point_diff_last5_vs10_diff'),
+                ('recent_strength_index_5','fs_recent_strength_index5_diff'),
+            ]
+            for base, diff_col in diff_specs:
+                h_col = f'home_fs_{base}'
+                a_col = f'away_fs_{base}'
+                if h_col in completed_games.columns and a_col in completed_games.columns:
+                    completed_games[diff_col] = completed_games[h_col] - completed_games[a_col]
+                if h_col in upcoming_games.columns and a_col in upcoming_games.columns:
+                    upcoming_games[diff_col] = upcoming_games[h_col] - upcoming_games[a_col]
+            print("Integrated feature store aggregates (win pct / point diff).")
+        else:
+            print("Feature store empty; skipping integration.")
+    except Exception as e:
+        print(f"Feature store integration skipped: {e}")
+
     # Calculate rolling statistics
     rolling_stats = calculate_rolling_stats(completed_games)
     completed_games = add_rolling_features(completed_games, rolling_stats)
@@ -415,7 +475,7 @@ def create_model_features(df):
     return df
 
 
-def build_and_train_model(completed_games):
+def build_and_train_model(completed_games) -> Tuple[Pipeline, List[str]]:
     """Build and train the prediction model with enhanced features."""
     print("\n" + "="*80)
     print("MODEL BUILDING AND TRAINING")
@@ -452,6 +512,11 @@ def build_and_train_model(completed_games):
         # Context
         'home_advantage'
     ]
+    # Optional feature store diff features if present
+    optional_fs = ['fs_win_pct5_diff','fs_win_pct10_diff','fs_point_diff5_diff','fs_point_diff10_diff']
+    for col in optional_fs:
+        if col in completed_games.columns:
+            features.append(col)
     
     # Filter features that exist in the dataframe
     available_features = [f for f in features if f in completed_games.columns]
@@ -533,8 +598,8 @@ def build_and_train_model(completed_games):
     print("MODEL EVALUATION")
     print("="*80)
     
-    y_pred = best_model.predict(X_test)
-    y_pred_proba = best_model.predict_proba(X_test)
+    y_pred = best_model.predict(X_test)  # type: ignore[attr-defined]
+    y_pred_proba = best_model.predict_proba(X_test)  # type: ignore[attr-defined]
     
     accuracy = accuracy_score(y_test, y_pred, sample_weight=weights_test)
     log_loss_score = log_loss(y_test, y_pred_proba, sample_weight=weights_test)
@@ -552,13 +617,21 @@ def build_and_train_model(completed_games):
     print(f"Cross-validation accuracy: {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
     
     # Feature importance
-    feature_importance = best_model.named_steps['classifier'].feature_importances_
+    feature_importance = best_model.named_steps['classifier'].feature_importances_  # type: ignore[attr-defined]
     sorted_idx = np.argsort(feature_importance)[::-1]
-    
+
     print("\nTop 10 Most Important Features:")
     for i in range(min(10, len(available_features))):
         idx = sorted_idx[i]
         print(f"  {i+1}. {available_features[idx]}: {feature_importance[idx]:.4f}")
+
+    # Separate section for feature store diff features (fs_*)
+    fs_mask = [f for f in available_features if f.startswith('fs_')]
+    if fs_mask:
+        print("\nFeature Store Diff Feature Importance:")
+        fs_tuples = [(f, feature_importance[available_features.index(f)]) for f in fs_mask]
+        for name, val in sorted(fs_tuples, key=lambda x: x[1], reverse=True):
+            print(f"  {name}: {val:.4f}")
     
     # Plot feature importance
     plt.figure(figsize=(12, 10))
@@ -577,7 +650,41 @@ def build_and_train_model(completed_games):
     plt.savefig(plot_path, dpi=100, bbox_inches='tight')
     print(f"\n✓ Feature importance plot saved to '{plot_path}'")
     plt.close()
+
+    # Evaluate impact of feature store diff features by refitting without fs_ columns
+    fs_features = [f for f in available_features if f.startswith('fs_')]
+    if fs_features:
+        try:
+            reduced_features = [f for f in available_features if f not in fs_features]
+            X_red = model_data[reduced_features]
+            y_red = model_data['home_team_won']
+            red_model = RandomForestClassifier(random_state=42)
+            red_model.fit(X_red, y_red)
+            y_red_pred = red_model.predict(X_test[reduced_features])
+            y_red_proba = red_model.predict_proba(X_test[reduced_features])
+            red_acc = accuracy_score(y_test, y_red_pred, sample_weight=weights_test)
+            red_logloss = log_loss(y_test, y_red_proba, sample_weight=weights_test)
+            lift_acc = accuracy - red_acc
+            lift_ll = red_logloss - log_loss_score
+            eval_path = os.path.join(data_dir, 'fs_feature_lift.csv')
+            pd.DataFrame([
+                {
+                    'with_fs_accuracy': accuracy,
+                    'without_fs_accuracy': red_acc,
+                    'accuracy_lift': lift_acc,
+                    'with_fs_logloss': log_loss_score,
+                    'without_fs_logloss': red_logloss,
+                    'logloss_gain': lift_ll,
+                    'fs_feature_count': len(fs_features)
+                }
+            ]).to_csv(eval_path, index=False)
+            print(f"\nFS diff feature evaluation saved: {eval_path}")
+            print(f"Accuracy lift: {lift_acc:+.4f} | LogLoss gain: {lift_ll:+.4f}")
+        except Exception as e:
+            print(f"FS feature lift evaluation skipped: {e}")
     
+    # Ensure type matches annotation (Pipeline)
+    assert isinstance(best_model, Pipeline), "best_model should be a Pipeline instance"
     return best_model, available_features
 
 
@@ -626,6 +733,33 @@ def make_predictions(best_model, features, upcoming_games):
     return upcoming_features
 
 
+def calibration_report(y_true, y_proba, bins=10):
+    """Return calibration dataframe and brier score."""
+    import numpy as np
+    import pandas as pd
+    brier = brier_score_loss(y_true, y_proba)
+    df = pd.DataFrame({'y_true': y_true, 'y_proba': y_proba})
+    df['bin'] = pd.cut(df['y_proba'], bins=bins, labels=False, include_lowest=True)
+    grouped = df.groupby('bin').agg(
+        bin_count=('y_true','count'),
+        mean_pred=('y_proba','mean'),
+        mean_actual=('y_true','mean')
+    ).reset_index()
+    grouped['abs_gap'] = (grouped['mean_pred'] - grouped['mean_actual']).abs()
+    return brier, grouped
+
+
+def extract_fs_feature_importance(features, importances):
+    """Return dict of fs_* feature importances sorted desc.
+
+    features: List[str] used in model
+    importances: 1D array aligned with features
+    """
+    mapping = {f: importances[features.index(f)] for f in features if f.startswith('fs_') and f in features}
+    # Sort by importance descending
+    return dict(sorted(mapping.items(), key=lambda x: x[1], reverse=True))
+
+
 def export_results_and_update_readme(predictions):
     """Export predictions to CSV and update README."""
     if predictions.empty:
@@ -649,6 +783,9 @@ def export_results_and_update_readme(predictions):
     data_dir = os.path.join(os.path.dirname(script_dir), 'data')
     predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
     
+    # Embed lineage columns for auditability
+    predictions_export['config_version'] = _config_version
+    predictions_export['commit_hash'] = _commit_hash
     predictions_export.to_csv(predictions_path, index=False)
     print(f"\n✓ Exported predictions to '{predictions_path}'")
     
@@ -725,9 +862,42 @@ def main():
         
         # Build and train model
         best_model, features = build_and_train_model(completed_games)
+        # Explicitly type annotate for static analysis
+        assert isinstance(best_model, Pipeline)
         
         # Make predictions
         predictions = make_predictions(best_model, features, upcoming_games)
+
+        # Calibration on training evaluation set (reuse X_test from scope not returned) - simplified: recompute using model on full model_data
+        try:
+            # Reconstruct probabilities for calibration using the subset used in training pipeline
+            # This is a lightweight approximation since internal splits were encapsulated
+            # We perform a quick back-calibration on all games with available features
+            model_ready = completed_games.dropna(subset=features)
+            X_all = model_ready[features]
+            proba_all = best_model.predict_proba(X_all)[:,1]  # type: ignore[attr-defined]
+            y_all = model_ready['home_team_won']
+            brier, calib_df = calibration_report(y_all, proba_all, bins=10)
+            # Save calibration plot
+            import matplotlib.pyplot as plt
+            fig, ax = plt.subplots(figsize=(6,4))
+            ax.plot(calib_df['mean_pred'], calib_df['mean_actual'], marker='o')
+            ax.plot([0,1],[0,1], '--', color='gray')
+            ax.set_xlabel('Predicted Probability')
+            ax.set_ylabel('Observed Frequency')
+            ax.set_title(f'Calibration Curve (Brier {brier:.3f})')
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            data_dir = os.path.join(os.path.dirname(script_dir), 'data')
+            calib_path = os.path.join(data_dir, 'calibration_curve.png')
+            fig.tight_layout()
+            fig.savefig(calib_path, dpi=110)
+            plt.close(fig)
+            # Save calibration bins CSV
+            calib_csv = os.path.join(data_dir, 'calibration_bins.csv')
+            calib_df.to_csv(calib_csv, index=False)
+            print(f"\nCalibration: Brier score {brier:.4f} (curve saved to {calib_path})")
+        except Exception as e:
+            print(f"Calibration step skipped: {e}")
         
         # Export results
         export_results_and_update_readme(predictions)
@@ -743,7 +913,12 @@ def main():
         sys.exit(1)
     finally:
         # Cleanup
-        plt.close('all')
+        _pl = globals().get('plt', None)
+        if _pl is not None:
+            try:
+                _pl.close('all')
+            except Exception:
+                pass
         gc.collect()
 
 

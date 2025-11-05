@@ -30,6 +30,14 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 from sklearn.metrics import log_loss
+try:  # pragma: no cover
+    from config.load_config import get_config_version
+    from config.versioning import get_commit_hash
+    _config_version = get_config_version()
+    _commit_hash = get_commit_hash()
+except Exception:  # noqa: BLE001
+    _config_version = 'unknown'
+    _commit_hash = 'unknown'
 
 PRED_LOG = Path("data") / "prediction_log.csv"
 BACKFILL = Path("data") / "historical_backfill.csv"
@@ -60,7 +68,10 @@ def load_prediction_sources() -> pd.DataFrame:
         back_df = pd.read_csv(BACKFILL)
         frames.append(back_df)
     if not frames:
-        raise FileNotFoundError("No prediction sources found (prediction_log.csv or historical_backfill.csv)")
+        # Gracefully return empty frame so downstream logic can handle absence without exception
+        return pd.DataFrame(columns=[
+            'game_id','home_win_probability','source','prediction_timestamp','pred_prob'
+        ])
     preds = pd.concat(frames, ignore_index=True)
     # Ensure required probability columns
     if "home_win_probability" not in preds.columns:
@@ -198,6 +209,8 @@ def compute_metrics(df: pd.DataFrame, window: int) -> pd.DataFrame:
                 "source": row.get("source", ""),
                 "cumulative_expected_home_wins": expected_sum,
                 "cumulative_actual_home_wins": actual_sum,
+                "config_version": _config_version,
+                "commit_hash": _commit_hash,
             })
 
     return pd.DataFrame(records)
