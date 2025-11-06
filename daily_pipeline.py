@@ -69,7 +69,7 @@ def main():
     print("STEP 1: Scraping ESPN for recent games")
     print("-"*80)
     
-    from espn_scraper import ESPNScraper
+    from espn_scraper import ESPNScraper  # type: ignore
     
     scraper = ESPNScraper()
     
@@ -235,7 +235,7 @@ def main():
     print("STEP 3: Tracking accuracy of previous predictions")
     print("-"*80)
     
-    from track_accuracy import track_accuracy
+    from track_accuracy import track_accuracy  # type: ignore
     track_accuracy()
     
     # =========================================================================
@@ -247,9 +247,10 @@ def main():
     
     if len(upcoming) > 0:
         print(f"Generating predictions for {len(upcoming)} upcoming games...")
-        
+
         # Use simplified prediction model
-        from simple_predictor import SimplePredictor
+        from simple_predictor import SimplePredictor  # type: ignore
+        import json
         
         # Load training data
         # Prefer normalized historical file if available
@@ -262,7 +263,19 @@ def main():
             print(f"✓ Using raw training data ({len(train_df)} rows) - normalized file not found")
         
         # Train model and generate predictions
-        predictor = SimplePredictor()
+        # Load tuned hyperparameters if available
+        from config.model_params_loader import load_model_params  # type: ignore
+        model_cfg = load_model_params()
+        sp_kwargs = {}
+        simple_cfg = model_cfg.get('simple_predictor', {}) if model_cfg else {}
+        for key in ['n_estimators','max_depth','min_samples_split','min_games_threshold','calibrate','calibration_method']:
+            if key in simple_cfg:
+                sp_kwargs[key] = simple_cfg[key]
+        if sp_kwargs:
+            print(f"✓ Loaded tuned simple predictor params: {sp_kwargs}")
+        else:
+            print("⚠️ No tuned params found (using defaults)")
+        predictor = SimplePredictor(**sp_kwargs)
         # Enrich training data with feature store stats similar to upcoming enrichment
         try:
             from model_training.feature_store import load_feature_store
@@ -313,7 +326,41 @@ def main():
                     print(f"✓ Added feature store columns to training data (rows {len(train_df)})")
         except Exception as exc:
             print(f"⚠️ Skipped feature store enrichment for training data: {exc}")
-        predictor.fit(train_df)
+        # Optional sample weighting if enabled in config
+        use_weights = bool(model_cfg.get('simple_predictor', {}).get('use_sample_weights', False)) if model_cfg else False
+        if use_weights and 'season' in train_df.columns:
+            print("✓ Sample weighting enabled: emphasizing current season performance")
+            # Lightweight weight scheme: boost current season 10x, previous 3x, older decay
+            seasons = sorted(train_df['season'].unique(), reverse=True)
+            season_weight_map = {}
+            for i, season in enumerate(seasons):
+                if i == 0:
+                    season_weight_map[season] = 10.0
+                elif i == 1:
+                    season_weight_map[season] = 3.0
+                elif i == 2:
+                    season_weight_map[season] = 1.5
+                else:
+                    season_weight_map[season] = 0.5 ** (i - 2)
+            sample_weights = train_df['season'].map(season_weight_map).values
+            predictor.fit(train_df)  # initial fit populates encoders
+            try:
+                # Re-fit raw model with weights (calibration wrapper handled inside predictor)
+                available = [c for c in predictor.feature_cols if c in train_df.columns]
+                Xw = train_df[available]
+                yw = train_df['home_win'] if 'home_win' in train_df.columns else None
+                if yw is not None:
+                    predictor._raw_model.fit(Xw, yw, sample_weight=sample_weights)
+                    if predictor.calibrate:
+                        from sklearn.calibration import CalibratedClassifierCV
+                        predictor.model = CalibratedClassifierCV(predictor._raw_model, method=predictor.calibration_method, cv=5)
+                        predictor.model.fit(Xw, yw)
+                    print("✓ Applied sample weighting (current season heavy) in predictor training")
+            except Exception as exc:
+                print(f"⚠️ Sample weighting re-fit failed: {exc}; using unweighted model.")
+        else:
+            print("✓ Sample weights disabled (standard training)")
+            predictor.fit(train_df)
         predictions_df = predictor.predict(upcoming)
         
         # Sort by confidence (highest first) for better readability
@@ -365,21 +412,19 @@ def main():
         print("✓ No upcoming games to predict")
     
     # =========================================================================
-    # STEP 5: Generate predictions.md
+    # STEP 5: Publish artifacts (predictions.md + README evaluation/banner)
     # =========================================================================
     print("\n" + "="*80)
-    print("STEP 5: Generating predictions.md")
+    print("STEP 5: Publishing artifacts (predictions.md & README)")
     print("-"*80)
-    
     try:
-        result = sp_run(['python3', 'game_prediction/generate_predictions_md.py'], 
-                              capture_output=True, text=True, timeout=30)
+        result = sp_run(['python3', 'game_prediction/publish_artifacts.py'], capture_output=True, text=True, timeout=60)
         if result.returncode == 0:
             print(result.stdout)
         else:
-            print(f"✗ Error generating predictions.md: {result.stderr}")
+            print(f"✗ Artifact publishing failed: {result.stderr}")
     except Exception as exc:
-        print(f"✗ Error generating predictions.md: {exc}")
+        print(f"✗ Artifact publishing error: {exc}")
     
     # =========================================================================
     # STEP 6: Per-Team Drift & Anomaly Summaries
@@ -412,25 +457,7 @@ def main():
         print(f"⚠️ Drift/anomaly summary skipped: {exc}")
 
     # =========================================================================
-    # STEP 7: Update README with current model stats
-    # =========================================================================
-    print("\n" + "="*80)
-    print("STEP 7: Updating README model statistics")
-    print("-"*80)
-    try:
-        result = sp_run(
-            ['python3', 'game_prediction/update_readme_stats.py'],
-            capture_output=True, text=True, timeout=30
-        )
-        if result.returncode == 0:
-            print(result.stdout)
-        else:
-            print(f"✗ Error updating README: {result.stderr}")
-    except Exception as exc:
-        print(f"✗ Error updating README: {exc}")
-    
-    # =========================================================================
-    # Pipeline Complete
+    # STEP 7: Pipeline Complete
     # =========================================================================
     print("\n" + "="*80)
     print("PIPELINE COMPLETE!")

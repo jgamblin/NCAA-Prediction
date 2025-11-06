@@ -1,0 +1,19 @@
+{
+  "simple_predictor": {
+    "n_estimators": 100,
+    "max_depth": 15,
+    "min_samples_split": 20,
+    "min_games_threshold": 75,
+    "calibrate": true,
+    "calibration_method": "sigmoid",
+  "use_sample_weights": true
+  },
+  "metadata": {
+    "last_tuned": "2025-11-06 08:57:13",
+    "tuner_commit": "unknown",
+    "tuned_by": "tune_model.py",
+    "source": "auto-tuner",
+    "cv_score": 0.6749278560516041,
+    "weighted_accuracy": 0.7528938375041341
+  }
+}
