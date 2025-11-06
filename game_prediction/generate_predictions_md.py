@@ -1,20 +1,35 @@
 #!/usr/bin/env python3
 """
-Generate predictions.md file with current predictions and historical accuracy.
-This file is updated after each daily pipeline run.
+DEPRECATED: Use publish_artifacts.py instead.
+
+This legacy script generated predictions.md with current predictions and accuracy.
+It now simply delegates to publish_artifacts.py for backward compatibility.
+Will be removed in a future cleanup.
 """
 
 import pandas as pd
 from datetime import datetime
 import os
 import sys
+import subprocess
 
 # Add current directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from calculate_streak import calculate_perfect_streak, get_streak_emoji
 
 def generate_predictions_md():
-    """Generate the predictions.md file."""
+    """Backward-compatible wrapper calling unified publisher."""
+    try:
+        script = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'publish_artifacts.py')
+        result = subprocess.run(['python3', script, '--predictions-only'], capture_output=True, text=True, timeout=60)
+        if result.returncode == 0:
+            print(result.stdout)
+            return
+        else:
+            print(result.stderr)
+    except Exception as exc:  # noqa: BLE001
+        print(f"Fallback legacy generation path engaged due to error: {exc}")
+    # If unified script fails, run legacy logic below.
     
     # Use absolute paths relative to this script
     script_dir = os.path.dirname(os.path.abspath(__file__))

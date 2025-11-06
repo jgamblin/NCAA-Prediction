@@ -1,0 +1,74 @@
+[
+  {
+    "date": "2025-11-06 08:46:18",
+    "current_season": "2025-26",
+    "total_games": 29451,
+    "best_params": {
+      "n_estimators": 100,
+      "max_depth": 15,
+      "min_samples_split": 20
+    },
+    "weighted_accuracy": 0.7528938375041341,
+    "current_season_games": 446,
+    "current_season_accuracy": 0.9663677130044843,
+    "season_weights": {
+      "2025-26": 11.614349775784753,
+      "2024-25": 3.0,
+      "2023-24": 1.5,
+      "2022-23": 0.5,
+      "2021-22": 0.25,
+      "2020-21": 0.125
+    },
+    "config_version": "unknown",
+    "commit_hash": "unknown",
+    "fs_diff_feature_count": 0
+  },
+  {
+    "date": "2025-11-06 08:46:44",
+    "current_season": "2025-26",
+    "total_games": 29451,
+    "best_params": {
+      "n_estimators": 120,
+      "max_depth": 18,
+      "min_samples_split": 10
+    },
+    "weighted_accuracy": 0.7943478571011692,
+    "current_season_games": 446,
+    "current_season_accuracy": 1.0,
+    "season_weights": {
+      "2025-26": 11.614349775784753,
+      "2024-25": 3.0,
+      "2023-24": 1.5,
+      "2022-23": 0.5,
+      "2021-22": 0.25,
+      "2020-21": 0.125
+    },
+    "config_version": "unknown",
+    "commit_hash": "unknown",
+    "fs_diff_feature_count": 0
+  },
+  {
+    "date": "2025-11-06 08:57:13",
+    "current_season": "2025-26",
+    "total_games": 29451,
+    "best_params": {
+      "n_estimators": 100,
+      "max_depth": 15,
+      "min_samples_split": 20
+    },
+    "weighted_accuracy": 0.7528938375041341,
+    "current_season_games": 446,
+    "current_season_accuracy": 0.9663677130044843,
+    "season_weights": {
+      "2025-26": 11.614349775784753,
+      "2024-25": 3.0,
+      "2023-24": 1.5,
+      "2022-23": 0.5,
+      "2021-22": 0.25,
+      "2020-21": 0.125
+    },
+    "config_version": "unknown",
+    "commit_hash": "unknown",
+    "fs_diff_feature_count": 0
+  }
+]
