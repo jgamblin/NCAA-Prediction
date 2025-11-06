@@ -6,7 +6,7 @@ Predict NCAA basketball game outcomes using machine learning models trained on m
 
 ## 📅 [View Today's Predictions →](predictions.md)
 
-**Current Predictions**: 36 games for November 4, 2025**  
+**Current Predictions**: 12 games for November 06, 2025
 **Last Updated**: Automated daily at 12:00 PM UTC
 
 ### 📋 Full Details
@@ -123,7 +123,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-06 12:10 UTC*
+*Last updated: 2025-11-06 07:10 UTC*
 
 ### Model Lineage
 

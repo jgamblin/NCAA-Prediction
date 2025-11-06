@@ -185,9 +185,53 @@ def update_readme_model_stats():
     new_section.append(f"- Config Version: `{resolved_cfg}`")
     new_section.append(f"- Commit Hash: `{resolved_commit}`")
     
+    # Helper: update top banner "Current Predictions" line
+    def update_current_predictions_banner(lines: list[str]) -> list[str]:
+        banner_idx = None
+        for i, line in enumerate(lines):
+            if 'Current Predictions' in line:
+                banner_idx = i
+                break
+        if banner_idx is None:
+            return lines
+        # Derive prediction date & count
+        pred_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
+        if os.path.exists(pred_path):
+            try:
+                pred_df = pd.read_csv(pred_path)
+                game_count = len(pred_df)
+                date_col = 'date' if 'date' in pred_df.columns else None
+                pred_date = None
+                if date_col:
+                    # Prefer today if exists else earliest upcoming
+                    today = datetime.utcnow().strftime('%Y-%m-%d')
+                    if (pred_df[date_col] == today).any():
+                        pred_date = today
+                    else:
+                        # choose earliest date
+                        try:
+                            pred_date = sorted(pred_df[date_col].dropna().unique())[0]
+                        except Exception:
+                            pred_date = today
+                else:
+                    pred_date = datetime.utcnow().strftime('%Y-%m-%d')
+                # Format human readable date
+                try:
+                    pretty_date = datetime.strptime(pred_date, '%Y-%m-%d').strftime('%B %d, %Y')
+                except Exception:
+                    pretty_date = pred_date
+                lines[banner_idx] = f"**Current Predictions**: {game_count} games for {pretty_date}\n"
+            except Exception:
+                pass
+        # Remove stray double asterisks if any remained from earlier corruption
+        lines[banner_idx] = lines[banner_idx].replace('**  ', '** ').replace('**\n','**\n')
+        return lines
+
     # Read current README
     with open(readme_path, 'r') as f:
         readme_lines = f.readlines()
+    # Update banner before altering evaluation section
+    readme_lines = update_current_predictions_banner(readme_lines)
     
     # Identify ALL occurrences of Model Evaluation section
     heading_flag = '## 📈 Model Evaluation'
@@ -228,6 +272,9 @@ def update_readme_model_stats():
     # Replace first section content
     new_readme = cleaned[:first_idx] + [l + '\n' for l in new_section] + ['\n'] + cleaned[end_first:]
     
+    # After injecting evaluation section, re-run banner update (in case section replacement reintroduced old line)
+    new_readme = update_current_predictions_banner(new_readme)
+
     # Write updated README
     with open(readme_path, 'w') as f:
         f.writelines(new_readme)
