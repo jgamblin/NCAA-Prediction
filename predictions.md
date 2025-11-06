@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-06 15:20:37 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `7420a21`
+**Last Updated**: 2025-11-06 15:43:12 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `439d761`
 
 ---
 
@@ -31,18 +31,18 @@
 | 5 | **North Texas** | Northwestern State | 91.6% |
 | 6 | **Drake** | Robert Morris | 91.6% |
 | 7 | **Texas A&M** | Texas Southern | 91.3% |
-| 8 | **Miami (FL)** | Bethune-Cookman | 91.3% |
+| 8 | **Miami (FL)** | Bethune-Cookman | 91.2% |
 | 9 | **South Alabama** | Alcorn State | 91.2% |
-| 10 | **Ohio** | Illinois State | 90.7% |
+| 10 | **Ohio** | Illinois State | 90.9% |
 | 11 | **Abilene Christian** | Omaha | 90.7% |
-| 12 | **California** | Wright State | 89.1% |
+| 12 | **California** | Wright State | 89.2% |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 12
 - Away Teams Favored: 0
 - Max Confidence: 92.1%
-- Min Confidence: 89.1%
+- Min Confidence: 89.2%
 
 ### 📋 Full Data
 
