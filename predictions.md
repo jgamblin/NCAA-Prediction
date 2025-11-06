@@ -1,36 +1,36 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-05 23:52:24 UTC
+**Last Updated**: 2025-11-06 12:10:14 UTC
 
 ---
 
 ## 📅 Today's Predictions
 
-**12 games** predicted for **2025-11-05**
+**12 games** predicted for **2025-11-06**
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | vs | Loser | Confidence |
 |---|--------|----|----|------------|
-| 1 | **Butler** | vs | Southern Indiana | 91.5% |
-| 2 | **Temple** | vs | Delaware State | 91.4% |
-| 3 | **Creighton** | vs | South Dakota | 91.4% |
-| 4 | **Loyola Marymount** | vs | Eastern Washington | 91.2% |
-| 5 | **UC Davis** | vs | North Dakota State | 91.2% |
-| 6 | **La Salle** | vs | Coppin State | 91.1% |
-| 7 | **Rutgers** | vs | Rider | 91.0% |
-| 8 | **Mississippi State** | vs | North Alabama | 90.4% |
-| 9 | **Marquette** | vs | Southern | 90.3% |
-| 10 | **Fresno State** | vs | South Carolina Upstate | 89.9% |
-| 11 | **LSU** | vs | Tarleton | 89.3% |
-| 12 | **Indiana** | vs | Alabama A&M | 74.5% |
+| 1 | **Auburn** | vs | Merrimack | 91.6% |
+| 2 | **Louisville** | vs | Jackson State | 91.5% |
+| 3 | **Saint Louis** | vs | Chicago State | 91.4% |
+| 4 | **Quinnipiac** | vs | Central Connecticut | 91.4% |
+| 5 | **Drake** | vs | Robert Morris | 91.3% |
+| 6 | **North Texas** | vs | Northwestern State | 91.2% |
+| 7 | **California** | vs | Wright State | 91.0% |
+| 8 | **Miami (FL)** | vs | Bethune-Cookman | 90.9% |
+| 9 | **Texas A&M** | vs | Texas Southern | 90.9% |
+| 10 | **South Alabama** | vs | Alcorn State | 90.9% |
+| 11 | **Abilene Christian** | vs | Omaha | 90.3% |
+| 12 | **Ohio** | vs | Illinois State | 89.1% |
 
 ### 📈 Prediction Summary
 
 - **Total Games**: 12
 - **Home Teams Favored**: 12
 - **Away Teams Favored**: 0
-- **Average Confidence**: 89.4%
+- **Average Confidence**: 90.9%
 
 ### 📋 View All Games
 
@@ -44,14 +44,14 @@ The CSV includes game IDs, team names, probabilities, confidence scores, and gam
 
 ### 🎯 Overall Performance
 
-- **Total Predictions Evaluated**: 36
-- **Correct Predictions**: 33
+- **Total Predictions Evaluated**: 48
+- **Correct Predictions**: 44
 - **Overall Accuracy**: 91.7%
 
 ### 📅 Recent Performance (Last 10 Days)
 
-- **Games Evaluated**: 36
-- **Correct Predictions**: 33
+- **Games Evaluated**: 48
+- **Correct Predictions**: 44
 - **Accuracy**: 91.7%
 
 ### 📆 Daily Breakdown (Last 7 Days)
@@ -59,12 +59,13 @@ The CSV includes game IDs, team names, probabilities, confidence scores, and gam
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
 | 2025-11-05 | 36 | 33 | 91.7% | 57.1% |
+| 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
 
 ---
 
 ## 🤖 Model Information
 
-- **Training Data**: 29,417 completed games
+- **Training Data**: 29,451 completed games
 - **Seasons**: 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
 - **Date Range**: 2020-11-25 to 2025-11-05
 - **Algorithm**: Random Forest Classifier

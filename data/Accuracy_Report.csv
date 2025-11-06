@@ -1,2 +1,3 @@
-date,total_predictions,games_completed,correct_predictions,accuracy,avg_confidence
-2025-11-05,36,36,33,0.9166666666666666,0.57058361573986
+date,total_predictions,games_completed,correct_predictions,accuracy,avg_confidence,config_version,commit_hash
+2025-11-05,36,36,33,0.9166666666666666,0.57058361573986,,
+2025-11-06,12,12,11,0.9166666666666666,0.894347967402223,7dd58a0bb0e2,b593aa4

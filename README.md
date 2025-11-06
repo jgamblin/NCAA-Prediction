@@ -111,9 +111,9 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 91.7% (on 36 predictions)
-- **Training Data**: 29,417 games
-  - Current season: 412 games
+- **Overall Accuracy**: 91.7% (on 48 predictions)
+- **Training Data**: 29,451 games
+  - Current season: 446 games
   - Historical: 29,005 games
 
 ### Model Configuration
@@ -123,12 +123,12 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Training Strategy**: Time-weighted (10x current season, exponential decay for older)
 - **Hyperparameters**: Auto-tuned weekly via RandomForestClassifier optimization
 
-*Last updated: 2025-11-05 23:52 UTC*
+*Last updated: 2025-11-06 12:10 UTC*
 
 ### Model Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `ec12416`
+- Commit Hash: `b593aa4`
 
 ## 🚀 Automation
 
