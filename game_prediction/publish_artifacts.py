@@ -254,6 +254,26 @@ def refresh_readme_evaluation():
     if tuning_accuracy is not None:
         new_section.append(f"- **Current Season (2025-26) Tuning**: {tuning_accuracy:.1%}")
     new_section.append(f"- **Training Data**: {train_games:,} games (current season: {current_season_games:,})")
+    # Inject calibration metrics if comparison artifact exists
+    calib_path = os.path.join(PROJECT_ROOT, 'docs', 'CALIBRATION_WEIGHTING_COMPARISON.md')
+    if os.path.exists(calib_path):
+        try:
+            with open(calib_path) as cf:
+                lines = cf.readlines()
+            brier_line = next((l for l in lines if l.strip().startswith('| Brier Score')), None)
+            ece_line = next((l for l in lines if l.strip().startswith('| Expected Calibration Error')), None)
+            if brier_line and ece_line:
+                parts_brier = [p.strip() for p in brier_line.split('|') if p.strip()]
+                parts_ece = [p.strip() for p in ece_line.split('|') if p.strip()]
+                # Expected format: ['Metric','Weighted','Unweighted','Delta (W-U)']
+                if len(parts_brier) >= 4 and len(parts_ece) >= 4:
+                    wbrier, ubrier, dbrier = parts_brier[1], parts_brier[2], parts_brier[3]
+                    wece, uece, dece = parts_ece[1], parts_ece[2], parts_ece[3]
+                    new_section.append("- **Calibration (Brier)**: Weighted=" + wbrier + ", Unweighted=" + ubrier + " (Δ W-U: " + dbrier + ")")
+                    new_section.append("- **Calibration (ECE)**: Weighted=" + wece + ", Unweighted=" + uece + " (Δ W-U: " + dece + ")")
+                    new_section.append("  *Lower is better; weighted model emphasizes current season.*")
+        except Exception:
+            pass
     new_section.append("")
     new_section.append("### Lineage")
     new_section.append("")

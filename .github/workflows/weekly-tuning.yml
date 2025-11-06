@@ -19,11 +19,22 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+
+    - name: Check training data changes
+      id: data_check
+      run: |
+        # Compare last commit diff for key training data files; mark tune_needed if changed
+        if git diff --name-only HEAD~1 | grep -E 'data/Completed_Games.csv|data/Completed_Games_Normalized.csv' >/dev/null; then
+          echo "tune_needed=true" >> $GITHUB_OUTPUT
+        else
+          echo "tune_needed=false" >> $GITHUB_OUTPUT
+        fi
+        echo "Detected training data change? $(grep tune_needed $GITHUB_OUTPUT || true)"
     
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.14'
+        python-version: '3.13'
     
     - name: Install dependencies
       run: |
@@ -31,8 +42,27 @@ jobs:
         pip install -r requirements.txt
     
     - name: Run weekly model tuning
+      if: steps.data_check.outputs.tune_needed == 'true'
       run: |
         python3 model_training/tune_model.py
+
+    - name: Run calibration comparison
+      if: steps.data_check.outputs.tune_needed == 'true'
+      run: |
+        python3 scripts/calibration_comparison.py
+
+    - name: Commit tuning & calibration results
+      if: steps.data_check.outputs.tune_needed == 'true'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/Model_Tuning_Log.json docs/CALIBRATION_WEIGHTING_COMPARISON.md
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly model tuning & calibration - $(date +'%Y-%m-%d')" && git push)
+
+    - name: Skip notice (no data changes)
+      if: steps.data_check.outputs.tune_needed == 'false'
+      run: |
+        echo "No training data changes detected; skipping tuning and calibration."
     
     - name: Commit tuning results
       run: |
