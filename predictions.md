@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-06 18:39:09 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `420cb9f`
+**Last Updated**: 2025-11-06 20:38:15 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `f17fa6c`
 
 ---
 
@@ -24,25 +24,25 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Auburn** | Merrimack | 92.1% |
+| 1 | **Auburn** | Merrimack | 92.0% |
 | 2 | **Louisville** | Jackson State | 92.0% |
 | 3 | **Saint Louis** | Chicago State | 91.8% |
 | 4 | **Quinnipiac** | Central Connecticut | 91.8% |
 | 5 | **North Texas** | Northwestern State | 91.6% |
 | 6 | **Drake** | Robert Morris | 91.5% |
-| 7 | **Miami (FL)** | Bethune-Cookman | 91.3% |
-| 8 | **Texas A&M** | Texas Southern | 91.3% |
+| 7 | **Texas A&M** | Texas Southern | 91.2% |
+| 8 | **Miami (FL)** | Bethune-Cookman | 91.2% |
 | 9 | **South Alabama** | Alcorn State | 91.0% |
-| 10 | **Abilene Christian** | Omaha | 90.6% |
-| 11 | **Ohio** | Illinois State | 90.4% |
-| 12 | **California** | Wright State | 88.9% |
+| 10 | **Ohio** | Illinois State | 90.8% |
+| 11 | **Abilene Christian** | Omaha | 90.5% |
+| 12 | **California** | Wright State | 89.0% |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 12
 - Away Teams Favored: 0
-- Max Confidence: 92.1%
-- Min Confidence: 88.9%
+- Max Confidence: 92.0%
+- Min Confidence: 89.0%
 
 ### 📋 Full Data
 
