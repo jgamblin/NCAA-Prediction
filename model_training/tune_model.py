@@ -14,6 +14,7 @@ from datetime import datetime
 import os
 import json
 import sys
+import hashlib
 
 # Optional lineage imports (defensive)
 try:  # pragma: no cover
@@ -322,6 +323,27 @@ def train_weighted_model(quick: bool = False):
     # Overall accuracy (weighted)
     overall_accuracy = final_model.score(X, y, sample_weight=sample_weights)
     print(f"✓ Weighted overall accuracy: {overall_accuracy:.1%}")
+
+    # ------------------------------------------------------------------
+    # File hash snapshot for change detection on future runs
+    # ------------------------------------------------------------------
+    def _md5(path: str) -> str | None:
+        if not os.path.exists(path):
+            return None
+        try:
+            h = hashlib.md5()
+            with open(path, 'rb') as fh:
+                for chunk in iter(lambda: fh.read(8192), b''):
+                    h.update(chunk)
+            return h.hexdigest()
+        except Exception:
+            return None
+    completed_games_md5 = _md5(historical_path)
+    normalized_games_md5 = _md5(normalized_path)
+    feature_store_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'feature_store', 'feature_store.csv')
+    feature_store_md5 = _md5(feature_store_path)
+    model_params_path = os.path.join(os.path.dirname(__file__), '..', 'config', 'model_params.json')
+    model_params_md5 = _md5(model_params_path)
     
     # Save tuning results
     tuning_results = {
@@ -339,6 +361,10 @@ def train_weighted_model(quick: bool = False):
         'config_version': _config_version,
         'commit_hash': _commit_hash,
         'fs_diff_feature_count': len(fs_diff_cols)
+        , 'completed_games_md5': completed_games_md5
+        , 'normalized_games_md5': normalized_games_md5
+        , 'feature_store_md5': feature_store_md5
+        , 'model_params_md5': model_params_md5
     }
     
     tuning_log_path = os.path.join(data_dir, 'Model_Tuning_Log.json')

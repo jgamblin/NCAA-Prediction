@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-06 16:35:07 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `697c264`
+**Last Updated**: 2025-11-06 18:39:09 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `420cb9f`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 12
-- **Average Confidence**: 91.3%
+- **Average Confidence**: 91.2%
 - **High (≥70%)**: 12 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
@@ -29,20 +29,20 @@
 | 3 | **Saint Louis** | Chicago State | 91.8% |
 | 4 | **Quinnipiac** | Central Connecticut | 91.8% |
 | 5 | **North Texas** | Northwestern State | 91.6% |
-| 6 | **Drake** | Robert Morris | 91.6% |
-| 7 | **Texas A&M** | Texas Southern | 91.3% |
-| 8 | **Miami (FL)** | Bethune-Cookman | 91.2% |
-| 9 | **South Alabama** | Alcorn State | 91.2% |
-| 10 | **Ohio** | Illinois State | 90.9% |
-| 11 | **Abilene Christian** | Omaha | 90.7% |
-| 12 | **California** | Wright State | 89.2% |
+| 6 | **Drake** | Robert Morris | 91.5% |
+| 7 | **Miami (FL)** | Bethune-Cookman | 91.3% |
+| 8 | **Texas A&M** | Texas Southern | 91.3% |
+| 9 | **South Alabama** | Alcorn State | 91.0% |
+| 10 | **Abilene Christian** | Omaha | 90.6% |
+| 11 | **Ohio** | Illinois State | 90.4% |
+| 12 | **California** | Wright State | 88.9% |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 12
 - Away Teams Favored: 0
 - Max Confidence: 92.1%
-- Min Confidence: 89.2%
+- Min Confidence: 88.9%
 
 ### 📋 Full Data
 

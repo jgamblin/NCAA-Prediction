@@ -6,20 +6,22 @@
 
 ## 🔎 Live Snapshot
 
+<div>
 **Current Predictions**: 12 games for November 06, 2025
-**Last Updated**: Automated daily at 12:00 PM UTC  
-**Model Lineage**: config `7dd58a0bb0e2` · commit `b593aa4`
+<strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
+<strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
+</div>
 
-**Quick Access**  
+### **Quick Access**  
 | Artifact | Path | Description |
 |----------|------|-------------|
-| Full Predictions CSV | `data/NCAA_Game_Predictions.csv` | Raw probabilities & confidence |
-| Markdown Summary | `predictions.md` | Human readable card view |
-| Accuracy History | `data/Accuracy_Report.csv` | Daily rollup of prediction performance |
-| Drift Metrics | `data/Drift_Metrics.csv` | Global cumulative & rolling metrics |
-| Team Drift | `data/Drift_Metrics_By_Team.csv` | Per‑team rolling performance |
-| Anomalies | `data/Team_Anomalies.csv` | Recent vs cumulative accuracy deltas |
-| Feature Store | `data/feature_store/feature_store.csv` | Per-team rolling aggregates |
+| Full Predictions CSV | [`data/NCAA_Game_Predictions.csv`](data/NCAA_Game_Predictions.csv) | Raw probabilities & confidence |
+| Markdown Summary | [`predictions.md`](predictions.md) | Human readable card view |
+| Accuracy History | [`data/Accuracy_Report.csv`](data/Accuracy_Report.csv) | Daily rollup of prediction performance |
+| Drift Metrics | [`data/Drift_Metrics.csv`](data/Drift_Metrics.csv) | Global cumulative & rolling metrics |
+| Team Drift | [`data/Drift_Metrics_By_Team.csv`](data/Drift_Metrics_By_Team.csv) | Per‑team rolling performance |
+| Anomalies | [`data/Team_Anomalies.csv`](data/Team_Anomalies.csv) | Recent vs cumulative accuracy deltas |
+| Feature Store | [`data/feature_store/feature_store.csv`](data/feature_store/feature_store.csv) | Per-team rolling aggregates |
 
 ---
 
@@ -256,8 +258,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Current Performance
 
 - **Overall Accuracy**: 91.7% (on 48 predictions)
-- **Current Season (2025-26) Tuning**: 96.6%
-- **Training Data**: 29,485 games (current season: 480)
+- **Current Season (2025-26) Tuning**: 98.3%
+- **Training Data**: 29,486 games (current season: 481)
 - **Calibration (Brier)**: Weighted=0.2698, Unweighted=0.2134 (Δ W-U: +0.0564)
 - **Calibration (ECE)**: Weighted=0.2175, Unweighted=0.0347 (Δ W-U: +0.1828)
   *Lower is better; weighted model emphasizes current season.*
@@ -265,8 +267,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `697c264`
-*Refreshed: 2025-11-06 16:35 UTC*
+- Commit Hash: `420cb9f`
+*Refreshed: 2025-11-06 18:39 UTC*
 
 ## 🚀 Automation
 
