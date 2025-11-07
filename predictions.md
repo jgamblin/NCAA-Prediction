@@ -1,59 +1,84 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-06 20:38:15 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `f17fa6c`
+**Last Updated**: 2025-11-07 12:10:18 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `61bc2f3`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 12
-- **Average Confidence**: 91.2%
-- **High (≥70%)**: 12 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 36
+- **Average Confidence**: 90.6%
+- **High (≥70%)**: 36 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 1 day(s)
-- **Top 5 Picks Perfect Streak**: 1 day(s)
+- **#1 Pick Streak**: 2 day(s)
+- **Top 5 Picks Perfect Streak**: 2 day(s)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
 | 2025-11-05 | 12 | ✅ | ✅ |
+| 2025-11-06 | 12 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Auburn** | Merrimack | 92.0% |
-| 2 | **Louisville** | Jackson State | 92.0% |
-| 3 | **Saint Louis** | Chicago State | 91.8% |
-| 4 | **Quinnipiac** | Central Connecticut | 91.8% |
-| 5 | **North Texas** | Northwestern State | 91.6% |
-| 6 | **Drake** | Robert Morris | 91.5% |
-| 7 | **Texas A&M** | Texas Southern | 91.2% |
-| 8 | **Miami (FL)** | Bethune-Cookman | 91.2% |
-| 9 | **South Alabama** | Alcorn State | 91.0% |
-| 10 | **Ohio** | Illinois State | 90.8% |
-| 11 | **Abilene Christian** | Omaha | 90.5% |
-| 12 | **California** | Wright State | 89.0% |
+| 1 | **UCLA** | Pepperdine | 92.0% |
+| 2 | **North Carolina** | Kansas | 92.0% |
+| 3 | **Purdue** | Oakland | 91.9% |
+| 4 | **Davidson** | Washington State | 91.9% |
+| 5 | **Wisconsin** | Northern Illinois | 91.7% |
+| 6 | **Santa Clara** | McNeese | 91.7% |
+| 7 | **Iowa** | Western Illinois | 91.6% |
+| 8 | **Maryland** | Georgetown | 91.6% |
+| 9 | **Mount St. Mary's** | Bucknell | 91.6% |
+| 10 | **Texas Tech** | Sam Houston State | 91.6% |
+| 11 | **Murray State** | Mississippi Valley State | 91.6% |
+| 12 | **Notre Dame** | Detroit Mercy | 91.6% |
+| 13 | **Ohio State** | Purdue Fort Wayne | 91.5% |
+| 14 | **Wake Forest** | Morehead State | 91.5% |
+| 15 | **Liberty** | Charleston | 91.4% |
+| 16 | **Colgate** | Northeastern | 91.4% |
+| 17 | **Buffalo** | Green Bay | 91.3% |
+| 18 | **Pittsburgh** | Longwood | 91.3% |
+| 19 | **Missouri** | Southeast Missouri State | 91.3% |
+| 20 | **Eastern Illinois** | Nicholls State | 91.3% |
+| 21 | **Georgia Tech** | Bryant | 91.1% |
+| 22 | **Cincinnati** | Georgia State | 91.0% |
+| 23 | **Arizona** | Utah Tech | 90.8% |
+| 24 | **Virginia** | North Carolina Central | 90.6% |
+| 25 | **Stephen F. Austin** | Arkansas State | 90.5% |
+| 26 | **UTSA** | SIU Edwardsville | 90.5% |
+| 27 | **NC State** | UAB | 90.2% |
+| 28 | **Samford** | South Carolina State | 89.9% |
+| 29 | **Southern Indiana** | VMI | 89.8% |
+| 30 | **Utah State** | Virginia Commonwealth | 89.7% |
+| 31 | **George Mason** | Winthrop | 89.2% |
+| 32 | **Furman** | Troy | 89.2% |
+| 33 | **Northwestern** | Boston University | 88.7% |
+| 34 | **Navy** | Yale | 88.6% |
+| 35 | **Oregon State** | UIC | 88.1% |
+| 36 | **Florida State** | Alabama State | 82.0% |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 12
+- Home Teams Favored: 36
 - Away Teams Favored: 0
 - Max Confidence: 92.0%
-- Min Confidence: 89.0%
+- Min Confidence: 82.0%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (12 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (36 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 91.7% (48 evaluated)
-- **Last 10 Days**: 91.7% (48 games)
+- **Overall Accuracy**: 91.7% (60 evaluated)
+- **Last 10 Days**: 91.7% (60 games)
 
 ### Last 7 Days
 
@@ -61,6 +86,7 @@
 |------|-------|---------|----------|----------------|
 | 2025-11-05 | 36 | 33 | 91.7% | 57.1% |
 | 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
+| 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 
 ---
 
