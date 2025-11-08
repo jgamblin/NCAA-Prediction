@@ -1,73 +1,74 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-07 12:10:18 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `61bc2f3`
+**Last Updated**: 2025-11-08 12:09:45 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `cf8c56f`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 36
-- **Average Confidence**: 90.6%
+- **Average Confidence**: 91.0%
 - **High (≥70%)**: 36 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 2 day(s)
-- **Top 5 Picks Perfect Streak**: 2 day(s)
+- **#1 Pick Streak**: 3 day(s)
+- **Top 5 Picks Perfect Streak**: 3 day(s)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
 | 2025-11-05 | 12 | ✅ | ✅ |
 | 2025-11-06 | 12 | ✅ | ✅ |
+| 2025-11-07 | 36 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UCLA** | Pepperdine | 92.0% |
-| 2 | **North Carolina** | Kansas | 92.0% |
-| 3 | **Purdue** | Oakland | 91.9% |
-| 4 | **Davidson** | Washington State | 91.9% |
-| 5 | **Wisconsin** | Northern Illinois | 91.7% |
-| 6 | **Santa Clara** | McNeese | 91.7% |
-| 7 | **Iowa** | Western Illinois | 91.6% |
-| 8 | **Maryland** | Georgetown | 91.6% |
-| 9 | **Mount St. Mary's** | Bucknell | 91.6% |
-| 10 | **Texas Tech** | Sam Houston State | 91.6% |
-| 11 | **Murray State** | Mississippi Valley State | 91.6% |
-| 12 | **Notre Dame** | Detroit Mercy | 91.6% |
-| 13 | **Ohio State** | Purdue Fort Wayne | 91.5% |
-| 14 | **Wake Forest** | Morehead State | 91.5% |
-| 15 | **Liberty** | Charleston | 91.4% |
-| 16 | **Colgate** | Northeastern | 91.4% |
-| 17 | **Buffalo** | Green Bay | 91.3% |
-| 18 | **Pittsburgh** | Longwood | 91.3% |
-| 19 | **Missouri** | Southeast Missouri State | 91.3% |
-| 20 | **Eastern Illinois** | Nicholls State | 91.3% |
-| 21 | **Georgia Tech** | Bryant | 91.1% |
-| 22 | **Cincinnati** | Georgia State | 91.0% |
-| 23 | **Arizona** | Utah Tech | 90.8% |
-| 24 | **Virginia** | North Carolina Central | 90.6% |
-| 25 | **Stephen F. Austin** | Arkansas State | 90.5% |
-| 26 | **UTSA** | SIU Edwardsville | 90.5% |
-| 27 | **NC State** | UAB | 90.2% |
-| 28 | **Samford** | South Carolina State | 89.9% |
-| 29 | **Southern Indiana** | VMI | 89.8% |
-| 30 | **Utah State** | Virginia Commonwealth | 89.7% |
-| 31 | **George Mason** | Winthrop | 89.2% |
-| 32 | **Furman** | Troy | 89.2% |
-| 33 | **Northwestern** | Boston University | 88.7% |
-| 34 | **Navy** | Yale | 88.6% |
-| 35 | **Oregon State** | UIC | 88.1% |
-| 36 | **Florida State** | Alabama State | 82.0% |
+| 1 | **Duke** | Western Carolina | 91.9% |
+| 2 | **Michigan State** | Arkansas | 91.9% |
+| 3 | **Tennessee** | Northern Kentucky | 91.9% |
+| 4 | **Gonzaga** | Oklahoma | 91.8% |
+| 5 | **Saint Joseph's** | Drexel | 91.6% |
+| 6 | **Richmond** | East Carolina | 91.5% |
+| 7 | **UNC Greensboro** | Elon | 91.5% |
+| 8 | **Belmont** | Tennessee State | 91.5% |
+| 9 | **Saint Peter's** | Fairleigh Dickinson | 91.4% |
+| 10 | **Presbyterian** | East Tennessee State | 91.4% |
+| 11 | **NJIT** | Fairfield | 91.4% |
+| 12 | **Norfolk State** | William & Mary | 91.4% |
+| 13 | **Charleston** | Florida Atlantic | 91.4% |
+| 14 | **Florida A&M** | Kennesaw State | 91.4% |
+| 15 | **Wofford** | Milwaukee | 91.3% |
+| 16 | **Villanova** | Queens University | 91.3% |
+| 17 | **Virginia Tech** | Providence | 91.3% |
+| 18 | **Houston** | Towson | 91.3% |
+| 19 | **Tarleton** | Texas A&M-Corpus Christi | 91.3% |
+| 20 | **La Salle** | Monmouth | 91.3% |
+| 21 | **Stanford** | Montana | 91.2% |
+| 22 | **Akron** | Princeton | 91.2% |
+| 23 | **UC Santa Barbara** | San Jose State | 91.2% |
+| 24 | **Colorado** | Eastern Washington | 91.2% |
+| 25 | **Utah** | Weber State | 91.1% |
+| 26 | **Minnesota** | Alcorn State | 91.1% |
+| 27 | **Boise State** | Utah Valley | 91.1% |
+| 28 | **Dayton** | UMBC | 90.7% |
+| 29 | **Wichita State** | Prairie View A&M | 90.4% |
+| 30 | **Georgia Southern** | UNC Asheville | 90.2% |
+| 31 | **Toledo** | Marshall | 90.1% |
+| 32 | **Kansas State** | Bellarmine | 89.8% |
+| 33 | **George Washington** | South Florida | 89.7% |
+| 34 | **New Mexico** | UT Arlington | 89.5% |
+| 35 | **Bradley** | Central Michigan | 89.1% |
+| 36 | **UCF** | Vanderbilt | 89.0% |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 36
 - Away Teams Favored: 0
-- Max Confidence: 92.0%
-- Min Confidence: 82.0%
+- Max Confidence: 91.9%
+- Min Confidence: 89.0%
 
 ### 📋 Full Data
 
@@ -77,8 +78,8 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 91.7% (60 evaluated)
-- **Last 10 Days**: 91.7% (60 games)
+- **Overall Accuracy**: 87.5% (96 evaluated)
+- **Last 10 Days**: 87.5% (96 games)
 
 ### Last 7 Days
 
@@ -87,6 +88,7 @@
 | 2025-11-05 | 36 | 33 | 91.7% | 57.1% |
 | 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
 | 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
+| 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 
 ---
 
