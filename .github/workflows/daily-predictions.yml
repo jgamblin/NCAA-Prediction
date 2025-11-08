@@ -15,6 +15,9 @@ permissions:
 jobs:
   update-predictions:
     runs-on: ubuntu-latest
+    concurrency:
+      group: ncaa-prediction-schedule
+      cancel-in-progress: false
     
     steps:
     - name: Checkout repository

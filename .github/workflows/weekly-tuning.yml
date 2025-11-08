@@ -21,6 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PYTHONPATH: ${{ github.workspace }}
+    concurrency:
+      group: ncaa-prediction-schedule
+      cancel-in-progress: false
     
     steps:
     - name: Checkout repository (full history for hash comparisons)
