@@ -61,7 +61,11 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add data/Model_Tuning_Log.json docs/CALIBRATION_WEIGHTING_COMPARISON.md
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly model tuning & calibration - $(date +'%Y-%m-%d')" && git push)
+        git diff --quiet && git diff --staged --quiet || (
+          git commit -m "Weekly model tuning & calibration - $(date +'%Y-%m-%d')"
+          git pull --rebase origin main
+          git push origin HEAD:main
+        )
 
     - name: Skip notice (no data changes)
       if: steps.data_check.outputs.tune_needed == 'false'
@@ -73,4 +77,8 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add data/Model_Tuning_Log.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Weekly model tuning - $(date +'%Y-%m-%d')" && git push)
+        git diff --quiet && git diff --staged --quiet || (
+          git commit -m "Weekly model tuning - $(date +'%Y-%m-%d')"
+          git pull --rebase origin main
+          git push origin HEAD:main
+        )
