@@ -267,8 +267,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `33cce13`
-*Refreshed: 2025-11-08 14:59 UTC*
+- Commit Hash: `d279ba8`
+*Refreshed: 2025-11-08 15:04 UTC*
 
 ## 🚀 Automation
 
