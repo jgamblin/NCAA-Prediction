@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-08 12:09:45 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `cf8c56f`
+**Last Updated**: 2025-11-08 14:59:28 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `33cce13`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 36
-- **Average Confidence**: 91.0%
+- **Average Confidence**: 90.8%
 - **High (≥70%)**: 36 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
@@ -26,49 +26,49 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Duke** | Western Carolina | 91.9% |
-| 2 | **Michigan State** | Arkansas | 91.9% |
-| 3 | **Tennessee** | Northern Kentucky | 91.9% |
-| 4 | **Gonzaga** | Oklahoma | 91.8% |
-| 5 | **Saint Joseph's** | Drexel | 91.6% |
-| 6 | **Richmond** | East Carolina | 91.5% |
-| 7 | **UNC Greensboro** | Elon | 91.5% |
-| 8 | **Belmont** | Tennessee State | 91.5% |
-| 9 | **Saint Peter's** | Fairleigh Dickinson | 91.4% |
-| 10 | **Presbyterian** | East Tennessee State | 91.4% |
-| 11 | **NJIT** | Fairfield | 91.4% |
-| 12 | **Norfolk State** | William & Mary | 91.4% |
-| 13 | **Charleston** | Florida Atlantic | 91.4% |
-| 14 | **Florida A&M** | Kennesaw State | 91.4% |
-| 15 | **Wofford** | Milwaukee | 91.3% |
-| 16 | **Villanova** | Queens University | 91.3% |
-| 17 | **Virginia Tech** | Providence | 91.3% |
-| 18 | **Houston** | Towson | 91.3% |
-| 19 | **Tarleton** | Texas A&M-Corpus Christi | 91.3% |
-| 20 | **La Salle** | Monmouth | 91.3% |
-| 21 | **Stanford** | Montana | 91.2% |
-| 22 | **Akron** | Princeton | 91.2% |
-| 23 | **UC Santa Barbara** | San Jose State | 91.2% |
-| 24 | **Colorado** | Eastern Washington | 91.2% |
-| 25 | **Utah** | Weber State | 91.1% |
-| 26 | **Minnesota** | Alcorn State | 91.1% |
-| 27 | **Boise State** | Utah Valley | 91.1% |
-| 28 | **Dayton** | UMBC | 90.7% |
-| 29 | **Wichita State** | Prairie View A&M | 90.4% |
-| 30 | **Georgia Southern** | UNC Asheville | 90.2% |
-| 31 | **Toledo** | Marshall | 90.1% |
-| 32 | **Kansas State** | Bellarmine | 89.8% |
-| 33 | **George Washington** | South Florida | 89.7% |
-| 34 | **New Mexico** | UT Arlington | 89.5% |
-| 35 | **Bradley** | Central Michigan | 89.1% |
-| 36 | **UCF** | Vanderbilt | 89.0% |
+| 1 | **Tennessee** | Northern Kentucky | 91.7% |
+| 2 | **Duke** | Western Carolina | 91.7% |
+| 3 | **Gonzaga** | Oklahoma | 91.6% |
+| 4 | **Michigan State** | Arkansas | 91.6% |
+| 5 | **UNC Greensboro** | Elon | 91.4% |
+| 6 | **Houston** | Towson | 91.4% |
+| 7 | **Saint Joseph's** | Drexel | 91.3% |
+| 8 | **Saint Peter's** | Fairleigh Dickinson | 91.3% |
+| 9 | **Richmond** | East Carolina | 91.3% |
+| 10 | **Presbyterian** | East Tennessee State | 91.2% |
+| 11 | **Wofford** | Milwaukee | 91.2% |
+| 12 | **Stanford** | Montana | 91.1% |
+| 13 | **Virginia Tech** | Providence | 91.1% |
+| 14 | **Norfolk State** | William & Mary | 91.1% |
+| 15 | **Charleston** | Florida Atlantic | 91.1% |
+| 16 | **NJIT** | Fairfield | 91.1% |
+| 17 | **La Salle** | Monmouth | 91.1% |
+| 18 | **Florida A&M** | Kennesaw State | 91.1% |
+| 19 | **Tarleton** | Texas A&M-Corpus Christi | 91.0% |
+| 20 | **Villanova** | Queens University | 91.0% |
+| 21 | **Utah** | Weber State | 91.0% |
+| 22 | **UC Santa Barbara** | San Jose State | 91.0% |
+| 23 | **Belmont** | Tennessee State | 91.0% |
+| 24 | **Colorado** | Eastern Washington | 90.9% |
+| 25 | **Akron** | Princeton | 90.9% |
+| 26 | **Boise State** | Utah Valley | 90.7% |
+| 27 | **Minnesota** | Alcorn State | 90.6% |
+| 28 | **Kansas State** | Bellarmine | 90.4% |
+| 29 | **Toledo** | Marshall | 90.4% |
+| 30 | **Dayton** | UMBC | 90.3% |
+| 31 | **Wichita State** | Prairie View A&M | 90.1% |
+| 32 | **New Mexico** | UT Arlington | 89.8% |
+| 33 | **George Washington** | South Florida | 89.8% |
+| 34 | **Bradley** | Central Michigan | 89.7% |
+| 35 | **Georgia Southern** | UNC Asheville | 89.6% |
+| 36 | **UCF** | Vanderbilt | 88.7% |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 36
 - Away Teams Favored: 0
-- Max Confidence: 91.9%
-- Min Confidence: 89.0%
+- Max Confidence: 91.7%
+- Min Confidence: 88.7%
 
 ### 📋 Full Data
 
