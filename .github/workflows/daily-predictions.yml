@@ -22,6 +22,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -42,4 +44,10 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add data/*.csv predictions.md README.md
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update predictions and stats for $(date +'%Y-%m-%d')" && git push)
+        if git diff --cached --quiet; then
+          echo "No changes detected; nothing to commit."
+          exit 0
+        fi
+        git commit -m "Update predictions and stats for $(date +'%Y-%m-%d')"
+        git pull --rebase --autostash origin main
+        git push origin HEAD:main
