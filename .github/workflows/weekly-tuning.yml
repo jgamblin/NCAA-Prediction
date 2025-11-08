@@ -19,6 +19,8 @@ permissions:
 jobs:
   tune-model:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     
     steps:
     - name: Checkout repository (full history for hash comparisons)
