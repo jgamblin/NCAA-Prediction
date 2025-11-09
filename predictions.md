@@ -1,85 +1,67 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-08 15:54:28 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `012f255`
+**Last Updated**: 2025-11-09 12:09:37 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `6beccf0`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 36
-- **Average Confidence**: 90.8%
-- **High (≥70%)**: 36 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 17
+- **Average Confidence**: 90.3%
+- **High (≥70%)**: 17 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 3 day(s)
-- **Top 5 Picks Perfect Streak**: 3 day(s)
+- **#1 Pick Streak**: 4 day(s)
+- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
 | 2025-11-05 | 12 | ✅ | ✅ |
 | 2025-11-06 | 12 | ✅ | ✅ |
 | 2025-11-07 | 36 | ✅ | ✅ |
+| 2025-11-08 | 36 | ✅ | ❌ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Tennessee** | Northern Kentucky | 91.7% |
-| 2 | **Duke** | Western Carolina | 91.7% |
-| 3 | **Gonzaga** | Oklahoma | 91.6% |
-| 4 | **Michigan State** | Arkansas | 91.6% |
-| 5 | **UNC Greensboro** | Elon | 91.4% |
-| 6 | **Houston** | Towson | 91.4% |
-| 7 | **Saint Joseph's** | Drexel | 91.3% |
-| 8 | **Saint Peter's** | Fairleigh Dickinson | 91.3% |
-| 9 | **Richmond** | East Carolina | 91.3% |
-| 10 | **Presbyterian** | East Tennessee State | 91.2% |
-| 11 | **Wofford** | Milwaukee | 91.2% |
-| 12 | **Stanford** | Montana | 91.1% |
-| 13 | **Virginia Tech** | Providence | 91.1% |
-| 14 | **Norfolk State** | William & Mary | 91.1% |
-| 15 | **Charleston** | Florida Atlantic | 91.1% |
-| 16 | **NJIT** | Fairfield | 91.1% |
-| 17 | **La Salle** | Monmouth | 91.1% |
-| 18 | **Florida A&M** | Kennesaw State | 91.1% |
-| 19 | **Tarleton** | Texas A&M-Corpus Christi | 91.0% |
-| 20 | **Villanova** | Queens University | 91.0% |
-| 21 | **Utah** | Weber State | 91.0% |
-| 22 | **UC Santa Barbara** | San Jose State | 91.0% |
-| 23 | **Belmont** | Tennessee State | 91.0% |
-| 24 | **Colorado** | Eastern Washington | 90.9% |
-| 25 | **Akron** | Princeton | 90.9% |
-| 26 | **Boise State** | Utah Valley | 90.7% |
-| 27 | **Minnesota** | Alcorn State | 90.6% |
-| 28 | **Kansas State** | Bellarmine | 90.4% |
-| 29 | **Toledo** | Marshall | 90.4% |
-| 30 | **Dayton** | UMBC | 90.3% |
-| 31 | **Wichita State** | Prairie View A&M | 90.1% |
-| 32 | **New Mexico** | UT Arlington | 89.8% |
-| 33 | **George Washington** | South Florida | 89.8% |
-| 34 | **Bradley** | Central Michigan | 89.7% |
-| 35 | **Georgia Southern** | UNC Asheville | 89.6% |
-| 36 | **UCF** | Vanderbilt | 88.7% |
+| 1 | **Baylor** | Washington | 91.3% |
+| 2 | **James Madison** | Coppin State | 90.9% |
+| 3 | **Mercer** | Lipscomb | 90.7% |
+| 4 | **Harvard** | New Hampshire | 90.7% |
+| 5 | **Georgia** | Morehead State | 90.7% |
+| 6 | **Marquette** | Indiana | 90.7% |
+| 7 | **Oklahoma State** | Texas A&M | 90.6% |
+| 8 | **Liberty** | Florida Atlantic | 90.6% |
+| 9 | **Brown** | Vermont | 90.5% |
+| 10 | **Colorado State** | Omaha | 90.5% |
+| 11 | **Northern Iowa** | South Dakota State | 90.4% |
+| 12 | **USC** | Manhattan | 90.2% |
+| 13 | **Loyola Chicago** | North Texas | 90.2% |
+| 14 | **Arizona State** | Utah Tech | 90.1% |
+| 15 | **Appalachian St** | North Carolina Central | 90.1% |
+| 16 | **Missouri** | VMI | 89.7% |
+| 17 | **Portland** | UC Davis | 87.3% |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 36
+- Home Teams Favored: 17
 - Away Teams Favored: 0
-- Max Confidence: 91.7%
-- Min Confidence: 88.7%
+- Max Confidence: 91.3%
+- Min Confidence: 87.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (36 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (17 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 87.5% (96 evaluated)
-- **Last 10 Days**: 87.5% (96 games)
+- **Overall Accuracy**: 85.6% (132 evaluated)
+- **Last 10 Days**: 85.6% (132 games)
 
 ### Last 7 Days
 
@@ -89,6 +71,7 @@
 | 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
 | 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
+| 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 
 ---
 
