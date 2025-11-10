@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-10 19:05:20 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `d7dac96`
+**Last Updated**: 2025-11-10 23:06:25 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `8eb775e`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 20
-- **Average Confidence**: 84.4%
+- **Average Confidence**: 84.3%
 - **High (≥70%)**: 20 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
@@ -29,34 +29,34 @@
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
 | 1 | **Iowa State** | Mississippi State | 86.5% |
-| 2 | **UCLA** | West Georgia | 85.7% |
-| 3 | **UT Arlington** | Arlington Baptist | 85.2% |
-| 4 | **Utah** | Holy Cross | 85.2% |
+| 2 | **Utah** | Holy Cross | 85.5% |
+| 3 | **UCLA** | West Georgia | 85.2% |
+| 4 | **UT Arlington** | Arlington Baptist | 85.2% |
 | 5 | **Saint Louis** | Lindenwood | 85.1% |
-| 6 | **Miami (FL)** | Stetson | 85.0% |
-| 7 | **Pittsburgh** | Eastern Michigan | 84.9% |
-| 8 | **Georgia State** | Presbyterian | 84.9% |
-| 9 | **Connecticut** | Columbia | 84.8% |
-| 10 | **Northwestern** | Cleveland State | 84.7% |
-| 11 | **Xavier** | Santa Clara | 84.6% |
-| 12 | **Milwaukee** | Little Rock | 84.6% |
-| 13 | **Seton Hall** | Fairfield | 84.6% |
-| 14 | **LSU** | New Orleans | 84.5% |
-| 15 | **SIU Edwardsville** | Indiana State | 84.4% |
+| 6 | **Miami (FL)** | Stetson | 85.1% |
+| 7 | **Pittsburgh** | Eastern Michigan | 85.0% |
+| 8 | **Connecticut** | Columbia | 85.0% |
+| 9 | **Georgia State** | Presbyterian | 84.8% |
+| 10 | **Milwaukee** | Little Rock | 84.8% |
+| 11 | **Seton Hall** | Fairfield | 84.7% |
+| 12 | **Northwestern** | Cleveland State | 84.7% |
+| 13 | **LSU** | New Orleans | 84.6% |
+| 14 | **SIU Edwardsville** | Indiana State | 84.6% |
+| 15 | **North Carolina A&T** | South Carolina State | 84.3% |
 | 16 | **Furman** | Columbia International | 84.3% |
-| 17 | **North Carolina A&T** | South Carolina State | 84.2% |
-| 18 | **McNeese** | College Of Biblical Studies | 84.2% |
-| 19 | **Tennessee Tech** | Virginia-Lynchburg | 83.0% |
-| 20 | **California** | Cal State Fullerton | 76.7% |
+| 17 | **Xavier** | Santa Clara | 84.3% |
+| 18 | **McNeese** | College Of Biblical Studies | 84.1% |
+| 19 | **Tennessee Tech** | Virginia-Lynchburg | 82.8% |
+| 20 | **California** | Cal State Fullerton | 75.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Cal State Fullerton @ California | 76.7% |  |
-| 2 | Virginia-Lynchburg @ Tennessee Tech | 83.0% |  |
-| 3 | College Of Biblical Studies @ McNeese | 84.2% |  |
-| 4 | South Carolina State @ North Carolina A&T | 84.2% |  |
+| 1 | Cal State Fullerton @ California | 75.8% |  |
+| 2 | Virginia-Lynchburg @ Tennessee Tech | 82.8% |  |
+| 3 | College Of Biblical Studies @ McNeese | 84.1% |  |
+| 4 | Santa Clara @ Xavier | 84.3% |  |
 | 5 | Columbia International @ Furman | 84.3% |  |
 
 ### 📈 Distribution Summary
@@ -64,7 +64,7 @@
 - Home Teams Favored: 20
 - Away Teams Favored: 0
 - Max Confidence: 86.5%
-- Min Confidence: 76.7%
+- Min Confidence: 75.8%
 
 ### 📋 Full Data
 
