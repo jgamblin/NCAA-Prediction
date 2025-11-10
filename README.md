@@ -260,7 +260,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 - **Overall Accuracy**: 85.2% (on 149 predictions)
 - **Current Season (2025-26) Tuning**: 96.3%
-- **Training Data**: 29,648 games (current season: 643)
+- **Training Data**: 29,652 games (current season: 647)
 - **Calibration (Brier)**: Weighted=0.2373, Unweighted=0.2292 (Δ W-U: +0.0081)
 - **Calibration (ECE)**: Weighted=0.0761, Unweighted=0.0876 (Δ W-U: -0.0115)
   *Lower is better; weighted model emphasizes current season.*
@@ -268,8 +268,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `844b309`
-*Refreshed: 2025-11-10 18:50 UTC*
+- Commit Hash: `d7dac96`
+*Refreshed: 2025-11-10 19:05 UTC*
 
 ## 🚀 Automation
 
