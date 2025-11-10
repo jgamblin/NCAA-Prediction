@@ -461,6 +461,19 @@ def main():
             print(f"✗ Artifact publishing failed: {result.stderr}")
     except Exception as exc:
         print(f"✗ Artifact publishing error: {exc}")
+
+    # Generate performance dashboard (charts + markdown)
+    try:
+        perf_result = sp_run(['python3', 'scripts/generate_performance_report.py'], capture_output=True, text=True, timeout=60)
+        if perf_result.returncode == 0:
+            if perf_result.stdout.strip():
+                print(perf_result.stdout.strip())
+            else:
+                print("✓ performance.md generated")
+        else:
+            print(f"⚠️ Performance report failed: {perf_result.stderr}")
+    except Exception as exc:
+        print(f"⚠️ Performance report step skipped: {exc}")
     
     # =========================================================================
     # STEP 6: Per-Team Drift & Anomaly Summaries

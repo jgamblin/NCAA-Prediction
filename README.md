@@ -7,7 +7,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 20 games for November 10, 2025
+**Current Predictions**: 20 games for November 10, 2025<br/>
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -18,6 +18,7 @@
 | Full Predictions CSV | [`data/NCAA_Game_Predictions.csv`](data/NCAA_Game_Predictions.csv) | Raw probabilities & confidence |
 | Markdown Summary | [`predictions.md`](predictions.md) | Human readable card view |
 | Accuracy History | [`data/Accuracy_Report.csv`](data/Accuracy_Report.csv) | Daily rollup of prediction performance |
+| Performance Dashboard | [`performance.md`](performance.md) | Visual summary with charts (auto-generated) |
 | Drift Metrics | [`data/Drift_Metrics.csv`](data/Drift_Metrics.csv) | Global cumulative & rolling metrics |
 | Team Drift | [`data/Drift_Metrics_By_Team.csv`](data/Drift_Metrics_By_Team.csv) | Per‑team rolling performance |
 | Anomalies | [`data/Team_Anomalies.csv`](data/Team_Anomalies.csv) | Recent vs cumulative accuracy deltas |
@@ -269,7 +270,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 - Config Version: `7dd58a0bb0e2`
 - Commit Hash: `d7dac96`
-*Refreshed: 2025-11-10 19:05 UTC*
+*Refreshed: 2025-11-10 20:59 UTC*
 
 ## 🚀 Automation
 

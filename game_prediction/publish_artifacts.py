@@ -192,7 +192,7 @@ def _update_readme_banner(lines: list[str]) -> list[str]:
                 pretty_date = datetime.strptime(pred_date, '%Y-%m-%d').strftime('%B %d, %Y')
             except Exception:
                 pretty_date = pred_date
-            lines[banner_idx] = f"**Current Predictions**: {game_count} games for {pretty_date}\n"
+            lines[banner_idx] = f"**Current Predictions**: {game_count} games for {pretty_date}<br/>\n"
         except Exception:
             pass
     return lines
