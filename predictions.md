@@ -1,20 +1,20 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-09 12:09:37 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `6beccf0`
+**Last Updated**: 2025-11-10 12:10:48 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `9185f5e`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 17
-- **Average Confidence**: 90.3%
-- **High (≥70%)**: 17 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 14
+- **Average Confidence**: 90.7%
+- **High (≥70%)**: 14 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 4 day(s)
-- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 5 day(s)
+- **Top 5 Picks Perfect Streak**: 1 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
@@ -22,46 +22,44 @@
 | 2025-11-06 | 12 | ✅ | ✅ |
 | 2025-11-07 | 36 | ✅ | ✅ |
 | 2025-11-08 | 36 | ✅ | ❌ |
+| 2025-11-09 | 17 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Baylor** | Washington | 91.3% |
-| 2 | **James Madison** | Coppin State | 90.9% |
-| 3 | **Mercer** | Lipscomb | 90.7% |
-| 4 | **Harvard** | New Hampshire | 90.7% |
-| 5 | **Georgia** | Morehead State | 90.7% |
-| 6 | **Marquette** | Indiana | 90.7% |
-| 7 | **Oklahoma State** | Texas A&M | 90.6% |
-| 8 | **Liberty** | Florida Atlantic | 90.6% |
-| 9 | **Brown** | Vermont | 90.5% |
-| 10 | **Colorado State** | Omaha | 90.5% |
-| 11 | **Northern Iowa** | South Dakota State | 90.4% |
-| 12 | **USC** | Manhattan | 90.2% |
-| 13 | **Loyola Chicago** | North Texas | 90.2% |
-| 14 | **Arizona State** | Utah Tech | 90.1% |
-| 15 | **Appalachian St** | North Carolina Central | 90.1% |
-| 16 | **Missouri** | VMI | 89.7% |
-| 17 | **Portland** | UC Davis | 87.3% |
+| 1 | **Iowa State** | Mississippi State | 91.4% |
+| 2 | **Utah** | Holy Cross | 91.1% |
+| 3 | **Miami (FL)** | Stetson | 90.9% |
+| 4 | **Saint Louis** | Lindenwood | 90.8% |
+| 5 | **Georgia State** | Presbyterian | 90.8% |
+| 6 | **Pittsburgh** | Eastern Michigan | 90.8% |
+| 7 | **SIU Edwardsville** | Indiana State | 90.7% |
+| 8 | **Northwestern** | Cleveland State | 90.7% |
+| 9 | **Milwaukee** | Little Rock | 90.7% |
+| 10 | **Seton Hall** | Fairfield | 90.6% |
+| 11 | **LSU** | New Orleans | 90.6% |
+| 12 | **Xavier** | Santa Clara | 90.5% |
+| 13 | **North Carolina A&T** | South Carolina State | 90.4% |
+| 14 | **Connecticut** | Columbia | 89.9% |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 17
+- Home Teams Favored: 14
 - Away Teams Favored: 0
-- Max Confidence: 91.3%
-- Min Confidence: 87.3%
+- Max Confidence: 91.4%
+- Min Confidence: 89.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (17 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (14 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 85.6% (132 evaluated)
-- **Last 10 Days**: 85.6% (132 games)
+- **Overall Accuracy**: 85.2% (149 evaluated)
+- **Last 10 Days**: 85.2% (149 games)
 
 ### Last 7 Days
 
@@ -72,6 +70,7 @@
 | 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
+| 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
 
 ---
 

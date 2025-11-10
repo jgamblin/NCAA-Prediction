@@ -7,7 +7,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 17 games for November 09, 2025
+**Current Predictions**: 14 games for November 10, 2025
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -257,9 +257,9 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 85.6% (on 132 predictions)
+- **Overall Accuracy**: 85.2% (on 149 predictions)
 - **Current Season (2025-26) Tuning**: 96.3%
-- **Training Data**: 29,554 games (current season: 549)
+- **Training Data**: 29,613 games (current season: 608)
 - **Calibration (Brier)**: Weighted=0.2703, Unweighted=0.2126 (Δ W-U: +0.0577)
 - **Calibration (ECE)**: Weighted=0.2192, Unweighted=0.0431 (Δ W-U: +0.1760)
   *Lower is better; weighted model emphasizes current season.*
@@ -267,8 +267,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `6beccf0`
-*Refreshed: 2025-11-09 12:09 UTC*
+- Commit Hash: `9185f5e`
+*Refreshed: 2025-11-10 12:10 UTC*
 
 ## 🚀 Automation
 
