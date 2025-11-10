@@ -13,4 +13,4 @@ def test_load_default_path():
     params = load_model_params()
     assert isinstance(params, dict)
     if params:
-        assert 'simple_predictor' in params
+        assert 'adaptive_predictor' in params or 'simple_predictor' in params

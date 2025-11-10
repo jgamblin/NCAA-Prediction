@@ -1,12 +1,14 @@
 {
-  "simple_predictor": {
+  "adaptive_predictor": {
     "n_estimators": 100,
     "max_depth": 15,
     "min_samples_split": 20,
-    "min_games_threshold": 75,
+    "min_games_threshold": "auto",
     "calibrate": true,
     "calibration_method": "sigmoid",
-    "use_sample_weights": true
+    "use_sample_weights": true,
+    "home_court_logit_shift": "auto:0.55",
+    "confidence_temperature": "auto"
   },
   "metadata": {
     "last_tuned": "2025-11-08 15:42:09",

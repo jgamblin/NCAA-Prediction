@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compare calibration (reliability) of weighted vs unweighted SimplePredictor.
+"""Compare calibration (reliability) of weighted vs unweighted AdaptivePredictor.
 
 Produces a markdown report at docs/CALIBRATION_WEIGHTING_COMPARISON.md with:
  - Bin-wise predicted vs empirical accuracy
@@ -11,11 +11,16 @@ Usage: python3 scripts/calibration_comparison.py
 from __future__ import annotations
 
 import os
+import sys
 import pandas as pd
 import numpy as np
 from pathlib import Path
 
-from model_training.simple_predictor import SimplePredictor  # type: ignore
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from model_training.adaptive_predictor import AdaptivePredictor  # type: ignore
 from config.model_params_loader import load_model_params  # type: ignore
 
 DATA_DIR = Path(__file__).resolve().parent.parent / 'data'
@@ -36,7 +41,7 @@ def season_weight(series: pd.Series) -> np.ndarray:  # type: ignore[return-type]
             mapping[s] = 1.5
         else:
             mapping[s] = 0.5 ** (i - 2)
-    return series.map(mapping).values
+    return np.asarray(series.map(mapping).values, dtype=float)
 
 def prepare_data() -> pd.DataFrame:
     norm_path = DATA_DIR / 'Completed_Games_Normalized.csv'
@@ -65,9 +70,14 @@ def train_and_predict(df: pd.DataFrame, weighted: bool) -> pd.DataFrame:
     split = int(len(df)*0.2)
     test = df.iloc[:split].copy()
     train = df.iloc[split:].copy()
-    predictor = SimplePredictor(
-        n_estimators=100, max_depth=15, min_samples_split=20,
-        min_games_threshold=0, calibrate=True, calibration_method='sigmoid'
+    predictor = AdaptivePredictor(
+        n_estimators=100,
+        max_depth=15,
+        min_samples_split=20,
+        min_games_threshold='auto',
+        calibrate=True,
+        calibration_method='sigmoid',
+        home_court_logit_shift='auto:0.55',
     )
     if weighted and 'season' in train.columns:
         # initial fit

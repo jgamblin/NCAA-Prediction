@@ -386,6 +386,69 @@ def generate_predictions_markdown():
         md.append('')
     tier_table(high, '🎯 High Confidence Picks (≥70%)')
     tier_table(medium, '📊 Medium Confidence Picks (60–70%)')
+    # ------------------------------------------------------------------
+    # Games to Watch section (close games, potential upsets, interesting matchups)
+    # ------------------------------------------------------------------
+    def build_games_to_watch(df: pd.DataFrame) -> list[str]:
+        if df.empty:
+            return ['### 👀 Games to Watch','', '*No games available.*','']
+        working = df.copy()
+        notes = []
+        # Determine toss-ups (confidence between 0.50 and 0.65)
+        tossups = working[(working['confidence'] >= 0.50) & (working['confidence'] <= 0.65)].copy()
+        # Potential upsets: predicted winner has worse (numerically higher) rank than opponent by >=10 and confidence <= 0.70
+        if all(c in working.columns for c in ['home_rank','away_rank','predicted_winner']):
+            def is_upset(row):
+                # lower rank number is better; "worse" means larger number
+                if row['predicted_winner'] == row['home_team']:
+                    winner_rank = row['home_rank']; opp_rank = row['away_rank']
+                else:
+                    winner_rank = row['away_rank']; opp_rank = row['home_rank']
+                if pd.isna(winner_rank) or pd.isna(opp_rank):
+                    return False
+                try:
+                    return (winner_rank - opp_rank) >= 10 and row['confidence'] <= 0.70
+                except Exception:
+                    return False
+            working['potential_upset'] = working.apply(is_upset, axis=1)
+            upsets = working[working['potential_upset']].copy()
+        else:
+            upsets = pd.DataFrame()
+        # If we have tossups, select up to 8 closest to 0.5 confidence
+        selection = []
+        if not tossups.empty:
+            tossups['distance'] = (tossups['confidence'] - 0.5).abs()
+            selection.extend(tossups.sort_values('distance').head(8).to_dict('records'))
+        # Add up to 5 potential upsets not already included
+        if not upsets.empty:
+            for _, r in upsets.iterrows():
+                key = (r.get('home_team'), r.get('away_team'))
+                if len(selection) >= 12:
+                    break
+                if not any((s.get('home_team'), s.get('away_team')) == key for s in selection):
+                    selection.append(r.to_dict())
+        # Fallback: if still empty, take 5 lowest confidence games overall
+        if not selection:
+            fallback = working.sort_values('confidence').head(5)
+            selection = fallback.to_dict('records')
+        lines = ['### 👀 Games to Watch','', '| # | Matchup | Confidence | Note |','|---|---------|------------|------|']
+        for i, r in enumerate(sorted(selection, key=lambda x: x['confidence'])):
+            winner = r.get('predicted_winner')
+            home = r.get('home_team'); away = r.get('away_team')
+            conf = r.get('confidence', 0.0)
+            note = ''
+            if r.get('potential_upset'):
+                note = 'Potential Upset'
+            elif 0.50 <= conf <= 0.55:
+                note = 'Toss-Up'
+            elif conf < 0.60:
+                note = 'Close'
+            matchup = f"{away} @ {home}" if winner == home else f"{home} vs {away}" if home and away else winner
+            lines.append(f"| {i+1} | {matchup} | {conf:.1%} | {note} |")
+        lines.append('')
+        return lines
+    # Only construct section if we have rank or enough variance
+    md.extend(build_games_to_watch(today_games))
     # Summary stats
     if total_games:
         md.append('### 📈 Distribution Summary')

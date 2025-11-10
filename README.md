@@ -7,7 +7,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 14 games for November 10, 2025
+**Current Predictions**: 20 games for November 10, 2025
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -96,7 +96,7 @@ ESPN / ncaahoopR → Raw Games → Normalization → Feature Store (rolling diff
                        │               │
                      Training Dataset       │
                        │               │
-                  Model (Simple / Advanced) │
+                  Model (Adaptive / Advanced) │
                        │               │
          Drift + Accuracy Logs ← Predictions CSV ←─┴─→ README / Markdown
 ```
@@ -105,7 +105,7 @@ Key components:
 - **Scraper (`espn_scraper.py`)**: incremental recent window pull + dedupe
 - **Normalizer (`normalize_teams.py`)**: canonical mapping & alias reduction
 - **Feature Store (`feature_store.py`)**: season + team rolling aggregates + diffs (win %, point diff, momentum, strength index)
-- **Predictors**: `simple_predictor.py` (fast daily), `ncaa_predictions_v2.py` (richer, multi-season)
+- **Predictors**: `adaptive_predictor.py` (daily AdaptivePredictor), `ncaa_predictions_v2.py` (richer, multi-season)
 - **Monitoring**: `drift_monitor.py`, `team_drift_monitor.py`, conference drift, anomaly trends
 - **Publishing**: `generate_predictions_md.py`, `update_readme_stats.py` (banner + evaluation)
 
@@ -135,7 +135,7 @@ Safeguards:
 | Diff Features | home_fs_X - away_fs_X for calibrated contrasts |
 
 Models:
-1. **SimplePredictor** (RandomForest + calibration option) – fast daily use.
+1. **AdaptivePredictor** (RandomForest + dynamic thresholds) – fast daily use.
 2. **Advanced (v2)** – multi-season, hyperparameter search, diff feature lift evaluation, calibration curve export.
 
 Lift Analysis: `fs_feature_lift.csv` quantifies predictive contribution of feature store derived diffs.
@@ -194,7 +194,8 @@ NCAA-Prediction/
 │   ├── normalize_teams.py   # Team name normalization with alias mapping
 │   └── check_unmatched_teams.py  # Identify unmatched teams for cleanup
 ├── model_training/           # ML training modules
-│   ├── simple_predictor.py  # 🆕 Main prediction model
+│   ├── adaptive_predictor.py  # 🆕 Main prediction model
+│   ├── simple_predictor.py    # Legacy shim re-exporting AdaptivePredictor
 │   ├── tune_model.py        # 🆕 Weekly hyperparameter tuning
 │   ├── ncaa_predictions_v2.py  # Enhanced 30-feature model
 │   └── ncaa_predictions.py     # Legacy 15-feature model
@@ -259,16 +260,16 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 - **Overall Accuracy**: 85.2% (on 149 predictions)
 - **Current Season (2025-26) Tuning**: 96.3%
-- **Training Data**: 29,613 games (current season: 608)
-- **Calibration (Brier)**: Weighted=0.2703, Unweighted=0.2126 (Δ W-U: +0.0577)
-- **Calibration (ECE)**: Weighted=0.2192, Unweighted=0.0431 (Δ W-U: +0.1760)
+- **Training Data**: 29,648 games (current season: 643)
+- **Calibration (Brier)**: Weighted=0.2373, Unweighted=0.2292 (Δ W-U: +0.0081)
+- **Calibration (ECE)**: Weighted=0.0761, Unweighted=0.0876 (Δ W-U: -0.0115)
   *Lower is better; weighted model emphasizes current season.*
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `9185f5e`
-*Refreshed: 2025-11-10 12:10 UTC*
+- Commit Hash: `844b309`
+*Refreshed: 2025-11-10 18:50 UTC*
 
 ## 🚀 Automation
 
