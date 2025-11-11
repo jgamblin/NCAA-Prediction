@@ -1,20 +1,20 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-10 23:06:25 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `8eb775e`
+**Last Updated**: 2025-11-11 12:10:32 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `128b48a`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 20
-- **Average Confidence**: 84.3%
-- **High (≥70%)**: 20 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 47
+- **Average Confidence**: 83.3%
+- **High (≥70%)**: 47 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 5 day(s)
-- **Top 5 Picks Perfect Streak**: 1 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 6 day(s)
+- **Top 5 Picks Perfect Streak**: 2 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
@@ -23,59 +23,87 @@
 | 2025-11-07 | 36 | ✅ | ✅ |
 | 2025-11-08 | 36 | ✅ | ❌ |
 | 2025-11-09 | 17 | ✅ | ✅ |
+| 2025-11-10 | 20 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Iowa State** | Mississippi State | 86.5% |
-| 2 | **Utah** | Holy Cross | 85.5% |
-| 3 | **UCLA** | West Georgia | 85.2% |
-| 4 | **UT Arlington** | Arlington Baptist | 85.2% |
-| 5 | **Saint Louis** | Lindenwood | 85.1% |
-| 6 | **Miami (FL)** | Stetson | 85.1% |
-| 7 | **Pittsburgh** | Eastern Michigan | 85.0% |
-| 8 | **Connecticut** | Columbia | 85.0% |
-| 9 | **Georgia State** | Presbyterian | 84.8% |
-| 10 | **Milwaukee** | Little Rock | 84.8% |
-| 11 | **Seton Hall** | Fairfield | 84.7% |
-| 12 | **Northwestern** | Cleveland State | 84.7% |
-| 13 | **LSU** | New Orleans | 84.6% |
-| 14 | **SIU Edwardsville** | Indiana State | 84.6% |
-| 15 | **North Carolina A&T** | South Carolina State | 84.3% |
-| 16 | **Furman** | Columbia International | 84.3% |
-| 17 | **Xavier** | Santa Clara | 84.3% |
-| 18 | **McNeese** | College Of Biblical Studies | 84.1% |
-| 19 | **Tennessee Tech** | Virginia-Lynchburg | 82.8% |
-| 20 | **California** | Cal State Fullerton | 75.8% |
+| 1 | **North Carolina** | Radford | 86.6% |
+| 2 | **Florida** | Florida State | 86.6% |
+| 3 | **Wisconsin** | Ball State | 86.4% |
+| 4 | **Michigan** | Wake Forest | 86.4% |
+| 5 | **Kansas** | Texas A&M-Corpus Christi | 86.3% |
+| 6 | **Arkansas** | Central Arkansas | 85.7% |
+| 7 | **Virginia** | Hampton | 85.5% |
+| 8 | **Temple** | La Salle | 85.3% |
+| 9 | **Tarleton** | Merrimack | 85.3% |
+| 10 | **Saint Mary's** | Ohio | 85.3% |
+| 11 | **Rice** | Stephen F. Austin | 85.2% |
+| 12 | **Ole Miss** | Memphis | 85.2% |
+| 13 | **UTEP** | Loyola Marymount | 85.1% |
+| 14 | **North Alabama** | Northwestern State | 85.0% |
+| 15 | **Notre Dame** | Eastern Illinois | 84.9% |
+| 16 | **UCF** | Florida A&M | 84.8% |
+| 17 | **Old Dominion** | Norfolk State | 84.8% |
+| 18 | **Cincinnati** | Dayton | 84.7% |
+| 19 | **UNLV** | Montana | 84.7% |
+| 20 | **Colgate** | Drexel | 84.6% |
+| 21 | **High Point** | Jacksonville | 84.6% |
+| 22 | **Duquesne** | Queens University | 84.5% |
+| 23 | **Missouri State** | Arkansas State | 84.4% |
+| 24 | **Butler** | Chicago State | 84.3% |
+| 25 | **Clemson** | Morehead State | 84.3% |
+| 26 | **Boston College** | Central Connecticut | 84.2% |
+| 27 | **Arizona** | Northern Arizona | 84.2% |
+| 28 | **Wright State** | Toledo | 84.2% |
+| 29 | **Princeton** | Bucknell | 84.1% |
+| 30 | **UNC Asheville** | Lipscomb | 83.8% |
+| 31 | **Maryland** | Alcorn State | 83.8% |
+| 32 | **Florida Gulf Coast** | Georgia Southern | 83.5% |
+| 33 | **Loyola Maryland** | NJIT | 83.5% |
+| 34 | **Harvard** | Northeastern | 83.4% |
+| 35 | **Ohio State** | Appalachian St | 83.0% |
+| 36 | **Morgan State** | UMBC | 82.9% |
+| 37 | **Penn State** | Navy | 82.6% |
+| 38 | **Gonzaga** | Creighton | 82.1% |
+| 39 | **New Mexico** | UC Riverside | 82.0% |
+| 40 | **Auburn** | Wofford | 81.5% |
+| 41 | **Richmond** | William & Mary | 79.8% |
+| 42 | **North Dakota State** | Cal State Northridge | 77.8% |
+| 43 | **Sacramento State** | UC Santa Barbara | 77.8% |
+| 44 | **UAB** | Alabama State | 77.1% |
+| 45 | **Coastal Carolina** | Winthrop | 76.5% |
+| 46 | **Quinnipiac** | Yale | 73.9% |
+| 47 | **Louisville** | Kentucky | 72.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Cal State Fullerton @ California | 75.8% |  |
-| 2 | Virginia-Lynchburg @ Tennessee Tech | 82.8% |  |
-| 3 | College Of Biblical Studies @ McNeese | 84.1% |  |
-| 4 | Santa Clara @ Xavier | 84.3% |  |
-| 5 | Columbia International @ Furman | 84.3% |  |
+| 1 | Kentucky @ Louisville | 72.1% |  |
+| 2 | Yale @ Quinnipiac | 73.9% |  |
+| 3 | Winthrop @ Coastal Carolina | 76.5% |  |
+| 4 | Alabama State @ UAB | 77.1% |  |
+| 5 | UC Santa Barbara @ Sacramento State | 77.8% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 20
+- Home Teams Favored: 47
 - Away Teams Favored: 0
-- Max Confidence: 86.5%
-- Min Confidence: 75.8%
+- Max Confidence: 86.6%
+- Min Confidence: 72.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (20 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (47 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 85.2% (149 evaluated)
-- **Last 10 Days**: 85.2% (149 games)
+- **Overall Accuracy**: 85.2% (169 evaluated)
+- **Last 10 Days**: 85.2% (169 games)
 
 ### Last 7 Days
 
@@ -87,6 +115,7 @@
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 | 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
+| 2025-11-11 | 20 | 17 | 85.0% | 84.3% |
 
 ---
 
