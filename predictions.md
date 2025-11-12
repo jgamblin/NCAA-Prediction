@@ -1,20 +1,20 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-11 12:10:32 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `128b48a`
+**Last Updated**: 2025-11-12 12:10:47 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `e799a60`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 47
-- **Average Confidence**: 83.3%
-- **High (≥70%)**: 47 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 25
+- **Average Confidence**: 83.6%
+- **High (≥70%)**: 25 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 6 day(s)
-- **Top 5 Picks Perfect Streak**: 2 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 7 day(s)
+- **Top 5 Picks Perfect Streak**: 3 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
@@ -24,98 +24,77 @@
 | 2025-11-08 | 36 | ✅ | ❌ |
 | 2025-11-09 | 17 | ✅ | ✅ |
 | 2025-11-10 | 20 | ✅ | ✅ |
+| 2025-11-11 | 47 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **North Carolina** | Radford | 86.6% |
-| 2 | **Florida** | Florida State | 86.6% |
-| 3 | **Wisconsin** | Ball State | 86.4% |
-| 4 | **Michigan** | Wake Forest | 86.4% |
-| 5 | **Kansas** | Texas A&M-Corpus Christi | 86.3% |
-| 6 | **Arkansas** | Central Arkansas | 85.7% |
-| 7 | **Virginia** | Hampton | 85.5% |
-| 8 | **Temple** | La Salle | 85.3% |
-| 9 | **Tarleton** | Merrimack | 85.3% |
-| 10 | **Saint Mary's** | Ohio | 85.3% |
-| 11 | **Rice** | Stephen F. Austin | 85.2% |
-| 12 | **Ole Miss** | Memphis | 85.2% |
-| 13 | **UTEP** | Loyola Marymount | 85.1% |
-| 14 | **North Alabama** | Northwestern State | 85.0% |
-| 15 | **Notre Dame** | Eastern Illinois | 84.9% |
-| 16 | **UCF** | Florida A&M | 84.8% |
-| 17 | **Old Dominion** | Norfolk State | 84.8% |
-| 18 | **Cincinnati** | Dayton | 84.7% |
-| 19 | **UNLV** | Montana | 84.7% |
-| 20 | **Colgate** | Drexel | 84.6% |
-| 21 | **High Point** | Jacksonville | 84.6% |
-| 22 | **Duquesne** | Queens University | 84.5% |
-| 23 | **Missouri State** | Arkansas State | 84.4% |
-| 24 | **Butler** | Chicago State | 84.3% |
-| 25 | **Clemson** | Morehead State | 84.3% |
-| 26 | **Boston College** | Central Connecticut | 84.2% |
-| 27 | **Arizona** | Northern Arizona | 84.2% |
-| 28 | **Wright State** | Toledo | 84.2% |
-| 29 | **Princeton** | Bucknell | 84.1% |
-| 30 | **UNC Asheville** | Lipscomb | 83.8% |
-| 31 | **Maryland** | Alcorn State | 83.8% |
-| 32 | **Florida Gulf Coast** | Georgia Southern | 83.5% |
-| 33 | **Loyola Maryland** | NJIT | 83.5% |
-| 34 | **Harvard** | Northeastern | 83.4% |
-| 35 | **Ohio State** | Appalachian St | 83.0% |
-| 36 | **Morgan State** | UMBC | 82.9% |
-| 37 | **Penn State** | Navy | 82.6% |
-| 38 | **Gonzaga** | Creighton | 82.1% |
-| 39 | **New Mexico** | UC Riverside | 82.0% |
-| 40 | **Auburn** | Wofford | 81.5% |
-| 41 | **Richmond** | William & Mary | 79.8% |
-| 42 | **North Dakota State** | Cal State Northridge | 77.8% |
-| 43 | **Sacramento State** | UC Santa Barbara | 77.8% |
-| 44 | **UAB** | Alabama State | 77.1% |
-| 45 | **Coastal Carolina** | Winthrop | 76.5% |
-| 46 | **Quinnipiac** | Yale | 73.9% |
-| 47 | **Louisville** | Kentucky | 72.1% |
+| 1 | **Houston** | Oakland | 85.8% |
+| 2 | **South Dakota** | Southern Indiana | 85.2% |
+| 3 | **South Florida** | Coppin State | 84.9% |
+| 4 | **Oklahoma State** | Prairie View A&M | 84.8% |
+| 5 | **Stanford** | Montana State | 84.8% |
+| 6 | **Texas Southern** | Samford | 84.8% |
+| 7 | **Utah Tech** | Manhattan | 84.8% |
+| 8 | **Longwood** | James Madison | 84.7% |
+| 9 | **Utah State** | Weber State | 84.6% |
+| 10 | **Missouri** | Minnesota | 84.6% |
+| 11 | **Indiana** | Milwaukee | 84.4% |
+| 12 | **VMI** | Virginia-Lynchburg | 84.3% |
+| 13 | **Georgetown** | Binghamton | 84.2% |
+| 14 | **East Tennessee State** | Northern Kentucky | 84.2% |
+| 15 | **Virginia Commonwealth** | Saint Peter's | 83.5% |
+| 16 | **Marshall** | Elon | 83.5% |
+| 17 | **Marquette** | Little Rock | 83.3% |
+| 18 | **Virginia Tech** | Saint Joseph's | 83.2% |
+| 19 | **Oregon State** | North Texas | 83.0% |
+| 20 | **Boston University** | Brown | 82.5% |
+| 21 | **Fresno State** | UC San Diego | 82.5% |
+| 22 | **NC State** | UNC Greensboro | 81.5% |
+| 23 | **Western Michigan** | Purdue Fort Wayne | 81.5% |
+| 24 | **Colorado State** | Cal Poly | 80.9% |
+| 25 | **Texas State** | UTSA | 78.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Kentucky @ Louisville | 72.1% |  |
-| 2 | Yale @ Quinnipiac | 73.9% |  |
-| 3 | Winthrop @ Coastal Carolina | 76.5% |  |
-| 4 | Alabama State @ UAB | 77.1% |  |
-| 5 | UC Santa Barbara @ Sacramento State | 77.8% |  |
+| 1 | UTSA @ Texas State | 78.1% |  |
+| 2 | Cal Poly @ Colorado State | 80.9% |  |
+| 3 | Purdue Fort Wayne @ Western Michigan | 81.5% |  |
+| 4 | UNC Greensboro @ NC State | 81.5% |  |
+| 5 | UC San Diego @ Fresno State | 82.5% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 47
+- Home Teams Favored: 25
 - Away Teams Favored: 0
-- Max Confidence: 86.6%
-- Min Confidence: 72.1%
+- Max Confidence: 85.8%
+- Min Confidence: 78.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (47 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (25 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 85.2% (169 evaluated)
-- **Last 10 Days**: 85.2% (169 games)
+- **Overall Accuracy**: 82.4% (216 evaluated)
+- **Last 10 Days**: 82.4% (216 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-05 | 36 | 33 | 91.7% | 57.1% |
 | 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
 | 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 | 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
 | 2025-11-11 | 20 | 17 | 85.0% | 84.3% |
+| 2025-11-12 | 47 | 34 | 72.3% | 83.3% |
 
 ---
 
