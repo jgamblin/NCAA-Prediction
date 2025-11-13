@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-12 12:10:47 UTC
+**Last Updated**: 2025-11-13 12:10:13 UTC
 **Lineage**: config `7dd58a0bb0e2` · commit `e799a60`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 25
-- **Average Confidence**: 83.6%
-- **High (≥70%)**: 25 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,52 +26,9 @@
 | 2025-11-10 | 20 | ✅ | ✅ |
 | 2025-11-11 | 47 | ✅ | ✅ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Houston** | Oakland | 85.8% |
-| 2 | **South Dakota** | Southern Indiana | 85.2% |
-| 3 | **South Florida** | Coppin State | 84.9% |
-| 4 | **Oklahoma State** | Prairie View A&M | 84.8% |
-| 5 | **Stanford** | Montana State | 84.8% |
-| 6 | **Texas Southern** | Samford | 84.8% |
-| 7 | **Utah Tech** | Manhattan | 84.8% |
-| 8 | **Longwood** | James Madison | 84.7% |
-| 9 | **Utah State** | Weber State | 84.6% |
-| 10 | **Missouri** | Minnesota | 84.6% |
-| 11 | **Indiana** | Milwaukee | 84.4% |
-| 12 | **VMI** | Virginia-Lynchburg | 84.3% |
-| 13 | **Georgetown** | Binghamton | 84.2% |
-| 14 | **East Tennessee State** | Northern Kentucky | 84.2% |
-| 15 | **Virginia Commonwealth** | Saint Peter's | 83.5% |
-| 16 | **Marshall** | Elon | 83.5% |
-| 17 | **Marquette** | Little Rock | 83.3% |
-| 18 | **Virginia Tech** | Saint Joseph's | 83.2% |
-| 19 | **Oregon State** | North Texas | 83.0% |
-| 20 | **Boston University** | Brown | 82.5% |
-| 21 | **Fresno State** | UC San Diego | 82.5% |
-| 22 | **NC State** | UNC Greensboro | 81.5% |
-| 23 | **Western Michigan** | Purdue Fort Wayne | 81.5% |
-| 24 | **Colorado State** | Cal Poly | 80.9% |
-| 25 | **Texas State** | UTSA | 78.1% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | UTSA @ Texas State | 78.1% |  |
-| 2 | Cal Poly @ Colorado State | 80.9% |  |
-| 3 | Purdue Fort Wayne @ Western Michigan | 81.5% |  |
-| 4 | UNC Greensboro @ NC State | 81.5% |  |
-| 5 | UC San Diego @ Fresno State | 82.5% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 25
-- Away Teams Favored: 0
-- Max Confidence: 85.8%
-- Min Confidence: 78.1%
+*No games available.*
 
 ### 📋 Full Data
 
