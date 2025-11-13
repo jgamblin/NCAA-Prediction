@@ -395,16 +395,19 @@ def train_weighted_model(quick: bool = False):
                 existing = json.load(f)
         else:
             existing = {}
-        simple_cfg = existing.get('simple_predictor', {})
+        adaptive_cfg = existing.get('adaptive_predictor') or existing.get('simple_predictor', {})
         # Update hyperparameters (force sample weighting flag on for current-season emphasis)
-        simple_cfg.update({
+        adaptive_cfg.update({
             'n_estimators': best_params['n_estimators'],
             'max_depth': best_params['max_depth'],
             'min_samples_split': best_params['min_samples_split'],
             'use_sample_weights': True
         })
         # Preserve other keys (e.g., calibrate, min_games_threshold, use_sample_weights)
-        existing['simple_predictor'] = simple_cfg
+        existing['adaptive_predictor'] = adaptive_cfg
+        # Maintain legacy alias for consumers not yet migrated
+        if 'simple_predictor' in existing:
+            existing['simple_predictor'] = adaptive_cfg
         meta = existing.get('metadata', {})
         meta.update({
             'last_tuned': tuning_results['date'],

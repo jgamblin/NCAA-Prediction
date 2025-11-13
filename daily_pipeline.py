@@ -248,8 +248,9 @@ def main():
     if len(upcoming) > 0:
         print(f"Generating predictions for {len(upcoming)} upcoming games...")
 
-        # Use simplified prediction model
-        from simple_predictor import SimplePredictor  # type: ignore
+        # Use adaptive prediction model
+        from adaptive_predictor import AdaptivePredictor  # type: ignore
+        from prediction_logger import append_predictions as log_predictions  # type: ignore
         import json
         
         # Load training data
@@ -267,15 +268,30 @@ def main():
         from config.model_params_loader import load_model_params  # type: ignore
         model_cfg = load_model_params()
         sp_kwargs = {}
-        simple_cfg = model_cfg.get('simple_predictor', {}) if model_cfg else {}
-        for key in ['n_estimators','max_depth','min_samples_split','min_games_threshold','calibrate','calibration_method']:
-            if key in simple_cfg:
-                sp_kwargs[key] = simple_cfg[key]
+        adaptive_cfg = {}
+        if model_cfg:
+            adaptive_cfg = model_cfg.get('adaptive_predictor') or model_cfg.get('simple_predictor', {})
+        model_version = ""
+        if model_cfg:
+            metadata = model_cfg.get('metadata', {})
+            model_version = metadata.get('tuner_commit') or metadata.get('model_version', '') or ""
+        for key in [
+            'n_estimators',
+            'max_depth',
+            'min_samples_split',
+            'min_games_threshold',
+            'calibrate',
+            'calibration_method',
+            'home_court_logit_shift',
+            'confidence_temperature',
+        ]:
+            if key in adaptive_cfg:
+                sp_kwargs[key] = adaptive_cfg[key]
         if sp_kwargs:
-            print(f"✓ Loaded tuned simple predictor params: {sp_kwargs}")
+            print(f"✓ Loaded tuned adaptive predictor params: {sp_kwargs}")
         else:
             print("⚠️ No tuned params found (using defaults)")
-        predictor = SimplePredictor(**sp_kwargs)
+        predictor = AdaptivePredictor(**sp_kwargs)
         # Enrich training data with feature store stats similar to upcoming enrichment
         try:
             from model_training.feature_store import load_feature_store
@@ -327,7 +343,10 @@ def main():
         except Exception as exc:
             print(f"⚠️ Skipped feature store enrichment for training data: {exc}")
         # Optional sample weighting if enabled in config
-        use_weights = bool(model_cfg.get('simple_predictor', {}).get('use_sample_weights', False)) if model_cfg else False
+        cfg_section = {}
+        if model_cfg:
+            cfg_section = model_cfg.get('adaptive_predictor') or model_cfg.get('simple_predictor', {})
+        use_weights = bool(cfg_section.get('use_sample_weights', False)) if cfg_section else False
         if use_weights and 'season' in train_df.columns:
             print("✓ Sample weighting enabled: emphasizing current season performance")
             # Lightweight weight scheme: boost current season 10x, previous 3x, older decay
@@ -392,6 +411,23 @@ def main():
         except Exception as _val_exc:
             print(f"⚠️ Could not validate lineage columns: {_val_exc}")
 
+        # Append live predictions to drift log
+        try:
+            log_path = Path(data_dir) / 'prediction_log.csv'
+            log_predictions(
+                predictions_df,
+                source='live',
+                model_name='AdaptivePredictor',
+                model_version=model_version,
+                config_version=_config_version,
+                commit_hash=_commit_hash,
+                log_path=log_path,
+                timestamp=datetime.utcnow(),
+            )
+            print(f"✓ Logged live predictions to {log_path}")
+        except Exception as log_exc:
+            print(f"⚠️ Failed to log live predictions: {log_exc}")
+
         print(f"✓ Generated {len(predictions_df)} predictions")
         print(f"  - Home team favored: {predictions_df['predicted_home_win'].sum()}")
         print(f"  - Away team favored: {len(predictions_df) - predictions_df['predicted_home_win'].sum()}")
@@ -425,6 +461,19 @@ def main():
             print(f"✗ Artifact publishing failed: {result.stderr}")
     except Exception as exc:
         print(f"✗ Artifact publishing error: {exc}")
+
+    # Generate performance dashboard (charts + markdown)
+    try:
+        perf_result = sp_run(['python3', 'scripts/generate_performance_report.py'], capture_output=True, text=True, timeout=60)
+        if perf_result.returncode == 0:
+            if perf_result.stdout.strip():
+                print(perf_result.stdout.strip())
+            else:
+                print("✓ performance.md generated")
+        else:
+            print(f"⚠️ Performance report failed: {perf_result.stderr}")
+    except Exception as exc:
+        print(f"⚠️ Performance report step skipped: {exc}")
     
     # =========================================================================
     # STEP 6: Per-Team Drift & Anomaly Summaries

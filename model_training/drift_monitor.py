@@ -17,6 +17,8 @@ Metrics:
  - games_seen
  - cumulative_accuracy / logloss / brier
  - rolling_accuracy_{window} / rolling_logloss_{window} / brier_score_{window}
+ - cumulative_home_pick_rate / cumulative_home_win_rate / cumulative_mean_probability
+ - rolling_home_pick_rate_{window} / rolling_home_win_rate_{window} / rolling_mean_probability_{window}
  - model_type, model_version (from prediction row)
  - source (live/backfill_initial)
 
@@ -178,6 +180,9 @@ def compute_metrics(df: pd.DataFrame, window: int) -> pd.DataFrame:
             except ValueError:
                 cumulative_logloss = np.nan
             cumulative_brier = float(np.mean((current_preds - current_labels) ** 2))
+            cumulative_pick_rate = float((current_preds >= 0.5).mean())
+            cumulative_home_win_rate = float(current_labels.mean())
+            cumulative_mean_prob = float(current_preds.mean())
 
             if games_seen >= window:
                 window_preds = current_preds[-window:]
@@ -188,10 +193,16 @@ def compute_metrics(df: pd.DataFrame, window: int) -> pd.DataFrame:
                 except ValueError:
                     rolling_logloss = np.nan
                 brier_25 = float(np.mean((window_preds - window_labels) ** 2))
+                rolling_pick_rate = float((window_preds >= 0.5).mean())
+                rolling_win_rate = float(window_labels.mean())
+                rolling_mean_prob = float(window_preds.mean())
             else:
                 rolling_accuracy = np.nan
                 rolling_logloss = np.nan
                 brier_25 = np.nan
+                rolling_pick_rate = np.nan
+                rolling_win_rate = np.nan
+                rolling_mean_prob = np.nan
 
             records.append({
                 "season": season,
@@ -201,9 +212,15 @@ def compute_metrics(df: pd.DataFrame, window: int) -> pd.DataFrame:
                 "cumulative_accuracy": cumulative_accuracy,
                 "cumulative_logloss": cumulative_logloss,
                 "cumulative_brier": cumulative_brier,
+                "cumulative_home_pick_rate": cumulative_pick_rate,
+                "cumulative_home_win_rate": cumulative_home_win_rate,
+                "cumulative_mean_probability": cumulative_mean_prob,
                 "rolling_accuracy_{w}".format(w=window): rolling_accuracy,
                 "rolling_logloss_{w}".format(w=window): rolling_logloss,
                 "brier_score_{w}".format(w=window): brier_25,
+                "rolling_home_pick_rate_{w}".format(w=window): rolling_pick_rate,
+                "rolling_home_win_rate_{w}".format(w=window): rolling_win_rate,
+                "rolling_mean_probability_{w}".format(w=window): rolling_mean_prob,
                 "model_name": row.get("model_name", "unknown"),
                 "model_version": row.get("model_version", ""),
                 "source": row.get("source", ""),
@@ -251,6 +268,15 @@ def write_markdown(latest: pd.DataFrame, window: int):
         lines.append(f"Cumulative Brier: {row['cumulative_brier']:.3f}" if not np.isnan(row['cumulative_brier']) else "Cumulative Brier: NA")
         if not np.isnan(row[f'brier_score_{window}']):
             lines.append(f"Rolling {window} Brier: {row[f'brier_score_{window}']:.3f}")
+        lines.append(f"Home Pick Rate: {row['cumulative_home_pick_rate']:.3f}")
+        lines.append(f"Home Win Rate: {row['cumulative_home_win_rate']:.3f}")
+        lines.append(f"Mean Home Prob: {row['cumulative_mean_probability']:.3f}")
+        if not np.isnan(row[f'rolling_home_pick_rate_{window}']):
+            lines.append(f"Rolling {window} Home Pick Rate: {row[f'rolling_home_pick_rate_{window}']:.3f}")
+        if not np.isnan(row[f'rolling_home_win_rate_{window}']):
+            lines.append(f"Rolling {window} Home Win Rate: {row[f'rolling_home_win_rate_{window}']:.3f}")
+        if not np.isnan(row[f'rolling_mean_probability_{window}']):
+            lines.append(f"Rolling {window} Mean Prob: {row[f'rolling_mean_probability_{window}']:.3f}")
         lines.append(f"Model: {row['model_name']}")
         mv = row.get('model_version', '')
         if mv:

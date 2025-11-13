@@ -5,7 +5,7 @@ Originally at repo root (debug_indiana_prediction.py). Kept for historical analy
 """
 
 import pandas as pd
-from model_training.simple_predictor import SimplePredictor
+from model_training.adaptive_predictor import AdaptivePredictor
 
 print("="*80)
 print("DEBUGGING INDIANA vs ALABAMA A&M PREDICTION")
@@ -45,14 +45,16 @@ for team in sorted(aamu_variations):
     print(f"   - '{team}': {count} games")
 
 print("\n5. MODEL TRAINING AND TEAM ENCODING:")
-predictor = SimplePredictor()
+predictor = AdaptivePredictor()
 predictor.fit(completed)
 
 print(f"   Teams in encoder: {len(predictor.team_encoder.classes_)}")
 for candidate in ['Indiana Hoosiers', 'Indiana', 'Alabama A&M Bulldogs', 'Alabama A&M']:
     print(f"   '{candidate}' encoded as: ", end="")
     if candidate in predictor.team_encoder.classes_:
-        print(predictor.team_encoder.transform([candidate])[0])
+        encoded_arr = predictor.team_encoder.transform([candidate])
+        encoded_idx = int(encoded_arr[0])  # type: ignore[index]
+        print(encoded_idx)
     else:
         print("NOT FOUND (-1 will be used)")
 
