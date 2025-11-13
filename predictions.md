@@ -1,57 +1,84 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-13 12:10:13 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `e799a60`
+**Last Updated**: 2025-11-13 16:25:27 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `bcb780b`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 9
+- **Average Confidence**: 83.5%
+- **High (≥70%)**: 9 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 7 day(s)
-- **Top 5 Picks Perfect Streak**: 3 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 8 day(s)
+- **Top 5 Picks Perfect Streak**: 4 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-05 | 12 | ✅ | ✅ |
 | 2025-11-06 | 12 | ✅ | ✅ |
 | 2025-11-07 | 36 | ✅ | ✅ |
 | 2025-11-08 | 36 | ✅ | ❌ |
 | 2025-11-09 | 17 | ✅ | ✅ |
 | 2025-11-10 | 20 | ✅ | ✅ |
 | 2025-11-11 | 47 | ✅ | ✅ |
+| 2025-11-12 | 25 | ✅ | ✅ |
+
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Michigan State** | San Jose State | 86.3% |
+| 2 | **South Alabama** | Central Michigan | 84.4% |
+| 3 | **LSU** | Florida International | 84.3% |
+| 4 | **West Virginia** | Pittsburgh | 84.2% |
+| 5 | **Seton Hall** | Monmouth | 84.2% |
+| 6 | **Massachusetts** | Le Moyne | 83.8% |
+| 7 | **Wichita State** | Loyola Chicago | 83.6% |
+| 8 | **Kansas State** | California | 81.1% |
+| 9 | **Howard** | Alcorn State | 79.4% |
 
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Alcorn State @ Howard | 79.4% |  |
+| 2 | California @ Kansas State | 81.1% |  |
+| 3 | Loyola Chicago @ Wichita State | 83.6% |  |
+| 4 | Le Moyne @ Massachusetts | 83.8% |  |
+| 5 | Monmouth @ Seton Hall | 84.2% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 9
+- Away Teams Favored: 0
+- Max Confidence: 86.3%
+- Min Confidence: 79.4%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (25 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (9 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 82.4% (216 evaluated)
-- **Last 10 Days**: 82.4% (216 games)
+- **Overall Accuracy**: 83.0% (241 evaluated)
+- **Last 10 Days**: 83.0% (241 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-06 | 12 | 11 | 91.7% | 89.4% |
 | 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 | 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
 | 2025-11-11 | 20 | 17 | 85.0% | 84.3% |
 | 2025-11-12 | 47 | 34 | 72.3% | 83.3% |
+| 2025-11-13 | 25 | 22 | 88.0% | 83.6% |
 
 ---
 
