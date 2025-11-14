@@ -1,84 +1,106 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-13 16:25:27 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `bcb780b`
+**Last Updated**: 2025-11-14 12:10:54 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `1e40036`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 9
-- **Average Confidence**: 83.5%
-- **High (≥70%)**: 9 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 34
+- **Average Confidence**: 80.7%
+- **High (≥70%)**: 31 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
+
+- **High Confidence Streak**: 1 day(s) (last miss 2025-11-12)
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 8 day(s)
-- **Top 5 Picks Perfect Streak**: 4 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 9 day(s)
+- **Top 5 Picks Perfect Streak**: 5 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-06 | 12 | ✅ | ✅ |
 | 2025-11-07 | 36 | ✅ | ✅ |
 | 2025-11-08 | 36 | ✅ | ❌ |
 | 2025-11-09 | 17 | ✅ | ✅ |
 | 2025-11-10 | 20 | ✅ | ✅ |
 | 2025-11-11 | 47 | ✅ | ✅ |
 | 2025-11-12 | 25 | ✅ | ✅ |
+| 2025-11-13 | 9 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Michigan State** | San Jose State | 86.3% |
-| 2 | **South Alabama** | Central Michigan | 84.4% |
-| 3 | **LSU** | Florida International | 84.3% |
-| 4 | **West Virginia** | Pittsburgh | 84.2% |
-| 5 | **Seton Hall** | Monmouth | 84.2% |
-| 6 | **Massachusetts** | Le Moyne | 83.8% |
-| 7 | **Wichita State** | Loyola Chicago | 83.6% |
-| 8 | **Kansas State** | California | 81.1% |
-| 9 | **Howard** | Alcorn State | 79.4% |
+| 1 | **North Carolina** | North Carolina Central | 86.2% |
+| 2 | **Creighton** | Maryland-Eastern Shore | 86.1% |
+| 3 | **Kentucky** | Eastern Illinois | 86.0% |
+| 4 | **Duke** | Indiana State | 85.9% |
+| 5 | **Texas Tech** | Milwaukee | 85.5% |
+| 6 | **Rice** | East Texas A&M | 84.6% |
+| 7 | **Baylor** | Tarleton | 84.6% |
+| 8 | **Northern Iowa** | Furman | 84.4% |
+| 9 | **Arkansas** | Samford | 84.4% |
+| 10 | **California Baptist** | Western Illinois | 84.3% |
+| 11 | **UC Davis** | Sacramento State | 84.3% |
+| 12 | **UAB** | High Point | 84.1% |
+| 13 | **Drake** | SIU Edwardsville | 84.1% |
+| 14 | **Central Michigan** | Coppin State | 84.1% |
+| 15 | **Saint Mary's** | North Texas | 84.0% |
+| 16 | **Alabama State** | Virginia-Lynchburg | 83.9% |
+| 17 | **Washington State** | Washington | 83.9% |
+| 18 | **Colorado** | Providence | 83.9% |
+| 19 | **Eastern Michigan** | IU Indianapolis | 83.9% |
+| 20 | **Jacksonville State** | Coastal Carolina | 83.8% |
+| 21 | **Iona** | Fordham | 83.7% |
+| 22 | **Charleston** | South Carolina State | 83.7% |
+| 23 | **Brown** | Hampton | 83.6% |
+| 24 | **Towson** | Norfolk State | 83.3% |
+| 25 | **Georgia** | Georgia Tech | 83.2% |
+| 26 | **Montana** | Cal Poly | 83.2% |
+| 27 | **USC** | Illinois State | 82.9% |
+| 28 | **Utah Tech** | Mississippi Valley State | 81.8% |
+| 29 | **Iowa** | Xavier | 76.9% |
+| 30 | **Texas A&M** | UCF | 76.0% |
+| 31 | **Loyola Marymount** | Troy | 74.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Alcorn State @ Howard | 79.4% |  |
-| 2 | California @ Kansas State | 81.1% |  |
-| 3 | Loyola Chicago @ Wichita State | 83.6% |  |
-| 4 | Le Moyne @ Massachusetts | 83.8% |  |
-| 5 | Monmouth @ Seton Hall | 84.2% |  |
+| 1 | Arizona @ UCLA | 50.5% | Toss-Up |
+| 2 | Arizona State vs Gonzaga | 53.8% | Toss-Up |
+| 3 | Stephen F. Austin vs Abilene Christian | 54.2% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 9
-- Away Teams Favored: 0
-- Max Confidence: 86.3%
-- Min Confidence: 79.4%
+- Home Teams Favored: 32
+- Away Teams Favored: 2
+- Max Confidence: 86.2%
+- Min Confidence: 50.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (9 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (34 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 83.0% (241 evaluated)
-- **Last 10 Days**: 83.0% (241 games)
+- **Overall Accuracy**: 83.6% (250 evaluated)
+- **Last 10 Days**: 83.6% (250 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-07 | 12 | 11 | 91.7% | 91.2% |
 | 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 | 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
 | 2025-11-11 | 20 | 17 | 85.0% | 84.3% |
 | 2025-11-12 | 47 | 34 | 72.3% | 83.3% |
 | 2025-11-13 | 25 | 22 | 88.0% | 83.6% |
+| 2025-11-14 | 9 | 9 | 100.0% | 83.5% |
 
 ---
 
