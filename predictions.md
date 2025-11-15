@@ -1,106 +1,119 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-14 12:10:54 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `1e40036`
+**Last Updated**: 2025-11-15 12:09:33 UTC
+**Lineage**: config `7dd58a0bb0e2` · commit `66b9436`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 34
-- **Average Confidence**: 80.7%
-- **High (≥70%)**: 31 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
-
-- **High Confidence Streak**: 1 day(s) (last miss 2025-11-12)
+- **Games Predicted Today**: 49
+- **Average Confidence**: 83.0%
+- **High (≥70%)**: 48 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 9 day(s)
-- **Top 5 Picks Perfect Streak**: 5 day(s) (last miss 2025-11-08)
+- **#1 Pick Streak**: 10 day(s)
+- **Top 5 Picks Perfect Streak**: 6 day(s) (last miss 2025-11-08)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-07 | 36 | ✅ | ✅ |
 | 2025-11-08 | 36 | ✅ | ❌ |
 | 2025-11-09 | 17 | ✅ | ✅ |
 | 2025-11-10 | 20 | ✅ | ✅ |
 | 2025-11-11 | 47 | ✅ | ✅ |
 | 2025-11-12 | 25 | ✅ | ✅ |
 | 2025-11-13 | 9 | ✅ | ✅ |
+| 2025-11-14 | 34 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **North Carolina** | North Carolina Central | 86.2% |
-| 2 | **Creighton** | Maryland-Eastern Shore | 86.1% |
-| 3 | **Kentucky** | Eastern Illinois | 86.0% |
-| 4 | **Duke** | Indiana State | 85.9% |
-| 5 | **Texas Tech** | Milwaukee | 85.5% |
-| 6 | **Rice** | East Texas A&M | 84.6% |
-| 7 | **Baylor** | Tarleton | 84.6% |
-| 8 | **Northern Iowa** | Furman | 84.4% |
-| 9 | **Arkansas** | Samford | 84.4% |
-| 10 | **California Baptist** | Western Illinois | 84.3% |
-| 11 | **UC Davis** | Sacramento State | 84.3% |
-| 12 | **UAB** | High Point | 84.1% |
-| 13 | **Drake** | SIU Edwardsville | 84.1% |
-| 14 | **Central Michigan** | Coppin State | 84.1% |
-| 15 | **Saint Mary's** | North Texas | 84.0% |
-| 16 | **Alabama State** | Virginia-Lynchburg | 83.9% |
-| 17 | **Washington State** | Washington | 83.9% |
-| 18 | **Colorado** | Providence | 83.9% |
-| 19 | **Eastern Michigan** | IU Indianapolis | 83.9% |
-| 20 | **Jacksonville State** | Coastal Carolina | 83.8% |
-| 21 | **Iona** | Fordham | 83.7% |
-| 22 | **Charleston** | South Carolina State | 83.7% |
-| 23 | **Brown** | Hampton | 83.6% |
-| 24 | **Towson** | Norfolk State | 83.3% |
-| 25 | **Georgia** | Georgia Tech | 83.2% |
-| 26 | **Montana** | Cal Poly | 83.2% |
-| 27 | **USC** | Illinois State | 82.9% |
-| 28 | **Utah Tech** | Mississippi Valley State | 81.8% |
-| 29 | **Iowa** | Xavier | 76.9% |
-| 30 | **Texas A&M** | UCF | 76.0% |
-| 31 | **Loyola Marymount** | Troy | 74.0% |
+| 1 | **Louisville** | Ohio | 86.5% |
+| 2 | **Kansas** | Princeton | 85.9% |
+| 3 | **St. John's** | William & Mary | 85.8% |
+| 4 | **Villanova** | Duquesne | 85.0% |
+| 5 | **Southern** | Champion Christian | 84.9% |
+| 6 | **Temple** | Boston College | 84.8% |
+| 7 | **VMI** | Jacksonville | 84.8% |
+| 8 | **Pepperdine** | Northern Colorado | 84.8% |
+| 9 | **Oakland** | Defiance | 84.7% |
+| 10 | **North Alabama** | East Tennessee State | 84.7% |
+| 11 | **La Salle** | Penn State | 84.6% |
+| 12 | **Winthrop** | Mercer | 84.6% |
+| 13 | **Longwood** | Binghamton | 84.6% |
+| 14 | **Louisiana Tech** | Jackson State | 84.5% |
+| 15 | **Manhattan** | Mississippi Valley State | 84.4% |
+| 16 | **Minnesota** | Green Bay | 84.3% |
+| 17 | **Oral Roberts** | Belmont | 84.3% |
+| 18 | **Ball State** | Little Rock | 84.3% |
+| 19 | **NJIT** | Fairleigh Dickinson | 84.3% |
+| 20 | **UC San Diego** | Idaho | 84.3% |
+| 21 | **Murray State** | Nicholls State | 84.2% |
+| 22 | **Mercyhurst** | Morgan State | 84.2% |
+| 23 | **New Mexico State** | New Mexico | 84.2% |
+| 24 | **Marquette** | Maryland | 84.1% |
+| 25 | **Georgetown** | Clemson | 84.1% |
+| 26 | **UC Irvine** | Weber State | 83.9% |
+| 27 | **George Washington** | Old Dominion | 83.9% |
+| 28 | **Wyoming** | Portland | 83.8% |
+| 29 | **Virginia** | Marshall | 83.8% |
+| 30 | **UT Arlington** | Missouri State | 83.8% |
+| 31 | **Cal State Fullerton** | Pacific | 83.8% |
+| 32 | **Toledo** | Detroit Mercy | 83.7% |
+| 33 | **Boston University** | Merrimack | 83.6% |
+| 34 | **George Mason** | New Hampshire | 83.4% |
+| 35 | **Boise State** | Montana State | 83.3% |
+| 36 | **Texas State** | Texas Southern | 82.9% |
+| 37 | **Coppin State** | South Alabama | 82.8% |
+| 38 | **Utah** | Sam Houston State | 82.6% |
+| 39 | **Dayton** | Bethune-Cookman | 82.6% |
+| 40 | **Davidson** | Bowling Green | 82.4% |
+| 41 | **Northeastern** | Vermont | 81.8% |
+| 42 | **Yale** | Stony Brook | 81.8% |
+| 43 | **Chicago State** | UIC | 81.5% |
+| 44 | **Utah State** | UTEP | 81.2% |
+| 45 | **Air Force** | Miami (OH) | 80.9% |
+| 46 | **Fresno State** | Utah Valley | 79.6% |
+| 47 | **Bellarmine** | Wofford | 79.6% |
+| 48 | **Radford** | Wright State | 73.5% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Arizona @ UCLA | 50.5% | Toss-Up |
-| 2 | Arizona State vs Gonzaga | 53.8% | Toss-Up |
-| 3 | Stephen F. Austin vs Abilene Christian | 54.2% | Toss-Up |
+| 1 | Youngstown State @ St. Bonaventure | 59.3% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 32
-- Away Teams Favored: 2
-- Max Confidence: 86.2%
-- Min Confidence: 50.5%
+- Home Teams Favored: 49
+- Away Teams Favored: 0
+- Max Confidence: 86.5%
+- Min Confidence: 59.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (34 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (49 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 83.6% (250 evaluated)
-- **Last 10 Days**: 83.6% (250 games)
+- **Overall Accuracy**: 82.4% (284 evaluated)
+- **Last 10 Days**: 81.0% (248 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-08 | 36 | 29 | 80.6% | 90.6% |
 | 2025-11-09 | 36 | 29 | 80.6% | 90.8% |
 | 2025-11-10 | 17 | 14 | 82.4% | 90.3% |
 | 2025-11-11 | 20 | 17 | 85.0% | 84.3% |
 | 2025-11-12 | 47 | 34 | 72.3% | 83.3% |
 | 2025-11-13 | 25 | 22 | 88.0% | 83.6% |
 | 2025-11-14 | 9 | 9 | 100.0% | 83.5% |
+| 2025-11-15 | 34 | 25 | 73.5% | 80.7% |
 
 ---
 
