@@ -4,6 +4,17 @@
 
 > Accurate, explainable, daily-updated NCAA men's basketball game probabilities with automated drift monitoring, lineage, and feature-store powered context.
 
+<!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
+## 📊 At a Glance
+
+🎯 **80.2% Accuracy** across 333 predictions  
+📈 **29,878 Historical Games** powering model  
+🤖 **Automated Daily** at 12:00 PM UTC  
+⚡ **0 Live Predictions** for today  
+🔥 **0 Day Streak** of perfect high-confidence picks
+
+<!-- END AUTO-UPDATED: Hero Stats -->
+
 ## 🔎 Live Snapshot
 
 <div>
@@ -23,6 +34,62 @@
 | Team Drift | [`data/Drift_Metrics_By_Team.csv`](data/Drift_Metrics_By_Team.csv) | Per‑team rolling performance |
 | Anomalies | [`data/Team_Anomalies.csv`](data/Team_Anomalies.csv) | Recent vs cumulative accuracy deltas |
 | Feature Store | [`data/feature_store/feature_store.csv`](data/feature_store/feature_store.csv) | Per-team rolling aggregates |
+
+---
+
+<!-- AUTO-UPDATED: Performance Dashboard - Do not manually edit this section -->
+## 📈 Performance Dashboard
+
+<table>
+<tr>
+<td width="33%">
+
+### Prediction Quality
+- **Overall**: 80.2% (333 games)
+- **High Confidence**: 84.0% avg
+- **Current Season**: 92.6% tuning accuracy
+- **Algorithm**: Random Forest (calibrated)
+
+</td>
+<td width="33%">
+
+### Data Scale
+- **Total Games**: 29,878
+- **Current Season**: 873 games
+- **Unique Teams**: 1,833
+- **Feature Store**: 9,232 rows
+
+</td>
+<td width="33%">
+
+### Monitoring
+- **Top Feature**: `home_team_encoded` (0.0%)
+- **Lineage**: `7dd58a0bb0e2` @ `28be623`
+- **Last Update**: 2025-11-17 08:09 UTC
+- **Calibration**: Brier 0.2466
+
+</td>
+</tr>
+</table>
+
+<!-- END AUTO-UPDATED: Performance Dashboard -->
+
+<!-- AUTO-UPDATED: Recent Performance - Do not manually edit this section -->
+## 📊 Last 7 Days Performance
+
+| Date | Predictions | Completed | Accuracy | Avg Confidence | Notes |
+|------|-------------|-----------|----------|----------------|-------|
+| Nov 10 | 17 | 17 | 82.4% | 90.3% | 📊 |
+| Nov 11 | 20 | 20 | 85.0% | 84.3% | ✅ |
+| Nov 12 | 47 | 47 | 72.3% | 83.3% | 📉 |
+| Nov 13 | 25 | 25 | 88.0% | 83.6% | ✅ |
+| Nov 14 | 9 | 9 | 100.0% | 83.5% | 🎯 Excellent |
+| Nov 15 | 34 | 34 | 73.5% | 80.7% | 📉 |
+| Nov 16 | 49 | 49 | 67.3% | 83.0% | 📉 |
+
+_Accuracy variations reflect feature store building historical context for new season teams._
+
+<!-- END AUTO-UPDATED: Recent Performance -->
 
 ---
 
@@ -269,8 +336,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `c02b610`
-*Refreshed: 2025-11-16 12:09 UTC*
+- Commit Hash: `28be623`
+*Refreshed: 2025-11-17 08:09 UTC*
 
 ## 🚀 Automation
 

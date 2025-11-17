@@ -160,6 +160,327 @@ def resolve_lineage() -> tuple[str, str]:
 
 
 # --------------------------------------------------------------------------------------
+# Hero Stats Section Updater
+# --------------------------------------------------------------------------------------
+def _update_hero_stats(lines: list[str]) -> list[str]:
+    """Update the At a Glance hero stats section with current metrics."""
+    start_marker = '<!-- AUTO-UPDATED: Hero Stats'
+    end_marker = '<!-- END AUTO-UPDATED: Hero Stats -->'
+    
+    start_idx = None
+    end_idx = None
+    for i, line in enumerate(lines):
+        if start_marker in line:
+            start_idx = i
+        elif end_marker in line and start_idx is not None:
+            end_idx = i
+            break
+    
+    if start_idx is None or end_idx is None:
+        return lines  # Section not found, skip
+    
+    # Gather metrics
+    acc_path = os.path.join(DATA_DIR, 'Accuracy_Report.csv')
+    overall_acc = 0.0
+    total_preds = 0
+    today_preds = 0
+    
+    if os.path.exists(acc_path):
+        try:
+            acc_df = pd.read_csv(acc_path)
+            if not acc_df.empty and acc_df['games_completed'].sum() > 0:
+                total_preds = int(acc_df['games_completed'].sum())
+                total_correct = int(acc_df['correct_predictions'].sum())
+                overall_acc = (total_correct / total_preds * 100) if total_preds else 0.0
+        except Exception:
+            pass
+    
+    # Get today's prediction count
+    pred_path = os.path.join(DATA_DIR, 'NCAA_Game_Predictions.csv')
+    if os.path.exists(pred_path):
+        try:
+            pred_df = pd.read_csv(pred_path)
+            today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+            if 'date' in pred_df.columns:
+                today_preds = len(pred_df[pred_df['date'] == today])
+            else:
+                today_preds = len(pred_df)
+        except Exception:
+            pass
+    
+    # Training data size
+    train_games = 0
+    completed_path = os.path.join(DATA_DIR, 'Completed_Games.csv')
+    if os.path.exists(completed_path):
+        try:
+            cdf = pd.read_csv(completed_path)
+            train_games = len(cdf)
+        except Exception:
+            pass
+    
+    # Get streak
+    streak, _, _, _ = calculate_perfect_streak()
+    
+    # Build new section
+    new_section = [
+        start_marker + ' - Do not manually edit this section -->\n',
+        '## 📊 At a Glance\n',
+        '\n',
+        f'🎯 **{overall_acc:.1f}% Accuracy** across {total_preds} predictions  \n',
+        f'📈 **{train_games:,} Historical Games** powering model  \n',
+        '🤖 **Automated Daily** at 12:00 PM UTC  \n',
+        f'⚡ **{today_preds} Live Predictions** for today  \n',
+        f'🔥 **{streak} Day Streak** of perfect high-confidence picks\n',
+        '\n',
+        end_marker + '\n'
+    ]
+    
+    return lines[:start_idx] + new_section + lines[end_idx+1:]
+
+
+# --------------------------------------------------------------------------------------
+# Performance Dashboard Updater
+# --------------------------------------------------------------------------------------
+def _update_performance_dashboard(lines: list[str]) -> list[str]:
+    """Update the 3-column performance dashboard with current metrics."""
+    start_marker = '<!-- AUTO-UPDATED: Performance Dashboard'
+    end_marker = '<!-- END AUTO-UPDATED: Performance Dashboard -->'
+    
+    start_idx = None
+    end_idx = None
+    for i, line in enumerate(lines):
+        if start_marker in line:
+            start_idx = i
+        elif end_marker in line and start_idx is not None:
+            end_idx = i
+            break
+    
+    if start_idx is None or end_idx is None:
+        return lines
+    
+    # Gather all metrics
+    acc_path = os.path.join(DATA_DIR, 'Accuracy_Report.csv')
+    overall_acc = 0.0
+    total_preds = 0
+    avg_conf = 0.0
+    
+    if os.path.exists(acc_path):
+        try:
+            acc_df = pd.read_csv(acc_path)
+            if not acc_df.empty and acc_df['games_completed'].sum() > 0:
+                total_preds = int(acc_df['games_completed'].sum())
+                total_correct = int(acc_df['correct_predictions'].sum())
+                overall_acc = (total_correct / total_preds * 100) if total_preds else 0.0
+                if 'avg_confidence' in acc_df.columns:
+                    avg_conf = acc_df['avg_confidence'].mean() * 100
+        except Exception:
+            pass
+    
+    # Training data
+    train_games = 0
+    current_season_games = 0
+    completed_path = os.path.join(DATA_DIR, 'Completed_Games.csv')
+    if os.path.exists(completed_path):
+        try:
+            cdf = pd.read_csv(completed_path)
+            train_games = len(cdf)
+            if 'season' in cdf.columns:
+                current_season_games = (cdf['season'] == '2025-26').sum()
+        except Exception:
+            pass
+    
+    # Tuning accuracy
+    tuning_acc = 0.0
+    tuning_path = os.path.join(DATA_DIR, 'Model_Tuning_Log.json')
+    if os.path.exists(tuning_path):
+        try:
+            with open(tuning_path) as f:
+                log = json.load(f)
+            if isinstance(log, list) and log:
+                tuning_acc = log[-1].get('current_season_accuracy', 0.0) * 100
+        except Exception:
+            pass
+    
+    # Feature store
+    feature_store_rows = 0
+    fs_path = os.path.join(DATA_DIR, 'feature_store', 'feature_store.csv')
+    if os.path.exists(fs_path):
+        try:
+            fs_df = pd.read_csv(fs_path)
+            feature_store_rows = len(fs_df)
+        except Exception:
+            pass
+    
+    # Unique teams
+    unique_teams = 0
+    if os.path.exists(completed_path):
+        try:
+            cdf = pd.read_csv(completed_path)
+            if 'home_team' in cdf.columns and 'away_team' in cdf.columns:
+                unique_teams = len(set(cdf['home_team'].unique()) | set(cdf['away_team'].unique()))
+        except Exception:
+            pass
+    
+    # Top feature
+    top_feature = 'N/A'
+    top_importance = 0.0
+    importance_path = os.path.join(DATA_DIR, 'Simple_Feature_Importance.csv')
+    if os.path.exists(importance_path):
+        try:
+            imp_df = pd.read_csv(importance_path)
+            if not imp_df.empty and 'feature' in imp_df.columns and 'importance' in imp_df.columns:
+                top_row = imp_df.iloc[0]
+                top_feature = top_row['feature']
+                top_importance = top_row['importance'] * 100
+        except Exception:
+            pass
+    
+    # Calibration
+    brier_weighted = 'N/A'
+    calib_path = os.path.join(PROJECT_ROOT, 'docs', 'CALIBRATION_WEIGHTING_COMPARISON.md')
+    if os.path.exists(calib_path):
+        try:
+            with open(calib_path) as cf:
+                calib_lines = cf.readlines()
+            brier_line = next((l for l in calib_lines if l.strip().startswith('| Brier Score')), None)
+            if brier_line:
+                parts = [p.strip() for p in brier_line.split('|') if p.strip()]
+                if len(parts) >= 2:
+                    brier_weighted = parts[1]
+        except Exception:
+            pass
+    
+    # Lineage
+    cfg, ch = resolve_lineage()
+    ch_short = ch[:7] if len(ch) > 7 else ch
+    timestamp = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+    
+    # Build new section
+    new_section = [
+        start_marker + ' - Do not manually edit this section -->\n',
+        '## 📈 Performance Dashboard\n',
+        '\n',
+        '<table>\n',
+        '<tr>\n',
+        '<td width="33%">\n',
+        '\n',
+        '### Prediction Quality\n',
+        f'- **Overall**: {overall_acc:.1f}% ({total_preds} games)\n',
+        f'- **High Confidence**: {avg_conf:.1f}% avg\n',
+        f'- **Current Season**: {tuning_acc:.1f}% tuning accuracy\n',
+        '- **Algorithm**: Random Forest (calibrated)\n',
+        '\n',
+        '</td>\n',
+        '<td width="33%">\n',
+        '\n',
+        '### Data Scale\n',
+        f'- **Total Games**: {train_games:,}\n',
+        f'- **Current Season**: {current_season_games} games\n',
+        f'- **Unique Teams**: {unique_teams:,}\n',
+        f'- **Feature Store**: {feature_store_rows:,} rows\n',
+        '\n',
+        '</td>\n',
+        '<td width="33%">\n',
+        '\n',
+        '### Monitoring\n',
+        f'- **Top Feature**: `{top_feature}` ({top_importance:.1f}%)\n',
+        f'- **Lineage**: `{cfg}` @ `{ch_short}`\n',
+        f'- **Last Update**: {timestamp}\n',
+        f'- **Calibration**: Brier {brier_weighted}\n',
+        '\n',
+        '</td>\n',
+        '</tr>\n',
+        '</table>\n',
+        '\n',
+        end_marker + '\n'
+    ]
+    
+    return lines[:start_idx] + new_section + lines[end_idx+1:]
+
+
+# --------------------------------------------------------------------------------------
+# Recent Performance Table Updater
+# --------------------------------------------------------------------------------------
+def _update_recent_performance(lines: list[str]) -> list[str]:
+    """Update the Last 7 Days Performance table."""
+    start_marker = '<!-- AUTO-UPDATED: Recent Performance'
+    end_marker = '<!-- END AUTO-UPDATED: Recent Performance -->'
+    
+    start_idx = None
+    end_idx = None
+    for i, line in enumerate(lines):
+        if start_marker in line:
+            start_idx = i
+        elif end_marker in line and start_idx is not None:
+            end_idx = i
+            break
+    
+    if start_idx is None or end_idx is None:
+        return lines
+    
+    # Load accuracy report
+    acc_path = os.path.join(DATA_DIR, 'Accuracy_Report.csv')
+    if not os.path.exists(acc_path):
+        return lines
+    
+    try:
+        acc_df = pd.read_csv(acc_path)
+        last7 = acc_df.tail(7)
+        
+        new_section = [
+            start_marker + ' - Do not manually edit this section -->\n',
+            '## 📊 Last 7 Days Performance\n',
+            '\n',
+            '| Date | Predictions | Completed | Accuracy | Avg Confidence | Notes |\n',
+            '|------|-------------|-----------|----------|----------------|-------|\n'
+        ]
+        
+        for _, row in last7.iterrows():
+            date = row.get('date', 'N/A')
+            total = int(row.get('total_predictions', 0))
+            completed = int(row.get('games_completed', 0))
+            acc = row.get('accuracy', 0.0)
+            conf = row.get('avg_confidence', 0.0)
+            
+            # Format date
+            try:
+                date_obj = datetime.strptime(date, '%Y-%m-%d')
+                date_str = date_obj.strftime('%b %d')
+            except Exception:
+                date_str = date
+            
+            # Add trend indicators
+            notes = ''
+            if acc >= 0.95:
+                notes = '🎯 Excellent'
+            elif acc >= 0.85:
+                notes = '✅'
+            elif acc >= 0.75:
+                notes = '📊'
+            else:
+                notes = '📉'
+            
+            if conf < 0.65:
+                notes += ' Low confidence day'
+            
+            new_section.append(
+                f'| {date_str} | {total} | {completed} | {acc*100:.1f}% | {conf*100:.1f}% | {notes} |\n'
+            )
+        
+        new_section.extend([
+            '\n',
+            '_Accuracy variations reflect feature store building historical context for new season teams._\n',
+            '\n',
+            end_marker + '\n'
+        ])
+        
+        return lines[:start_idx] + new_section + lines[end_idx+1:]
+        
+    except Exception:
+        return lines
+
+
+# --------------------------------------------------------------------------------------
 # README banner updater
 # --------------------------------------------------------------------------------------
 def _update_readme_banner(lines: list[str]) -> list[str]:
@@ -281,12 +602,18 @@ def refresh_readme_evaluation():
     new_section.append(f"- Commit Hash: `{ch}`")
     new_section.append(f"*Refreshed: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}*")
     new_section.append("")
-    # Replace first occurrence of evaluation heading in README
+    # Read README once and apply all updates
     with open(README_PATH) as f:
         lines = f.readlines()
+    
+    # Apply all marker-based section updates
+    lines = _update_hero_stats(lines)
+    lines = _update_performance_dashboard(lines)
+    lines = _update_recent_performance(lines)
     lines = _update_readme_banner(lines)
+    
+    # Update Model Evaluation section
     heading = '## 📈 Model Evaluation'
-    # Old heading variants from earlier rewrite
     alt_heading = '## 📈 Model Evaluation (Auto‑Updated)'
     candidates = [i for i,l in enumerate(lines) if (heading in l) or (alt_heading in l)]
     if not candidates:
@@ -305,10 +632,11 @@ def refresh_readme_evaluation():
                 end = i
                 break
         new_lines = lines[:start] + [s + '\n' for s in new_section] + lines[end:]
-    new_lines = _update_readme_banner(new_lines)
+    
+    # Write updated README once
     with open(README_PATH,'w') as f:
         f.writelines(new_lines)
-    print(f"✓ README evaluation & banner updated (cfg={cfg}, commit={ch})")
+    print(f"✓ README hero stats, dashboard, recent performance & evaluation updated (cfg={cfg}, commit={ch})")
 
 
 # --------------------------------------------------------------------------------------
