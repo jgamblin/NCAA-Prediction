@@ -19,6 +19,10 @@ from __future__ import annotations
 import os
 import sys
 from datetime import datetime, timezone
+try:
+    from zoneinfo import ZoneInfo  # Python 3.9+
+except ImportError:
+    from pytz import timezone as ZoneInfo  # fallback for older Python
 import json
 import pandas as pd
 
@@ -195,12 +199,17 @@ def _update_hero_stats(lines: list[str]) -> list[str]:
         except Exception:
             pass
     
-    # Get today's prediction count
+    # Get today's prediction count (US Central)
     pred_path = os.path.join(DATA_DIR, 'NCAA_Game_Predictions.csv')
     if os.path.exists(pred_path):
         try:
+            try:
+                tz = ZoneInfo('America/Chicago')
+            except Exception:
+                import pytz
+                tz = pytz.timezone('America/Chicago')
+            today = datetime.now(tz).strftime('%Y-%m-%d')
             pred_df = pd.read_csv(pred_path)
-            today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
             if 'date' in pred_df.columns:
                 today_preds = len(pred_df[pred_df['date'] == today])
             else:
@@ -494,12 +503,16 @@ def _update_readme_banner(lines: list[str]) -> list[str]:
     pred_path = os.path.join(DATA_DIR, 'NCAA_Game_Predictions.csv')
     if os.path.exists(pred_path):
         try:
+            try:
+                tz = ZoneInfo('America/Chicago')
+            except Exception:
+                import pytz
+                tz = pytz.timezone('America/Chicago')
+            today = datetime.now(tz).strftime('%Y-%m-%d')
             df = pd.read_csv(pred_path)
             game_count = len(df)
             date_col = 'date' if 'date' in df.columns else None
             pred_date = None
-            # Use timezone-aware UTC datetime (datetime.utcnow deprecated)
-            today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
             if date_col and (df[date_col] == today).any():
                 pred_date = today
             elif date_col:
@@ -643,10 +656,15 @@ def refresh_readme_evaluation():
 # Predictions markdown generator (elevated formatting)
 # --------------------------------------------------------------------------------------
 def generate_predictions_markdown():
-    # timezone-aware UTC datetime (datetime.utcnow deprecated)
-    now = datetime.now(timezone.utc)
+    # Use US Central Time for 'today' logic
+    try:
+        tz = ZoneInfo('America/Chicago')
+    except Exception:
+        import pytz
+        tz = pytz.timezone('America/Chicago')
+    now = datetime.now(tz)
     today_str = now.strftime('%Y-%m-%d')
-    timestamp = now.strftime('%Y-%m-%d %H:%M:%S UTC')
+    timestamp = now.strftime('%Y-%m-%d %H:%M:%S %Z')
     cfg, ch = resolve_lineage()
     md: list[str] = []
     md.append('# 🏀 NCAA Basketball Predictions')

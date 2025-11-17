@@ -1,12 +1,12 @@
 # 📊 Model Performance Dashboard
 
-_Generated: 2025-11-10 21:10 UTC_
+_Generated: 2025-11-17 03:29 CST_
 
 ## Overview
 
-- **Overall Accuracy**: 85.23% (127/149)
-- **Most Recent Day**: 2025-11-10 — accuracy 82.35% on 17 games
-- **Average Confidence (latest day)**: 90.30%
+- **Overall Accuracy**: 80.00% (284/355)
+- **Most Recent Day**: 2025-11-16 — accuracy 77.27% on 22 games
+- **Average Confidence (latest day)**: 82.38%
 
 ## Daily Accuracy
 
@@ -20,13 +20,17 @@ _Generated: 2025-11-10 21:10 UTC_
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-05 | 36 | 33 | 91.67% | 57.06% |
-| 2025-11-06 | 12 | 11 | 91.67% | 89.43% |
-| 2025-11-07 | 12 | 11 | 91.67% | 91.20% |
-| 2025-11-08 | 36 | 29 | 80.56% | 90.61% |
-| 2025-11-09 | 36 | 29 | 80.56% | 90.84% |
-| 2025-11-10 | 17 | 14 | 82.35% | 90.30% |
+| 2025-11-07 | 36 | 29 | 80.56% | 90.61% |
+| 2025-11-08 | 36 | 29 | 80.56% | 90.84% |
+| 2025-11-09 | 17 | 14 | 82.35% | 90.30% |
+| 2025-11-10 | 20 | 17 | 85.00% | 84.33% |
+| 2025-11-11 | 47 | 34 | 72.34% | 83.28% |
+| 2025-11-12 | 25 | 22 | 88.00% | 83.57% |
+| 2025-11-13 | 9 | 9 | 100.00% | 83.47% |
+| 2025-11-14 | 34 | 25 | 73.53% | 80.67% |
+| 2025-11-15 | 49 | 33 | 67.35% | 82.98% |
+| 2025-11-16 | 22 | 17 | 77.27% | 82.38% |
 
 ## Drift Snapshot
 
-No drift metrics available yet. Run the drift monitor to populate `data/Drift_Metrics.csv`.
+Latest drift snapshot (Season 2025-26, 774 games): accuracy 0.753, logloss 0.580, brier 0.195.

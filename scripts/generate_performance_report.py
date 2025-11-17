@@ -4,6 +4,10 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+try:
+    from zoneinfo import ZoneInfo  # Python 3.9+
+except ImportError:
+    from pytz import timezone as ZoneInfo  # fallback for older Python
 from pathlib import Path
 from typing import Optional
 
@@ -109,7 +113,20 @@ def _drift_snapshot(df: pd.DataFrame) -> str:
 
 
 def main() -> None:
-    accuracy_df = _derive_accuracy_features(_load_csv(ACCURACY_CSV, parse_dates=["date"]))
+    # Load and localize to US Central time
+    accuracy_df = _load_csv(ACCURACY_CSV, parse_dates=["date"])
+    try:
+        tz = ZoneInfo('America/Chicago')
+    except Exception:
+        import pytz
+        tz = pytz.timezone('America/Chicago')
+    if not accuracy_df.empty:
+        # Localize all dates to US Central (if not already tz-aware)
+        if accuracy_df['date'].dt.tz is None:
+            accuracy_df['date'] = accuracy_df['date'].dt.tz_localize('UTC').dt.tz_convert(tz)
+        else:
+            accuracy_df['date'] = accuracy_df['date'].dt.tz_convert(tz)
+    accuracy_df = _derive_accuracy_features(accuracy_df)
     drift_df = _load_csv(DRIFT_CSV)
 
     accuracy_chart = _plot_accuracy_trend(accuracy_df)
@@ -118,7 +135,8 @@ def main() -> None:
     lines: list[str] = []
     lines.append("# 📊 Model Performance Dashboard")
     lines.append("")
-    lines.append(f"_Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_")
+    now = datetime.now(tz)
+    lines.append(f"_Generated: {now.strftime('%Y-%m-%d %H:%M %Z')}_")
     lines.append("")
 
     if accuracy_df.empty:
@@ -151,7 +169,12 @@ def main() -> None:
         lines.append("| Date | Games | Correct | Accuracy | Avg Confidence |")
         lines.append("|------|-------|---------|----------|----------------|")
         for row in accuracy_df.tail(10).itertuples(index=False):
-            date_str = row.date.strftime('%Y-%m-%d') if isinstance(row.date, pd.Timestamp) else str(row.date)
+            # Always print date in US Central
+            date_val = getattr(row, 'date', None)
+            if isinstance(date_val, pd.Timestamp):
+                date_str = date_val.tz_convert(tz).strftime('%Y-%m-%d')
+            else:
+                date_str = str(date_val)
             games_completed = int(float(getattr(row, 'games_completed', 0) or 0))
             correct_predictions = int(float(getattr(row, 'correct_predictions', 0) or 0))
             accuracy_pct = float(getattr(row, 'accuracy', 0.0) or 0.0)

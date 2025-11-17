@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-17 09:06:12 UTC
-**Lineage**: config `7dd58a0bb0e2` · commit `33a1908`
+**Last Updated**: 2025-11-17 03:29:14 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `1a6a050`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 17
-- **Average Confidence**: 82.2%
+- **Average Confidence**: 82.1%
 - **High (≥70%)**: 17 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
@@ -30,40 +30,40 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Tennessee** | Rice | 85.6% |
-| 2 | **Wisconsin** | SIU Edwardsville | 84.9% |
-| 3 | **West Virginia** | Lafayette | 84.1% |
-| 4 | **North Dakota State** | Southern Illinois | 83.9% |
-| 5 | **San Jose State** | Bethesda | 83.7% |
-| 6 | **Missouri** | Prairie View A&M | 83.6% |
-| 7 | **Liberty** | Carolina University | 83.4% |
-| 8 | **Georgia** | Florida A&M | 83.3% |
-| 9 | **UCF** | Oakland | 83.3% |
-| 10 | **Pittsburgh** | Bucknell | 83.3% |
-| 11 | **Tennessee Tech** | West Georgia | 83.0% |
-| 12 | **UC Santa Barbara** | Loyola Marymount | 82.1% |
-| 13 | **Charleston** | Drake | 80.9% |
-| 14 | **Clemson** | North Alabama | 80.4% |
-| 15 | **NC State** | Virginia Commonwealth | 79.9% |
-| 16 | **Arizona State** | Georgia State | 79.7% |
-| 17 | **Colorado** | Alabama State | 72.5% |
+| 1 | **Tennessee** | Rice | 85.5% |
+| 2 | **Wisconsin** | SIU Edwardsville | 85.1% |
+| 3 | **North Dakota State** | Southern Illinois | 84.0% |
+| 4 | **West Virginia** | Lafayette | 83.9% |
+| 5 | **Missouri** | Prairie View A&M | 83.5% |
+| 6 | **San Jose State** | Bethesda | 83.5% |
+| 7 | **UCF** | Oakland | 83.3% |
+| 8 | **Liberty** | Carolina University | 83.3% |
+| 9 | **Georgia** | Florida A&M | 83.3% |
+| 10 | **Pittsburgh** | Bucknell | 83.0% |
+| 11 | **Tennessee Tech** | West Georgia | 82.8% |
+| 12 | **UC Santa Barbara** | Loyola Marymount | 82.0% |
+| 13 | **Charleston** | Drake | 81.3% |
+| 14 | **Clemson** | North Alabama | 80.6% |
+| 15 | **Arizona State** | Georgia State | 79.2% |
+| 16 | **NC State** | Virginia Commonwealth | 79.0% |
+| 17 | **Colorado** | Alabama State | 72.4% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Alabama State @ Colorado | 72.5% |  |
-| 2 | Georgia State @ Arizona State | 79.7% |  |
-| 3 | Virginia Commonwealth @ NC State | 79.9% |  |
-| 4 | North Alabama @ Clemson | 80.4% |  |
-| 5 | Drake @ Charleston | 80.9% |  |
+| 1 | Alabama State @ Colorado | 72.4% |  |
+| 2 | Virginia Commonwealth @ NC State | 79.0% |  |
+| 3 | Georgia State @ Arizona State | 79.2% |  |
+| 4 | North Alabama @ Clemson | 80.6% |  |
+| 5 | Drake @ Charleston | 81.3% |  |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 17
 - Away Teams Favored: 0
-- Max Confidence: 85.6%
-- Min Confidence: 72.5%
+- Max Confidence: 85.5%
+- Min Confidence: 72.4%
 
 ### 📋 Full Data
 

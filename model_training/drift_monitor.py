@@ -120,10 +120,18 @@ def merge_predictions(comp: pd.DataFrame, preds: pd.DataFrame) -> pd.DataFrame:
     preds_dedup['pred_prob'] = preds_dedup['home_win_probability']
 
     merged = comp.merge(preds_dedup, on='game_id', how='inner', suffixes=('_comp', '_pred'))
-    # Ensure date column (prefer comp date)
-    if 'date' not in merged.columns and 'game_date' in merged.columns:
-        merged['date'] = merged['game_date']
-    # Fill Season if missing
+    # Ensure date column (prefer comp date, then game_day, then prediction date)
+    if 'date' not in merged.columns or merged['date'].isnull().all():
+        if 'game_day' in merged.columns:
+            merged['date'] = merged['game_day']
+        elif 'date_pred' in merged.columns:
+            merged['date'] = merged['date_pred']
+    # Always use season from Completed_Games.csv (comp)
+    if 'season_comp' in merged.columns:
+        merged['season'] = merged['season_comp']
+    elif 'season' not in merged.columns and 'Season' in merged.columns:
+        merged['season'] = merged['Season']
+    # Also provide 'Season' for compatibility
     if 'Season' not in merged.columns and 'season' in merged.columns:
         merged['Season'] = merged['season']
     # Provide model_name
@@ -131,6 +139,14 @@ def merge_predictions(comp: pd.DataFrame, preds: pd.DataFrame) -> pd.DataFrame:
         merged['model_name'] = merged['model_type']
     else:
         merged['model_name'] = 'unknown'
+
+    # Ensure a unified 'label' column for downstream metrics
+    if 'label_comp' in merged.columns:
+        merged['label'] = merged['label_comp']
+    elif 'label' not in merged.columns and 'label_pred' in merged.columns:
+        merged['label'] = merged['label_pred']
+    # If neither, error will be raised in compute_metrics as before
+
     return merged
 
 
@@ -279,8 +295,10 @@ def write_markdown(latest: pd.DataFrame, window: int):
             lines.append(f"Rolling {window} Mean Prob: {row[f'rolling_mean_probability_{window}']:.3f}")
         lines.append(f"Model: {row['model_name']}")
         mv = row.get('model_version', '')
+        if isinstance(mv, float):
+            mv = str(int(mv)) if not np.isnan(mv) else ''
         if mv:
-            lines.append(f"Model Version: {mv[:12]}")
+            lines.append(f"Model Version: {str(mv)[:12]}")
         # Expected vs observed
         exp = row.get('cumulative_expected_home_wins', np.nan)
         act = row.get('cumulative_actual_home_wins', np.nan)
