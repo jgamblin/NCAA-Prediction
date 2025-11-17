@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-17 03:29:14 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `1a6a050`
+**Last Updated**: 2025-11-17 03:33:48 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9e4428c`
 
 ---
 
@@ -34,18 +34,18 @@
 | 2 | **Wisconsin** | SIU Edwardsville | 85.1% |
 | 3 | **North Dakota State** | Southern Illinois | 84.0% |
 | 4 | **West Virginia** | Lafayette | 83.9% |
-| 5 | **Missouri** | Prairie View A&M | 83.5% |
-| 6 | **San Jose State** | Bethesda | 83.5% |
+| 5 | **San Jose State** | Bethesda | 83.5% |
+| 6 | **Missouri** | Prairie View A&M | 83.5% |
 | 7 | **UCF** | Oakland | 83.3% |
-| 8 | **Liberty** | Carolina University | 83.3% |
-| 9 | **Georgia** | Florida A&M | 83.3% |
+| 8 | **Liberty** | Carolina University | 83.2% |
+| 9 | **Georgia** | Florida A&M | 83.2% |
 | 10 | **Pittsburgh** | Bucknell | 83.0% |
-| 11 | **Tennessee Tech** | West Georgia | 82.8% |
+| 11 | **Tennessee Tech** | West Georgia | 82.7% |
 | 12 | **UC Santa Barbara** | Loyola Marymount | 82.0% |
 | 13 | **Charleston** | Drake | 81.3% |
 | 14 | **Clemson** | North Alabama | 80.6% |
-| 15 | **Arizona State** | Georgia State | 79.2% |
-| 16 | **NC State** | Virginia Commonwealth | 79.0% |
+| 15 | **Arizona State** | Georgia State | 79.3% |
+| 16 | **NC State** | Virginia Commonwealth | 79.1% |
 | 17 | **Colorado** | Alabama State | 72.4% |
 
 ### 👀 Games to Watch
@@ -53,8 +53,8 @@
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
 | 1 | Alabama State @ Colorado | 72.4% |  |
-| 2 | Virginia Commonwealth @ NC State | 79.0% |  |
-| 3 | Georgia State @ Arizona State | 79.2% |  |
+| 2 | Virginia Commonwealth @ NC State | 79.1% |  |
+| 3 | Georgia State @ Arizona State | 79.3% |  |
 | 4 | North Alabama @ Clemson | 80.6% |  |
 | 5 | Drake @ Charleston | 81.3% |  |
 
