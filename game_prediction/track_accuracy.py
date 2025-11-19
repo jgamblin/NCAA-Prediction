@@ -52,10 +52,14 @@ def track_accuracy():
     
     # Merge predictions with actual results
     merged = predictions.merge(
-        completed[['game_id', 'home_score', 'away_score', 'game_status']],
+        completed[['game_id', 'home_score', 'away_score', 'game_status', 'date']],
         on='game_id',
-        how='inner'
+        how='inner',
+        suffixes=('_pred', '_actual')
     )
+    
+    # Filter to only games that are actually completed (game_status == 'Final')
+    merged = merged[merged['game_status'] == 'Final'].copy()
     
     if len(merged) == 0:
         print("\n✗ No completed games found matching predictions yet")
@@ -122,33 +126,60 @@ def track_accuracy():
             print(f"  ... and {len(correct) - 10} more")
     
     # Save accuracy report (daily summary)
+    # Group by game date to create separate entries for each day
     report_path = os.path.join(data_dir, 'Accuracy_Report.csv')
-    report_df = pd.DataFrame({
-        'date': [datetime.now().strftime('%Y-%m-%d')],
-        'total_predictions': [len(predictions)],
-        'games_completed': [len(merged)],
-        'correct_predictions': [merged['correct'].sum()],
-        'accuracy': [accuracy],
-        'avg_confidence': [merged['confidence'].mean()],
-        'config_version': [_config_version],
-        'commit_hash': [_commit_hash]
-    })
     
-    # Append to existing report if it exists
+    # Use the actual game date from completed games, not today's date
+    date_col = 'date_actual' if 'date_actual' in merged.columns else 'date'
+    
+    # Group by date and calculate metrics for each day
+    daily_reports = []
+    for game_date, day_games in merged.groupby(date_col):
+        daily_accuracy = day_games['correct'].mean()
+        daily_report = {
+            'date': game_date,
+            'total_predictions': len(day_games),
+            'games_completed': len(day_games),
+            'correct_predictions': int(day_games['correct'].sum()),
+            'accuracy': daily_accuracy,
+            'avg_confidence': day_games['confidence'].mean(),
+            'config_version': _config_version,
+            'commit_hash': _commit_hash
+        }
+        daily_reports.append(daily_report)
+    
+    report_df = pd.DataFrame(daily_reports)
+    
+    # Append to existing report if it exists, avoiding duplicates
     if os.path.exists(report_path):
         existing = pd.read_csv(report_path)
+        # Remove any existing entries for the same dates to avoid duplicates
+        existing = existing[~existing['date'].isin(report_df['date'])]
         report_df = pd.concat([existing, report_df], ignore_index=True)
+        # Sort by date
+        report_df = report_df.sort_values('date').reset_index(drop=True)
     
     report_df.to_csv(report_path, index=False)
-    print(f"\n✓ Saved accuracy report to {report_path}")
+    print(f"\n✓ Saved accuracy report to {report_path} ({len(daily_reports)} date(s) updated)")
     
     # Save detailed results for streak tracking
     detailed_path = os.path.join(data_dir, 'Prediction_Details.csv')
-    detailed_df = merged[[
-        'date', 'game_id', 'home_team', 'away_team', 
+    
+    # Use the actual game date
+    date_col = 'date_actual' if 'date_actual' in merged.columns else 'date'
+    
+    # Select columns, using the correct date column
+    cols_to_save = [
+        date_col, 'game_id', 'home_team', 'away_team', 
         'predicted_winner', 'actual_winner', 'confidence', 
         'correct', 'home_score', 'away_score'
-    ]].copy()
+    ]
+    detailed_df = merged[cols_to_save].copy()
+    
+    # Rename date column to 'date' if it was suffixed
+    if date_col != 'date':
+        detailed_df.rename(columns={date_col: 'date'}, inplace=True)
+    
     detailed_df['config_version'] = _config_version
     detailed_df['commit_hash'] = _commit_hash
     
