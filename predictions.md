@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-19 12:13:18 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `e152050`
+**Last Updated**: 2025-11-19 15:57:27 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `86bd813`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 28
-- **Average Confidence**: 79.4%
-- **High (≥70%)**: 24 · **Medium (60-70%)**: 3 · **Other (<60%)**: 1
+- **Average Confidence**: 79.3%
+- **High (≥70%)**: 25 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -30,52 +30,51 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Auburn** | Jackson State | 85.7% |
-| 2 | **Michigan** | Middle Tennessee | 85.6% |
-| 3 | **Virginia Tech** | Bryant | 84.3% |
+| 1 | **Michigan** | Middle Tennessee | 85.8% |
+| 2 | **Auburn** | Jackson State | 85.7% |
+| 3 | **Virginia Tech** | Bryant | 84.4% |
 | 4 | **Samford** | Florida Gulf Coast | 83.9% |
-| 5 | **Stetson** | Howard | 83.6% |
-| 6 | **Notre Dame** | Bellarmine | 83.4% |
-| 7 | **Ohio** | Bethune-Cookman | 83.4% |
-| 8 | **Saint Mary's** | Arkansas State | 83.2% |
-| 9 | **South Carolina Upstate** | Tennessee Tech | 83.2% |
-| 10 | **East Texas A&M** | Dallas Christian | 83.0% |
-| 11 | **Indiana State** | Louisiana Tech | 82.9% |
-| 12 | **La Salle** | Villanova | 82.8% |
-| 13 | **Duquesne** | Loyola Maryland | 82.8% |
-| 14 | **Bowling Green** | William & Mary | 82.5% |
-| 15 | **Belmont** | Lipscomb | 82.2% |
-| 16 | **Oklahoma State** | South Florida | 81.8% |
-| 17 | **Penn State** | Harvard | 81.6% |
-| 18 | **Marquette** | Dayton | 81.2% |
-| 19 | **Maryland** | Mount St. Mary's | 80.9% |
-| 20 | **Jacksonville State** | South Alabama | 80.7% |
-| 21 | **George Washington** | UMBC | 78.2% |
-| 22 | **Utah Valley** | UC Irvine | 78.2% |
-| 23 | **Western Carolina** | UNC Asheville | 78.0% |
-| 24 | **Richmond** | VMI | 76.1% |
+| 5 | **Stetson** | Howard | 83.5% |
+| 6 | **Ohio** | Bethune-Cookman | 83.4% |
+| 7 | **Notre Dame** | Bellarmine | 83.1% |
+| 8 | **Saint Mary's** | Arkansas State | 83.1% |
+| 9 | **Bowling Green** | William & Mary | 83.0% |
+| 10 | **Indiana State** | Louisiana Tech | 82.9% |
+| 11 | **Duquesne** | Loyola Maryland | 82.8% |
+| 12 | **South Carolina Upstate** | Tennessee Tech | 82.8% |
+| 13 | **Penn State** | Harvard | 82.7% |
+| 14 | **East Texas A&M** | Dallas Christian | 82.7% |
+| 15 | **La Salle** | Villanova | 82.5% |
+| 16 | **Oklahoma State** | South Florida | 82.2% |
+| 17 | **Belmont** | Lipscomb | 82.0% |
+| 18 | **Jacksonville State** | South Alabama | 81.7% |
+| 19 | **Maryland** | Mount St. Mary's | 80.6% |
+| 20 | **Marquette** | Dayton | 80.3% |
+| 21 | **Western Carolina** | UNC Asheville | 78.0% |
+| 22 | **Utah Valley** | UC Irvine | 76.8% |
+| 23 | **George Washington** | UMBC | 76.7% |
+| 24 | **Richmond** | VMI | 76.5% |
+| 25 | **Air Force** | Alabama State | 70.2% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Sam Houston State** | Wyoming | 69.8% |
-| 2 | **Air Force** | Alabama State | 68.7% |
-| 3 | **Toledo** | Youngstown State | 61.5% |
+| 1 | **Sam Houston State** | Wyoming | 68.6% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Connecticut vs Arizona | 53.3% | Toss-Up |
-| 2 | Youngstown State @ Toledo | 61.5% |  |
+| 1 | Youngstown State @ Toledo | 57.2% | Close |
+| 2 | Connecticut vs Arizona | 58.6% | Close |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 27
 - Away Teams Favored: 1
-- Max Confidence: 85.7%
-- Min Confidence: 53.3%
+- Max Confidence: 85.8%
+- Min Confidence: 57.2%
 
 ### 📋 Full Data
 
