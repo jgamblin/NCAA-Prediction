@@ -181,6 +181,20 @@ class ESPNScraper:
             # Format date for consistency
             formatted_date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
             
+            # Extract odds information (moneyline)
+            home_moneyline = None
+            away_moneyline = None
+            
+            # ESPN may include odds in the event data
+            odds = event.get('odds', [])
+            if odds:
+                # Typically the first odds entry is the consensus/default line
+                primary_odds = odds[0] if isinstance(odds, list) else odds
+                if isinstance(primary_odds, dict):
+                    # Look for moneyline in various possible fields
+                    home_moneyline = primary_odds.get('homeMoneyLine') or primary_odds.get('homeTeamOdds', {}).get('moneyLine')
+                    away_moneyline = primary_odds.get('awayMoneyLine') or primary_odds.get('awayTeamOdds', {}).get('moneyLine')
+            
             record = {
                 'game_id': game_id,
                 'date': formatted_date,
@@ -199,7 +213,9 @@ class ESPNScraper:
                 'is_neutral': 0,
                 'home_record': '',
                 'away_record': '',
-                'home_point_spread': ''
+                'home_point_spread': '',
+                'home_moneyline': home_moneyline,
+                'away_moneyline': away_moneyline
             }
 
             # Basic validation: ensure IDs present; if missing fall back to name hash (deterministic)

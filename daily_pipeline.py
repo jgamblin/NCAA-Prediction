@@ -476,6 +476,21 @@ def main():
         print(f"⚠️ Performance report step skipped: {exc}")
     
     # =========================================================================
+    # STEP 5.5: Generate Betting Tracker Report
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 5.5: Generating betting tracker report")
+    print("-"*80)
+    try:
+        result = sp_run(['python3', 'game_prediction/betting_tracker.py'], capture_output=True, text=True, timeout=60)
+        if result.returncode == 0:
+            print(result.stdout)
+        else:
+            print(f"⚠️ Betting tracker failed: {result.stderr}")
+    except Exception as exc:
+        print(f"⚠️ Betting tracker step skipped: {exc}")
+    
+    # =========================================================================
     # STEP 6: Per-Team Drift & Anomaly Summaries
     # =========================================================================
     print("\n" + "="*80)
@@ -519,6 +534,7 @@ def main():
     print(f"    commit_hash={_commit_hash}")
     print(f"  - {os.path.join(data_dir, 'Accuracy_Report.csv')}")
     print(f"  - predictions.md")
+    print(f"  - bets.md")
     print(f"  - README.md (Model Evaluation section)")
     print(f"\nRun this script daily to keep predictions updated!")
     print("="*80)
