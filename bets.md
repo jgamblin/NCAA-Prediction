@@ -1,12 +1,12 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-19 23:24:42
+**Last Updated**: 2025-11-19 23:30:57
 
 **Tracking Started**: 2025-11-19
 
-This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN Bet**.
+This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.
 
-> **✅ Real Odds Only**: Only games with actual ESPN Bet moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. Starting fresh with today's game!
+> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. Starting fresh with today's game!
 
 ---
 
@@ -20,13 +20,9 @@ Check back tomorrow to see results.
 
 ## 🎯 Today's Best Bet
 
-**Michigan** vs **Middle Tennessee**
+**Waiting for real ESPN odds data**
 
-- **Confidence**: 85.8%
-- **Estimated Moneyline (synthetic)**: -603
-- **Potential Profit**: $0.17
-
-⚠️ *No real moneyline available for this game on ESPN Bet.*
+Run the daily pipeline to fetch games with real moneylines.
 
 ---
 
@@ -35,12 +31,12 @@ Check back tomorrow to see results.
 ### Betting Strategy
 - **One bet per day** on the single game with the highest predicted win probability
 - Each bet is $1.00 on the team with the highest win probability
-- **Only games with real ESPN Bet moneylines** are tracked
+- **Only games with real ESPN moneylines** are tracked
 - Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)
 - ROI = (Total Profit / Total Wagered) × 100
 
 ### Important Disclaimers
-- **Real moneylines from ESPN Bet API** extracted from official scoreboard endpoint
+- **Real moneylines from ESPN API** extracted from official scoreboard endpoint
 - Games showing "OFF" for moneyline are excluded (no betting available)
 - **Tracking started fresh** - no historical synthetic data
 - **Not all games have betting lines** - especially games involving small schools or lower-tier matchups
