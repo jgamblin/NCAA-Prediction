@@ -57,15 +57,15 @@
 - **Total Games**: 30,074
 - **Current Season**: 1069 games
 - **Unique Teams**: 1,848
-- **Feature Store**: 12,015 rows
+- **Feature Store**: 12,016 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `86bd813`
-- **Last Update**: 2025-11-19 21:57 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `80aad5f`
+- **Last Update**: 2025-11-19 22:31 UTC
 - **Calibration**: Brier 0.2368
 
 </td>
@@ -336,8 +336,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `86bd813`
-*Refreshed: 2025-11-19 21:57 UTC*
+- Commit Hash: `80aad5f`
+*Refreshed: 2025-11-19 22:31 UTC*
 
 ## 🚀 Automation
 
