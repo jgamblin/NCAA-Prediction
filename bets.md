@@ -1,6 +1,6 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-19 22:42:16
+**Last Updated**: 2025-11-19 22:45:15
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) for games that have a moneyline on ESPN.
 
