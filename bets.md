@@ -1,21 +1,20 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-19 23:16:35
+**Last Updated**: 2025-11-19 23:24:42
+
+**Tracking Started**: 2025-11-19
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN Bet**.
 
-> **⚠️ Note**: Only games with **actual ESPN Bet moneylines** are tracked. Games showing "OFF" or without moneylines are excluded. Historical data may include synthetic estimates for demonstration purposes.
+> **✅ Real Odds Only**: Only games with actual ESPN Bet moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. Starting fresh with today's game!
 
 ---
 
 ## 📊 Season Summary
 
-- **Total Bets**: 16
-- **Total Wagered**: $16.00
-- **Total Payout**: $18.34
-- **Net Profit/Loss**: $2.34 🟢
-- **Win Rate**: 100.0% (16W-0L)
-- **ROI**: 14.6%
+**No bets placed yet** - Track starts with today's game!
+
+Check back tomorrow to see results.
 
 ---
 
@@ -31,51 +30,19 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 ---
 
-## 📈 Betting Performance
-
-### Performance by Confidence Level
-
-| Confidence | Bets | Win Rate | Net Profit | ROI |
-|------------|------|----------|------------|-----|
-| 80-90% | 16 | 100.0% | $2.34 | 14.6% |
-
-
-## 📋 Recent Bets (Last 20)
-
-| Date | Result | Matchup | Bet On | ML | Confidence | Profit |
-|------|--------|---------|--------|----|-----------:|-------:|
-| 2025-11-18 | ✅ | Sacramento State @ UCLA | UCLA | -600 | 85.7% | $0.17 |
-| 2025-11-17 | ✅ | Rhodes Lynx @ UAB Blazers | UAB Blazers | -681 | 87.2% | $0.15 |
-| 2025-11-16 | ✅ | Miami (FL) @ Florida | Florida | -618 | 86.1% | $0.16 |
-| 2025-11-15 | ✅ | Central Penn Knights @ American University Eagles | American University Eagles | -698 | 87.5% | $0.14 |
-| 2025-11-14 | ✅ | North Carolina Central @ North Carolina | North Carolina | -624 | 86.2% | $0.16 |
-| 2025-11-13 | ✅ | San Jose State @ Michigan State | Michigan State | -630 | 86.3% | $0.16 |
-| 2025-11-12 | ✅ | St. Scholastica Saints @ North Dakota State Bison | North Dakota State Bison | -705 | 87.6% | $0.14 |
-| 2025-11-11 | ✅ | Pensacola Christian College PENSACOLA CHRISTIAN @ Troy Trojans | Troy Trojans | -771 | 88.5% | $0.13 |
-| 2025-11-10 | ✅ | Penn State-Shenango Nittany Lions @ Youngstown State Penguins | Youngstown State Penguins | -727 | 87.9% | $0.14 |
-| 2025-11-09 | ✅ | Dominican (IL) Dominican @ Purdue Fort Wayne Mastodons | Purdue Fort Wayne Mastodons | -640 | 86.5% | $0.16 |
-| 2025-11-08 | ✅ | Averett Cougars @ High Point Panthers | High Point Panthers | -665 | 86.9% | $0.15 |
-| 2025-11-07 | ✅ | Virginia-Lynchburg Dragons @ Coastal Carolina Chanticleers | Coastal Carolina Chanticleers | -734 | 88.0% | $0.14 |
-| 2025-11-06 | ✅ | Trinity (FL) Tigers @ Jacksonville Dolphins | Jacksonville Dolphins | -687 | 87.3% | $0.15 |
-| 2025-11-05 | ✅ | Maryland Eastern Shore Hawks @ Georgia Bulldogs | Georgia Bulldogs | -692 | 87.4% | $0.14 |
-| 2025-11-04 | ✅ | St. Joseph's (NY) Bears @ Manhattan Jaspers | Manhattan Jaspers | -673 | 87.1% | $0.15 |
-| 2025-11-03 | ✅ | Lincoln University (CA) Oaklanders @ Loyola Marymount Lions | Loyola Marymount Lions | -866 | 89.7% | $0.12 |
-
----
-
 ## 📝 Notes
 
 ### Betting Strategy
 - **One bet per day** on the single game with the highest predicted win probability
 - Each bet is $1.00 on the team with the highest win probability
-- **Only games with real ESP Bet moneylines** are tracked going forward
+- **Only games with real ESPN Bet moneylines** are tracked
 - Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)
 - ROI = (Total Profit / Total Wagered) × 100
 
 ### Important Disclaimers
-- **Real moneylines from ESPN Bet API** are used when available
+- **Real moneylines from ESPN Bet API** extracted from official scoreboard endpoint
 - Games showing "OFF" for moneyline are excluded (no betting available)
-- **Historical data** (before API integration) may include synthetic estimates
+- **Tracking started fresh** - no historical synthetic data
 - **Not all games have betting lines** - especially games involving small schools or lower-tier matchups
 - This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy
 
