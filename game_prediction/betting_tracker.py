@@ -233,9 +233,9 @@ def generate_bets_markdown():
         "",
         f"**Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         "",
-        "This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model).",
+        "This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN Bet**.",
         "",
-        "> **⚠️ Note**: Moneylines shown are **synthetic estimates** calculated from win probabilities, not actual ESPN Bet odds. Many games (especially involving smaller schools) may not have real betting lines available. Always verify on ESPN Bet or your sportsbook before placing real bets.",
+        "> **⚠️ Note**: Only games with **actual ESPN Bet moneylines** are tracked. Games showing \"OFF\" or without moneylines are excluded. Historical data may include synthetic estimates for demonstration purposes.",
         "",
         "---",
         "",
@@ -260,12 +260,16 @@ def generate_bets_markdown():
         try:
             today_preds = pd.read_csv(today_pred_path)
             
-            # Find the game with highest confidence that has a moneyline
+            # Find the game with highest confidence that has a REAL moneyline
             if 'home_moneyline' in today_preds.columns and 'away_moneyline' in today_preds.columns:
-                # Filter to games with moneylines
-                with_ml = today_preds[
-                    today_preds['home_moneyline'].notna() | today_preds['away_moneyline'].notna()
-                ]
+                # Filter to games with real moneylines (prefer has_real_odds flag if available)
+                if 'has_real_odds' in today_preds.columns:
+                    with_ml = today_preds[today_preds['has_real_odds'] == True]
+                else:
+                    # Fallback: filter to games with moneylines
+                    with_ml = today_preds[
+                        today_preds['home_moneyline'].notna() | today_preds['away_moneyline'].notna()
+                    ]
                 
                 if len(with_ml) > 0:
                     # Get the game with highest confidence
@@ -283,17 +287,26 @@ def generate_bets_markdown():
                         moneyline = best_bet['away_moneyline']
                         location = '@'
                     
+                    # Check if this is real odds or synthetic
+                    has_real = best_bet.get('has_real_odds', False)
+                    ml_label = "Moneyline" if has_real else "Estimated Moneyline (synthetic)"
+                    
                     md_lines.extend([
                         "## 🎯 Today's Best Bet",
                         "",
                         f"**{bet_team}** {location} **{opponent}**",
                         "",
                         f"- **Confidence**: {best_bet['confidence']:.1%}",
-                        f"- **Estimated Moneyline**: {int(moneyline):+d} *(synthetic - verify availability on sportsbook)*",
+                        f"- **{ml_label}**: {int(moneyline):+d}",
                         f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                         "",
-                        "⚠️ *Check [ESPN Bet](https://espnbet.com) or your sportsbook to verify this game has actual betting lines available before placing real bets.*",
-                        "",
+                    ])
+                    
+                    if not has_real:
+                        md_lines.append("⚠️ *No real moneyline available for this game on ESPN Bet.*")
+                        md_lines.append("")
+                    
+                    md_lines.extend([
                         "---",
                         "",
                     ])
@@ -368,16 +381,15 @@ def generate_bets_markdown():
         "### Betting Strategy",
         "- **One bet per day** on the single game with the highest predicted win probability",
         "- Each bet is $1.00 on the team with the highest win probability",
+        "- **Only games with real ESP Bet moneylines** are tracked going forward",
         "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
         "- ROI = (Total Profit / Total Wagered) × 100",
         "",
         "### Important Disclaimers",
-        "- **Moneylines are synthetic estimates** calculated from our win probability model",
-        "- **Not all games have real betting lines** - especially games involving:",
-        "  - Small schools or non-D1 programs",
-        "  - Lower-tier matchups",
-        "  - Games with limited betting interest",
-        "- **Always verify on ESPN Bet or your sportsbook** before placing real bets",
+        "- **Real moneylines from ESPN Bet API** are used when available",
+        "- Games showing \"OFF\" for moneyline are excluded (no betting available)",
+        "- **Historical data** (before API integration) may include synthetic estimates",
+        "- **Not all games have betting lines** - especially games involving small schools or lower-tier matchups",
         "- This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy",
         "",
         "*Auto-generated by betting_tracker.py*"

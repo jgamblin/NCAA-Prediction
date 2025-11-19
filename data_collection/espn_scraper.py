@@ -18,14 +18,55 @@ class ESPNScraper:
     
     def __init__(self):
         self.base_url = "https://www.espn.com"
+        self.api_base_url = "https://site.api.espn.com"
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
     
+    def get_scoreboard_from_api(self, date):
+        """
+        Get games from ESPN API endpoint with real moneyline odds.
+        This is the preferred method as it includes actual betting lines.
+        
+        Args:
+            date: Date in format YYYYMMDD or datetime object
+            
+        Returns:
+            List of game dictionaries with real odds when available
+        """
+        if isinstance(date, datetime):
+            date_str = date.strftime("%Y%m%d")
+        else:
+            date_str = str(date)
+        
+        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}"
+        
+        try:
+            response = self.session.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            
+            games = []
+            events = data.get('events', [])
+            
+            for event in events:
+                game_data = self._parse_api_event(event, date_str)
+                if game_data:
+                    games.append(game_data)
+            
+            print(f"  Fetched {len(games)} games from API for {date_str}")
+            return games
+            
+        except Exception as e:
+            print(f"  Warning: Could not fetch from API for {date_str}: {e}")
+            print(f"  Falling back to HTML scraping...")
+            return None
+    
     def get_scoreboard(self, date):
         """
         Get ALL games for a specific date across all conferences.
+        Tries API first (for real odds), then falls back to HTML scraping.
         
         Args:
             date: Date in format YYYYMMDD or datetime object
@@ -38,6 +79,12 @@ class ESPNScraper:
         else:
             date_str = str(date)
         
+        # Try API first for real odds
+        games_from_api = self.get_scoreboard_from_api(date)
+        if games_from_api is not None:
+            return games_from_api
+        
+        # Fallback to HTML scraping (won't have real odds)
         all_games = []
         seen_game_ids = set()
         
@@ -106,6 +153,148 @@ class ESPNScraper:
         except Exception as e:
             print(f"  Error parsing scoreboard: {e}")
             return games
+    
+    def _parse_api_event(self, event, date_str):
+        """
+        Parse event from ESPN API endpoint.
+        This includes real moneyline odds when available.
+        """
+        try:
+            game_id = str(event.get('id', ''))
+            if not game_id:
+                return None
+            
+            # Get competition data (contains odds)
+            competitions = event.get('competitions', [])
+            if not competitions:
+                return None
+            
+            competition = competitions[0]
+            
+            # Get competitors
+            competitors = competition.get('competitors', [])
+            if len(competitors) < 2:
+                return None
+            
+            # In API, index 0 is usually home, index 1 is away
+            home_comp = competitors[0] if competitors[0].get('homeAway') == 'home' else competitors[1]
+            away_comp = competitors[1] if competitors[1].get('homeAway') == 'away' else competitors[0]
+            
+            # Extract team info
+            home_team = home_comp.get('team', {}).get('displayName', '')
+            away_team = away_comp.get('team', {}).get('displayName', '')
+            home_team_id = str(home_comp.get('team', {}).get('id', '')).strip()
+            away_team_id = str(away_comp.get('team', {}).get('id', '')).strip()
+            
+            if not home_team or not away_team:
+                return None
+            
+            # Extract scores
+            home_score = int(home_comp.get('score', 0))
+            away_score = int(away_comp.get('score', 0))
+            
+            # Extract rankings
+            home_rank = None
+            away_rank = None
+            
+            home_rank_val = home_comp.get('curatedRank', {}).get('current')
+            if home_rank_val and home_rank_val != 99:
+                home_rank = home_rank_val
+            
+            away_rank_val = away_comp.get('curatedRank', {}).get('current')
+            if away_rank_val and away_rank_val != 99:
+                away_rank = away_rank_val
+            
+            # Determine game status
+            status = competition.get('status', {})
+            status_type = status.get('type', {})
+            status_state = status_type.get('state', 'pre')
+            
+            if status_type.get('completed', False) or status_state == 'post':
+                game_status = 'Final'
+            elif status_state in ['in']:
+                game_status = 'In Progress'
+            else:
+                game_status = 'Scheduled'
+            
+            # Extract REAL moneyline odds from API
+            home_moneyline = None
+            away_moneyline = None
+            has_real_odds = False
+            
+            odds_list = competition.get('odds', [])
+            if odds_list:
+                # Use first odds provider (usually ESPN BET)
+                odds_data = odds_list[0]
+                
+                # Extract moneyline from correct structure: odds[0].moneyline.home/away.close.odds
+                moneyline_data = odds_data.get('moneyline', {})
+                if moneyline_data:
+                    # Get home moneyline
+                    home_ml_data = moneyline_data.get('home', {}).get('close', {})
+                    if home_ml_data:
+                        home_odds_val = home_ml_data.get('odds')
+                        # Check if it's a valid number (not "OFF")
+                        if home_odds_val and home_odds_val != 'OFF':
+                            try:
+                                home_moneyline = int(home_odds_val)
+                                has_real_odds = True
+                            except (ValueError, TypeError):
+                                pass
+                    
+                    # Get away moneyline
+                    away_ml_data = moneyline_data.get('away', {}).get('close', {})
+                    if away_ml_data:
+                        away_odds_val = away_ml_data.get('odds')
+                        # Check if it's a valid number (not "OFF")
+                        if away_odds_val and away_odds_val != 'OFF':
+                            try:
+                                away_moneyline = int(away_odds_val)
+                                has_real_odds = True
+                            except (ValueError, TypeError):
+                                pass
+            
+            # Format date
+            formatted_date = f"{date_str[:4]}-{date_str[4:6]}-{date_str[6:8]}"
+            
+            # Build game URL
+            game_url = f"https://www.espn.com/mens-college-basketball/game/_/gameId/{game_id}"
+            
+            record = {
+                'game_id': game_id,
+                'date': formatted_date,
+                'game_day': formatted_date,
+                'season': '2025-26',
+                'away_team': away_team,
+                'home_team': home_team,
+                'away_team_id': away_team_id,
+                'home_team_id': home_team_id,
+                'away_score': away_score,
+                'home_score': home_score,
+                'away_rank': away_rank,
+                'home_rank': home_rank,
+                'game_status': game_status,
+                'game_url': game_url,
+                'is_neutral': 0,
+                'home_record': '',
+                'away_record': '',
+                'home_point_spread': '',
+                'home_moneyline': home_moneyline,
+                'away_moneyline': away_moneyline,
+                'has_real_odds': has_real_odds  # Flag to indicate real vs synthetic odds
+            }
+            
+            # Fallback for missing team IDs
+            if not home_team_id:
+                record['home_team_id'] = f"namehash_{abs(hash(home_team)) % 10**6}"
+            if not away_team_id:
+                record['away_team_id'] = f"namehash_{abs(hash(away_team)) % 10**6}"
+            
+            return record
+            
+        except Exception as e:
+            print(f"  Error parsing API event: {e}")
+            return None
     
     def _parse_event_json(self, event, date_str):
         """Parse a single event from ESPN's __espnfitt__ data structure."""
