@@ -7,7 +7,7 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **80.4% Accuracy** across 409 predictions  
+🎯 **80.1% Accuracy** across 372 predictions  
 📈 **30,006 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **28 Live Predictions** for today  
@@ -45,8 +45,8 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 80.4% (409 games)
-- **High Confidence**: 83.6% avg
+- **Overall**: 80.1% (372 games)
+- **High Confidence**: 83.7% avg
 - **Current Season**: 91.9% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
 
@@ -57,7 +57,7 @@
 - **Total Games**: 30,006
 - **Current Season**: 1001 games
 - **Unique Teams**: 1,848
-- **Feature Store**: 11,877 rows
+- **Feature Store**: 11,230 rows
 
 </td>
 <td width="33%">
@@ -65,7 +65,7 @@
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
 - **Lineage**: `7dd58a0bb0e2` @ `e152050`
-- **Last Update**: 2025-11-19 12:10 UTC
+- **Last Update**: 2025-11-19 18:13 UTC
 - **Calibration**: Brier 0.2368
 
 </td>
@@ -79,13 +79,13 @@
 
 | Date | Predictions | Completed | Accuracy | Avg Confidence | Notes |
 |------|-------------|-----------|----------|----------------|-------|
+| Nov 12 | 47 | 47 | 72.3% | 83.3% | 📉 |
 | Nov 13 | 25 | 25 | 88.0% | 83.6% | ✅ |
 | Nov 14 | 9 | 9 | 100.0% | 83.5% | 🎯 Excellent |
 | Nov 15 | 34 | 34 | 73.5% | 80.7% | 📉 |
 | Nov 16 | 49 | 49 | 67.3% | 83.0% | 📉 |
 | Nov 17 | 22 | 22 | 77.3% | 82.4% | 📊 |
 | Nov 18 | 17 | 17 | 82.4% | 82.1% | 📊 |
-| Nov 19 | 37 | 37 | 83.8% | 81.2% | 📊 |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -326,7 +326,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 80.4% (on 409 predictions)
+- **Overall Accuracy**: 80.1% (on 372 predictions)
 - **Current Season (2025-26) Tuning**: 91.9%
 - **Training Data**: 30,006 games (current season: 1,001)
 - **Calibration (Brier)**: Weighted=0.2368, Unweighted=0.2278 (Δ W-U: +0.0090)
@@ -337,7 +337,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 - Config Version: `7dd58a0bb0e2`
 - Commit Hash: `e152050`
-*Refreshed: 2025-11-19 12:10 UTC*
+*Refreshed: 2025-11-19 18:13 UTC*
 
 ## 🚀 Automation
 
