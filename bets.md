@@ -1,6 +1,6 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-19 22:45:15
+**Last Updated**: 2025-11-19 22:52:49
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) for games that have a moneyline on ESPN.
 
@@ -8,12 +8,22 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 ## 📊 Season Summary
 
-- **Total Bets**: 336
-- **Total Wagered**: $336.00
-- **Total Payout**: $321.02
-- **Net Profit/Loss**: -$14.98 🔴
-- **Win Rate**: 78.6% (264W-72L)
-- **ROI**: -4.5%
+- **Total Bets**: 16
+- **Total Wagered**: $16.00
+- **Total Payout**: $18.34
+- **Net Profit/Loss**: $2.34 🟢
+- **Win Rate**: 100.0% (16W-0L)
+- **ROI**: 14.6%
+
+---
+
+## 🎯 Today's Best Bet
+
+**Michigan** vs **Middle Tennessee**
+
+- **Confidence**: 85.8%
+- **Moneyline**: -603
+- **Potential Profit**: $0.17
 
 ---
 
@@ -23,41 +33,36 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
-| <60% | 6 | 66.7% | $1.37 | 22.8% |
-| 70-80% | 44 | 77.3% | $-0.10 | -0.2% |
-| 80-90% | 286 | 79.0% | $-16.24 | -5.7% |
+| 80-90% | 16 | 100.0% | $2.34 | 14.6% |
 
 
 ## 📋 Recent Bets (Last 20)
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Profit |
 |------|--------|---------|--------|----|-----------:|-------:|
-| 2025-11-18 | ✅ | Saint Peter's @ Delaware | Delaware | -385 | 79.4% | $0.26 |
-| 2025-11-18 | ✅ | Princeton @ Iona | Iona | -484 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | Southeast Missouri State @ Iowa | Iowa | -490 | 83.1% | $0.20 |
-| 2025-11-18 | ✅ | Stephen F. Austin @ Fresno State | Fresno State | -486 | 83.0% | $0.21 |
-| 2025-11-18 | ✅ | Stephen F. Austin @ Fresno State | Fresno State | -486 | 83.0% | $0.21 |
-| 2025-11-18 | ✅ | Old Dominion @ Xavier | Xavier | -484 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | Old Dominion @ Xavier | Xavier | -484 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | Southern @ Washington | Washington | -497 | 83.3% | $0.20 |
-| 2025-11-18 | ✅ | Southern @ Washington | Washington | -497 | 83.3% | $0.20 |
 | 2025-11-18 | ✅ | Sacramento State @ UCLA | UCLA | -600 | 85.7% | $0.17 |
-| 2025-11-18 | ✅ | Sacramento State @ UCLA | UCLA | -600 | 85.7% | $0.17 |
-| 2025-11-18 | ✅ | Northern Illinois @ Northern Iowa | Northern Iowa | -491 | 83.1% | $0.20 |
-| 2025-11-18 | ✅ | UC Riverside @ California Baptist | California Baptist | -322 | 76.3% | $0.31 |
-| 2025-11-18 | ✅ | UC Riverside @ California Baptist | California Baptist | -322 | 76.3% | $0.31 |
-| 2025-11-18 | ✅ | New Orleans @ Pepperdine | Pepperdine | -485 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | New Orleans @ Pepperdine | Pepperdine | -485 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | Abilene Christian @ Texas State | Texas State | -110 | 52.6% | $0.91 |
-| 2025-11-18 | ✅ | Southeast Missouri State @ Iowa | Iowa | -490 | 83.1% | $0.20 |
-| 2025-11-18 | ✅ | Princeton @ Iona | Iona | -484 | 82.9% | $0.21 |
-| 2025-11-18 | ✅ | Little Rock @ Murray State | Murray State | -512 | 83.7% | $0.20 |
+| 2025-11-17 | ✅ | Rhodes Lynx @ UAB Blazers | UAB Blazers | -681 | 87.2% | $0.15 |
+| 2025-11-16 | ✅ | Miami (FL) @ Florida | Florida | -618 | 86.1% | $0.16 |
+| 2025-11-15 | ✅ | Central Penn Knights @ American University Eagles | American University Eagles | -698 | 87.5% | $0.14 |
+| 2025-11-14 | ✅ | North Carolina Central @ North Carolina | North Carolina | -624 | 86.2% | $0.16 |
+| 2025-11-13 | ✅ | San Jose State @ Michigan State | Michigan State | -630 | 86.3% | $0.16 |
+| 2025-11-12 | ✅ | St. Scholastica Saints @ North Dakota State Bison | North Dakota State Bison | -705 | 87.6% | $0.14 |
+| 2025-11-11 | ✅ | Pensacola Christian College PENSACOLA CHRISTIAN @ Troy Trojans | Troy Trojans | -771 | 88.5% | $0.13 |
+| 2025-11-10 | ✅ | Penn State-Shenango Nittany Lions @ Youngstown State Penguins | Youngstown State Penguins | -727 | 87.9% | $0.14 |
+| 2025-11-09 | ✅ | Dominican (IL) Dominican @ Purdue Fort Wayne Mastodons | Purdue Fort Wayne Mastodons | -640 | 86.5% | $0.16 |
+| 2025-11-08 | ✅ | Averett Cougars @ High Point Panthers | High Point Panthers | -665 | 86.9% | $0.15 |
+| 2025-11-07 | ✅ | Virginia-Lynchburg Dragons @ Coastal Carolina Chanticleers | Coastal Carolina Chanticleers | -734 | 88.0% | $0.14 |
+| 2025-11-06 | ✅ | Trinity (FL) Tigers @ Jacksonville Dolphins | Jacksonville Dolphins | -687 | 87.3% | $0.15 |
+| 2025-11-05 | ✅ | Maryland Eastern Shore Hawks @ Georgia Bulldogs | Georgia Bulldogs | -692 | 87.4% | $0.14 |
+| 2025-11-04 | ✅ | St. Joseph's (NY) Bears @ Manhattan Jaspers | Manhattan Jaspers | -673 | 87.1% | $0.15 |
+| 2025-11-03 | ✅ | Lincoln University (CA) Oaklanders @ Loyola Marymount Lions | Loyola Marymount Lions | -866 | 89.7% | $0.12 |
 
 ---
 
 ## 📝 Notes
 
-- Each bet is $1.00 on the team with the highest predicted win probability
+- **One bet per day** on the single game with the highest predicted win probability
+- Each bet is $1.00 on the team with the highest win probability
 - Only games with moneylines on ESPN are included
 - Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)
 - ROI = (Total Profit / Total Wagered) × 100

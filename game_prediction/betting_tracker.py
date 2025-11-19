@@ -193,6 +193,12 @@ def generate_betting_report():
         return pd.DataFrame()
     
     bets_df = pd.DataFrame(bet_results)
+    
+    # Filter to only ONE bet per day - the game with the highest confidence
+    # Group by date and select the bet with highest confidence for each day
+    bets_df = bets_df.sort_values('confidence', ascending=False)
+    bets_df = bets_df.groupby('date').first().reset_index()
+    
     return bets_df
 
 
@@ -242,9 +248,58 @@ def generate_bets_markdown():
         "",
         "---",
         "",
+    ]
+    
+    # Add today's best bet section
+    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+    today_pred_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
+    
+    if os.path.exists(today_pred_path):
+        try:
+            today_preds = pd.read_csv(today_pred_path)
+            
+            # Find the game with highest confidence that has a moneyline
+            if 'home_moneyline' in today_preds.columns and 'away_moneyline' in today_preds.columns:
+                # Filter to games with moneylines
+                with_ml = today_preds[
+                    today_preds['home_moneyline'].notna() | today_preds['away_moneyline'].notna()
+                ]
+                
+                if len(with_ml) > 0:
+                    # Get the game with highest confidence
+                    best_bet = with_ml.sort_values('confidence', ascending=False).iloc[0]
+                    
+                    # Determine which team we're betting on and their moneyline
+                    if best_bet['predicted_home_win'] == 1:
+                        bet_team = best_bet['home_team']
+                        opponent = best_bet['away_team']
+                        moneyline = best_bet['home_moneyline']
+                        location = 'vs'
+                    else:
+                        bet_team = best_bet['away_team']
+                        opponent = best_bet['home_team']
+                        moneyline = best_bet['away_moneyline']
+                        location = '@'
+                    
+                    md_lines.extend([
+                        "## 🎯 Today's Best Bet",
+                        "",
+                        f"**{bet_team}** {location} **{opponent}**",
+                        "",
+                        f"- **Confidence**: {best_bet['confidence']:.1%}",
+                        f"- **Moneyline**: {int(moneyline):+d}",
+                        f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
+                        "",
+                        "---",
+                        "",
+                    ])
+        except Exception as e:
+            print(f"⚠️ Could not add today's best bet: {e}")
+    
+    md_lines.extend([
         "## 📈 Betting Performance",
         "",
-    ]
+    ])
     
     # Add performance by confidence level
     if 'confidence' in bets_df.columns:
@@ -306,7 +361,8 @@ def generate_bets_markdown():
         "",
         "## 📝 Notes",
         "",
-        "- Each bet is $1.00 on the team with the highest predicted win probability",
+        "- **One bet per day** on the single game with the highest predicted win probability",
+        "- Each bet is $1.00 on the team with the highest win probability",
         "- Only games with moneylines on ESPN are included",
         "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
         "- ROI = (Total Profit / Total Wagered) × 100",
