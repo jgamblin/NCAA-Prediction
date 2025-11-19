@@ -146,9 +146,18 @@ def main() -> None:
         total_correct = int(accuracy_df["correct_predictions"].sum())
         overall_accuracy = total_correct / total_games if total_games else 0.0
         latest_row = accuracy_df.tail(1).iloc[0]
+        
+        # Calculate 7-day rolling accuracy if available
+        rolling_7day_acc = latest_row.get('rolling_accuracy', None)
+        if pd.notna(rolling_7day_acc):
+            rolling_7day_str = f"{rolling_7day_acc:.2%}"
+        else:
+            rolling_7day_str = "N/A"
+        
         lines.append("## Overview")
         lines.append("")
         lines.append(f"- **Overall Accuracy**: {overall_accuracy:.2%} ({total_correct}/{total_games})")
+        lines.append(f"- **7-Day Rolling Accuracy**: {rolling_7day_str}")
         lines.append(f"- **Most Recent Day**: {latest_row['date'].strftime('%Y-%m-%d')} — accuracy {latest_row['accuracy']:.2%} on {int(latest_row['games_completed'])} games")
         lines.append(f"- **Average Confidence (latest day)**: {latest_row.get('avg_confidence', float('nan')):.2%}")
         lines.append("")
@@ -187,6 +196,35 @@ def main() -> None:
     lines.append("## Drift Snapshot")
     lines.append("")
     lines.append(_drift_snapshot(drift_df))
+    lines.append("")
+    
+    # Add performance trends section if we have enough data
+    if not accuracy_df.empty and len(accuracy_df) >= 7:
+        lines.append("## Performance Trends")
+        lines.append("")
+        # Calculate recent vs older performance
+        recent_7 = accuracy_df.tail(7)
+        recent_total = int(recent_7["games_completed"].sum())
+        recent_correct = int(recent_7["correct_predictions"].sum())
+        recent_accuracy = recent_correct / recent_total if recent_total > 0 else 0.0
+        
+        lines.append(f"- **Last 7 Days**: {recent_accuracy:.2%} ({recent_correct}/{recent_total} games)")
+        
+        # Compare to overall
+        if recent_accuracy > overall_accuracy:
+            diff = recent_accuracy - overall_accuracy
+            lines.append(f"- **Trend**: ⬆️ Recent performance is {diff:.2%} above overall average")
+        elif recent_accuracy < overall_accuracy:
+            diff = overall_accuracy - recent_accuracy
+            lines.append(f"- **Trend**: ⬇️ Recent performance is {diff:.2%} below overall average")
+        else:
+            lines.append(f"- **Trend**: ➡️ Recent performance matches overall average")
+        lines.append("")
+    
+    # Add link back to main README
+    lines.append("---")
+    lines.append("")
+    lines.append("📈 [Back to Main README](README.md) | 🎯 [View Latest Predictions](predictions.md)")
     lines.append("")
 
     REPORT_PATH.write_text("\n".join(lines), encoding="utf-8")
