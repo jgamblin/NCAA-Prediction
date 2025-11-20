@@ -1,6 +1,6 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-20 13:34:47
+**Last Updated**: 2025-11-20 14:27:36
 
 **Tracking Started**: 2025-11-10
 
@@ -23,11 +23,11 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 ## 🎯 Today's Best Bet
 
-**Tennessee** vs **Tennessee State**
+**Purdue** vs **Memphis**
 
-- **Confidence**: 77.6%
-- **Moneyline**: -100000
-- **Potential Profit**: $0.00
+- **Confidence**: 85.3%
+- **Moneyline**: -3000
+- **Potential Profit**: $0.03
 
 ✅ *Real ESPN odds - betting line is live!*
 
