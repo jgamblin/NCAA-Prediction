@@ -566,6 +566,12 @@ class AdaptivePredictor:
             'game_url': upcoming_valid['game_url']
         })
 
+        # Preserve moneyline columns if they exist in the input data
+        moneyline_cols = ['home_moneyline', 'away_moneyline', 'has_real_odds']
+        for col in moneyline_cols:
+            if col in upcoming_valid.columns:
+                results_df[col] = upcoming_valid[col].values
+
         results_df['predicted_winner'] = results_df.apply(
             lambda row: row['home_team'] if row['predicted_home_win'] == 1 else row['away_team'],
             axis=1
