@@ -1,35 +1,60 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-20 01:37:13
+**Last Updated**: 2025-11-20 13:34:47
 
-**Tracking Started**: 2025-11-20
+**Tracking Started**: 2025-11-10
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.
 
-> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. Starting fresh with today's game!
+> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. We track going forward from today with real odds.
 
 ---
 
 ## 📊 Season Summary
 
-**No bets placed yet** - Track starts with today's game!
-
-Check back tomorrow to see results.
+- **Total Bets**: 9
+- **Total Wagered**: $9.00
+- **Total Payout**: $10.50
+- **Net Profit/Loss**: $1.50 🟢
+- **Win Rate**: 100.0% (9W-0L)
+- **ROI**: 16.7%
 
 ---
 
 ## 🎯 Today's Best Bet
 
-**Waiting for real ESPN odds data**
+**Tennessee** vs **Tennessee State**
 
-The predictions file needs to be regenerated with the updated scraper.
+- **Confidence**: 77.6%
+- **Moneyline**: -100000
+- **Potential Profit**: $0.00
 
-**To fix this:**
-```bash
-python3 daily_pipeline.py
-```
+✅ *Real ESPN odds - betting line is live!*
 
-This will fetch today's games with real moneylines from ESPN's API.
+---
+
+## 📈 Betting Performance
+
+### Performance by Confidence Level
+
+| Confidence | Bets | Win Rate | Net Profit | ROI |
+|------------|------|----------|------------|-----|
+| 80-90% | 9 | 100.0% | $1.50 | 16.7% |
+
+
+## 📋 Recent Bets (Last 20)
+
+| Date | Result | Matchup | Bet On | ML | Confidence | Profit |
+|------|--------|---------|--------|----|-----------:|-------:|
+| 2025-11-18 | ✅ | Little Rock @ Murray State | Murray State | -512 | 83.7% | $0.20 |
+| 2025-11-17 | ✅ | Southern Illinois @ North Dakota State | North Dakota State | -523 | 84.0% | $0.19 |
+| 2025-11-16 | ✅ | Miami (FL) @ Florida | Florida | -618 | 86.1% | $0.16 |
+| 2025-11-15 | ✅ | Ohio @ Louisville | Louisville | -638 | 86.5% | $0.16 |
+| 2025-11-14 | ✅ | North Carolina Central @ North Carolina | North Carolina | -624 | 86.2% | $0.16 |
+| 2025-11-13 | ✅ | San Jose State @ Michigan State | Michigan State | -630 | 86.3% | $0.16 |
+| 2025-11-12 | ✅ | Oakland @ Houston | Houston | -602 | 85.8% | $0.17 |
+| 2025-11-11 | ✅ | Radford @ North Carolina | North Carolina | -647 | 86.6% | $0.15 |
+| 2025-11-10 | ✅ | Mississippi State @ Iowa State | Iowa State | -642 | 86.5% | $0.16 |
 
 ---
 
@@ -45,7 +70,7 @@ This will fetch today's games with real moneylines from ESPN's API.
 ### Important Disclaimers
 - **Real moneylines from ESPN API** extracted from official scoreboard endpoint
 - Games showing "OFF" for moneyline are excluded (no betting available)
-- **Tracking started fresh** - no historical synthetic data
+- **Tracking started fresh** with today's game - no historical synthetic data
 - **Not all games have betting lines** - especially games involving small schools or lower-tier matchups
 - This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy
 
