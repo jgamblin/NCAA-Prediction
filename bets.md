@@ -1,6 +1,6 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-20 01:57:34
+**Last Updated**: 2025-11-20 13:31:57
 
 **Tracking Started**: 2025-11-10
 
@@ -14,20 +14,20 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 - **Total Bets**: 9
 - **Total Wagered**: $9.00
-- **Total Payout**: $10.45
-- **Net Profit/Loss**: $1.45 🟢
+- **Total Payout**: $10.50
+- **Net Profit/Loss**: $1.50 🟢
 - **Win Rate**: 100.0% (9W-0L)
-- **ROI**: 16.1%
+- **ROI**: 16.7%
 
 ---
 
 ## 🎯 Today's Best Bet
 
-**Purdue** vs **Memphis**
+**Tennessee** vs **Tennessee State**
 
-- **Confidence**: 77.4%
-- **Moneyline**: -2000
-- **Potential Profit**: $0.05
+- **Confidence**: 77.6%
+- **Moneyline**: -100000
+- **Potential Profit**: $0.00
 
 ✅ *Real ESPN odds - betting line is live!*
 
@@ -39,15 +39,15 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
-| 80-90% | 9 | 100.0% | $1.45 | 16.1% |
+| 80-90% | 9 | 100.0% | $1.50 | 16.7% |
 
 
 ## 📋 Recent Bets (Last 20)
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Profit |
 |------|--------|---------|--------|----|-----------:|-------:|
-| 2025-11-18 | ✅ | Sacramento State @ UCLA | UCLA | -600 | 85.7% | $0.17 |
-| 2025-11-17 | ✅ | Rice @ Tennessee | Tennessee | -590 | 85.5% | $0.17 |
+| 2025-11-18 | ✅ | Little Rock @ Murray State | Murray State | -512 | 83.7% | $0.20 |
+| 2025-11-17 | ✅ | Southern Illinois @ North Dakota State | North Dakota State | -523 | 84.0% | $0.19 |
 | 2025-11-16 | ✅ | Miami (FL) @ Florida | Florida | -618 | 86.1% | $0.16 |
 | 2025-11-15 | ✅ | Ohio @ Louisville | Louisville | -638 | 86.5% | $0.16 |
 | 2025-11-14 | ✅ | North Carolina Central @ North Carolina | North Carolina | -624 | 86.2% | $0.16 |
