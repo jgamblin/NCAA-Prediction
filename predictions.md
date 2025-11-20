@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-20 06:11:01 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `ed43482`
+**Last Updated**: 2025-11-20 07:39:58 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `45bea4f`
 
 ---
 
@@ -33,19 +33,19 @@
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
 | 1 | **St. John's** | Bucknell | 86.0% |
-| 2 | **Houston** | Rider | 85.6% |
-| 3 | **Purdue** | Memphis | 85.6% |
-| 4 | **Texas Tech** | Wake Forest | 85.4% |
-| 5 | **Tennessee** | Tennessee State | 83.5% |
+| 2 | **Houston** | Rider | 85.3% |
+| 3 | **Purdue** | Memphis | 85.3% |
+| 4 | **Texas Tech** | Wake Forest | 85.2% |
+| 5 | **Tennessee** | Tennessee State | 84.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tennessee State @ Tennessee | 83.5% |  |
-| 2 | Wake Forest @ Texas Tech | 85.4% |  |
-| 3 | Memphis @ Purdue | 85.6% |  |
-| 4 | Rider @ Houston | 85.6% |  |
+| 1 | Tennessee State @ Tennessee | 84.3% |  |
+| 2 | Wake Forest @ Texas Tech | 85.2% |  |
+| 3 | Memphis @ Purdue | 85.3% |  |
+| 4 | Rider @ Houston | 85.3% |  |
 | 5 | Bucknell @ St. John's | 86.0% |  |
 
 ### 📈 Distribution Summary
@@ -53,7 +53,7 @@
 - Home Teams Favored: 5
 - Away Teams Favored: 0
 - Max Confidence: 86.0%
-- Min Confidence: 83.5%
+- Min Confidence: 84.3%
 
 ### 📋 Full Data
 
