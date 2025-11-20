@@ -28,6 +28,7 @@
 |----------|------|-------------|
 | Full Predictions CSV | [`data/NCAA_Game_Predictions.csv`](data/NCAA_Game_Predictions.csv) | Raw probabilities & confidence |
 | Markdown Summary | [`predictions.md`](predictions.md) | Human readable card view |
+| Betting Tracker | [`bets.md`](bets.md) | Hypothetical $1 bets on highest probability teams with moneylines |
 | Accuracy History | [`data/Accuracy_Report.csv`](data/Accuracy_Report.csv) | Daily rollup of prediction performance |
 | Performance Dashboard | [`performance.md`](performance.md) | Visual summary with charts (auto-generated) |
 | Drift Metrics | [`data/Drift_Metrics.csv`](data/Drift_Metrics.csv) | Global cumulative & rolling metrics |
@@ -301,6 +302,16 @@ NCAA-Prediction/
 ## 🔧 Configuration
 
 ### Advanced Features
+
+**Betting Tracker** - Track hypothetical $1 bets on predicted winners:
+```bash
+python3 game_prediction/betting_tracker.py
+```
+- Automatically generates [`bets.md`](bets.md) with betting performance
+- Tracks $1 bets on team with highest win probability (when moneyline available)
+- Shows season summary, win rate, ROI, and profit/loss
+- Performance breakdown by confidence level
+- Runs automatically as part of daily pipeline
 
 **Betting Line Analysis** - Compare model vs Vegas:
 ```bash
