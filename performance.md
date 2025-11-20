@@ -1,13 +1,13 @@
 # 📊 Model Performance Dashboard
 
-_Generated: 2025-11-19 19:43 CST_
+_Generated: 2025-11-20 06:11 CST_
 
 ## Overview
 
 - **Overall Accuracy**: 80.16% (299/373)
 - **7-Day Rolling Accuracy**: 77.07%
 - **Most Recent Day**: 2025-11-18 — accuracy 100.00% on 1 games
-- **Average Confidence (latest day)**: 85.78%
+- **Average Confidence (latest day)**: 85.83%
 
 ## Daily Accuracy
 
@@ -30,7 +30,7 @@ _Generated: 2025-11-19 19:43 CST_
 | 2025-11-15 | 49 | 33 | 67.35% | 82.98% |
 | 2025-11-16 | 22 | 17 | 77.27% | 82.38% |
 | 2025-11-17 | 17 | 14 | 82.35% | 82.09% |
-| 2025-11-18 | 1 | 1 | 100.00% | 85.78% |
+| 2025-11-18 | 1 | 1 | 100.00% | 85.83% |
 
 ## Drift Snapshot
 

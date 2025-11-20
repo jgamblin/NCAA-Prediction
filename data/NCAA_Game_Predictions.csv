@@ -1,7 +1,6 @@
 game_id,date,away_team,home_team,predicted_home_win,home_win_probability,away_win_probability,game_url,predicted_winner,confidence,home_team_id,away_team_id,normalized_input,config_version,commit_hash
-401812629,2025-11-20,Rider,Houston,1,0.8593256267358337,0.14067437326416632,https://www.espn.com/mens-college-basketball/game/_/gameId/401812629,Houston,0.8593256267358337,248,2520,True,7dd58a0bb0e2,89bb809
-401809078,2025-11-20,Bucknell,St. John's,1,0.8586940248691429,0.14130597513085708,https://www.espn.com/mens-college-basketball/game/_/gameId/401809078,St. John's,0.8586940248691429,2599,2083,True,7dd58a0bb0e2,89bb809
-401823477,2025-11-19,Jackson State,Auburn,1,0.8583178204915664,0.14168217950843365,https://www.espn.com/mens-college-basketball/game/_/gameId/401823477,Auburn,0.8583178204915664,2,2296,True,7dd58a0bb0e2,89bb809
-401823636,2025-11-20,Memphis,Purdue,1,0.8577449369828228,0.14225506301717716,https://www.espn.com/mens-college-basketball/game/_/gameId/401823636,Purdue,0.8577449369828228,2509,235,True,7dd58a0bb0e2,89bb809
-401817531,2025-11-20,Wake Forest,Texas Tech,1,0.8536783896929614,0.1463216103070386,https://www.espn.com/mens-college-basketball/game/_/gameId/401817531,Texas Tech,0.8536783896929614,2641,154,True,7dd58a0bb0e2,89bb809
-401829386,2025-11-20,Tennessee State,Tennessee,1,0.8472891129046325,0.1527108870953675,https://www.espn.com/mens-college-basketball/game/_/gameId/401829386,Tennessee,0.8472891129046325,2633,2634,True,7dd58a0bb0e2,89bb809
+401809078,2025-11-20,Bucknell,St. John's,1,0.8603828788665764,0.13961712113342362,https://www.espn.com/mens-college-basketball/game/_/gameId/401809078,St. John's,0.8603828788665764,2599,2083,True,7dd58a0bb0e2,ed43482
+401812629,2025-11-20,Rider,Houston,1,0.856005405531147,0.143994594468853,https://www.espn.com/mens-college-basketball/game/_/gameId/401812629,Houston,0.856005405531147,248,2520,True,7dd58a0bb0e2,ed43482
+401823636,2025-11-20,Memphis,Purdue,1,0.8556203779303767,0.1443796220696233,https://www.espn.com/mens-college-basketball/game/_/gameId/401823636,Purdue,0.8556203779303767,2509,235,True,7dd58a0bb0e2,ed43482
+401817531,2025-11-20,Wake Forest,Texas Tech,1,0.8542123938328241,0.1457876061671759,https://www.espn.com/mens-college-basketball/game/_/gameId/401817531,Texas Tech,0.8542123938328241,2641,154,True,7dd58a0bb0e2,ed43482
+401829386,2025-11-20,Tennessee State,Tennessee,1,0.8346781672249824,0.16532183277501755,https://www.espn.com/mens-college-basketball/game/_/gameId/401829386,Tennessee,0.8346781672249824,2633,2634,True,7dd58a0bb0e2,ed43482
