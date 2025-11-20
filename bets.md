@@ -1,8 +1,8 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-19 23:30:57
+**Last Updated**: 2025-11-20 01:37:13
 
-**Tracking Started**: 2025-11-19
+**Tracking Started**: 2025-11-20
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.
 
@@ -22,7 +22,14 @@ Check back tomorrow to see results.
 
 **Waiting for real ESPN odds data**
 
-Run the daily pipeline to fetch games with real moneylines.
+The predictions file needs to be regenerated with the updated scraper.
+
+**To fix this:**
+```bash
+python3 daily_pipeline.py
+```
+
+This will fetch today's games with real moneylines from ESPN's API.
 
 ---
 
