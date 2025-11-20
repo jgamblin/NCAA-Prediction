@@ -113,19 +113,15 @@ def _drift_snapshot(df: pd.DataFrame) -> str:
 
 
 def main() -> None:
-    # Load and localize to US Central time
+    # Load accuracy data (dates are already in local time, no conversion needed)
     accuracy_df = _load_csv(ACCURACY_CSV, parse_dates=["date"])
     try:
         tz = ZoneInfo('America/Chicago')
     except Exception:
         import pytz
         tz = pytz.timezone('America/Chicago')
-    if not accuracy_df.empty:
-        # Localize all dates to US Central (if not already tz-aware)
-        if accuracy_df['date'].dt.tz is None:
-            accuracy_df['date'] = accuracy_df['date'].dt.tz_localize('UTC').dt.tz_convert(tz)
-        else:
-            accuracy_df['date'] = accuracy_df['date'].dt.tz_convert(tz)
+    # Note: dates in CSV are already in local time (game dates), so we don't convert them
+    # to avoid shifting dates due to timezone conversion
     accuracy_df = _derive_accuracy_features(accuracy_df)
     drift_df = _load_csv(DRIFT_CSV)
 
@@ -178,10 +174,10 @@ def main() -> None:
         lines.append("| Date | Games | Correct | Accuracy | Avg Confidence |")
         lines.append("|------|-------|---------|----------|----------------|")
         for row in accuracy_df.tail(10).itertuples(index=False):
-            # Always print date in US Central
+            # Format date (already in local time, no conversion needed)
             date_val = getattr(row, 'date', None)
             if isinstance(date_val, pd.Timestamp):
-                date_str = date_val.tz_convert(tz).strftime('%Y-%m-%d')
+                date_str = date_val.strftime('%Y-%m-%d')
             else:
                 date_str = str(date_val)
             games_completed = int(float(getattr(row, 'games_completed', 0) or 0))
