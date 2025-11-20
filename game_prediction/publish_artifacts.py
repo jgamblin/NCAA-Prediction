@@ -85,6 +85,9 @@ def compute_top_pick_streaks(details_path: str) -> Dict[str, Any]:
             'top5_last_miss': None,
             'recent_days': []
         }
+    # Deduplicate by date and game_id to ensure accurate counts
+    if 'game_id' in df.columns:
+        df = df.drop_duplicates(subset=['date', 'game_id'], keep='first')
     df['confidence'] = df['confidence'].astype(float)
     # Group by date
     daily = []

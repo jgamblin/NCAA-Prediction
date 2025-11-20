@@ -189,12 +189,18 @@ def track_accuracy():
     detailed_df['config_version'] = _config_version
     detailed_df['commit_hash'] = _commit_hash
     
+    # Deduplicate merged data before saving (keep first occurrence by game_id and date)
+    detailed_df = detailed_df.drop_duplicates(subset=['date', 'game_id'], keep='first')
+    
     # Append to existing details if exists, otherwise create new
     if os.path.exists(detailed_path):
         existing_details = pd.read_csv(detailed_path)
         # Remove duplicates (in case we run this multiple times)
         existing_details = existing_details[~existing_details['game_id'].isin(detailed_df['game_id'])]
         detailed_df = pd.concat([existing_details, detailed_df], ignore_index=True)
+    
+    # Final deduplication to ensure data integrity
+    detailed_df = detailed_df.drop_duplicates(subset=['date', 'game_id'], keep='first')
     
     detailed_df.to_csv(detailed_path, index=False)
     print(f"✓ Saved detailed predictions to {detailed_path}")
