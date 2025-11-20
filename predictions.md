@@ -1,103 +1,74 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-19 16:31:21 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `80aad5f`
+**Last Updated**: 2025-11-19 19:43:56 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `89bb809`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 28
-- **Average Confidence**: 79.3%
-- **High (≥70%)**: 25 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
+- **Games Predicted Today**: 1
+- **Average Confidence**: 85.8%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+
+- **High Confidence Streak**: 1 day(s) (last miss 2025-11-18)
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 14 day(s)
+- **#1 Pick Streak**: 15 day(s)
 - **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-18)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-12 | 25 | ✅ | ✅ |
 | 2025-11-13 | 9 | ✅ | ✅ |
 | 2025-11-14 | 34 | ✅ | ✅ |
 | 2025-11-15 | 49 | ✅ | ✅ |
 | 2025-11-16 | 22 | ✅ | ✅ |
 | 2025-11-17 | 17 | ✅ | ✅ |
 | 2025-11-18 | 37 | ✅ | ❌ |
+| 2025-11-19 | 1 | ✅ | — |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Michigan** | Middle Tennessee | 85.8% |
-| 2 | **Auburn** | Jackson State | 85.7% |
-| 3 | **Virginia Tech** | Bryant | 84.4% |
-| 4 | **Samford** | Florida Gulf Coast | 83.9% |
-| 5 | **Stetson** | Howard | 83.5% |
-| 6 | **Ohio** | Bethune-Cookman | 83.4% |
-| 7 | **Notre Dame** | Bellarmine | 83.1% |
-| 8 | **Saint Mary's** | Arkansas State | 83.1% |
-| 9 | **Bowling Green** | William & Mary | 83.0% |
-| 10 | **Indiana State** | Louisiana Tech | 82.9% |
-| 11 | **Duquesne** | Loyola Maryland | 82.8% |
-| 12 | **South Carolina Upstate** | Tennessee Tech | 82.8% |
-| 13 | **Penn State** | Harvard | 82.7% |
-| 14 | **East Texas A&M** | Dallas Christian | 82.7% |
-| 15 | **La Salle** | Villanova | 82.5% |
-| 16 | **Oklahoma State** | South Florida | 82.2% |
-| 17 | **Belmont** | Lipscomb | 82.0% |
-| 18 | **Jacksonville State** | South Alabama | 81.7% |
-| 19 | **Maryland** | Mount St. Mary's | 80.6% |
-| 20 | **Marquette** | Dayton | 80.3% |
-| 21 | **Western Carolina** | UNC Asheville | 78.0% |
-| 22 | **Utah Valley** | UC Irvine | 76.8% |
-| 23 | **George Washington** | UMBC | 76.7% |
-| 24 | **Richmond** | VMI | 76.5% |
-| 25 | **Air Force** | Alabama State | 70.2% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Sam Houston State** | Wyoming | 68.6% |
+| 1 | **Auburn** | Jackson State | 85.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Youngstown State @ Toledo | 57.2% | Close |
-| 2 | Connecticut vs Arizona | 58.6% | Close |
+| 1 | Jackson State @ Auburn | 85.8% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 27
-- Away Teams Favored: 1
+- Home Teams Favored: 1
+- Away Teams Favored: 0
 - Max Confidence: 85.8%
-- Min Confidence: 57.2%
+- Min Confidence: 85.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (28 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (6 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 80.1% (372 evaluated)
-- **Last 10 Days**: 77.5% (276 games)
+- **Overall Accuracy**: 80.2% (373 evaluated)
+- **Last 10 Days**: 77.2% (241 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-12 | 47 | 34 | 72.3% | 83.3% |
 | 2025-11-13 | 25 | 22 | 88.0% | 83.6% |
 | 2025-11-14 | 9 | 9 | 100.0% | 83.5% |
 | 2025-11-15 | 34 | 25 | 73.5% | 80.7% |
 | 2025-11-16 | 49 | 33 | 67.3% | 83.0% |
 | 2025-11-17 | 22 | 17 | 77.3% | 82.4% |
 | 2025-11-18 | 17 | 14 | 82.4% | 82.1% |
+| 2025-11-19 | 1 | 1 | 100.0% | 85.8% |
 
 ---
 
