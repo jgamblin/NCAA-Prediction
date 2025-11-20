@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-19 19:43:56 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `89bb809`
+**Last Updated**: 2025-11-20 06:11:01 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `ed43482`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 1
-- **Average Confidence**: 85.8%
-- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 5
+- **Average Confidence**: 85.2%
+- **High (≥70%)**: 5 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 - **High Confidence Streak**: 1 day(s) (last miss 2025-11-18)
 
@@ -26,30 +26,38 @@
 | 2025-11-16 | 22 | ✅ | ✅ |
 | 2025-11-17 | 17 | ✅ | ✅ |
 | 2025-11-18 | 37 | ✅ | ❌ |
-| 2025-11-19 | 1 | ✅ | — |
+| 2025-11-19 | 2 | ✅ | — |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Auburn** | Jackson State | 85.8% |
+| 1 | **St. John's** | Bucknell | 86.0% |
+| 2 | **Houston** | Rider | 85.6% |
+| 3 | **Purdue** | Memphis | 85.6% |
+| 4 | **Texas Tech** | Wake Forest | 85.4% |
+| 5 | **Tennessee** | Tennessee State | 83.5% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Jackson State @ Auburn | 85.8% |  |
+| 1 | Tennessee State @ Tennessee | 83.5% |  |
+| 2 | Wake Forest @ Texas Tech | 85.4% |  |
+| 3 | Memphis @ Purdue | 85.6% |  |
+| 4 | Rider @ Houston | 85.6% |  |
+| 5 | Bucknell @ St. John's | 86.0% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 1
+- Home Teams Favored: 5
 - Away Teams Favored: 0
-- Max Confidence: 85.8%
-- Min Confidence: 85.8%
+- Max Confidence: 86.0%
+- Min Confidence: 83.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (6 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (5 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

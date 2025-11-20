@@ -8,9 +8,9 @@
 ## 📊 At a Glance
 
 🎯 **80.2% Accuracy** across 373 predictions  
-📈 **29,949 Historical Games** powering model  
+📈 **29,953 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
-⚡ **1 Live Predictions** for today  
+⚡ **5 Live Predictions** for today  
 🔥 **1 Day Streak** of perfect high-confidence picks
 
 <!-- END AUTO-UPDATED: Hero Stats -->
@@ -18,7 +18,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 6 games for November 19, 2025<br/>
+**Current Predictions**: 5 games for November 20, 2025<br/>
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -55,18 +55,18 @@
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 29,949
-- **Current Season**: 944 games
+- **Total Games**: 29,953
+- **Current Season**: 948 games
 - **Unique Teams**: 1,848
-- **Feature Store**: 11,775 rows
+- **Feature Store**: 11,762 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `89bb809`
-- **Last Update**: 2025-11-20 01:43 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `ed43482`
+- **Last Update**: 2025-11-20 12:11 UTC
 - **Calibration**: Brier 0.2368
 
 </td>
@@ -340,7 +340,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 - **Overall Accuracy**: 80.2% (on 373 predictions)
 - **🎯 High Confidence Streak**: 1 day(s) (last miss: 2025-11-18)
 - **Current Season (2025-26) Tuning**: 91.9%
-- **Training Data**: 29,949 games (current season: 944)
+- **Training Data**: 29,953 games (current season: 948)
 - **Calibration (Brier)**: Weighted=0.2368, Unweighted=0.2278 (Δ W-U: +0.0090)
 - **Calibration (ECE)**: Weighted=0.0595, Unweighted=0.0783 (Δ W-U: -0.0189)
   *Lower is better; weighted model emphasizes current season.*
@@ -348,8 +348,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `89bb809`
-*Refreshed: 2025-11-20 01:43 UTC*
+- Commit Hash: `ed43482`
+*Refreshed: 2025-11-20 12:11 UTC*
 
 ## 🚀 Automation
 
