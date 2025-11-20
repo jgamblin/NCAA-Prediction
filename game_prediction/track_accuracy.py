@@ -28,14 +28,20 @@ def track_accuracy():
     
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     
-    # Load predictions
+    # Load predictions from prediction_log.csv (contains all historical predictions)
+    # Fall back to NCAA_Game_Predictions.csv if prediction_log.csv doesn't exist
+    prediction_log_path = os.path.join(data_dir, 'prediction_log.csv')
     predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
-    if not os.path.exists(predictions_path):
+    
+    if os.path.exists(prediction_log_path):
+        predictions = pd.read_csv(prediction_log_path)
+        print(f"\n✓ Loaded {len(predictions)} predictions from prediction_log.csv")
+    elif os.path.exists(predictions_path):
+        predictions = pd.read_csv(predictions_path)
+        print(f"\n✓ Loaded {len(predictions)} predictions from NCAA_Game_Predictions.csv")
+    else:
         print("\n✗ No predictions file found")
         return
-    
-    predictions = pd.read_csv(predictions_path)
-    print(f"\n✓ Loaded {len(predictions)} predictions")
     
     # Load completed games
     completed_path = os.path.join(data_dir, 'Completed_Games.csv')
