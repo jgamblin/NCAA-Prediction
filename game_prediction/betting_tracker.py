@@ -288,11 +288,8 @@ def generate_betting_report():
         print("✗ No real odds tracking available yet - starting fresh")
         return pd.DataFrame()
     
-    # Filter to only ONE bet per day - the game with the highest confidence
-    # Group by date and select the bet with highest confidence for each day
-    bets_df = bets_df.sort_values('confidence', ascending=False)
-    bets_df = bets_df.groupby('date').first().reset_index()
-    
+    # Don't filter to one bet per day anymore - we'll handle that in the markdown generation
+    # We want to track both strategies: safest bet AND best value bet
     return bets_df
 
 
@@ -352,6 +349,48 @@ def get_todays_bets(today_preds):
         result['value_bet'] = bettable_with_scores.sort_values('value_score', ascending=False).iloc[0]
     
     return result
+
+
+def separate_bet_strategies(bets_df, predictions_log):
+    """
+    Separate bets into two strategies: safest (highest confidence) and best value.
+    For each date, determines which bet would have been selected by each strategy.
+    
+    Args:
+        bets_df: DataFrame with all bets
+        predictions_log: DataFrame with all predictions (to calculate value scores)
+    
+    Returns:
+        tuple: (safest_bets_df, value_bets_df)
+    """
+    if bets_df.empty:
+        return pd.DataFrame(), pd.DataFrame()
+    
+    safest_bets = []
+    value_bets = []
+    
+    # Group by date
+    for date, date_games in bets_df.groupby('date'):
+        # Safest bet: highest confidence
+        safest = date_games.sort_values('confidence', ascending=False).iloc[0]
+        safest_bets.append(safest)
+        
+        # Best value bet: calculate value scores
+        date_games = date_games.copy()
+        date_games['value_score'] = date_games.apply(
+            lambda row: calculate_value_score(row['confidence'], row['moneyline']),
+            axis=1
+        )
+        date_games_with_scores = date_games[date_games['value_score'].notna()].copy()
+        
+        if len(date_games_with_scores) > 0:
+            value = date_games_with_scores.sort_values('value_score', ascending=False).iloc[0]
+            value_bets.append(value)
+    
+    safest_df = pd.DataFrame(safest_bets) if safest_bets else pd.DataFrame()
+    value_df = pd.DataFrame(value_bets) if value_bets else pd.DataFrame()
+    
+    return safest_df, value_df
 
 
 def generate_fresh_start_markdown():
@@ -518,57 +557,187 @@ def generate_bets_markdown():
         generate_fresh_start_markdown()
         return
     
-    # Calculate summary statistics
-    total_bets = len(bets_df)
-    total_wagered = bets_df['bet_amount'].sum()
-    total_payout = bets_df['payout'].sum()
-    total_profit = bets_df['profit'].sum()
-    win_count = bets_df['bet_won'].sum()
-    loss_count = (bets_df['bet_won'] == False).sum()
-    win_rate = (win_count / total_bets * 100) if total_bets > 0 else 0
-    roi = (total_profit / total_wagered * 100) if total_wagered > 0 else 0
+    # Separate bets into two strategies
+    safest_bets_df, value_bets_df = separate_bet_strategies(bets_df, None)
     
-    # Generate markdown
+    # Calculate statistics for each strategy
+    def calc_stats(df):
+        if df.empty:
+            return {
+                'total_bets': 0,
+                'win_count': 0,
+                'loss_count': 0,
+                'win_rate': 0,
+                'total_wagered': 0,
+                'total_payout': 0,
+                'total_profit': 0,
+                'roi': 0
+            }
+        total_bets = len(df)
+        win_count = df['bet_won'].sum()
+        loss_count = (df['bet_won'] == False).sum()
+        win_rate = (win_count / total_bets * 100) if total_bets > 0 else 0
+        total_wagered = df['bet_amount'].sum()
+        total_payout = df['payout'].sum()
+        total_profit = df['profit'].sum()
+        roi = (total_profit / total_wagered * 100) if total_wagered > 0 else 0
+        
+        return {
+            'total_bets': total_bets,
+            'win_count': win_count,
+            'loss_count': loss_count,
+            'win_rate': win_rate,
+            'total_wagered': total_wagered,
+            'total_payout': total_payout,
+            'total_profit': total_profit,
+            'roi': roi
+        }
+    
+    safest_stats = calc_stats(safest_bets_df)
+    value_stats = calc_stats(value_bets_df)
+    
+    # Generate markdown - Simple comparison page
     md_lines = [
-        "# 🎲 NCAA Basketball Betting Tracker",
+        "# 🎲 NCAA Basketball Betting Strategies Comparison",
         "",
         f"**Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         "",
-        f"**Tracking Started**: {bets_df['date'].min() if not bets_df.empty else 'Today'}",
+        "This page compares two independent betting strategies. Each strategy is tracked separately in its own file:",
         "",
-        "This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.",
+        "- 📄 **[Safest Bet Strategy](safest_bets.md)** - Full details and history",
+        "- 📄 **[Best Value Strategy](value_bets.md)** - Full details and history",
         "",
-        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or without real betting lines are automatically excluded. Moneylines worse than -1000 are also excluded as unbettable. We track going forward from today with real odds.",
+        "> **✅ Real Odds Only**: All strategies use only real ESPN moneylines. Synthetic odds are never used.",
         "",
         "---",
         "",
-        "## 📊 Season Summary",
+        "## 🎯 Safest Bet Strategy",
         "",
-        f"- **Total Bets**: {total_bets}",
-        f"- **Total Wagered**: ${total_wagered:.2f}",
-        f"- **Total Payout**: ${total_payout:.2f}",
-        f"- **Net Profit/Loss**: {'$' + f'{total_profit:.2f}' if total_profit >= 0 else '-$' + f'{abs(total_profit):.2f}'} {'🟢' if total_profit > 0 else '🔴' if total_profit < 0 else '⚪'}",
-        f"- **Win Rate**: {win_rate:.1f}% ({win_count}W-{loss_count}L)",
-        f"- **ROI**: {roi:.1f}%",
+        "**Approach**: Bet $1 daily on the game with **highest predicted win probability**",
+        "",
+        f"| Metric | Value |",
+        f"|--------|-------|",
+        f"| Total Bets | {safest_stats['total_bets']} |",
+        f"| Win Rate | {safest_stats['win_rate']:.1f}% ({safest_stats['win_count']}W-{safest_stats['loss_count']}L) |",
+        f"| Net Profit | ${safest_stats['total_profit']:.2f} {'🟢' if safest_stats['total_profit'] > 0 else '🔴'} |",
+        f"| ROI | {safest_stats['roi']:.1f}% |",
+        "",
+        "**[→ View Complete Safest Bet Tracker](safest_bets.md)**",
+        "",
+        "---",
+        "",
+        "## 💎 Best Value Strategy",
+        "",
+        "**Approach**: Bet $1 daily on the game with **best value score** (probability × odds)",
+        "",
+        f"| Metric | Value |",
+        f"|--------|-------|",
+        f"| Total Bets | {value_stats['total_bets']} |",
+        f"| Win Rate | {value_stats['win_rate']:.1f}% ({value_stats['win_count']}W-{value_stats['loss_count']}L) |",
+        f"| Net Profit | ${value_stats['total_profit']:.2f} {'🟢' if value_stats['total_profit'] > 0 else '🔴'} |",
+        f"| ROI | {value_stats['roi']:.1f}% |",
+        "",
+        "**[→ View Complete Value Bet Tracker](value_bets.md)**",
         "",
         "---",
         "",
     ]
     
+    # Add quick strategy comparison
+    md_lines.extend([
+        "## 📊 Quick Comparison",
+        "",
+        "| Metric | 🎯 Safest | 💎 Value | Winner |",
+        "|--------|-----------|----------|--------|",
+        f"| Win Rate | {safest_stats['win_rate']:.1f}% | {value_stats['win_rate']:.1f}% | {'🎯 Safest' if safest_stats['win_rate'] > value_stats['win_rate'] else '💎 Value' if value_stats['win_rate'] > safest_stats['win_rate'] else 'Tie'} |",
+        f"| Total Profit | ${safest_stats['total_profit']:.2f} | ${value_stats['total_profit']:.2f} | {'🎯 Safest' if safest_stats['total_profit'] > value_stats['total_profit'] else '💎 Value' if value_stats['total_profit'] > safest_stats['total_profit'] else 'Tie'} |",
+        f"| ROI | {safest_stats['roi']:.1f}% | {value_stats['roi']:.1f}% | {'🎯 Safest' if safest_stats['roi'] > value_stats['roi'] else '💎 Value' if value_stats['roi'] > safest_stats['roi'] else 'Tie'} |",
+        f"| Total Bets | {safest_stats['total_bets']} | {value_stats['total_bets']} | - |",
+        "",
+        "---",
+        "",
+        "## 📝 Strategy Differences",
+        "",
+        "### 🎯 Safest Bet Strategy",
+        "- Selects game with **highest confidence** each day",
+        "- Typical confidence range: 80-90%+",
+        "- Typical odds: Heavy favorites (-500 to -650)",
+        "- Best for: Risk-averse bettors prioritizing win rate",
+        "",
+        "### 💎 Best Value Strategy",
+        "- Selects game with **best value score** each day",
+        "- Typical confidence range: 50-80%",
+        "- Typical odds: More favorable (-110 to -300)",
+        "- Best for: Profit-focused bettors willing to accept moderate risk",
+        "",
+        "---",
+        "",
+        "*Auto-generated by betting_tracker.py*"
+    ])
+    
     # Add today's best bets section
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     today_pred_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
+
     
+    # Write comparison file
+    output_path = os.path.join(os.path.dirname(__file__), '..', 'bets.md')
+    with open(output_path, 'w') as f:
+        f.write('\n'.join(md_lines))
+    
+    # Generate individual strategy files
+    generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path)
+    generate_value_bets_file(value_bets_df, value_stats, today_pred_path)
+    
+    print(f"✓ Generated bets.md (comparison) at {output_path}")
+    print(f"  Safest Bet Strategy: {safest_stats['total_bets']} bets, ${safest_stats['total_profit']:.2f} profit, {safest_stats['win_rate']:.1f}% win rate")
+    print(f"  Best Value Strategy: {value_stats['total_bets']} bets, ${value_stats['total_profit']:.2f} profit, {value_stats['win_rate']:.1f}% win rate")
+
+
+def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
+    """Generate safest_bets.md file for the Safest Bet Strategy."""
+    md_lines = [
+        "# 🎯 Safest Bet Strategy Tracker",
+        "",
+        f"**Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        f"**Tracking Started**: {safest_bets_df['date'].min() if not safest_bets_df.empty else 'Today'}",
+        "",
+        "## 📋 Strategy Description",
+        "",
+        "**The Safest Bet Strategy** selects ONE game each day with the **highest predicted win probability** from our model.",
+        "",
+        "- **Goal**: Maximize win rate by betting on the most confident predictions",
+        "- **Bet Amount**: $1.00 per game",
+        "- **Selection Criteria**: Highest confidence prediction with real ESPN moneyline",
+        "- **Risk Profile**: Conservative - prioritizes high probability of winning over potential profit",
+        "",
+        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or moneylines worse than -1000 are excluded.",
+        "",
+        "---",
+        "",
+        "## 📊 Season Performance",
+        "",
+        f"- **Total Bets**: {safest_stats['total_bets']}",
+        f"- **Win Rate**: {safest_stats['win_rate']:.1f}% ({safest_stats['win_count']}W-{safest_stats['loss_count']}L)",
+        f"- **Total Wagered**: ${safest_stats['total_wagered']:.2f}",
+        f"- **Total Payout**: ${safest_stats['total_payout']:.2f}",
+        f"- **Net Profit**: ${safest_stats['total_profit']:.2f} {'🟢' if safest_stats['total_profit'] > 0 else '🔴' if safest_stats['total_profit'] < 0 else '⚪'}",
+        f"- **ROI**: {safest_stats['roi']:.1f}%",
+        "",
+        "---",
+        "",
+    ]
+    
+    # Add today's bet
+    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     if os.path.exists(today_pred_path):
         try:
             today_preds = pd.read_csv(today_pred_path)
             todays_bets = get_todays_bets(today_preds)
-            
             safest_bet = todays_bets['safest_bet']
-            value_bet = todays_bets['value_bet']
             
             if safest_bet is not None:
-                # Determine which team we're betting on and their moneyline
                 if safest_bet['predicted_home_win'] == 1:
                     bet_team = safest_bet['home_team']
                     opponent = safest_bet['away_team']
@@ -581,7 +750,7 @@ def generate_bets_markdown():
                     location = '@'
                 
                 md_lines.extend([
-                    "## 🎯 Today's Safest Bet",
+                    "## 🎯 Today's Bet",
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
@@ -589,14 +758,146 @@ def generate_bets_markdown():
                     f"- **Moneyline**: {int(moneyline):+d}",
                     f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "✅ *Real ESPN odds - betting line is live!*",
+                    "✅ *Highest confidence game today with real ESPN odds*",
                     "",
                     "---",
                     "",
                 ])
+            else:
+                md_lines.extend([
+                    "## 🎯 Today's Bet",
+                    "",
+                    "**No bettable games available today**",
+                    "",
+                    "Games may have moneylines set to \"OFF\" or be more extreme than -1000.",
+                    "",
+                    "---",
+                    "",
+                ])
+        except Exception as e:
+            print(f"⚠️ Could not add today's safest bet: {e}")
+    
+    # Performance by confidence level
+    if not safest_bets_df.empty and 'confidence' in safest_bets_df.columns:
+        df = safest_bets_df.copy()
+        df['confidence_bucket'] = pd.cut(
+            df['confidence'], 
+            bins=[0, 0.6, 0.7, 0.8, 0.9, 1.0],
+            labels=['<60%', '60-70%', '70-80%', '80-90%', '90%+']
+        )
+        
+        md_lines.extend([
+            "## 📈 Performance by Confidence Level",
+            "",
+            "| Confidence | Bets | Win Rate | Net Profit | ROI |",
+            "|------------|------|----------|------------|-----|"
+        ])
+        
+        for bucket in ['<60%', '60-70%', '70-80%', '80-90%', '90%+']:
+            bucket_df = df[df['confidence_bucket'] == bucket]
+            if len(bucket_df) > 0:
+                bucket_wins = bucket_df['bet_won'].sum()
+                bucket_total = len(bucket_df)
+                bucket_win_rate = (bucket_wins / bucket_total * 100) if bucket_total > 0 else 0
+                bucket_profit = bucket_df['profit'].sum()
+                bucket_wagered = bucket_df['bet_amount'].sum()
+                bucket_roi = (bucket_profit / bucket_wagered * 100) if bucket_wagered > 0 else 0
+                
+                md_lines.append(
+                    f"| {bucket} | {bucket_total} | {bucket_win_rate:.1f}% | "
+                    f"${bucket_profit:.2f} | {bucket_roi:.1f}% |"
+                )
+        
+        md_lines.extend(["", "---", ""])
+    
+    # Recent bets history
+    if not safest_bets_df.empty:
+        md_lines.extend([
+            "## 📋 Complete Bet History",
+            "",
+            "| Date | Result | Matchup | Bet On | ML | Confidence | Profit |",
+            "|------|--------|---------|--------|----|-----------:|-------:|"
+        ])
+        
+        all_bets = safest_bets_df.sort_values('date', ascending=False)
+        for _, bet in all_bets.iterrows():
+            result_icon = "✅" if bet['bet_won'] else "❌" if bet['bet_won'] == False else "⚪"
+            matchup = f"{bet['away_team']} @ {bet['home_team']}"
+            bet_on = bet['predicted_winner']
+            moneyline = f"{int(bet['moneyline']):+d}" if pd.notna(bet['moneyline']) else "N/A"
+            confidence = f"{bet['confidence']:.1%}"
+            profit = f"${bet['profit']:.2f}" if bet['profit'] >= 0 else f"-${abs(bet['profit']):.2f}"
+            
+            md_lines.append(
+                f"| {bet['date']} | {result_icon} | {matchup} | {bet_on} | {moneyline} | {confidence} | {profit} |"
+            )
+        
+        md_lines.extend(["", ""])
+    
+    md_lines.extend([
+        "---",
+        "",
+        "## 📝 Notes",
+        "",
+        "- **Only games with real ESPN moneylines** are tracked",
+        "- **Moneylines more extreme than -1000 are excluded** as unbettable",
+        "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
+        "- This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy",
+        "",
+        "*Auto-generated by betting_tracker.py*"
+    ])
+    
+    output_path = os.path.join(os.path.dirname(__file__), '..', 'safest_bets.md')
+    with open(output_path, 'w') as f:
+        f.write('\n'.join(md_lines))
+    
+    print(f"✓ Generated safest_bets.md at {output_path}")
+
+
+def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
+    """Generate value_bets.md file for the Best Value Strategy."""
+    md_lines = [
+        "# 💎 Best Value Strategy Tracker",
+        "",
+        f"**Last Updated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+        "",
+        f"**Tracking Started**: {value_bets_df['date'].min() if not value_bets_df.empty else 'Today'}",
+        "",
+        "## 📋 Strategy Description",
+        "",
+        "**The Best Value Strategy** selects ONE game each day with the **best value score** - the optimal combination of high win probability and favorable odds.",
+        "",
+        "- **Goal**: Maximize profit by finding the best risk/reward opportunities",
+        "- **Bet Amount**: $1.00 per game",
+        "- **Selection Criteria**: Highest value score (confidence × potential profit - risk)",
+        "- **Risk Profile**: Moderate - balances probability with potential profit",
+        "",
+        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or moneylines worse than -1000 are excluded.",
+        "",
+        "---",
+        "",
+        "## 📊 Season Performance",
+        "",
+        f"- **Total Bets**: {value_stats['total_bets']}",
+        f"- **Win Rate**: {value_stats['win_rate']:.1f}% ({value_stats['win_count']}W-{value_stats['loss_count']}L)",
+        f"- **Total Wagered**: ${value_stats['total_wagered']:.2f}",
+        f"- **Total Payout**: ${value_stats['total_payout']:.2f}",
+        f"- **Net Profit**: ${value_stats['total_profit']:.2f} {'🟢' if value_stats['total_profit'] > 0 else '🔴' if value_stats['total_profit'] < 0 else '⚪'}",
+        f"- **ROI**: {value_stats['roi']:.1f}%",
+        "",
+        "---",
+        "",
+    ]
+    
+    # Add today's bet
+    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+    if os.path.exists(today_pred_path):
+        try:
+            today_preds = pd.read_csv(today_pred_path)
+            todays_bets = get_todays_bets(today_preds)
+            value_bet = todays_bets['value_bet']
             
             if value_bet is not None:
-                # Determine which team we're betting on and their moneyline for value bet
                 if value_bet['predicted_home_win'] == 1:
                     bet_team = value_bet['home_team']
                     opponent = value_bet['away_team']
@@ -611,59 +912,52 @@ def generate_bets_markdown():
                 value_score = calculate_value_score(value_bet['confidence'], moneyline)
                 
                 md_lines.extend([
-                    "## 💎 Today's Best Value Bet",
+                    "## 💎 Today's Bet",
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
                     f"- **Confidence**: {value_bet['confidence']:.1%}",
                     f"- **Moneyline**: {int(moneyline):+d}",
-                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     f"- **Value Score**: {value_score:.3f}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "✅ *Best combination of high probability and favorable odds!*",
+                    "✅ *Best value opportunity today - optimal balance of probability and odds*",
                     "",
                     "---",
                     "",
                 ])
-            
-            if safest_bet is None and value_bet is None:
-                # No games with real odds today
+            else:
                 md_lines.extend([
-                    "## 🎯 Today's Best Bets",
+                    "## 💎 Today's Bet",
                     "",
-                    "**No games with bettable ESPN moneylines available today**",
+                    "**No bettable games available today**",
                     "",
-                    "Games may have moneylines set to \"OFF\", be more extreme than -1000, or not be available for betting.",
-                    "Check back tomorrow for the next bet opportunity!",
+                    "Games may have moneylines set to \"OFF\" or be more extreme than -1000.",
                     "",
                     "---",
                     "",
                 ])
         except Exception as e:
-            print(f"⚠️ Could not add today's best bets: {e}")
+            print(f"⚠️ Could not add today's value bet: {e}")
     
-    md_lines.extend([
-        "## 📈 Betting Performance",
-        "",
-    ])
-    
-    # Add performance by confidence level
-    if 'confidence' in bets_df.columns:
-        bets_df['confidence_bucket'] = pd.cut(
-            bets_df['confidence'], 
+    # Performance by confidence level
+    if not value_bets_df.empty and 'confidence' in value_bets_df.columns:
+        df = value_bets_df.copy()
+        df['confidence_bucket'] = pd.cut(
+            df['confidence'], 
             bins=[0, 0.6, 0.7, 0.8, 0.9, 1.0],
             labels=['<60%', '60-70%', '70-80%', '80-90%', '90%+']
         )
         
         md_lines.extend([
-            "### Performance by Confidence Level",
+            "## 📈 Performance by Confidence Level",
             "",
             "| Confidence | Bets | Win Rate | Net Profit | ROI |",
             "|------------|------|----------|------------|-----|"
         ])
         
         for bucket in ['<60%', '60-70%', '70-80%', '80-90%', '90%+']:
-            bucket_df = bets_df[bets_df['confidence_bucket'] == bucket]
+            bucket_df = df[df['confidence_bucket'] == bucket]
             if len(bucket_df) > 0:
                 bucket_wins = bucket_df['bet_won'].sum()
                 bucket_total = len(bucket_df)
@@ -677,66 +971,53 @@ def generate_bets_markdown():
                     f"${bucket_profit:.2f} | {bucket_roi:.1f}% |"
                 )
         
+        md_lines.extend(["", "---", ""])
+    
+    # Recent bets history
+    if not value_bets_df.empty:
+        md_lines.extend([
+            "## 📋 Complete Bet History",
+            "",
+            "| Date | Result | Matchup | Bet On | ML | Confidence | Value Score | Profit |",
+            "|------|--------|---------|--------|----|-----------:|------------:|-------:|"
+        ])
+        
+        all_bets = value_bets_df.sort_values('date', ascending=False)
+        for _, bet in all_bets.iterrows():
+            result_icon = "✅" if bet['bet_won'] else "❌" if bet['bet_won'] == False else "⚪"
+            matchup = f"{bet['away_team']} @ {bet['home_team']}"
+            bet_on = bet['predicted_winner']
+            moneyline = f"{int(bet['moneyline']):+d}" if pd.notna(bet['moneyline']) else "N/A"
+            confidence = f"{bet['confidence']:.1%}"
+            value_score = calculate_value_score(bet['confidence'], bet['moneyline'])
+            value_str = f"{value_score:.3f}" if value_score is not None else "N/A"
+            profit = f"${bet['profit']:.2f}" if bet['profit'] >= 0 else f"-${abs(bet['profit']):.2f}"
+            
+            md_lines.append(
+                f"| {bet['date']} | {result_icon} | {matchup} | {bet_on} | {moneyline} | {confidence} | {value_str} | {profit} |"
+            )
+        
         md_lines.extend(["", ""])
     
-    # Recent bets table
     md_lines.extend([
-        "## 📋 Recent Bets (Last 20)",
-        "",
-        "| Date | Result | Matchup | Bet On | ML | Confidence | Profit |",
-        "|------|--------|---------|--------|----|-----------:|-------:|"
-    ])
-    
-    # Show most recent bets first
-    recent_bets = bets_df.sort_values('date', ascending=False).head(20)
-    for _, bet in recent_bets.iterrows():
-        result_icon = "✅" if bet['bet_won'] else "❌" if bet['bet_won'] == False else "⚪"
-        matchup = f"{bet['away_team']} @ {bet['home_team']}"
-        bet_on = bet['predicted_winner']
-        moneyline = f"{int(bet['moneyline']):+d}" if pd.notna(bet['moneyline']) else "N/A"
-        confidence = f"{bet['confidence']:.1%}"
-        profit = f"${bet['profit']:.2f}" if bet['profit'] >= 0 else f"-${abs(bet['profit']):.2f}"
-        
-        md_lines.append(
-            f"| {bet['date']} | {result_icon} | {matchup} | {bet_on} | {moneyline} | {confidence} | {profit} |"
-        )
-    
-    md_lines.extend([
-        "",
         "---",
         "",
         "## 📝 Notes",
         "",
-        "### Betting Strategy",
-        "- **Safest Bet**: The game with the highest predicted win probability",
-        "- **Best Value Bet**: The game with the best combination of high probability and favorable odds",
-        "- Each bet is $1.00 on the team with the highest win probability",
+        "- **Value Score** = (Confidence × Potential Profit) - Risk",
         "- **Only games with real ESPN moneylines** are tracked",
         "- **Moneylines more extreme than -1000 are excluded** as unbettable",
         "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
-        "- Value Score represents expected profit per dollar wagered",
-        "",
-        "### Important Disclaimers",
-        "- **Real moneylines from ESPN API** extracted from official scoreboard endpoint",
-        "- Games showing \"OFF\" for moneyline are excluded (no betting available)",
-        "- Moneylines < -1000 (e.g., -3000, -100000) are excluded as unbettable",
-        "- **Tracking started fresh** with today's game - no historical synthetic data",
-        "- **Not all games have betting lines** - especially games involving small schools or lower-tier matchups",
         "- This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy",
         "",
         "*Auto-generated by betting_tracker.py*"
     ])
     
-    # Write to file
-    output_path = os.path.join(os.path.dirname(__file__), '..', 'bets.md')
+    output_path = os.path.join(os.path.dirname(__file__), '..', 'value_bets.md')
     with open(output_path, 'w') as f:
         f.write('\n'.join(md_lines))
     
-    print(f"✓ Generated bets.md at {output_path}")
-    print(f"  Total bets: {total_bets}")
-    print(f"  Net profit: ${total_profit:.2f}")
-    print(f"  Win rate: {win_rate:.1f}%")
-    print(f"  ROI: {roi:.1f}%")
+    print(f"✓ Generated value_bets.md at {output_path}")
 
 
 if __name__ == "__main__":
