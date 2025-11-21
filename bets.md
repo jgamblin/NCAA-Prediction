@@ -1,12 +1,12 @@
 # 🎲 NCAA Basketball Betting Tracker
 
-**Last Updated**: 2025-11-21 15:28:35
+**Last Updated**: 2025-11-21 10:23:22
 
 **Tracking Started**: 2025-11-10
 
 This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.
 
-> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. We track going forward from today with real odds.
+> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing "OFF" or without real betting lines are automatically excluded. Moneylines worse than -1000 are also excluded as unbettable. We track going forward from today with real odds.
 
 ---
 
@@ -21,15 +21,28 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 
 ---
 
-## 🎯 Today's Best Bet
+## 🎯 Today's Safest Bet
 
-**UCLA** vs **Presbyterian**
+**Louisville** @ **Cincinnati**
 
-- **Confidence**: 86.2%
-- **Moneyline**: -100000
-- **Potential Profit**: $0.00
+- **Confidence**: 78.6%
+- **Moneyline**: -500
+- **Potential Profit**: $0.20
 
 ✅ *Real ESPN odds - betting line is live!*
+
+---
+
+## 💎 Today's Best Value Bet
+
+**Louisville** @ **Cincinnati**
+
+- **Confidence**: 78.6%
+- **Moneyline**: -500
+- **Potential Profit**: $0.20
+- **Value Score**: -0.057
+
+✅ *Best combination of high probability and favorable odds!*
 
 ---
 
@@ -61,15 +74,18 @@ This tracker shows hypothetical results of betting $1.00 on the team with the hi
 ## 📝 Notes
 
 ### Betting Strategy
-- **One bet per day** on the single game with the highest predicted win probability
+- **Safest Bet**: The game with the highest predicted win probability
+- **Best Value Bet**: The game with the best combination of high probability and favorable odds
 - Each bet is $1.00 on the team with the highest win probability
 - **Only games with real ESPN moneylines** are tracked
+- **Moneylines more extreme than -1000 are excluded** as unbettable
 - Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)
-- ROI = (Total Profit / Total Wagered) × 100
+- Value Score represents expected profit per dollar wagered
 
 ### Important Disclaimers
 - **Real moneylines from ESPN API** extracted from official scoreboard endpoint
 - Games showing "OFF" for moneyline are excluded (no betting available)
+- Moneylines < -1000 (e.g., -3000, -100000) are excluded as unbettable
 - **Tracking started fresh** with today's game - no historical synthetic data
 - **Not all games have betting lines** - especially games involving small schools or lower-tier matchups
 - This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy
