@@ -1,82 +1,79 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-20 08:34:04 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `1a44e62`
+**Last Updated**: 2025-11-21 06:10:09 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9483d0e`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 5
-- **Average Confidence**: 85.2%
-- **High (≥70%)**: 5 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 7
+- **Average Confidence**: 80.0%
+- **High (≥70%)**: 6 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
-- **High Confidence Streak**: 1 day(s) (last miss 2025-11-18)
+- **High Confidence Streak**: 2 day(s) (last miss 2025-11-18)
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 17 day(s)
-- **Top 5 Picks Perfect Streak**: 16 day(s)
+- **#1 Pick Streak**: 18 day(s)
+- **Top 5 Picks Perfect Streak**: 17 day(s)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-13 | 26 | ✅ | ✅ |
 | 2025-11-14 | 50 | ✅ | ✅ |
 | 2025-11-15 | 82 | ✅ | ✅ |
 | 2025-11-16 | 34 | ✅ | ✅ |
 | 2025-11-17 | 34 | ✅ | ✅ |
 | 2025-11-18 | 68 | ✅ | ✅ |
 | 2025-11-19 | 3 | ✅ | — |
+| 2025-11-20 | 5 | ✅ | ✅ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **St. John's** | Bucknell | 86.0% |
-| 2 | **Houston** | Rider | 85.3% |
-| 3 | **Purdue** | Memphis | 85.3% |
-| 4 | **Texas Tech** | Wake Forest | 85.2% |
-| 5 | **Tennessee** | Tennessee State | 84.3% |
+| 1 | **UCLA** | Presbyterian | 86.1% |
+| 2 | **Florida** | Merrimack | 85.8% |
+| 3 | **Michigan State** | Detroit Mercy | 85.7% |
+| 4 | **Kentucky** | Loyola Maryland | 85.5% |
+| 5 | **Arkansas** | Jackson State | 84.8% |
+| 6 | **Louisville** | Cincinnati | 79.2% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tennessee State @ Tennessee | 84.3% |  |
-| 2 | Wake Forest @ Texas Tech | 85.2% |  |
-| 3 | Memphis @ Purdue | 85.3% |  |
-| 4 | Rider @ Houston | 85.3% |  |
-| 5 | Bucknell @ St. John's | 86.0% |  |
+| 1 | Purdue vs Texas Tech | 52.5% | Toss-Up |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 5
-- Away Teams Favored: 0
-- Max Confidence: 86.0%
-- Min Confidence: 84.3%
+- Away Teams Favored: 2
+- Max Confidence: 86.1%
+- Min Confidence: 52.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (5 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (7 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 84.2% (949 evaluated)
-- **Last 10 Days**: 80.5% (486 games)
+- **Overall Accuracy**: 84.3% (954 evaluated)
+- **Last 10 Days**: 80.5% (451 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-13 | 26 | 24 | 92.3% | 75.4% |
 | 2025-11-14 | 50 | 36 | 72.0% | 76.2% |
 | 2025-11-15 | 82 | 59 | 72.0% | 77.0% |
 | 2025-11-16 | 34 | 25 | 73.5% | 76.1% |
-| 2025-11-17 | 39 | 34 | 87.2% | 78.2% |
+| 2025-11-17 | 34 | 29 | 85.3% | 77.5% |
 | 2025-11-18 | 73 | 64 | 87.7% | 78.5% |
 | 2025-11-19 | 6 | 6 | 100.0% | 76.7% |
+| 2025-11-20 | 10 | 10 | 100.0% | 85.2% |
 
 ---
 
