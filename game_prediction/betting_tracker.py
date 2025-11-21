@@ -38,6 +38,70 @@ def american_odds_to_payout(odds, bet_amount=1.0):
     return bet_amount + profit
 
 
+def is_bettable_moneyline(moneyline):
+    """
+    Check if a moneyline represents a bettable game.
+    Extreme moneylines (< -1000) are considered unbettable.
+    
+    Args:
+        moneyline: American odds (e.g., -110, +150)
+    
+    Returns:
+        True if moneyline is bettable, False otherwise
+    """
+    if moneyline is None or pd.isna(moneyline):
+        return False
+    
+    try:
+        moneyline = int(moneyline)
+    except (ValueError, TypeError):
+        return False
+    
+    # Moneylines more extreme than -1000 are considered unbettable
+    # (e.g., -3000, -100000 are too extreme to be practical bets)
+    if moneyline < -1000:
+        return False
+    
+    return True
+
+
+def calculate_value_score(confidence, moneyline):
+    """
+    Calculate a value score for a bet combining confidence and moneyline value.
+    Higher score = better value bet.
+    
+    Args:
+        confidence: Model's predicted win probability (0.0 to 1.0)
+        moneyline: American odds (e.g., -110, +150)
+    
+    Returns:
+        Value score (higher is better), or None if invalid inputs
+    """
+    if confidence is None or pd.isna(confidence) or moneyline is None or pd.isna(moneyline):
+        return None
+    
+    if not is_bettable_moneyline(moneyline):
+        return None
+    
+    try:
+        moneyline = int(moneyline)
+        confidence = float(confidence)
+    except (ValueError, TypeError):
+        return None
+    
+    # Calculate potential profit per dollar bet
+    if moneyline > 0:
+        potential_profit = moneyline / 100.0
+    else:
+        potential_profit = 100.0 / abs(moneyline)
+    
+    # Value score = expected value = (confidence * potential_profit) - ((1 - confidence) * 1)
+    # This represents the expected profit per dollar wagered
+    value_score = (confidence * (1 + potential_profit)) - 1.0
+    
+    return value_score
+
+
 def calculate_bet_result(row, bet_amount=1.0):
     """
     Calculate result of a $1 bet on the predicted winner with a moneyline.
@@ -82,9 +146,9 @@ def calculate_bet_result(row, bet_amount=1.0):
         bet_team = away_team
         moneyline = away_moneyline
     
-    # Check if moneyline is available
-    if moneyline is None or pd.isna(moneyline) or moneyline == '':
-        # No moneyline available, skip this bet
+    # Check if moneyline is available and bettable
+    if moneyline is None or pd.isna(moneyline) or moneyline == '' or not is_bettable_moneyline(moneyline):
+        # No moneyline available or unbettable (e.g., -100000), skip this bet
         return result
     
     result['has_moneyline'] = True
@@ -232,6 +296,64 @@ def generate_betting_report():
     return bets_df
 
 
+def get_todays_bets(today_preds):
+    """
+    Get today's safest bet and best value bet from predictions.
+    
+    Args:
+        today_preds: DataFrame with today's predictions
+    
+    Returns:
+        dict with 'safest_bet' and 'value_bet' (or None if not found)
+    """
+    result = {
+        'safest_bet': None,
+        'value_bet': None
+    }
+    
+    if 'has_real_odds' not in today_preds.columns:
+        return result
+    
+    # Filter to games with real odds
+    with_real_ml = today_preds[today_preds['has_real_odds'] == True].copy()
+    
+    if len(with_real_ml) == 0:
+        return result
+    
+    # Add bettable moneyline filter
+    def is_row_bettable(row):
+        if row['predicted_home_win'] == 1:
+            ml = row.get('home_moneyline')
+        else:
+            ml = row.get('away_moneyline')
+        return is_bettable_moneyline(ml)
+    
+    # Filter to only bettable games
+    bettable = with_real_ml[with_real_ml.apply(is_row_bettable, axis=1)].copy()
+    
+    if len(bettable) == 0:
+        return result
+    
+    # Safest bet: highest confidence
+    result['safest_bet'] = bettable.sort_values('confidence', ascending=False).iloc[0]
+    
+    # Best value bet: calculate value scores
+    def calc_value(row):
+        if row['predicted_home_win'] == 1:
+            ml = row.get('home_moneyline')
+        else:
+            ml = row.get('away_moneyline')
+        return calculate_value_score(row['confidence'], ml)
+    
+    bettable['value_score'] = bettable.apply(calc_value, axis=1)
+    bettable_with_scores = bettable[bettable['value_score'].notna()].copy()
+    
+    if len(bettable_with_scores) > 0:
+        result['value_bet'] = bettable_with_scores.sort_values('value_score', ascending=False).iloc[0]
+    
+    return result
+
+
 def generate_fresh_start_markdown():
     """
     Generate bets.md when starting fresh with no historical data.
@@ -248,7 +370,7 @@ def generate_fresh_start_markdown():
         "",
         "This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.",
         "",
-        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or without real betting lines are automatically excluded. Starting fresh with today's game!",
+        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or without real betting lines are automatically excluded. Moneylines worse than -1000 are also excluded as unbettable. Starting fresh with today's game!",
         "",
         "---",
         "",
@@ -262,94 +384,106 @@ def generate_fresh_start_markdown():
         "",
     ]
     
-    # Add today's best bet section
+    # Add today's best bets section
     if os.path.exists(today_pred_path):
         try:
             today_preds = pd.read_csv(today_pred_path)
+            todays_bets = get_todays_bets(today_preds)
             
-            # Find the game with highest confidence that has a REAL moneyline
-            # ONLY show games with actual ESPN odds (not synthetic)
-            if 'has_real_odds' in today_preds.columns:
-                with_real_ml = today_preds[today_preds['has_real_odds'] == True]
-                
-                if len(with_real_ml) > 0:
-                    # Get the game with highest confidence among those with REAL odds
-                    best_bet = with_real_ml.sort_values('confidence', ascending=False).iloc[0]
-                    
-                    # Determine which team we're betting on and their moneyline
-                    if best_bet['predicted_home_win'] == 1:
-                        bet_team = best_bet['home_team']
-                        opponent = best_bet['away_team']
-                        moneyline = best_bet['home_moneyline']
-                        location = 'vs'
-                    else:
-                        bet_team = best_bet['away_team']
-                        opponent = best_bet['home_team']
-                        moneyline = best_bet['away_moneyline']
-                        location = '@'
-                    
-                    md_lines.extend([
-                        "## 🎯 Today's Best Bet",
-                        "",
-                        f"**{bet_team}** {location} **{opponent}**",
-                        "",
-                        f"- **Confidence**: {best_bet['confidence']:.1%}",
-                        f"- **Moneyline**: {int(moneyline):+d}",
-                        f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
-                        "",
-                        "✅ *Real ESPN odds - betting line is live!*",
-                        "",
-                        "---",
-                        "",
-                    ])
+            safest_bet = todays_bets['safest_bet']
+            value_bet = todays_bets['value_bet']
+            
+            if safest_bet is not None:
+                # Determine which team we're betting on and their moneyline
+                if safest_bet['predicted_home_win'] == 1:
+                    bet_team = safest_bet['home_team']
+                    opponent = safest_bet['away_team']
+                    moneyline = safest_bet['home_moneyline']
+                    location = 'vs'
                 else:
-                    # No games with real odds today
-                    md_lines.extend([
-                        "## 🎯 Today's Best Bet",
-                        "",
-                        "**No games with real ESPN moneylines available today**",
-                        "",
-                        "Games may have moneylines set to \"OFF\" or not be available for betting.",
-                        "Check back tomorrow for the next bet opportunity!",
-                        "",
-                        "---",
-                        "",
-                    ])
-            else:
-                # has_real_odds column doesn't exist yet (first run before scraper update)
+                    bet_team = safest_bet['away_team']
+                    opponent = safest_bet['home_team']
+                    moneyline = safest_bet['away_moneyline']
+                    location = '@'
+                
                 md_lines.extend([
-                    "## 🎯 Today's Best Bet",
+                    "## 🎯 Today's Safest Bet",
                     "",
-                    "**Waiting for real ESPN odds data**",
+                    f"**{bet_team}** {location} **{opponent}**",
                     "",
-                    "The predictions file needs to be regenerated with the updated scraper.",
+                    f"- **Confidence**: {safest_bet['confidence']:.1%}",
+                    f"- **Moneyline**: {int(moneyline):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "**To fix this:**",
-                    "```bash",
-                    "python3 daily_pipeline.py",
-                    "```",
+                    "✅ *Real ESPN odds - betting line is live!*",
                     "",
-                    "This will fetch today's games with real moneylines from ESPN's API.",
+                    "---",
+                    "",
+                ])
+            
+            if value_bet is not None:
+                # Determine which team we're betting on and their moneyline for value bet
+                if value_bet['predicted_home_win'] == 1:
+                    bet_team = value_bet['home_team']
+                    opponent = value_bet['away_team']
+                    moneyline = value_bet['home_moneyline']
+                    location = 'vs'
+                else:
+                    bet_team = value_bet['away_team']
+                    opponent = value_bet['home_team']
+                    moneyline = value_bet['away_moneyline']
+                    location = '@'
+                
+                value_score = calculate_value_score(value_bet['confidence'], moneyline)
+                
+                md_lines.extend([
+                    "## 💎 Today's Best Value Bet",
+                    "",
+                    f"**{bet_team}** {location} **{opponent}**",
+                    "",
+                    f"- **Confidence**: {value_bet['confidence']:.1%}",
+                    f"- **Moneyline**: {int(moneyline):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
+                    f"- **Value Score**: {value_score:.3f}",
+                    "",
+                    "✅ *Best combination of high probability and favorable odds!*",
+                    "",
+                    "---",
+                    "",
+                ])
+            
+            if safest_bet is None and value_bet is None:
+                # No games with real odds today
+                md_lines.extend([
+                    "## 🎯 Today's Best Bets",
+                    "",
+                    "**No games with bettable ESPN moneylines available today**",
+                    "",
+                    "Games may have moneylines set to \"OFF\", be more extreme than -1000, or not be available for betting.",
+                    "Check back tomorrow for the next bet opportunity!",
                     "",
                     "---",
                     "",
                 ])
         except Exception as e:
-            print(f"⚠️ Could not add today's best bet: {e}")
+            print(f"⚠️ Could not add today's best bets: {e}")
     
     md_lines.extend([
         "## 📝 Notes",
         "",
         "### Betting Strategy",
-        "- **One bet per day** on the single game with the highest predicted win probability",
+        "- **Safest Bet**: The game with the highest predicted win probability",
+        "- **Best Value Bet**: The game with the best combination of high probability and favorable odds",
         "- Each bet is $1.00 on the team with the highest win probability",
         "- **Only games with real ESPN moneylines** are tracked",
+        "- **Moneylines more extreme than -1000 are excluded** as unbettable",
         "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
-        "- ROI = (Total Profit / Total Wagered) × 100",
+        "- Value Score represents expected profit per dollar wagered",
         "",
         "### Important Disclaimers",
         "- **Real moneylines from ESPN API** extracted from official scoreboard endpoint",
         "- Games showing \"OFF\" for moneyline are excluded (no betting available)",
+        "- Moneylines < -1000 (e.g., -3000, -100000) are excluded as unbettable",
         "- **Tracking started fresh** - no historical synthetic data",
         "- **Not all games have betting lines** - especially games involving small schools or lower-tier matchups",
         "- This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy",
@@ -404,7 +538,7 @@ def generate_bets_markdown():
         "",
         "This tracker shows hypothetical results of betting $1.00 on the team with the highest win probability (from our model) **using real moneylines from ESPN**.",
         "",
-        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or without real betting lines are automatically excluded. We track going forward from today with real odds.",
+        "> **✅ Real Odds Only**: Only games with actual ESPN moneylines are tracked. Games showing \"OFF\" or without real betting lines are automatically excluded. Moneylines worse than -1000 are also excluded as unbettable. We track going forward from today with real odds.",
         "",
         "---",
         "",
@@ -421,83 +555,92 @@ def generate_bets_markdown():
         "",
     ]
     
-    # Add today's best bet section
+    # Add today's best bets section
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     today_pred_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
     
     if os.path.exists(today_pred_path):
         try:
             today_preds = pd.read_csv(today_pred_path)
+            todays_bets = get_todays_bets(today_preds)
             
-            # Find the game with highest confidence that has a REAL moneyline
-            # ONLY show games with actual ESPN odds (not synthetic)
-            if 'has_real_odds' in today_preds.columns:
-                with_real_ml = today_preds[today_preds['has_real_odds'] == True]
-                
-                if len(with_real_ml) > 0:
-                    # Get the game with highest confidence among those with REAL odds
-                    best_bet = with_real_ml.sort_values('confidence', ascending=False).iloc[0]
-                    
-                    # Determine which team we're betting on and their moneyline
-                    if best_bet['predicted_home_win'] == 1:
-                        bet_team = best_bet['home_team']
-                        opponent = best_bet['away_team']
-                        moneyline = best_bet['home_moneyline']
-                        location = 'vs'
-                    else:
-                        bet_team = best_bet['away_team']
-                        opponent = best_bet['home_team']
-                        moneyline = best_bet['away_moneyline']
-                        location = '@'
-                    
-                    md_lines.extend([
-                        "## 🎯 Today's Best Bet",
-                        "",
-                        f"**{bet_team}** {location} **{opponent}**",
-                        "",
-                        f"- **Confidence**: {best_bet['confidence']:.1%}",
-                        f"- **Moneyline**: {int(moneyline):+d}",
-                        f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
-                        "",
-                        "✅ *Real ESPN odds - betting line is live!*",
-                        "",
-                        "---",
-                        "",
-                    ])
+            safest_bet = todays_bets['safest_bet']
+            value_bet = todays_bets['value_bet']
+            
+            if safest_bet is not None:
+                # Determine which team we're betting on and their moneyline
+                if safest_bet['predicted_home_win'] == 1:
+                    bet_team = safest_bet['home_team']
+                    opponent = safest_bet['away_team']
+                    moneyline = safest_bet['home_moneyline']
+                    location = 'vs'
                 else:
-                    # No games with real odds today
-                    md_lines.extend([
-                        "## 🎯 Today's Best Bet",
-                        "",
-                        "**No games with real ESPN moneylines available today**",
-                        "",
-                        "Games may have moneylines set to \"OFF\" or not be available for betting.",
-                        "Check back tomorrow for the next bet opportunity!",
-                        "",
-                        "---",
-                        "",
-                    ])
-            else:
-                # has_real_odds column doesn't exist yet (first run before scraper update)
+                    bet_team = safest_bet['away_team']
+                    opponent = safest_bet['home_team']
+                    moneyline = safest_bet['away_moneyline']
+                    location = '@'
+                
                 md_lines.extend([
-                    "## 🎯 Today's Best Bet",
+                    "## 🎯 Today's Safest Bet",
                     "",
-                    "**Waiting for real ESPN odds data**",
+                    f"**{bet_team}** {location} **{opponent}**",
                     "",
-                    "The predictions file needs to be regenerated with the updated scraper.",
+                    f"- **Confidence**: {safest_bet['confidence']:.1%}",
+                    f"- **Moneyline**: {int(moneyline):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "**To fix this:**",
-                    "```bash",
-                    "python3 daily_pipeline.py",
-                    "```",
+                    "✅ *Real ESPN odds - betting line is live!*",
                     "",
-                    "This will fetch today's games with real moneylines from ESPN's API.",
+                    "---",
+                    "",
+                ])
+            
+            if value_bet is not None:
+                # Determine which team we're betting on and their moneyline for value bet
+                if value_bet['predicted_home_win'] == 1:
+                    bet_team = value_bet['home_team']
+                    opponent = value_bet['away_team']
+                    moneyline = value_bet['home_moneyline']
+                    location = 'vs'
+                else:
+                    bet_team = value_bet['away_team']
+                    opponent = value_bet['home_team']
+                    moneyline = value_bet['away_moneyline']
+                    location = '@'
+                
+                value_score = calculate_value_score(value_bet['confidence'], moneyline)
+                
+                md_lines.extend([
+                    "## 💎 Today's Best Value Bet",
+                    "",
+                    f"**{bet_team}** {location} **{opponent}**",
+                    "",
+                    f"- **Confidence**: {value_bet['confidence']:.1%}",
+                    f"- **Moneyline**: {int(moneyline):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
+                    f"- **Value Score**: {value_score:.3f}",
+                    "",
+                    "✅ *Best combination of high probability and favorable odds!*",
+                    "",
+                    "---",
+                    "",
+                ])
+            
+            if safest_bet is None and value_bet is None:
+                # No games with real odds today
+                md_lines.extend([
+                    "## 🎯 Today's Best Bets",
+                    "",
+                    "**No games with bettable ESPN moneylines available today**",
+                    "",
+                    "Games may have moneylines set to \"OFF\", be more extreme than -1000, or not be available for betting.",
+                    "Check back tomorrow for the next bet opportunity!",
                     "",
                     "---",
                     "",
                 ])
         except Exception as e:
-            print(f"⚠️ Could not add today's best bet: {e}")
+            print(f"⚠️ Could not add today's best bets: {e}")
     
     md_lines.extend([
         "## 📈 Betting Performance",
@@ -565,15 +708,18 @@ def generate_bets_markdown():
         "## 📝 Notes",
         "",
         "### Betting Strategy",
-        "- **One bet per day** on the single game with the highest predicted win probability",
+        "- **Safest Bet**: The game with the highest predicted win probability",
+        "- **Best Value Bet**: The game with the best combination of high probability and favorable odds",
         "- Each bet is $1.00 on the team with the highest win probability",
         "- **Only games with real ESPN moneylines** are tracked",
+        "- **Moneylines more extreme than -1000 are excluded** as unbettable",
         "- Moneylines shown are American odds (e.g., -110 means risk $110 to win $100)",
-        "- ROI = (Total Profit / Total Wagered) × 100",
+        "- Value Score represents expected profit per dollar wagered",
         "",
         "### Important Disclaimers",
         "- **Real moneylines from ESPN API** extracted from official scoreboard endpoint",
         "- Games showing \"OFF\" for moneyline are excluded (no betting available)",
+        "- Moneylines < -1000 (e.g., -3000, -100000) are excluded as unbettable",
         "- **Tracking started fresh** with today's game - no historical synthetic data",
         "- **Not all games have betting lines** - especially games involving small schools or lower-tier matchups",
         "- This tracker is for **educational/entertainment purposes** to demonstrate prediction accuracy",
