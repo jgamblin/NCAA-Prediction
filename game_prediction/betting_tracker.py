@@ -296,6 +296,32 @@ def generate_betting_report():
     return bets_df
 
 
+def get_bet_details(row):
+    """
+    Extract bet team, opponent, moneyline, and location from a prediction row.
+    
+    Args:
+        row: DataFrame row with prediction data
+    
+    Returns:
+        dict with bet_team, opponent, moneyline, location
+    """
+    if row['predicted_home_win'] == 1:
+        return {
+            'bet_team': row['home_team'],
+            'opponent': row['away_team'],
+            'moneyline': row['home_moneyline'],
+            'location': 'vs'
+        }
+    else:
+        return {
+            'bet_team': row['away_team'],
+            'opponent': row['home_team'],
+            'moneyline': row['away_moneyline'],
+            'location': '@'
+        }
+
+
 def get_todays_bets(today_preds):
     """
     Get today's safest bet and best value bet from predictions.
@@ -394,26 +420,16 @@ def generate_fresh_start_markdown():
             value_bet = todays_bets['value_bet']
             
             if safest_bet is not None:
-                # Determine which team we're betting on and their moneyline
-                if safest_bet['predicted_home_win'] == 1:
-                    bet_team = safest_bet['home_team']
-                    opponent = safest_bet['away_team']
-                    moneyline = safest_bet['home_moneyline']
-                    location = 'vs'
-                else:
-                    bet_team = safest_bet['away_team']
-                    opponent = safest_bet['home_team']
-                    moneyline = safest_bet['away_moneyline']
-                    location = '@'
+                bet_details = get_bet_details(safest_bet)
                 
                 md_lines.extend([
                     "## 🎯 Today's Safest Bet",
                     "",
-                    f"**{bet_team}** {location} **{opponent}**",
+                    f"**{bet_details['bet_team']}** {bet_details['location']} **{bet_details['opponent']}**",
                     "",
                     f"- **Confidence**: {safest_bet['confidence']:.1%}",
-                    f"- **Moneyline**: {int(moneyline):+d}",
-                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
+                    f"- **Moneyline**: {int(bet_details['moneyline']):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(bet_details['moneyline'], 1.0) - 1.0:.2f}",
                     "",
                     "✅ *Real ESPN odds - betting line is live!*",
                     "",
@@ -422,29 +438,21 @@ def generate_fresh_start_markdown():
                 ])
             
             if value_bet is not None:
-                # Determine which team we're betting on and their moneyline for value bet
-                if value_bet['predicted_home_win'] == 1:
-                    bet_team = value_bet['home_team']
-                    opponent = value_bet['away_team']
-                    moneyline = value_bet['home_moneyline']
-                    location = 'vs'
-                else:
-                    bet_team = value_bet['away_team']
-                    opponent = value_bet['home_team']
-                    moneyline = value_bet['away_moneyline']
-                    location = '@'
+                bet_details = get_bet_details(value_bet)
+                value_score = calculate_value_score(value_bet['confidence'], bet_details['moneyline'])
                 
-                value_score = calculate_value_score(value_bet['confidence'], moneyline)
+                # Handle case where value_score might be None
+                value_score_str = f"{value_score:.3f}" if value_score is not None else "N/A"
                 
                 md_lines.extend([
                     "## 💎 Today's Best Value Bet",
                     "",
-                    f"**{bet_team}** {location} **{opponent}**",
+                    f"**{bet_details['bet_team']}** {bet_details['location']} **{bet_details['opponent']}**",
                     "",
                     f"- **Confidence**: {value_bet['confidence']:.1%}",
-                    f"- **Moneyline**: {int(moneyline):+d}",
-                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
-                    f"- **Value Score**: {value_score:.3f}",
+                    f"- **Moneyline**: {int(bet_details['moneyline']):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(bet_details['moneyline'], 1.0) - 1.0:.2f}",
+                    f"- **Value Score**: {value_score_str}",
                     "",
                     "✅ *Best combination of high probability and favorable odds!*",
                     "",
@@ -568,26 +576,16 @@ def generate_bets_markdown():
             value_bet = todays_bets['value_bet']
             
             if safest_bet is not None:
-                # Determine which team we're betting on and their moneyline
-                if safest_bet['predicted_home_win'] == 1:
-                    bet_team = safest_bet['home_team']
-                    opponent = safest_bet['away_team']
-                    moneyline = safest_bet['home_moneyline']
-                    location = 'vs'
-                else:
-                    bet_team = safest_bet['away_team']
-                    opponent = safest_bet['home_team']
-                    moneyline = safest_bet['away_moneyline']
-                    location = '@'
+                bet_details = get_bet_details(safest_bet)
                 
                 md_lines.extend([
                     "## 🎯 Today's Safest Bet",
                     "",
-                    f"**{bet_team}** {location} **{opponent}**",
+                    f"**{bet_details['bet_team']}** {bet_details['location']} **{bet_details['opponent']}**",
                     "",
                     f"- **Confidence**: {safest_bet['confidence']:.1%}",
-                    f"- **Moneyline**: {int(moneyline):+d}",
-                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
+                    f"- **Moneyline**: {int(bet_details['moneyline']):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(bet_details['moneyline'], 1.0) - 1.0:.2f}",
                     "",
                     "✅ *Real ESPN odds - betting line is live!*",
                     "",
@@ -596,29 +594,21 @@ def generate_bets_markdown():
                 ])
             
             if value_bet is not None:
-                # Determine which team we're betting on and their moneyline for value bet
-                if value_bet['predicted_home_win'] == 1:
-                    bet_team = value_bet['home_team']
-                    opponent = value_bet['away_team']
-                    moneyline = value_bet['home_moneyline']
-                    location = 'vs'
-                else:
-                    bet_team = value_bet['away_team']
-                    opponent = value_bet['home_team']
-                    moneyline = value_bet['away_moneyline']
-                    location = '@'
+                bet_details = get_bet_details(value_bet)
+                value_score = calculate_value_score(value_bet['confidence'], bet_details['moneyline'])
                 
-                value_score = calculate_value_score(value_bet['confidence'], moneyline)
+                # Handle case where value_score might be None
+                value_score_str = f"{value_score:.3f}" if value_score is not None else "N/A"
                 
                 md_lines.extend([
                     "## 💎 Today's Best Value Bet",
                     "",
-                    f"**{bet_team}** {location} **{opponent}**",
+                    f"**{bet_details['bet_team']}** {bet_details['location']} **{bet_details['opponent']}**",
                     "",
                     f"- **Confidence**: {value_bet['confidence']:.1%}",
-                    f"- **Moneyline**: {int(moneyline):+d}",
-                    f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
-                    f"- **Value Score**: {value_score:.3f}",
+                    f"- **Moneyline**: {int(bet_details['moneyline']):+d}",
+                    f"- **Potential Profit**: ${american_odds_to_payout(bet_details['moneyline'], 1.0) - 1.0:.2f}",
+                    f"- **Value Score**: {value_score_str}",
                     "",
                     "✅ *Best combination of high probability and favorable odds!*",
                     "",
