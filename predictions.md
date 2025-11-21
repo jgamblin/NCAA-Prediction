@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-21 06:10:09 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `9483d0e`
+**Last Updated**: 2025-11-21 09:28:32 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `2794c61`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 7
-- **Average Confidence**: 80.0%
+- **Average Confidence**: 79.8%
 - **High (≥70%)**: 6 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 - **High Confidence Streak**: 2 day(s) (last miss 2025-11-18)
@@ -32,25 +32,25 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UCLA** | Presbyterian | 86.1% |
-| 2 | **Florida** | Merrimack | 85.8% |
-| 3 | **Michigan State** | Detroit Mercy | 85.7% |
-| 4 | **Kentucky** | Loyola Maryland | 85.5% |
-| 5 | **Arkansas** | Jackson State | 84.8% |
-| 6 | **Louisville** | Cincinnati | 79.2% |
+| 1 | **UCLA** | Presbyterian | 86.2% |
+| 2 | **Michigan State** | Detroit Mercy | 86.0% |
+| 3 | **Florida** | Merrimack | 86.0% |
+| 4 | **Kentucky** | Loyola Maryland | 85.8% |
+| 5 | **Arkansas** | Jackson State | 84.7% |
+| 6 | **Louisville** | Cincinnati | 78.6% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Purdue vs Texas Tech | 52.5% | Toss-Up |
+| 1 | Purdue vs Texas Tech | 51.2% | Toss-Up |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 5
 - Away Teams Favored: 2
-- Max Confidence: 86.1%
-- Min Confidence: 52.5%
+- Max Confidence: 86.2%
+- Min Confidence: 51.2%
 
 ### 📋 Full Data
 
