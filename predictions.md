@@ -1,22 +1,22 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-22 15:16:11 CST
+**Last Updated**: 2025-11-22 15:24:12 CST
 **Lineage**: config `7dd58a0bb0e2` · commit `825168`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 11
+- **Average Confidence**: 79.9%
+- **High (≥70%)**: 10 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
 
-- **High Confidence Streak**: 3 day(s) (last miss 2025-11-18)
+- **High Confidence Streak**: 2 day(s) (last miss 2025-11-19)
 
 ### 🏅 Pick Streaks
 
 - **#1 Pick Streak**: 19 day(s)
-- **Top 5 Picks Perfect Streak**: 18 day(s)
+- **Top 5 Picks Perfect Streak**: 2 day(s) (last miss 2025-11-19)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
@@ -24,24 +24,58 @@
 | 2025-11-16 | 34 | ✅ | ✅ |
 | 2025-11-17 | 34 | ✅ | ✅ |
 | 2025-11-18 | 68 | ✅ | ✅ |
-| 2025-11-19 | 3 | ✅ | — |
+| 2025-11-19 | 28 | ✅ | ❌ |
 | 2025-11-20 | 5 | ✅ | ✅ |
 | 2025-11-21 | 7 | ✅ | ✅ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Virginia Commonwealth** | Coppin State | 83.3% |
+| 2 | **Wichita State** | Milwaukee | 83.2% |
+| 3 | **Portland** | Northern Colorado | 82.5% |
+| 4 | **UC Irvine** | Northern Iowa | 82.3% |
+| 5 | **Lipscomb** | Western Carolina | 82.2% |
+| 6 | **Indiana State** | Ball State | 81.9% |
+| 7 | **Incarnate Word** | High Point | 81.8% |
+| 8 | **Oregon State** | Iona | 81.2% |
+| 9 | **Weber State** | UT Arlington | 79.3% |
+| 10 | **Stetson** | VMI | 72.3% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Southern Indiana** | UIC | 68.8% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | UIC @ Southern Indiana | 68.8% |  |
+| 2 | VMI @ Stetson | 72.3% |  |
+| 3 | UT Arlington @ Weber State | 79.3% |  |
+| 4 | Iona @ Oregon State | 81.2% |  |
+| 5 | High Point @ Incarnate Word | 81.8% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 11
+- Away Teams Favored: 0
+- Max Confidence: 83.3%
+- Min Confidence: 68.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (0 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (216 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 84.3% (963 evaluated)
-- **Last 10 Days**: 81.7% (378 games)
+- **Overall Accuracy**: 83.7% (1013 evaluated)
+- **Last 10 Days**: 80.6% (428 games)
 
 ### Last 7 Days
 
@@ -51,7 +85,7 @@
 | 2025-11-16 | 34 | 25 | 73.5% | 76.1% |
 | 2025-11-17 | 34 | 29 | 85.3% | 77.5% |
 | 2025-11-18 | 68 | 60 | 88.2% | 78.2% |
-| 2025-11-19 | 6 | 6 | 100.0% | 76.7% |
+| 2025-11-19 | 56 | 42 | 75.0% | 79.3% |
 | 2025-11-20 | 10 | 10 | 100.0% | 85.2% |
 | 2025-11-21 | 14 | 12 | 85.7% | 79.8% |
 

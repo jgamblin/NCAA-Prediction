@@ -40,7 +40,8 @@ class ESPNScraper:
         else:
             date_str = str(date)
         
-        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}"
+        # Group 50 = "All Games" to get all NCAA games, not just featured/top 25
+        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}&groups=50"
         
         try:
             response = self.session.get(url, timeout=10)

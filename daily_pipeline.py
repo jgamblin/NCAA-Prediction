@@ -73,9 +73,9 @@ def main():
     
     scraper = ESPNScraper()
     
-    # Get last 3 days to catch any games we missed
-    end_date = datetime.now()
-    start_date = end_date - timedelta(days=3)
+    # Get last 3 days to catch any games we missed, plus next 7 days for upcoming games
+    start_date = datetime.now() - timedelta(days=3)
+    end_date = datetime.now() + timedelta(days=7)
     
     print(f"Fetching games from {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
     games = scraper.get_season_games(start_date, end_date)

@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-11-22 09:39:52
+**Last Updated**: 2025-11-22 15:24:14
 
 **Tracking Started**: 2025-11-10
 
@@ -30,9 +30,13 @@
 
 ## 🎯 Today's Bet
 
-**No bettable games available today**
+**Wichita State** vs **Milwaukee**
 
-Games may have moneylines set to "OFF" or be more extreme than -1000.
+- **Confidence**: 83.2%
+- **Moneyline**: -700
+- **Potential Profit**: $0.14
+
+✅ *Highest confidence game today with real ESPN odds*
 
 ---
 
