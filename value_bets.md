@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-21 11:07:05
+**Last Updated**: 2025-11-22 09:39:52
 
 **Tracking Started**: 2025-11-10
 
@@ -30,14 +30,9 @@
 
 ## 💎 Today's Bet
 
-**Louisville** @ **Cincinnati**
+**No bettable games available today**
 
-- **Confidence**: 78.5%
-- **Moneyline**: -500
-- **Value Score**: -0.058
-- **Potential Profit**: $0.20
-
-✅ *Best value opportunity today - optimal balance of probability and odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 

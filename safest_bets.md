@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-11-21 11:07:05
+**Last Updated**: 2025-11-22 09:39:52
 
 **Tracking Started**: 2025-11-10
 
@@ -30,13 +30,9 @@
 
 ## 🎯 Today's Bet
 
-**Louisville** @ **Cincinnati**
+**No bettable games available today**
 
-- **Confidence**: 78.5%
-- **Moneyline**: -500
-- **Potential Profit**: $0.20
-
-✅ *Highest confidence game today with real ESPN odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 
