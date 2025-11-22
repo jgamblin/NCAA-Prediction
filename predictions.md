@@ -1,79 +1,59 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-21 13:15:26 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `0b5eedc`
+**Last Updated**: 2025-11-22 06:09:18 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `fe6f80b`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 7
-- **Average Confidence**: 79.8%
-- **High (≥70%)**: 6 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
-- **High Confidence Streak**: 2 day(s) (last miss 2025-11-18)
+- **High Confidence Streak**: 3 day(s) (last miss 2025-11-18)
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 18 day(s)
-- **Top 5 Picks Perfect Streak**: 17 day(s)
+- **#1 Pick Streak**: 19 day(s)
+- **Top 5 Picks Perfect Streak**: 18 day(s)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-14 | 50 | ✅ | ✅ |
 | 2025-11-15 | 82 | ✅ | ✅ |
 | 2025-11-16 | 34 | ✅ | ✅ |
 | 2025-11-17 | 34 | ✅ | ✅ |
 | 2025-11-18 | 68 | ✅ | ✅ |
 | 2025-11-19 | 3 | ✅ | — |
 | 2025-11-20 | 5 | ✅ | ✅ |
-
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **UCLA** | Presbyterian | 86.2% |
-| 2 | **Michigan State** | Detroit Mercy | 86.0% |
-| 3 | **Florida** | Merrimack | 86.0% |
-| 4 | **Kentucky** | Loyola Maryland | 85.8% |
-| 5 | **Arkansas** | Jackson State | 84.7% |
-| 6 | **Louisville** | Cincinnati | 78.6% |
+| 2025-11-21 | 7 | ✅ | ✅ |
 
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Purdue vs Texas Tech | 51.2% | Toss-Up |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 5
-- Away Teams Favored: 2
-- Max Confidence: 86.2%
-- Min Confidence: 51.2%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (7 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (0 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 84.3% (954 evaluated)
-- **Last 10 Days**: 80.5% (451 games)
+- **Overall Accuracy**: 84.3% (963 evaluated)
+- **Last 10 Days**: 81.7% (378 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-14 | 50 | 36 | 72.0% | 76.2% |
 | 2025-11-15 | 82 | 59 | 72.0% | 77.0% |
 | 2025-11-16 | 34 | 25 | 73.5% | 76.1% |
 | 2025-11-17 | 34 | 29 | 85.3% | 77.5% |
-| 2025-11-18 | 73 | 64 | 87.7% | 78.5% |
+| 2025-11-18 | 68 | 60 | 88.2% | 78.2% |
 | 2025-11-19 | 6 | 6 | 100.0% | 76.7% |
 | 2025-11-20 | 10 | 10 | 100.0% | 85.2% |
+| 2025-11-21 | 14 | 12 | 85.7% | 79.8% |
 
 ---
 
