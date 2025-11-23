@@ -6,7 +6,44 @@ Tracks hypothetical $1 bets on teams with highest win probability that have mone
 
 import pandas as pd
 import os
-from datetime import datetime
+from datetime import datetime, date
+import unicodedata
+
+
+def canonicalize_team_name(name: str):
+    """Light normalization for team name comparison.
+    - Strip accents
+    - Collapse double spaces
+    - Remove trailing single mascot token to match shorter prediction names
+    """
+    if not isinstance(name, str):
+        return name
+    # Strip accents
+    base = unicodedata.normalize('NFKD', name)
+    base = ''.join(ch for ch in base if not unicodedata.combining(ch))
+    base = base.replace('  ', ' ').strip()
+    mascots = {
+        'Spartans','Shockers','Panthers','Bulldogs','Boilermakers','Aggies','Mountaineers','Jaguars','Chippewas',
+        'Leopards','Bison','Braves','Camels','Mustangs','Lions','Wildcats','Cardinals','Tide'
+    }
+    parts = base.split()
+    if len(parts) > 2 and parts[-1] in mascots:
+        return ' '.join(parts[:-1])
+    return base
+
+def derive_season_label(date_str: str):
+    """Derive NCAA season label (e.g., 2025-26) from a YYYY-MM-DD date.
+    Season considered starting July 1 of start year; months < 7 belong to previous start year.
+    """
+    try:
+        year, month, _ = map(int, date_str.split('-'))
+    except Exception:
+        return 'Unknown'
+    if month >= 7:
+        start_year = year
+    else:
+        start_year = year - 1
+    return f"{start_year}-{str(start_year + 1)[-2:]}"
 
 
 def american_odds_to_payout(odds, bet_amount=1.0):
@@ -131,8 +168,11 @@ def calculate_bet_result(row, bet_amount=1.0):
     
     # Determine who we're betting on (team with highest win probability)
     predicted_home_win = row.get('predicted_home_win', 0)
+    # Original predicted home/away labels
     home_team = row.get('home_team', '')
     away_team = row.get('away_team', '')
+    scoreboard_home = row.get('home_team_completed')
+    scoreboard_away = row.get('away_team_completed')
     
     # Get moneylines
     home_moneyline = row.get('home_moneyline')
@@ -162,13 +202,42 @@ def calculate_bet_result(row, bet_amount=1.0):
         # Game not completed yet
         return result
     
-    if home_score > away_score:
-        actual_winner = home_team
-    elif away_score > home_score:
-        actual_winner = away_team
+    # Handle potential home/away label mismatches between prediction log and completed games.
+    # Previous logic flipped scores, which inverted many heavy favorite wins into losses.
+    if (
+        scoreboard_home is not None and pd.notna(scoreboard_home) and
+        canonicalize_team_name(scoreboard_home) != canonicalize_team_name(home_team)
+    ):
+        # Use the scoreboard team names to determine winner, then map back to predicted naming
+        if home_score > away_score:
+            raw_winner = scoreboard_home
+        elif away_score > home_score:
+            raw_winner = scoreboard_away
+        else:
+            raw_winner = 'TIE'
+
+        def map_team(raw, pred_home, pred_away):
+            if not isinstance(raw, str):
+                return raw
+            raw_can = canonicalize_team_name(raw)
+            home_can = canonicalize_team_name(pred_home)
+            away_can = canonicalize_team_name(pred_away)
+            if home_can and home_can in raw_can:
+                return pred_home
+            if away_can and away_can in raw_can:
+                return pred_away
+            return raw
+
+        mapped_winner = map_team(raw_winner, home_team, away_team)
+        actual_winner = mapped_winner
     else:
-        # Tie (very rare in basketball)
-        actual_winner = 'TIE'
+        # Normal case: names already aligned
+        if home_score > away_score:
+            actual_winner = home_team
+        elif away_score > home_score:
+            actual_winner = away_team
+        else:
+            actual_winner = 'TIE'
     
     result['actual_winner'] = actual_winner
     
@@ -229,7 +298,8 @@ def generate_betting_report():
     completed['game_id'] = completed['game_id'].astype(str)
     
     # Check which columns are available in completed games
-    completed_cols = ['game_id', 'home_score', 'away_score']
+    # Include home/away team names from completed games so we can detect mismatches
+    completed_cols = ['game_id', 'home_score', 'away_score', 'home_team', 'away_team']
     if 'home_moneyline' in completed.columns:
         completed_cols.append('home_moneyline')
     if 'away_moneyline' in completed.columns:
@@ -253,7 +323,17 @@ def generate_betting_report():
     
     # Calculate bet results for each game
     bet_results = []
+    mismatch_count = 0
     for _, row in merged.iterrows():
+        # Detect mismatch only if canonical forms differ and neither contains the other (reduce noise)
+        if 'home_team_completed' in row and 'home_team' in row:
+            comp = row['home_team_completed']
+            pred = row['home_team']
+            if pd.notna(comp) and pd.notna(pred):
+                comp_can = canonicalize_team_name(comp)
+                pred_can = canonicalize_team_name(pred)
+                if comp_can != pred_can and pred_can not in comp_can and comp_can not in pred_can:
+                    mismatch_count += 1
         result = calculate_bet_result(row)
         if result['has_moneyline'] and result['actual_winner'] is not None:
             bet_results.append(result)
@@ -264,29 +344,20 @@ def generate_betting_report():
     
     bets_df = pd.DataFrame(bet_results)
     
-    # ONLY track bets with real odds (not synthetic)
-    # Check if has_real_odds column exists in completed games
-    if 'has_real_odds' in completed.columns:
-        # Filter to only bets where the completed game had real odds
-        bets_with_real_odds = []
-        for _, bet in bets_df.iterrows():
-            game_id = str(bet.get('game_id'))
-            # Check if this game had real odds in completed games
-            game_data = completed[completed['game_id'] == game_id]
-            if not game_data.empty and game_data.iloc[0].get('has_real_odds', False):
-                bets_with_real_odds.append(bet)
-        
-        if bets_with_real_odds:
-            bets_df = pd.DataFrame(bets_with_real_odds)
-            print(f"✓ Filtered to {len(bets_df)} bets with real odds")
-        else:
-            print("✗ No bets with real odds found (only synthetic)")
-            return pd.DataFrame()
-    else:
-        # If no has_real_odds column, we can't verify, so return empty
-        # This ensures we start fresh
-        print("✗ No real odds tracking available yet - starting fresh")
+    # Determine real odds directly from moneyline presence & bettability instead of relying on completed.has_real_odds
+    # This avoids losing tracking if the scraper fails to populate has_real_odds in Completed_Games.csv
+    real_odds_mask = []
+    for _, bet in bets_df.iterrows():
+        ml = bet.get('moneyline')
+        real_odds_mask.append(ml is not None and pd.notna(ml) and ml != '' and is_bettable_moneyline(ml))
+    real_bets = bets_df[real_odds_mask].copy()
+    if real_bets.empty:
+        print("✗ No completed bets with usable moneylines found (moneyline missing or unbettable)")
         return pd.DataFrame()
+    print(f"✓ Retained {len(real_bets)} completed bets with usable moneylines")
+    if mismatch_count > 0:
+        print(f"⚠️ Detected {mismatch_count} home/away label mismatches between predictions and completed games; using scoreboard teams for actual results.")
+    bets_df = real_bets
     
     # Don't filter to one bet per day anymore - we'll handle that in the markdown generation
     # We want to track both strategies: safest bet AND best value bet
@@ -308,11 +379,18 @@ def get_todays_bets(today_preds):
         'value_bet': None
     }
     
-    if 'has_real_odds' not in today_preds.columns:
+    if 'has_real_odds' not in today_preds.columns or 'date' not in today_preds.columns:
         return result
-    
+
+    # Restrict strictly to games scheduled for *today's* date in local time
+    try:
+        today_str = date.today().strftime('%Y-%m-%d')
+        preds_today = today_preds[today_preds['date'] == today_str].copy()
+    except Exception:
+        return result
+
     # Filter to games with real odds
-    with_real_ml = today_preds[today_preds['has_real_odds'] == True].copy()
+    with_real_ml = preds_today[preds_today['has_real_odds'] == True].copy()
     
     if len(with_real_ml) == 0:
         return result
@@ -754,6 +832,7 @@ def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
+                    f"- **Bet On**: {bet_team}",
                     f"- **Confidence**: {safest_bet['confidence']:.1%}",
                     f"- **Moneyline**: {int(moneyline):+d}",
                     f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
@@ -837,6 +916,24 @@ def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
     md_lines.extend([
         "---",
         "",
+        "## 🗂 Season Breakdown",
+        "",
+    ])
+    if not safest_bets_df.empty:
+        season_groups = safests = []  # placeholder to avoid linter complaining unused variable
+        df_season = safest_bets_df.copy()
+        df_season['season'] = df_season['date'].apply(derive_season_label)
+        season_lines = ["| Season | Bets | Win Rate | Profit | ROI |", "|--------|------|----------|--------|-----|"]
+        for season, grp in df_season.groupby('season'):
+            wins = grp['bet_won'].sum()
+            total = len(grp)
+            win_rate = (wins / total * 100) if total else 0
+            profit = grp['profit'].sum()
+            wagered = grp['bet_amount'].sum()
+            roi = (profit / wagered * 100) if wagered else 0
+            season_lines.append(f"| {season} | {total} | {win_rate:.1f}% | ${profit:.2f} | {roi:.1f}% |")
+        md_lines.extend(season_lines + ["", "---", ""])
+    md_lines.extend([
         "## 📝 Notes",
         "",
         "- **Only games with real ESPN moneylines** are tracked",
@@ -916,6 +1013,7 @@ def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
+                    f"- **Bet On**: {bet_team}",
                     f"- **Confidence**: {value_bet['confidence']:.1%}",
                     f"- **Moneyline**: {int(moneyline):+d}",
                     f"- **Value Score**: {value_score:.3f}",
@@ -1002,6 +1100,23 @@ def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
     md_lines.extend([
         "---",
         "",
+        "## 🗂 Season Breakdown",
+        "",
+    ])
+    if not value_bets_df.empty:
+        df_season = value_bets_df.copy()
+        df_season['season'] = df_season['date'].apply(derive_season_label)
+        season_lines = ["| Season | Bets | Win Rate | Profit | ROI |", "|--------|------|----------|--------|-----|"]
+        for season, grp in df_season.groupby('season'):
+            wins = grp['bet_won'].sum()
+            total = len(grp)
+            win_rate = (wins / total * 100) if total else 0
+            profit = grp['profit'].sum()
+            wagered = grp['bet_amount'].sum()
+            roi = (profit / wagered * 100) if wagered else 0
+            season_lines.append(f"| {season} | {total} | {win_rate:.1f}% | ${profit:.2f} | {roi:.1f}% |")
+        md_lines.extend(season_lines + ["", "---", ""])
+    md_lines.extend([
         "## 📝 Notes",
         "",
         "- **Value Score** = (Confidence × Potential Profit) - Risk",

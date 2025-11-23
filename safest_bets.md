@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-11-22 15:24:14
+**Last Updated**: 2025-11-23 11:08:50
 
 **Tracking Started**: 2025-11-10
 
@@ -19,22 +19,23 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 9
-- **Win Rate**: 100.0% (9W-0L)
-- **Total Wagered**: $9.00
-- **Total Payout**: $10.50
-- **Net Profit**: $1.50 🟢
-- **ROI**: 16.7%
+- **Total Bets**: 12
+- **Win Rate**: 100.0% (12W-0L)
+- **Total Wagered**: $12.00
+- **Total Payout**: $14.03
+- **Net Profit**: $2.03 🟢
+- **ROI**: 16.9%
 
 ---
 
 ## 🎯 Today's Bet
 
-**Wichita State** vs **Milwaukee**
+**Alabama State** vs **SIU Edwardsville**
 
-- **Confidence**: 83.2%
-- **Moneyline**: -700
-- **Potential Profit**: $0.14
+- **Bet On**: Alabama State
+- **Confidence**: 82.4%
+- **Moneyline**: +120
+- **Potential Profit**: $1.20
 
 ✅ *Highest confidence game today with real ESPN odds*
 
@@ -44,7 +45,8 @@
 
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
-| 80-90% | 9 | 100.0% | $1.50 | 16.7% |
+| 70-80% | 1 | 100.0% | $0.22 | 22.2% |
+| 80-90% | 11 | 100.0% | $1.81 | 16.5% |
 
 ---
 
@@ -52,6 +54,9 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Profit |
 |------|--------|---------|--------|----|-----------:|-------:|
+| 2025-11-22 | ✅ | Milwaukee @ Wichita State | Wichita State | -700 | 83.2% | $0.14 |
+| 2025-11-21 | ✅ | Louisville @ Cincinnati | Louisville | -450 | 78.6% | $0.22 |
+| 2025-11-20 | ✅ | Wake Forest @ Texas Tech | Texas Tech | -600 | 85.2% | $0.17 |
 | 2025-11-18 | ✅ | Little Rock @ Murray State | Murray State | -512 | 83.7% | $0.20 |
 | 2025-11-17 | ✅ | Southern Illinois @ North Dakota State | North Dakota State | -523 | 84.0% | $0.19 |
 | 2025-11-16 | ✅ | Miami (FL) @ Florida | Florida | -618 | 86.1% | $0.16 |
@@ -62,6 +67,14 @@
 | 2025-11-11 | ✅ | Radford @ North Carolina | North Carolina | -647 | 86.6% | $0.15 |
 | 2025-11-10 | ✅ | Mississippi State @ Iowa State | Iowa State | -642 | 86.5% | $0.16 |
 
+
+---
+
+## 🗂 Season Breakdown
+
+| Season | Bets | Win Rate | Profit | ROI |
+|--------|------|----------|--------|-----|
+| 2025-26 | 12 | 100.0% | $2.03 | 16.9% |
 
 ---
 

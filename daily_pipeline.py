@@ -422,7 +422,7 @@ def main():
                 config_version=_config_version,
                 commit_hash=_commit_hash,
                 log_path=log_path,
-                timestamp=datetime.utcnow(),
+                timestamp=datetime.now(datetime.UTC),
             )
             print(f"✓ Logged live predictions to {log_path}")
         except Exception as log_exc:

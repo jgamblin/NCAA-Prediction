@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-22 15:24:14
+**Last Updated**: 2025-11-23 11:08:50
 
 **Tracking Started**: 2025-11-10
 
@@ -19,23 +19,24 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 9
-- **Win Rate**: 88.9% (8W-1L)
-- **Total Wagered**: $9.00
-- **Total Payout**: $11.57
-- **Net Profit**: $2.57 🟢
-- **ROI**: 28.5%
+- **Total Bets**: 12
+- **Win Rate**: 75.0% (9W-3L)
+- **Total Wagered**: $12.00
+- **Total Payout**: $12.73
+- **Net Profit**: $0.73 🟢
+- **ROI**: 6.1%
 
 ---
 
 ## 💎 Today's Bet
 
-**Incarnate Word** vs **High Point**
+**Jackson State** vs **Winthrop**
 
-- **Confidence**: 81.8%
-- **Moneyline**: +600
-- **Value Score**: 4.724
-- **Potential Profit**: $6.00
+- **Bet On**: Jackson State
+- **Confidence**: 77.6%
+- **Moneyline**: +400
+- **Value Score**: 2.879
+- **Potential Profit**: $4.00
 
 ✅ *Best value opportunity today - optimal balance of probability and odds*
 
@@ -45,8 +46,9 @@
 
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
-| <60% | 3 | 66.7% | $0.60 | 20.0% |
+| <60% | 4 | 50.0% | $-0.40 | -10.0% |
 | 70-80% | 6 | 100.0% | $1.97 | 32.8% |
+| 80-90% | 2 | 50.0% | $-0.83 | -41.7% |
 
 ---
 
@@ -54,6 +56,9 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Value Score | Profit |
 |------|--------|---------|--------|----|-----------:|------------:|-------:|
+| 2025-11-22 | ❌ | High Point @ Incarnate Word | Incarnate Word | +600 | 81.8% | 4.725 | -$1.00 |
+| 2025-11-21 | ❌ | Texas Tech @ Purdue | Texas Tech | +135 | 51.2% | 0.204 | -$1.00 |
+| 2025-11-20 | ✅ | Wake Forest @ Texas Tech | Texas Tech | -600 | 85.2% | -0.006 | $0.17 |
 | 2025-11-18 | ✅ | Abilene Christian @ Texas State | Texas State | -110 | 52.6% | 0.004 | $0.91 |
 | 2025-11-17 | ✅ | Alabama State @ Colorado | Colorado | -261 | 72.4% | 0.001 | $0.38 |
 | 2025-11-16 | ✅ | Akron @ Purdue | Purdue | -297 | 74.9% | 0.001 | $0.34 |
@@ -64,6 +69,14 @@
 | 2025-11-11 | ✅ | Kentucky @ Louisville | Louisville | -258 | 72.1% | 0.001 | $0.39 |
 | 2025-11-10 | ✅ | Cal State Fullerton @ California | California | -313 | 75.8% | 0.000 | $0.32 |
 
+
+---
+
+## 🗂 Season Breakdown
+
+| Season | Bets | Win Rate | Profit | ROI |
+|--------|------|----------|--------|-----|
+| 2025-26 | 12 | 75.0% | $0.73 | 6.1% |
 
 ---
 

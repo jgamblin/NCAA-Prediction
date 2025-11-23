@@ -8,7 +8,7 @@
 ## 📊 At a Glance
 
 🎯 **83.5% Accuracy** across 1007 predictions  
-📈 **30,267 Historical Games** powering model  
+📈 **30,300 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **30 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
@@ -18,7 +18,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 226 games for November 23, 2025<br/>
+**Current Predictions**: 227 games for November 23, 2025<br/>
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -55,8 +55,8 @@
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,267
-- **Current Season**: 1262 games
+- **Total Games**: 30,300
+- **Current Season**: 1295 games
 - **Unique Teams**: 1,866
 - **Feature Store**: 12,079 rows
 
@@ -65,8 +65,8 @@
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `17368bf`
-- **Last Update**: 2025-11-23 12:09 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `d4fb9fd`
+- **Last Update**: 2025-11-23 17:08 UTC
 - **Calibration**: Brier 0.2444
 
 </td>
@@ -86,7 +86,7 @@
 | Nov 19 | 28 | 28 | 75.0% | 79.3% | 📊 |
 | Nov 20 | 10 | 10 | 100.0% | 85.2% | 🎯 Excellent |
 | Nov 21 | 14 | 14 | 85.7% | 79.8% | ✅ |
-| Nov 22 | 22 | 22 | 63.6% | 79.9% | 📉 |
+| Nov 22 | 22 | 22 | 63.6% | 79.8% | 📉 |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -339,7 +339,7 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 - **Overall Accuracy**: 83.5% (on 1,007 predictions)
 - **Current Season (2025-26) Tuning**: 89.2%
-- **Training Data**: 30,267 games (current season: 1,262)
+- **Training Data**: 30,300 games (current season: 1,295)
 - **Calibration (Brier)**: Weighted=0.2444, Unweighted=0.2265 (Δ W-U: +0.0179)
 - **Calibration (ECE)**: Weighted=0.1231, Unweighted=0.0883 (Δ W-U: +0.0348)
   *Lower is better; weighted model emphasizes current season.*
@@ -347,8 +347,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `17368bf`
-*Refreshed: 2025-11-23 12:09 UTC*
+- Commit Hash: `d4fb9fd`
+*Refreshed: 2025-11-23 17:08 UTC*
 
 ## 🚀 Automation
 

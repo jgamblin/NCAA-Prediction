@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-23 06:09:37 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `17368bf`
+**Last Updated**: 2025-11-23 11:08:48 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `d4fb9fd`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 30
-- **Average Confidence**: 80.5%
+- **Average Confidence**: 80.4%
 - **High (≥70%)**: 29 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
@@ -31,57 +31,61 @@
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
 | 1 | **Duke** | Howard | 85.3% |
-| 2 | **Connecticut** | Bryant | 84.5% |
-| 3 | **Georgia Tech** | West Georgia | 82.7% |
-| 4 | **Montana** | Lamar | 82.5% |
-| 5 | **Middle Tennessee** | Murray State | 82.5% |
-| 6 | **Alabama State** | SIU Edwardsville | 82.3% |
-| 7 | **Monmouth** | Robert Morris | 82.3% |
+| 2 | **Connecticut** | Bryant | 84.2% |
+| 3 | **Alabama State** | SIU Edwardsville | 82.4% |
+| 4 | **Delaware** | Southern Illinois | 82.4% |
+| 5 | **Georgia Tech** | West Georgia | 82.3% |
+| 6 | **Monmouth** | Robert Morris | 82.3% |
+| 7 | **Montana** | Lamar | 82.2% |
 | 8 | **South Dakota** | South Carolina State | 82.2% |
-| 9 | **George Washington** | McNeese | 82.1% |
-| 10 | **Miami (FL)** | Delaware State | 82.1% |
-| 11 | **Furman** | Queens University | 82.0% |
-| 12 | **Pittsburgh** | Quinnipiac | 81.9% |
-| 13 | **Western Michigan** | Mount St. Mary's | 81.9% |
-| 14 | **Delaware** | Southern Illinois | 81.9% |
-| 15 | **Georgia** | Clemson | 81.9% |
-| 16 | **Oklahoma** | Alcorn State | 81.7% |
-| 17 | **Illinois State** | Coastal Carolina | 81.6% |
-| 18 | **Marshall** | Mercyhurst | 81.5% |
-| 19 | **Columbia** | Longwood | 81.2% |
-| 20 | **Central Arkansas** | Eastern Washington | 81.1% |
-| 21 | **Wyoming** | Norfolk State | 81.0% |
-| 22 | **Drexel** | Old Dominion | 80.1% |
-| 23 | **Xavier** | West Virginia | 80.0% |
-| 24 | **Butler** | Virginia | 79.1% |
-| 25 | **Air Force** | IU Indianapolis | 79.0% |
-| 26 | **Cal State Fullerton** | Northern Colorado | 78.7% |
-| 27 | **Davidson** | Utah State | 78.1% |
-| 28 | **Jackson State** | Winthrop | 77.2% |
-| 29 | **Charleston** | Yale | 72.8% |
+| 9 | **Middle Tennessee** | Murray State | 81.9% |
+| 10 | **George Washington** | McNeese | 81.7% |
+| 11 | **Miami (FL)** | Delaware State | 81.7% |
+| 12 | **Furman** | Queens University | 81.6% |
+| 13 | **Oklahoma** | Alcorn State | 81.6% |
+| 14 | **Georgia** | Clemson | 81.6% |
+| 15 | **Western Michigan** | Mount St. Mary's | 81.4% |
+| 16 | **Pittsburgh** | Quinnipiac | 81.4% |
+| 17 | **Columbia** | Longwood | 81.0% |
+| 18 | **Wyoming** | Norfolk State | 80.9% |
+| 19 | **Illinois State** | Coastal Carolina | 80.9% |
+| 20 | **Marshall** | Mercyhurst | 80.8% |
+| 21 | **Central Arkansas** | Eastern Washington | 80.8% |
+| 22 | **Drexel** | Old Dominion | 80.0% |
+| 23 | **Butler** | Virginia | 79.7% |
+| 24 | **Air Force** | IU Indianapolis | 79.5% |
+| 25 | **Xavier** | West Virginia | 79.3% |
+| 26 | **Davidson** | Utah State | 78.4% |
+| 27 | **Jackson State** | Winthrop | 77.6% |
+| 28 | **Cal State Fullerton** | Northern Colorado | 77.5% |
+| 29 | **Charleston** | Yale | 72.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UNC Greensboro** | Youngstown State | 63.8% |
+| 1 | **UNC Greensboro** | Youngstown State | 65.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Youngstown State @ UNC Greensboro | 63.8% |  |
+| 1 | Youngstown State @ UNC Greensboro | 65.8% |  |
+| 2 | Yale @ Charleston | 72.5% |  |
+| 3 | Northern Colorado @ Cal State Fullerton | 77.5% |  |
+| 4 | Winthrop @ Jackson State | 77.6% |  |
+| 5 | Utah State @ Davidson | 78.4% |  |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 30
 - Away Teams Favored: 0
 - Max Confidence: 85.3%
-- Min Confidence: 63.8%
+- Min Confidence: 65.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (226 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (227 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
@@ -100,7 +104,7 @@
 | 2025-11-19 | 28 | 21 | 75.0% | 79.3% |
 | 2025-11-20 | 10 | 10 | 100.0% | 85.2% |
 | 2025-11-21 | 14 | 12 | 85.7% | 79.8% |
-| 2025-11-22 | 22 | 14 | 63.6% | 79.9% |
+| 2025-11-22 | 22 | 14 | 63.6% | 79.8% |
 
 ---
 
