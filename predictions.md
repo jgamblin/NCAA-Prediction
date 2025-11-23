@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-23 11:08:48 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `d4fb9fd`
+**Last Updated**: 2025-11-23 11:15:26 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `8eb150e`
 
 ---
 
@@ -31,57 +31,57 @@
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
 | 1 | **Duke** | Howard | 85.3% |
-| 2 | **Connecticut** | Bryant | 84.2% |
-| 3 | **Alabama State** | SIU Edwardsville | 82.4% |
-| 4 | **Delaware** | Southern Illinois | 82.4% |
-| 5 | **Georgia Tech** | West Georgia | 82.3% |
-| 6 | **Monmouth** | Robert Morris | 82.3% |
-| 7 | **Montana** | Lamar | 82.2% |
-| 8 | **South Dakota** | South Carolina State | 82.2% |
+| 2 | **Connecticut** | Bryant | 84.0% |
+| 3 | **Delaware** | Southern Illinois | 82.5% |
+| 4 | **Alabama State** | SIU Edwardsville | 82.4% |
+| 5 | **Georgia Tech** | West Georgia | 82.4% |
+| 6 | **Monmouth** | Robert Morris | 82.2% |
+| 7 | **South Dakota** | South Carolina State | 82.2% |
+| 8 | **Montana** | Lamar | 82.1% |
 | 9 | **Middle Tennessee** | Murray State | 81.9% |
-| 10 | **George Washington** | McNeese | 81.7% |
-| 11 | **Miami (FL)** | Delaware State | 81.7% |
-| 12 | **Furman** | Queens University | 81.6% |
-| 13 | **Oklahoma** | Alcorn State | 81.6% |
-| 14 | **Georgia** | Clemson | 81.6% |
-| 15 | **Western Michigan** | Mount St. Mary's | 81.4% |
-| 16 | **Pittsburgh** | Quinnipiac | 81.4% |
-| 17 | **Columbia** | Longwood | 81.0% |
-| 18 | **Wyoming** | Norfolk State | 80.9% |
-| 19 | **Illinois State** | Coastal Carolina | 80.9% |
-| 20 | **Marshall** | Mercyhurst | 80.8% |
-| 21 | **Central Arkansas** | Eastern Washington | 80.8% |
+| 10 | **Furman** | Queens University | 81.7% |
+| 11 | **George Washington** | McNeese | 81.7% |
+| 12 | **Oklahoma** | Alcorn State | 81.7% |
+| 13 | **Miami (FL)** | Delaware State | 81.7% |
+| 14 | **Western Michigan** | Mount St. Mary's | 81.5% |
+| 15 | **Pittsburgh** | Quinnipiac | 81.5% |
+| 16 | **Georgia** | Clemson | 81.5% |
+| 17 | **Illinois State** | Coastal Carolina | 80.9% |
+| 18 | **Columbia** | Longwood | 80.9% |
+| 19 | **Wyoming** | Norfolk State | 80.9% |
+| 20 | **Central Arkansas** | Eastern Washington | 80.8% |
+| 21 | **Marshall** | Mercyhurst | 80.8% |
 | 22 | **Drexel** | Old Dominion | 80.0% |
-| 23 | **Butler** | Virginia | 79.7% |
+| 23 | **Butler** | Virginia | 79.8% |
 | 24 | **Air Force** | IU Indianapolis | 79.5% |
-| 25 | **Xavier** | West Virginia | 79.3% |
-| 26 | **Davidson** | Utah State | 78.4% |
-| 27 | **Jackson State** | Winthrop | 77.6% |
-| 28 | **Cal State Fullerton** | Northern Colorado | 77.5% |
+| 25 | **Xavier** | West Virginia | 79.4% |
+| 26 | **Davidson** | Utah State | 78.6% |
+| 27 | **Cal State Fullerton** | Northern Colorado | 77.9% |
+| 28 | **Jackson State** | Winthrop | 77.6% |
 | 29 | **Charleston** | Yale | 72.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UNC Greensboro** | Youngstown State | 65.8% |
+| 1 | **UNC Greensboro** | Youngstown State | 66.2% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Youngstown State @ UNC Greensboro | 65.8% |  |
+| 1 | Youngstown State @ UNC Greensboro | 66.2% |  |
 | 2 | Yale @ Charleston | 72.5% |  |
-| 3 | Northern Colorado @ Cal State Fullerton | 77.5% |  |
-| 4 | Winthrop @ Jackson State | 77.6% |  |
-| 5 | Utah State @ Davidson | 78.4% |  |
+| 3 | Winthrop @ Jackson State | 77.6% |  |
+| 4 | Northern Colorado @ Cal State Fullerton | 77.9% |  |
+| 5 | Utah State @ Davidson | 78.6% |  |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 30
 - Away Teams Favored: 0
 - Max Confidence: 85.3%
-- Min Confidence: 65.8%
+- Min Confidence: 66.2%
 
 ### 📋 Full Data
 
