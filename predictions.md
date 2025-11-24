@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-24 14:28:36 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `639d5a3`
+**Last Updated**: 2025-11-24 14:58:20 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `22d282a`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 25
-- **Average Confidence**: 78.5%
-- **High (≥70%)**: 22 · **Medium (60-70%)**: 2 · **Other (<60%)**: 1
+- **Games Predicted Today**: 24
+- **Average Confidence**: 78.3%
+- **High (≥70%)**: 21 · **Medium (60-70%)**: 2 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,60 +30,58 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Michigan** | San Diego State | 85.3% |
-| 2 | **Louisville** | Eastern Michigan | 85.1% |
-| 3 | **Appalachian St** | Elon | 82.0% |
-| 4 | **Oakland** | Lamar | 82.0% |
-| 5 | **Arkansas State** | Jacksonville State | 81.9% |
-| 6 | **Kennesaw State** | Rice | 81.6% |
-| 7 | **Middle Tennessee** | George Washington | 81.5% |
-| 8 | **George Mason** | Ohio | 81.2% |
-| 9 | **Mississippi State** | New Orleans | 81.2% |
-| 10 | **McNeese** | Murray State | 81.1% |
-| 11 | **Florida Gulf Coast** | Oral Roberts | 81.1% |
-| 12 | **Bradley** | Princeton | 81.1% |
-| 13 | **Florida International** | James Madison | 81.0% |
-| 14 | **Florida Atlantic** | Loyola Marymount | 80.9% |
-| 15 | **Northern Arizona** | Cal Poly | 80.9% |
-| 16 | **Kansas** | Notre Dame | 80.9% |
-| 17 | **Cincinnati** | NJIT | 80.8% |
-| 18 | **UC San Diego** | Temple | 80.7% |
-| 19 | **UTEP** | William & Mary | 78.2% |
-| 20 | **Abilene Christian** | UTSA | 75.9% |
-| 21 | **Boise State** | USC | 74.9% |
-| 22 | **Maryland** | UNLV | 73.2% |
+| 1 | **Michigan** | San Diego State | 85.5% |
+| 2 | **Louisville** | Eastern Michigan | 85.3% |
+| 3 | **Appalachian St** | Elon | 81.8% |
+| 4 | **Middle Tennessee** | George Washington | 81.8% |
+| 5 | **Arkansas State** | Jacksonville State | 81.7% |
+| 6 | **Mississippi State** | New Orleans | 81.7% |
+| 7 | **Lamar** | Oakland | 81.6% |
+| 8 | **Kennesaw State** | Rice | 81.6% |
+| 9 | **George Mason** | Ohio | 81.3% |
+| 10 | **Florida Gulf Coast** | Oral Roberts | 81.2% |
+| 11 | **McNeese** | Murray State | 81.0% |
+| 12 | **Bradley** | Princeton | 81.0% |
+| 13 | **Northern Arizona** | Cal Poly | 81.0% |
+| 14 | **Florida International** | James Madison | 80.9% |
+| 15 | **Florida Atlantic** | Loyola Marymount | 80.9% |
+| 16 | **Cincinnati** | NJIT | 80.8% |
+| 17 | **UC San Diego** | Temple | 80.4% |
+| 18 | **UTEP** | William & Mary | 78.0% |
+| 19 | **Abilene Christian** | UTSA | 75.7% |
+| 20 | **Boise State** | USC | 74.5% |
+| 21 | **Maryland** | UNLV | 73.3% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Georgia Southern** | Youngstown State | 66.8% |
-| 2 | **St. John's** | Iowa State | 64.4% |
+| 1 | **St. John's** | Iowa State | 65.6% |
+| 2 | **Georgia Southern** | Youngstown State | 65.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Yale @ Akron | 58.6% | Close |
-| 2 | Iowa State @ St. John's | 64.4% |  |
+| 1 | Yale @ Akron | 56.6% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 25
+- Home Teams Favored: 24
 - Away Teams Favored: 0
-- Max Confidence: 85.3%
-- Min Confidence: 58.6%
+- Max Confidence: 85.5%
+- Min Confidence: 56.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (194 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (193 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 81.2% (1140 evaluated)
-- **Last 10 Days**: 74.1% (425 games)
+- **Overall Accuracy**: 80.5% (1158 evaluated)
+- **Last 10 Days**: 72.5% (443 games)
 
 ### Last 7 Days
 
@@ -95,7 +93,7 @@
 | 2025-11-21 | 14 | 12 | 85.7% | 79.8% |
 | 2025-11-22 | 22 | 14 | 63.6% | 79.8% |
 | 2025-11-23 | 120 | 84 | 70.0% | 80.4% |
-| 2025-11-24 | 18 | 6 | 33.3% | 78.2% |
+| 2025-11-24 | 36 | 12 | 33.3% | 78.2% |
 
 ---
 
