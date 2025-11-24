@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-23 11:08:50
+**Last Updated**: 2025-11-24 14:28:38
 
 **Tracking Started**: 2025-11-10
 
@@ -19,23 +19,23 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 12
-- **Win Rate**: 75.0% (9W-3L)
-- **Total Wagered**: $12.00
+- **Total Bets**: 13
+- **Win Rate**: 69.2% (9W-4L)
+- **Total Wagered**: $13.00
 - **Total Payout**: $12.73
-- **Net Profit**: $0.73 🟢
-- **ROI**: 6.1%
+- **Net Profit**: $-0.27 🔴
+- **ROI**: -2.0%
 
 ---
 
 ## 💎 Today's Bet
 
-**Jackson State** vs **Winthrop**
+**Middle Tennessee** vs **George Washington**
 
-- **Bet On**: Jackson State
-- **Confidence**: 77.6%
+- **Bet On**: Middle Tennessee
+- **Confidence**: 81.5%
 - **Moneyline**: +400
-- **Value Score**: 2.879
+- **Value Score**: 3.077
 - **Potential Profit**: $4.00
 
 ✅ *Best value opportunity today - optimal balance of probability and odds*
@@ -47,7 +47,7 @@
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
 | <60% | 4 | 50.0% | $-0.40 | -10.0% |
-| 70-80% | 6 | 100.0% | $1.97 | 32.8% |
+| 70-80% | 7 | 85.7% | $0.97 | 13.8% |
 | 80-90% | 2 | 50.0% | $-0.83 | -41.7% |
 
 ---
@@ -56,6 +56,7 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Value Score | Profit |
 |------|--------|---------|--------|----|-----------:|------------:|-------:|
+| 2025-11-23 | ❌ | Northern Colorado @ Cal State Fullerton | Cal State Fullerton | +475 | 77.5% | 3.458 | -$1.00 |
 | 2025-11-22 | ❌ | High Point @ Incarnate Word | Incarnate Word | +600 | 81.8% | 4.725 | -$1.00 |
 | 2025-11-21 | ❌ | Texas Tech @ Purdue | Texas Tech | +135 | 51.2% | 0.204 | -$1.00 |
 | 2025-11-20 | ✅ | Wake Forest @ Texas Tech | Texas Tech | -600 | 85.2% | -0.006 | $0.17 |
@@ -76,7 +77,7 @@
 
 | Season | Bets | Win Rate | Profit | ROI |
 |--------|------|----------|--------|-----|
-| 2025-26 | 12 | 75.0% | $0.73 | 6.1% |
+| 2025-26 | 13 | 69.2% | $-0.27 | -2.0% |
 
 ---
 

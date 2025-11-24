@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-11-23 11:08:50
+**Last Updated**: 2025-11-24 14:28:38
 
 **Tracking Started**: 2025-11-10
 
@@ -19,23 +19,23 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 12
-- **Win Rate**: 100.0% (12W-0L)
-- **Total Wagered**: $12.00
+- **Total Bets**: 13
+- **Win Rate**: 92.3% (12W-1L)
+- **Total Wagered**: $13.00
 - **Total Payout**: $14.03
-- **Net Profit**: $2.03 🟢
-- **ROI**: 16.9%
+- **Net Profit**: $1.03 🟢
+- **ROI**: 7.9%
 
 ---
 
 ## 🎯 Today's Bet
 
-**Alabama State** vs **SIU Edwardsville**
+**Michigan** vs **San Diego State**
 
-- **Bet On**: Alabama State
-- **Confidence**: 82.4%
-- **Moneyline**: +120
-- **Potential Profit**: $1.20
+- **Bet On**: Michigan
+- **Confidence**: 85.3%
+- **Moneyline**: -240
+- **Potential Profit**: $0.42
 
 ✅ *Highest confidence game today with real ESPN odds*
 
@@ -46,7 +46,7 @@
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
 | 70-80% | 1 | 100.0% | $0.22 | 22.2% |
-| 80-90% | 11 | 100.0% | $1.81 | 16.5% |
+| 80-90% | 12 | 91.7% | $0.81 | 6.8% |
 
 ---
 
@@ -54,6 +54,7 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Profit |
 |------|--------|---------|--------|----|-----------:|-------:|
+| 2025-11-23 | ❌ | SIU Edwardsville @ Alabama State | Alabama State | +120 | 82.4% | -$1.00 |
 | 2025-11-22 | ✅ | Milwaukee @ Wichita State | Wichita State | -700 | 83.2% | $0.14 |
 | 2025-11-21 | ✅ | Louisville @ Cincinnati | Louisville | -450 | 78.6% | $0.22 |
 | 2025-11-20 | ✅ | Wake Forest @ Texas Tech | Texas Tech | -600 | 85.2% | $0.17 |
@@ -74,7 +75,7 @@
 
 | Season | Bets | Win Rate | Profit | ROI |
 |--------|------|----------|--------|-----|
-| 2025-26 | 12 | 100.0% | $2.03 | 16.9% |
+| 2025-26 | 13 | 92.3% | $1.03 | 7.9% |
 
 ---
 
