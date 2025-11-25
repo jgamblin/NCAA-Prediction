@@ -1,6 +1,6 @@
 # 🎲 NCAA Basketball Betting Strategies Comparison
 
-**Last Updated**: 2025-11-24 20:58:24
+**Last Updated**: 2025-11-25 12:11:34
 
 This page compares two independent betting strategies. Each strategy is tracked separately in its own file:
 
@@ -17,10 +17,10 @@ This page compares two independent betting strategies. Each strategy is tracked 
 
 | Metric | Value |
 |--------|-------|
-| Total Bets | 13 |
-| Win Rate | 92.3% (12W-1L) |
-| Net Profit | $1.03 🟢 |
-| ROI | 7.9% |
+| Total Bets | 14 |
+| Win Rate | 92.9% (13W-1L) |
+| Net Profit | $1.38 🟢 |
+| ROI | 9.8% |
 
 **[→ View Complete Safest Bet Tracker](safest_bets.md)**
 
@@ -32,10 +32,10 @@ This page compares two independent betting strategies. Each strategy is tracked 
 
 | Metric | Value |
 |--------|-------|
-| Total Bets | 13 |
-| Win Rate | 69.2% (9W-4L) |
-| Net Profit | $-0.27 🔴 |
-| ROI | -2.0% |
+| Total Bets | 14 |
+| Win Rate | 71.4% (10W-4L) |
+| Net Profit | $0.53 🟢 |
+| ROI | 3.8% |
 
 **[→ View Complete Value Bet Tracker](value_bets.md)**
 
@@ -45,10 +45,10 @@ This page compares two independent betting strategies. Each strategy is tracked 
 
 | Metric | 🎯 Safest | 💎 Value | Winner |
 |--------|-----------|----------|--------|
-| Win Rate | 92.3% | 69.2% | 🎯 Safest |
-| Total Profit | $1.03 | $-0.27 | 🎯 Safest |
-| ROI | 7.9% | -2.0% | 🎯 Safest |
-| Total Bets | 13 | 13 | - |
+| Win Rate | 92.9% | 71.4% | 🎯 Safest |
+| Total Profit | $1.38 | $0.53 | 🎯 Safest |
+| ROI | 9.8% | 3.8% | 🎯 Safest |
+| Total Bets | 14 | 14 | - |
 
 ---
 

@@ -7,10 +7,10 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **80.5% Accuracy** across 1158 predictions  
-📈 **30,368 Historical Games** powering model  
+🎯 **79.4% Accuracy** across 1211 predictions  
+📈 **30,347 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
-⚡ **24 Live Predictions** for today  
+⚡ **55 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
 
 <!-- END AUTO-UPDATED: Hero Stats -->
@@ -18,7 +18,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 193 games for November 24, 2025<br/>
+**Current Predictions**: 215 games for November 25, 2025<br/>
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -46,28 +46,28 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 80.5% (1158 games)
+- **Overall**: 79.4% (1211 games)
 - **High Confidence**: 76.9% avg
-- **Current Season**: 89.2% tuning accuracy
+- **Current Season**: 88.3% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
 
 </td>
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,368
-- **Current Season**: 1363 games
-- **Unique Teams**: 1,867
-- **Feature Store**: 12,098 rows
+- **Total Games**: 30,347
+- **Current Season**: 1342 games
+- **Unique Teams**: 1,871
+- **Feature Store**: 12,122 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `22d282a`
-- **Last Update**: 2025-11-24 20:58 UTC
-- **Calibration**: Brier 0.2444
+- **Lineage**: `7dd58a0bb0e2` @ `b6ff098`
+- **Last Update**: 2025-11-25 12:11 UTC
+- **Calibration**: Brier 0.2552
 
 </td>
 </tr>
@@ -83,10 +83,10 @@
 | Nov 18 | 68 | 68 | 88.2% | 78.2% | ✅ |
 | Nov 19 | 28 | 28 | 75.0% | 79.3% | 📊 |
 | Nov 20 | 5 | 5 | 100.0% | 85.2% | 🎯 Excellent |
-| Nov 21 | 14 | 14 | 85.7% | 79.8% | ✅ |
+| Nov 21 | 7 | 7 | 85.7% | 79.8% | ✅ |
 | Nov 22 | 22 | 22 | 63.6% | 79.8% | 📉 |
 | Nov 23 | 120 | 120 | 70.0% | 80.4% | 📉 |
-| Nov 24 | 36 | 36 | 33.3% | 78.2% | 📉 |
+| Nov 24 | 96 | 96 | 50.0% | 79.7% | 📉 |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -337,18 +337,18 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 80.5% (on 1,158 predictions)
-- **Current Season (2025-26) Tuning**: 89.2%
-- **Training Data**: 30,368 games (current season: 1,363)
-- **Calibration (Brier)**: Weighted=0.2444, Unweighted=0.2265 (Δ W-U: +0.0179)
-- **Calibration (ECE)**: Weighted=0.1231, Unweighted=0.0883 (Δ W-U: +0.0348)
+- **Overall Accuracy**: 79.4% (on 1,211 predictions)
+- **Current Season (2025-26) Tuning**: 88.3%
+- **Training Data**: 30,347 games (current season: 1,342)
+- **Calibration (Brier)**: Weighted=0.2552, Unweighted=0.2269 (Δ W-U: +0.0283)
+- **Calibration (ECE)**: Weighted=0.1620, Unweighted=0.0882 (Δ W-U: +0.0738)
   *Lower is better; weighted model emphasizes current season.*
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `22d282a`
-*Refreshed: 2025-11-24 20:58 UTC*
+- Commit Hash: `b6ff098`
+*Refreshed: 2025-11-25 12:11 UTC*
 
 ## 🚀 Automation
 

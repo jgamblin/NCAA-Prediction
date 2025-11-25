@@ -75,13 +75,13 @@ Actual Wins: 2133
 ## Season 2025-26
 
 ### Team 
-Games Seen: 1023
-Cumulative Accuracy: 0.772
-Rolling 25 Accuracy: 0.520
-Cumulative LogLoss: 0.530
-Rolling 25 LogLoss: 0.854
-Cumulative Brier: 0.173
-Rolling 25 Brier: 0.315
-Expected Wins: 317.5
-Actual Wins: 177
+Games Seen: 1053
+Cumulative Accuracy: 0.767
+Rolling 25 Accuracy: 0.480
+Cumulative LogLoss: 0.537
+Rolling 25 LogLoss: 0.930
+Cumulative Brier: 0.177
+Rolling 25 Brier: 0.346
+Expected Wins: 323.3
+Actual Wins: 189
 
