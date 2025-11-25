@@ -1182,7 +1182,6 @@ game_id,date,away_team,away_games,home_team,home_games,min_games,reason,game_url
 401830889,2025-11-25,Rhode Island,157,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830889
 401831234,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831234
 401831196,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831196
-401830890,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830890
 401831235,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831235
 401830891,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830891
 401831197,2025-11-25,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831197
@@ -1721,194 +1720,14 @@ game_id,date,away_team,away_games,home_team,home_games,min_games,reason,game_url
 401823436,2025-11-25,Tennessee Southern Firehawks,0,North Alabama,161,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823436
 401828284,2025-11-25,Tulsa Golden Hurricane,5,San Jose State,145,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828284
 401826815,2025-11-25,East Texas A&M,34,Army Black,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826815
-401817482,2025-11-25,Syracuse Orange,5,Kansas,180,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817482
-401820188,2025-11-25,Washington College (MD) Shoremen,1,Loyola Maryland,150,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820188
-401823535,2025-11-25,San Diego Toreros,5,California Baptist,14,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823535
-401829392,2025-11-25,Brescia,8,UT Martin Skyhawks,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829392
-401828683,2025-11-25,Salve Regina Seahawks,0,New Haven Chargers,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828683
-401827485,2025-11-25,Waynesburg,0,Cleveland State,173,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827485
-401823735,2025-11-25,Cal State Bakersfield,9,Florida State,157,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823735
-401823456,2025-11-25,Adrian,0,Central Michigan,154,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823456
-401822668,2025-11-25,Rutgers-Camden RUTGERS-CAMDEN,0,Saint Joseph's,158,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822668
-401822313,2025-11-25,Dominican (IL) Dominican,1,Milwaukee,162,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822313
-401817532,2025-11-25,Campbell Fighting,6,Wake Forest,163,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817532
-401813323,2025-11-25,Lehigh Mountain,6,Marist Red Foxes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813323
-401820842,2025-11-25,Piedmont,9,Charleston Southern Buccaneers,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820842
-401823464,2025-11-25,Northern Illinois,149,Austin Peay Governors,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823464
-401827068,2025-11-25,Winthrop,162,Nebraska Cornhuskers,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827068
-401826929,2025-11-25,San Francisco State,6,Sacramento State,110,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826929
-401831199,2025-11-25,Texas Longhorns,6,Chaminade Silverswords,1,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831199
-401823765,2025-11-25,San Diego State,171,Oregon Ducks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823765
-401812264,2025-11-25,UNLV,164,Alabama Crimson Tide,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812264
-401819910,2025-11-25,Utah,164,Grand Canyon Lopes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401819910
-401831222,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831222
-401831221,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831221
-401831220,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831220
-401831219,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831219
-401831218,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831218
-401831217,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831217
-401831216,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831216
-401830882,2025-11-26,Toledo,171,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830882
-401830892,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830892
-401830009,2025-11-26,Misericordia,4,Cornell Big,5,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830009
-401822352,2025-11-26,UMass Lowell River,8,Stonehill Skyhawks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822352
-401830883,2025-11-26,Troy,168,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830883
-401830746,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830746
-401830237,2025-11-26,St. Mary's (MD) Seahawks,0,Howard,145,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830237
-401820617,2025-11-26,Mercy,3,Bryant,159,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820617
-401812666,2025-11-26,Worcester State,1,Holy Cross,151,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812666
-401812288,2025-11-26,Army Black,6,Fairleigh Dickinson,159,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812288
-401831378,2025-11-26,Virginia St,0,Delaware State,149,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831378
-401831200,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831200
-401830893,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830893
-401828497,2025-11-26,Texas Lutheran,7,Incarnate Word,159,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828497
-401822333,2025-11-26,Southern Indiana,102,Valparaiso Beacons,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822333
-401820153,2025-11-26,Navy,153,Gardner-Webb Runnin',7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820153
-401830747,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830747
-401830915,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830915
-401823860,2025-11-26,Wagner Seahawks,6,Manhattan,147,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823860
-401831201,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831201
-401813450,2025-11-26,Central State (OH) Marauders,0,Duquesne,157,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813450
-401823353,2025-11-26,Sam Houston State,166,Idaho State Bengals,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823353
-401831215,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831215
 401828333,2025-11-26,Houston Christian,66,The Citadel,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828333
-401823591,2025-11-26,SE Louisiana,5,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823591
-401830894,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830894
-401823760,2025-11-26,Denver Pioneers,6,Wyoming,161,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823760
-401831214,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831214
-401831202,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831202
-401830744,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830744
-401823309,2025-11-26,Long Beach State Beach,6,Portland,162,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823309
-401831203,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831203
-401830745,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830745
-401830752,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830752
-401809398,2025-11-27,Charlotte 49ers,7,Illinois State,165,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809398
-401819865,2025-11-27,San Francisco Dons,7,Colorado,177,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401819865
-401830753,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830753
-401809047,2025-11-27,TCU Horned Frogs,5,Florida,173,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809047
-401827268,2025-11-27,Washington,158,Nevada Wolf Pack,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827268
 401809419,2025-11-27,BYU,5,Miami (FL),171,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809419
-401830875,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830875
-401830754,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830754
-401830887,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830887
-401830878,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830878
-401823592,2025-11-28,SE Louisiana,5,Gardner-Webb Runnin',7,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823592
-401811096,2025-11-28,Connecticut,177,Illinois Fighting,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401811096
-401830917,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830917
-401830879,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830879
-401822835,2025-11-28,Siena Saints,6,Longwood,168,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822835
-401830748,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830748
-401829431,2025-11-28,Tennessee Wesleyan,6,Chattanooga Mocs,7,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829431
 401824127,2025-11-28,Texas State,164,Seattle U,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824127
-401823404,2025-11-28,Southern Utah Thunderbirds,8,Robert Morris,158,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823404
-401823396,2025-11-28,Holy Cross College (IN) Saints,0,Purdue Fort Wayne,163,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823396
-401822182,2025-11-28,Hofstra Pride,5,La Salle,162,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822182
-401831223,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831223
-401830916,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830916
-401826748,2025-11-28,Nicholls State,162,Tulane Green Wave,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826748
-401820154,2025-11-28,Navy,153,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820154
-401829395,2025-11-28,Maine Black,7,American University,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829395
-401829343,2025-11-28,Missouri Baptist,3,SIU Edwardsville,100,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829343
-401820843,2025-11-28,Charleston Southern Buccaneers,7,South Carolina Gamecocks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820843
-401830876,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830876
-401830749,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830749
-401829415,2025-11-28,Lehigh Mountain,6,UC Santa Barbara,162,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829415
 401812578,2025-11-28,Merrimack,154,Pennsylvania,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812578
-401830741,2025-11-28,Franklin Pierce,1,Fordham,151,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830741
-401826998,2025-11-28,Midwestern State,1,Tarleton,159,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826998
-401831224,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831224
-401830877,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830877
-401823260,2025-11-28,Cal State Northridge,19,Idaho State Bengals,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823260
-401830750,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830750
-401825573,2025-11-28,Georgia Tech,164,DePaul Blue,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401825573
 401817459,2025-11-28,SMU,7,Mississippi State,176,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817459
-401828269,2025-11-28,Colgate,160,UAlbany Great Danes,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828269
-401828662,2025-11-28,Jackson State,154,Louisiana Ragin' Cajuns,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828662
-401830886,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830886
-401830751,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830751
-401824900,2025-11-28,North Dakota Fighting,10,Hawai'i Rainbow,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824900
 401820155,2025-11-29,SE Louisiana,5,Navy,153,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820155
-401831275,2025-11-29,Emerson,3,UMass Lowell River,8,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831275
-401823861,2025-11-29,Manhattan,147,Army Black,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823861
-401820626,2025-11-29,Maine Black,7,Longwood,168,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820626
-401813379,2025-11-29,Detroit Mercy,157,Niagara Purple,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813379
-401831276,2025-11-29,Dartmouth Big Green,4,Saint Peter's,145,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831276
-401831225,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831225
-401829389,2025-11-29,Tennessee Wesleyan,6,Tennessee State,158,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829389
-401828478,2025-11-29,Haskell,3,Green Bay,160,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828478
-401827062,2025-11-29,South Carolina Upstate,126,Nebraska Cornhuskers,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827062
-401826905,2025-11-29,Merrimack,154,Hofstra Pride,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826905
-401823545,2025-11-29,Southern Utah Thunderbirds,8,Stetson,162,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823545
-401818533,2025-11-29,Sarah Lawrence Gryphons,0,Columbia,116,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401818533
-401812383,2025-11-29,Franciscan University Barons,0,Saint Francis,6,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812383
-401826072,2025-11-29,Notre Dame (MD),1,Radford,166,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826072
-401823593,2025-11-29,Gardner-Webb Runnin',7,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823593
-401822334,2025-11-29,Western Michigan,155,Valparaiso Beacons,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822334
-401830884,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830884
-401829353,2025-11-29,Kentucky State Thorobreds,0,Southern Indiana,102,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829353
-401826934,2025-11-29,Kansas City Roos,6,Weber State,162,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826934
-401824853,2025-11-29,Gwynedd-Mercy Griffins,0,Maryland-Eastern Shore,55,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824853
-401822836,2025-11-29,Siena Saints,6,American University,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822836
-401831226,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831226
 401812579,2025-11-29,La Salle,162,Pennsylvania,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812579
-401829403,2025-11-29,SUNY-Oneonta,2,Colgate,160,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829403
-401828545,2025-11-29,Wofford,162,Eastern Kentucky Colonels,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828545
-401823446,2025-11-29,Trinity College of Jacksonville,0,North Florida Ospreys,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823446
-401823725,2025-11-29,Sacred Heart Pioneers,6,Penn State,164,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823725
-401813352,2025-11-29,Buffalo,156,Canisius Golden Griffins,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813352
-401830885,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830885
-401830412,2025-11-29,Redlands,1,Cal Poly,159,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830412
-401828513,2025-11-29,Our Lady Of The Lake Saints,0,Lamar,160,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828513
-401823015,2025-11-29,Penn State-Shenango,4,Kent State Golden Flashes,8,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823015
-401828270,2025-11-29,Fordham,151,UAlbany Great Danes,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828270
-401829478,2025-11-29,Lawrence University,0,St. Thomas-Minnesota Tommies,10,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829478
-401829468,2025-11-29,Mid-America Christian Evangels,0,Omaha,161,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829468
-401826920,2025-11-29,Regis (CO) REGIS UNIVERSITY,0,Northern Colorado,168,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826920
-401828684,2025-11-30,Mitchell College Mariners,0,New Haven Chargers,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828684
-401828271,2025-11-30,SUNY-Oneonta,2,UAlbany Great Danes,6,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828271
-401820627,2025-11-30,Siena Saints,6,Maine Black,7,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820627
-401812648,2025-11-30,Johnson & Wales (RI) Griffins,0,Central Connecticut,154,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812648
-401829388,2025-11-30,Tennessee State,158,Chattanooga Mocs,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829388
-401820581,2025-11-30,Stonehill Skyhawks,7,Quinnipiac,159,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820581
-401809079,2025-11-30,Cornell Big,5,Bucknell,150,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809079
-401812580,2025-11-30,Hofstra Pride,5,Pennsylvania,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812580
-401823326,2025-11-30,Northeastern State RiverHawks,0,Missouri State,162,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823326
-401831380,2025-11-30,St. Ambrose Fighting Bees,0,Western Illinois,156,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831380
-401826993,2025-11-30,Longwood,168,American University,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826993
 401826942,2025-11-30,The Citadel,6,Presbyterian,160,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826942
-401823310,2025-11-30,San Diego Toreros,5,Long Beach State Beach,6,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823310
-401823736,2025-11-30,Cal State Bakersfield,9,Fresno State,163,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823736
-401827016,2025-12-01,Louisiana Christian,3,Southern,152,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827016
-401823470,2025-12-01,Central State (OH) Marauders,0,Toledo,171,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823470
-401827523,2025-12-01,Apprentice School Builders,0,Hampton,158,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827523
-401812384,2025-12-01,Saint Francis,6,Xavier,170,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812384
-401822368,2025-12-01,Blackburn,3,Eastern Illinois,157,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822368
-401820546,2025-12-01,Coe Kohawks,1,Northern Iowa,161,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820546
-401823546,2025-12-01,West Coast Baptist,4,Southern Utah Thunderbirds,8,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823546
-401830319,2025-12-01,New Mexico Highlands,5,New Mexico,165,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830319
-401817148,2025-12-02,George Washington,153,Army Black,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817148
-401820844,2025-12-02,Charleston Southern Buccaneers,7,UT Martin Skyhawks,8,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820844
-401827278,2025-12-02,Campbell Fighting,6,Penn State,164,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827278
-401820618,2025-12-02,Stonehill Skyhawks,7,Bryant,159,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820618
-401820609,2025-12-02,Lehigh Mountain,6,Binghamton,150,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820609
-401806366,2025-12-02,Tennessee,179,Syracuse Orange,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401806366
-401831072,2025-12-02,Indiana University East IU EAST,0,Miami (OH),160,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831072
-401830740,2025-12-02,Eureka Red,0,Indiana State,170,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830740
-401826703,2025-12-02,Cornell Big,5,George Mason,159,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826703
-401823447,2025-12-02,SIU Edwardsville,100,North Florida Ospreys,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823447
-401820801,2025-12-02,North Carolina A&T,81,Charlotte 49ers,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820801
-401818303,2025-12-02,SUNY-Maritime,3,Yale,132,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401818303
-401806372,2025-12-02,Virginia Tech,163,South Carolina Gamecocks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401806372
-401829349,2025-12-02,Saint Mary of the Woods College Pomeroys,0,Southeast Missouri State,89,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829349
-401826882,2025-12-02,Mount Marty College,6,Wichita State,156,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826882
-401826845,2025-12-02,Grambling,7,Tulane Green Wave,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826845
-401812359,2025-12-02,Winthrop,162,Long Island University Sharks,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812359
-401828285,2025-12-02,Manhattan Christian Thunder,0,Tulsa Golden Hurricane,5,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828285
-401827217,2025-12-02,Wagner Seahawks,6,Maryland,173,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827217
-401822335,2025-12-02,Valparaiso Beacons,5,Marquette,174,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822335
-401823789,2025-12-02,Stetson,162,Grand Canyon Lopes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823789
-401826909,2025-12-02,UC San Diego,149,Nevada Wolf Pack,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826909
-401825394,2025-12-02,USC,171,Oregon Ducks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401825394
 401831236,2025-11-25,Stony Brook,2,Bethune-Cookman,4,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831236
 401817482,2025-11-25,Syracuse Orange,6,Kansas,181,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817482
 401830890,2025-11-25,UC San Diego Tritons,6,Bradley,173,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830890
@@ -2095,6 +1914,196 @@ game_id,date,away_team,away_games,home_team,home_games,min_games,reason,game_url
 401826845,2025-12-02,Grambling State,167,Tulane Green Wave,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826845
 401812359,2025-12-02,Winthrop,162,Long Island University Sharks,9,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812359
 401828285,2025-12-02,Manhattan Christian Thunder,0,Tulsa Golden Hurricane,6,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828285
+401827217,2025-12-02,Wagner Seahawks,6,Maryland,174,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827217
+401822335,2025-12-02,Valparaiso Beacons,5,Marquette,174,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822335
+401823789,2025-12-02,Stetson,162,Grand Canyon Lopes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823789
+401826909,2025-12-02,UC San Diego Tritons,6,Nevada Wolf Pack,7,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826909
+401825394,2025-12-02,USC,172,Oregon Ducks,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401825394
+401817482,2025-11-25,Syracuse Orange,6,Kansas,181,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817482
+401830890,2025-11-25,UC San Diego Tritons,6,Bradley,173,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830890
+401826950,2025-11-25,Utah Valley,162,South Dakota State Jackrabbits,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826950
+401820188,2025-11-25,Washington College (MD) Shoremen,1,Loyola Maryland,150,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820188
+401823535,2025-11-25,San Diego Toreros,5,California Baptist,14,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823535
+401829392,2025-11-25,Brescia,8,UT Martin Skyhawks,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829392
+401828683,2025-11-25,Salve Regina Seahawks,0,New Haven Chargers,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828683
+401827485,2025-11-25,Waynesburg,0,Cleveland State,173,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827485
+401823735,2025-11-25,Cal State Bakersfield,9,Florida State,157,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823735
+401823456,2025-11-25,Adrian,0,Central Michigan,154,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823456
+401822668,2025-11-25,Rutgers-Camden RUTGERS-CAMDEN,0,Saint Joseph's,110,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822668
+401822313,2025-11-25,Dominican (IL) Dominican,1,Milwaukee,162,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822313
+401817532,2025-11-25,Campbell Fighting,6,Wake Forest,163,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817532
+401813323,2025-11-25,Lehigh Mountain,6,Marist Red Foxes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813323
+401820842,2025-11-25,Piedmont,9,Charleston Southern Buccaneers,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820842
+401823464,2025-11-25,Northern Illinois,106,Austin Peay Governors,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823464
+401827068,2025-11-25,Winthrop,162,Nebraska Cornhuskers,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827068
+401826929,2025-11-25,San Francisco State,6,Sacramento State,110,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826929
+401831199,2025-11-25,Texas Longhorns,7,Chaminade Silverswords,2,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831199
+401823765,2025-11-25,San Diego State,172,Oregon Ducks,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823765
+401812264,2025-11-25,UNLV,165,Alabama Crimson Tide,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812264
+401819910,2025-11-25,Utah,164,Grand Canyon Lopes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401819910
+401830882,2025-11-26,Toledo,171,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830882
+401830892,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830892
+401830009,2025-11-26,Misericordia,4,Cornell Big,5,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830009
+401822352,2025-11-26,UMass Lowell River,8,Stonehill Skyhawks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822352
+401831216,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831216
+401830883,2025-11-26,Troy,168,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830883
+401830746,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830746
+401830237,2025-11-26,St. Mary's (MD) Seahawks,0,Howard,145,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830237
+401823387,2025-11-26,Wofford,162,Northern Kentucky Norse,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823387
+401820617,2025-11-26,Mercy,3,Bryant,159,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820617
+401812666,2025-11-26,Worcester State,1,Holy Cross,152,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812666
+401812288,2025-11-26,Army Black,6,Fairleigh Dickinson,159,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812288
+401831378,2025-11-26,Virginia St,0,Delaware State,149,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831378
+401831200,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831200
+401830893,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830893
+401828497,2025-11-26,Texas Lutheran,8,Incarnate Word,159,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828497
+401822333,2025-11-26,Southern Indiana,102,Valparaiso Beacons,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822333
+401831217,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831217
+401820153,2025-11-26,Navy,153,Gardner-Webb Runnin',7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820153
+401830747,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830747
+401830915,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830915
+401823860,2025-11-26,Wagner Seahawks,6,Manhattan,147,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823860
+401831201,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831201
+401813450,2025-11-26,Central State (OH) Marauders,0,Duquesne,157,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813450
+401823353,2025-11-26,Sam Houston State,166,Idaho State Bengals,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823353
+401831215,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831215
+401823591,2025-11-26,Southeastern Louisiana,161,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823591
+401830894,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830894
+401831218,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831218
+401829475,2025-11-26,South Dakota State Jackrabbits,6,UC Irvine,167,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829475
+401823760,2025-11-26,Denver Pioneers,7,Wyoming,161,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823760
+401831214,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831214
+401831202,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831202
+401830744,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830744
+401823309,2025-11-26,Long Beach State Beach,6,Portland,162,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823309
+401831219,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831219
+401831220,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831220
+401831203,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831203
+401830745,2025-11-26,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830745
+401830752,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830752
+401809398,2025-11-27,Charlotte 49ers,7,Illinois State,165,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809398
+401831221,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831221
+401819865,2025-11-27,San Francisco Dons,7,Colorado,177,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401819865
+401830753,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830753
+401809047,2025-11-27,TCU Horned Frogs,5,Florida,173,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809047
+401831222,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831222
+401827268,2025-11-27,Washington,158,Nevada Wolf Pack,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827268
+401830875,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830875
+401809396,2025-11-27,Georgetown Hoyas,6,Dayton,167,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809396
+401830754,2025-11-27,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830754
+401817469,2025-11-27,Stanford Cardinal,5,Minnesota,163,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817469
+401830887,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830887
+401830878,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830878
+401823592,2025-11-28,Southeastern Louisiana,161,Gardner-Webb Runnin',7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823592
+401811096,2025-11-28,Connecticut,177,Illinois Fighting,9,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401811096
+401830917,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830917
+401830879,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830879
+401822835,2025-11-28,Siena Saints,7,Longwood,168,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822835
+401830748,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830748
+401829431,2025-11-28,Tennessee Wesleyan,6,Chattanooga Mocs,7,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829431
+401823404,2025-11-28,Southern Utah Thunderbirds,8,Robert Morris,158,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823404
+401823396,2025-11-28,Holy Cross College (IN) Saints,0,Purdue Fort Wayne,163,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823396
+401822182,2025-11-28,Hofstra Pride,5,La Salle,162,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822182
+401831223,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831223
+401830916,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830916
+401826748,2025-11-28,Nicholls State,162,Tulane Green Wave,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826748
+401820154,2025-11-28,Navy,153,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820154
+401829395,2025-11-28,Maine Black,7,American University,9,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829395
+401829343,2025-11-28,Missouri Baptist,3,SIU Edwardsville,100,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829343
+401820843,2025-11-28,Charleston Southern Buccaneers,7,South Carolina Gamecocks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820843
+401830876,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830876
+401830749,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830749
+401829415,2025-11-28,Lehigh Mountain,6,UC Santa Barbara,106,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829415
+401830741,2025-11-28,Franklin Pierce,1,Fordham,151,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830741
+401826998,2025-11-28,Midwestern State,1,Tarleton,159,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826998
+401831224,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831224
+401830877,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830877
+401823260,2025-11-28,Cal State Northridge,19,Idaho State Bengals,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823260
+401830750,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830750
+401825573,2025-11-28,Georgia Tech,164,DePaul Blue,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401825573
+401828269,2025-11-28,Colgate,160,UAlbany Great Danes,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828269
+401828662,2025-11-28,Jackson State,154,Louisiana Ragin' Cajuns,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828662
+401830886,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830886
+401830751,2025-11-28,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830751
+401824900,2025-11-28,North Dakota Fighting,10,Hawai'i Rainbow,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824900
+401831275,2025-11-29,Emerson,3,UMass Lowell River,8,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831275
+401823861,2025-11-29,Manhattan,147,Army Black,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823861
+401823388,2025-11-29,Boston University,31,Northern Kentucky Norse,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823388
+401820626,2025-11-29,Maine Black,7,Longwood,168,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820626
+401813379,2025-11-29,Detroit Mercy,157,Niagara Purple,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813379
+401831276,2025-11-29,Dartmouth Big Green,4,Saint Peter's,145,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831276
+401831225,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831225
+401829389,2025-11-29,Tennessee Wesleyan,6,Tennessee State,127,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829389
+401828478,2025-11-29,Haskell,3,Green Bay,161,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828478
+401827062,2025-11-29,South Carolina Upstate,126,Nebraska Cornhuskers,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827062
+401826905,2025-11-29,Merrimack,154,Hofstra Pride,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826905
+401823545,2025-11-29,Southern Utah Thunderbirds,8,Stetson,162,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823545
+401818533,2025-11-29,Sarah Lawrence Gryphons,0,Columbia,116,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401818533
+401812383,2025-11-29,Franciscan University Barons,0,Saint Francis,6,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812383
+401826072,2025-11-29,Notre Dame (MD),2,Radford,167,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826072
+401823593,2025-11-29,Gardner-Webb Runnin',7,UNC Wilmington Seahawks,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823593
+401822334,2025-11-29,Western Michigan,143,Valparaiso Beacons,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822334
+401830884,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830884
+401829353,2025-11-29,Kentucky State Thorobreds,0,Southern Indiana,102,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829353
+401826934,2025-11-29,Kansas City Roos,7,Weber State,162,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826934
+401824853,2025-11-29,Gwynedd-Mercy Griffins,0,Maryland-Eastern Shore,55,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824853
+401822836,2025-11-29,Siena Saints,7,American University,9,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822836
+401831226,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831226
+401829403,2025-11-29,SUNY-Oneonta,2,Colgate,160,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829403
+401828545,2025-11-29,Wofford,162,Eastern Kentucky Colonels,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828545
+401823446,2025-11-29,Trinity College of Jacksonville,0,North Florida Ospreys,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823446
+401823725,2025-11-29,Sacred Heart Pioneers,7,Penn State,164,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823725
+401813352,2025-11-29,Buffalo,157,Canisius Golden Griffins,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401813352
+401830885,2025-11-29,TBD,0,TBD,0,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830885
+401830412,2025-11-29,Redlands,1,Cal Poly,160,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830412
+401828513,2025-11-29,Our Lady Of The Lake Saints,0,Lamar,161,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828513
+401823015,2025-11-29,Penn State-Shenango,4,Kent State Golden Flashes,8,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823015
+401828270,2025-11-29,Fordham,151,UAlbany Great Danes,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828270
+401829478,2025-11-29,Lawrence University,0,St. Thomas-Minnesota Tommies,10,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829478
+401829468,2025-11-29,Mid-America Christian Evangels,0,Omaha,161,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829468
+401826920,2025-11-29,Regis (CO) REGIS UNIVERSITY,0,Northern Colorado,98,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826920
+401828684,2025-11-30,Mitchell College Mariners,0,New Haven Chargers,8,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828684
+401828271,2025-11-30,SUNY-Oneonta,2,UAlbany Great Danes,6,2,Team with only 2 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828271
+401820627,2025-11-30,Siena Saints,7,Maine Black,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820627
+401812648,2025-11-30,Johnson & Wales (RI) Griffins,0,Central Connecticut,19,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812648
+401829388,2025-11-30,Tennessee State,127,Chattanooga Mocs,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829388
+401820581,2025-11-30,Stonehill Skyhawks,7,Quinnipiac,159,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820581
+401809079,2025-11-30,Cornell Big,5,Bucknell,150,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401809079
+401812580,2025-11-30,Hofstra Pride,5,Pennsylvania,81,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812580
+401823326,2025-11-30,Northeastern State RiverHawks,0,Missouri State,163,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823326
+401831380,2025-11-30,St. Ambrose Fighting Bees,0,Western Illinois,141,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831380
+401826993,2025-11-30,Longwood,168,American University,9,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826993
+401823310,2025-11-30,San Diego Toreros,5,Long Beach State Beach,6,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823310
+401823736,2025-11-30,Cal State Bakersfield,9,Fresno State,163,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823736
+401827016,2025-12-01,Louisiana Christian,3,Southern,152,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827016
+401823470,2025-12-01,Central State (OH) Marauders,0,Toledo,171,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823470
+401827523,2025-12-01,Apprentice School Builders,0,Hampton,158,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827523
+401824308,2025-12-01,Iona,162,Delaware Blue Hens,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401824308
+401812384,2025-12-01,Saint Francis,6,Xavier,170,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812384
+401822368,2025-12-01,Blackburn,3,Eastern Illinois,157,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822368
+401820546,2025-12-01,Coe Kohawks,1,Northern Iowa,161,1,Team with only 1 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820546
+401823546,2025-12-01,West Coast Baptist,4,Southern Utah Thunderbirds,8,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823546
+401830319,2025-12-01,New Mexico Highlands,5,New Mexico,165,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830319
+401817470,2025-12-01,Portland,162,Stanford Cardinal,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817470
+401817148,2025-12-02,George Washington,154,Army Black,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401817148
+401820844,2025-12-02,Charleston Southern Buccaneers,7,UT Martin Skyhawks,8,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820844
+401827278,2025-12-02,Campbell Fighting,6,Penn State,164,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827278
+401820618,2025-12-02,Stonehill Skyhawks,7,Bryant,159,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820618
+401820609,2025-12-02,Lehigh Mountain,6,Binghamton,150,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820609
+401806366,2025-12-02,Tennessee,179,Syracuse Orange,6,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401806366
+401831072,2025-12-02,Indiana University East IU EAST,0,Miami (OH),73,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401831072
+401830740,2025-12-02,Eureka,5,Indiana State,170,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401830740
+401826703,2025-12-02,Cornell Big,5,George Mason,160,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826703
+401823447,2025-12-02,SIU Edwardsville,100,North Florida Ospreys,8,8,Team with only 8 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823447
+401823345,2025-12-02,Florida A&M Rattlers,4,Jacksonville,159,4,Team with only 4 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823345
+401820801,2025-12-02,North Carolina A&T,81,Charlotte 49ers,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401820801
+401818303,2025-12-02,SUNY-Maritime,3,Yale,133,3,Team with only 3 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401818303
+401806372,2025-12-02,Virginia Tech,163,South Carolina Gamecocks,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401806372
+401829349,2025-12-02,Saint Mary of the Woods College Pomeroys,0,Southeast Missouri State,89,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401829349
+401826882,2025-12-02,Mount Marty College,6,Wichita State,156,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826882
+401826845,2025-12-02,Grambling State,167,Tulane Green Wave,7,7,Team with only 7 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401826845
+401812359,2025-12-02,Winthrop,162,Long Island University Sharks,9,9,Team with only 9 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401812359
+401828285,2025-12-02,Manhattan Christian Thunder,0,Tulsa Golden Hurricane,7,0,Team with only 0 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401828285
 401827217,2025-12-02,Wagner Seahawks,6,Maryland,174,6,Team with only 6 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401827217
 401822335,2025-12-02,Valparaiso Beacons,5,Marquette,174,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401822335
 401823789,2025-12-02,Stetson,162,Grand Canyon Lopes,5,5,Team with only 5 games (threshold: 10 | source: auto:2025-26),https://www.espn.com/mens-college-basketball/game/_/gameId/401823789
