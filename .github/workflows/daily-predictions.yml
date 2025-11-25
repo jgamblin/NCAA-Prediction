@@ -43,7 +43,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/*.csv data/*.md predictions.md README.md performance.md bets.md docs/performance/*.png
+        git add data/*.csv data/*.md predictions.md README.md performance.md bets.md safest_bets.md value_bets.md docs/performance/*.png
         if git diff --cached --quiet; then
           echo "No changes detected; nothing to commit."
           exit 0
