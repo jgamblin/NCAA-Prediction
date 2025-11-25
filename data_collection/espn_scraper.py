@@ -13,6 +13,9 @@ import json
 import re
 import os
 
+# Import team name normalization
+from team_name_utils import normalize_team_name
+
 class ESPNScraper:
     """Scraper for ESPN NCAA Basketball data."""
     
@@ -190,6 +193,10 @@ class ESPNScraper:
             if not home_team or not away_team:
                 return None
             
+            # Normalize team names to match historical data format
+            home_team = normalize_team_name(home_team)
+            away_team = normalize_team_name(away_team)
+            
             # Extract scores
             home_score = int(home_comp.get('score', 0))
             away_score = int(away_comp.get('score', 0))
@@ -325,6 +332,10 @@ class ESPNScraper:
             
             if not home_team or not away_team:
                 return None
+            
+            # Normalize team names to match historical data format
+            home_team = normalize_team_name(home_team)
+            away_team = normalize_team_name(away_team)
             
             # Extract scores
             home_score = int(home_comp.get('score', 0))

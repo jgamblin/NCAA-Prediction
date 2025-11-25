@@ -130,12 +130,10 @@ def main():
     
     # Inline normalization after merge (ensures modeling continuity)
     try:
-        from data_collection.normalize_teams import team_name_mapping
-        # Apply mapping to historical file for modeling (in-place copy with normalized columns)
+        from data_collection.team_name_utils import normalize_game_dataframe
+        # Apply normalization to historical file for modeling
         hist_df = pd.read_csv(historical_path)
-        for col in ['home_team', 'away_team']:
-            if col in hist_df.columns:
-                hist_df[col] = hist_df[col].replace(team_name_mapping)
+        hist_df = normalize_game_dataframe(hist_df, team_columns=['home_team', 'away_team'])
         hist_df.to_csv(normalized_hist_path, index=False)
         print(f"✓ Normalized historical games written: {normalized_hist_path}")
     except Exception as exc:
@@ -180,10 +178,9 @@ def main():
     if len(upcoming) > 0:
         upcoming_path = os.path.join(data_dir, 'Upcoming_Games.csv')
         try:
-            from data_collection.normalize_teams import team_name_mapping
-            for col in ['home_team', 'away_team']:
-                if col in upcoming.columns:
-                    upcoming[col] = upcoming[col].replace(team_name_mapping)
+            from data_collection.team_name_utils import normalize_game_dataframe
+            upcoming = normalize_game_dataframe(upcoming, team_columns=['home_team', 'away_team'])
+            print("✓ Normalized upcoming games team names")
         except Exception as exc:
             print(f"⚠️ Failed to normalize upcoming games: {exc}")
         # Enrich upcoming games with feature store aggregates (season-aware, no cartesian)
@@ -237,6 +234,19 @@ def main():
     
     from track_accuracy import track_accuracy  # type: ignore
     track_accuracy()
+    
+    # =========================================================================
+    # STEP 3.5: Analyze betting line disagreements (value identification)
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 3.5: Analyzing betting line disagreements")
+    print("-"*80)
+    
+    try:
+        from game_prediction.analyze_betting_lines import analyze_betting_line_performance
+        analyze_betting_line_performance()
+    except Exception as exc:
+        print(f"⚠️ Betting line analysis failed: {exc}")
     
     # =========================================================================
     # STEP 4: Generate predictions for upcoming games
@@ -368,177 +378,33 @@ def main():
                 available = [c for c in predictor.feature_cols if c in train_df.columns]
                 Xw = train_df[available]
                 yw = train_df['home_win'] if 'home_win' in train_df.columns else None
-                if yw is not None:
-                    predictor._raw_model.fit(Xw, yw, sample_weight=sample_weights)
-                    if predictor.calibrate:
-                        from sklearn.calibration import CalibratedClassifierCV
-                        predictor.model = CalibratedClassifierCV(predictor._raw_model, method=predictor.calibration_method, cv=5)
-                        predictor.model.fit(Xw, yw)
-                    print("✓ Applied sample weighting (current season heavy) in predictor training")
-            except Exception as exc:
-                print(f"⚠️ Sample weighting re-fit failed: {exc}; using unweighted model.")
+                predictor.raw_model.fit(Xw, yw, sample_weight=sample_weights)
+                print("✓ Re-fitted raw model with sample weights")
+            except Exception as e:
+                print(f"⚠️ Failed to re-fit raw model with weights: {e}")
         else:
-            print("✓ Sample weights disabled (standard training)")
             predictor.fit(train_df)
-        predictions_df = predictor.predict(upcoming)
         
-        # Sort by confidence (highest first) for better readability
-        predictions_df = predictions_df.sort_values('confidence', ascending=False)
-        
-        # Enrich predictions with team IDs if present in upcoming games
+        # Predict and log
         try:
-            id_cols = [c for c in ['home_team_id', 'away_team_id'] if c in upcoming.columns]
-            if id_cols:
-                id_df = upcoming[['game_id'] + id_cols].drop_duplicates(subset=['game_id'])
-                predictions_df = predictions_df.merge(id_df, on='game_id', how='left')
-        except Exception as exc:
-            print(f"⚠️ Failed to merge team IDs into predictions: {exc}")
-
-        # Save predictions (persist with normalized flag)
-        predictions_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
-        predictions_df['normalized_input'] = os.path.exists(normalized_hist_path)
-        predictions_df['config_version'] = _config_version
-        predictions_df['commit_hash'] = _commit_hash
-        predictions_df.to_csv(predictions_path, index=False)
-        # Validation guard: ensure lineage columns present post-write
-        try:
-            _verify = pd.read_csv(predictions_path, nrows=5)
-            missing_cols = [c for c in ['config_version','commit_hash'] if c not in _verify.columns]
-            if missing_cols:
-                print(f"✗ Lineage columns missing after write: {missing_cols}")
+            preds = predictor.predict(upcoming)
+            if len(preds) == len(upcoming):
+                upcoming['home_win_prob'] = preds
+                upcoming['away_win_prob'] = 1 - preds
+                # Log predictions (game_id, home_win_prob, away_win_prob, date)
+                log_df = upcoming[['game_id','home_win_prob','away_win_prob','date']]
+                log_df['run_date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                log_predictions(log_df)
+                print("✓ Predictions generated and logged")
             else:
-                print("✓ Lineage columns verified in predictions CSV")
-        except Exception as _val_exc:
-            print(f"⚠️ Could not validate lineage columns: {_val_exc}")
-
-        # Append live predictions to drift log
-        try:
-            log_path = Path(data_dir) / 'prediction_log.csv'
-            log_predictions(
-                predictions_df,
-                source='live',
-                model_name='AdaptivePredictor',
-                model_version=model_version,
-                config_version=_config_version,
-                commit_hash=_commit_hash,
-                log_path=log_path,
-                timestamp=datetime.now(datetime.UTC),
-            )
-            print(f"✓ Logged live predictions to {log_path}")
-        except Exception as log_exc:
-            print(f"⚠️ Failed to log live predictions: {log_exc}")
-
-        print(f"✓ Generated {len(predictions_df)} predictions")
-        print(f"  - Home team favored: {predictions_df['predicted_home_win'].sum()}")
-        print(f"  - Away team favored: {len(predictions_df) - predictions_df['predicted_home_win'].sum()}")
-        print(f"  - Average confidence: {predictions_df['confidence'].mean():.1%}")
-
-        # Show high confidence predictions
-        high_conf = predictions_df[predictions_df['confidence'] >= 0.7].sort_values('confidence', ascending=False)
-        if len(high_conf) > 0:
-            print(f"\n  High confidence predictions (≥70%):")
-            for _, game in high_conf.head(10).iterrows():
-                winner = game['predicted_winner']
-                loser = game['home_team'] if winner == game['away_team'] else game['away_team']
-                conf = game['confidence']
-                print(f"    {winner:35} over {loser:30} ({conf:.1%})")
-            if len(high_conf) > 10:
-                print(f"    ... and {len(high_conf) - 10} more")
+                print("⚠️ Prediction length mismatch")
+        except Exception as e:
+            print(f"⚠️ Prediction error: {e}")
     else:
         print("✓ No upcoming games to predict")
-    
-    # =========================================================================
-    # STEP 5: Publish artifacts (predictions.md + README evaluation/banner)
-    # =========================================================================
-    print("\n" + "="*80)
-    print("STEP 5: Publishing artifacts (predictions.md & README)")
-    print("-"*80)
-    try:
-        result = sp_run(['python3', 'game_prediction/publish_artifacts.py'], capture_output=True, text=True, timeout=60)
-        if result.returncode == 0:
-            print(result.stdout)
-        else:
-            print(f"✗ Artifact publishing failed: {result.stderr}")
-    except Exception as exc:
-        print(f"✗ Artifact publishing error: {exc}")
 
-    # Generate performance dashboard (charts + markdown)
-    try:
-        perf_result = sp_run(['python3', 'scripts/generate_performance_report.py'], capture_output=True, text=True, timeout=60)
-        if perf_result.returncode == 0:
-            if perf_result.stdout.strip():
-                print(perf_result.stdout.strip())
-            else:
-                print("✓ performance.md generated")
-        else:
-            print(f"⚠️ Performance report failed: {perf_result.stderr}")
-    except Exception as exc:
-        print(f"⚠️ Performance report step skipped: {exc}")
-    
-    # =========================================================================
-    # STEP 5.5: Generate Betting Tracker Report
-    # =========================================================================
     print("\n" + "="*80)
-    print("STEP 5.5: Generating betting tracker report")
-    print("-"*80)
-    try:
-        result = sp_run(['python3', 'game_prediction/betting_tracker.py'], capture_output=True, text=True, timeout=60)
-        if result.returncode == 0:
-            print(result.stdout)
-        else:
-            print(f"⚠️ Betting tracker failed: {result.stderr}")
-    except Exception as exc:
-        print(f"⚠️ Betting tracker step skipped: {exc}")
-    
-    # =========================================================================
-    # STEP 6: Per-Team Drift & Anomaly Summaries
-    # =========================================================================
-    print("\n" + "="*80)
-    print("STEP 6: Updating per-team drift & anomaly summaries")
-    print("-"*80)
-    try:
-        # Run drift monitor module
-        result = sp_run(
-            ['python3', '-m', 'model_training.team_drift_monitor', '--window', str(drift_window)],
-            capture_output=True, text=True, timeout=120
-        )
-        if result.returncode == 0:
-            print("✓ Drift monitor executed")
-        else:
-            print(f"⚠️ Drift monitor non-zero exit: {result.stderr}")
-        # Generate TEAM_ANOMALIES.md if anomalies exist
-        anomalies_csv = Path(data_dir) / 'Team_Anomalies.csv'
-        anomalies_md = Path(data_dir) / 'TEAM_ANOMALIES.md'
-        try:
-            from model_training.team_drift_monitor import write_anomalies_markdown
-            if write_anomalies_markdown(anomalies_csv, anomalies_md, drift_window):
-                print(f"✓ Anomalies markdown written: {anomalies_md}")
-            else:
-                print("✓ No anomalies markdown generated (missing or empty anomalies CSV)")
-        except Exception as sub_exc:
-            print(f"⚠️ Failed anomaly markdown generation: {sub_exc}")
-    except Exception as exc:
-        print(f"⚠️ Drift/anomaly summary skipped: {exc}")
-
-    # =========================================================================
-    # STEP 7: Pipeline Complete
-    # =========================================================================
-    print("\n" + "="*80)
-    print("PIPELINE COMPLETE!")
-    print("="*80)
-    print(f"\nFiles updated:")
-    print(f"  - {os.path.join(data_dir, 'Completed_Games.csv')}")
-    print(f"  - {os.path.join(data_dir, 'Upcoming_Games.csv')}")
-    print(f"  - {os.path.join(data_dir, 'Completed_Games_Normalized.csv')} (if normalization succeeded)")
-    print(f"  - {os.path.join(data_dir, 'NCAA_Game_Predictions.csv')} (config_version={_config_version})")
-    print(f"    commit_hash={_commit_hash}")
-    print(f"  - {os.path.join(data_dir, 'Accuracy_Report.csv')}")
-    print(f"  - predictions.md")
-    print(f"  - bets.md (comparison)")
-    print(f"  - safest_bets.md")
-    print(f"  - value_bets.md")
-    print(f"  - README.md (Model Evaluation section)")
-    print(f"\nRun this script daily to keep predictions updated!")
+    print("Pipeline complete.")
     print("="*80)
 
 if __name__ == "__main__":
