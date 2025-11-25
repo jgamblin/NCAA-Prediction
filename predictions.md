@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-25 06:11:30 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `b6ff098`
+**Last Updated**: 2025-11-25 13:11:46 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4ca1b9f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 55
-- **Average Confidence**: 78.7%
-- **High (≥70%)**: 51 · **Medium (60-70%)**: 2 · **Other (<60%)**: 2
+- **Games Predicted Today**: 48
+- **Average Confidence**: 78.5%
+- **High (≥70%)**: 45 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
 
 ### 🏅 Pick Streaks
 
@@ -30,89 +30,77 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Gonzaga** | Maryland | 85.4% |
-| 2 | **North Carolina** | St. Bonaventure | 85.0% |
-| 3 | **Indiana** | Kansas State | 83.3% |
-| 4 | **South Carolina Upstate** | North Carolina Central | 82.2% |
-| 5 | **Rider** | Coppin State | 82.2% |
-| 6 | **Texas A&M** | Mississippi Valley State | 82.2% |
-| 7 | **Purdue Fort Wayne** | Chicago State | 82.1% |
-| 8 | **Notre Dame** | Rutgers | 82.0% |
-| 9 | **Bethune-Cookman** | Stony Brook | 82.0% |
-| 10 | **Utah Tech** | Portland State | 81.9% |
-| 11 | **Ohio State** | Mount St. Mary's | 81.8% |
-| 12 | **North Texas** | Eastern Washington | 81.7% |
-| 13 | **Vermont** | Rhode Island | 81.7% |
-| 14 | **UCF** | Quinnipiac | 81.7% |
-| 15 | **Villanova** | Old Dominion | 81.7% |
-| 16 | **Iowa** | Ole Miss | 81.7% |
-| 17 | **Jacksonville** | Pacific | 81.7% |
-| 18 | **James Madison** | Omaha | 81.7% |
-| 19 | **Oral Roberts** | Kennesaw State | 81.7% |
-| 20 | **Ohio** | Loyola Marymount | 81.6% |
-| 21 | **Montana** | Oakland | 81.5% |
-| 22 | **Murray State** | George Washington | 81.3% |
-| 23 | **Norfolk State** | Virginia-Lynchburg | 81.3% |
-| 24 | **McNeese** | Middle Tennessee | 81.2% |
-| 25 | **Florida Gulf Coast** | Rice | 81.1% |
-| 26 | **Morgan State** | Drexel | 81.1% |
-| 27 | **Missouri** | South Carolina State | 80.9% |
-| 28 | **Bellarmine** | Houston Christian | 80.9% |
-| 29 | **Georgia State** | Samford | 80.8% |
-| 30 | **Florida Atlantic** | George Mason | 80.6% |
-| 31 | **UC Irvine** | New Mexico State | 80.6% |
-| 32 | **Penn State** | Boston University | 80.5% |
-| 33 | **Central Arkansas** | Eastern Illinois | 80.4% |
-| 34 | **Cal Poly** | Southeast Missouri State | 80.2% |
-| 35 | **Liberty** | Towson | 80.0% |
-| 36 | **USC** | Seton Hall | 80.0% |
-| 37 | **Arizona State** | Washington State | 79.9% |
-| 38 | **Princeton** | Temple | 79.5% |
-| 39 | **Maryland-Eastern Shore** | Hampton | 79.4% |
-| 40 | **UNC Asheville** | Tennessee State | 79.3% |
-| 41 | **Loyola Chicago** | Northern Iowa | 79.2% |
-| 42 | **Georgia Southern** | UTSA | 78.2% |
-| 43 | **Iowa State** | Creighton | 77.5% |
-| 44 | **Michigan State** | East Carolina | 77.5% |
-| 45 | **St. John's** | Baylor | 76.0% |
-| 46 | **UAB** | UTEP | 75.2% |
-| 47 | **Delaware** | UNC Greensboro | 75.1% |
-| 48 | **Bradley** | UC San Diego | 73.5% |
-| 49 | **South Dakota State** | Utah Valley | 72.5% |
-| 50 | **Abilene Christian** | William & Mary | 71.6% |
-| 51 | **Stetson** | Wright State | 71.2% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **UCLA** | California | 69.0% |
-| 2 | **Michigan** | Auburn | 68.4% |
+| 1 | **Gonzaga** | Maryland | 85.3% |
+| 2 | **North Carolina** | St. Bonaventure | 84.9% |
+| 3 | **Rider** | Coppin State | 82.5% |
+| 4 | **Texas A&M** | Mississippi Valley State | 82.3% |
+| 5 | **South Carolina Upstate** | North Carolina Central | 82.3% |
+| 6 | **Oral Roberts** | Kennesaw State | 82.3% |
+| 7 | **Ohio State** | Mount St. Mary's | 82.1% |
+| 8 | **North Texas** | Eastern Washington | 82.1% |
+| 9 | **Purdue Fort Wayne** | Chicago State | 82.1% |
+| 10 | **Utah Tech** | Portland State | 81.8% |
+| 11 | **Villanova** | Old Dominion | 81.7% |
+| 12 | **Iowa** | Ole Miss | 81.7% |
+| 13 | **UCF** | Quinnipiac | 81.6% |
+| 14 | **Vermont** | Rhode Island | 81.6% |
+| 15 | **James Madison** | Omaha | 81.6% |
+| 16 | **Murray State** | George Washington | 81.5% |
+| 17 | **McNeese** | Middle Tennessee | 81.5% |
+| 18 | **Ohio** | Loyola Marymount | 81.4% |
+| 19 | **Morgan State** | Drexel | 81.4% |
+| 20 | **Indiana** | Kansas State | 81.3% |
+| 21 | **Norfolk State** | Virginia-Lynchburg | 81.1% |
+| 22 | **Montana** | Oakland | 81.1% |
+| 23 | **Florida Gulf Coast** | Rice | 80.8% |
+| 24 | **Bellarmine** | Houston Christian | 80.6% |
+| 25 | **Maryland-Eastern Shore** | Hampton | 80.4% |
+| 26 | **Florida Atlantic** | George Mason | 80.4% |
+| 27 | **Penn State** | Boston University | 80.3% |
+| 28 | **Central Arkansas** | Eastern Illinois | 80.3% |
+| 29 | **UC Irvine** | New Mexico State | 80.3% |
+| 30 | **Georgia State** | Samford | 80.1% |
+| 31 | **USC** | Seton Hall | 80.0% |
+| 32 | **Princeton** | Temple | 79.7% |
+| 33 | **Missouri** | South Carolina State | 79.6% |
+| 34 | **UNC Asheville** | Tennessee State | 79.4% |
+| 35 | **Cal Poly** | Southeast Missouri State | 79.2% |
+| 36 | **Loyola Chicago** | Northern Iowa | 78.7% |
+| 37 | **Georgia Southern** | UTSA | 78.5% |
+| 38 | **St. John's** | Baylor | 78.3% |
+| 39 | **Arizona State** | Washington State | 78.3% |
+| 40 | **UAB** | UTEP | 75.1% |
+| 41 | **Abilene Christian** | William & Mary | 75.0% |
+| 42 | **Stetson** | Wright State | 72.4% |
+| 43 | **South Dakota State** | Utah Valley | 72.3% |
+| 44 | **UCLA** | California | 72.3% |
+| 45 | **Bradley** | UC San Diego | 72.2% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tennessee @ Houston | 50.0% | Toss-Up |
-| 2 | Boise State vs NC State | 58.8% | Close |
+| 1 | Auburn @ Michigan | 53.4% | Toss-Up |
+| 2 | Boise State vs NC State | 58.4% | Close |
+| 3 | Houston vs Tennessee | 58.8% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 49
-- Away Teams Favored: 6
-- Max Confidence: 85.4%
-- Min Confidence: 50.0%
+- Home Teams Favored: 44
+- Away Teams Favored: 4
+- Max Confidence: 85.3%
+- Min Confidence: 53.4%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (215 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (208 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 79.4% (1211 evaluated)
-- **Last 10 Days**: 70.8% (496 games)
+- **Overall Accuracy**: 78.5% (1271 evaluated)
+- **Last 10 Days**: 69.6% (556 games)
 
 ### Last 7 Days
 
@@ -124,7 +112,7 @@
 | 2025-11-21 | 7 | 6 | 85.7% | 79.8% |
 | 2025-11-22 | 22 | 14 | 63.6% | 79.8% |
 | 2025-11-23 | 120 | 84 | 70.0% | 80.4% |
-| 2025-11-24 | 96 | 48 | 50.0% | 79.7% |
+| 2025-11-24 | 156 | 84 | 53.8% | 80.0% |
 
 ---
 

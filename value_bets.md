@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-24 14:28:38
+**Last Updated**: 2025-11-25 19:11:48
 
 **Tracking Started**: 2025-11-10
 
@@ -19,24 +19,24 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 13
-- **Win Rate**: 69.2% (9W-4L)
-- **Total Wagered**: $13.00
-- **Total Payout**: $12.73
-- **Net Profit**: $-0.27 🔴
-- **ROI**: -2.0%
+- **Total Bets**: 14
+- **Win Rate**: 71.4% (10W-4L)
+- **Total Wagered**: $14.00
+- **Total Payout**: $14.53
+- **Net Profit**: $0.53 🟢
+- **ROI**: 3.8%
 
 ---
 
 ## 💎 Today's Bet
 
-**Middle Tennessee** vs **George Washington**
+**Stetson** vs **Wright State**
 
-- **Bet On**: Middle Tennessee
-- **Confidence**: 81.5%
-- **Moneyline**: +400
-- **Value Score**: 3.077
-- **Potential Profit**: $4.00
+- **Bet On**: Stetson
+- **Confidence**: 72.4%
+- **Moneyline**: +475
+- **Value Score**: 3.166
+- **Potential Profit**: $4.75
 
 ✅ *Best value opportunity today - optimal balance of probability and odds*
 
@@ -47,6 +47,7 @@
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
 | <60% | 4 | 50.0% | $-0.40 | -10.0% |
+| 60-70% | 1 | 100.0% | $0.80 | 80.0% |
 | 70-80% | 7 | 85.7% | $0.97 | 13.8% |
 | 80-90% | 2 | 50.0% | $-0.83 | -41.7% |
 
@@ -56,6 +57,7 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Value Score | Profit |
 |------|--------|---------|--------|----|-----------:|------------:|-------:|
+| 2025-11-24 | ✅ | St. John's @ Iowa State | Iowa State | -125 | 68.7% | 0.237 | $0.80 |
 | 2025-11-23 | ❌ | Northern Colorado @ Cal State Fullerton | Cal State Fullerton | +475 | 77.5% | 3.458 | -$1.00 |
 | 2025-11-22 | ❌ | High Point @ Incarnate Word | Incarnate Word | +600 | 81.8% | 4.725 | -$1.00 |
 | 2025-11-21 | ❌ | Texas Tech @ Purdue | Texas Tech | +135 | 51.2% | 0.204 | -$1.00 |
@@ -77,7 +79,7 @@
 
 | Season | Bets | Win Rate | Profit | ROI |
 |--------|------|----------|--------|-----|
-| 2025-26 | 13 | 69.2% | $-0.27 | -2.0% |
+| 2025-26 | 14 | 71.4% | $0.53 | 3.8% |
 
 ---
 
