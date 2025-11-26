@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-25 19:11:48
+**Last Updated**: 2025-11-26 20:49:46
 
 **Tracking Started**: 2025-11-10
 
@@ -19,26 +19,20 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 14
-- **Win Rate**: 71.4% (10W-4L)
-- **Total Wagered**: $14.00
-- **Total Payout**: $14.53
-- **Net Profit**: $0.53 🟢
-- **ROI**: 3.8%
+- **Total Bets**: 15
+- **Win Rate**: 73.3% (11W-4L)
+- **Total Wagered**: $15.00
+- **Total Payout**: $15.95
+- **Net Profit**: $0.95 🟢
+- **ROI**: 6.3%
 
 ---
 
 ## 💎 Today's Bet
 
-**Stetson** vs **Wright State**
+**No bettable games available today**
 
-- **Bet On**: Stetson
-- **Confidence**: 72.4%
-- **Moneyline**: +475
-- **Value Score**: 3.166
-- **Potential Profit**: $4.75
-
-✅ *Best value opportunity today - optimal balance of probability and odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 
@@ -48,7 +42,7 @@
 |------------|------|----------|------------|-----|
 | <60% | 4 | 50.0% | $-0.40 | -10.0% |
 | 60-70% | 1 | 100.0% | $0.80 | 80.0% |
-| 70-80% | 7 | 85.7% | $0.97 | 13.8% |
+| 70-80% | 8 | 87.5% | $1.38 | 17.3% |
 | 80-90% | 2 | 50.0% | $-0.83 | -41.7% |
 
 ---
@@ -57,6 +51,7 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Value Score | Profit |
 |------|--------|---------|--------|----|-----------:|------------:|-------:|
+| 2025-11-25 | ✅ | St. John's @ Baylor | St. John's | -240 | 74.4% | 0.054 | $0.42 |
 | 2025-11-24 | ✅ | St. John's @ Iowa State | Iowa State | -125 | 68.7% | 0.237 | $0.80 |
 | 2025-11-23 | ❌ | Northern Colorado @ Cal State Fullerton | Cal State Fullerton | +475 | 77.5% | 3.458 | -$1.00 |
 | 2025-11-22 | ❌ | High Point @ Incarnate Word | Incarnate Word | +600 | 81.8% | 4.725 | -$1.00 |
@@ -79,7 +74,7 @@
 
 | Season | Bets | Win Rate | Profit | ROI |
 |--------|------|----------|--------|-----|
-| 2025-26 | 14 | 71.4% | $0.53 | 3.8% |
+| 2025-26 | 15 | 73.3% | $0.95 | 6.3% |
 
 ---
 

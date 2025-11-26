@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-11-25 19:11:48
+**Last Updated**: 2025-11-26 20:49:46
 
 **Tracking Started**: 2025-11-10
 
@@ -19,25 +19,20 @@
 
 ## 📊 Season Performance
 
-- **Total Bets**: 14
-- **Win Rate**: 92.9% (13W-1L)
-- **Total Wagered**: $14.00
-- **Total Payout**: $15.38
-- **Net Profit**: $1.38 🟢
-- **ROI**: 9.8%
+- **Total Bets**: 15
+- **Win Rate**: 93.3% (14W-1L)
+- **Total Wagered**: $15.00
+- **Total Payout**: $16.58
+- **Net Profit**: $1.58 🟢
+- **ROI**: 10.5%
 
 ---
 
 ## 🎯 Today's Bet
 
-**North Carolina** vs **St. Bonaventure**
+**No bettable games available today**
 
-- **Bet On**: North Carolina
-- **Confidence**: 84.9%
-- **Moneyline**: -800
-- **Potential Profit**: $0.12
-
-✅ *Highest confidence game today with real ESPN odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 
@@ -45,7 +40,7 @@
 
 | Confidence | Bets | Win Rate | Net Profit | ROI |
 |------------|------|----------|------------|-----|
-| 70-80% | 1 | 100.0% | $0.22 | 22.2% |
+| 70-80% | 2 | 100.0% | $0.42 | 21.1% |
 | 80-90% | 13 | 92.3% | $1.15 | 8.9% |
 
 ---
@@ -54,6 +49,7 @@
 
 | Date | Result | Matchup | Bet On | ML | Confidence | Profit |
 |------|--------|---------|--------|----|-----------:|-------:|
+| 2025-11-25 | ✅ | Iowa State @ Creighton | Iowa State | -500 | 75.6% | $0.20 |
 | 2025-11-24 | ✅ | Notre Dame @ Kansas | Kansas | -290 | 85.4% | $0.34 |
 | 2025-11-23 | ❌ | SIU Edwardsville @ Alabama State | Alabama State | +120 | 82.4% | -$1.00 |
 | 2025-11-22 | ✅ | Milwaukee @ Wichita State | Wichita State | -700 | 83.2% | $0.14 |
@@ -76,7 +72,7 @@
 
 | Season | Bets | Win Rate | Profit | ROI |
 |--------|------|----------|--------|-----|
-| 2025-26 | 14 | 92.9% | $1.38 | 9.8% |
+| 2025-26 | 15 | 93.3% | $1.58 | 10.5% |
 
 ---
 
