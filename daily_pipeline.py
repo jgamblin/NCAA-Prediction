@@ -403,6 +403,28 @@ def main():
     else:
         print("✓ No upcoming games to predict")
 
+    # =========================================================================
+    # STEP 5: Generate markdown reports and update README
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 5: Generating markdown reports")
+    print("-"*80)
+
+    # Generate predictions.md and update README.md
+    try:
+        from game_prediction.publish_artifacts import generate_predictions_markdown, refresh_readme_evaluation
+        generate_predictions_markdown()
+        refresh_readme_evaluation()
+    except Exception as e:
+        print(f"⚠️ Failed to generate predictions markdown: {e}")
+
+    # Generate betting tracker markdown files (bets.md, safest_bets.md, value_bets.md)
+    try:
+        from game_prediction.betting_tracker import generate_bets_markdown
+        generate_bets_markdown()
+    except Exception as e:
+        print(f"⚠️ Failed to generate betting markdown: {e}")
+
     print("\n" + "="*80)
     print("Pipeline complete.")
     print("="*80)
