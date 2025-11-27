@@ -1,66 +1,24 @@
 game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_score,home_score,away_rank,home_rank,game_status,game_url,is_neutral,home_record,away_record,home_point_spread,home_moneyline,away_moneyline,has_real_odds,home_fs_rolling_win_pct_5,home_fs_rolling_win_pct_10,home_fs_rolling_point_diff_avg_5,home_fs_rolling_point_diff_avg_10,home_fs_win_pct_last5_vs10,home_fs_point_diff_last5_vs10,home_fs_recent_strength_index_5,away_fs_rolling_win_pct_5,away_fs_rolling_win_pct_10,away_fs_rolling_point_diff_avg_5,away_fs_rolling_point_diff_avg_10,away_fs_win_pct_last5_vs10,away_fs_point_diff_last5_vs10,away_fs_recent_strength_index_5
-401824950,2025-11-26,2025-11-26,2025-26,Lipscomb,Marshall,288,276,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824950,0,,,,-400.0,300.0,True,,,,,,,,,,,,,,
-401820153,2025-11-26,2025-11-26,2025-26,Navy,Gardner-Webb Runnin',2426,2241,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820153,0,,,,500.0,-800.0,True,,,,,,,,,,,,,,
-401812606,2025-11-26,2025-11-26,2025-26,Harvard,Boston College,108,103,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812606,0,,,,-340.0,270.0,True,,,,,,,,,,,,,,
-401830747,2025-11-26,2025-11-26,2025-26,Northern Iowa,Tulsa Golden Hurricane,2460,202,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830747,0,,,,110.0,-130.0,True,,,,,,,,,,,,,,
-401829616,2025-11-26,2025-11-26,2025-26,Oral Roberts,Rice,198,242,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829616,0,,,,-200.0,170.0,True,0.0,,-11.2,,,,-0.0,0.4,,-3.6,,,,-1.4400000000000002
-401830915,2025-11-26,2025-11-26,2025-26,Vermont,Princeton,261,163,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830915,0,,,,210.0,-250.0,True,0.2,,-8.6,,,,-1.72,,,,,,,
-401823860,2025-11-26,2025-11-26,2025-26,Wagner Seahawks,Manhattan,2681,2363,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823860,0,,,,-195.0,165.0,True,,,,,,,,,,,,,,
-401817522,2025-11-26,2025-11-26,2025-26,Virginia Tech,Colorado State,259,36,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817522,0,,,,195.0,-230.0,True,,,,,,,,,,,,,,
-401831201,2025-11-26,2025-11-26,2025-26,Seton Hall,Washington State,2550,265,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831201,0,,,,400.0,-600.0,True,0.6,,4.4,,,,2.64,,,,,,,
-401826951,2025-11-26,2025-11-26,2025-26,Samford,Utah Valley,2535,3084,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826951,0,,,,-380.0,290.0,True,,,,,,,,,,,,,,
-401820555,2025-11-26,2025-11-26,2025-26,Northern Colorado,Air Force,2458,2005,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820555,0,,,,170.0,-200.0,True,1.0,,11.2,,,,11.2,0.8,,3.8,,,,3.04
-401813450,2025-11-26,2025-11-26,2025-26,Central State (OH) Marauders,Duquesne,2119,2184,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813450,0,,,,,,False,,,,,,,,,,,,,,
-401823353,2025-11-26,2025-11-26,2025-26,Sam Houston State,Idaho State Bengals,2534,304,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823353,0,,,,120.0,-140.0,True,,,,,,,,,,,,,,
-401831215,2025-11-26,2025-11-26,2025-26,Kansas,Tennessee,2305,2633,0,0,,17.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831215,0,,,,-240.0,200.0,True,1.0,,17.0,,,,17.0,0.8,,6.0,,,,4.800000000000001
-401826832,2025-11-26,2025-11-26,2025-26,Tennessee Tech,Kentucky,2635,96,0,0,,19.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826832,0,,,,,,False,,,,,,,,,,,,,,
-401828333,2025-11-26,2025-11-26,2025-26,Houston Christian,Citadel,2277,2643,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828333,0,,,,-110.0,-110.0,True,,,,,,,,,,,,,,
-401824072,2025-11-26,2025-11-26,2025-26,Pepperdine,Fresno State,2492,278,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824072,0,,,,-125.0,105.0,True,,,,,,,,,,,,,,
-401823591,2025-11-26,2025-11-26,2025-26,Southeastern Louisiana,UNC Wilmington Seahawks,2545,350,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823591,0,,,,-900.0,550.0,True,,,,,,,,,,,,,,
-401823231,2025-11-26,2025-11-26,2025-26,Kennesaw State,Florida Gulf Coast,338,526,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823231,0,,,,-140.0,120.0,True,1.0,,11.0,,,,11.0,,,,,,,
-401819845,2025-11-26,2025-11-26,2025-26,Eastern Michigan,Cincinnati,2199,2132,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819845,0,,,,-10000.0,2500.0,True,,,,,,,,,,,,,,
-401818372,2025-11-26,2025-11-26,2025-26,Columbia,Fairfield,171,2217,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401818372,0,,,,130.0,-150.0,True,,,,,,,,,,,,,,
-401830894,2025-11-26,2025-11-26,2025-26,Rhode Island,Temple,227,218,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830894,0,,,,135.0,-155.0,True,0.6,,-3.4,,,,-2.04,,,,,,,
-401827007,2025-11-26,2025-11-26,2025-26,College Of Biblical Studies,Texas Southern,128256,2640,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827007,0,,,,,,False,,,,,,,,,,,,,,
-401826899,2025-11-26,2025-11-26,2025-26,Indiana State,Louisiana Tech,282,2348,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826899,0,,,,-150.0,130.0,True,,,,,,,,,,,,,,
-401826881,2025-11-26,2025-11-26,2025-26,Saint Mary's,Wichita State,2608,2724,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826881,0,,,,425.0,-650.0,True,,,,,,,,,,,,,,
-401831218,2025-11-26,2025-11-26,2025-26,St. John's,Auburn,2599,2,0,0,14.0,21.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831218,0,,,,165.0,-195.0,True,0.6,,1.6,,,,0.96,0.6,,15.2,,,,9.12
-401826798,2025-11-26,2025-11-26,2025-26,Southern Illinois,Memphis,79,235,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826798,0,,,,-750.0,475.0,True,,,,,,,,,,,,,,
-401825591,2025-11-26,2025-11-26,2025-26,Southeast Missouri State,Northern Arizona,2546,2464,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825591,0,,,,-145.0,125.0,True,,,,,,,,,,,,,,
-401829475,2025-11-26,2025-11-26,2025-26,South Dakota State Jackrabbits,UC Irvine,2571,300,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829475,0,,,,-145.0,125.0,True,,,,,,,,,,,,,,
-401823760,2025-11-26,2025-11-26,2025-26,Denver Pioneers,Wyoming,2172,2751,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823760,0,,,,-400.0,300.0,True,,,,,,,,,,,,,,
-401817245,2025-11-26,2025-11-26,2025-26,NJIT,Louisville,2885,97,0,0,,6.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817245,0,,,,,,False,,,,,,,,,,,,,,
-401827155,2025-11-26,2025-11-26,2025-26,Alabama State,New Mexico,2011,167,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827155,0,,,,-6000.0,1800.0,True,,,,,,,,0.4,,2.0,,,,0.8
-401823259,2025-11-26,2025-11-26,2025-26,Cal State Northridge,Idaho,2463,70,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823259,0,,,,-130.0,110.0,True,,,,,,,,,,,,,,
-401831214,2025-11-26,2025-11-26,2025-26,Gonzaga,Michigan,2250,130,0,0,12.0,7.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831214,0,,,,115.0,-135.0,True,1.0,,33.0,,,,33.0,1.0,,34.0,,,,34.0
-401831202,2025-11-26,2025-11-26,2025-26,NC State,Texas Longhorns,152,251,0,0,23.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831202,0,,,,125.0,-145.0,True,,,,,,,,0.6,,1.2,,,,0.72
-401830744,2025-11-26,2025-11-26,2025-26,Iowa,Grand Canyon Lopes,2294,2253,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830744,0,,,,360.0,-500.0,True,,,,,,,,,,,,,,
-401823309,2025-11-26,2025-11-26,2025-26,Long Beach State Beach,Portland,299,2501,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823309,0,,,,-230.0,195.0,True,0.2,,-2.8,,,,-0.5599999999999999,,,,,,,
-401831219,2025-11-26,2025-11-26,2025-26,Baylor,San Diego State,239,21,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831219,0,,,,115.0,-135.0,True,,,,,,,,,,,,,,
-401831220,2025-11-26,2025-11-26,2025-26,Maryland,Alabama Crimson Tide,120,333,0,0,,8.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831220,0,,,,-1400.0,750.0,True,0.6,,12.4,,,,7.439999999999999,0.6,,-11.8,,,,-7.08
-401831203,2025-11-26,2025-11-26,2025-26,Boise State,Chaminade Silverswords,68,2124,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831203,0,,,,,,False,,,,,,,,,,,,,,
-401830745,2025-11-26,2025-11-26,2025-26,Utah,Ole Miss,254,145,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830745,0,,,,,,False,,,,,,,,,,,,,,
-401809397,2025-11-27,2025-11-27,2025-26,Richmond,Furman,257,231,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809397,0,,,,,,False,,,,,,,,,,,,,,
-401830752,2025-11-27,2025-11-27,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830752,0,,,,,,False,,,,,,,,,,,,,,
-401817199,2025-11-27,2025-11-27,2025-26,St. Bonaventure,East Carolina,179,151,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817199,0,,,,,,False,,,,,,,,,,,,,,
-401809398,2025-11-27,2025-11-27,2025-26,Charlotte 49ers,Illinois State,2429,2287,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809398,0,,,,,,False,,,,,,,,,,,,,,
-401831221,2025-11-27,2025-11-27,2025-26,Oregon Ducks,Creighton,2483,156,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831221,0,,,,,,False,0.2,,-7.0,,,,-1.4,,,,,,,
-401819865,2025-11-27,2025-11-27,2025-26,San Francisco Dons,Colorado,2539,38,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819865,0,,,,,,False,,,,,,,,,,,,,,
-401830753,2025-11-27,2025-11-27,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830753,0,,,,,,False,,,,,,,,,,,,,,
-401809047,2025-11-27,2025-11-27,2025-26,TCU Horned Frogs,Florida,2628,57,0,0,,10.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809047,0,,,,,,False,,,,,,,,,,,,,,
-401817267,2025-11-27,2025-11-27,2025-26,North Carolina,Michigan State,153,127,0,0,16.0,11.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817267,0,,,,-145.0,125.0,True,,,,,,,,,,,,,,
-401831222,2025-11-27,2025-11-27,2025-26,UNLV,Rutgers,2439,164,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831222,0,,,,,,False,0.0,,-14.6,,,,-0.0,0.2,,-15.6,,,,-3.12
-401827268,2025-11-27,2025-11-27,2025-26,Washington,Nevada Wolf Pack,264,2440,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827268,0,,,,,,False,,,,,,,,,,,,,,
-401809419,2025-11-27,2025-11-27,2025-26,Brigham Young,Miami (FL),252,2390,0,0,9.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809419,0,,,,,,False,,,,,,,,,,,,,,
-401830875,2025-11-27,2025-11-27,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830875,0,,,,,,False,,,,,,,,,,,,,,
-401826890,2025-11-27,2025-11-27,2025-26,Wisconsin,Providence,275,2507,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826890,0,,,,,,False,,,,,,,,,,,,,,
-401817187,2025-11-27,2025-11-27,2025-26,Santa Clara,Saint Louis,2541,139,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817187,0,,,,,,False,,,,,,,,,,,,,,
-401809396,2025-11-27,2025-11-27,2025-26,Georgetown Hoyas,Dayton,46,2168,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809396,0,,,,,,False,,,,,,,,,,,,,,
+401809397,2025-11-27,2025-11-27,2025-26,Richmond,Furman,257,231,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809397,0,,,,155.0,-185.0,True,,,,,,,,,,,,,,
+401830752,2025-11-27,2025-11-27,2025-26,Vanderbilt,Virginia Commonwealth,238,2670,0,0,24.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830752,0,,,,220.0,-270.0,True,,,,,,,,,,,,,,
+401817199,2025-11-27,2025-11-27,2025-26,St. Bonaventure,East Carolina,179,151,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817199,0,,,,400.0,-600.0,True,,,,,,,,,,,,,,
+401809398,2025-11-27,2025-11-27,2025-26,Charlotte 49ers,Illinois State,2429,2287,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809398,0,,,,-210.0,175.0,True,,,,,,,,,,,,,,
+401831221,2025-11-27,2025-11-27,2025-26,Oregon Ducks,Creighton,2483,156,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831221,0,,,,110.0,-130.0,True,0.2,,-7.0,,,,-1.4,,,,,,,
+401819865,2025-11-27,2025-11-27,2025-26,San Francisco Dons,Colorado,2539,38,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819865,0,,,,105.0,-125.0,True,,,,,,,,,,,,,,
+401830753,2025-11-27,2025-11-27,2025-26,Virginia Tech,Saint Mary's,259,2608,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830753,0,,,,-195.0,165.0,True,,,,,,,,,,,,,,
+401809047,2025-11-27,2025-11-27,2025-26,TCU Horned Frogs,Florida,2628,57,0,0,,10.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809047,0,,,,-1400.0,750.0,True,,,,,,,,,,,,,,
+401817267,2025-11-27,2025-11-27,2025-26,North Carolina,Michigan State,153,127,0,0,16.0,11.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817267,0,,,,-130.0,110.0,True,,,,,,,,,,,,,,
+401831222,2025-11-27,2025-11-27,2025-26,UNLV,Rutgers,2439,164,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831222,0,,,,140.0,-165.0,True,0.0,,-14.6,,,,-0.0,0.2,,-15.6,,,,-3.12
+401827268,2025-11-27,2025-11-27,2025-26,Washington,Nevada Wolf Pack,264,2440,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827268,0,,,,200.0,-240.0,True,,,,,,,,,,,,,,
+401809419,2025-11-27,2025-11-27,2025-26,Brigham Young,Miami (FL),252,2390,0,0,9.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809419,0,,,,380.0,-550.0,True,,,,,,,,,,,,,,
+401830875,2025-11-27,2025-11-27,2025-26,Western Kentucky,South Florida,98,58,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830875,0,,,,-260.0,215.0,True,,,,,,,,,,,,,,
+401826890,2025-11-27,2025-11-27,2025-26,Wisconsin,Providence,275,2507,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826890,0,,,,240.0,-290.0,True,,,,,,,,,,,,,,
+401817187,2025-11-27,2025-11-27,2025-26,Santa Clara,Saint Louis,2541,139,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817187,0,,,,-130.0,110.0,True,,,,,,,,,,,,,,
+401809396,2025-11-27,2025-11-27,2025-26,Georgetown Hoyas,Dayton,46,2168,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809396,0,,,,125.0,-145.0,True,,,,,,,,,,,,,,
 401817234,2025-11-27,2025-11-27,2025-26,Duke,Arkansas,150,8,0,0,4.0,22.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817234,0,,,,425.0,-650.0,True,,,,,,,,1.0,,40.4,,,,40.4
-401830754,2025-11-27,2025-11-27,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830754,0,,,,,,False,,,,,,,,,,,,,,
-401817469,2025-11-27,2025-11-27,2025-26,Stanford Cardinal,Minnesota,24,135,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817469,0,,,,,,False,,,,,,,,,,,,,,
-401812276,2025-11-27,2025-11-27,2025-26,Oklahoma State,Northwestern,197,77,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812276,0,,,,,,False,,,,,,,,,,,,,,
-401830887,2025-11-28,2025-11-28,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830887,0,,,,,,False,,,,,,,,,,,,,,
+401830754,2025-11-27,2025-11-27,2025-26,Colorado State,Wichita State,36,2724,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830754,0,,,,105.0,-125.0,True,,,,,,,,,,,,,,
+401817469,2025-11-27,2025-11-27,2025-26,Stanford Cardinal,Minnesota,24,135,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817469,0,,,,105.0,-125.0,True,,,,,,,,,,,,,,
+401812276,2025-11-27,2025-11-27,2025-26,Oklahoma State,Northwestern,197,77,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812276,0,,,,-145.0,125.0,True,,,,,,,,,,,,,,
 401830878,2025-11-28,2025-11-28,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830878,0,,,,,,False,,,,,,,,,,,,,,
 401822359,2025-11-28,2025-11-28,2025-26,Eastern Illinois,Purdue,2197,2509,0,0,,1.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822359,0,,,,,,False,,,,,,,,,,,,,,
 401823592,2025-11-28,2025-11-28,2025-26,Southeastern Louisiana,Gardner-Webb Runnin',2545,2241,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823592,0,,,,,,False,,,,,,,,,,,,,,
@@ -105,6 +63,7 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401820487,2025-11-28,2025-11-28,2025-26,Texas A&M-Corpus Christi,Xavier,357,2752,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820487,0,,,,,,False,,,,,,,,,,,,,,
 401830877,2025-11-28,2025-11-28,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830877,0,,,,,,False,,,,,,,,,,,,,,
 401823260,2025-11-28,2025-11-28,2025-26,Cal State Northridge,Idaho State Bengals,2463,304,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823260,0,,,,,,False,,,,,,,,,,,,,,
+401830887,2025-11-28,2025-11-28,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830887,0,,,,,,False,,,,,,,,,,,,,,
 401830750,2025-11-28,2025-11-28,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830750,0,,,,,,False,,,,,,,,,,,,,,
 401827173,2025-11-28,2025-11-28,2025-26,Alabama A&M,Clemson,2010,228,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827173,0,,,,,,False,,,,,,,,,,,,,,
 401825573,2025-11-28,2025-11-28,2025-26,Georgia Tech,DePaul Blue,59,305,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825573,0,,,,,,False,,,,,,,,,,,,,,
@@ -152,17 +111,17 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401823593,2025-11-29,2025-11-29,2025-26,Gardner-Webb Runnin',UNC Wilmington Seahawks,2241,350,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823593,0,,,,,,False,,,,,,,,,,,,,,
 401823218,2025-11-29,2025-11-29,2025-26,Bellarmine,Northern Illinois,91,2459,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823218,0,,,,,,False,,,,,,,,0.8,,5.4,,,,4.32
 401822334,2025-11-29,2025-11-29,2025-26,Western Michigan,Valparaiso Beacons,2711,2674,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822334,0,,,,,,False,,,,,,,,,,,,,,
-401826886,2025-11-29,2025-11-29,2025-26,Norfolk State,Arizona,2450,12,0,0,,2.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826886,0,,,,,,False,,,,,,,,0.6,,20.0,,,,12.0
+401826886,2025-11-29,2025-11-29,2025-26,Norfolk State,Arizona,2450,12,0,0,,2.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826886,0,,,,,,False,,,,,,,,,,,,,,
 401830884,2025-11-29,2025-11-29,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830884,0,,,,,,False,,,,,,,,,,,,,,
 401829353,2025-11-29,2025-11-29,2025-26,Kentucky State Thorobreds,Southern Indiana,2310,88,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829353,0,,,,,,False,,,,,,,,,,,,,,
-401827069,2025-11-29,2025-11-29,2025-26,South Carolina State,Winthrop,2569,2737,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827069,0,,,,,,False,0.4,,4.2,,,,1.6800000000000002,0.0,,-15.6,,,,-0.0
+401827069,2025-11-29,2025-11-29,2025-26,South Carolina State,Winthrop,2569,2737,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827069,0,,,,,,False,,,,,,,,,,,,,,
 401826934,2025-11-29,2025-11-29,2025-26,Kansas City Roos,Weber State,140,2692,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826934,0,,,,,,False,,,,,,,,,,,,,,
 401825579,2025-11-29,2025-11-29,2025-26,Montana State,Utah State,147,328,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825579,0,,,,,,False,,,,,,,,,,,,,,
-401824890,2025-11-29,2025-11-29,2025-26,Central Arkansas,East Tennessee State,2110,2193,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824890,0,,,,,,False,,,,,,,,0.8,,15.6,,,,12.48
+401824890,2025-11-29,2025-11-29,2025-26,Central Arkansas,East Tennessee State,2110,2193,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824890,0,,,,,,False,,,,,,,,,,,,,,
 401824853,2025-11-29,2025-11-29,2025-26,Gwynedd-Mercy Griffins,Maryland-Eastern Shore,461,2379,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824853,0,,,,,,False,,,,,,,,,,,,,,
 401823488,2025-11-29,2025-11-29,2025-26,Mercer,Elon,2382,2210,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823488,0,,,,,,False,,,,,,,,,,,,,,
 401822836,2025-11-29,2025-11-29,2025-26,Siena Saints,American University,2561,44,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822836,0,,,,,,False,,,,,,,,,,,,,,
-401813402,2025-11-29,2025-11-29,2025-26,Howard,Mount St. Mary's,47,116,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813402,0,,,,,,False,0.0,,-31.4,,,,-0.0,0.4,,-11.6,,,,-4.64
+401813402,2025-11-29,2025-11-29,2025-26,Howard,Mount St. Mary's,47,116,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813402,0,,,,,,False,,,,,,,,0.4,,-11.6,,,,-4.64
 401811108,2025-11-29,2025-11-29,2025-26,South Dakota,Air Force,233,2005,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811108,0,,,,,,False,1.0,,11.2,,,,11.2,,,,,,,
 401831226,2025-11-29,2025-11-29,2025-26,TBD,TBD,-2,-1,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831226,0,,,,,,False,,,,,,,,,,,,,,
 401822323,2025-11-29,2025-11-29,2025-26,Ball State,Lafayette,2050,322,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822323,0,,,,,,False,,,,,,,,,,,,,,
@@ -182,7 +141,7 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401820600,2025-11-29,2025-11-29,2025-26,Milwaukee,Akron,270,2006,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820600,0,,,,,,False,0.6,,18.2,,,,10.92,,,,,,,
 401828270,2025-11-29,2025-11-29,2025-26,Fordham,UAlbany Great Danes,2230,399,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828270,0,,,,,,False,,,,,,,,,,,,,,
 401829478,2025-11-29,2025-11-29,2025-26,Lawrence University,St. Thomas-Minnesota Tommies,268,2900,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829478,0,,,,,,False,0.6,,1.0,,,,0.6,,,,,,,
-401829468,2025-11-29,2025-11-29,2025-26,Mid-America Christian Evangels,Omaha,3126,2437,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829468,0,,,,,,False,,,,,,,,,,,,,,
+401829468,2025-11-29,2025-11-29,2025-26,Mid-America Christian Evangels,Omaha,3126,2437,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829468,0,,,,,,False,0.2,,-9.0,,,,-1.8,,,,,,,
 401826920,2025-11-29,2025-11-29,2025-26,Regis (CO) REGIS UNIVERSITY,Northern Colorado,2518,2458,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826920,0,,,,,,False,0.8,,3.8,,,,3.04,,,,,,,
 401824065,2025-11-29,2025-11-29,2025-26,Sacramento State,Pacific,16,279,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824065,0,,,,,,False,0.8,,12.6,,,,10.08,,,,,,,
 401823536,2025-11-29,2025-11-29,2025-26,California Baptist,Oregon State,2856,204,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823536,0,,,,,,False,0.0,,-6.8,,,,-0.0,,,,,,,
@@ -190,18 +149,18 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401822183,2025-11-30,2025-11-30,2025-26,Merrimack,La Salle,2771,2325,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822183,0,,,,,,False,,,,,,,,,,,,,,
 401828684,2025-11-30,2025-11-30,2025-26,Mitchell College Mariners,New Haven Chargers,108838,2441,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828684,0,,,,,,False,,,,,,,,,,,,,,
 401828271,2025-11-30,2025-11-30,2025-26,SUNY-Oneonta,UAlbany Great Danes,355,399,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828271,0,,,,,,False,,,,,,,,,,,,,,
-401822669,2025-11-30,2025-11-30,2025-26,Saint Joseph's,Princeton,2603,163,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822669,0,,,,,,False,0.2,,-8.6,,,,-1.72,,,,,,,
+401822669,2025-11-30,2025-11-30,2025-26,Saint Joseph's,Princeton,2603,163,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822669,0,,,,,,False,0.0,,-12.2,,,,-0.0,,,,,,,
 401820627,2025-11-30,2025-11-30,2025-26,Siena Saints,Maine Black,2561,311,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820627,0,,,,,,False,,,,,,,,,,,,,,
 401812648,2025-11-30,2025-11-30,2025-26,Johnson & Wales (RI) Griffins,Central Connecticut,353,2115,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812648,0,,,,,,False,,,,,,,,,,,,,,
 401826735,2025-11-30,2025-11-30,2025-26,Appalachian St,UNC Asheville,2026,2427,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826735,0,,,,,,False,,,,,,,,,,,,,,
 401831376,2025-11-30,2025-11-30,2025-26,South Alabama,UTSA,6,2636,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831376,0,,,,,,False,,,,,,,,,,,,,,
 401829388,2025-11-30,2025-11-30,2025-26,Tennessee State,Chattanooga Mocs,2634,236,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829388,0,,,,,,False,,,,,,,,,,,,,,
-401827508,2025-11-30,2025-11-30,2025-26,Old Dominion,William & Mary,295,2729,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827508,0,,,,,,False,1.0,,27.4,,,,27.4,0.2,,-0.8,,,,-0.16
+401827508,2025-11-30,2025-11-30,2025-26,Old Dominion,William & Mary,295,2729,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827508,0,,,,,,False,1.0,,27.4,,,,27.4,,,,,,,
 401823405,2025-11-30,2025-11-30,2025-26,Stetson,Robert Morris,56,2523,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823405,0,,,,,,False,,,,,,,,,,,,,,
 401823191,2025-11-30,2025-11-30,2025-26,New Hampshire,Fairfield,160,2217,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823191,0,,,,,,False,,,,,,,,,,,,,,
-401820581,2025-11-30,2025-11-30,2025-26,Stonehill Skyhawks,Quinnipiac,284,2514,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820581,0,,,,,,False,0.6,,10.8,,,,6.48,,,,,,,
-401818302,2025-11-30,2025-11-30,2025-26,Yale,Vermont,43,261,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401818302,0,,,,,,False,,,,,,,,1.0,,6.8,,,,6.8
-401809079,2025-11-30,2025-11-30,2025-26,Cornell Big,Bucknell,172,2083,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809079,0,,,,,,False,,,,,,,,,,,,,,
+401820581,2025-11-30,2025-11-30,2025-26,Stonehill Skyhawks,Quinnipiac,284,2514,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820581,0,,,,,,False,,,,,,,,,,,,,,
+401818302,2025-11-30,2025-11-30,2025-26,Yale,Vermont,43,261,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401818302,0,,,,,,False,0.2,,-7.4,,,,-1.4800000000000002,1.0,,6.8,,,,6.8
+401809079,2025-11-30,2025-11-30,2025-26,Cornell Big,Bucknell,172,2083,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809079,0,,,,,,False,0.0,,-12.4,,,,-0.0,,,,,,,
 401824863,2025-11-30,2025-11-30,2025-26,Monmouth,Lafayette,2405,322,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824863,0,,,,,,False,,,,,,,,,,,,,,
 401812580,2025-11-30,2025-11-30,2025-26,Hofstra Pride,Pennsylvania,2275,219,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812580,0,,,,,,False,,,,,,,,,,,,,,
 401819901,2025-11-30,2025-11-30,2025-26,Wyoming,Texas Tech,2751,2641,0,0,,20.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819901,0,,,,,,False,,,,,,,,,,,,,,
@@ -210,21 +169,21 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401829404,2025-11-30,2025-11-30,2025-26,Fordham,Colgate,2230,2142,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829404,0,,,,,,False,,,,,,,,,,,,,,
 401827174,2025-11-30,2025-11-30,2025-26,Alabama A&M,Coastal Carolina,2010,324,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827174,0,,,,,,False,0.6,,-10.0,,,,-6.0,,,,,,,
 401817200,2025-11-30,2025-11-30,2025-26,St. Bonaventure,Florida Atlantic,179,2226,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817200,0,,,,,,False,0.6,,5.4,,,,3.24,,,,,,,
-401811970,2025-11-30,2025-11-30,2025-26,Belmont,Charleston,2057,232,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811970,0,,,,,,False,0.6,,4.0,,,,2.4,1.0,,28.6,,,,28.6
+401811970,2025-11-30,2025-11-30,2025-26,Belmont,Charleston,2057,232,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811970,0,,,,,,False,0.6,,4.0,,,,2.4,1.0,,30.2,,,,30.2
 401831380,2025-11-30,2025-11-30,2025-26,St. Ambrose Fighting Bees,Western Illinois,2591,2710,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831380,0,,,,,,False,,,,,,,,,,,,,,
 401827042,2025-11-30,2025-11-30,2025-26,Prairie View A&M,North Texas,2504,249,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827042,0,,,,,,False,,,,,,,,,,,,,,
 401826993,2025-11-30,2025-11-30,2025-26,Longwood,American University,2344,44,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826993,0,,,,,,False,,,,,,,,,,,,,,
 401826942,2025-11-30,2025-11-30,2025-26,Citadel,Presbyterian,2643,2506,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826942,0,,,,,,False,,,,,,,,,,,,,,
-401829326,2025-11-30,2025-11-30,2025-26,UC Irvine,San Jose State,300,23,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829326,0,,,,,,False,,,,,,,,,,,,,,
+401829326,2025-11-30,2025-11-30,2025-26,UC Irvine,San Jose State,300,23,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829326,0,,,,,,False,,,,,,,,0.2,,-4.0,,,,-0.8
 401823310,2025-11-30,2025-11-30,2025-26,San Diego Toreros,Long Beach State Beach,301,299,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823310,0,,,,,,False,,,,,,,,,,,,,,
 401823736,2025-11-30,2025-11-30,2025-26,Cal State Bakersfield,Fresno State,2934,278,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823736,0,,,,,,False,,,,,,,,,,,,,,
 401820189,2025-11-30,2025-11-30,2025-26,Coppin State,Loyola Maryland,2154,2352,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820189,0,,,,,,False,,,,,,,,,,,,,,
 401827016,2025-12-01,2025-12-01,2025-26,Louisiana Christian,Southern,2347,2582,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827016,0,,,,,,False,,,,,,,,,,,,,,
-401822345,2025-12-01,2025-12-01,2025-26,South Carolina State,Chicago State,2569,2130,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822345,0,,,,,,False,,,,,,,,0.0,,-15.6,,,,-0.0
-401823565,2025-12-01,2025-12-01,2025-26,Temple,Villanova,218,222,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823565,0,,,,,,False,,,,,,,,0.6,,-3.4,,,,-2.04
-401823470,2025-12-01,2025-12-01,2025-26,Central State (OH) Marauders,Toledo,2119,2649,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823470,0,,,,,,False,,,,,,,,,,,,,,
+401822345,2025-12-01,2025-12-01,2025-26,South Carolina State,Chicago State,2569,2130,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822345,0,,,,,,False,,,,,,,,,,,,,,
+401823565,2025-12-01,2025-12-01,2025-26,Temple,Villanova,218,222,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823565,0,,,,,,False,,,,,,,,0.4,,-7.4,,,,-2.9600000000000004
+401823470,2025-12-01,2025-12-01,2025-26,Central State (OH) Marauders,Toledo,2119,2649,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823470,0,,,,,,False,0.6,,0.2,,,,0.12,,,,,,,
 401827523,2025-12-01,2025-12-01,2025-26,Apprentice School Builders,Hampton,3111,2261,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827523,0,,,,,,False,,,,,,,,,,,,,,
-401825387,2025-12-01,2025-12-01,2025-26,West Georgia,Troy,2698,2653,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825387,0,,,,,,False,,,,,,,,,,,,,,
+401825387,2025-12-01,2025-12-01,2025-26,West Georgia,Troy,2698,2653,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825387,0,,,,,,False,0.4,,1.0,,,,0.4,,,,,,,
 401824308,2025-12-01,2025-12-01,2025-26,Iona,Delaware Blue Hens,314,48,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824308,0,,,,,,False,,,,,,,,0.4,,-3.4,,,,-1.36
 401823437,2025-12-01,2025-12-01,2025-26,North Alabama,Jacksonville State,2453,55,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823437,0,,,,,,False,,,,,,,,,,,,,,
 401819846,2025-12-01,2025-12-01,2025-26,Tarleton,Cincinnati,2627,2132,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819846,0,,,,,,False,,,,,,,,,,,,,,
@@ -233,24 +192,24 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401808731,2025-12-01,2025-12-01,2025-26,McNeese,Incarnate Word,2377,2916,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401808731,0,,,,,,False,,,,,,,,1.0,,10.4,,,,10.4
 401822368,2025-12-01,2025-12-01,2025-26,Blackburn,Eastern Illinois,2070,2197,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822368,0,,,,,,False,,,,,,,,,,,,,,
 401820546,2025-12-01,2025-12-01,2025-26,Coe Kohawks,Northern Iowa,2141,2460,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820546,0,,,,,,False,,,,,,,,,,,,,,
-401819893,2025-12-01,2025-12-01,2025-26,Bowling Green,Kansas State,189,2306,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819893,0,,,,,,False,,,,,,,,,,,,,,
+401819893,2025-12-01,2025-12-01,2025-26,Bowling Green,Kansas State,189,2306,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819893,0,,,,,,False,,,,,,,,0.8,,13.6,,,,10.88
 401823546,2025-12-01,2025-12-01,2025-26,West Coast Baptist,Southern Utah Thunderbirds,110418,253,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823546,0,,,,,,False,,,,,,,,,,,,,,
 401830319,2025-12-01,2025-12-01,2025-26,New Mexico Highlands,New Mexico,2424,167,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830319,0,,,,,,False,,,,,,,,,,,,,,
 401819866,2025-12-01,2025-12-01,2025-26,California Baptist,Colorado,2856,38,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819866,0,,,,,,False,,,,,,,,,,,,,,
 401817470,2025-12-01,2025-12-01,2025-26,Portland,Stanford Cardinal,2501,24,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817470,0,,,,,,False,,,,,,,,0.2,,-2.8,,,,-0.5599999999999999
 401826753,2025-12-02,2025-12-02,2025-26,Virginia-Lynchburg,Western Carolina,3229,2717,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826753,0,,,,,,False,,,,,,,,,,,,,,
 401817148,2025-12-02,2025-12-02,2025-26,George Washington,Army Black,45,349,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817148,0,,,,,,False,,,,,,,,0.4,,3.6,,,,1.4400000000000002
-401820844,2025-12-02,2025-12-02,2025-26,Charleston Southern Buccaneers,UT Martin Skyhawks,2127,2630,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820844,0,,,,,,False,0.6,,6.2,,,,3.72,,,,,,,
+401820844,2025-12-02,2025-12-02,2025-26,Charleston Southern Buccaneers,UT Martin Skyhawks,2127,2630,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820844,0,,,,,,False,,,,,,,,,,,,,,
 401827278,2025-12-02,2025-12-02,2025-26,Campbell Fighting,Penn State,2097,213,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827278,0,,,,,,False,,,,,,,,,,,,,,
 401820618,2025-12-02,2025-12-02,2025-26,Stonehill Skyhawks,Bryant,284,2803,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820618,0,,,,,,False,,,,,,,,,,,,,,
 401820609,2025-12-02,2025-12-02,2025-26,Lehigh Mountain,Binghamton,2329,2066,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820609,0,,,,,,False,0.2,,-5.8,,,,-1.16,,,,,,,
 401825392,2025-12-02,2025-12-02,2025-26,Iowa,Michigan State,2294,127,0,0,,11.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825392,0,,,,,,False,,,,,,,,,,,,,,
-401806366,2025-12-02,2025-12-02,2025-26,Tennessee,Syracuse Orange,2633,183,0,0,17.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806366,0,,,,,,False,0.0,,-12.2,,,,-0.0,1.0,,17.0,,,,17.0
+401806366,2025-12-02,2025-12-02,2025-26,Tennessee,Syracuse Orange,2633,183,0,0,17.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806366,0,,,,,,False,0.0,,-17.6,,,,-0.0,0.8,,10.2,,,,8.16
 401831072,2025-12-02,2025-12-02,2025-26,Indiana University East IU EAST,Miami (OH),3138,193,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401831072,0,,,,,,False,,,,,,,,,,,,,,
 401830740,2025-12-02,2025-12-02,2025-26,Eureka,Indiana State,101,282,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830740,0,,,,,,False,,,,,,,,,,,,,,
 401830631,2025-12-02,2025-12-02,2025-26,New Mexico State,South Alabama,166,6,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830631,0,,,,,,False,,,,,,,,,,,,,,
-401830118,2025-12-02,2025-12-02,2025-26,UNC Greensboro,UNC Asheville,2430,2427,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830118,0,,,,,,False,,,,,,,,0.4,,-4.2,,,,-1.6800000000000002
-401828340,2025-12-02,2025-12-02,2025-26,Jackson State,Kennesaw State,2296,338,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828340,0,,,,,,False,,,,,,,,0.0,,-38.0,,,,-0.0
+401830118,2025-12-02,2025-12-02,2025-26,UNC Greensboro,UNC Asheville,2430,2427,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830118,0,,,,,,False,,,,,,,,0.2,,-7.6,,,,-1.52
+401828340,2025-12-02,2025-12-02,2025-26,Jackson State,Kennesaw State,2296,338,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828340,0,,,,,,False,0.6,,-0.8,,,,-0.48,0.0,,-38.0,,,,-0.0
 401826703,2025-12-02,2025-12-02,2025-26,Cornell Big,George Mason,172,2244,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826703,0,,,,,,False,,,,,,,,,,,,,,
 401823489,2025-12-02,2025-12-02,2025-26,Georgia State,Mercer,2247,2382,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823489,0,,,,,,False,,,,,,,,,,,,,,
 401823447,2025-12-02,2025-12-02,2025-26,SIU Edwardsville,North Florida Ospreys,2565,2454,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823447,0,,,,,,False,0.0,,-6.4,,,,-0.0,0.4,,-4.6,,,,-1.84
@@ -259,7 +218,7 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401820811,2025-12-02,2025-12-02,2025-26,Maryland-Eastern Shore,East Carolina,2379,151,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820811,0,,,,,,False,,,,,,,,,,,,,,
 401820801,2025-12-02,2025-12-02,2025-26,North Carolina A&T,Charlotte 49ers,2448,2429,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820801,0,,,,,,False,,,,,,,,,,,,,,
 401818303,2025-12-02,2025-12-02,2025-26,SUNY-Maritime,Yale,2951,43,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401818303,0,,,,,,False,1.0,,6.8,,,,6.8,,,,,,,
-401817168,2025-12-02,2025-12-02,2025-26,Brown,Rhode Island,225,227,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817168,0,,,,,,False,,,,,,,,,,,,,,
+401817168,2025-12-02,2025-12-02,2025-26,Brown,Rhode Island,225,227,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817168,0,,,,,,False,0.6,,6.2,,,,3.72,,,,,,,
 401813451,2025-12-02,2025-12-02,2025-26,William & Mary,Duquesne,2729,2184,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813451,0,,,,,,False,,,,,,,,1.0,,27.4,,,,27.4
 401813440,2025-12-02,2025-12-02,2025-26,East Tennessee State,Dayton,2193,2168,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813440,0,,,,,,False,,,,,,,,,,,,,,
 401812289,2025-12-02,2025-12-02,2025-26,Fairleigh Dickinson,Providence,161,2507,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812289,0,,,,,,False,,,,,,,,,,,,,,
@@ -271,29 +230,29 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401828909,2025-12-02,2025-12-02,2025-26,Western Illinois,Drake,2710,2181,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828909,0,,,,,,False,,,,,,,,,,,,,,
 401826882,2025-12-02,2025-12-02,2025-26,Mount Marty College,Wichita State,573,2724,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826882,0,,,,,,False,,,,,,,,,,,,,,
 401826845,2025-12-02,2025-12-02,2025-26,Grambling State,Tulane Green Wave,2755,2655,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826845,0,,,,,,False,,,,,,,,,,,,,,
-401812359,2025-12-02,2025-12-02,2025-26,Winthrop,Long Island University Sharks,2737,112358,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812359,0,,,,,,False,0.4,,-13.6,,,,-5.44,0.4,,4.2,,,,1.6800000000000002
+401812359,2025-12-02,2025-12-02,2025-26,Winthrop,Long Island University Sharks,2737,112358,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812359,0,,,,,,False,0.4,,-13.6,,,,-5.44,,,,,,,
 401825393,2025-12-02,2025-12-02,2025-26,Purdue,Rutgers,2509,164,0,0,1.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825393,0,,,,,,False,0.0,,-14.6,,,,-0.0,,,,,,,
 401828285,2025-12-02,2025-12-02,2025-26,Manhattan Christian Thunder,Tulsa Golden Hurricane,131632,202,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828285,0,,,,,,False,,,,,,,,,,,,,,
 401828278,2025-12-02,2025-12-02,2025-26,Houston Christian,North Texas,2277,249,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828278,0,,,,,,False,,,,,,,,,,,,,,
-401827217,2025-12-02,2025-12-02,2025-26,Wagner Seahawks,Maryland,2681,120,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827217,0,,,,,,False,0.6,,-11.8,,,,-7.08,,,,,,,
+401827217,2025-12-02,2025-12-02,2025-26,Wagner Seahawks,Maryland,2681,120,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827217,0,,,,,,False,0.4,,-19.4,,,,-7.76,,,,,,,
 401826861,2025-12-02,2025-12-02,2025-26,Morehead State,Murray State,2413,93,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826861,0,,,,,,False,0.4,,-5.4,,,,-2.16,,,,,,,
-401824138,2025-12-02,2025-12-02,2025-26,Washington State,Bradley,265,71,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824138,0,,,,,,False,0.6,,7.6,,,,4.56,0.6,,4.4,,,,2.64
+401824138,2025-12-02,2025-12-02,2025-26,Washington State,Bradley,265,71,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824138,0,,,,,,False,0.6,,7.6,,,,4.56,0.4,,-3.2,,,,-1.2800000000000002
 401823871,2025-12-02,2025-12-02,2025-26,UT Arlington,Arkansas State,250,2032,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823871,0,,,,,,False,,,,,,,,,,,,,,
 401822394,2025-12-02,2025-12-02,2025-26,Lindenwood,Northern Illinois,2815,2459,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822394,0,,,,,,False,,,,,,,,,,,,,,
 401822335,2025-12-02,2025-12-02,2025-26,Valparaiso Beacons,Marquette,2674,269,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822335,0,,,,,,False,,,,,,,,,,,,,,
-401819828,2025-12-02,2025-12-02,2025-26,Sacramento State,Baylor,16,239,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819828,0,,,,,,False,,,,,,,,,,,,,,
+401819828,2025-12-02,2025-12-02,2025-26,Sacramento State,Baylor,16,239,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819828,0,,,,,,False,0.6,,-1.2,,,,-0.72,,,,,,,
 401817159,2025-12-02,2025-12-02,2025-26,Central Michigan,Loyola Chicago,2117,2350,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817159,0,,,,,,False,,,,,,,,,,,,,,
 401813292,2025-12-02,2025-12-02,2025-26,Sam Houston State,Oklahoma State,2534,197,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813292,0,,,,,,False,,,,,,,,,,,,,,
-401812791,2025-12-02,2025-12-02,2025-26,Connecticut,Kansas,41,2305,0,0,5.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812791,0,,,,,,False,0.8,,6.0,,,,4.800000000000001,,,,,,,
+401812791,2025-12-02,2025-12-02,2025-26,Connecticut,Kansas,41,2305,0,0,5.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812791,0,,,,,,False,1.0,,9.4,,,,9.4,,,,,,,
 401823789,2025-12-02,2025-12-02,2025-26,Stetson,Grand Canyon Lopes,56,2253,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823789,0,,,,,,False,,,,,,,,,,,,,,
 401823527,2025-12-02,2025-12-02,2025-26,Abilene Christian,Pepperdine,2000,2492,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823527,0,,,,,,False,,,,,,,,,,,,,,
 401820834,2025-12-02,2025-12-02,2025-26,Nicholls State,Creighton,2447,156,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820834,0,,,,,,False,0.2,,-7.0,,,,-1.4,,,,,,,
 401806371,2025-12-02,2025-12-02,2025-26,Miami (FL),Ole Miss,2390,145,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806371,0,,,,,,False,,,,,,,,,,,,,,
 401806369,2025-12-02,2025-12-02,2025-26,Georgia,Florida State,61,52,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806369,0,,,,,,False,,,,,,,,,,,,,,
-401806368,2025-12-02,2025-12-02,2025-26,Missouri,Notre Dame,142,87,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806368,0,,,,,,False,0.6,,-0.6,,,,-0.36,,,,,,,
+401806368,2025-12-02,2025-12-02,2025-26,Missouri,Notre Dame,142,87,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806368,0,,,,,,False,0.4,,-4.0,,,,-1.6,,,,,,,
 401806365,2025-12-02,2025-12-02,2025-26,North Carolina,Kentucky,153,96,0,0,16.0,19.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806365,0,,,,,,False,,,,,,,,,,,,,,
-401826909,2025-12-02,2025-12-02,2025-26,UC San Diego Tritons,Nevada Wolf Pack,28,2440,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826909,0,,,,,,False,,,,,,,,1.0,,12.8,,,,12.8
-401825394,2025-12-02,2025-12-02,2025-26,USC,Oregon Ducks,30,2483,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825394,0,,,,,,False,,,,,,,,1.0,,2.2,,,,2.2
+401826909,2025-12-02,2025-12-02,2025-26,UC San Diego Tritons,Nevada Wolf Pack,28,2440,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826909,0,,,,,,False,,,,,,,,1.0,,12.6,,,,12.6
+401825394,2025-12-02,2025-12-02,2025-26,USC,Oregon Ducks,30,2483,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825394,0,,,,,,False,,,,,,,,1.0,,4.6,,,,4.6
 401817224,2025-12-02,2025-12-02,2025-26,Utah,California,254,25,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817224,0,,,,,,False,,,,,,,,,,,,,,
 401817188,2025-12-02,2025-12-02,2025-26,Saint Louis,Loyola Marymount,139,2351,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817188,0,,,,,,False,,,,,,,,,,,,,,
 401827132,2025-12-03,2025-12-03,2025-26,Arkansas-Pine Bluff,UIC,2029,82,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827132,0,,,,,,False,,,,,,,,,,,,,,
@@ -306,8 +265,8 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401829054,2025-12-03,2025-12-03,2025-26,Southern Indiana,Western Michigan,88,2711,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401829054,0,,,,,,False,,,,,,,,,,,,,,
 401828737,2025-12-03,2025-12-03,2025-26,North Carolina Central,James Madison,2428,256,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828737,0,,,,,,False,,,,,,,,,,,,,,
 401828514,2025-12-03,2025-12-03,2025-26,Louisiana Ragin' Cajuns,Lamar,309,2320,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828514,0,,,,,,False,,,,,,,,,,,,,,
-401827515,2025-12-03,2025-12-03,2025-26,Drexel,American University,2182,44,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827515,0,,,,,,False,,,,,,,,0.8,,0.4,,,,0.32
-401827500,2025-12-03,2025-12-03,2025-26,Cornell Big,Towson,172,119,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827500,0,,,,,,False,0.8,,1.2,,,,0.96,,,,,,,
+401827515,2025-12-03,2025-12-03,2025-26,Drexel,American University,2182,44,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827515,0,,,,,,False,,,,,,,,,,,,,,
+401827500,2025-12-03,2025-12-03,2025-26,Cornell Big,Towson,172,119,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827500,0,,,,,,False,0.6,,-3.0,,,,-1.7999999999999998,,,,,,,
 401827267,2025-12-03,2025-12-03,2025-26,New Hampshire,Dartmouth Big Green,160,159,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827267,0,,,,,,False,,,,,,,,,,,,,,
 401827063,2025-12-03,2025-12-03,2025-26,Coastal Carolina,South Carolina Upstate,324,2908,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827063,0,,,,,,False,,,,,,,,0.6,,-10.0,,,,-6.0
 401826994,2025-12-03,2025-12-03,2025-26,Pfeiffer,Longwood,2945,2344,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826994,0,,,,,,False,,,,,,,,,,,,,,
@@ -318,7 +277,7 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401824871,2025-12-03,2025-12-03,2025-26,Furman,Elon,231,2210,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824871,0,,,,,,False,,,,,,,,,,,,,,
 401823594,2025-12-03,2025-12-03,2025-26,Marshall,UNC Wilmington Seahawks,276,350,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823594,0,,,,,,False,,,,,,,,,,,,,,
 401823495,2025-12-03,2025-12-03,2025-26,Gardner-Webb Runnin',Queens University,2241,2511,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823495,0,,,,,,False,,,,,,,,,,,,,,
-401823232,2025-12-03,2025-12-03,2025-26,Florida Gulf Coast,Florida International,526,2229,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823232,0,,,,,,False,,,,,,,,1.0,,11.0,,,,11.0
+401823232,2025-12-03,2025-12-03,2025-26,Florida Gulf Coast,Florida International,526,2229,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823232,0,,,,,,False,,,,,,,,0.8,,7.6,,,,6.08
 401823219,2025-12-03,2025-12-03,2025-26,Midway University,Bellarmine,111166,91,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823219,0,,,,,,False,0.8,,5.4,,,,4.32,,,,,,,
 401823016,2025-12-03,2025-12-03,2025-26,Austin Peay Governors,Kent State Golden Flashes,2046,2309,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823016,0,,,,,,False,,,,,,,,,,,,,,
 401820628,2025-12-03,2025-12-03,2025-26,Maine Black,Ohio,311,195,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820628,0,,,,,,False,0.0,,-14.6,,,,-0.0,,,,,,,
@@ -330,47 +289,58 @@ game_id,date,game_day,season,away_team,home_team,away_team_id,home_team_id,away_
 401817502,2025-12-03,2025-12-03,2025-26,Purdue Fort Wayne,Oakland,2870,2473,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817502,0,,,,,,False,0.8,,8.0,,,,6.4,,,,,,,
 401817501,2025-12-03,2025-12-03,2025-26,IU Indianapolis,Detroit Mercy,85,2174,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817501,0,,,,,,False,,,,,,,,,,,,,,
 401817201,2025-12-03,2025-12-03,2025-26,Bloomsburg,St. Bonaventure,2071,179,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817201,0,,,,,,False,,,,,,,,,,,,,,
-401813403,2025-12-03,2025-12-03,2025-26,Sacred Heart Pioneers,Mount St. Mary's,2529,116,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813403,0,,,,,,False,0.0,,-31.4,,,,-0.0,,,,,,,
-401812649,2025-12-03,2025-12-03,2025-26,Central Connecticut,Seton Hall,2115,2550,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812649,0,,,,,,False,,,,,,,,,,,,,,
+401813403,2025-12-03,2025-12-03,2025-26,Sacred Heart Pioneers,Mount St. Mary's,2529,116,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813403,0,,,,,,False,,,,,,,,,,,,,,
+401812649,2025-12-03,2025-12-03,2025-26,Central Connecticut,Seton Hall,2115,2550,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812649,0,,,,,,False,0.6,,6.4,,,,3.84,,,,,,,
 401812608,2025-12-03,2025-12-03,2025-26,Harvard,Massachusetts,108,113,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812608,0,,,,,,False,0.4,,0.8,,,,0.32,,,,,,,
 401812382,2025-12-03,2025-12-03,2025-26,Penn State-Shenango,Saint Francis,130195,2598,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812382,0,,,,,,False,,,,,,,,,,,,,,
-401809080,2025-12-03,2025-12-03,2025-26,Bucknell,Akron,2083,2006,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809080,0,,,,,,False,0.6,,18.2,,,,10.92,,,,,,,
+401809080,2025-12-03,2025-12-03,2025-26,Bucknell,Akron,2083,2006,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809080,0,,,,,,False,0.6,,18.2,,,,10.92,0.0,,-12.4,,,,-0.0
 401808966,2025-12-03,2025-12-03,2025-26,UT Rio Grande Valley Vaqueros,Stephen F. Austin,292,2617,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401808966,0,,,,,,False,,,,,,,,,,,,,,
 401806374,2025-12-03,2025-12-03,2025-26,Louisville,Arkansas,97,8,0,0,6.0,22.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806374,0,,,,,,False,,,,,,,,,,,,,,
-401806376,2025-12-03,2025-12-03,2025-26,Clemson,Alabama Crimson Tide,228,333,0,0,,8.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806376,0,,,,,,False,0.6,,12.4,,,,7.439999999999999,,,,,,,
+401806376,2025-12-03,2025-12-03,2025-26,Clemson,Alabama Crimson Tide,228,333,0,0,,8.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806376,0,,,,,,False,0.6,,18.2,,,,10.92,,,,,,,
 401806378,2025-12-03,2025-12-03,2025-26,LSU,Boston College,99,103,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806378,0,,,,,,False,,,,,,,,,,,,,,
 401830126,2025-12-03,2025-12-03,2025-26,Mississippi Valley State,UL Monroe Warhawks,2400,2433,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401830126,0,,,,,,False,,,,,,,,,,,,,,
-401824938,2025-12-03,2025-12-03,2025-26,Little Rock,Central Arkansas,2031,2110,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824938,0,,,,,,False,0.8,,15.6,,,,12.48,,,,,,,
+401824938,2025-12-03,2025-12-03,2025-26,Little Rock,Central Arkansas,2031,2110,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824938,0,,,,,,False,,,,,,,,,,,,,,
 401818304,2025-12-03,2025-12-03,2025-26,Brandeis Judges,Yale,5426,43,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401818304,0,,,,,,False,1.0,,6.8,,,,6.8,,,,,,,
-401811971,2025-12-03,2025-12-03,2025-26,Richmond,Belmont,257,2057,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811971,0,,,,,,False,1.0,,28.6,,,,28.6,,,,,,,
-401819876,2025-12-03,2025-12-03,2025-26,Alcorn State,Iowa State,2016,66,0,0,,15.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819876,0,,,,,,False,1.0,,13.8,,,,13.8,,,,,,,
+401811971,2025-12-03,2025-12-03,2025-26,Richmond,Belmont,257,2057,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811971,0,,,,,,False,1.0,,30.2,,,,30.2,,,,,,,
+401819876,2025-12-03,2025-12-03,2025-26,Alcorn State,Iowa State,2016,66,0,0,,15.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819876,0,,,,,,False,1.0,,19.8,,,,19.8,,,,,,,
 401827195,2025-12-03,2025-12-03,2025-26,Tennessee State,Alabama A&M,2634,2010,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401827195,0,,,,,,False,,,,,,,,,,,,,,
 401826999,2025-12-03,2025-12-03,2025-26,Howard Payne,Tarleton,2758,2627,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826999,0,,,,,,False,,,,,,,,,,,,,,
-401826921,2025-12-03,2025-12-03,2025-26,Northern Colorado,Omaha,2458,2437,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826921,0,,,,,,False,,,,,,,,0.8,,3.8,,,,3.04
+401826921,2025-12-03,2025-12-03,2025-26,Northern Colorado,Omaha,2458,2437,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826921,0,,,,,,False,0.2,,-9.0,,,,-1.8,0.8,,3.8,,,,3.04
 401825592,2025-12-03,2025-12-03,2025-26,South Dakota State Jackrabbits,Northern Arizona,2571,2464,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825592,0,,,,,,False,,,,,,,,,,,,,,
-401824864,2025-12-03,2025-12-03,2025-26,Princeton,Monmouth,163,2405,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824864,0,,,,,,False,,,,,,,,0.2,,-8.6,,,,-1.72
+401824864,2025-12-03,2025-12-03,2025-26,Princeton,Monmouth,163,2405,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824864,0,,,,,,False,,,,,,,,0.0,,-12.2,,,,-0.0
 401824855,2025-12-03,2025-12-03,2025-26,Idaho State Bengals,Kansas City Roos,304,140,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824855,0,,,,,,False,,,,,,,,,,,,,,
 401822726,2025-12-03,2025-12-03,2025-26,UMBC,Georgetown Hoyas,2378,46,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822726,0,,,,,,False,,,,,,,,,,,,,,
 401822325,2025-12-03,2025-12-03,2025-26,Ball State,Evansville Purple Aces,2050,339,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401822325,0,,,,,,False,0.2,,-22.0,,,,-4.4,,,,,,,
 401813259,2025-12-03,2025-12-03,2025-26,Eastern Kentucky Colonels,Illinois State,2198,2287,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401813259,0,,,,,,False,,,,,,,,,,,,,,
 401811109,2025-12-03,2025-12-03,2025-26,Portland State,South Dakota,2502,233,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401811109,0,,,,,,False,,,,,,,,,,,,,,
-401808898,2025-12-03,2025-12-03,2025-26,New Orleans,Memphis,2443,235,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401808898,0,,,,,,False,,,,,,,,,,,,,,
+401808898,2025-12-03,2025-12-03,2025-26,New Orleans,Memphis,2443,235,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401808898,0,,,,,,False,,,,,,,,0.0,,-15.8,,,,-0.0
 401819837,2025-12-03,2025-12-03,2025-26,California Baptist,Brigham Young,2856,252,0,0,,9.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401819837,0,,,,,,False,,,,,,,,,,,,,,
 401828292,2025-12-03,2025-12-03,2025-26,North Dakota State,Montana,2449,149,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828292,0,,,,,,False,,,,,,,,,,,,,,
-401826955,2025-12-03,2025-12-03,2025-26,Oral Roberts,Weber State,198,2692,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826955,0,,,,,,False,,,,,,,,0.4,,-3.6,,,,-1.4400000000000002
-401826809,2025-12-03,2025-12-03,2025-26,Texas State,Rice,326,242,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826809,0,,,,,,False,0.0,,-11.2,,,,-0.0,,,,,,,
+401826955,2025-12-03,2025-12-03,2025-26,Oral Roberts,Weber State,198,2692,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826955,0,,,,,,False,,,,,,,,0.4,,-2.6,,,,-1.04
+401826809,2025-12-03,2025-12-03,2025-26,Texas State,Rice,326,242,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826809,0,,,,,,False,0.2,,-4.2,,,,-0.8400000000000001,,,,,,,
 401825580,2025-12-03,2025-12-03,2025-26,St. Thomas-Minnesota Tommies,Montana State,2900,147,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825580,0,,,,,,False,,,,,,,,0.6,,1.0,,,,0.6
 401825397,2025-12-03,2025-12-03,2025-26,Northwestern,Wisconsin,77,275,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825397,0,,,,,,False,,,,,,,,,,,,,,
 401823568,2025-12-03,2025-12-03,2025-26,North Dakota Fighting,Idaho,155,70,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823568,0,,,,,,False,,,,,,,,0.4,,-6.2,,,,-2.4800000000000004
 401823504,2025-12-03,2025-12-03,2025-26,Eastern Washington,Denver Pioneers,331,2172,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823504,0,,,,,,False,,,,,,,,,,,,,,
 401820556,2025-12-03,2025-12-03,2025-26,Pacific,Air Force,279,2005,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820556,0,,,,,,False,1.0,,11.2,,,,11.2,0.8,,12.6,,,,10.08
-401806373,2025-12-03,2025-12-03,2025-26,NC State,Auburn,152,2,0,0,23.0,21.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806373,0,,,,,,False,0.6,,1.6,,,,0.96,0.6,,1.2,,,,0.72
+401806373,2025-12-03,2025-12-03,2025-26,NC State,Auburn,152,2,0,0,23.0,21.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806373,0,,,,,,False,0.6,,-5.4,,,,-3.24,0.4,,-1.0,,,,-0.4
 401806375,2025-12-03,2025-12-03,2025-26,Southern Methodist,Vanderbilt,2567,238,0,0,,24.0,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806375,0,,,,,,False,,,,,,,,,,,,,,
-401806379,2025-12-03,2025-12-03,2025-26,Virginia,Texas Longhorns,258,251,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806379,0,,,,,,False,,,,,,,,,,,,,,
+401806379,2025-12-03,2025-12-03,2025-26,Virginia,Texas Longhorns,258,251,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806379,0,,,,,,False,0.6,,17.0,,,,10.2,,,,,,,
 401806377,2025-12-03,2025-12-03,2025-26,Mississippi State,Georgia Tech,344,59,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401806377,0,,,,,,False,,,,,,,,,,,,,,
-401824059,2025-12-03,2025-12-03,2025-26,Vermont,Oregon State,261,204,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824059,0,,,,,,False,0.0,,-6.8,,,,-0.0,,,,,,,
+401824059,2025-12-03,2025-12-03,2025-26,Vermont,Oregon State,261,204,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824059,0,,,,,,False,0.0,,-6.8,,,,-0.0,0.2,,-7.4,,,,-1.4800000000000002
 401824128,2025-12-03,2025-12-03,2025-26,Puget Sound Loggers,Seattle,2508,2547,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824128,0,,,,,,False,,,,,,,,,,,,,,
 401824028,2025-12-03,2025-12-03,2025-26,Utah Tech,Santa Clara,3101,2541,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401824028,0,,,,,,False,,,,,,,,,,,,,,
-401823766,2025-12-03,2025-12-03,2025-26,Utah Valley,San Diego State,3084,21,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823766,0,,,,,,False,,,,,,,,,,,,,,
+401823766,2025-12-03,2025-12-03,2025-26,Utah Valley,San Diego State,3084,21,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823766,0,,,,,,False,0.4,,-11.2,,,,-4.48,,,,,,,
 401823438,2025-12-03,2025-12-03,2025-26,North Alabama,San Francisco Dons,2453,2539,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823438,0,,,,,,False,,,,,,,,,,,,,,
 401825396,2025-12-03,2025-12-03,2025-26,UCLA,Washington,26,264,0,0,18.0,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401825396,0,,,,,,False,,,,,,,,,,,,,,
+401812290,2025-12-04,2025-12-04,2025-26,Manor College,Fairleigh Dickinson,130196,161,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401812290,0,,,,,,False,,,,,,,,,,,,,,
+401828643,2025-12-04,2025-12-04,2025-26,Citadel,Davidson,2643,2166,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401828643,0,,,,,,False,,,,,,,,,,,,,,
+401826835,2025-12-04,2025-12-04,2025-26,Utah State,South Florida,328,58,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401826835,0,,,,,,False,,,,,,,,,,,,,,
+401823852,2025-12-04,2025-12-04,2025-26,Rider,Merrimack,2520,2771,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823852,0,,,,,,False,,,,,,,,,,,,,,
+401820845,2025-12-04,2025-12-04,2025-26,Warren Wilson,Charleston Southern Buccaneers,2684,2127,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401820845,0,,,,,,False,,,,,,,,,,,,,,
+401817505,2025-12-04,2025-12-04,2025-26,Robert Morris,Green Bay,2523,2739,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401817505,0,,,,,,False,0.8,,2.4,,,,1.92,,,,,,,
+401823311,2025-12-04,2025-12-04,2025-26,Long Beach State Beach,UC Santa Barbara,299,2540,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823311,0,,,,,,False,,,,,,,,,,,,,,
+401823261,2025-12-04,2025-12-04,2025-26,Cal State Bakersfield,Cal State Northridge,2934,2463,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401823261,0,,,,,,False,,,,,,,,,,,,,,
+401809153,2025-12-04,2025-12-04,2025-26,Cal Poly,Cal State Fullerton,13,2239,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809153,0,,,,,,False,0.4,,-2.0,,,,-0.8,0.2,,-7.4,,,,-1.4800000000000002
+401809105,2025-12-04,2025-12-04,2025-26,UC Riverside,UC Irvine,27,300,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809105,0,,,,,,False,0.2,,-4.0,,,,-0.8,,,,,,,
+401809123,2025-12-04,2025-12-04,2025-26,UC Davis,Hawai'i Rainbow,302,62,0,0,,,Scheduled,https://www.espn.com/mens-college-basketball/game/_/gameId/401809123,0,,,,,,False,,,,,,,,,,,,,,
