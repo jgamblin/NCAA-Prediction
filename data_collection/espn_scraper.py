@@ -219,7 +219,12 @@ class ESPNScraper:
             status_state = status_type.get('state', 'pre')
             
             if status_type.get('completed', False) or status_state == 'post':
-                game_status = 'Final'
+                # Only mark as Final if at least one team has scored
+                # This prevents games marked "Final" with 0-0 scores from being treated as complete
+                if home_score > 0 or away_score > 0:
+                    game_status = 'Final'
+                else:
+                    game_status = 'Scheduled'  # Treat 0-0 "Final" as not yet played
             elif status_state in ['in']:
                 game_status = 'In Progress'
             else:
@@ -370,7 +375,12 @@ class ESPNScraper:
             status_state = status_type.get('state', 'pre')
             
             if completed or status_state == 'post':
-                game_status = 'Final'
+                # Only mark as Final if at least one team has scored
+                # This prevents games marked "Final" with 0-0 scores from being treated as complete
+                if home_score > 0 or away_score > 0:
+                    game_status = 'Final'
+                else:
+                    game_status = 'Scheduled'  # Treat 0-0 "Final" as not yet played
             elif status_state in ['in', 'halftime']:
                 game_status = 'In Progress'
             else:

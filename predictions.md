@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-29 06:10:16 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `8028f97`
+**Last Updated**: 2025-11-29 11:46:41 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `31685c6`
 
 ---
 
@@ -13,18 +13,18 @@
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 1 day(s) (last miss 2025-11-27)
+- **#1 Pick Streak**: 0 day(s) (last miss 2025-11-29)
 - **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-28)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-22 | 11 | ✅ | ❌ |
 | 2025-11-23 | 30 | ✅ | ❌ |
 | 2025-11-24 | 39 | ❌ | ❌ |
 | 2025-11-25 | 44 | ✅ | ❌ |
 | 2025-11-26 | 34 | ✅ | ✅ |
 | 2025-11-27 | 9 | ❌ | ❌ |
 | 2025-11-28 | 21 | ✅ | ❌ |
+| 2025-11-29 | 1 | ❌ | — |
 
 ### 🎯 High Confidence Picks (≥70%)
 
@@ -87,8 +87,8 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 75.9% (1424 evaluated)
-- **Last 10 Days**: 60.5% (491 games)
+- **Overall Accuracy**: 75.6% (1466 evaluated)
+- **Last 10 Days**: 61.0% (533 games)
 
 ### Last 7 Days
 
@@ -100,7 +100,7 @@
 | 2025-11-25 | 88 | 50 | 56.8% | 79.3% |
 | 2025-11-26 | 136 | 80 | 58.8% | 80.0% |
 | 2025-11-27 | 36 | 16 | 44.4% | 76.9% |
-| 2025-11-28 | 42 | 28 | 66.7% | 80.6% |
+| 2025-11-28 | 84 | 56 | 66.7% | 80.6% |
 
 ---
 

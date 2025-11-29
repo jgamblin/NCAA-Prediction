@@ -9,5 +9,27 @@
     "disagreements": 0,
     "disagreement_accuracy": null,
     "agreement_accuracy": 0.5
+  },
+  {
+    "date": "2025-11-29 11:43:28",
+    "total_predictions": 177,
+    "model_accuracy": 0.6045197740112994,
+    "betting_line_accuracy": 0.6101694915254238,
+    "games_with_betting_lines": 177,
+    "agreements": 174,
+    "disagreements": 3,
+    "disagreement_accuracy": 0.3333333333333333,
+    "agreement_accuracy": 0.6091954022988506
+  },
+  {
+    "date": "2025-11-29 11:46:27",
+    "total_predictions": 176,
+    "model_accuracy": 0.6079545454545454,
+    "betting_line_accuracy": 0.6136363636363636,
+    "games_with_betting_lines": 176,
+    "agreements": 173,
+    "disagreements": 3,
+    "disagreement_accuracy": 0.3333333333333333,
+    "agreement_accuracy": 0.6127167630057804
   }
 ]

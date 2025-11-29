@@ -418,6 +418,13 @@ def main():
     except Exception as e:
         print(f"⚠️ Failed to generate predictions markdown: {e}")
 
+    # Generate performance.md dashboard
+    try:
+        from scripts.generate_performance_report import main as generate_performance_report
+        generate_performance_report()
+    except Exception as e:
+        print(f"⚠️ Failed to generate performance.md: {e}")
+
     # Generate betting tracker markdown files (bets.md, safest_bets.md, value_bets.md)
     try:
         from game_prediction.betting_tracker import generate_bets_markdown

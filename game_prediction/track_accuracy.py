@@ -67,6 +67,14 @@ def track_accuracy():
     # Filter to only games that are actually completed (game_status == 'Final')
     merged = merged[merged['game_status'] == 'Final'].copy()
     
+    # Filter out games with invalid scores (0-0 or missing scores)
+    # These are games that ESPN marks as "Final" prematurely
+    merged = merged[
+        (merged['home_score'].notna()) & 
+        (merged['away_score'].notna()) &
+        ((merged['home_score'] > 0) | (merged['away_score'] > 0))
+    ].copy()
+    
     if len(merged) == 0:
         print("\n✗ No completed games found matching predictions yet")
         print("   Games are likely scheduled for later today/tomorrow")
