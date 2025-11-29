@@ -18,50 +18,67 @@ import hashlib
 # from model_training.data_restructure import expand_to_team_games
 # from model_training.add_rolling_features import add_rolling_features
 
-def add_rolling_features_correctly(df):
+def generate_point_in_time_features(df):
     """
-    Calculates rolling stats respecting the time dimension.
-    Target Leakage Proof: Uses shift(1) to ensure we only see PAST games.
+    Calculates rolling features dynamically to prevent data leakage.
+    Uses shift(1) to ensure only past games are included in the average.
     """
-    # 1. Sort strictly by date so we process in order
+    # 1. Sort by date to respect time
     df = df.sort_values(['season', 'date'])
     
-    # 2. Create a long-form view (one row per team-game)
-    # We need this because a team appears as 'home' sometimes and 'away' others
-    home_games = df[['date', 'season', 'home_team_id', 'home_win', 'home_score', 'away_score']].copy()
-    home_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
+    # 2. Create a long-form view (one row per team-game) to calculate stats
+    # Stack Home perspective
+    home_side = df[['date', 'season', 'home_team_id', 'home_win', 'home_score', 'game_id']].copy()
+    home_side.columns = ['date', 'season', 'team_id', 'win', 'score', 'game_id']
     
-    away_games = df[['date', 'season', 'away_team_id', 'home_win', 'away_score', 'home_score']].copy()
-    away_games['win'] = 1 - away_games['home_win']
-    away_games = away_games[['date', 'season', 'away_team_id', 'win', 'away_score', 'home_score']]
-    away_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
+    # Stack Away perspective
+    away_side = df[['date', 'season', 'away_team_id', 'home_win', 'away_score', 'game_id']].copy()
+    away_side['win'] = 1 - away_side['home_win'] # Inverse for away
+    away_side = away_side[['date', 'season', 'away_team_id', 'win', 'away_score', 'game_id']]
+    away_side.columns = ['date', 'season', 'team_id', 'win', 'score', 'game_id']
     
-    team_games = pd.concat([home_games, away_games]).sort_values(['team_id', 'date'])
+    # Combine and sort
+    team_stats = pd.concat([home_side, away_side]).sort_values(['season', 'team_id', 'date'])
     
-    # 3. Calculate rolling stats with SHIFT
-    # shift(1) means "exclude the current row's result from the calculation"
-    team_games['rolling_win_5'] = team_games.groupby(['season', 'team_id'])['win'] \
-        .transform(lambda x: x.shift(1).rolling(window=5, min_periods=1).mean())
-        
-    team_games['rolling_score_5'] = team_games.groupby(['season', 'team_id'])['score'] \
-        .transform(lambda x: x.shift(1).rolling(window=5, min_periods=1).mean())
-
-    # 4. Merge back to original Matchups
+    # 3. Calculate Rolling Stats with SHIFT (The Anti-Leak Fix)
+    # We group by season+team, then shift(1) so row N only sees rows 0..N-1
+    team_stats['rolling_win_5'] = team_stats.groupby(['season', 'team_id'])['win'].transform(
+        lambda x: x.shift(1).rolling(window=5, min_periods=1).mean()
+    )
+    team_stats['rolling_score_5'] = team_stats.groupby(['season', 'team_id'])['score'].transform(
+        lambda x: x.shift(1).rolling(window=5, min_periods=1).mean()
+    )
+    
+    # 4. Merge back to the original Matchup DataFrame
     # Merge for Home Team
-    df = df.merge(team_games[['date', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
-                  left_on=['date', 'home_team_id'], 
-                  right_on=['date', 'team_id'], 
-                  how='left').rename(columns={'rolling_win_5': 'home_rolling_win_5', 
-                                            'rolling_score_5': 'home_rolling_score_5'})
-    
+    df = df.merge(team_stats[['game_id', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
+                  left_on=['game_id', 'home_team_id'], 
+                  right_on=['game_id', 'team_id'], 
+                  how='left').rename(columns={
+                      'rolling_win_5': 'home_rolling_win_5',
+                      'rolling_score_5': 'home_rolling_score_5'
+                  }).drop(columns=['team_id'])
+                  
     # Merge for Away Team
-    df = df.merge(team_games[['date', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
-                  left_on=['date', 'away_team_id'], 
-                  right_on=['date', 'team_id'], 
-                  how='left', suffixes=('', '_away')).rename(columns={'rolling_win_5': 'away_rolling_win_5', 
-                                                                    'rolling_score_5': 'away_rolling_score_5'})
-                                                                    
+    df = df.merge(team_stats[['game_id', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
+                  left_on=['game_id', 'away_team_id'], 
+                  right_on=['game_id', 'team_id'], 
+                  how='left').rename(columns={
+                      'rolling_win_5': 'away_rolling_win_5',
+                      'rolling_score_5': 'away_rolling_score_5'
+                  }).drop(columns=['team_id'])
+
+    # 5. Fill NaNs (early season games) with default/league average
+    features_to_fill = ['home_rolling_win_5', 'home_rolling_score_5', 
+                        'away_rolling_win_5', 'away_rolling_score_5']
+    df[features_to_fill] = df[features_to_fill].fillna(0.5) 
+    
     return df
+
+def add_rolling_features_correctly(df):
+    # This function is now replaced by generate_point_in_time_features
+    # Keeping for backward compatibility if needed, but should be removed
+    return generate_point_in_time_features(df)
 
 # Optional lineage imports (defensive)
 try:  # pragma: no cover
@@ -75,13 +92,10 @@ except Exception:  # noqa: BLE001
 
 # Feature store utilities
 try:  # pragma: no cover
-    from model_training.feature_store import load_feature_store
     from model_training.team_id_utils import ensure_team_ids
     _fs_available = True
 except Exception:  # Provide safe fallbacks so static analysis sees symbols
     _fs_available = False
-    def load_feature_store():  # type: ignore
-        return pd.DataFrame()
     def ensure_team_ids(df: pd.DataFrame, home_col: str = 'home_team', away_col: str = 'away_team'):  # type: ignore
         return df
 
@@ -238,7 +252,7 @@ def train_weighted_model(quick: bool = False):
 
     # --- POINT-IN-TIME FEATURE ENGINEERING ---
     print("\nCalculating point-in-time rolling features...")
-    df = add_rolling_features_correctly(df)
+    df = generate_point_in_time_features(df)
     print(f"✓ Calculated and merged rolling features for {len(df)} matchups")
 
     # Calculate sample weights
@@ -363,11 +377,10 @@ def train_weighted_model(quick: bool = False):
         },
         'config_version': _config_version,
         'commit_hash': _commit_hash,
-        'fs_diff_feature_count': len(fs_diff_cols)
-        , 'completed_games_md5': completed_games_md5
-        , 'normalized_games_md5': normalized_games_md5
-        , 'feature_store_md5': feature_store_md5
-        , 'model_params_md5': model_params_md5
+        'completed_games_md5': completed_games_md5,
+        'normalized_games_md5': normalized_games_md5,
+        'feature_store_md5': feature_store_md5,
+        'model_params_md5': model_params_md5
     }
     
     tuning_log_path = os.path.join(data_dir, 'Model_Tuning_Log.json')

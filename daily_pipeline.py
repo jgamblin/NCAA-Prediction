@@ -363,87 +363,21 @@ def main():
             print("⚠️ No tuned params found (using defaults)")
         predictor = AdaptivePredictor(**sp_kwargs)
         
-        # Enrich training data with feature store using fallback hierarchy (Phase 1)
+        # Enrich training data with point-in-time features (no data leakage)
         try:
-            from model_training.feature_store import load_feature_store, enrich_dataframe_with_fallback
+            from model_training.feature_store import calculate_point_in_time_features
             from model_training.team_id_utils import ensure_team_ids
-            import json
-            
-            # Load feature flags
-            try:
-                with open('config/feature_flags.json') as f:
-                    feature_flags = json.load(f)
-            except Exception:
-                feature_flags = {}
-            
-            use_fallback = feature_flags.get('use_feature_fallback', True)
-            fallback_min_games = feature_flags.get('fallback_min_games', 5)
             
             train_df = ensure_team_ids(train_df)
             raw_training_rows = len(train_df)
-            fs_df = load_feature_store()
             
-            if not fs_df.empty and use_fallback:
-                # Use new fallback-aware enrichment (no NaN values)
-                print("  Using feature store with fallback hierarchy for training data...")
-                train_df = enrich_dataframe_with_fallback(
-                    train_df, 
-                    feature_store_df=fs_df,
-                    min_games=fallback_min_games
-                )
-                # Guard against unexpected inflation
-                if len(train_df) > raw_training_rows * (1 + row_guard_pct):
-                    print(f"⚠️ Row inflation detected after FS merge: {len(train_df)} vs {raw_training_rows}. De-duplicating by game_id.")
-                    if 'game_id' in train_df.columns:
-                        before = len(train_df)
-                        train_df = train_df.drop_duplicates(subset=['game_id'])
-                        print(f"  De-dup reduced rows to {len(train_df)} (was {before}).")
-                else:
-                    print(f"✓ Added feature store columns to training data (with fallback - rows {len(train_df)})")
-            elif not fs_df.empty:
-                # Legacy merge approach
-                fs_df_reduced = (
-                    fs_df.sort_values(['season','team_id','games_played'])
-                         .drop_duplicates(['season','team_id'], keep='last')
-                )
-                fs_features = [
-                    'rolling_win_pct_5','rolling_win_pct_10',
-                    'rolling_point_diff_avg_5','rolling_point_diff_avg_10',
-                    'win_pct_last5_vs10','point_diff_last5_vs10','recent_strength_index_5'
-                ]
-                keep_cols = ['season','team_id'] + [c for c in fs_features if c in fs_df_reduced.columns]
-                fs_df_reduced = fs_df_reduced[keep_cols]
-                if 'season' not in train_df.columns and 'Season' in train_df.columns:
-                    train_df['season'] = train_df['Season']
-                if 'season' not in train_df.columns:
-                    inferred_season = fs_df_reduced['season'].max()
-                    train_df['season'] = inferred_season
-                # Merge home side
-                home_fs = fs_df_reduced.rename(columns={'team_id':'home_team_id'}).copy()
-                for col in list(home_fs.columns):
-                    if col not in ('home_team_id','season'):
-                        home_fs.rename(columns={col: f'home_fs_{col}'}, inplace=True)
-                train_df = train_df.merge(home_fs, on=['home_team_id','season'], how='left')
-                # Merge away side
-                away_fs = fs_df_reduced.rename(columns={'team_id':'away_team_id'})
-                for col in list(away_fs.columns):
-                    if col not in ('away_team_id','season'):
-                        away_fs.rename(columns={col: f'away_fs_{col}'}, inplace=True)
-                train_df = train_df.merge(away_fs, on=['away_team_id','season'], how='left')
-                # Guard against unexpected inflation
-                if len(train_df) > raw_training_rows * (1 + row_guard_pct):
-                    print(f"⚠️ Row inflation detected after FS merge: {len(train_df)} vs {raw_training_rows}. De-duplicating by game_id.")
-                    if 'game_id' in train_df.columns:
-                        before = len(train_df)
-                        train_df = train_df.drop_duplicates(subset=['game_id'])
-                        print(f"  De-dup reduced rows to {len(train_df)} (was {before}).")
-                    else:
-                        print("  Cannot de-dup (no game_id). Proceeding anyway.")
-                else:
-                    print(f"✓ Added feature store columns to training data (legacy - rows {len(train_df)})")
+            print("  Calculating point-in-time features for training data...")
+            train_df = calculate_point_in_time_features(train_df)
+            print(f"✓ Added point-in-time features to training data (rows {len(train_df)})")
+            
         except Exception as exc:
             import traceback
-            print(f"⚠️ Skipped feature store enrichment for training data: {exc}")
+            print(f"⚠️ Failed to calculate point-in-time features for training data: {exc}")
             traceback.print_exc()
         # Optional sample weighting if enabled in config
         cfg_section = {}

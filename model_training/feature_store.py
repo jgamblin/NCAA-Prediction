@@ -29,6 +29,7 @@ Public API:
     load_feature_store(path: Path | str = DEFAULT_PATH) -> pd.DataFrame
     save_feature_store(df: pd.DataFrame, path: Path | str = DEFAULT_PATH) -> None
     get_team_features_with_fallback(team_id, season, feature_store_df, min_games=5) -> dict
+    calculate_point_in_time_features(df: pd.DataFrame) -> pd.DataFrame  # For training data without leakage
 
 """
 from __future__ import annotations
@@ -424,8 +425,75 @@ def enrich_dataframe_with_fallback(
     return df
 
 
+def calculate_point_in_time_features(df):
+    """
+    Calculates rolling features (Win Pct, Point Diff, etc.) correctly for training data.
+    CRITICAL: Uses .shift(1) to ensure a game's result is not included in its own average.
+    """
+    # 1. Sort by date
+    df = df.sort_values(['season', 'date'])
+    
+    # 2. Create Long Format (Stack Home and Away)
+    # We need a single timeline of games per team
+    home_df = df[['date', 'season', 'home_team_encoded', 'home_win', 'home_score', 'away_score', 'game_id']].copy()
+    home_df.columns = ['date', 'season', 'team_id', 'won', 'score', 'opponent_score', 'game_id']
+    
+    away_df = df[['date', 'season', 'away_team_encoded', 'home_win', 'away_score', 'home_score', 'game_id']].copy()
+    away_df['won'] = 1 - away_df['home_win']  # Inverse win for away
+    away_df.columns = ['date', 'season', 'team_id', 'won', 'score', 'opponent_score', 'game_id']
+    
+    # Combined timeline
+    team_df = pd.concat([home_df, away_df]).sort_values(['season', 'team_id', 'date'])
+    
+    # 3. Calculate Derived Metrics (Point Diff)
+    team_df['point_diff'] = team_df['score'] - team_df['opponent_score']
+    
+    # 4. Calculate Rolling Stats using SHIFT(1) to prevent leakage
+    # We group by season+team, then look at the PREVIOUS N games
+    grouped = team_df.groupby(['season', 'team_id'])
+    
+    # Helper for rolling calculations
+    def get_rolling(series, window):
+        return series.shift(1).rolling(window=window, min_periods=1).mean()
+
+    # Calculate base rolling stats
+    team_df['rolling_win_pct_5'] = grouped['won'].transform(lambda x: get_rolling(x, 5))
+    team_df['rolling_win_pct_10'] = grouped['won'].transform(lambda x: get_rolling(x, 10))
+    team_df['rolling_point_diff_avg_5'] = grouped['point_diff'].transform(lambda x: get_rolling(x, 5))
+    team_df['rolling_point_diff_avg_10'] = grouped['point_diff'].transform(lambda x: get_rolling(x, 10))
+
+    # Calculate derived stats (Phase 2/Advanced)
+    team_df['win_pct_last5_vs10'] = team_df['rolling_win_pct_5'] - team_df['rolling_win_pct_10']
+    team_df['point_diff_last5_vs10'] = team_df['rolling_point_diff_avg_5'] - team_df['rolling_point_diff_avg_10']
+    team_df['recent_strength_index_5'] = team_df['rolling_win_pct_5'] * team_df['rolling_point_diff_avg_5']
+
+    # 5. Merge back to the original Matchup DataFrame (Home and Away sides)
+    features = ['rolling_win_pct_5', 'rolling_win_pct_10', 'rolling_point_diff_avg_5', 
+                'rolling_point_diff_avg_10', 'win_pct_last5_vs10', 'point_diff_last5_vs10', 
+                'recent_strength_index_5']
+    
+    # Merge for Home
+    df = df.merge(team_df[['game_id', 'team_id'] + features], 
+                  left_on=['game_id', 'home_team_encoded'], 
+                  right_on=['game_id', 'team_id'], 
+                  how='left').rename(columns={f: f'home_fs_{f}' for f in features}).drop(columns=['team_id'])
+                  
+    # Merge for Away
+    df = df.merge(team_df[['game_id', 'team_id'] + features], 
+                  left_on=['game_id', 'away_team_encoded'], 
+                  right_on=['game_id', 'team_id'], 
+                  how='left').rename(columns={f: f'away_fs_{f}' for f in features}).drop(columns=['team_id'])
+
+    # Fill NaNs with defaults (for first game of season)
+    for col in [c for c in df.columns if 'fs_' in c]:
+        df[col] = df[col].fillna(0.0)
+        
+    return df
+
+
 __all__ = [
     'build_feature_store', 'load_feature_store', 'save_feature_store',
     'get_team_features_with_fallback', 'enrich_dataframe_with_fallback',
+    'calculate_point_in_time_features',
     'LEAGUE_AVERAGE_DEFAULTS', 'NUMERIC_FEATURE_COLS'
 ]
