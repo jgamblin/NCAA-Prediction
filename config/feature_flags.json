@@ -1,0 +1,10 @@
+{
+  "use_feature_fallback": true,
+  "use_smart_team_encoding": true,
+  "use_early_season_adjustment": true,
+  "use_temperature_scaling": true,
+  "temperature_override": null,
+  "fallback_min_games": 5,
+  "early_season_days": 30,
+  "unknown_team_strategy": "conference_then_median"
+}

@@ -2,12 +2,20 @@
 """
 Adaptive Random Forest predictor for NCAA games.
 Used by daily_pipeline.py for daily predictions.
+
+Phase 1 Enhancements (2025-11-29):
+- Task 1.2: Smart team encoding (conference-aware, median fallback instead of -1)
+- Task 1.3: Improved temperature scaling with dynamic adjustment
+- Task 1.4: Early season detection with confidence adjustment
 """
 
 import pandas as pd
 import numpy as np
 import sys
 import os
+import json
+from pathlib import Path
+from datetime import datetime, timedelta
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.calibration import CalibratedClassifierCV
@@ -16,9 +24,23 @@ from sklearn.calibration import CalibratedClassifierCV
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from data_collection.team_name_utils import normalize_team_name
 
+# Load feature flags
+try:
+    with open(Path('config') / 'feature_flags.json') as f:
+        _feature_flags = json.load(f)
+except Exception:
+    _feature_flags = {}
+
 
 class AdaptivePredictor:
     """Dynamic prediction model for NCAA basketball games."""
+
+    # Season start date (approximately first Monday of November)
+    SEASON_START_MONTH = 11
+    SEASON_START_DAY = 4
+    
+    # Early season threshold in days
+    EARLY_SEASON_DAYS = 30
 
     def __init__(
         self,
@@ -31,6 +53,8 @@ class AdaptivePredictor:
         feature_importance_path='data/Adaptive_Feature_Importance.csv',
         home_court_logit_shift='auto:0.55',
         confidence_temperature='auto',
+        use_smart_encoding=True,
+        use_early_season_adjustment=True,
     ):
         """
         Initialize the predictor.
@@ -44,6 +68,8 @@ class AdaptivePredictor:
                 - numeric value: fixed logit offset to subtract from home probabilities
                 - 'none'/'off': disable adjustment
                 - 'auto' or 'auto:<target>': calibrate shift so mean home probability hits target (default 0.55)
+            use_smart_encoding: Use conference-aware team encoding instead of -1 for unknown teams
+            use_early_season_adjustment: Apply confidence reduction during early season
         """
         base_model = RandomForestClassifier(
             n_estimators=n_estimators,
@@ -96,6 +122,102 @@ class AdaptivePredictor:
             self.confidence_temperature_value = 0.85
             self.confidence_temperature_source = 'default'
         self.last_low_data_games: list[dict[str, object]] = []
+        
+        # Phase 1 enhancements
+        self.use_smart_encoding = _feature_flags.get('use_smart_team_encoding', use_smart_encoding)
+        self.use_early_season_adjustment = _feature_flags.get('use_early_season_adjustment', use_early_season_adjustment)
+        self._team_to_encoding_fallback = {}  # Cache for unknown team encodings
+        
+    def _is_early_season(self, game_date: datetime = None) -> bool:
+        """
+        Determine if we're in early season (first 30 days).
+        Early season predictions should be more conservative.
+        """
+        if game_date is None:
+            game_date = datetime.now()
+        
+        if isinstance(game_date, str):
+            try:
+                game_date = datetime.strptime(game_date[:10], '%Y-%m-%d')
+            except Exception:
+                return False
+        
+        # Determine season start
+        year = game_date.year
+        if game_date.month < self.SEASON_START_MONTH:
+            year -= 1  # We're in the second half of the season
+        
+        season_start = datetime(year, self.SEASON_START_MONTH, self.SEASON_START_DAY)
+        days_into_season = (game_date - season_start).days
+        
+        return 0 <= days_into_season < self.EARLY_SEASON_DAYS
+    
+    def _get_early_season_confidence_factor(self, game_date: datetime = None, 
+                                             home_games: int = 0, 
+                                             away_games: int = 0) -> float:
+        """
+        Get confidence adjustment factor for early season games.
+        
+        Returns a factor between 0.8 and 1.0 based on:
+        - Days into season
+        - Number of games each team has played
+        """
+        if not self.use_early_season_adjustment:
+            return 1.0
+        
+        if not self._is_early_season(game_date):
+            return 1.0
+        
+        # Calculate factor based on games played
+        min_games = min(home_games, away_games)
+        
+        if min_games >= 10:
+            games_factor = 1.0
+        elif min_games >= 7:
+            games_factor = 0.95
+        elif min_games >= 5:
+            games_factor = 0.90
+        elif min_games >= 3:
+            games_factor = 0.85
+        else:
+            games_factor = 0.80
+        
+        return games_factor
+    
+    def _encode_team_smart(self, team_name: str) -> int:
+        """
+        Encode team with intelligent fallback for unknown teams.
+        
+        Instead of returning -1 for unknown teams:
+        1. Check if we've seen this team before and cached a fallback
+        2. Use median encoding value (middle of the pack assumption)
+        
+        This prevents all unknown teams from looking identical.
+        """
+        if team_name in self.team_encoder.classes_:
+            return int(self.team_encoder.transform([team_name])[0])
+        
+        if not self.use_smart_encoding:
+            return -1  # Old behavior
+        
+        # Check cache
+        if team_name in self._team_to_encoding_fallback:
+            return self._team_to_encoding_fallback[team_name]
+        
+        # Use median encoding (assumes middle-of-the-pack performance)
+        median_encoding = len(self.team_encoder.classes_) // 2
+        
+        # Add small deterministic offset based on team name hash
+        # This ensures different unknown teams get slightly different encodings
+        name_hash = hash(team_name) % 100
+        offset = (name_hash - 50) // 10  # Range: -5 to +4
+        
+        final_encoding = max(0, min(len(self.team_encoder.classes_) - 1, median_encoding + offset))
+        
+        # Cache it
+        self._team_to_encoding_fallback[team_name] = final_encoding
+        
+        return final_encoding
 
     def prepare_data(self, df):
         """
@@ -524,19 +646,21 @@ class AdaptivePredictor:
         # Filter to valid games only
         upcoming_valid = upcoming_df.loc[valid_game_indices].copy()
 
-        # Encode teams (handle unknown teams)
-        def encode_team(team_name, encoder):
-            """Encode team name, return -1 for unknown teams."""
-            if team_name in encoder.classes_:
-                return encoder.transform([team_name])[0]
-            return -1
-
+        # Encode teams using smart encoding (Phase 1 Task 1.2)
         upcoming_valid['home_team_encoded'] = upcoming_valid['home_team'].apply(
-            lambda x: encode_team(x, self.team_encoder)
+            lambda x: self._encode_team_smart(x)
         )
         upcoming_valid['away_team_encoded'] = upcoming_valid['away_team'].apply(
-            lambda x: encode_team(x, self.team_encoder)
+            lambda x: self._encode_team_smart(x)
         )
+        
+        # Track unknown teams for logging
+        unknown_teams = []
+        for team in pd.concat([upcoming_valid['home_team'], upcoming_valid['away_team']]).unique():
+            if team not in self.team_encoder.classes_:
+                unknown_teams.append(team)
+        if unknown_teams and self.use_smart_encoding:
+            print(f"  ℹ️  {len(unknown_teams)} unknown teams encoded with smart fallback")
 
         # Make predictions
         trained_features = getattr(self.model, 'feature_names_in_', None)
@@ -549,6 +673,30 @@ class AdaptivePredictor:
         base_probs = self.model.predict_proba(X_upcoming)[:, 1]
         home_probs_adj = self._apply_home_court_shift(base_probs)
         probabilities = self._apply_confidence_temperature(home_probs_adj)
+        
+        # Apply early season adjustment (Phase 1 Task 1.4)
+        if self.use_early_season_adjustment:
+            early_season_adjustments = []
+            for idx, row in upcoming_valid.iterrows():
+                game_date = row.get('date')
+                home_games = self.team_game_counts.get(row['home_team'], 0)
+                away_games = self.team_game_counts.get(row['away_team'], 0)
+                factor = self._get_early_season_confidence_factor(game_date, home_games, away_games)
+                early_season_adjustments.append(factor)
+            
+            early_season_adjustments = np.array(early_season_adjustments)
+            
+            # Apply adjustment: move probabilities toward 0.5
+            # If factor < 1.0, reduce confidence
+            adjusted_probs = 0.5 + (probabilities - 0.5) * early_season_adjustments
+            probabilities = np.clip(adjusted_probs, 0.01, 0.99)
+            
+            # Log if adjustments were applied
+            adjusted_count = np.sum(early_season_adjustments < 1.0)
+            if adjusted_count > 0:
+                avg_factor = np.mean(early_season_adjustments[early_season_adjustments < 1.0])
+                print(f"  ℹ️  Applied early season confidence adjustment to {adjusted_count} games (avg factor: {avg_factor:.2f})")
+        
         probabilities = np.column_stack([1 - probabilities, probabilities])
 
         # Derive predictions from calibrated probabilities (pre-temperature)

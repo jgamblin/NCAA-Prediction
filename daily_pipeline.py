@@ -183,20 +183,42 @@ def main():
             print("✓ Normalized upcoming games team names")
         except Exception as exc:
             print(f"⚠️ Failed to normalize upcoming games: {exc}")
-        # Enrich upcoming games with feature store aggregates (season-aware, no cartesian)
+        
+        # Enrich upcoming games with feature store using fallback hierarchy (Phase 1 Task 1.1)
         try:
-            from model_training.feature_store import load_feature_store
+            from model_training.feature_store import load_feature_store, enrich_dataframe_with_fallback
             from model_training.team_id_utils import ensure_team_ids
+            import json
+            
+            # Load feature flags
+            try:
+                with open('config/feature_flags.json') as f:
+                    feature_flags = json.load(f)
+            except Exception:
+                feature_flags = {}
+            
+            use_fallback = feature_flags.get('use_feature_fallback', True)
+            fallback_min_games = feature_flags.get('fallback_min_games', 5)
+            
             upcoming = ensure_team_ids(upcoming)
             fs_df = load_feature_store()
-            if not fs_df.empty:
-                # Reduce to one row per (season, team_id) keeping latest (highest games_played)
+            
+            if not fs_df.empty and use_fallback:
+                # Use new fallback-aware enrichment (no NaN values)
+                print("  Using feature store with fallback hierarchy...")
+                upcoming = enrich_dataframe_with_fallback(
+                    upcoming, 
+                    feature_store_df=fs_df,
+                    min_games=fallback_min_games
+                )
+                print("✓ Added feature store columns to upcoming games (with fallback - no NaN)")
+            elif not fs_df.empty:
+                # Legacy merge approach (may have NaN values)
                 fs_df_reduced = fs_df.sort_values(['season','team_id','games_played']).drop_duplicates(['season','team_id'], keep='last')
                 fs_features = ['rolling_win_pct_5','rolling_win_pct_10','rolling_point_diff_avg_5','rolling_point_diff_avg_10','win_pct_last5_vs10','point_diff_last5_vs10','recent_strength_index_5']
                 keep_cols = ['season','team_id'] + [c for c in fs_features if c in fs_df_reduced.columns]
                 fs_df_reduced = fs_df_reduced[keep_cols]
                 if 'season' not in upcoming.columns:
-                    # If upcoming lacks season, attempt to infer most recent season from feature store; fallback: merge on team only
                     inferred_season = fs_df_reduced['season'].max()
                     upcoming['season'] = inferred_season
                 # Home merge
@@ -207,9 +229,11 @@ def main():
                 away_fs = fs_df_reduced.rename(columns={'team_id':'away_team_id'})
                 away_fs = away_fs.add_prefix('away_fs_').rename(columns={'away_fs_away_team_id':'away_team_id','away_fs_season':'season'})
                 upcoming = upcoming.merge(away_fs, on=['away_team_id','season'], how='left')
-                print("✓ Added feature store columns to upcoming games (season-aware)")
+                print("✓ Added feature store columns to upcoming games (legacy merge)")
         except Exception as exc:
+            import traceback
             print(f"⚠️ Skipped feature store enrichment for upcoming games: {exc}")
+            traceback.print_exc()
         upcoming.to_csv(upcoming_path, index=False)
         print(f"✓ Saved {len(upcoming)} upcoming games for prediction")
         
@@ -302,15 +326,46 @@ def main():
         else:
             print("⚠️ No tuned params found (using defaults)")
         predictor = AdaptivePredictor(**sp_kwargs)
-        # Enrich training data with feature store stats similar to upcoming enrichment
+        
+        # Enrich training data with feature store using fallback hierarchy (Phase 1)
         try:
-            from model_training.feature_store import load_feature_store
+            from model_training.feature_store import load_feature_store, enrich_dataframe_with_fallback
             from model_training.team_id_utils import ensure_team_ids
+            import json
+            
+            # Load feature flags
+            try:
+                with open('config/feature_flags.json') as f:
+                    feature_flags = json.load(f)
+            except Exception:
+                feature_flags = {}
+            
+            use_fallback = feature_flags.get('use_feature_fallback', True)
+            fallback_min_games = feature_flags.get('fallback_min_games', 5)
+            
             train_df = ensure_team_ids(train_df)
             raw_training_rows = len(train_df)
             fs_df = load_feature_store()
-            if not fs_df.empty:
-                # Reduce to one row per (season, team_id)
+            
+            if not fs_df.empty and use_fallback:
+                # Use new fallback-aware enrichment (no NaN values)
+                print("  Using feature store with fallback hierarchy for training data...")
+                train_df = enrich_dataframe_with_fallback(
+                    train_df, 
+                    feature_store_df=fs_df,
+                    min_games=fallback_min_games
+                )
+                # Guard against unexpected inflation
+                if len(train_df) > raw_training_rows * (1 + row_guard_pct):
+                    print(f"⚠️ Row inflation detected after FS merge: {len(train_df)} vs {raw_training_rows}. De-duplicating by game_id.")
+                    if 'game_id' in train_df.columns:
+                        before = len(train_df)
+                        train_df = train_df.drop_duplicates(subset=['game_id'])
+                        print(f"  De-dup reduced rows to {len(train_df)} (was {before}).")
+                else:
+                    print(f"✓ Added feature store columns to training data (with fallback - rows {len(train_df)})")
+            elif not fs_df.empty:
+                # Legacy merge approach
                 fs_df_reduced = (
                     fs_df.sort_values(['season','team_id','games_played'])
                          .drop_duplicates(['season','team_id'], keep='last')
@@ -349,9 +404,11 @@ def main():
                     else:
                         print("  Cannot de-dup (no game_id). Proceeding anyway.")
                 else:
-                    print(f"✓ Added feature store columns to training data (rows {len(train_df)})")
+                    print(f"✓ Added feature store columns to training data (legacy - rows {len(train_df)})")
         except Exception as exc:
+            import traceback
             print(f"⚠️ Skipped feature store enrichment for training data: {exc}")
+            traceback.print_exc()
         # Optional sample weighting if enabled in config
         cfg_section = {}
         if model_cfg:
