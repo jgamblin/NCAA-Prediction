@@ -13,6 +13,11 @@ Phase 2 Feature Engineering (2025-11-29):
 - Task 2.2: Strength of schedule
 - Task 2.3: Rest days calculation
 - Task 2.4: Home/away performance splits
+
+Phase 3 Model Architecture (2025-11-29):
+- Task 3.1: XGBoost integration (via EnsemblePredictor)
+- Task 3.2: Temporal train/validation split
+- Task 3.3: Model ensemble support
 """
 
 import pandas as pd
@@ -33,6 +38,7 @@ from data_collection.team_name_utils import normalize_team_name
 # Phase 2 imports - lazy loaded to avoid circular imports
 _power_ratings_module = None
 _home_away_splits_module = None
+_ensemble_module = None
 
 # Load feature flags
 try:
@@ -66,6 +72,18 @@ def _get_home_away_splits():
     return _home_away_splits_module if _home_away_splits_module else None
 
 
+def _get_ensemble_predictor():
+    """Lazy load ensemble predictor module."""
+    global _ensemble_module
+    if _ensemble_module is None:
+        try:
+            from model_training import ensemble_predictor
+            _ensemble_module = ensemble_predictor
+        except ImportError:
+            _ensemble_module = False
+    return _ensemble_module if _ensemble_module else None
+
+
 class AdaptivePredictor:
     """Dynamic prediction model for NCAA basketball games."""
 
@@ -92,6 +110,8 @@ class AdaptivePredictor:
         use_power_ratings=True,
         use_home_away_splits=True,
         use_rest_days=True,
+        model_type='random_forest',
+        use_ensemble=False,
     ):
         """
         Initialize the predictor.
@@ -110,14 +130,47 @@ class AdaptivePredictor:
             use_power_ratings: Calculate and use KenPom-style efficiency ratings (Phase 2)
             use_home_away_splits: Calculate and use venue-specific performance stats (Phase 2)
             use_rest_days: Calculate and use rest day advantages (Phase 2)
+            model_type: 'random_forest', 'xgboost', or 'ensemble' (Phase 3)
+            use_ensemble: If True, use EnsemblePredictor (XGB + RF + LR) (Phase 3)
         """
-        base_model = RandomForestClassifier(
-            n_estimators=n_estimators,
-            max_depth=max_depth,
-            min_samples_split=min_samples_split,
-            random_state=42,
-            n_jobs=-1
-        )
+        # Phase 3: Model type selection
+        self.model_type = _feature_flags.get('model_type', model_type)
+        self.use_ensemble = _feature_flags.get('use_ensemble', use_ensemble)
+        self._ensemble_predictor = None  # Will be initialized if use_ensemble=True
+        
+        # Create base model based on type
+        if self.model_type == 'xgboost':
+            try:
+                import xgboost as xgb
+                base_model = xgb.XGBClassifier(
+                    n_estimators=n_estimators * 2,  # XGBoost typically uses more
+                    max_depth=min(max_depth, 8),    # XGBoost works better with shallower trees
+                    learning_rate=0.1,
+                    subsample=0.8,
+                    colsample_bytree=0.8,
+                    random_state=42,
+                    n_jobs=-1,
+                    verbosity=0,
+                )
+                print("  Using XGBoost model (Phase 3)")
+            except ImportError:
+                print("  XGBoost not available, falling back to RandomForest")
+                base_model = RandomForestClassifier(
+                    n_estimators=n_estimators,
+                    max_depth=max_depth,
+                    min_samples_split=min_samples_split,
+                    random_state=42,
+                    n_jobs=-1
+                )
+        else:
+            base_model = RandomForestClassifier(
+                n_estimators=n_estimators,
+                max_depth=max_depth,
+                min_samples_split=min_samples_split,
+                random_state=42,
+                n_jobs=-1
+            )
+        
         self._raw_model = base_model  # before optional calibration
         self.model = base_model       # will be replaced by calibrated wrapper if enabled
         self.team_encoder = LabelEncoder()
