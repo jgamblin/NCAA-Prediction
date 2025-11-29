@@ -322,5 +322,33 @@
     "normalized_games_md5": "b06e49bc632328922169bda0937e15d7",
     "feature_store_md5": "c23c06b14aba6b4561fa0a282e2ca347",
     "model_params_md5": "37f59f5a3d27dae685b8a343b6a47e59"
+  },
+  {
+    "date": "2025-11-29 22:04:08",
+    "current_season": "2025-26",
+    "total_games": 30659,
+    "best_params": {
+      "n_estimators": 100,
+      "max_depth": 15,
+      "min_samples_split": 20
+    },
+    "weighted_accuracy": 0.7709671575060943,
+    "current_season_games": 1654,
+    "current_season_accuracy": 0.8548972188633616,
+    "season_weights": {
+      "2025-26": 15.05580876197563,
+      "2024-25": 3.0,
+      "2023-24": 1.5,
+      "2022-23": 0.5,
+      "2021-22": 0.25,
+      "2020-21": 0.125
+    },
+    "config_version": "7dd58a0bb0e2",
+    "commit_hash": "7391260",
+    "fs_diff_feature_count": 0,
+    "completed_games_md5": "5624d2303614c9ebbdc75d2ba3c6dab9",
+    "normalized_games_md5": "83ed041951c813cf120d9a27b02e8481",
+    "feature_store_md5": "c08ca4f35f880e75b24cf8d5667b9fd4",
+    "model_params_md5": "7d897967470fbca63919c16276d5f283"
   }
 ]
