@@ -32,7 +32,8 @@ def add_rolling_features_correctly(df):
     home_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
     
     away_games = df[['date', 'season', 'away_team_id', 'home_win', 'away_score', 'home_score']].copy()
-    away_games['win'] = 1 - away_games['home_win'] # Inverse win for away team
+    away_games['win'] = 1 - away_games['home_win']
+    away_games = away_games[['date', 'season', 'away_team_id', 'win', 'away_score', 'home_score']]
     away_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
     
     team_games = pd.concat([home_games, away_games]).sort_values(['team_id', 'date'])
