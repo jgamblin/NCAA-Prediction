@@ -7,8 +7,8 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **76.2% Accuracy** across 1544 predictions  
-📈 **30,709 Historical Games** powering model  
+🎯 **76.3% Accuracy** across 1556 predictions  
+📈 **30,719 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **31 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
@@ -46,27 +46,27 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 76.2% (1544 games)
-- **High Confidence**: 77.4% avg
-- **Current Season**: 85.5% tuning accuracy
+- **Overall**: 76.3% (1556 games)
+- **High Confidence**: 77.5% avg
+- **Current Season**: 88.8% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
 
 </td>
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,709
-- **Current Season**: 1704 games
+- **Total Games**: 30,719
+- **Current Season**: 1714 games
 - **Unique Teams**: 1,898
-- **Feature Store**: 12,314 rows
+- **Feature Store**: 12,315 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `af64615`
-- **Last Update**: 2025-11-29 23:36 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `7874784`
+- **Last Update**: 2025-11-29 23:49 UTC
 - **Calibration**: Brier N/A
 
 </td>
@@ -86,7 +86,7 @@
 | Nov 26 | 136 | 136 | 58.8% | 80.0% | 📉 |
 | Nov 27 | 36 | 36 | 44.4% | 76.9% | 📉 |
 | Nov 28 | 84 | 84 | 66.7% | 80.6% | 📉 |
-| Nov 29 | 78 | 78 | 87.2% | 81.1% | ✅ |
+| Nov 29 | 90 | 90 | 86.7% | 81.2% | ✅ |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -337,15 +337,15 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 76.2% (on 1,544 predictions)
-- **Current Season (2025-26) Tuning**: 85.5%
-- **Training Data**: 30,709 games (current season: 1,704)
+- **Overall Accuracy**: 76.3% (on 1,556 predictions)
+- **Current Season (2025-26) Tuning**: 88.8%
+- **Training Data**: 30,719 games (current season: 1,714)
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `af64615`
-*Refreshed: 2025-11-29 23:36 UTC*
+- Commit Hash: `7874784`
+*Refreshed: 2025-11-29 23:49 UTC*
 
 ## 🚀 Automation
 
