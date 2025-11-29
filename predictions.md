@@ -1,73 +1,83 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-28 06:11:09 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `f08ecf8`
+**Last Updated**: 2025-11-29 06:10:16 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `8028f97`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 21
-- **Average Confidence**: 80.1%
-- **High (≥70%)**: 21 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 31
+- **Average Confidence**: 80.7%
+- **High (≥70%)**: 31 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 0 day(s) (last miss 2025-11-27)
-- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-27)
+- **#1 Pick Streak**: 1 day(s) (last miss 2025-11-27)
+- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-28)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
-| 2025-11-21 | 7 | ✅ | ✅ |
 | 2025-11-22 | 11 | ✅ | ❌ |
 | 2025-11-23 | 30 | ✅ | ❌ |
 | 2025-11-24 | 39 | ❌ | ❌ |
 | 2025-11-25 | 44 | ✅ | ❌ |
 | 2025-11-26 | 34 | ✅ | ✅ |
 | 2025-11-27 | 9 | ❌ | ❌ |
+| 2025-11-28 | 21 | ✅ | ❌ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Purdue** | Eastern Illinois | 85.1% |
-| 2 | **Florida State** | Texas A&M | 81.7% |
-| 3 | **Virginia** | Queens University | 81.7% |
-| 4 | **Youngstown State** | Chicago State | 81.3% |
-| 5 | **Loyola Marymount** | Stony Brook | 81.1% |
-| 6 | **Arkansas State** | North Dakota State | 81.1% |
-| 7 | **Monmouth** | Ball State | 81.1% |
-| 8 | **Lafayette** | Le Moyne | 81.0% |
-| 9 | **Pittsburgh** | Ohio State | 80.9% |
-| 10 | **Missouri** | Cleveland State | 80.9% |
-| 11 | **Wake Forest** | Northeastern | 80.8% |
-| 12 | **Idaho** | Sam Houston State | 80.7% |
-| 13 | **Alcorn State** | Indiana State | 80.7% |
-| 14 | **Eastern Michigan** | NJIT | 80.5% |
-| 15 | **Davidson** | North Carolina A&T | 80.2% |
-| 16 | **Drake** | LSU | 80.2% |
-| 17 | **Marquette** | Oklahoma | 79.9% |
-| 18 | **Abilene Christian** | Jarvis Christian | 79.5% |
-| 19 | **Xavier** | Texas A&M-Corpus Christi | 78.7% |
-| 20 | **Butler** | Wright State | 72.7% |
-| 21 | **Clemson** | Alabama A&M | 71.6% |
+| 1 | **Arizona** | Norfolk State | 84.1% |
+| 2 | **Southern Illinois** | Little Rock | 82.3% |
+| 3 | **Southeast Missouri State** | Lipscomb | 82.3% |
+| 4 | **Northwestern State** | Southern | 82.2% |
+| 5 | **Pacific** | Sacramento State | 82.0% |
+| 6 | **North Carolina Central** | Carolina University | 81.9% |
+| 7 | **High Point** | Western Carolina | 81.6% |
+| 8 | **UMBC** | Delaware State | 81.5% |
+| 9 | **Northern Kentucky** | Boston University | 81.4% |
+| 10 | **Lafayette** | Ball State | 81.4% |
+| 11 | **Georgia** | Tennessee Tech | 81.4% |
+| 12 | **Winthrop** | South Carolina State | 81.3% |
+| 13 | **Utah State** | Montana State | 81.2% |
+| 14 | **Akron** | Milwaukee | 81.2% |
+| 15 | **UT Arlington** | Stephen F. Austin | 81.0% |
+| 16 | **Indiana** | Bethune-Cookman | 81.0% |
+| 17 | **Harvard** | Bryant | 81.0% |
+| 18 | **Louisiana Tech** | Alcorn State | 81.0% |
+| 19 | **Northern Illinois** | Bellarmine | 80.9% |
+| 20 | **Mount St. Mary's** | Howard | 80.9% |
+| 21 | **Oregon State** | California Baptist | 80.8% |
+| 22 | **Le Moyne** | Monmouth | 80.6% |
+| 23 | **Georgia Southern** | Houston Christian | 80.5% |
+| 24 | **East Tennessee State** | Central Arkansas | 80.4% |
+| 25 | **George Mason** | James Madison | 80.4% |
+| 26 | **Cal State Fullerton** | Pepperdine | 80.2% |
+| 27 | **Elon** | Mercer | 79.8% |
+| 28 | **IU Indianapolis** | Morehead State | 79.8% |
+| 29 | **Air Force** | South Dakota | 77.9% |
+| 30 | **Utah Tech** | UC Riverside | 75.7% |
+| 31 | **UCF** | VMI | 74.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Alabama A&M @ Clemson | 71.6% |  |
-| 2 | Wright State @ Butler | 72.7% |  |
-| 3 | Texas A&M-Corpus Christi @ Xavier | 78.7% |  |
-| 4 | Jarvis Christian @ Abilene Christian | 79.5% |  |
-| 5 | Oklahoma @ Marquette | 79.9% |  |
+| 1 | VMI @ UCF | 74.3% |  |
+| 2 | UC Riverside @ Utah Tech | 75.7% |  |
+| 3 | South Dakota @ Air Force | 77.9% |  |
+| 4 | Morehead State @ IU Indianapolis | 79.8% |  |
+| 5 | Mercer @ Elon | 79.8% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 21
+- Home Teams Favored: 31
 - Away Teams Favored: 0
-- Max Confidence: 85.1%
-- Min Confidence: 71.6%
+- Max Confidence: 84.1%
+- Min Confidence: 74.3%
 
 ### 📋 Full Data
 
@@ -77,20 +87,20 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 75.4% (1452 evaluated)
-- **Last 10 Days**: 63.2% (587 games)
+- **Overall Accuracy**: 75.9% (1424 evaluated)
+- **Last 10 Days**: 60.5% (491 games)
 
 ### Last 7 Days
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-21 | 7 | 6 | 85.7% | 79.8% |
 | 2025-11-22 | 11 | 7 | 63.6% | 79.8% |
 | 2025-11-23 | 60 | 42 | 70.0% | 80.4% |
 | 2025-11-24 | 78 | 42 | 53.8% | 80.0% |
-| 2025-11-25 | 176 | 100 | 56.8% | 79.3% |
+| 2025-11-25 | 88 | 50 | 56.8% | 79.3% |
 | 2025-11-26 | 136 | 80 | 58.8% | 80.0% |
-| 2025-11-27 | 18 | 8 | 44.4% | 76.9% |
+| 2025-11-27 | 36 | 16 | 44.4% | 76.9% |
+| 2025-11-28 | 42 | 28 | 66.7% | 80.6% |
 
 ---
 
