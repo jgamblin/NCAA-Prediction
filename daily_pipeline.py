@@ -30,6 +30,40 @@ except Exception:
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'data_collection'))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'game_prediction'))
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'model_training'))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'scripts'))
+
+
+def scrape_espn_games(scraper, start_date, end_date, max_retries=3):
+    """
+    Scrape ESPN games with retry logic.
+    
+    Args:
+        scraper: ESPNScraper instance
+        start_date: Start date for scraping
+        end_date: End date for scraping
+        max_retries: Maximum retry attempts
+        
+    Returns:
+        List of games or empty list on failure
+    """
+    from retry_utils import retry_call
+    import requests
+    
+    try:
+        games = retry_call(
+            scraper.get_season_games,
+            start_date,
+            end_date,
+            max_retries=max_retries,
+            initial_delay=5.0,
+            backoff_factor=2.0,
+            exceptions=(requests.exceptions.RequestException, ConnectionError, TimeoutError),
+        )
+        return games
+    except Exception as e:
+        print(f"❌ ESPN scraping failed after {max_retries + 1} attempts: {e}")
+        return []
+
 
 def main():
     """Run the daily prediction pipeline."""
@@ -78,7 +112,9 @@ def main():
     end_date = datetime.now() + timedelta(days=7)
     
     print(f"Fetching games from {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
-    games = scraper.get_season_games(start_date, end_date)
+    
+    # Use retry-enabled scraping for robustness against network issues
+    games = scrape_espn_games(scraper, start_date, end_date, max_retries=3)
     
     if len(games) == 0:
         print("✗ No games found on ESPN")
@@ -488,6 +524,45 @@ def main():
         generate_bets_markdown()
     except Exception as e:
         print(f"⚠️ Failed to generate betting markdown: {e}")
+
+    # =========================================================================
+    # STEP 6: Generate health summary
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 6: Pipeline health summary")
+    print("-"*80)
+    
+    # Collect health metrics
+    health_summary = {
+        'run_date': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'config_version': _config_version,
+        'commit_hash': _commit_hash,
+        'status': 'SUCCESS',
+        'warnings': [],
+    }
+    
+    # Check critical files exist
+    critical_files = [
+        ('data/Completed_Games.csv', 'Training data'),
+        ('data/Upcoming_Games.csv', 'Upcoming games'),
+        ('config/model_params.json', 'Model parameters'),
+    ]
+    
+    for filepath, description in critical_files:
+        full_path = os.path.join(os.path.dirname(__file__), filepath)
+        if os.path.exists(full_path):
+            size = os.path.getsize(full_path)
+            print(f"  ✓ {description}: {filepath} ({size:,} bytes)")
+        else:
+            print(f"  ⚠️ {description}: {filepath} MISSING")
+            health_summary['warnings'].append(f"Missing {description}")
+    
+    # Summary output
+    if health_summary['warnings']:
+        health_summary['status'] = 'WARNING'
+        print(f"\n⚠️ Pipeline completed with {len(health_summary['warnings'])} warnings")
+    else:
+        print("\n✓ All health checks passed")
 
     print("\n" + "="*80)
     print("Pipeline complete.")

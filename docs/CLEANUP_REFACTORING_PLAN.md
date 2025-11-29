@@ -1,25 +1,41 @@
 # 🧹 Repository Cleanup & Refactoring Plan
 
 _Created: November 29, 2025_
+_Updated: November 29, 2025_
 
 This document outlines a comprehensive plan to clean up the NCAA-Prediction repository, remove unused files, consolidate redundant code, and make the pipeline bulletproof.
+
+---
+
+## ✅ Completion Status
+
+| Phase | Status | Details |
+|-------|--------|---------|
+| Phase 1: File Cleanup | ✅ COMPLETE | 36 files deleted (~3,500 lines) |
+| Phase 2: Utility Cleanup | ✅ COMPLETE | 24 data files + 10 scripts deleted |
+| Phase 3: Pipeline Hardening | ✅ COMPLETE | Retry logic, timeouts, caching added |
+| Phase 4: Documentation | 🔄 In Progress | |
+
+**Total Impact:**
+- **60 files deleted** (~5,750 lines removed)
+- **Python files reduced from 83 → 62** (25% reduction)
+- **Tests: 112 passing** (+8 new retry tests)
 
 ---
 
 ## Executive Summary
 
 ### Current State
-- **83 Python files** across the repository
-- **41 data CSV files** in `/data`
-- Multiple legacy/deprecated files still present
-- Some redundant implementations (v1 vs v2, simple vs adaptive)
-- GitHub Actions could be more robust with better error handling
+- **62 Python files** across the repository (was 83)
+- **~17 data CSV files** in `/data` (was 41)
+- Legacy/deprecated files have been removed
+- GitHub Actions now include timeouts, caching, and failure logging
 
 ### Goals
-1. Remove unused and deprecated files
-2. Consolidate redundant implementations
-3. Improve pipeline reliability and error handling
-4. Simplify directory structure
+1. ~~Remove unused and deprecated files~~ ✅ DONE
+2. ~~Consolidate redundant implementations~~ ✅ DONE
+3. ~~Improve pipeline reliability and error handling~~ ✅ DONE
+4. Simplify directory structure (deferred)
 5. Update documentation to reflect changes
 
 ---
@@ -122,9 +138,39 @@ Current state:
 
 ---
 
-## Phase 3: Pipeline Hardening
+## Phase 3: Pipeline Hardening ✅ COMPLETE
 
-### 3.1 Daily Pipeline Improvements (`daily_pipeline.py`)
+### What Was Implemented
+
+#### 3.1.1 Retry Logic for ESPN Scraping
+- Created `scripts/retry_utils.py` with `retry_on_failure` decorator and `retry_call` function
+- Added exponential backoff support
+- Integrated into `daily_pipeline.py` for ESPN scraping
+- Added 8 unit tests in `tests/test_retry_utils.py`
+
+#### 3.1.2 Pipeline Health Summary
+- Added STEP 6 to `daily_pipeline.py`
+- Checks critical files exist (training data, model params)
+- Reports file sizes and any warnings
+
+#### 3.1.3 GitHub Actions Hardening
+
+**daily-predictions.yml:**
+- Added `timeout-minutes: 30`
+- Added pip caching with `actions/setup-python@v5`
+- Added pipeline log capture to file
+- Added artifact upload on failure
+
+**weekly-tuning.yml:**
+- Added `timeout-minutes: 45`
+- Added pip caching
+- Added model params backup before tuning
+- Added tuning log capture
+- Added artifact upload on failure (includes backup)
+
+### Original Plan (for reference)
+
+#### 3.1 Daily Pipeline Improvements (`daily_pipeline.py`)
 
 ```python
 # Current issues:

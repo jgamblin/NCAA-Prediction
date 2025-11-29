@@ -7,8 +7,8 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **75.7% Accuracy** across 1470 predictions  
-📈 **30,631 Historical Games** powering model  
+🎯 **76.0% Accuracy** across 1496 predictions  
+📈 **30,659 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **31 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
@@ -46,8 +46,8 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 75.7% (1470 games)
-- **High Confidence**: 77.5% avg
+- **Overall**: 76.0% (1496 games)
+- **High Confidence**: 77.4% avg
 - **Current Season**: 86.3% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
 
@@ -55,19 +55,19 @@
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,631
-- **Current Season**: 1626 games
-- **Unique Teams**: 1,894
-- **Feature Store**: 12,306 rows
+- **Total Games**: 30,659
+- **Current Season**: 1654 games
+- **Unique Teams**: 1,896
+- **Feature Store**: 12,312 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `c394c8e`
-- **Last Update**: 2025-11-29 19:43 UTC
-- **Calibration**: Brier 0.2337
+- **Lineage**: `7dd58a0bb0e2` @ `15fd5c7`
+- **Last Update**: 2025-11-29 21:56 UTC
+- **Calibration**: Brier N/A
 
 </td>
 </tr>
@@ -86,7 +86,7 @@
 | Nov 26 | 136 | 136 | 58.8% | 80.0% | 📉 |
 | Nov 27 | 36 | 36 | 44.4% | 76.9% | 📉 |
 | Nov 28 | 84 | 84 | 66.7% | 80.6% | 📉 |
-| Nov 29 | 4 | 4 | 100.0% | 81.2% | 🎯 Excellent |
+| Nov 29 | 30 | 30 | 93.3% | 81.0% | ✅ |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -337,18 +337,15 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 75.7% (on 1,470 predictions)
+- **Overall Accuracy**: 76.0% (on 1,496 predictions)
 - **Current Season (2025-26) Tuning**: 86.3%
-- **Training Data**: 30,631 games (current season: 1,626)
-- **Calibration (Brier)**: Weighted=0.2337, Unweighted=0.2279 (Δ W-U: +0.0058)
-- **Calibration (ECE)**: Weighted=0.0503, Unweighted=0.0832 (Δ W-U: -0.0329)
-  *Lower is better; weighted model emphasizes current season.*
+- **Training Data**: 30,659 games (current season: 1,654)
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `c394c8e`
-*Refreshed: 2025-11-29 19:43 UTC*
+- Commit Hash: `15fd5c7`
+*Refreshed: 2025-11-29 21:56 UTC*
 
 ## 🚀 Automation
 
