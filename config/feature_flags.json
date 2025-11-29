@@ -16,7 +16,7 @@
   "min_away_games_for_splits": 3,
   "max_rest_days_cap": 10,
   
-  "model_type": "random_forest",
+  "model_type": "xgboost",
   "use_ensemble": false,
   "ensemble_weights": {
     "xgboost": 0.45,
