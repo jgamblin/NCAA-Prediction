@@ -12,7 +12,7 @@ This document provides detailed implementation steps, code changes, and testing 
 | Phase | Status | Completion Date |
 |-------|--------|-----------------|
 | **Phase 1: Quick Wins** | ✅ **COMPLETE** | Nov 29, 2025 |
-| Phase 2: Feature Engineering | 🔲 Pending | - |
+| **Phase 2: Feature Engineering** | ✅ **COMPLETE** | Nov 29, 2025 |
 | Phase 3: Model Architecture | 🔲 Pending | - |
 | Phase 4: Advanced Improvements | 🔲 Pending | - |
 
@@ -21,7 +21,7 @@ This document provides detailed implementation steps, code changes, and testing 
 ## Table of Contents
 
 1. [Phase 1: Quick Wins (Days 1-3)](#phase-1-quick-wins) ✅
-2. [Phase 2: Feature Engineering (Days 4-10)](#phase-2-feature-engineering)
+2. [Phase 2: Feature Engineering (Days 4-10)](#phase-2-feature-engineering) ✅
 3. [Phase 3: Model Architecture (Days 11-20)](#phase-3-model-architecture)
 4. [Phase 4: Advanced Improvements (Days 21-30)](#phase-4-advanced-improvements)
 5. [Testing Framework](#testing-framework)
@@ -49,6 +49,46 @@ This document provides detailed implementation steps, code changes, and testing 
 - Feature fallback working: 174 current season lookups, 618 league average fallbacks (early season)
 - No NaN values in enriched features
 - Early season confidence adjustment applied
+
+---
+
+## Phase 2: Feature Engineering ✅ COMPLETE
+
+**Implemented:** November 29, 2025
+
+### Changes Made:
+
+| Task | File | Description |
+|------|------|-------------|
+| 2.1 Power Ratings | `model_training/power_ratings.py` | New `PowerRatings` class with KenPom-style efficiency calculations |
+| 2.2 Strength of Schedule | `model_training/power_ratings.py` | `calculate_sos()` method with opponent rating aggregation |
+| 2.3 Rest Days | `model_training/home_away_splits.py` | `calculate_rest_days()` and `add_rest_days_features()` |
+| 2.4 Home/Away Splits | `model_training/home_away_splits.py` | `HomeAwaySplits` class with venue-specific performance stats |
+| Integration | `model_training/adaptive_predictor.py` | Phase 2 feature initialization and enrichment |
+| Config | `config/feature_flags.json` | Added Phase 2 feature flags |
+| Tests | `tests/test_phase2_improvements.py` | 13 unit tests for Phase 2 features |
+
+### New Features Added:
+- **power_rating_diff**: Net efficiency rating difference between teams
+- **off_rating_diff**: Offensive efficiency difference
+- **def_rating_diff**: Defensive efficiency difference
+- **home_sos / away_sos**: Strength of schedule ratings
+- **home_rest_days / away_rest_days**: Days since last game
+- **rest_advantage**: Rest day differential
+- **home_team_home_wpct**: Home team's home win percentage
+- **away_team_away_wpct**: Away team's road win percentage
+- **venue_wpct_diff**: Home vs away performance differential
+- **combined_home_adv**: Team-specific home court advantage
+
+### Feature Importance (from training):
+- power_rating_diff: 0.0965
+- def_rating_diff: 0.1002
+- off_rating_diff: 0.0901
+
+### Observed Results:
+- Power ratings calculated for 1428 teams
+- Venue splits calculated for 20904 team-seasons
+- All 35 tests passing (22 Phase 1 + 13 Phase 2)
 
 ---
 
