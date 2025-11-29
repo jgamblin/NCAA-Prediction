@@ -15,8 +15,53 @@ import json
 import sys
 import hashlib
 # New imports for point-in-time features
-from model_training.data_restructure import expand_to_team_games
-from model_training.add_rolling_features import add_rolling_features
+# from model_training.data_restructure import expand_to_team_games
+# from model_training.add_rolling_features import add_rolling_features
+
+def add_rolling_features_correctly(df):
+    """
+    Calculates rolling stats respecting the time dimension.
+    Target Leakage Proof: Uses shift(1) to ensure we only see PAST games.
+    """
+    # 1. Sort strictly by date so we process in order
+    df = df.sort_values(['season', 'date'])
+    
+    # 2. Create a long-form view (one row per team-game)
+    # We need this because a team appears as 'home' sometimes and 'away' others
+    home_games = df[['date', 'season', 'home_team_id', 'home_win', 'home_score', 'away_score']].copy()
+    home_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
+    
+    away_games = df[['date', 'season', 'away_team_id', 'home_win', 'away_score', 'home_score']].copy()
+    away_games['win'] = 1 - away_games['home_win']
+    away_games = away_games[['date', 'season', 'away_team_id', 'win', 'away_score', 'home_score']]
+    away_games.columns = ['date', 'season', 'team_id', 'win', 'score', 'opponent_score']
+    
+    team_games = pd.concat([home_games, away_games]).sort_values(['team_id', 'date'])
+    
+    # 3. Calculate rolling stats with SHIFT
+    # shift(1) means "exclude the current row's result from the calculation"
+    team_games['rolling_win_5'] = team_games.groupby(['season', 'team_id'])['win'] \
+        .transform(lambda x: x.shift(1).rolling(window=5, min_periods=1).mean())
+        
+    team_games['rolling_score_5'] = team_games.groupby(['season', 'team_id'])['score'] \
+        .transform(lambda x: x.shift(1).rolling(window=5, min_periods=1).mean())
+
+    # 4. Merge back to original Matchups
+    # Merge for Home Team
+    df = df.merge(team_games[['date', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
+                  left_on=['date', 'home_team_id'], 
+                  right_on=['date', 'team_id'], 
+                  how='left').rename(columns={'rolling_win_5': 'home_rolling_win_5', 
+                                            'rolling_score_5': 'home_rolling_score_5'})
+    
+    # Merge for Away Team
+    df = df.merge(team_games[['date', 'team_id', 'rolling_win_5', 'rolling_score_5']], 
+                  left_on=['date', 'away_team_id'], 
+                  right_on=['date', 'team_id'], 
+                  how='left', suffixes=('', '_away')).rename(columns={'rolling_win_5': 'away_rolling_win_5', 
+                                                                    'rolling_score_5': 'away_rolling_score_5'})
+                                                                    
+    return df
 
 # Optional lineage imports (defensive)
 try:  # pragma: no cover
@@ -160,31 +205,6 @@ def tune_hyperparameters(X, y, sample_weights, quick: bool = False):
     return best_params
 
 
-# New function: merge rolling features for matchups
-def merge_rolling_features_for_matchups(matchups_df, team_games_with_features):
-    # Merge home team features
-    home_feats = team_games_with_features.add_prefix('home_')
-    merged = matchups_df.merge(
-        home_feats,
-        left_on=['game_id', 'home_team_id'],
-        right_on=['home_game_id', 'home_team_id'],
-        how='left',
-        suffixes=(None, '_home')
-    )
-    # Merge away team features
-    away_feats = team_games_with_features.add_prefix('away_')
-    merged = merged.merge(
-        away_feats,
-        left_on=['game_id', 'away_team_id'],
-        right_on=['away_game_id', 'away_team_id'],
-        how='left',
-        suffixes=(None, '_away')
-    )
-    # Calculate feature diffs
-    for base in ['rolling_win_pct_5', 'rolling_win_pct_10', 'rolling_point_diff_avg_5', 'rolling_point_diff_avg_10', 'win_pct_last5_vs10', 'point_diff_last5_vs10', 'recent_strength_index_5']:
-        merged[f'{base}_diff'] = merged[f'home_{base}'] - merged[f'away_{base}']
-    return merged
-
 def train_weighted_model(quick: bool = False):
     """Train model with time-weighted samples and tuned hyperparameters."""
     
@@ -217,14 +237,9 @@ def train_weighted_model(quick: bool = False):
         print(f"  {season}: {count:,} games")
 
     # --- POINT-IN-TIME FEATURE ENGINEERING ---
-    print("\nExpanding games to team-games and calculating rolling features...")
-    team_games = expand_to_team_games(df)
-    team_games_with_features = add_rolling_features(team_games)
-    print(f"✓ Calculated rolling features for {len(team_games_with_features)} team-games")
-
-    print("Merging rolling features back to matchups...")
-    df = merge_rolling_features_for_matchups(df, team_games_with_features)
-    print(f"✓ Merged rolling features for {len(df)} matchups")
+    print("\nCalculating point-in-time rolling features...")
+    df = add_rolling_features_correctly(df)
+    print(f"✓ Calculated and merged rolling features for {len(df)} matchups")
 
     # Calculate sample weights
     print("\nCalculating time-weighted sample weights...")
@@ -239,10 +254,9 @@ def train_weighted_model(quick: bool = False):
 
     # --- TARGET ENCODING FOR TEAMS ---
     print("\nTarget encoding teams (historical win %)...")
-    # Calculate historical win % for each team (excluding current game)
-    team_win_pct = team_games_with_features.groupby('team_id')['rolling_win_pct_10'].last().to_dict()
-    df['home_team_encoded'] = df['home_team_id'].map(team_win_pct).fillna(0.5)
-    df['away_team_encoded'] = df['away_team_id'].map(team_win_pct).fillna(0.5)
+    # Use the rolling win % as target encoding
+    df['home_team_encoded'] = df['home_rolling_win_5'].fillna(0.5)
+    df['away_team_encoded'] = df['away_rolling_win_5'].fillna(0.5)
 
     # Handle missing columns properly
     if 'is_neutral' in df.columns:
@@ -254,15 +268,12 @@ def train_weighted_model(quick: bool = False):
     df['away_rank'] = df['away_rank'].fillna(99).astype(int)
 
     # Prepare features
-    feature_cols = ['home_team_encoded', 'away_team_encoded', 'is_neutral', 'home_rank', 'away_rank']
-    # Append rolling diff features
-    rolling_diff_cols = [c for c in df.columns if c.endswith('_diff')]
-    if rolling_diff_cols:
-        feature_cols.extend(rolling_diff_cols)
-        print(f"Added rolling diff features: {rolling_diff_cols}")
+    df['rolling_win_5_diff'] = df['home_rolling_win_5'] - df['away_rolling_win_5']
+    df['rolling_score_5_diff'] = df['home_rolling_score_5'] - df['away_rolling_score_5']
+    feature_cols = ['home_team_encoded', 'away_team_encoded', 'is_neutral', 'home_rank', 'away_rank', 'rolling_win_5_diff', 'rolling_score_5_diff']
     X = df[feature_cols]
     y = df['home_win']
-
+    
     print(f"✓ Features: {feature_cols}")
     
     # Tune hyperparameters
