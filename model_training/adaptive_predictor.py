@@ -32,7 +32,6 @@ import json
 from pathlib import Path
 from datetime import datetime, timedelta
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
 from sklearn.calibration import CalibratedClassifierCV
 
 # Add parent directory to path for imports
@@ -205,7 +204,7 @@ class AdaptivePredictor:
         
         self._raw_model = base_model  # before optional calibration
         self.model = base_model       # will be replaced by calibrated wrapper if enabled
-        self.team_encoder = LabelEncoder()
+        self.team_target_encoding = {}  # team_id -> target encoding (e.g., win % or power rating)
         # Base features; additional derived feature store diffs appended dynamically
         self.feature_cols = [
             'home_team_encoded',
@@ -868,13 +867,21 @@ class AdaptivePredictor:
         if low_game_teams:
             print(f"Warning: {len(low_game_teams)} teams have < {self.min_games_threshold} games in training data")
 
-        # Encode teams
-        all_teams_series = pd.concat([train_df['home_team'], train_df['away_team']])
-        all_teams = all_teams_series.unique()  # type: ignore
-        self.team_encoder.fit(all_teams)
-
-        train_df['home_team_encoded'] = self.team_encoder.transform(train_df['home_team'])
-        train_df['away_team_encoded'] = self.team_encoder.transform(train_df['away_team'])
+        # Target encoding: use historical win % or power rating for teams
+        # For now, use win % from rolling_win_pct_10 if available, else 0.5
+        if 'home_team_id' in train_df.columns and 'away_team_id' in train_df.columns and 'rolling_win_pct_10' in train_df.columns:
+            # Build mapping from team_id to last rolling_win_pct_10
+            team_win_pct = {}
+            for team_id, group in train_df.groupby('home_team_id'):
+                pct = group['rolling_win_pct_10'].dropna()
+                team_win_pct[team_id] = pct.iloc[-1] if not pct.empty else 0.5
+            self.team_target_encoding = team_win_pct
+            train_df['home_team_encoded'] = train_df['home_team_id'].map(self.team_target_encoding).fillna(0.5)
+            train_df['away_team_encoded'] = train_df['away_team_id'].map(self.team_target_encoding).fillna(0.5)
+        else:
+            # Fallback: 0.5 for all
+            train_df['home_team_encoded'] = 0.5
+            train_df['away_team_encoded'] = 0.5
 
         # Train model
         # Filter feature columns that exist (dynamic expansion with feature store)

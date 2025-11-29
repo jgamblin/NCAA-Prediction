@@ -8,13 +8,15 @@ Run this weekly to keep the model sharp on current season trends.
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import TimeSeriesSplit
 from datetime import datetime
 import os
 import json
 import sys
 import hashlib
+# New imports for point-in-time features
+from model_training.data_restructure import expand_to_team_games
+from model_training.add_rolling_features import add_rolling_features
 
 # Optional lineage imports (defensive)
 try:  # pragma: no cover
@@ -157,47 +159,31 @@ def tune_hyperparameters(X, y, sample_weights, quick: bool = False):
     
     return best_params
 
-def _integrate_feature_store(train_df: pd.DataFrame) -> pd.DataFrame:
-    """Merge latest feature store aggregates and derive diff features if available."""
-    if not _fs_available:
-        print("Feature store utilities unavailable; skipping FS integration.")
-        return train_df
-    try:
-        fs_df = load_feature_store()
-        if fs_df.empty:
-            print("Feature store empty; skip integration.")
-            return train_df
-        # Ensure IDs on training data
-        train_df = ensure_team_ids(train_df)
-        # Reduce FS to latest row per (season, team_id)
-        fs_reduced = fs_df.sort_values(['season','team_id','games_played']).drop_duplicates(['season','team_id'], keep='last')
-        home_fs = fs_reduced.add_prefix('home_fs_').rename(columns={'home_fs_team_id':'home_team_id'})
-        away_fs = fs_reduced.add_prefix('away_fs_').rename(columns={'away_fs_team_id':'away_team_id'})
-        if 'season' not in train_df.columns:
-            # Attempt inference from FS
-            inferred_season = fs_reduced['season'].max()
-            train_df['season'] = inferred_season
-        train_df = train_df.merge(home_fs, on=['home_team_id','season'], how='left')
-        train_df = train_df.merge(away_fs, on=['away_team_id','season'], how='left')
-        # Diff features
-        diff_specs = [
-            ('rolling_win_pct_5','fs_win_pct5_diff'),
-            ('rolling_win_pct_10','fs_win_pct10_diff'),
-            ('rolling_point_diff_avg_5','fs_point_diff5_diff'),
-            ('rolling_point_diff_avg_10','fs_point_diff10_diff'),
-            ('win_pct_last5_vs10','fs_win_pct_last5_vs10_diff'),
-            ('point_diff_last5_vs10','fs_point_diff_last5_vs10_diff'),
-            ('recent_strength_index_5','fs_recent_strength_index5_diff'),
-        ]
-        for base, diff in diff_specs:
-            h = f'home_fs_{base}'
-            a = f'away_fs_{base}'
-            if h in train_df.columns and a in train_df.columns:
-                train_df[diff] = train_df[h] - train_df[a]
-        print("✓ Integrated feature store aggregates & diff features into tuning dataset")
-    except Exception as exc:
-        print(f"Feature store integration failed (tuner continues): {exc}")
-    return train_df
+
+# New function: merge rolling features for matchups
+def merge_rolling_features_for_matchups(matchups_df, team_games_with_features):
+    # Merge home team features
+    home_feats = team_games_with_features.add_prefix('home_')
+    merged = matchups_df.merge(
+        home_feats,
+        left_on=['game_id', 'home_team_id'],
+        right_on=['home_game_id', 'home_team_id'],
+        how='left',
+        suffixes=(None, '_home')
+    )
+    # Merge away team features
+    away_feats = team_games_with_features.add_prefix('away_')
+    merged = merged.merge(
+        away_feats,
+        left_on=['game_id', 'away_team_id'],
+        right_on=['away_game_id', 'away_team_id'],
+        how='left',
+        suffixes=(None, '_away')
+    )
+    # Calculate feature diffs
+    for base in ['rolling_win_pct_5', 'rolling_win_pct_10', 'rolling_point_diff_avg_5', 'rolling_point_diff_avg_10', 'win_pct_last5_vs10', 'point_diff_last5_vs10', 'recent_strength_index_5']:
+        merged[f'{base}_diff'] = merged[f'home_{base}'] - merged[f'away_{base}']
+    return merged
 
 def train_weighted_model(quick: bool = False):
     """Train model with time-weighted samples and tuned hyperparameters."""
@@ -220,57 +206,63 @@ def train_weighted_model(quick: bool = False):
     else:
         print("Using raw training data (normalized file not found).")
     df['home_win'] = (df['home_score'] > df['away_score']).astype(int)
-    # Integrate feature store aggregates early (before encoding)
-    df = _integrate_feature_store(df)
-    
+
     print(f"✓ Loaded {len(df)} games")
     print(f"  Seasons: {sorted(df['season'].unique())}")
-    
+
     # Show season distribution
     season_counts = df.groupby('season').size().sort_index()
     print(f"\nGames per season:")
     for season, count in season_counts.items():
         print(f"  {season}: {count:,} games")
-    
+
+    # --- POINT-IN-TIME FEATURE ENGINEERING ---
+    print("\nExpanding games to team-games and calculating rolling features...")
+    team_games = expand_to_team_games(df)
+    team_games_with_features = add_rolling_features(team_games)
+    print(f"✓ Calculated rolling features for {len(team_games_with_features)} team-games")
+
+    print("Merging rolling features back to matchups...")
+    df = merge_rolling_features_for_matchups(df, team_games_with_features)
+    print(f"✓ Merged rolling features for {len(df)} matchups")
+
     # Calculate sample weights
     print("\nCalculating time-weighted sample weights...")
     current_season = '2025-26'
     sample_weights = calculate_sample_weights(df, current_season=current_season)
-    
+
     print(f"\nSample weight distribution:")
     for season in sorted(df['season'].unique(), reverse=True):
         season_mask = df['season'] == season
         avg_weight = sample_weights[season_mask].mean()
         print(f"  {season}: {avg_weight:.2f}x weight (avg)")
-    
-    # Encode teams
-    print("\nEncoding teams...")
-    all_teams = pd.concat([df['home_team'], df['away_team']]).unique()
-    team_encoder = LabelEncoder()
-    team_encoder.fit(all_teams)
-    
-    df['home_team_encoded'] = team_encoder.transform(df['home_team'])
-    df['away_team_encoded'] = team_encoder.transform(df['away_team'])
-    
+
+    # --- TARGET ENCODING FOR TEAMS ---
+    print("\nTarget encoding teams (historical win %)...")
+    # Calculate historical win % for each team (excluding current game)
+    team_win_pct = team_games_with_features.groupby('team_id')['rolling_win_pct_10'].last().to_dict()
+    df['home_team_encoded'] = df['home_team_id'].map(team_win_pct).fillna(0.5)
+    df['away_team_encoded'] = df['away_team_id'].map(team_win_pct).fillna(0.5)
+
     # Handle missing columns properly
     if 'is_neutral' in df.columns:
         df['is_neutral'] = df['is_neutral'].fillna(0).astype(int)
     else:
         df['is_neutral'] = 0
-    
+
     df['home_rank'] = df['home_rank'].fillna(99).astype(int)
     df['away_rank'] = df['away_rank'].fillna(99).astype(int)
-    
+
     # Prepare features
     feature_cols = ['home_team_encoded', 'away_team_encoded', 'is_neutral', 'home_rank', 'away_rank']
-    # Append FS diff features if present
-    fs_diff_cols = [c for c in df.columns if c.startswith('fs_') and c.endswith('_diff')]
-    if fs_diff_cols:
-        feature_cols.extend(fs_diff_cols)
-        print(f"Added FS diff features: {fs_diff_cols}")
+    # Append rolling diff features
+    rolling_diff_cols = [c for c in df.columns if c.endswith('_diff')]
+    if rolling_diff_cols:
+        feature_cols.extend(rolling_diff_cols)
+        print(f"Added rolling diff features: {rolling_diff_cols}")
     X = df[feature_cols]
     y = df['home_win']
-    
+
     print(f"✓ Features: {feature_cols}")
     
     # Tune hyperparameters
