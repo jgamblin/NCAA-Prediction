@@ -7,6 +7,12 @@ Phase 1 Enhancements (2025-11-29):
 - Task 1.2: Smart team encoding (conference-aware, median fallback instead of -1)
 - Task 1.3: Improved temperature scaling with dynamic adjustment
 - Task 1.4: Early season detection with confidence adjustment
+
+Phase 2 Feature Engineering (2025-11-29):
+- Task 2.1: Power ratings (KenPom-style efficiency)
+- Task 2.2: Strength of schedule
+- Task 2.3: Rest days calculation
+- Task 2.4: Home/away performance splits
 """
 
 import pandas as pd
@@ -24,12 +30,40 @@ from sklearn.calibration import CalibratedClassifierCV
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from data_collection.team_name_utils import normalize_team_name
 
+# Phase 2 imports - lazy loaded to avoid circular imports
+_power_ratings_module = None
+_home_away_splits_module = None
+
 # Load feature flags
 try:
     with open(Path('config') / 'feature_flags.json') as f:
         _feature_flags = json.load(f)
 except Exception:
     _feature_flags = {}
+
+
+def _get_power_ratings():
+    """Lazy load power ratings module."""
+    global _power_ratings_module
+    if _power_ratings_module is None:
+        try:
+            from model_training import power_ratings
+            _power_ratings_module = power_ratings
+        except ImportError:
+            _power_ratings_module = False
+    return _power_ratings_module if _power_ratings_module else None
+
+
+def _get_home_away_splits():
+    """Lazy load home/away splits module."""
+    global _home_away_splits_module
+    if _home_away_splits_module is None:
+        try:
+            from model_training import home_away_splits
+            _home_away_splits_module = home_away_splits
+        except ImportError:
+            _home_away_splits_module = False
+    return _home_away_splits_module if _home_away_splits_module else None
 
 
 class AdaptivePredictor:
@@ -55,6 +89,9 @@ class AdaptivePredictor:
         confidence_temperature='auto',
         use_smart_encoding=True,
         use_early_season_adjustment=True,
+        use_power_ratings=True,
+        use_home_away_splits=True,
+        use_rest_days=True,
     ):
         """
         Initialize the predictor.
@@ -70,6 +107,9 @@ class AdaptivePredictor:
                 - 'auto' or 'auto:<target>': calibrate shift so mean home probability hits target (default 0.55)
             use_smart_encoding: Use conference-aware team encoding instead of -1 for unknown teams
             use_early_season_adjustment: Apply confidence reduction during early season
+            use_power_ratings: Calculate and use KenPom-style efficiency ratings (Phase 2)
+            use_home_away_splits: Calculate and use venue-specific performance stats (Phase 2)
+            use_rest_days: Calculate and use rest day advantages (Phase 2)
         """
         base_model = RandomForestClassifier(
             n_estimators=n_estimators,
@@ -90,6 +130,30 @@ class AdaptivePredictor:
             'away_rank',
             'rank_diff',
             'is_ranked_matchup',
+        ]
+        
+        # Phase 2 feature columns (added dynamically when available)
+        self.phase2_feature_cols = [
+            # Power ratings features
+            'power_rating_diff',
+            'off_rating_diff',
+            'def_rating_diff',
+            'home_sos',
+            'away_sos',
+            'sos_diff',
+            # Rest days features
+            'home_rest_days',
+            'away_rest_days',
+            'rest_advantage',
+            # Home/away splits
+            'home_team_home_wpct',
+            'home_team_home_margin',
+            'home_team_home_adv',
+            'away_team_away_wpct',
+            'away_team_away_margin',
+            'away_team_venue_consistency',
+            'venue_wpct_diff',
+            'combined_home_adv',
         ]
         self.min_games_threshold_mode = min_games_threshold
         if isinstance(min_games_threshold, (int, float)):
@@ -127,6 +191,14 @@ class AdaptivePredictor:
         self.use_smart_encoding = _feature_flags.get('use_smart_team_encoding', use_smart_encoding)
         self.use_early_season_adjustment = _feature_flags.get('use_early_season_adjustment', use_early_season_adjustment)
         self._team_to_encoding_fallback = {}  # Cache for unknown team encodings
+        
+        # Phase 2 feature engineering
+        self.use_power_ratings = _feature_flags.get('use_power_ratings', use_power_ratings)
+        self.use_home_away_splits = _feature_flags.get('use_home_away_splits', use_home_away_splits)
+        self.use_rest_days = _feature_flags.get('use_rest_days', use_rest_days)
+        self._power_ratings = None  # Will be initialized during fit()
+        self._home_away_splits = None  # Will be initialized during fit()
+        self._historical_games = None  # For rest day calculations
         
     def _is_early_season(self, game_date: datetime = None) -> bool:
         """
@@ -283,7 +355,100 @@ class AdaptivePredictor:
                 df[diff_name] = df[h_col] - df[a_col]
                 if diff_name not in self.feature_cols:
                     self.feature_cols.append(diff_name)
+        
+        # Phase 2: Add power rating features if available
+        if self.use_power_ratings and self._power_ratings is not None:
+            df = self._add_power_rating_features(df)
+        
+        # Phase 2: Add rest day features if available
+        if self.use_rest_days and self._historical_games is not None:
+            df = self._add_rest_day_features(df)
+        
+        # Phase 2: Add home/away split features if available
+        if self.use_home_away_splits and self._home_away_splits is not None:
+            df = self._add_home_away_split_features(df)
+        
+        # Ensure Phase 2 feature columns are in feature_cols if present in df
+        for col in self.phase2_feature_cols:
+            if col in df.columns and col not in self.feature_cols:
+                self.feature_cols.append(col)
+        
         return df
+    
+    def _add_power_rating_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add power rating features to dataframe (Phase 2 Task 2.1)."""
+        if self._power_ratings is None:
+            return df
+        
+        try:
+            df = self._power_ratings.enrich_dataframe_with_power_features(df)
+        except Exception as e:
+            print(f"  Warning: Power rating enrichment failed: {e}")
+        
+        return df
+    
+    def _add_rest_day_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add rest day features to dataframe (Phase 2 Task 2.3)."""
+        ha_module = _get_home_away_splits()
+        if ha_module is None:
+            return df
+        
+        try:
+            df = ha_module.add_rest_days_features(df, self._historical_games)
+        except Exception as e:
+            print(f"  Warning: Rest days calculation failed: {e}")
+        
+        return df
+    
+    def _add_home_away_split_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add home/away split features to dataframe (Phase 2 Task 2.4)."""
+        if self._home_away_splits is None:
+            return df
+        
+        try:
+            df = self._home_away_splits.enrich_dataframe(df)
+        except Exception as e:
+            print(f"  Warning: Home/away split enrichment failed: {e}")
+        
+        return df
+    
+    def _init_phase2_features(self, train_df: pd.DataFrame) -> None:
+        """Initialize Phase 2 feature calculators from training data."""
+        
+        # Task 2.1 & 2.2: Power Ratings and Strength of Schedule
+        if self.use_power_ratings:
+            pr_module = _get_power_ratings()
+            if pr_module is not None:
+                try:
+                    print("  Initializing power ratings (Phase 2)...")
+                    self._power_ratings = pr_module.PowerRatings(n_iterations=10)
+                    self._power_ratings.calculate_ratings(train_df)
+                    n_teams = len(self._power_ratings.ratings)
+                    print(f"    ✓ Calculated power ratings for {n_teams} teams")
+                except Exception as e:
+                    print(f"    Warning: Power ratings init failed: {e}")
+                    self._power_ratings = None
+        
+        # Task 2.4: Home/Away Splits
+        if self.use_home_away_splits:
+            ha_module = _get_home_away_splits()
+            if ha_module is not None:
+                try:
+                    print("  Initializing home/away splits (Phase 2)...")
+                    self._home_away_splits = ha_module.HomeAwaySplits(
+                        min_home_games=3, 
+                        min_away_games=3
+                    )
+                    self._home_away_splits.calculate_splits(train_df)
+                    n_splits = len(self._home_away_splits.splits)
+                    print(f"    ✓ Calculated venue splits for {n_splits} team-seasons")
+                except Exception as e:
+                    print(f"    Warning: Home/away splits init failed: {e}")
+                    self._home_away_splits = None
+        
+        # Task 2.3: Rest days - uses _historical_games set in fit()
+        if self.use_rest_days:
+            print("  Rest days feature enabled (Phase 2)")
 
     @staticmethod
     def _team_game_counts_from_frame(df: pd.DataFrame) -> dict[str, int]:
@@ -484,6 +649,12 @@ class AdaptivePredictor:
         Returns:
             self for method chaining
         """
+        # Store raw training data for Phase 2 feature calculations
+        self._historical_games = train_df.copy()
+        
+        # Initialize Phase 2 features before prepare_data
+        self._init_phase2_features(train_df)
+        
         train_df = self.prepare_data(train_df)
         self.training_data = train_df  # Store for game count lookups
 
