@@ -435,11 +435,12 @@ def calculate_point_in_time_features(df):
     
     # 2. Create Long Format (Stack Home and Away)
     # We need a single timeline of games per team
-    home_df = df[['date', 'season', 'home_team_encoded', 'home_win', 'home_score', 'away_score', 'game_id']].copy()
+    home_df = df[['date', 'season', 'home_team_id', 'home_win', 'home_score', 'away_score', 'game_id']].copy()
     home_df.columns = ['date', 'season', 'team_id', 'won', 'score', 'opponent_score', 'game_id']
     
-    away_df = df[['date', 'season', 'away_team_encoded', 'home_win', 'away_score', 'home_score', 'game_id']].copy()
+    away_df = df[['date', 'season', 'away_team_id', 'home_win', 'away_score', 'home_score', 'game_id']].copy()
     away_df['won'] = 1 - away_df['home_win']  # Inverse win for away
+    away_df = away_df[['date', 'season', 'away_team_id', 'won', 'away_score', 'home_score', 'game_id']]
     away_df.columns = ['date', 'season', 'team_id', 'won', 'score', 'opponent_score', 'game_id']
     
     # Combined timeline
@@ -474,13 +475,13 @@ def calculate_point_in_time_features(df):
     
     # Merge for Home
     df = df.merge(team_df[['game_id', 'team_id'] + features], 
-                  left_on=['game_id', 'home_team_encoded'], 
+                  left_on=['game_id', 'home_team_id'], 
                   right_on=['game_id', 'team_id'], 
                   how='left').rename(columns={f: f'home_fs_{f}' for f in features}).drop(columns=['team_id'])
                   
     # Merge for Away
     df = df.merge(team_df[['game_id', 'team_id'] + features], 
-                  left_on=['game_id', 'away_team_encoded'], 
+                  left_on=['game_id', 'away_team_id'], 
                   right_on=['game_id', 'team_id'], 
                   how='left').rename(columns={f: f'away_fs_{f}' for f in features}).drop(columns=['team_id'])
 
