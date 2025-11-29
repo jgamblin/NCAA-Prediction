@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-29 15:56:38 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `15fd5c7`
+**Last Updated**: 2025-11-29 17:06:18 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `8560628`
 
 ---
 
@@ -24,7 +24,7 @@
 | 2025-11-26 | 34 | ✅ | ✅ |
 | 2025-11-27 | 9 | ❌ | ❌ |
 | 2025-11-28 | 21 | ✅ | ❌ |
-| 2025-11-29 | 15 | ❌ | ❌ |
+| 2025-11-29 | 18 | ❌ | ❌ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
@@ -87,8 +87,8 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 76.0% (1496 evaluated)
-- **Last 10 Days**: 62.1% (535 games)
+- **Overall Accuracy**: 76.2% (1528 evaluated)
+- **Last 10 Days**: 63.5% (567 games)
 
 ### Last 7 Days
 
@@ -100,7 +100,7 @@
 | 2025-11-26 | 136 | 80 | 58.8% | 80.0% |
 | 2025-11-27 | 36 | 16 | 44.4% | 76.9% |
 | 2025-11-28 | 84 | 56 | 66.7% | 80.6% |
-| 2025-11-29 | 30 | 28 | 93.3% | 81.0% |
+| 2025-11-29 | 62 | 56 | 90.3% | 81.0% |
 
 ---
 
