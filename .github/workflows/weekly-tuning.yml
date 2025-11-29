@@ -19,6 +19,7 @@ permissions:
 jobs:
   tune-model:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     env:
       PYTHONPATH: ${{ github.workspace }}
     concurrency:
@@ -35,11 +36,19 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.13'
+        cache: 'pip'
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Backup current model params
+      run: |
+        if [ -f config/model_params.json ]; then
+          cp config/model_params.json config/model_params.backup.json
+          echo "Backed up model_params.json"
+        fi
 
     - name: Detect training & config changes
       id: data_check
@@ -49,14 +58,25 @@ jobs:
         cat $GITHUB_OUTPUT
     
     - name: Run weekly model tuning
+      id: tuning
       if: steps.data_check.outputs.tune_needed == 'true'
       run: |
-        python3 model_training/tune_model.py
+        python3 model_training/tune_model.py 2>&1 | tee tuning_output.log
 
     - name: Run calibration comparison
       if: steps.data_check.outputs.tune_needed == 'true'
       run: |
-        python3 scripts/calibration_comparison.py
+        python3 scripts/calibration_comparison.py 2>&1 | tee -a tuning_output.log
+
+    - name: Upload tuning log on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: tuning-failure-log-${{ github.run_id }}
+        path: |
+          tuning_output.log
+          config/model_params.backup.json
+        retention-days: 7
 
     - name: Commit tuning & calibration results
       if: steps.data_check.outputs.tune_needed == 'true'

@@ -1,13 +1,13 @@
 # 📊 Model Performance Dashboard
 
-_Generated: 2025-11-29 11:49 CST_
+_Generated: 2025-11-29 15:56 CST_
 
 ## Overview
 
-- **Overall Accuracy**: 75.65% (1109/1466)
-- **7-Day Rolling Accuracy**: 59.43%
-- **Most Recent Day**: 2025-11-28 — accuracy 66.67% on 84 games
-- **Average Confidence (latest day)**: 80.58%
+- **Overall Accuracy**: 76.00% (1137/1496)
+- **7-Day Rolling Accuracy**: 61.33%
+- **Most Recent Day**: 2025-11-29 — accuracy 93.33% on 30 games
+- **Average Confidence (latest day)**: 80.97%
 
 ## Daily Accuracy
 
@@ -21,7 +21,6 @@ _Generated: 2025-11-29 11:49 CST_
 
 | Date | Games | Correct | Accuracy | Avg Confidence |
 |------|-------|---------|----------|----------------|
-| 2025-11-19 | 28 | 21 | 75.00% | 79.35% |
 | 2025-11-20 | 5 | 5 | 100.00% | 85.23% |
 | 2025-11-21 | 7 | 6 | 85.71% | 79.79% |
 | 2025-11-22 | 11 | 7 | 63.64% | 79.85% |
@@ -31,6 +30,7 @@ _Generated: 2025-11-29 11:49 CST_
 | 2025-11-26 | 136 | 80 | 58.82% | 79.95% |
 | 2025-11-27 | 36 | 16 | 44.44% | 76.95% |
 | 2025-11-28 | 84 | 56 | 66.67% | 80.58% |
+| 2025-11-29 | 30 | 28 | 93.33% | 80.97% |
 
 ## Drift Snapshot
 
@@ -38,8 +38,8 @@ Latest drift snapshot (Season 2025-26, 774 games): accuracy 0.753, logloss 0.580
 
 ## Performance Trends
 
-- **Last 7 Days**: 59.43% (293/493 games)
-- **Trend**: ⬇️ Recent performance is 16.22% below overall average
+- **Last 7 Days**: 61.33% (314/512 games)
+- **Trend**: ⬇️ Recent performance is 14.67% below overall average
 
 ---
 

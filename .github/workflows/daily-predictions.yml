@@ -15,6 +15,7 @@ permissions:
 jobs:
   update-predictions:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     concurrency:
       group: ncaa-prediction-schedule
       cancel-in-progress: false
@@ -29,6 +30,7 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.13'
+        cache: 'pip'
     
     - name: Install dependencies
       run: |
@@ -36,8 +38,18 @@ jobs:
         pip install -r requirements.txt
     
     - name: Run daily pipeline
+      id: pipeline
       run: |
-        python3 daily_pipeline.py
+        python3 daily_pipeline.py 2>&1 | tee pipeline_output.log
+        echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+    
+    - name: Upload pipeline log on failure
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: pipeline-failure-log-${{ github.run_id }}
+        path: pipeline_output.log
+        retention-days: 7
     
     - name: Commit and push if changes
       run: |

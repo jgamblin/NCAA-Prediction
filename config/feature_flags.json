@@ -1,0 +1,33 @@
+{
+  "use_feature_fallback": true,
+  "use_smart_team_encoding": true,
+  "use_early_season_adjustment": true,
+  "use_temperature_scaling": true,
+  "temperature_override": null,
+  "fallback_min_games": 5,
+  "early_season_days": 30,
+  "unknown_team_strategy": "conference_then_median",
+  
+  "use_power_ratings": true,
+  "use_home_away_splits": true,
+  "use_rest_days": true,
+  "power_rating_iterations": 10,
+  "min_home_games_for_splits": 3,
+  "min_away_games_for_splits": 3,
+  "max_rest_days_cap": 10,
+  
+  "model_type": "xgboost",
+  "use_ensemble": false,
+  "ensemble_weights": {
+    "xgboost": 0.45,
+    "random_forest": 0.35,
+    "logistic": 0.20
+  },
+  "validation_days": 14,
+  
+  "use_conference_strength": true,
+  "use_recency_weighting": true,
+  "recency_decay_rate": 0.1,
+  "recency_half_life_days": 14,
+  "recency_min_games": 3
+}
