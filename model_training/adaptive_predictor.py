@@ -18,6 +18,10 @@ Phase 3 Model Architecture (2025-11-29):
 - Task 3.1: XGBoost integration (via EnsemblePredictor)
 - Task 3.2: Temporal train/validation split
 - Task 3.3: Model ensemble support
+
+Phase 4 Advanced Features (2025-01-xx):
+- Task 4.1: Conference strength adjustment
+- Task 4.2: Recency weighting / momentum features
 """
 
 import pandas as pd
@@ -39,6 +43,10 @@ from data_collection.team_name_utils import normalize_team_name
 _power_ratings_module = None
 _home_away_splits_module = None
 _ensemble_module = None
+
+# Phase 4 imports - lazy loaded
+_conference_strength_module = None
+_recency_weighting_module = None
 
 # Load feature flags
 try:
@@ -82,6 +90,30 @@ def _get_ensemble_predictor():
         except ImportError:
             _ensemble_module = False
     return _ensemble_module if _ensemble_module else None
+
+
+def _get_conference_strength():
+    """Lazy load conference strength module (Phase 4)."""
+    global _conference_strength_module
+    if _conference_strength_module is None:
+        try:
+            from model_training import conference_strength
+            _conference_strength_module = conference_strength
+        except ImportError:
+            _conference_strength_module = False
+    return _conference_strength_module if _conference_strength_module else None
+
+
+def _get_recency_weighting():
+    """Lazy load recency weighting module (Phase 4)."""
+    global _recency_weighting_module
+    if _recency_weighting_module is None:
+        try:
+            from model_training import recency_weighting
+            _recency_weighting_module = recency_weighting
+        except ImportError:
+            _recency_weighting_module = False
+    return _recency_weighting_module if _recency_weighting_module else None
 
 
 class AdaptivePredictor:
@@ -208,6 +240,21 @@ class AdaptivePredictor:
             'venue_wpct_diff',
             'combined_home_adv',
         ]
+        
+        # Phase 4 feature columns (added dynamically when available)
+        self.phase4_feature_cols = [
+            # Conference strength features (Task 4.1)
+            'home_conf_rating',
+            'away_conf_rating',
+            'conf_rating_diff',
+            # Momentum features (Task 4.2)
+            'home_momentum',
+            'away_momentum',
+            'momentum_diff',
+            'home_hot_streak',
+            'away_hot_streak',
+        ]
+        
         self.min_games_threshold_mode = min_games_threshold
         if isinstance(min_games_threshold, (int, float)):
             self.min_games_threshold = int(min_games_threshold)
@@ -252,6 +299,12 @@ class AdaptivePredictor:
         self._power_ratings = None  # Will be initialized during fit()
         self._home_away_splits = None  # Will be initialized during fit()
         self._historical_games = None  # For rest day calculations
+        
+        # Phase 4 advanced features
+        self.use_conference_strength = _feature_flags.get('use_conference_strength', True)
+        self.use_recency_weighting = _feature_flags.get('use_recency_weighting', True)
+        self._conference_strength = None  # Will be initialized during fit()
+        self._recency_weighting = None  # Will be initialized during fit()
         
     def _is_early_season(self, game_date: datetime = None) -> bool:
         """
@@ -421,8 +474,21 @@ class AdaptivePredictor:
         if self.use_home_away_splits and self._home_away_splits is not None:
             df = self._add_home_away_split_features(df)
         
+        # Phase 4: Add conference strength features if available
+        if self.use_conference_strength and self._conference_strength is not None:
+            df = self._add_conference_strength_features(df)
+        
+        # Phase 4: Add momentum features if available
+        if self.use_recency_weighting and self._recency_weighting is not None:
+            df = self._add_momentum_features(df)
+        
         # Ensure Phase 2 feature columns are in feature_cols if present in df
         for col in self.phase2_feature_cols:
+            if col in df.columns and col not in self.feature_cols:
+                self.feature_cols.append(col)
+        
+        # Ensure Phase 4 feature columns are in feature_cols if present in df
+        for col in self.phase4_feature_cols:
             if col in df.columns and col not in self.feature_cols:
                 self.feature_cols.append(col)
         
@@ -465,6 +531,36 @@ class AdaptivePredictor:
         
         return df
     
+    def _add_conference_strength_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add conference strength features to dataframe (Phase 4 Task 4.1)."""
+        if self._conference_strength is None:
+            return df
+        
+        try:
+            # add_conference_features is a module-level function
+            cs_module = _get_conference_strength()
+            if cs_module is not None:
+                df = cs_module.add_conference_features(df, self._conference_strength)
+        except Exception as e:
+            print(f"  Warning: Conference strength enrichment failed: {e}")
+        
+        return df
+    
+    def _add_momentum_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Add momentum/recency features to dataframe (Phase 4 Task 4.2)."""
+        if self._recency_weighting is None:
+            return df
+        
+        try:
+            # add_momentum_features is a module-level function
+            rw_module = _get_recency_weighting()
+            if rw_module is not None:
+                df = rw_module.add_momentum_features(df, self._recency_weighting, self._historical_games)
+        except Exception as e:
+            print(f"  Warning: Momentum feature enrichment failed: {e}")
+        
+        return df
+    
     def _init_phase2_features(self, train_df: pd.DataFrame) -> None:
         """Initialize Phase 2 feature calculators from training data."""
         
@@ -502,6 +598,49 @@ class AdaptivePredictor:
         # Task 2.3: Rest days - uses _historical_games set in fit()
         if self.use_rest_days:
             print("  Rest days feature enabled (Phase 2)")
+
+    def _init_phase4_features(self, train_df: pd.DataFrame) -> None:
+        """Initialize Phase 4 feature calculators from training data."""
+        
+        # Task 4.1: Conference Strength
+        if self.use_conference_strength:
+            cs_module = _get_conference_strength()
+            if cs_module is not None:
+                try:
+                    print("  Initializing conference strength (Phase 4)...")
+                    self._conference_strength = cs_module.ConferenceStrength()
+                    # Calculate conference ratings from game data and power ratings
+                    if self._power_ratings is not None and hasattr(self._power_ratings, 'ratings'):
+                        self._conference_strength.calculate_ratings(
+                            train_df,
+                            team_ratings=self._power_ratings.ratings
+                        )
+                        n_conferences = len(self._conference_strength.conference_ratings)
+                        print(f"    ✓ Calculated conference strength for {n_conferences} conferences")
+                    else:
+                        # Can still calculate from game data alone
+                        self._conference_strength.calculate_ratings(train_df)
+                        n_conferences = len(self._conference_strength.conference_ratings)
+                        print(f"    ✓ Calculated conference strength for {n_conferences} conferences (no ratings)")
+                except Exception as e:
+                    print(f"    Warning: Conference strength init failed: {e}")
+                    self._conference_strength = None
+        
+        # Task 4.2: Recency Weighting / Momentum
+        if self.use_recency_weighting:
+            rw_module = _get_recency_weighting()
+            if rw_module is not None:
+                try:
+                    print("  Initializing recency weighting (Phase 4)...")
+                    self._recency_weighting = rw_module.RecencyWeighting(
+                        decay_rate=0.1,
+                        half_life_days=14,
+                        min_games=3
+                    )
+                    print(f"    ✓ Recency weighting initialized (decay=0.1, half_life=14)")
+                except Exception as e:
+                    print(f"    Warning: Recency weighting init failed: {e}")
+                    self._recency_weighting = None
 
     @staticmethod
     def _team_game_counts_from_frame(df: pd.DataFrame) -> dict[str, int]:
@@ -707,6 +846,9 @@ class AdaptivePredictor:
         
         # Initialize Phase 2 features before prepare_data
         self._init_phase2_features(train_df)
+        
+        # Initialize Phase 4 features (depends on Phase 2 for power ratings)
+        self._init_phase4_features(train_df)
         
         train_df = self.prepare_data(train_df)
         self.training_data = train_df  # Store for game count lookups

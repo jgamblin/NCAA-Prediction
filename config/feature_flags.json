@@ -23,5 +23,11 @@
     "random_forest": 0.35,
     "logistic": 0.20
   },
-  "validation_days": 14
+  "validation_days": 14,
+  
+  "use_conference_strength": true,
+  "use_recency_weighting": true,
+  "recency_decay_rate": 0.1,
+  "recency_half_life_days": 14,
+  "recency_min_games": 3
 }
