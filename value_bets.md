@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-11-29 23:36:22
+**Last Updated**: 2025-11-30 12:45:14
 
 **Tracking Started**: 2025-11-10
 
@@ -28,11 +28,17 @@
 
 ---
 
-## 💎 Today's Bet
+## 💎 2025-11-25'S Best Value Bet
 
-**No bettable games available today**
+**Stetson** vs **Wright State**
 
-Games may have moneylines set to "OFF" or be more extreme than -1000.
+- **Bet On**: Stetson
+- **Confidence**: 72.4%
+- **Moneyline**: +475
+- **Value Score**: 3.166
+- **Potential Profit**: $4.75
+
+✅ *Best value opportunity - optimal balance of probability and odds*
 
 ---
 
