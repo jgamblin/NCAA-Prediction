@@ -367,6 +367,7 @@ def generate_betting_report():
 def get_todays_bets(today_preds):
     """
     Get today's safest bet and best value bet from predictions.
+    If no games are scheduled for today, show the most recent bettable games.
     
     Args:
         today_preds: DataFrame with today's predictions
@@ -382,17 +383,29 @@ def get_todays_bets(today_preds):
     if 'has_real_odds' not in today_preds.columns or 'date' not in today_preds.columns:
         return result
 
-    # Restrict strictly to games scheduled for *today's* date in local time
+    # First try to find games scheduled for *today's* date in local time
     try:
         today_str = date.today().strftime('%Y-%m-%d')
         preds_today = today_preds[today_preds['date'] == today_str].copy()
+        
+        # Filter to games with real odds
+        with_real_ml = preds_today[preds_today['has_real_odds'] == True].copy()
+        
+        if len(with_real_ml) > 0:
+            # Use today's games if available
+            bettable_games = with_real_ml
+        else:
+            # No bettable games today, fall back to most recent bettable games
+            with_real_ml_all = today_preds[today_preds['has_real_odds'] == True].copy()
+            if len(with_real_ml_all) > 0:
+                # Sort by date descending and take the most recent games
+                with_real_ml_all = with_real_ml_all.sort_values('date', ascending=False)
+                # Take games from the most recent date that has bettable games
+                most_recent_date = with_real_ml_all['date'].iloc[0]
+                bettable_games = with_real_ml_all[with_real_ml_all['date'] == most_recent_date].copy()
+            else:
+                return result
     except Exception:
-        return result
-
-    # Filter to games with real odds
-    with_real_ml = preds_today[preds_today['has_real_odds'] == True].copy()
-    
-    if len(with_real_ml) == 0:
         return result
     
     # Add bettable moneyline filter
@@ -404,7 +417,7 @@ def get_todays_bets(today_preds):
         return is_bettable_moneyline(ml)
     
     # Filter to only bettable games
-    bettable = with_real_ml[with_real_ml.apply(is_row_bettable, axis=1)].copy()
+    bettable = bettable_games[bettable_games.apply(is_row_bettable, axis=1)].copy()
     
     if len(bettable) == 0:
         return result
@@ -816,6 +829,9 @@ def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
             safest_bet = todays_bets['safest_bet']
             
             if safest_bet is not None:
+                game_date = safest_bet['date']
+                date_label = "today's" if game_date == date.today().strftime('%Y-%m-%d') else f"{game_date}'s"
+                
                 if safest_bet['predicted_home_win'] == 1:
                     bet_team = safest_bet['home_team']
                     opponent = safest_bet['away_team']
@@ -828,7 +844,7 @@ def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
                     location = '@'
                 
                 md_lines.extend([
-                    "## 🎯 Today's Bet",
+                    f"## 🎯 {date_label.title()} Safest Bet",
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
@@ -837,16 +853,16 @@ def generate_safest_bets_file(safest_bets_df, safest_stats, today_pred_path):
                     f"- **Moneyline**: {int(moneyline):+d}",
                     f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "✅ *Highest confidence game today with real ESPN odds*",
+                    "✅ *Highest confidence game with real ESPN odds*",
                     "",
                     "---",
                     "",
                 ])
             else:
                 md_lines.extend([
-                    "## 🎯 Today's Bet",
+                    "## 🎯 Most Recent Bettable Games",
                     "",
-                    "**No bettable games available today**",
+                    "**No bettable games available**",
                     "",
                     "Games may have moneylines set to \"OFF\" or be more extreme than -1000.",
                     "",
@@ -995,6 +1011,9 @@ def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
             value_bet = todays_bets['value_bet']
             
             if value_bet is not None:
+                game_date = value_bet['date']
+                date_label = "today's" if game_date == date.today().strftime('%Y-%m-%d') else f"{game_date}'s"
+                
                 if value_bet['predicted_home_win'] == 1:
                     bet_team = value_bet['home_team']
                     opponent = value_bet['away_team']
@@ -1009,7 +1028,7 @@ def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
                 value_score = calculate_value_score(value_bet['confidence'], moneyline)
                 
                 md_lines.extend([
-                    "## 💎 Today's Bet",
+                    f"## 💎 {date_label.title()} Best Value Bet",
                     "",
                     f"**{bet_team}** {location} **{opponent}**",
                     "",
@@ -1019,16 +1038,16 @@ def generate_value_bets_file(value_bets_df, value_stats, today_pred_path):
                     f"- **Value Score**: {value_score:.3f}",
                     f"- **Potential Profit**: ${american_odds_to_payout(moneyline, 1.0) - 1.0:.2f}",
                     "",
-                    "✅ *Best value opportunity today - optimal balance of probability and odds*",
+                    "✅ *Best value opportunity - optimal balance of probability and odds*",
                     "",
                     "---",
                     "",
                 ])
             else:
                 md_lines.extend([
-                    "## 💎 Today's Bet",
+                    "## 💎 Most Recent Bettable Games",
                     "",
-                    "**No bettable games available today**",
+                    "**No bettable games available**",
                     "",
                     "Games may have moneylines set to \"OFF\" or be more extreme than -1000.",
                     "",
