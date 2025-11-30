@@ -7,8 +7,8 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **77.3% Accuracy** across 1518 predictions  
-📈 **30,689 Historical Games** powering model  
+🎯 **77.2% Accuracy** across 1522 predictions  
+📈 **30,693 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **19 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
@@ -46,8 +46,8 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 77.3% (1518 games)
-- **High Confidence**: 77.4% avg
+- **Overall**: 77.2% (1522 games)
+- **High Confidence**: 77.6% avg
 - **Current Season**: 88.8% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
 
@@ -55,18 +55,18 @@
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,689
-- **Current Season**: 1684 games
-- **Unique Teams**: 1,903
-- **Feature Store**: 12,322 rows
+- **Total Games**: 30,693
+- **Current Season**: 1688 games
+- **Unique Teams**: 1,905
+- **Feature Store**: 12,324 rows
 
 </td>
 <td width="33%">
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `1de978a`
-- **Last Update**: 2025-11-30 19:06 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `5fe6f78`
+- **Last Update**: 2025-11-30 19:42 UTC
 - **Calibration**: Brier N/A
 
 </td>
@@ -80,13 +80,13 @@
 
 | Date | Predictions | Completed | Accuracy | Avg Confidence | Notes |
 |------|-------------|-----------|----------|----------------|-------|
-| Nov 23 | 60 | 60 | 70.0% | 80.4% | 📉 |
 | Nov 24 | 78 | 78 | 53.8% | 80.0% | 📉 |
 | Nov 25 | 88 | 88 | 56.8% | 79.3% | 📉 |
 | Nov 26 | 68 | 68 | 58.8% | 80.0% | 📉 |
 | Nov 27 | 36 | 36 | 44.4% | 76.9% | 📉 |
 | Nov 28 | 84 | 84 | 66.7% | 80.6% | 📉 |
 | Nov 29 | 120 | 120 | 86.7% | 81.0% | ✅ |
+| Nov 30 | 4 | 4 | 50.0% | 81.7% | 📉 |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -337,15 +337,15 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 77.3% (on 1,518 predictions)
+- **Overall Accuracy**: 77.2% (on 1,522 predictions)
 - **Current Season (2025-26) Tuning**: 88.8%
-- **Training Data**: 30,689 games (current season: 1,684)
+- **Training Data**: 30,693 games (current season: 1,688)
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `1de978a`
-*Refreshed: 2025-11-30 19:06 UTC*
+- Commit Hash: `5fe6f78`
+*Refreshed: 2025-11-30 19:42 UTC*
 
 ## 🚀 Automation
 
