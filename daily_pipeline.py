@@ -324,7 +324,6 @@ def main():
         import json
         
         # Load training data
-        # Prefer normalized historical file if available
         normalized_hist_path = os.path.join(data_dir, 'Completed_Games_Normalized.csv')
         if os.path.exists(normalized_hist_path):
             train_df = pd.read_csv(normalized_hist_path)
@@ -334,99 +333,89 @@ def main():
             print(f"✓ Using raw training data ({len(train_df)} rows) - normalized file not found")
         
         # Train model and generate predictions
-        # Load tuned hyperparameters if available
         from config.model_params_loader import load_model_params  # type: ignore
         model_cfg = load_model_params()
         sp_kwargs = {}
         adaptive_cfg = {}
         if model_cfg:
             adaptive_cfg = model_cfg.get('adaptive_predictor') or model_cfg.get('simple_predictor', {})
+        
         model_version = ""
         if model_cfg:
             metadata = model_cfg.get('metadata', {})
             model_version = metadata.get('tuner_commit') or metadata.get('model_version', '') or ""
+            
         for key in [
-            'n_estimators',
-            'max_depth',
-            'min_samples_split',
-            'min_games_threshold',
-            'calibrate',
-            'calibration_method',
-            'home_court_logit_shift',
-            'confidence_temperature',
+            'n_estimators', 'max_depth', 'min_samples_split', 'min_games_threshold',
+            'calibrate', 'calibration_method', 'home_court_logit_shift', 'confidence_temperature',
         ]:
             if key in adaptive_cfg:
                 sp_kwargs[key] = adaptive_cfg[key]
+                
         if sp_kwargs:
             print(f"✓ Loaded tuned adaptive predictor params: {sp_kwargs}")
         else:
             print("⚠️ No tuned params found (using defaults)")
+            
         predictor = AdaptivePredictor(**sp_kwargs)
         
-        # Enrich training data with point-in-time features (no data leakage)
+        # Enrich training data with point-in-time features
         try:
             from model_training.feature_store import calculate_point_in_time_features
             from model_training.team_id_utils import ensure_team_ids
             
             train_df = ensure_team_ids(train_df)
-            raw_training_rows = len(train_df)
-            
             print("  Calculating point-in-time features for training data...")
             train_df = calculate_point_in_time_features(train_df)
             print(f"✓ Added point-in-time features to training data (rows {len(train_df)})")
-            
         except Exception as exc:
             import traceback
             print(f"⚠️ Failed to calculate point-in-time features for training data: {exc}")
             traceback.print_exc()
-        # Optional sample weighting if enabled in config
-        cfg_section = {}
-        if model_cfg:
-            cfg_section = model_cfg.get('adaptive_predictor') or model_cfg.get('simple_predictor', {})
-        use_weights = bool(cfg_section.get('use_sample_weights', False)) if cfg_section else False
-        if use_weights and 'season' in train_df.columns:
-            print("✓ Sample weighting enabled: emphasizing current season performance")
-            # Lightweight weight scheme: boost current season 10x, previous 3x, older decay
-            seasons = sorted(train_df['season'].unique(), reverse=True)
-            season_weight_map = {}
-            for i, season in enumerate(seasons):
-                if i == 0:
-                    season_weight_map[season] = 10.0
-                elif i == 1:
-                    season_weight_map[season] = 3.0
-                elif i == 2:
-                    season_weight_map[season] = 1.5
-                else:
-                    season_weight_map[season] = 0.5 ** (i - 2)
-            sample_weights = train_df['season'].map(season_weight_map).values
-            predictor.fit(train_df)  # initial fit populates encoders
-            try:
-                # Re-fit raw model with weights (calibration wrapper handled inside predictor)
-                available = [c for c in predictor.feature_cols if c in train_df.columns]
-                Xw = train_df[available]
-                yw = train_df['home_win'] if 'home_win' in train_df.columns else None
-                predictor.raw_model.fit(Xw, yw, sample_weight=sample_weights)
-                print("✓ Re-fitted raw model with sample weights")
-            except Exception as e:
-                print(f"⚠️ Failed to re-fit raw model with weights: {e}")
-        else:
-            predictor.fit(train_df)
+
+        # Fit model
+        predictor.fit(train_df)
         
         # Predict and log
         try:
             preds = predictor.predict(upcoming)
             if len(preds) == len(upcoming):
+                # 1. Add raw probabilities
                 upcoming['home_win_prob'] = preds
                 upcoming['away_win_prob'] = 1 - preds
-                # Log predictions (game_id, home_win_prob, away_win_prob, date)
-                log_df = upcoming[['game_id','home_win_prob','away_win_prob','date']]
-                log_df['run_date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                log_predictions(log_df)
-                print("✓ Predictions generated and logged")
+                
+                # 2. Calculate derived fields (Required for bets.md and predictions.md)
+                upcoming['predicted_home_win'] = (upcoming['home_win_prob'] >= 0.5).astype(int)
+                upcoming['confidence'] = upcoming.apply(
+                    lambda x: x['home_win_prob'] if x['home_win_prob'] >= 0.5 else x['away_win_prob'], axis=1
+                )
+                upcoming['predicted_winner'] = upcoming.apply(
+                    lambda x: x['home_team'] if x['predicted_home_win'] == 1 else x['away_team'], axis=1
+                )
+
+                # 3. Log to prediction_log.csv (History)
+                log_df = upcoming.copy()
+                log_predictions(
+                    log_df,
+                    source='live',
+                    model_name='AdaptivePredictor',
+                    model_version=model_version,
+                    config_version=_config_version,
+                    commit_hash=_commit_hash,
+                    timestamp=datetime.now()
+                )
+                print("✓ Predictions logged to history")
+
+                # 4. Save daily snapshot (Required for Today's Bets)
+                snapshot_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
+                upcoming.to_csv(snapshot_path, index=False)
+                print(f"✓ Saved daily predictions snapshot to {snapshot_path}")
             else:
                 print("⚠️ Prediction length mismatch")
         except Exception as e:
+            import traceback
             print(f"⚠️ Prediction error: {e}")
+            traceback.print_exc()
     else:
         print("✓ No upcoming games to predict")
 

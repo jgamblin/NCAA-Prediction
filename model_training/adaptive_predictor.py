@@ -31,8 +31,10 @@ import os
 import json
 from pathlib import Path
 from datetime import datetime, timedelta
+
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
+from sklearn.preprocessing import LabelEncoder
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -840,21 +842,28 @@ class AdaptivePredictor:
         Returns:
             self for method chaining
         """
+
         # Store raw training data for Phase 2 feature calculations
         self._historical_games = train_df.copy()
-        
+
         # Initialize Phase 2 features before prepare_data
         self._init_phase2_features(train_df)
-        
+
         # Initialize Phase 4 features (depends on Phase 2 for power ratings)
         self._init_phase4_features(train_df)
-        
+
         train_df = self.prepare_data(train_df)
         self.training_data = train_df  # Store for game count lookups
 
+        # --- TEAM LABEL ENCODER FIX ---
+        # Fit a LabelEncoder on all unique team names in training data
+        all_teams = pd.concat([train_df['home_team'], train_df['away_team']]).unique()
+        self.team_encoder = LabelEncoder()
+        self.team_encoder.fit(all_teams)
+
         # Calculate game counts per team
         print(f"Calculating game counts for {len(train_df)} training games...")
-        for team in pd.concat([train_df['home_team'], train_df['away_team']]).unique():  # type: ignore[attr-defined]
+        for team in all_teams:
             team_games = train_df[(train_df['home_team'] == team) | (train_df['away_team'] == team)]
             self.team_game_counts[team] = len(team_games)
 
