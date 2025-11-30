@@ -7,8 +7,8 @@
 <!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
 ## 📊 At a Glance
 
-🎯 **77.2% Accuracy** across 1504 predictions  
-📈 **30,670 Historical Games** powering model  
+🎯 **77.3% Accuracy** across 1518 predictions  
+📈 **30,689 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
 ⚡ **19 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
@@ -46,7 +46,7 @@
 <td width="33%">
 
 ### Prediction Quality
-- **Overall**: 77.2% (1504 games)
+- **Overall**: 77.3% (1518 games)
 - **High Confidence**: 77.4% avg
 - **Current Season**: 88.8% tuning accuracy
 - **Algorithm**: Random Forest (calibrated)
@@ -55,8 +55,8 @@
 <td width="33%">
 
 ### Data Scale
-- **Total Games**: 30,670
-- **Current Season**: 1665 games
+- **Total Games**: 30,689
+- **Current Season**: 1684 games
 - **Unique Teams**: 1,903
 - **Feature Store**: 12,322 rows
 
@@ -65,8 +65,8 @@
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `9623a0c`
-- **Last Update**: 2025-11-30 12:17 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `1de978a`
+- **Last Update**: 2025-11-30 19:06 UTC
 - **Calibration**: Brier N/A
 
 </td>
@@ -86,7 +86,7 @@
 | Nov 26 | 68 | 68 | 58.8% | 80.0% | 📉 |
 | Nov 27 | 36 | 36 | 44.4% | 76.9% | 📉 |
 | Nov 28 | 84 | 84 | 66.7% | 80.6% | 📉 |
-| Nov 29 | 106 | 106 | 86.8% | 81.1% | ✅ |
+| Nov 29 | 120 | 120 | 86.7% | 81.0% | ✅ |
 
 _Accuracy variations reflect feature store building historical context for new season teams._
 
@@ -337,15 +337,15 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
 ### Current Performance
 
-- **Overall Accuracy**: 77.2% (on 1,504 predictions)
+- **Overall Accuracy**: 77.3% (on 1,518 predictions)
 - **Current Season (2025-26) Tuning**: 88.8%
-- **Training Data**: 30,670 games (current season: 1,665)
+- **Training Data**: 30,689 games (current season: 1,684)
 
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `9623a0c`
-*Refreshed: 2025-11-30 12:17 UTC*
+- Commit Hash: `1de978a`
+*Refreshed: 2025-11-30 19:06 UTC*
 
 ## 🚀 Automation
 
