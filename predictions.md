@@ -1,20 +1,20 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-11-30 13:42:34 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `5fe6f78`
+**Last Updated**: 2025-12-01 06:18:33 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `5dd8f62`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 19
-- **Average Confidence**: 78.6%
-- **High (≥70%)**: 17 · **Medium (60-70%)**: 2 · **Other (<60%)**: 0
+- **Games Predicted Today**: 11
+- **Average Confidence**: 79.9%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
-- **#1 Pick Streak**: 3 day(s) (last miss 2025-11-27)
-- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-29)
+- **#1 Pick Streak**: 0 day(s) (last miss 2025-11-30)
+- **Top 5 Picks Perfect Streak**: 0 day(s) (last miss 2025-11-30)
 
 | Date | Games | #1 Correct | Top5 All Correct |
 |------|-------|------------|------------------|
@@ -24,49 +24,40 @@
 | 2025-11-27 | 9 | ❌ | ❌ |
 | 2025-11-28 | 21 | ✅ | ❌ |
 | 2025-11-29 | 31 | ✅ | ❌ |
-| 2025-11-30 | 2 | ✅ | — |
+| 2025-11-30 | 19 | ❌ | ❌ |
 
 ### 🎯 High Confidence Picks (≥70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Princeton** | Saint Joseph's | 82.2% |
-| 2 | **Florida Atlantic** | St. Bonaventure | 82.0% |
-| 3 | **William & Mary** | Old Dominion | 82.0% |
-| 4 | **West Virginia** | Mercyhurst | 81.6% |
-| 5 | **North Texas** | Prairie View A&M | 81.5% |
-| 6 | **Ball State** | Le Moyne | 80.9% |
-| 7 | **Lafayette** | Monmouth | 80.8% |
-| 8 | **Texas Tech** | Wyoming | 80.8% |
-| 9 | **La Salle** | Merrimack | 80.7% |
-| 10 | **UNC Asheville** | Appalachian St | 80.6% |
-| 11 | **Fairfield** | New Hampshire | 80.5% |
-| 12 | **Robert Morris** | Stetson | 80.4% |
-| 13 | **Colgate** | Fordham | 80.2% |
-| 14 | **UTSA** | South Alabama | 80.0% |
-| 15 | **Loyola Maryland** | Coppin State | 79.8% |
-| 16 | **Charleston** | Belmont | 78.4% |
-| 17 | **Coastal Carolina** | Alabama A&M | 71.8% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **San Jose State** | UC Irvine | 69.7% |
-| 2 | **Vermont** | Yale | 60.1% |
+| 1 | **Stanford** | Portland | 82.4% |
+| 2 | **Cincinnati** | Tarleton | 81.6% |
+| 3 | **Jacksonville State** | North Alabama | 81.2% |
+| 4 | **Kansas State** | Bowling Green | 81.2% |
+| 5 | **Villanova** | Temple | 81.0% |
+| 6 | **Incarnate Word** | McNeese | 81.0% |
+| 7 | **Delaware** | Iona | 79.8% |
+| 8 | **Colorado** | California Baptist | 79.4% |
+| 9 | **Troy** | West Georgia | 79.4% |
+| 10 | **Chicago State** | South Carolina State | 77.8% |
+| 11 | **Middle Tennessee** | UAB | 74.5% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Yale @ Vermont | 60.1% |  |
+| 1 | UAB @ Middle Tennessee | 74.5% |  |
+| 2 | South Carolina State @ Chicago State | 77.8% |  |
+| 3 | West Georgia @ Troy | 79.4% |  |
+| 4 | California Baptist @ Colorado | 79.4% |  |
+| 5 | Iona @ Delaware | 79.8% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 19
+- Home Teams Favored: 11
 - Away Teams Favored: 0
-- Max Confidence: 82.2%
-- Min Confidence: 60.1%
+- Max Confidence: 82.4%
+- Min Confidence: 74.5%
 
 ### 📋 Full Data
 
@@ -76,8 +67,8 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 77.2% (1522 evaluated)
-- **Last 10 Days**: 65.6% (556 games)
+- **Overall Accuracy**: 77.1% (1542 evaluated)
+- **Last 10 Days**: 65.8% (576 games)
 
 ### Last 7 Days
 
@@ -86,10 +77,10 @@
 | 2025-11-24 | 78 | 42 | 53.8% | 80.0% |
 | 2025-11-25 | 88 | 50 | 56.8% | 79.3% |
 | 2025-11-26 | 68 | 40 | 58.8% | 80.0% |
-| 2025-11-27 | 36 | 16 | 44.4% | 76.9% |
+| 2025-11-27 | 18 | 8 | 44.4% | 76.9% |
 | 2025-11-28 | 84 | 56 | 66.7% | 80.6% |
 | 2025-11-29 | 120 | 104 | 86.7% | 81.0% |
-| 2025-11-30 | 4 | 2 | 50.0% | 81.7% |
+| 2025-11-30 | 42 | 24 | 57.1% | 79.6% |
 
 ---
 
