@@ -27,10 +27,51 @@ class ESPNScraper:
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         })
     
+    def get_schedule_from_api(self, date):
+        """
+        Get ALL scheduled games from ESPN schedule API.
+        This fetches the full schedule including games not yet active.
+        Use this for getting complete game listings for predictions.
+        
+        Args:
+            date: Date in format YYYYMMDD or datetime object
+            
+        Returns:
+            List of game dictionaries
+        """
+        if isinstance(date, datetime):
+            date_str = date.strftime("%Y%m%d")
+        else:
+            date_str = str(date)
+        
+        # Schedule endpoint - gets ALL scheduled games for the day
+        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}&limit=1000"
+        
+        try:
+            response = self.session.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            
+            games = []
+            events = data.get('events', [])
+            
+            for event in events:
+                game_data = self._parse_api_event(event, date_str)
+                if game_data:
+                    games.append(game_data)
+            
+            print(f"  Fetched {len(games)} games from schedule API for {date_str}")
+            return games
+            
+        except Exception as e:
+            print(f"  Warning: Could not fetch schedule from API for {date_str}: {e}")
+            return []
+    
     def get_scoreboard_from_api(self, date):
         """
         Get games from ESPN API endpoint with real moneyline odds.
         This is the preferred method as it includes actual betting lines.
+        NOTE: This only returns active/recent games. Use get_schedule_from_api for full schedule.
         
         Args:
             date: Date in format YYYYMMDD or datetime object
@@ -59,7 +100,7 @@ class ESPNScraper:
                 if game_data:
                     games.append(game_data)
             
-            print(f"  Fetched {len(games)} games from API for {date_str}")
+            print(f"  Fetched {len(games)} games from scoreboard API for {date_str}")
             return games
             
         except Exception as e:
@@ -70,7 +111,7 @@ class ESPNScraper:
     def get_scoreboard(self, date):
         """
         Get ALL games for a specific date across all conferences.
-        Tries API first (for real odds), then falls back to HTML scraping.
+        Uses schedule API to get complete game listings including future games.
         
         Args:
             date: Date in format YYYYMMDD or datetime object
@@ -83,10 +124,16 @@ class ESPNScraper:
         else:
             date_str = str(date)
         
-        # Try API first for real odds
-        games_from_api = self.get_scoreboard_from_api(date)
-        if games_from_api is not None:
-            return games_from_api
+        # Use schedule API to get ALL games (not just active ones)
+        games_from_schedule = self.get_schedule_from_api(date)
+        if games_from_schedule:
+            return games_from_schedule
+        
+        # Fallback to scoreboard API (only returns active/recent games)
+        print("  Schedule API failed, trying scoreboard API...")
+        games_from_scoreboard = self.get_scoreboard_from_api(date)
+        if games_from_scoreboard is not None:
+            return games_from_scoreboard
         
         # Fallback to HTML scraping (won't have real odds)
         all_games = []
