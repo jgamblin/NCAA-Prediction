@@ -146,40 +146,94 @@ export default function HomePage() {
       {/* Today's Games List */}
       {todayGames.length > 0 ? (
         <div className="card">
-          <h2 className="text-2xl font-bold mb-4">Today's Predictions</h2>
+          <h2 className="text-2xl font-bold mb-4">Today's Games</h2>
           <div className="space-y-3">
-            {todayGames.slice(0, 5).map((game) => (
-              <div 
-                key={game.game_id} 
-                className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                <div className="flex-1">
-                  <div className="flex items-center space-x-4">
-                    <div className="text-center min-w-[120px]">
-                      <p className="font-medium">{game.away_team}</p>
-                      <p className="text-xs text-gray-500">Away</p>
+            {todayGames.slice(0, 5).map((game) => {
+              const isFinished = game.game_status === 'Final'
+              const hasPrediction = game.predicted_winner && game.confidence
+              
+              return (
+                <div 
+                  key={game.game_id} 
+                  className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <div className="flex items-center justify-between">
+                    {/* Teams */}
+                    <div className="flex items-center space-x-4 flex-1">
+                      {/* Away Team */}
+                      <div className={`text-center min-w-[140px] ${
+                        hasPrediction && game.predicted_winner === game.away_team 
+                          ? 'font-bold text-primary-700' 
+                          : 'font-medium text-gray-700'
+                      }`}>
+                        <div className="flex items-center justify-center space-x-2">
+                          {hasPrediction && game.predicted_winner === game.away_team && (
+                            <span className="text-yellow-500 text-xl">🏆</span>
+                          )}
+                          <span>{game.away_team}</span>
+                        </div>
+                        <p className="text-xs text-gray-500 font-normal">Away</p>
+                        {isFinished && (
+                          <p className="text-sm font-semibold text-gray-900 mt-1">
+                            {game.away_score}
+                          </p>
+                        )}
+                      </div>
+                      
+                      {/* VS */}
+                      <div className="text-gray-400 font-medium">vs</div>
+                      
+                      {/* Home Team */}
+                      <div className={`text-center min-w-[140px] ${
+                        hasPrediction && game.predicted_winner === game.home_team 
+                          ? 'font-bold text-primary-700' 
+                          : 'font-medium text-gray-700'
+                      }`}>
+                        <div className="flex items-center justify-center space-x-2">
+                          {hasPrediction && game.predicted_winner === game.home_team && (
+                            <span className="text-yellow-500 text-xl">🏆</span>
+                          )}
+                          <span>{game.home_team}</span>
+                        </div>
+                        <p className="text-xs text-gray-500 font-normal">Home</p>
+                        {isFinished && (
+                          <p className="text-sm font-semibold text-gray-900 mt-1">
+                            {game.home_score}
+                          </p>
+                        )}
+                      </div>
                     </div>
-                    <div className="text-gray-400">@</div>
-                    <div className="text-center min-w-[120px]">
-                      <p className="font-medium">{game.home_team}</p>
-                      <p className="text-xs text-gray-500">Home</p>
+                    
+                    {/* Prediction Info */}
+                    <div className="text-right ml-4">
+                      {hasPrediction ? (
+                        <div className="bg-primary-50 px-4 py-2 rounded-lg border border-primary-200">
+                          <div className="text-xs text-primary-600 font-medium mb-1">
+                            Prediction
+                          </div>
+                          <div className="text-2xl font-bold text-primary-700">
+                            {(game.confidence * 100).toFixed(0)}%
+                          </div>
+                          <div className="text-xs text-gray-600 mt-1">
+                            {game.predicted_winner}
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="text-sm text-gray-500 px-4 py-2">
+                          {isFinished ? (
+                            <span className="inline-flex items-center px-2 py-1 rounded bg-gray-200 text-gray-700">
+                              Final
+                            </span>
+                          ) : (
+                            <span className="text-gray-400">No prediction</span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
-                <div className="text-right">
-                  {game.predicted_winner && (
-                    <>
-                      <div className="font-semibold text-primary-600">
-                        {game.predicted_winner}
-                      </div>
-                      <div className="text-sm text-gray-600">
-                        {game.confidence ? `${(game.confidence * 100).toFixed(1)}% confidence` : ''}
-                      </div>
-                    </>
-                  )}
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
           {todayGames.length > 5 && (
             <Link 
