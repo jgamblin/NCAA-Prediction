@@ -155,79 +155,44 @@ export default function HomePage() {
               return (
                 <div 
                   key={game.game_id} 
-                  className="p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="card hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-center justify-between">
-                    {/* Teams */}
-                    <div className="flex items-center space-x-4 flex-1">
-                      {/* Away Team */}
-                      <div className={`text-center min-w-[140px] ${
-                        hasPrediction && game.predicted_winner === game.away_team 
-                          ? 'font-bold text-primary-700' 
-                          : 'font-medium text-gray-700'
-                      }`}>
-                        <div className="flex items-center justify-center space-x-2">
-                          {hasPrediction && game.predicted_winner === game.away_team && (
-                            <span className="text-yellow-500 text-xl">🏆</span>
-                          )}
-                          <span>{game.away_team}</span>
-                        </div>
-                        <p className="text-xs text-gray-500 font-normal">Away</p>
-                        {isFinished && (
-                          <p className="text-sm font-semibold text-gray-900 mt-1">
-                            {game.away_score}
-                          </p>
-                        )}
+                    <div className="flex-1">
+                      {/* Game matchup - similar to History page */}
+                      <div className="flex items-center space-x-4 mb-2">
+                        <span className="font-medium">{game.away_team}</span>
+                        {isFinished && <span className="text-gray-900 font-semibold">{game.away_score}</span>}
+                        <span className="text-gray-400">@</span>
+                        <span className="font-medium">{game.home_team}</span>
+                        {isFinished && <span className="text-gray-900 font-semibold">{game.home_score}</span>}
                       </div>
                       
-                      {/* VS */}
-                      <div className="text-gray-400 font-medium">vs</div>
-                      
-                      {/* Home Team */}
-                      <div className={`text-center min-w-[140px] ${
-                        hasPrediction && game.predicted_winner === game.home_team 
-                          ? 'font-bold text-primary-700' 
-                          : 'font-medium text-gray-700'
-                      }`}>
-                        <div className="flex items-center justify-center space-x-2">
-                          {hasPrediction && game.predicted_winner === game.home_team && (
-                            <span className="text-yellow-500 text-xl">🏆</span>
-                          )}
-                          <span>{game.home_team}</span>
-                        </div>
-                        <p className="text-xs text-gray-500 font-normal">Home</p>
-                        {isFinished && (
-                          <p className="text-sm font-semibold text-gray-900 mt-1">
-                            {game.home_score}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                    
-                    {/* Prediction Info */}
-                    <div className="text-right ml-4">
+                      {/* Prediction info - matching History page style */}
                       {hasPrediction ? (
-                        <div className="bg-primary-50 px-4 py-2 rounded-lg border border-primary-200">
-                          <div className="text-xs text-primary-600 font-medium mb-1">
-                            Prediction
-                          </div>
-                          <div className="text-2xl font-bold text-primary-700">
-                            {(game.confidence * 100).toFixed(0)}%
-                          </div>
-                          <div className="text-xs text-gray-600 mt-1">
-                            {game.predicted_winner}
-                          </div>
+                        <div className="text-sm">
+                          <span className="text-gray-600">Predicted: </span>
+                          <span className="font-semibold">{game.predicted_winner}</span>
+                          <span className="text-gray-600 ml-3">Confidence: </span>
+                          <span className="font-semibold">{(game.confidence * 100).toFixed(1)}%</span>
                         </div>
                       ) : (
-                        <div className="text-sm text-gray-500 px-4 py-2">
-                          {isFinished ? (
-                            <span className="inline-flex items-center px-2 py-1 rounded bg-gray-200 text-gray-700">
-                              Final
-                            </span>
-                          ) : (
-                            <span className="text-gray-400">No prediction</span>
-                          )}
+                        <div className="text-sm text-gray-500">
+                          No prediction available
                         </div>
+                      )}
+                    </div>
+                    
+                    {/* Status badge on right */}
+                    <div className="flex items-center space-x-3">
+                      {isFinished ? (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+                          Final
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700">
+                          Scheduled
+                        </span>
                       )}
                     </div>
                   </div>
