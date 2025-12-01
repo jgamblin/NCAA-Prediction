@@ -3,7 +3,8 @@
  * No backend API needed - all data is pre-generated and served as static files
  */
 
-const BASE_URL = '/data'; // Relative path to JSON files
+// Use base path from Vite config for correct routing
+const BASE_URL = `${import.meta.env.BASE_URL}data`.replace('//', '/'); // Handles base path correctly
 
 /**
  * Generic fetch function with error handling
