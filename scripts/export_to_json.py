@@ -109,6 +109,40 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Exported {len(today_with_preds)} today's games")
     
     # =========================================================================
+    # 2b. Export ALL Upcoming Scheduled Games (with predictions if available)
+    # =========================================================================
+    print("\n2b. Exporting all upcoming scheduled games...")
+    
+    # Collect games from today forward (up to 14 days ahead)
+    from datetime import timedelta
+    upcoming_with_preds = []
+    
+    for days_ahead in range(14):  # Check next 2 weeks
+        check_date = today + timedelta(days=days_ahead)
+        day_games = games_repo.get_games_by_date(check_date)
+        
+        for game in day_games:
+            # Only include scheduled games
+            if game.get('game_status') == 'Scheduled':
+                pred = pred_repo.get_latest_prediction(game['game_id'])
+                if pred:
+                    game.update(pred)
+                # Clean up NaN values
+                for key, value in game.items():
+                    if pd.isna(value) if isinstance(value, float) else value is None:
+                        game[key] = None
+                upcoming_with_preds.append(game)
+    
+    # Sort by date and home team
+    upcoming_with_preds.sort(key=lambda x: (x.get('date', ''), x.get('home_team', '')))
+    
+    with open(output_dir / 'upcoming_games.json', 'w') as f:
+        json.dump(upcoming_with_preds, f, indent=2, default=json_serial)
+    
+    pred_count = sum(1 for g in upcoming_with_preds if g.get('predicted_winner'))
+    print(f"   ✓ Exported {len(upcoming_with_preds)} upcoming games ({pred_count} with predictions)")
+    
+    # =========================================================================
     # 3. Export Betting Summary
     # =========================================================================
     print("\n3. Exporting betting summary...")

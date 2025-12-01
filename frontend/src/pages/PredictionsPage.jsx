@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react'
-import { fetchPredictions } from '../services/api'
+import { fetchUpcomingGames } from '../services/api'
 import { TrendingUp, Trophy, AlertCircle } from 'lucide-react'
 
 export default function PredictionsPage() {
   const [predictions, setPredictions] = useState([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState('all') // all, high, medium, low
+  const [filter, setFilter] = useState('all') // all, with-predictions, no-predictions
   
   useEffect(() => {
     async function loadPredictions() {
       try {
-        const data = await fetchPredictions()
+        const data = await fetchUpcomingGames()
         setPredictions(data)
       } catch (error) {
         console.error('Failed to load predictions:', error)
@@ -39,35 +39,57 @@ export default function PredictionsPage() {
     return { label: 'Low', color: 'gray' }
   }
   
-  const filteredPredictions = predictions.filter(pred => {
+  const filteredPredictions = predictions.filter(game => {
     if (filter === 'all') return true
-    const { label } = getConfidenceLabel(pred.confidence)
-    return label.toLowerCase() === filter
+    if (filter === 'with-predictions') return game.predicted_winner && game.confidence
+    if (filter === 'no-predictions') return !game.predicted_winner
+    return true
   })
+  
+  const gamesWithPredictions = predictions.filter(g => g.predicted_winner && g.confidence).length
   
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Upcoming Predictions</h1>
-          <p className="text-gray-600 mt-1">{predictions.length} games with predictions</p>
+          <h1 className="text-3xl font-bold text-gray-900">Upcoming Games</h1>
+          <p className="text-gray-600 mt-1">
+            {predictions.length} scheduled games ({gamesWithPredictions} with predictions)
+          </p>
         </div>
         
         {/* Filter Buttons */}
         <div className="flex items-center space-x-2">
-          {['all', 'high', 'medium', 'low'].map(f => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`px-4 py-2 rounded-lg font-medium capitalize transition-colors ${
-                filter === f
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              {f}
-            </button>
-          ))}
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              filter === 'all'
+                ? 'bg-primary-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            All Games
+          </button>
+          <button
+            onClick={() => setFilter('with-predictions')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              filter === 'with-predictions'
+                ? 'bg-primary-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            With Predictions
+          </button>
+          <button
+            onClick={() => setFilter('no-predictions')}
+            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              filter === 'no-predictions'
+                ? 'bg-primary-600 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            No Predictions
+          </button>
         </div>
       </div>
       
@@ -78,66 +100,48 @@ export default function PredictionsPage() {
           <p className="text-gray-600">Check back soon for new game predictions</p>
         </div>
       ) : (
-        <div className="grid gap-4">
-          {filteredPredictions.map((prediction) => {
-            const { label, color } = getConfidenceLabel(prediction.confidence)
-            const badgeColors = {
-              green: 'badge-success',
-              yellow: 'badge-warning',
-              gray: 'badge badge-info'
-            }
+        <div className="space-y-3">
+          {filteredPredictions.map((game) => {
+            const hasPrediction = game.predicted_winner && game.confidence
             
             return (
-              <div key={prediction.game_id} className="card hover:shadow-lg transition-shadow">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
-                  {/* Teams */}
+              <div key={game.game_id} className="card hover:shadow-lg transition-shadow">
+                <div className="flex items-center justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center space-x-6">
-                      <div className="text-center flex-1">
-                        <p className="text-lg font-semibold text-gray-900">{prediction.away_team}</p>
-                        <p className="text-sm text-gray-500">Away</p>
-                        {prediction.away_moneyline && (
-                          <p className="text-xs text-gray-600 mt-1">
-                            {prediction.away_moneyline > 0 ? '+' : ''}{prediction.away_moneyline}
-                          </p>
-                        )}
-                      </div>
-                      
-                      <div className="flex flex-col items-center">
-                        <span className="text-2xl text-gray-400">@</span>
-                        <span className="text-xs text-gray-500">{prediction.date}</span>
-                      </div>
-                      
-                      <div className="text-center flex-1">
-                        <p className="text-lg font-semibold text-gray-900">{prediction.home_team}</p>
-                        <p className="text-sm text-gray-500">Home</p>
-                        {prediction.home_moneyline && (
-                          <p className="text-xs text-gray-600 mt-1">
-                            {prediction.home_moneyline > 0 ? '+' : ''}{prediction.home_moneyline}
-                          </p>
-                        )}
-                      </div>
+                    {/* Game matchup - matching Home page style */}
+                    <div className="flex items-center space-x-4 mb-2">
+                      <span className="text-sm text-gray-500">{game.date}</span>
+                      <span className="font-medium">{game.away_team}</span>
+                      <span className="text-gray-400">@</span>
+                      <span className="font-medium">{game.home_team}</span>
                     </div>
+                    
+                    {/* Prediction info - matching Home page style */}
+                    {hasPrediction ? (
+                      <div className="text-sm">
+                        <span className="text-gray-600">Predicted: </span>
+                        <span className="font-semibold">{game.predicted_winner}</span>
+                        <span className="text-gray-600 ml-3">Confidence: </span>
+                        <span className="font-semibold">{(game.confidence * 100).toFixed(1)}%</span>
+                      </div>
+                    ) : (
+                      <div className="text-sm text-gray-500">
+                        No prediction available (insufficient team data)
+                      </div>
+                    )}
                   </div>
                   
-                  {/* Prediction */}
-                  <div className="md:w-64 text-right">
-                    <div className="flex items-center justify-end space-x-3">
-                      <div>
-                        <div className="flex items-center justify-end space-x-2 mb-1">
-                          <Trophy className="text-primary-600" size={18} />
-                          <span className="font-bold text-lg text-gray-900">
-                            {prediction.predicted_winner}
-                          </span>
-                        </div>
-                        <div className="text-2xl font-bold text-primary-600">
-                          {(prediction.confidence * 100).toFixed(1)}%
-                        </div>
-                        <span className={`${badgeColors[color]} mt-2`}>
-                          {label} Confidence
-                        </span>
-                      </div>
-                    </div>
+                  {/* Status badge on right */}
+                  <div className="flex items-center space-x-3">
+                    {hasPrediction ? (
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">
+                        ✓ Predicted
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-600">
+                        Scheduled
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>

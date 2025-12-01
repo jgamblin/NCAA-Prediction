@@ -23,9 +23,18 @@ async function fetchJSON(filename) {
 }
 
 /**
- * Fetch upcoming game predictions
+ * Fetch upcoming game predictions (games with predictions only)
  */
-export const fetchPredictions = () => fetchJSON('predictions.json');
+export async function fetchPredictions() {
+  return fetchJSON('predictions.json');
+}
+
+/**
+ * Fetch all upcoming scheduled games (with or without predictions)
+ */
+export async function fetchUpcomingGames() {
+  return fetchJSON('upcoming_games.json');
+}
 
 /**
  * Fetch today's games with predictions
