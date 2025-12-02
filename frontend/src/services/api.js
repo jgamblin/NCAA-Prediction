@@ -47,6 +47,11 @@ export const fetchTodayGames = () => fetchJSON('today_games.json');
 export const fetchPredictionHistory = () => fetchJSON('prediction_history.json');
 
 /**
+ * Fetch historical predictions (alias for fetchPredictionHistory)
+ */
+export const fetchHistoricalPredictions = fetchPredictionHistory;
+
+/**
  * Fetch overall betting summary
  */
 export const fetchBettingSummary = () => fetchJSON('betting_summary.json');
