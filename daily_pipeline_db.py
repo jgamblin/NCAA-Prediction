@@ -326,6 +326,13 @@ def main():
     print("STEP 4: Generating predictions for upcoming games")
     print("-"*80)
     
+    # Get ALL scheduled games from database (not just from ESPN scrape)
+    # This ensures we predict every game, not just what ESPN returned today
+    upcoming_from_db = games_repo.get_upcoming_games_df()
+    if len(upcoming_from_db) > 0:
+        upcoming = upcoming_from_db
+        print(f"✓ Loaded {len(upcoming)} scheduled games from database")
+    
     if len(upcoming) > 0:
         print(f"Generating predictions for {len(upcoming)} upcoming games...")
         

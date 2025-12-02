@@ -5,7 +5,8 @@ import { TrendingUp, Trophy, AlertCircle } from 'lucide-react'
 export default function PredictionsPage() {
   const [predictions, setPredictions] = useState([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState('all') // all, with-predictions, no-predictions
+  const [filter, setFilter] = useState('with-predictions') // all, with-predictions, no-predictions
+  const [dateFilter, setDateFilter] = useState('today') // today, week, all
   
   useEffect(() => {
     async function loadPredictions() {
@@ -39,58 +40,118 @@ export default function PredictionsPage() {
     return { label: 'Low', color: 'gray' }
   }
   
-  const filteredPredictions = predictions.filter(game => {
+  // Date filtering
+  const getFilteredByDate = () => {
+    if (dateFilter === 'all') return predictions
+    
+    const today = new Date().toISOString().split('T')[0]
+    
+    if (dateFilter === 'today') {
+      return predictions.filter(g => g.date === today)
+    }
+    
+    if (dateFilter === 'week') {
+      const weekFromNow = new Date()
+      weekFromNow.setDate(weekFromNow.getDate() + 7)
+      const weekDate = weekFromNow.toISOString().split('T')[0]
+      return predictions.filter(g => g.date >= today && g.date <= weekDate)
+    }
+    
+    return predictions
+  }
+  
+  const dateFilteredGames = getFilteredByDate()
+  
+  const filteredPredictions = dateFilteredGames.filter(game => {
     if (filter === 'all') return true
     if (filter === 'with-predictions') return game.predicted_winner && game.confidence
     if (filter === 'no-predictions') return !game.predicted_winner
     return true
   })
   
-  const gamesWithPredictions = predictions.filter(g => g.predicted_winner && g.confidence).length
+  const gamesWithPredictions = dateFilteredGames.filter(g => g.predicted_winner && g.confidence).length
   
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-900">Upcoming Games</h1>
-          <p className="text-gray-600 mt-1">
-            {predictions.length} scheduled games ({gamesWithPredictions} with predictions)
-          </p>
-        </div>
-        
-        {/* Filter Buttons */}
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={() => setFilter('all')}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              filter === 'all'
-                ? 'bg-primary-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            All Games
-          </button>
-          <button
-            onClick={() => setFilter('with-predictions')}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              filter === 'with-predictions'
-                ? 'bg-primary-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            With Predictions
-          </button>
-          <button
-            onClick={() => setFilter('no-predictions')}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              filter === 'no-predictions'
-                ? 'bg-primary-600 text-white'
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            No Predictions
-          </button>
-        </div>
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900 mb-1">
+          {dateFilter === 'today' ? "Today's Games" : 
+           dateFilter === 'week' ? "This Week's Games" : 
+           "All Upcoming Games"}
+        </h1>
+        <p className="text-gray-600">
+          {dateFilteredGames.length} games ({gamesWithPredictions} with predictions)
+        </p>
+      </div>
+
+      {/* Date Filter Buttons */}
+      <div className="flex items-center space-x-2">
+        <span className="text-sm text-gray-600 mr-2">Show:</span>
+        <button
+          onClick={() => setDateFilter('today')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            dateFilter === 'today'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          Today
+        </button>
+        <button
+          onClick={() => setDateFilter('week')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            dateFilter === 'week'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          This Week
+        </button>
+        <button
+          onClick={() => setDateFilter('all')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            dateFilter === 'all'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          All Upcoming
+        </button>
+      </div>
+
+      {/* Prediction Filter Buttons */}
+      <div className="flex items-center space-x-2">
+        <span className="text-sm text-gray-600 mr-2">Filter:</span>
+        <button
+          onClick={() => setFilter('all')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            filter === 'all'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          All Games
+        </button>
+        <button
+          onClick={() => setFilter('with-predictions')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            filter === 'with-predictions'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          With Predictions
+        </button>
+        <button
+          onClick={() => setFilter('no-predictions')}
+          className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+            filter === 'no-predictions'
+              ? 'bg-primary-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          No Predictions
+        </button>
       </div>
       
       {filteredPredictions.length === 0 ? (

@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-12-02 08:32:00
+**Last Updated**: 2025-12-02 09:45:43
 
 **Tracking Started**: 2025-11-10
 
@@ -28,17 +28,11 @@
 
 ---
 
-## 💎 Today'S Best Value Bet
+## 💎 Most Recent Bettable Games
 
-**Iowa** @ **Michigan State**
+**No bettable games available**
 
-- **Bet On**: Iowa
-- **Confidence**: 75.7%
-- **Moneyline**: +195
-- **Value Score**: 1.234
-- **Potential Profit**: $1.95
-
-✅ *Best value opportunity - optimal balance of probability and odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 

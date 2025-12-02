@@ -10,7 +10,7 @@
 🎯 **77.1% Accuracy** across 1542 predictions  
 📈 **30,706 Historical Games** powering model  
 🤖 **Automated Daily** at 12:00 PM UTC  
-⚡ **7 Live Predictions** for today  
+⚡ **58 Live Predictions** for today  
 🔥 **0 Day Streak** of perfect high-confidence picks
 
 <!-- END AUTO-UPDATED: Hero Stats -->
@@ -18,7 +18,7 @@
 ## 🔎 Live Snapshot
 
 <div>
-**Current Predictions**: 57 games for December 02, 2025<br/>
+**Current Predictions**: 347 games for December 02, 2025<br/>
 <strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
 <strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
 </div>
@@ -65,8 +65,8 @@
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `5858f17`
-- **Last Update**: 2025-12-02 14:31 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `98cbb65`
+- **Last Update**: 2025-12-02 15:45 UTC
 - **Calibration**: Brier N/A
 
 </td>
@@ -344,8 +344,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `5858f17`
-*Refreshed: 2025-12-02 14:31 UTC*
+- Commit Hash: `98cbb65`
+*Refreshed: 2025-12-02 15:45 UTC*
 
 ## 🚀 Automation
 

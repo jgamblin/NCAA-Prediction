@@ -1093,9 +1093,12 @@ class AdaptivePredictor:
             'home_team': upcoming_valid['home_team'],
             'predicted_home_win': predictions,
             'home_win_probability': probabilities[:, 1],
-            'away_win_probability': probabilities[:, 0],
-            'game_url': upcoming_valid['game_url']
+            'away_win_probability': probabilities[:, 0]
         })
+        
+        # Add game_url if available
+        if 'game_url' in upcoming_valid.columns:
+            results_df['game_url'] = upcoming_valid['game_url']
 
         # Preserve moneyline columns if they exist in the input data
         moneyline_cols = ['home_moneyline', 'away_moneyline', 'has_real_odds']
