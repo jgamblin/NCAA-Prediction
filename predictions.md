@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-01 06:18:33 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `5dd8f62`
+**Last Updated**: 2025-12-02 06:18:41 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4bf627f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 11
-- **Average Confidence**: 79.9%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 35
+- **Average Confidence**: 78.8%
+- **High (≥70%)**: 32 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,34 +30,60 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Stanford** | Portland | 82.4% |
-| 2 | **Cincinnati** | Tarleton | 81.6% |
-| 3 | **Jacksonville State** | North Alabama | 81.2% |
-| 4 | **Kansas State** | Bowling Green | 81.2% |
-| 5 | **Villanova** | Temple | 81.0% |
-| 6 | **Incarnate Word** | McNeese | 81.0% |
-| 7 | **Delaware** | Iona | 79.8% |
-| 8 | **Colorado** | California Baptist | 79.4% |
-| 9 | **Troy** | West Georgia | 79.4% |
-| 10 | **Chicago State** | South Carolina State | 77.8% |
-| 11 | **Middle Tennessee** | UAB | 74.5% |
+| 1 | **Michigan State** | Iowa | 85.2% |
+| 2 | **Providence** | Fairleigh Dickinson | 82.4% |
+| 3 | **Ole Miss** | Miami (FL) | 82.2% |
+| 4 | **North Texas** | Houston Christian | 82.1% |
+| 5 | **Notre Dame** | Missouri | 82.0% |
+| 6 | **Rhode Island** | Brown | 82.0% |
+| 7 | **Northern Illinois** | Lindenwood | 81.9% |
+| 8 | **Murray State** | Morehead State | 81.9% |
+| 9 | **Wake Forest** | Oklahoma | 81.8% |
+| 10 | **South Alabama** | New Mexico State | 81.7% |
+| 11 | **Baylor** | Sacramento State | 81.6% |
+| 12 | **Oklahoma State** | Sam Houston State | 81.5% |
+| 13 | **Jacksonville** | Florida A&M | 81.2% |
+| 14 | **Kennesaw State** | Jackson State | 81.0% |
+| 15 | **Drake** | Western Illinois | 80.8% |
+| 16 | **Mercer** | Georgia State | 80.8% |
+| 17 | **Loyola Marymount** | Saint Louis | 80.6% |
+| 18 | **Loyola Chicago** | Central Michigan | 80.2% |
+| 19 | **Dayton** | East Tennessee State | 80.1% |
+| 20 | **Florida State** | Georgia | 80.0% |
+| 21 | **Creighton** | Nicholls State | 80.0% |
+| 22 | **Butler** | Eastern Michigan | 80.0% |
+| 23 | **East Carolina** | Maryland-Eastern Shore | 79.7% |
+| 24 | **Western Carolina** | Virginia-Lynchburg | 79.6% |
+| 25 | **Pittsburgh** | Texas A&M | 79.5% |
+| 26 | **Connecticut** | Kansas | 79.3% |
+| 27 | **Purdue** | Rutgers | 78.8% |
+| 28 | **California** | Utah | 77.0% |
+| 29 | **Bradley** | Washington State | 76.7% |
+| 30 | **Duquesne** | William & Mary | 76.5% |
+| 31 | **Arkansas State** | UT Arlington | 73.8% |
+| 32 | **UNC Asheville** | UNC Greensboro | 72.9% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Florida** | Duke | 65.8% |
+| 2 | **North Carolina** | Kentucky | 64.2% |
+| 3 | **Pepperdine** | Abilene Christian | 62.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | UAB @ Middle Tennessee | 74.5% |  |
-| 2 | South Carolina State @ Chicago State | 77.8% |  |
-| 3 | West Georgia @ Troy | 79.4% |  |
-| 4 | California Baptist @ Colorado | 79.4% |  |
-| 5 | Iona @ Delaware | 79.8% |  |
+| 1 | Abilene Christian @ Pepperdine | 62.1% |  |
+| 2 | Kentucky vs North Carolina | 64.2% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 11
-- Away Teams Favored: 0
-- Max Confidence: 82.4%
-- Min Confidence: 74.5%
+- Home Teams Favored: 31
+- Away Teams Favored: 4
+- Max Confidence: 85.2%
+- Min Confidence: 62.1%
 
 ### 📋 Full Data
 
@@ -67,8 +93,8 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 77.1% (1542 evaluated)
-- **Last 10 Days**: 65.8% (576 games)
+- **Overall Accuracy**: 77.0% (1534 evaluated)
+- **Last 10 Days**: 65.3% (568 games)
 
 ### Last 7 Days
 
@@ -78,9 +104,9 @@
 | 2025-11-25 | 88 | 50 | 56.8% | 79.3% |
 | 2025-11-26 | 68 | 40 | 58.8% | 80.0% |
 | 2025-11-27 | 18 | 8 | 44.4% | 76.9% |
-| 2025-11-28 | 84 | 56 | 66.7% | 80.6% |
+| 2025-11-28 | 42 | 28 | 66.7% | 80.6% |
 | 2025-11-29 | 120 | 104 | 86.7% | 81.0% |
-| 2025-11-30 | 42 | 24 | 57.1% | 79.6% |
+| 2025-11-30 | 76 | 44 | 57.9% | 79.4% |
 
 ---
 
