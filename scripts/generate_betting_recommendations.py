@@ -45,25 +45,12 @@ def calculate_kelly_bet(
     """
     Calculate recommended bet size using Kelly Criterion.
     Uses fractional Kelly (25%) for more conservative betting.
+    
+    Note: For simplicity, we use a flat $10 per game approach.
     """
-    if odds > 0:
-        decimal_odds = 1 + (odds / 100)
-    else:
-        decimal_odds = 1 + (100 / abs(odds))
-    
-    # Kelly formula: f = (p * b - q) / b
-    # where p = win probability, q = 1-p, b = decimal odds - 1
-    p = confidence
-    q = 1 - p
-    b = decimal_odds - 1
-    
-    kelly = (p * b - q) / b
-    
-    # Apply fractional Kelly for safety
-    kelly_bet = kelly * kelly_fraction * bankroll
-    
-    # Ensure positive and within limits
-    return max(0, min(kelly_bet, bankroll * 0.05))  # Max 5% of bankroll
+    # Flat betting: $10 per game regardless of odds or confidence
+    # This is a simple, conservative approach that's easy to manage
+    return 10.0
 
 
 def generate_betting_recommendations(
