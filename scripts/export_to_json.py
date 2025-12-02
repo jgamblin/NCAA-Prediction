@@ -190,17 +190,89 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Exported {len(value_bets)} value bets")
     
     # =========================================================================
-    # 6. Export Accuracy Metrics
+    # 6. Export Accuracy Metrics (2025-26 Season Only)
     # =========================================================================
     print("\n6. Exporting accuracy metrics...")
     
-    overall_accuracy = pred_repo.calculate_accuracy()
+    # Calculate accuracy from current season only
+    current_season = "2025-26"
+    today = datetime.now().date()
+    
+    season_accuracy_query = """
+        WITH season_predictions AS (
+            SELECT 
+                p.predicted_winner,
+                p.confidence,
+                g.home_team,
+                g.away_team,
+                g.home_score,
+                g.away_score
+            FROM predictions p
+            JOIN games g ON p.game_id = g.game_id
+            WHERE g.season = ?
+              AND g.game_status = 'Final'
+              AND g.date <= ?
+              AND p.predicted_winner IS NOT NULL
+              AND g.home_score IS NOT NULL
+              AND g.away_score IS NOT NULL
+        )
+        SELECT 
+            COUNT(*) as total_predictions,
+            SUM(CASE 
+                WHEN (home_score > away_score AND predicted_winner = home_team) OR
+                     (away_score > home_score AND predicted_winner = away_team)
+                THEN 1 ELSE 0 
+            END) as correct_predictions,
+            AVG(confidence) as avg_confidence
+        FROM season_predictions
+    """
+    
+    accuracy_df = db.fetch_df(season_accuracy_query, (current_season, today))
+    
+    if not accuracy_df.empty and accuracy_df.iloc[0]['total_predictions'] > 0:
+        row = accuracy_df.iloc[0]
+        overall_accuracy = {
+            'total_predictions': int(row['total_predictions']),
+            'correct_predictions': int(row['correct_predictions']),
+            'avg_confidence': float(row['avg_confidence']) if pd.notna(row['avg_confidence']) else 0.0,
+            'accuracy': float(row['correct_predictions']) / float(row['total_predictions'])
+        }
+    else:
+        overall_accuracy = {
+            'total_predictions': 0,
+            'correct_predictions': 0,
+            'avg_confidence': 0.0,
+            'accuracy': 0.0
+        }
+    
     with open(output_dir / 'accuracy_overall.json', 'w') as f:
         json.dump(overall_accuracy, f, indent=2, default=json_serial)
-    print(f"   ✓ Overall accuracy: {overall_accuracy.get('accuracy', 0):.1%}")
+    print(f"   ✓ Overall accuracy ({current_season}): {overall_accuracy.get('accuracy', 0):.1%}")
     
-    # High confidence accuracy
-    high_conf_accuracy = pred_repo.calculate_accuracy(min_confidence=0.65)
+    # High confidence accuracy (≥65%)
+    high_conf_query = season_accuracy_query.replace(
+        "FROM season_predictions",
+        "FROM season_predictions WHERE confidence >= 0.65"
+    )
+    
+    high_conf_df = db.fetch_df(high_conf_query, (current_season, today))
+    
+    if not high_conf_df.empty and high_conf_df.iloc[0]['total_predictions'] > 0:
+        row = high_conf_df.iloc[0]
+        high_conf_accuracy = {
+            'total_predictions': int(row['total_predictions']),
+            'correct_predictions': int(row['correct_predictions']),
+            'avg_confidence': float(row['avg_confidence']) if pd.notna(row['avg_confidence']) else 0.0,
+            'accuracy': float(row['correct_predictions']) / float(row['total_predictions'])
+        }
+    else:
+        high_conf_accuracy = {
+            'total_predictions': 0,
+            'correct_predictions': 0,
+            'avg_confidence': 0.0,
+            'accuracy': 0.0
+        }
+    
     with open(output_dir / 'accuracy_high_confidence.json', 'w') as f:
         json.dump(high_conf_accuracy, f, indent=2, default=json_serial)
     print(f"   ✓ High confidence (≥65%): {high_conf_accuracy.get('accuracy', 0):.1%}")
@@ -326,14 +398,36 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Exported top {len(top_teams_data)} teams")
     
     # =========================================================================
-    # 8. Export Prediction History (Recent)
+    # 8. Export Prediction History (Complete 2025-26 Season)
     # =========================================================================
     print("\n8. Exporting prediction history...")
     
-    # Get last 100 predictions with results
-    history_df = pred_repo.get_predictions_with_results()
+    # Get ALL completed predictions from current season (2025-26)
+    current_season = "2025-26"
+    today = datetime.now().date()
+    
+    season_predictions_query = """
+        SELECT 
+            p.*,
+            g.date as game_date,
+            g.home_team,
+            g.away_team,
+            g.home_score,
+            g.away_score,
+            g.game_status,
+            g.season
+        FROM predictions p
+        JOIN games g ON p.game_id = g.game_id
+        WHERE g.season = ?
+          AND g.game_status = 'Final'
+          AND g.date <= ?
+          AND p.predicted_winner IS NOT NULL
+        ORDER BY g.date DESC
+    """
+    
+    history_df = db.fetch_df(season_predictions_query, (current_season, today))
+    
     if not history_df.empty:
-        history_df = history_df.head(100)
         history_data = history_df.to_dict('records')
         
         # Clean up
@@ -344,7 +438,7 @@ def export_to_json(output_dir: Path = None):
         
         with open(output_dir / 'prediction_history.json', 'w') as f:
             json.dump(history_data, f, indent=2, default=json_serial)
-        print(f"   ✓ Exported {len(history_data)} historical predictions")
+        print(f"   ✓ Exported {len(history_data)} predictions from {current_season} season")
     else:
         with open(output_dir / 'prediction_history.json', 'w') as f:
             json.dump([], f)

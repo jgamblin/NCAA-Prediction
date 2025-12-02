@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { TrendingUp, DollarSign, Target, Calendar, ArrowRight } from 'lucide-react'
-import { fetchTodayGames, fetchBettingSummary, fetchHistoricalPredictions, fetchMetadata } from '../services/api'
+import { fetchTodayGames, fetchBettingSummary, fetchAccuracyOverall, fetchMetadata } from '../services/api'
 
 export default function HomePage() {
   const [todayGames, setTodayGames] = useState([])
@@ -13,31 +13,12 @@ export default function HomePage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [games, betting, history, meta] = await Promise.all([
+        const [games, betting, acc, meta] = await Promise.all([
           fetchTodayGames(),
           fetchBettingSummary(),
-          fetchHistoricalPredictions(),
+          fetchAccuracyOverall(),
           fetchMetadata()
         ])
-        
-        // Calculate accuracy from same source as Accuracy page
-        const completed = history.filter(p => 
-          p.game_status === 'Final' && 
-          p.predicted_winner && 
-          p.home_score != null && 
-          p.away_score != null
-        )
-        
-        const correct = completed.filter(p => {
-          const actualWinner = p.home_score > p.away_score ? p.home_team : p.away_team
-          return p.predicted_winner === actualWinner
-        }).length
-        
-        const acc = {
-          total_predictions: completed.length,
-          correct_predictions: correct,
-          accuracy: completed.length > 0 ? correct / completed.length : 0
-        }
         
         setTodayGames(games)
         setBettingSummary(betting)
