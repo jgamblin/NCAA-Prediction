@@ -70,5 +70,5 @@ jobs:
           exit 0
         fi
         git commit -m "Update predictions and stats for $(date +'%Y-%m-%d') [Database: $(du -h data/ncaa_predictions.duckdb | cut -f1)]"
-        git pull --rebase --autostash origin main
-        git push origin HEAD:main
+        # Force push with lease (safe force push - workflow is source of truth for data)
+        git push --force-with-lease origin HEAD:main
