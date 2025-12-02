@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-02 08:03:50 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `fea4bf5`
+**Last Updated**: 2025-12-02 08:31:59 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `5858f17`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 7
-- **Average Confidence**: 76.0%
+- **Average Confidence**: 75.9%
 - **High (≥70%)**: 5 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
@@ -30,31 +30,31 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Purdue** | Rutgers | 92.7% |
-| 2 | **USC** | Oregon Ducks | 89.3% |
-| 3 | **Tennessee** | Syracuse Orange | 88.1% |
-| 4 | **Iowa** | Michigan State | 73.3% |
-| 5 | **Connecticut** | Kansas | 71.8% |
+| 1 | **Purdue** | Rutgers | 92.0% |
+| 2 | **USC** | Oregon Ducks | 88.9% |
+| 3 | **Tennessee** | Syracuse Orange | 88.0% |
+| 4 | **Iowa** | Michigan State | 75.7% |
+| 5 | **UConn** | Kansas | 73.2% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **North Carolina** | Kentucky | 61.4% |
+| 1 | **North Carolina** | Kentucky | 61.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Duke vs Florida | 55.6% | Close |
-| 2 | Kentucky vs North Carolina | 61.4% |  |
+| 1 | Florida @ Duke | 52.8% | Toss-Up |
+| 2 | Kentucky vs North Carolina | 61.0% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 0
-- Away Teams Favored: 7
-- Max Confidence: 92.7%
-- Min Confidence: 55.6%
+- Home Teams Favored: 1
+- Away Teams Favored: 6
+- Max Confidence: 92.0%
+- Min Confidence: 52.8%
 
 ### 📋 Full Data
 

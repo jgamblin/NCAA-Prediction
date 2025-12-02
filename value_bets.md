@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-12-02 08:03:51
+**Last Updated**: 2025-12-02 08:32:00
 
 **Tracking Started**: 2025-11-10
 
@@ -33,10 +33,10 @@
 **Iowa** @ **Michigan State**
 
 - **Bet On**: Iowa
-- **Confidence**: 73.3%
-- **Moneyline**: +205
+- **Confidence**: 75.7%
+- **Moneyline**: +195
 - **Value Score**: 1.234
-- **Potential Profit**: $2.05
+- **Potential Profit**: $1.95
 
 ✅ *Best value opportunity - optimal balance of probability and odds*
 

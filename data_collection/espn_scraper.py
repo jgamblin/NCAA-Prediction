@@ -14,7 +14,10 @@ import re
 import os
 
 # Import team name normalization
-from team_name_utils import normalize_team_name
+try:
+    from data_collection.team_name_utils import normalize_team_name
+except ImportError:
+    from team_name_utils import normalize_team_name
 
 class ESPNScraper:
     """Scraper for ESPN NCAA Basketball data."""
