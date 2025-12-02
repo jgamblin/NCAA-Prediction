@@ -62,7 +62,7 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         # Add CSV files (backwards compatibility)
-        git add data/*.csv data/*.md predictions.md README.md performance.md bets.md safest_bets.md value_bets.md docs/performance/*.png
+        git add data/*.csv data/*.md predictions.md README.md performance.md docs/performance/*.png
         # Add database and JSON exports (new!)
         git add data/ncaa_predictions.duckdb frontend/public/data/*.json
         if git diff --cached --quiet; then

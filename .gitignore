@@ -178,3 +178,8 @@ node_modules/
 .vite/
 dist/
 *.local
+
+# Deprecated betting markdown files (now in web app)
+bets.md
+safest_bets.md
+value_bets.md

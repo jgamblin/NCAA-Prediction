@@ -498,12 +498,13 @@ def main():
     except Exception as e:
         print(f"⚠️ Failed to generate performance.md: {e}")
     
-    try:
-        from game_prediction.betting_tracker import generate_bets_markdown
-        generate_bets_markdown()
-        print("✓ Generated betting markdown")
-    except Exception as e:
-        print(f"⚠️ Failed to generate betting markdown: {e}")
+    # Betting tracker markdown files are deprecated - all betting info is in the web app
+    # try:
+    #     from game_prediction.betting_tracker import generate_bets_markdown
+    #     generate_bets_markdown()
+    #     print("✓ Generated betting markdown")
+    # except Exception as e:
+    #     print(f"⚠️ Failed to generate betting markdown: {e}")
     
     # =========================================================================
     # STEP 6: Pipeline health summary
