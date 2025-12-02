@@ -210,20 +210,81 @@ def export_to_json(output_dir: Path = None):
     # =========================================================================
     print("\n7. Exporting team statistics...")
     
-    current_season = "2024-25"
-    top_teams = features_repo.get_top_teams_by_metric(
-        season=current_season,
-        metric='rolling_win_pct_10',
-        limit=50
+    # Calculate team stats from actual completed games (not future games)
+    current_season = "2025-26"
+    today = datetime.now().date()
+    
+    # Get all completed games for current season up to today
+    team_stats_query = """
+        WITH home_games AS (
+            SELECT 
+                home_team as team,
+                CASE WHEN home_score > away_score THEN 1 ELSE 0 END as win,
+                home_score as points_scored,
+                away_score as points_allowed
+            FROM games
+            WHERE season = ?
+              AND game_status = 'Final'
+              AND date <= ?
+        ),
+        away_games AS (
+            SELECT 
+                away_team as team,
+                CASE WHEN away_score > home_score THEN 1 ELSE 0 END as win,
+                away_score as points_scored,
+                home_score as points_allowed
+            FROM games
+            WHERE season = ?
+              AND game_status = 'Final'
+              AND date <= ?
+        ),
+        all_games AS (
+            SELECT * FROM home_games
+            UNION ALL
+            SELECT * FROM away_games
+        )
+        SELECT 
+            team,
+            COUNT(*) as games_played,
+            SUM(win) as total_wins,
+            COUNT(*) - SUM(win) as total_losses,
+            CAST(SUM(win) AS FLOAT) / COUNT(*) as win_pct,
+            AVG(points_scored) as avg_points_scored,
+            AVG(points_allowed) as avg_points_allowed
+        FROM all_games
+        GROUP BY team
+        HAVING COUNT(*) >= 3  -- Only teams with at least 3 games
+        ORDER BY win_pct DESC, games_played DESC
+        LIMIT 50
+    """
+    
+    top_teams_df = db.fetch_df(team_stats_query, (
+        current_season, today, current_season, today
+    ))
+    
+    # Add display names and conferences from teams table
+    teams_df = db.fetch_df("SELECT team_id, display_name, conference FROM teams")
+    top_teams_df = top_teams_df.merge(
+        teams_df,
+        left_on='team',
+        right_on='team_id',
+        how='left'
     )
     
     # Clean up for JSON
     top_teams_data = []
-    for team in top_teams:
-        team_data = dict(team)
-        for key, value in team_data.items():
-            if pd.isna(value):
-                team_data[key] = None
+    for _, row in top_teams_df.iterrows():
+        team_data = {
+            'team_id': row['team'],
+            'display_name': row['display_name'] if pd.notna(row.get('display_name')) else row['team'],
+            'conference': row['conference'] if pd.notna(row.get('conference')) else None,
+            'games_played': int(row['games_played']),
+            'total_wins': int(row['total_wins']),
+            'total_losses': int(row['total_losses']),
+            'rolling_win_pct_10': float(row['win_pct']),  # Using overall win_pct as rolling
+            'avg_points_scored': float(row['avg_points_scored']),
+            'avg_points_allowed': float(row['avg_points_allowed'])
+        }
         top_teams_data.append(team_data)
     
     with open(output_dir / 'top_teams.json', 'w') as f:

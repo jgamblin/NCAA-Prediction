@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-02T09:49:50.494094",
+  "last_updated": "2025-12-02T11:44:08.416332",
   "database_stats": {
     "total_games": 30944,
     "games_by_status": {
@@ -9,7 +9,7 @@
     "total_teams": 1444,
     "total_predictions": 2417
   },
-  "current_season": "2024-25",
+  "current_season": "2025-26",
   "data_source": "DuckDB via daily pipeline",
   "update_frequency": "Daily via GitHub Actions"
 }
