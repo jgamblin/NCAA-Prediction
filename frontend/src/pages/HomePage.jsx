@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { TrendingUp, DollarSign, Target, Calendar, ArrowRight } from 'lucide-react'
-import { fetchTodayGames, fetchBettingSummary, fetchAccuracyOverall, fetchMetadata } from '../services/api'
+import { fetchTodayGames, fetchBettingSummary, fetchHistoricalPredictions, fetchMetadata } from '../services/api'
 
 export default function HomePage() {
   const [todayGames, setTodayGames] = useState([])
@@ -13,12 +13,32 @@ export default function HomePage() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [games, betting, acc, meta] = await Promise.all([
+        const [games, betting, history, meta] = await Promise.all([
           fetchTodayGames(),
           fetchBettingSummary(),
-          fetchAccuracyOverall(),
+          fetchHistoricalPredictions(),
           fetchMetadata()
         ])
+        
+        // Calculate accuracy from same source as Accuracy page
+        const completed = history.filter(p => 
+          p.game_status === 'Final' && 
+          p.predicted_winner && 
+          p.home_score != null && 
+          p.away_score != null
+        )
+        
+        const correct = completed.filter(p => {
+          const actualWinner = p.home_score > p.away_score ? p.home_team : p.away_team
+          return p.predicted_winner === actualWinner
+        }).length
+        
+        const acc = {
+          total_predictions: completed.length,
+          correct_predictions: correct,
+          accuracy: completed.length > 0 ? correct / completed.length : 0
+        }
+        
         setTodayGames(games)
         setBettingSummary(betting)
         setAccuracy(acc)
@@ -83,8 +103,8 @@ export default function HomePage() {
             <p className="text-sm text-gray-600">
               {accuracy?.correct_predictions || 0} of {accuracy?.total_predictions || 0} correct
             </p>
-            <Link to="/history" className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
-              <span>View history</span>
+            <Link to="/accuracy" className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
+              <span>View More</span>
               <ArrowRight size={14} />
             </Link>
           </div>
