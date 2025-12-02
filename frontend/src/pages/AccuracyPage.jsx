@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { fetchHistoricalPredictions } from '../services/api'
 import { TrendingUp, Target, CheckCircle, XCircle, BarChart3 } from 'lucide-react'
 import {
@@ -66,8 +66,8 @@ export default function AccuracyPage() {
     )
   }
 
-  // Filter by timeframe
-  const getFilteredPredictions = () => {
+  // Filter by timeframe - memoized to recalculate when timeframe or predictions change
+  const filtered = useMemo(() => {
     if (timeframe === 'all') return predictions
     
     const now = new Date()
@@ -84,9 +84,7 @@ export default function AccuracyPage() {
       const predDate = new Date(p.date)
       return !isNaN(predDate.getTime()) && predDate >= cutoffDate
     })
-  }
-
-  const filtered = getFilteredPredictions()
+  }, [timeframe, predictions])
   
   // Calculate overall stats
   const totalPredictions = filtered.length
@@ -95,66 +93,72 @@ export default function AccuracyPage() {
     ? (correctPredictions / totalPredictions * 100).toFixed(1) 
     : 0
 
-  // Accuracy by confidence level
-  const confidenceBuckets = [
-    { label: 'High (≥70%)', min: 0.70, max: 1.0, color: '#10b981' },
-    { label: 'Medium (60-70%)', min: 0.60, max: 0.70, color: '#f59e0b' },
-    { label: 'Low (<60%)', min: 0, max: 0.60, color: '#ef4444' }
-  ]
+  // Accuracy by confidence level - memoized
+  const accuracyByConfidence = useMemo(() => {
+    const confidenceBuckets = [
+      { label: 'High (≥70%)', min: 0.70, max: 1.0, color: '#10b981' },
+      { label: 'Medium (60-70%)', min: 0.60, max: 0.70, color: '#f59e0b' },
+      { label: 'Low (<60%)', min: 0, max: 0.60, color: '#ef4444' }
+    ]
 
-  const accuracyByConfidence = confidenceBuckets.map(bucket => {
-    const bucketPreds = filtered.filter(p => 
-      p.confidence >= bucket.min && p.confidence < bucket.max
-    )
-    const correct = bucketPreds.filter(p => p.correct).length
-    const accuracy = bucketPreds.length > 0 
-      ? (correct / bucketPreds.length * 100).toFixed(1)
-      : 0
-    
-    return {
-      name: bucket.label,
-      accuracy: parseFloat(accuracy),
-      total: bucketPreds.length,
-      correct: correct,
-      color: bucket.color
-    }
-  }).filter(b => b.total > 0)
+    return confidenceBuckets.map(bucket => {
+      const bucketPreds = filtered.filter(p => 
+        p.confidence >= bucket.min && p.confidence < bucket.max
+      )
+      const correct = bucketPreds.filter(p => p.correct).length
+      const accuracy = bucketPreds.length > 0 
+        ? (correct / bucketPreds.length * 100).toFixed(1)
+        : 0
+      
+      return {
+        name: bucket.label,
+        accuracy: parseFloat(accuracy),
+        total: bucketPreds.length,
+        correct: correct,
+        color: bucket.color
+      }
+    }).filter(b => b.total > 0)
+  }, [filtered])
 
-  // Accuracy over time (by week)
-  const weeklyData = {}
-  filtered.forEach(p => {
-    // Skip if date is invalid
-    if (!p.date) return
-    
-    const date = new Date(p.date)
-    // Check if date is valid
-    if (isNaN(date.getTime())) return
-    
-    // Get Monday of that week
-    const monday = new Date(date)
-    monday.setDate(date.getDate() - date.getDay() + 1)
-    const weekKey = monday.toISOString().split('T')[0]
-    
-    if (!weeklyData[weekKey]) {
-      weeklyData[weekKey] = { total: 0, correct: 0 }
-    }
-    weeklyData[weekKey].total++
-    if (p.correct) weeklyData[weekKey].correct++
-  })
+  // Accuracy over time (by week) - memoized
+  const weeklyChart = useMemo(() => {
+    const weeklyData = {}
+    filtered.forEach(p => {
+      // Skip if date is invalid
+      if (!p.date) return
+      
+      const date = new Date(p.date)
+      // Check if date is valid
+      if (isNaN(date.getTime())) return
+      
+      // Get Monday of that week
+      const monday = new Date(date)
+      monday.setDate(date.getDate() - date.getDay() + 1)
+      const weekKey = monday.toISOString().split('T')[0]
+      
+      if (!weeklyData[weekKey]) {
+        weeklyData[weekKey] = { total: 0, correct: 0 }
+      }
+      weeklyData[weekKey].total++
+      if (p.correct) weeklyData[weekKey].correct++
+    })
 
-  const weeklyChart = Object.entries(weeklyData)
-    .map(([week, data]) => ({
-      week: week,
-      accuracy: data.total > 0 ? (data.correct / data.total * 100).toFixed(1) : 0,
-      total: data.total
-    }))
-    .sort((a, b) => a.week.localeCompare(b.week))
-    .slice(-12) // Last 12 weeks
+    return Object.entries(weeklyData)
+      .map(([week, data]) => ({
+        week: week,
+        accuracy: data.total > 0 ? (data.correct / data.total * 100).toFixed(1) : 0,
+        total: data.total
+      }))
+      .sort((a, b) => a.week.localeCompare(b.week))
+      .slice(-12) // Last 12 weeks
+  }, [filtered])
 
-  // Recent predictions
-  const recentPredictions = [...filtered]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 20)
+  // Recent predictions - memoized
+  const recentPredictions = useMemo(() => {
+    return [...filtered]
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 20)
+  }, [filtered])
 
   return (
     <div className="space-y-6">
