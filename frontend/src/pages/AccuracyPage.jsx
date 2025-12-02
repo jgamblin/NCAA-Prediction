@@ -69,6 +69,8 @@ export default function AccuracyPage() {
   // ALL HOOKS MUST COME BEFORE ANY CONDITIONAL RETURNS
   // Filter by timeframe - memoized to recalculate when timeframe or predictions change
   const filtered = useMemo(() => {
+    console.log('Filtering with timeframe:', timeframe, 'Total predictions:', predictions.length)
+    
     if (timeframe === 'all') return predictions
     
     const now = new Date()
@@ -80,19 +82,30 @@ export default function AccuracyPage() {
       cutoffDate.setDate(cutoffDate.getDate() - 7)
     }
     
-    return predictions.filter(p => {
+    const result = predictions.filter(p => {
       if (!p.date) return false
       const predDate = new Date(p.date)
       return !isNaN(predDate.getTime()) && predDate >= cutoffDate
     })
+    
+    console.log('Filtered result:', result.length, 'games')
+    return result
   }, [timeframe, predictions])
   
-  // Calculate overall stats
-  const totalPredictions = filtered.length
-  const correctPredictions = filtered.filter(p => p.correct).length
-  const overallAccuracy = totalPredictions > 0 
-    ? (correctPredictions / totalPredictions * 100).toFixed(1) 
-    : 0
+  // Calculate overall stats - memoized
+  const { totalPredictions, correctPredictions, overallAccuracy } = useMemo(() => {
+    const total = filtered.length
+    const correct = filtered.filter(p => p.correct).length
+    const accuracy = total > 0 
+      ? (correct / total * 100).toFixed(1) 
+      : 0
+    
+    return {
+      totalPredictions: total,
+      correctPredictions: correct,
+      overallAccuracy: accuracy
+    }
+  }, [filtered])
 
   // Accuracy by confidence level - memoized
   const accuracyByConfidence = useMemo(() => {
@@ -185,7 +198,10 @@ export default function AccuracyPage() {
         <div className="flex items-center space-x-2">
           <span className="text-sm text-gray-600 mr-2">Period:</span>
           <button
-            onClick={() => setTimeframe('week')}
+            onClick={() => {
+              console.log('Clicked Last 7 Days')
+              setTimeframe('week')
+            }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               timeframe === 'week'
                 ? 'bg-primary-600 text-white'
@@ -195,7 +211,10 @@ export default function AccuracyPage() {
             Last 7 Days
           </button>
           <button
-            onClick={() => setTimeframe('month')}
+            onClick={() => {
+              console.log('Clicked Last 30 Days')
+              setTimeframe('month')
+            }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               timeframe === 'month'
                 ? 'bg-primary-600 text-white'
@@ -205,7 +224,10 @@ export default function AccuracyPage() {
             Last 30 Days
           </button>
           <button
-            onClick={() => setTimeframe('all')}
+            onClick={() => {
+              console.log('Clicked All Time')
+              setTimeframe('all')
+            }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               timeframe === 'all'
                 ? 'bg-primary-600 text-white'
