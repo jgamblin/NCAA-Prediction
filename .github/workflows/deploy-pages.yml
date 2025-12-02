@@ -1,6 +1,12 @@
 name: Deploy to GitHub Pages
 
 on:
+  workflow_run:
+    workflows: ["Daily NCAA Predictions"]
+    types:
+      - completed
+    branches:
+      - main
   push:
     branches:
       - main
@@ -21,6 +27,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Only deploy if daily predictions succeeded or if manually triggered
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name != 'workflow_run' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
