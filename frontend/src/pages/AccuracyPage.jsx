@@ -55,17 +55,7 @@ export default function AccuracyPage() {
     loadData()
   }, [])
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
-          <p className="mt-4 text-gray-600">Loading accuracy data...</p>
-        </div>
-      </div>
-    )
-  }
-
+  // ALL HOOKS MUST COME BEFORE ANY CONDITIONAL RETURNS
   // Filter by timeframe - memoized to recalculate when timeframe or predictions change
   const filtered = useMemo(() => {
     if (timeframe === 'all') return predictions
@@ -159,6 +149,17 @@ export default function AccuracyPage() {
       .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 20)
   }, [filtered])
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading accuracy data...</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
