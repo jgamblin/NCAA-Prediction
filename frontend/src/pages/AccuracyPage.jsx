@@ -44,7 +44,18 @@ export default function AccuracyPage() {
           }
         })
         
-        setPredictions(completed)
+        // Deduplicate by game_id (keep most recent prediction per game)
+        const uniquePredictions = Object.values(
+          completed.reduce((acc, p) => {
+            // Keep the one with the highest id (most recent)
+            if (!acc[p.game_id] || p.id > acc[p.game_id].id) {
+              acc[p.game_id] = p
+            }
+            return acc
+          }, {})
+        )
+        
+        setPredictions(uniquePredictions)
       } catch (error) {
         console.error('Failed to load predictions:', error)
       } finally {
