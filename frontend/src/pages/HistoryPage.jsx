@@ -44,8 +44,10 @@ export default function HistoryPage() {
       ) : (
         <div className="space-y-3">
           {history.map((pred) => {
-            const isCorrect = pred.correct_prediction === 1
-            const winner = pred.home_score > pred.away_score ? pred.home_team : pred.away_team
+            // Calculate the actual winner
+            const actualWinner = pred.home_score > pred.away_score ? pred.home_team : pred.away_team
+            // Check if our prediction matches the actual winner
+            const isCorrect = pred.predicted_winner === actualWinner
             
             return (
               <div key={pred.id} className="card hover:shadow-lg transition-shadow">
