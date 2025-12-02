@@ -1,6 +1,6 @@
 # 💎 Best Value Strategy Tracker
 
-**Last Updated**: 2025-12-01 15:37:16
+**Last Updated**: 2025-12-02 07:39:11
 
 **Tracking Started**: 2025-11-10
 
@@ -28,15 +28,15 @@
 
 ---
 
-## 💎 2025-11-25'S Best Value Bet
+## 💎 Today'S Best Value Bet
 
-**Stetson** vs **Wright State**
+**Iowa** @ **Michigan State**
 
-- **Bet On**: Stetson
-- **Confidence**: 72.4%
-- **Moneyline**: +475
-- **Value Score**: 3.166
-- **Potential Profit**: $4.75
+- **Bet On**: Iowa
+- **Confidence**: 73.3%
+- **Moneyline**: +205
+- **Value Score**: 1.234
+- **Potential Profit**: $2.05
 
 ✅ *Best value opportunity - optimal balance of probability and odds*
 

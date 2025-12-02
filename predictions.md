@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-01 15:37:15 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `f91e420`
+**Last Updated**: 2025-12-02 07:39:10 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `34221d8`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 11
-- **Average Confidence**: 79.9%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 7
+- **Average Confidence**: 76.0%
+- **High (≥70%)**: 5 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,38 +30,35 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Stanford** | Portland | 82.4% |
-| 2 | **Cincinnati** | Tarleton | 81.6% |
-| 3 | **Jacksonville State** | North Alabama | 81.2% |
-| 4 | **Kansas State** | Bowling Green | 81.2% |
-| 5 | **Villanova** | Temple | 81.0% |
-| 6 | **Incarnate Word** | McNeese | 81.0% |
-| 7 | **Delaware** | Iona | 79.8% |
-| 8 | **Colorado** | California Baptist | 79.4% |
-| 9 | **Troy** | West Georgia | 79.4% |
-| 10 | **Chicago State** | South Carolina State | 77.8% |
-| 11 | **Middle Tennessee** | UAB | 74.5% |
+| 1 | **Purdue** | Rutgers | 92.7% |
+| 2 | **USC** | Oregon Ducks | 89.3% |
+| 3 | **Tennessee** | Syracuse Orange | 88.1% |
+| 4 | **Iowa** | Michigan State | 73.3% |
+| 5 | **Connecticut** | Kansas | 71.8% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **North Carolina** | Kentucky | 61.4% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | UAB @ Middle Tennessee | 74.5% |  |
-| 2 | South Carolina State @ Chicago State | 77.8% |  |
-| 3 | West Georgia @ Troy | 79.4% |  |
-| 4 | California Baptist @ Colorado | 79.4% |  |
-| 5 | Iona @ Delaware | 79.8% |  |
+| 1 | Duke vs Florida | 55.6% | Close |
+| 2 | Kentucky vs North Carolina | 61.4% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 11
-- Away Teams Favored: 0
-- Max Confidence: 82.4%
-- Min Confidence: 74.5%
+- Home Teams Favored: 0
+- Away Teams Favored: 7
+- Max Confidence: 92.7%
+- Min Confidence: 55.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (208 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (57 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

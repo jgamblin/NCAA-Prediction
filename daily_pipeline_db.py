@@ -396,17 +396,24 @@ def main():
         
         # Generate predictions
         try:
-            preds = predictor.predict(upcoming)
-            if len(preds) == len(upcoming):
-                upcoming['home_win_prob'] = preds
-                upcoming['away_win_prob'] = 1 - preds
-                upcoming['predicted_home_win'] = (upcoming['home_win_prob'] >= 0.5).astype(int)
-                upcoming['confidence'] = upcoming.apply(
-                    lambda x: x['home_win_prob'] if x['home_win_prob'] >= 0.5 else x['away_win_prob'], axis=1
+            # predictor.predict() now returns a full DataFrame with all predictions
+            # including confidence scores with 0.75x multiplier for low-data games
+            predictions_df = predictor.predict(upcoming)
+            
+            if len(predictions_df) > 0:
+                # Merge predictions back into upcoming DataFrame
+                # The predictor returns: game_id, date, away_team, home_team, predicted_home_win,
+                # home_win_probability, away_win_probability, predicted_winner, confidence, has_insufficient_data
+                upcoming = upcoming.merge(
+                    predictions_df[['game_id', 'predicted_home_win', 'home_win_probability', 
+                                   'away_win_probability', 'predicted_winner', 'confidence', 
+                                   'has_insufficient_data']],
+                    on='game_id',
+                    how='left'
                 )
-                upcoming['predicted_winner'] = upcoming.apply(
-                    lambda x: x['home_team'] if x['predicted_home_win'] == 1 else x['away_team'], axis=1
-                )
+                # Rename for compatibility
+                upcoming['home_win_prob'] = upcoming['home_win_probability']
+                upcoming['away_win_prob'] = upcoming['away_win_probability']
                 
                 # Store predictions in database
                 predictions_to_insert = []
@@ -440,13 +447,14 @@ def main():
                 if len(today_games) > 0:
                     print(f"\n  Today's predictions ({len(today_games)}):")
                     for _, game in today_games.head(5).iterrows():
-                        print(f"    - {game['predicted_winner']} ({game['confidence']:.1%}) "
+                        data_note = " (limited data)" if game.get('has_insufficient_data', False) else ""
+                        print(f"    - {game['predicted_winner']} ({game['confidence']:.1%}{data_note}) "
                               f"in {game['away_team']} @ {game['home_team']}")
                     if len(today_games) > 5:
                         print(f"    ... and {len(today_games) - 5} more")
                 
             else:
-                print("⚠️ Prediction length mismatch")
+                print("⚠️ No predictions generated")
         except Exception as e:
             print(f"⚠️ Prediction error: {e}")
             import traceback

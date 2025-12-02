@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-12-01 15:37:16
+**Last Updated**: 2025-12-02 07:39:11
 
 **Tracking Started**: 2025-11-10
 
@@ -28,14 +28,14 @@
 
 ---
 
-## 🎯 2025-11-25'S Safest Bet
+## 🎯 Today'S Safest Bet
 
-**North Carolina** vs **St. Bonaventure**
+**USC** @ **Oregon Ducks**
 
-- **Bet On**: North Carolina
-- **Confidence**: 84.9%
-- **Moneyline**: -800
-- **Potential Profit**: $0.12
+- **Bet On**: USC
+- **Confidence**: 89.3%
+- **Moneyline**: -120
+- **Potential Profit**: $0.83
 
 ✅ *Highest confidence game with real ESPN odds*
 
