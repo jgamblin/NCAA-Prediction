@@ -15,16 +15,16 @@ import json
 # Note: Multi-word mascots are sorted longest-first at runtime to avoid partial matches
 MASCOTS = [
     'Aggies', 'Ambassadors', 'Anteaters', 'Aztecs',
-    'Badgers', 'Bearcats', 'Bears', 'Beavers', 'Billikens', 'Bison', 'Blackbirds',
+    'Badgers', 'Bearcats', 'Bears', 'Beavers', 'Big', 'Billikens', 'Bison', 'Black', 'Blackbirds',
     'Blue Devils', 'Blue Hose', 'Blue Jays', 'Blue Raiders', 'Bluejays', 'Bobcats',
-    'Boilermakers', 'Bonnies', 'Braves', 'Broncos', 'Broncs', 'Bruins', 'Buckeyes', 
-    'Buffaloes', 'Bulldogs', 'Bulls',
+    'Boilermakers', 'Bonnies', 'Braves', 'Broncos', 'Broncs', 'Bruins', 'Buccaneers', 'Buckeyes', 
+    'Buffaloes', 'Builders', 'Bulldogs', 'Bulls',
     'Camels', 'Cardinals', 'Catamounts', 'Cavaliers', 'Chanticleers', 'Chippewas',
     'Colonials', 'Commodores', 'Cougars', 'Cowboys', 'Coyotes', 'Crimson', 'Crusaders',
     'Cyclones',
     'Delta Devils', 'Demons', 'Demon Deacons', 'Devils', 'Dolphins', 'Dragons', 'Dukes',
     'Eagles', 'Explorers',
-    'Falcons', 'Fighting Irish', 'Flames', 'Flyers', 'Friars', 'Blazers', 'Keydets',
+    '49ers', 'Falcons', 'Fighting Irish', 'Fighting', 'Flames', 'Flyers', 'Friars', 'Blazers', 'Keydets',
     'Gauchos', 'Gaels', 'Gators', 'Generals', 'Gentlemen', 'Golden Eagles',
     'Golden Gophers', 'Golden Grizzlies', 'Gophers', 'Greyhounds', 'Grizzlies',
     'Hatters', 'Hawkeyes', 'Hawks', 'Highlanders', 'Hilltoppers', 'Hokies',
@@ -46,7 +46,7 @@ MASCOTS = [
     'Red Storm', 'Red Wolves', 'Redbirds', 'Redhawks', 'Retrievers', 'Roadrunners',
     'Rockets', 'Royals',
     'Salukis', 'Scarlet Knights', 'Screaming Eagles', 'Seawolves', 'Seminoles',
-    'Shockers', 'Sooners', 'Spartans', 'Spiders', 'Spirit', 'Stags', 'Sun Devils',
+    'Sharks', 'Shockers', 'Skyhawks', 'Sooners', 'Spartans', 'Spiders', 'Spirit', 'Stags', 'Sun Devils',
     'Sycamores',
     'Tar Heels', 'Terrapins', 'Terriers', 'Texans', 'Thundering Herd', 'Tigers', 'Titans',
     'Trailblazers', 'Tribe', 'Trojans', 'Turkeys',
@@ -139,9 +139,10 @@ SPECIAL_CASES = {
         # Miami - need to distinguish FL from OH
         'Miami': 'Miami (FL)',  # Default Miami to Florida (major program)
         'Miami Hurricanes': 'Miami (FL)',
-        # Connecticut variations
-        'UConn': 'Connecticut',
-        'UConn Huskies': 'Connecticut',
+        # Connecticut variations - normalize to UConn (170 games in database)
+    'Connecticut': 'UConn',
+    'Connecticut Huskies': 'UConn',
+    'UConn Huskies': 'UConn',
         # LMU - Loyola Marymount (WCC school)
         'LMU': 'Loyola Marymount',
         'LMU Lions': 'Loyola Marymount',
