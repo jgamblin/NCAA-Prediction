@@ -65,8 +65,8 @@
 
 ### Monitoring
 - **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `426a7a8`
-- **Last Update**: 2025-12-02 21:32 UTC
+- **Lineage**: `7dd58a0bb0e2` @ `dcf0b4e`
+- **Last Update**: 2025-12-02 22:16 UTC
 - **Calibration**: Brier N/A
 
 </td>
@@ -344,8 +344,8 @@ Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 ### Lineage
 
 - Config Version: `7dd58a0bb0e2`
-- Commit Hash: `426a7a8`
-*Refreshed: 2025-12-02 21:32 UTC*
+- Commit Hash: `dcf0b4e`
+*Refreshed: 2025-12-02 22:16 UTC*
 
 ## 🚀 Automation
 
