@@ -32,8 +32,8 @@ export default function TeamsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Top Teams</h1>
-        <p className="text-gray-600 mt-1">Best performing teams this season</p>
+        <h1 className="text-3xl font-bold text-gray-900">Prediction Accuracy by Team</h1>
+        <p className="text-gray-600 mt-1">Teams we predict most accurately (minimum 5 predictions)</p>
       </div>
       
       {teams.length === 0 ? (
@@ -49,9 +49,10 @@ export default function TeamsPage() {
                 <tr className="border-b">
                   <th className="text-left py-3 px-4 font-semibold text-gray-700">Rank</th>
                   <th className="text-left py-3 px-4 font-semibold text-gray-700">Team</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Win %</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Avg Points</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Games</th>
+                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Our Accuracy</th>
+                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Predictions</th>
+                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Avg Confidence</th>
+                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Team Record</th>
                 </tr>
               </thead>
               <tbody>
@@ -73,17 +74,20 @@ export default function TeamsPage() {
                     </td>
                     <td className="py-3 px-4 text-center">
                       <span className="font-semibold text-primary-600">
-                        {team.rolling_win_pct_10 
-                          ? `${(team.rolling_win_pct_10 * 100).toFixed(1)}%`
-                          : 'N/A'
-                        }
+                        {(team.prediction_accuracy * 100).toFixed(1)}%
                       </span>
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
-                      {team.avg_points_scored?.toFixed(1) || 'N/A'}
+                      <span className="font-medium">{team.correct_predictions}</span>
+                      <span className="text-gray-500">/{team.predictions_made}</span>
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
-                      {team.games_played || 0}
+                      {(team.avg_confidence * 100).toFixed(1)}%
+                    </td>
+                    <td className="py-3 px-4 text-center text-gray-700">
+                      <span className="font-medium">{team.team_wins || 0}</span>
+                      <span className="text-gray-500">-</span>
+                      <span className="font-medium">{team.team_losses || 0}</span>
                     </td>
                   </tr>
                 ))}

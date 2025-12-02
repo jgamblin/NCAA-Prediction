@@ -210,56 +210,90 @@ def export_to_json(output_dir: Path = None):
     # =========================================================================
     print("\n7. Exporting team statistics...")
     
-    # Calculate team stats from actual completed games (not future games)
+    # Calculate prediction accuracy per team (not their actual win %)
     current_season = "2025-26"
     today = datetime.now().date()
     
-    # Get all completed games for current season up to today
-    team_stats_query = """
-        WITH home_games AS (
+    # Get prediction accuracy for each team
+    team_accuracy_query = """
+        WITH team_predictions AS (
             SELECT 
-                home_team as team,
-                CASE WHEN home_score > away_score THEN 1 ELSE 0 END as win,
-                home_score as points_scored,
-                away_score as points_allowed
-            FROM games
-            WHERE season = ?
-              AND game_status = 'Final'
-              AND date <= ?
+                p.game_id,
+                p.predicted_winner,
+                p.confidence,
+                g.home_team,
+                g.away_team,
+                g.home_score,
+                g.away_score,
+                CASE 
+                    WHEN p.predicted_winner = g.home_team OR p.predicted_winner = g.away_team 
+                    THEN p.predicted_winner 
+                END as team,
+                CASE 
+                    WHEN g.home_score > g.away_score THEN g.home_team
+                    WHEN g.away_score > g.home_score THEN g.away_team
+                END as actual_winner
+            FROM predictions p
+            JOIN games g ON p.game_id = g.game_id
+            WHERE g.season = ?
+              AND g.game_status = 'Final'
+              AND g.date <= ?
+              AND p.predicted_winner IS NOT NULL
+              AND g.home_score IS NOT NULL
+              AND g.away_score IS NOT NULL
         ),
-        away_games AS (
+        team_stats AS (
             SELECT 
-                away_team as team,
-                CASE WHEN away_score > home_score THEN 1 ELSE 0 END as win,
-                away_score as points_scored,
-                home_score as points_allowed
-            FROM games
-            WHERE season = ?
-              AND game_status = 'Final'
-              AND date <= ?
+                team,
+                COUNT(*) as predictions_made,
+                SUM(CASE WHEN predicted_winner = actual_winner THEN 1 ELSE 0 END) as correct_predictions,
+                CAST(SUM(CASE WHEN predicted_winner = actual_winner THEN 1 ELSE 0 END) AS FLOAT) / COUNT(*) as prediction_accuracy,
+                AVG(confidence) as avg_confidence
+            FROM team_predictions
+            WHERE team IS NOT NULL
+            GROUP BY team
+            HAVING COUNT(*) >= 5  -- Only teams with at least 5 predictions
         ),
-        all_games AS (
-            SELECT * FROM home_games
-            UNION ALL
-            SELECT * FROM away_games
+        game_stats AS (
+            SELECT 
+                team,
+                SUM(wins) as team_wins,
+                SUM(losses) as team_losses
+            FROM (
+                SELECT 
+                    home_team as team,
+                    SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN home_score < away_score THEN 1 ELSE 0 END) as losses
+                FROM games
+                WHERE season = ? AND game_status = 'Final' AND date <= ?
+                GROUP BY home_team
+                UNION ALL
+                SELECT 
+                    away_team as team,
+                    SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN away_score < home_score THEN 1 ELSE 0 END) as losses
+                FROM games
+                WHERE season = ? AND game_status = 'Final' AND date <= ?
+                GROUP BY away_team
+            )
+            GROUP BY team
         )
         SELECT 
-            team,
-            COUNT(*) as games_played,
-            SUM(win) as total_wins,
-            COUNT(*) - SUM(win) as total_losses,
-            CAST(SUM(win) AS FLOAT) / COUNT(*) as win_pct,
-            AVG(points_scored) as avg_points_scored,
-            AVG(points_allowed) as avg_points_allowed
-        FROM all_games
-        GROUP BY team
-        HAVING COUNT(*) >= 3  -- Only teams with at least 3 games
-        ORDER BY win_pct DESC, games_played DESC
+            ts.team,
+            ts.predictions_made,
+            ts.correct_predictions,
+            ts.prediction_accuracy,
+            ts.avg_confidence,
+            gs.team_wins,
+            gs.team_losses
+        FROM team_stats ts
+        LEFT JOIN game_stats gs ON ts.team = gs.team
+        ORDER BY ts.prediction_accuracy DESC, ts.predictions_made DESC
         LIMIT 50
     """
     
-    top_teams_df = db.fetch_df(team_stats_query, (
-        current_season, today, current_season, today
+    top_teams_df = db.fetch_df(team_accuracy_query, (
+        current_season, today, current_season, today, current_season, today
     ))
     
     # Add display names and conferences from teams table
@@ -278,12 +312,12 @@ def export_to_json(output_dir: Path = None):
             'team_id': row['team'],
             'display_name': row['display_name'] if pd.notna(row.get('display_name')) else row['team'],
             'conference': row['conference'] if pd.notna(row.get('conference')) else None,
-            'games_played': int(row['games_played']),
-            'total_wins': int(row['total_wins']),
-            'total_losses': int(row['total_losses']),
-            'rolling_win_pct_10': float(row['win_pct']),  # Using overall win_pct as rolling
-            'avg_points_scored': float(row['avg_points_scored']),
-            'avg_points_allowed': float(row['avg_points_allowed'])
+            'predictions_made': int(row['predictions_made']),
+            'correct_predictions': int(row['correct_predictions']),
+            'prediction_accuracy': float(row['prediction_accuracy']),
+            'avg_confidence': float(row['avg_confidence']),
+            'team_wins': int(row['team_wins']) if pd.notna(row['team_wins']) else 0,
+            'team_losses': int(row['team_losses']) if pd.notna(row['team_losses']) else 0
         }
         top_teams_data.append(team_data)
     
