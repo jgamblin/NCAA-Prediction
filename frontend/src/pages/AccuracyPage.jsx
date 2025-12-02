@@ -75,7 +75,11 @@ export default function AccuracyPage() {
       cutoffDate.setDate(cutoffDate.getDate() - 7)
     }
     
-    return predictions.filter(p => new Date(p.date) >= cutoffDate)
+    return predictions.filter(p => {
+      if (!p.date) return false
+      const predDate = new Date(p.date)
+      return !isNaN(predDate.getTime()) && predDate >= cutoffDate
+    })
   }
 
   const filtered = getFilteredPredictions()
@@ -115,7 +119,13 @@ export default function AccuracyPage() {
   // Accuracy over time (by week)
   const weeklyData = {}
   filtered.forEach(p => {
+    // Skip if date is invalid
+    if (!p.date) return
+    
     const date = new Date(p.date)
+    // Check if date is valid
+    if (isNaN(date.getTime())) return
+    
     // Get Monday of that week
     const monday = new Date(date)
     monday.setDate(date.getDate() - date.getDay() + 1)
@@ -293,10 +303,13 @@ export default function AccuracyPage() {
             <tbody>
               {recentPredictions.map((pred) => {
                 const actualWinner = pred.home_score > pred.away_score ? pred.home_team : pred.away_team
+                const dateObj = pred.date ? new Date(pred.date) : null
+                const isValidDate = dateObj && !isNaN(dateObj.getTime())
+                
                 return (
                   <tr key={pred.game_id} className="border-b border-gray-100 hover:bg-gray-50">
                     <td className="px-4 py-3 text-sm text-gray-600">
-                      {new Date(pred.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      {isValidDate ? dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'N/A'}
                     </td>
                     <td className="px-4 py-3 text-sm">
                       {pred.away_team} @ {pred.home_team}
