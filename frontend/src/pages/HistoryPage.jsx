@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { fetchPredictionHistory } from '../services/api'
-import { History, CheckCircle, XCircle } from 'lucide-react'
+import { History, CheckCircle, XCircle, ChevronLeft, ChevronRight } from 'lucide-react'
+
+const ITEMS_PER_PAGE = 50
 
 export default function HistoryPage() {
   const [history, setHistory] = useState([])
   const [loading, setLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
   
   useEffect(() => {
     async function loadHistory() {
@@ -21,6 +24,17 @@ export default function HistoryPage() {
     loadHistory()
   }, [])
   
+  // Calculate pagination
+  const totalPages = Math.ceil(history.length / ITEMS_PER_PAGE)
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+  const endIndex = startIndex + ITEMS_PER_PAGE
+  const currentItems = history.slice(startIndex, endIndex)
+  
+  const goToPage = (page) => {
+    setCurrentPage(page)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+  
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -33,7 +47,10 @@ export default function HistoryPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Prediction History</h1>
-        <p className="text-gray-600 mt-1">Last {history.length} predictions with results</p>
+        <p className="text-gray-600 mt-1">
+          {history.length} total predictions 
+          {totalPages > 1 && ` • Page ${currentPage} of ${totalPages}`}
+        </p>
       </div>
       
       {history.length === 0 ? (
@@ -42,8 +59,9 @@ export default function HistoryPage() {
           <p className="text-gray-600">No prediction history available</p>
         </div>
       ) : (
-        <div className="space-y-3">
-          {history.map((pred) => {
+        <>
+          <div className="space-y-3">
+            {currentItems.map((pred) => {
             // Calculate the actual winner
             const actualWinner = pred.home_score > pred.away_score ? pred.home_team : pred.away_team
             // Check if our prediction matches the actual winner
@@ -95,6 +113,83 @@ export default function HistoryPage() {
             )
           })}
         </div>
+        
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="card">
+            <div className="flex items-center justify-between">
+              <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                  currentPage === 1
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-primary-600 text-white hover:bg-primary-700'
+                }`}
+              >
+                <ChevronLeft size={20} />
+                <span>Previous</span>
+              </button>
+              
+              <div className="flex items-center space-x-2">
+                {/* Page Numbers */}
+                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+                  // Show first 3, current +/- 1, and last page
+                  let pageNum
+                  if (totalPages <= 5) {
+                    pageNum = i + 1
+                  } else if (currentPage <= 3) {
+                    pageNum = i + 1
+                  } else if (currentPage >= totalPages - 2) {
+                    pageNum = totalPages - 4 + i
+                  } else {
+                    pageNum = currentPage - 2 + i
+                  }
+                  
+                  return (
+                    <button
+                      key={pageNum}
+                      onClick={() => goToPage(pageNum)}
+                      className={`w-10 h-10 rounded-lg font-medium transition-colors ${
+                        currentPage === pageNum
+                          ? 'bg-primary-600 text-white'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      }`}
+                    >
+                      {pageNum}
+                    </button>
+                  )
+                })}
+                
+                {totalPages > 5 && currentPage < totalPages - 2 && (
+                  <>
+                    <span className="text-gray-400">...</span>
+                    <button
+                      onClick={() => goToPage(totalPages)}
+                      className="w-10 h-10 rounded-lg bg-gray-100 text-gray-700 hover:bg-gray-200 font-medium"
+                    >
+                      {totalPages}
+                    </button>
+                  </>
+                )}
+              </div>
+              
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                  currentPage === totalPages
+                    ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                    : 'bg-primary-600 text-white hover:bg-primary-700'
+                }`}
+              >
+                <span>Next</span>
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
+        )}
+      </>
       )}
     </div>
   )
