@@ -290,9 +290,9 @@ def main():
         print(f"  Correct: {accuracy_stats['correct_predictions']:,}")
         print(f"  Avg confidence: {accuracy_stats['avg_confidence']:.1%}")
         
-        # Also run the original track_accuracy for backwards compatibility
-        from track_accuracy import track_accuracy
-        track_accuracy()
+        # Skip the verbose track_accuracy script - we already have stats from database
+        # from track_accuracy import track_accuracy
+        # track_accuracy()
         
     except Exception as e:
         print(f"⚠️ Accuracy tracking failed: {e}")
@@ -305,17 +305,20 @@ def main():
     print("-"*80)
     
     try:
-        from game_prediction.analyze_betting_lines import analyze_betting_line_performance
-        analyze_betting_line_performance()
+        # Skip verbose analyze_betting_lines - use database summary instead
+        # from game_prediction.analyze_betting_lines import analyze_betting_line_performance
+        # analyze_betting_line_performance()
         
         # Show betting summary from database
         betting_summary = betting_repo.get_betting_summary()
         if betting_summary and betting_summary['total_bets'] > 0:
-            print(f"\n  Betting Performance (from database):")
-            print(f"    Total bets: {betting_summary['total_bets']}")
-            print(f"    Win rate: {betting_summary['win_rate']:.1%}")
-            print(f"    Total profit: ${betting_summary['total_profit']:.2f}")
-            print(f"    ROI: {betting_summary['roi']:.1%}")
+            print(f"✓ Betting Performance (from database):")
+            print(f"  Total bets: {betting_summary['total_bets']}")
+            print(f"  Win rate: {betting_summary['win_rate']:.1%}")
+            print(f"  Total profit: ${betting_summary['total_profit']:.2f}")
+            print(f"  ROI: {betting_summary['roi']:.1%}")
+        else:
+            print(f"✓ No settled bets yet")
     except Exception as exc:
         print(f"⚠️ Betting analysis failed: {exc}")
     
