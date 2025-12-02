@@ -65,7 +65,7 @@ class TeamsRepository:
     def insert_team(self, team_data: Dict) -> bool:
         """Insert a new team."""
         query = """
-            INSERT INTO teams 
+            INSERT OR IGNORE INTO teams 
             (team_id, canonical_name, display_name, short_name, conference, 
              division, espn_team_id, mascot, colors, logo_url, is_active)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

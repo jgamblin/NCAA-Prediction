@@ -383,6 +383,10 @@ def main():
             train_df = ensure_team_ids(train_df)
             upcoming = ensure_team_ids(upcoming)
             
+            # Calculate home_win column if not present
+            if 'home_win' not in train_df.columns and 'home_score' in train_df.columns and 'away_score' in train_df.columns:
+                train_df['home_win'] = (train_df['home_score'] > train_df['away_score']).astype(int)
+            
             print("  Calculating point-in-time features...")
             train_df = calculate_point_in_time_features(train_df)
             
