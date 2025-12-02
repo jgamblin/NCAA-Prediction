@@ -34,10 +34,14 @@ export default function AccuracyPage() {
           p.away_score != null
         )
         
-        // Calculate if prediction was correct
+        // Calculate if prediction was correct and normalize field names
         completed.forEach(p => {
           const actualWinner = p.home_score > p.away_score ? p.home_team : p.away_team
           p.correct = p.predicted_winner === actualWinner
+          // Normalize date field name (data has 'game_date', we need 'date')
+          if (!p.date && p.game_date) {
+            p.date = p.game_date
+          }
         })
         
         setPredictions(completed)
