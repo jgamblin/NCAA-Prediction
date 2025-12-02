@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, TrendingUp, DollarSign, Users, History } from 'lucide-react'
+import { Home, TrendingUp, DollarSign, Users, History, Target } from 'lucide-react'
 
 export default function Layout({ children }) {
   const location = useLocation()
@@ -10,6 +10,7 @@ export default function Layout({ children }) {
     { path: '/betting', label: 'Betting', icon: DollarSign },
     { path: '/teams', label: 'Teams', icon: Users },
     { path: '/history', label: 'History', icon: History },
+    { path: '/accuracy', label: 'Accuracy', icon: Target },
   ]
   
   return (
