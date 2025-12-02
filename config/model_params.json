@@ -1,8 +1,8 @@
 {
   "adaptive_predictor": {
-    "n_estimators": 120,
-    "max_depth": 18,
-    "min_samples_split": 10,
+    "n_estimators": 100,
+    "max_depth": 15,
+    "min_samples_split": 20,
     "min_games_threshold": "auto",
     "calibrate": true,
     "calibration_method": "sigmoid",
@@ -11,12 +11,12 @@
     "confidence_temperature": "auto"
   },
   "metadata": {
-    "last_tuned": "2025-11-29 17:33:06",
-    "tuner_commit": "unknown",
+    "last_tuned": "2025-12-02 06:03:42",
+    "tuner_commit": "1d91987",
     "tuned_by": "tune_model.py",
     "source": "auto-tuner",
-    "cv_score": 0.6539270982405927,
-    "weighted_accuracy": 0.7199208394218141,
+    "cv_score": 0.6558504578252247,
+    "weighted_accuracy": 0.7055518545837747,
     "weighting_scheme": "current=10x prev=3x prev2=1.5x older geometric 0.5^(i-2)"
   }
 }
