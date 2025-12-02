@@ -953,17 +953,18 @@ class AdaptivePredictor:
 
         return self
 
-    def predict(self, upcoming_df, skip_low_data=True, low_data_log_path='data/Low_Data_Games.csv'):
+    def predict(self, upcoming_df, skip_low_data=False, low_data_log_path='data/Low_Data_Games.csv'):
         """
         Generate predictions for upcoming games.
 
         Args:
             upcoming_df: DataFrame with upcoming games
             skip_low_data: If True, skip predictions for teams with < min_games_threshold games
+                          Default False - predict all games with 0.75x confidence multiplier for low-data games
             low_data_log_path: Path to CSV file for logging skipped low-data games
 
         Returns:
-            DataFrame with predictions and probabilities (only for high-data games if skip_low_data=True)
+            DataFrame with predictions and probabilities (includes all games by default)
         """
         upcoming_df = self.prepare_data(upcoming_df.copy())
 
@@ -1092,9 +1093,12 @@ class AdaptivePredictor:
             'home_team': upcoming_valid['home_team'],
             'predicted_home_win': predictions,
             'home_win_probability': probabilities[:, 1],
-            'away_win_probability': probabilities[:, 0],
-            'game_url': upcoming_valid['game_url']
+            'away_win_probability': probabilities[:, 0]
         })
+        
+        # Add game_url if available
+        if 'game_url' in upcoming_valid.columns:
+            results_df['game_url'] = upcoming_valid['game_url']
 
         # Preserve moneyline columns if they exist in the input data
         moneyline_cols = ['home_moneyline', 'away_moneyline', 'has_real_odds']
@@ -1107,8 +1111,19 @@ class AdaptivePredictor:
             axis=1
         )
         results_df['confidence'] = results_df[['home_win_probability', 'away_win_probability']].max(axis=1)
+        
+        # Mark games with insufficient data for confidence adjustment
+        # Create a set of low-data game_ids for fast lookup
+        low_data_game_ids = {game['game_id'] for game in low_data_games}
+        results_df['has_insufficient_data'] = results_df['game_id'].isin(low_data_game_ids)
+        
+        # Apply 0.75x confidence multiplier for low-data games
+        results_df.loc[results_df['has_insufficient_data'], 'confidence'] *= 0.75
 
-        print(f"✓ Generated predictions for {len(results_df)} games with sufficient data")
+        if low_data_games:
+            print(f"✓ Generated predictions for {len(results_df)} games ({len(low_data_games)} with limited data, confidence reduced by 25%)")
+        else:
+            print(f"✓ Generated predictions for {len(results_df)} games")
 
         return results_df
 

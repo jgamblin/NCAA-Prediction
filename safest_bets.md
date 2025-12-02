@@ -1,6 +1,6 @@
 # 🎯 Safest Bet Strategy Tracker
 
-**Last Updated**: 2025-12-02 12:18:42
+**Last Updated**: 2025-12-02 09:45:43
 
 **Tracking Started**: 2025-11-10
 
@@ -28,16 +28,11 @@
 
 ---
 
-## 🎯 2025-11-25'S Safest Bet
+## 🎯 Most Recent Bettable Games
 
-**North Carolina** vs **St. Bonaventure**
+**No bettable games available**
 
-- **Bet On**: North Carolina
-- **Confidence**: 84.9%
-- **Moneyline**: -800
-- **Potential Profit**: $0.12
-
-✅ *Highest confidence game with real ESPN odds*
+Games may have moneylines set to "OFF" or be more extreme than -1000.
 
 ---
 
