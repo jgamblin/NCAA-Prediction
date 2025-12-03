@@ -484,9 +484,10 @@ def main():
     print("-"*80)
     
     try:
-        from game_prediction.publish_artifacts import generate_predictions_markdown, refresh_readme_evaluation
+        from game_prediction.publish_artifacts import generate_predictions_markdown
         generate_predictions_markdown()
-        refresh_readme_evaluation()
+        # README is now static - no longer auto-updating
+        # refresh_readme_evaluation()
         print("✓ Generated predictions markdown")
     except Exception as e:
         print(f"⚠️ Failed to generate predictions markdown: {e}")
