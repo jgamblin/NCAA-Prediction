@@ -1,10 +1,11 @@
 {
-  "last_updated": "2025-12-03T16:39:38.075717",
+  "last_updated": "2025-12-03T18:12:25.806056",
   "database_stats": {
     "total_games": 31010,
     "games_by_status": {
-      "Scheduled": 357,
-      "Final": 30653
+      "Final": 30653,
+      "In Progress": 2,
+      "Scheduled": 355
     },
     "total_teams": 1489,
     "total_predictions": 4451
