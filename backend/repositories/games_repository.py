@@ -207,16 +207,37 @@ class GamesRepository:
             return False
     
     def bulk_insert_games(self, games: List[Dict]) -> int:
-        """Bulk insert multiple games."""
-        query = """
-            INSERT OR REPLACE INTO games 
-            (game_id, date, season, home_team, away_team, home_team_id, away_team_id,
-             home_score, away_score, game_status, neutral_site, home_moneyline, away_moneyline)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """
-        
+        """Bulk insert multiple games (with upsert for existing games)."""
         if self.db.use_duckdb:
-            query = query.replace('INSERT OR REPLACE', 'INSERT OR IGNORE')
+            # DuckDB: use INSERT with ON CONFLICT DO UPDATE for proper upsert
+            query = """
+                INSERT INTO games 
+                (game_id, date, season, home_team, away_team, home_team_id, away_team_id,
+                 home_score, away_score, game_status, neutral_site, home_moneyline, away_moneyline)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT (game_id) DO UPDATE SET
+                    date = EXCLUDED.date,
+                    season = EXCLUDED.season,
+                    home_team = EXCLUDED.home_team,
+                    away_team = EXCLUDED.away_team,
+                    home_team_id = EXCLUDED.home_team_id,
+                    away_team_id = EXCLUDED.away_team_id,
+                    home_score = EXCLUDED.home_score,
+                    away_score = EXCLUDED.away_score,
+                    game_status = EXCLUDED.game_status,
+                    neutral_site = EXCLUDED.neutral_site,
+                    home_moneyline = EXCLUDED.home_moneyline,
+                    away_moneyline = EXCLUDED.away_moneyline,
+                    updated_at = now()
+            """
+        else:
+            # SQLite: use INSERT OR REPLACE
+            query = """
+                INSERT OR REPLACE INTO games 
+                (game_id, date, season, home_team, away_team, home_team_id, away_team_id,
+                 home_score, away_score, game_status, neutral_site, home_moneyline, away_moneyline)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """
         
         inserted = 0
         try:

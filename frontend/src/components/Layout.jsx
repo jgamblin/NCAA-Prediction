@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, TrendingUp, DollarSign, Users, History, Target } from 'lucide-react'
+import { Home, TrendingUp, DollarSign, Users, History, Target, Github } from 'lucide-react'
 
 export default function Layout({ children }) {
   const location = useLocation()
@@ -106,9 +106,10 @@ export default function Layout({ children }) {
                 href="https://github.com/jgamblin/NCAA-Prediction"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary-600 transition-colors"
+                className="flex items-center space-x-1 hover:text-primary-600 transition-colors"
               >
-                GitHub
+                <Github size={16} />
+                <span>View on GitHub</span>
               </a>
               <span>•</span>
               <span>177x faster with DuckDB</span>

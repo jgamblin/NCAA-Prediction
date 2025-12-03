@@ -1,13 +1,13 @@
 {
-  "total_bets": 0,
-  "wins": null,
-  "losses": null,
-  "win_rate": null,
-  "total_wagered": null,
-  "total_payout": null,
-  "total_profit": null,
-  "roi": null,
-  "avg_confidence": null,
-  "biggest_win": null,
-  "biggest_loss": null
+  "total_bets": 5,
+  "wins": 3,
+  "losses": 2,
+  "win_rate": 0.6,
+  "total_wagered": 50.0,
+  "total_payout": 73.0422534942627,
+  "total_profit": 23.042253494262695,
+  "roi": 0.4608450698852539,
+  "avg_confidence": 0.7754821538925171,
+  "biggest_win": 28.0,
+  "biggest_loss": -10.0
 }

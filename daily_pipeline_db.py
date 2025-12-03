@@ -233,6 +233,19 @@ def main():
         print(f"    - {status}: {count:,}")
     
     # =========================================================================
+    # STEP 2.3: Settle completed bets
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 2.3: Settling completed bets")
+    print("-"*80)
+    
+    try:
+        from scripts.settle_bets import settle_completed_bets
+        settle_completed_bets()
+    except Exception as e:
+        print(f"⚠️ Bet settlement failed: {e}")
+    
+    # =========================================================================
     # STEP 2.5: Update feature store in database
     # =========================================================================
     print("\n" + "="*80)
