@@ -2,8 +2,8 @@ name: Daily NCAA Predictions
 
 on:
   schedule:
-    # Run every day at 12:00 PM UTC (7 AM EST)
-    - cron: '0 12 * * *'
+    # Run every 3 hours to pick up new games and betting lines
+    - cron: '0 */3 * * *'
   push:
     branches:
       - main

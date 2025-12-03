@@ -348,9 +348,22 @@ def main():
     if len(upcoming_from_db) > 0:
         upcoming = upcoming_from_db
         print(f"✓ Loaded {len(upcoming)} scheduled games from database")
+        
+        # Filter out games we've already predicted (idempotent)
+        existing_predictions_query = """
+            SELECT DISTINCT game_id FROM predictions
+        """
+        existing_pred_ids = set(db.fetch_df(existing_predictions_query)['game_id'].tolist())
+        
+        if existing_pred_ids:
+            before_count = len(upcoming)
+            upcoming = upcoming[~upcoming['game_id'].isin(existing_pred_ids)]
+            filtered_count = before_count - len(upcoming)
+            if filtered_count > 0:
+                print(f"✓ Filtered {filtered_count} games with existing predictions (keeping {len(upcoming)} new games)")
     
     if len(upcoming) > 0:
-        print(f"Generating predictions for {len(upcoming)} upcoming games...")
+        print(f"Generating predictions for {len(upcoming)} NEW upcoming games...")
         
         from adaptive_predictor import AdaptivePredictor
         

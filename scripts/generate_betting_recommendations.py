@@ -67,10 +67,35 @@ def generate_betting_recommendations(
     games_repo = GamesRepository(db)
     betting_repo = BettingRepository(db)
     
-    # Calculate available budget for individual bets (reserve parlay amount)
-    available_budget = daily_budget - parlay_amount
+    # Check how much we've already spent today
+    today = date.today()
+    spent_query = """
+        SELECT COALESCE(SUM(bet_amount), 0) as total_spent
+        FROM bets b
+        JOIN games g ON b.game_id = g.game_id
+        WHERE g.date = ?
+    """
+    today_spent = db.fetch_df(spent_query, (today,))['total_spent'].iloc[0]
+    
+    # Check if parlay exists for today
+    parlay_query = """
+        SELECT COALESCE(SUM(bet_amount), 0) as parlay_spent
+        FROM parlays
+        WHERE parlay_date = ?
+    """
+    parlay_spent = db.fetch_df(parlay_query, (today,))['parlay_spent'].iloc[0]
+    
+    total_spent = today_spent + parlay_spent
+    remaining_budget = daily_budget - total_spent
+    
+    if remaining_budget <= 0:
+        print(f"\n⚠️  Daily budget exhausted: ${total_spent:.2f} / ${daily_budget:.2f}")
+        print(f"   No more bets today!")
+        return
+    
+    # Calculate available budget for individual bets
     bet_amount = 10.0  # Flat $10 per bet
-    max_bets = int(available_budget / bet_amount)
+    max_bets = int(remaining_budget / bet_amount)
     
     # Limit to available budget
     if max_recommendations > max_bets:
@@ -80,15 +105,16 @@ def generate_betting_recommendations(
     print("GENERATING BETTING RECOMMENDATIONS")
     print("=" * 80)
     print(f"\nDaily Budget: ${daily_budget:.2f}")
-    print(f"  - Parlay allocation: ${parlay_amount:.2f}")
-    print(f"  - Individual bets allocation: ${available_budget:.2f} ({max_bets} bets max)")
+    print(f"  - Already spent: ${total_spent:.2f}")
+    print(f"    • Individual bets: ${today_spent:.2f}")
+    print(f"    • Parlay: ${parlay_spent:.2f}")
+    print(f"  - Remaining: ${remaining_budget:.2f} ({max_bets} bets max @ $10 each)")
     print(f"\nCriteria:")
     print(f"  - Minimum confidence: {min_confidence:.1%}")
     print(f"  - Minimum value edge: {min_value:.1%}")
     print(f"  - Maximum recommendations: {max_recommendations}")
     
-    # Get today's games with predictions
-    today = date.today()
+    # Get today's games with predictions (excluding games we already bet on)
     upcoming_query = """
         SELECT 
             p.*,
@@ -100,10 +126,12 @@ def generate_betting_recommendations(
             g.game_status
         FROM predictions p
         JOIN games g ON p.game_id = g.game_id
+        LEFT JOIN bets b ON p.game_id = b.game_id
         WHERE g.date >= ?
           AND g.game_status = 'Scheduled'
           AND p.predicted_winner IS NOT NULL
           AND p.confidence >= ?
+          AND b.id IS NULL
         ORDER BY p.confidence DESC, g.date
     """
     
