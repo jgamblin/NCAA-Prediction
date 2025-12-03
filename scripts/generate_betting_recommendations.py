@@ -56,7 +56,9 @@ def calculate_kelly_bet(
 def generate_betting_recommendations(
     min_confidence: float = 0.60,
     min_value: float = 0.05,
-    max_recommendations: int = 20
+    max_recommendations: int = 20,
+    daily_budget: float = 100.0,
+    parlay_amount: float = 10.0
 ):
     """Generate betting recommendations from today's predictions."""
     
@@ -65,9 +67,21 @@ def generate_betting_recommendations(
     games_repo = GamesRepository(db)
     betting_repo = BettingRepository(db)
     
+    # Calculate available budget for individual bets (reserve parlay amount)
+    available_budget = daily_budget - parlay_amount
+    bet_amount = 10.0  # Flat $10 per bet
+    max_bets = int(available_budget / bet_amount)
+    
+    # Limit to available budget
+    if max_recommendations > max_bets:
+        max_recommendations = max_bets
+    
     print("=" * 80)
     print("GENERATING BETTING RECOMMENDATIONS")
     print("=" * 80)
+    print(f"\nDaily Budget: ${daily_budget:.2f}")
+    print(f"  - Parlay allocation: ${parlay_amount:.2f}")
+    print(f"  - Individual bets allocation: ${available_budget:.2f} ({max_bets} bets max)")
     print(f"\nCriteria:")
     print(f"  - Minimum confidence: {min_confidence:.1%}")
     print(f"  - Minimum value edge: {min_value:.1%}")
@@ -179,7 +193,11 @@ def generate_betting_recommendations(
         total_amount += bet['bet_amount']
     
     print(f"\n" + "=" * 80)
-    print(f"Total recommended: ${total_amount:.2f}")
+    print(f"Individual bets total: ${total_amount:.2f}")
+    print(f"Parlay bet (reserved): ${parlay_amount:.2f}")
+    print(f"TOTAL DAILY ALLOCATION: ${total_amount + parlay_amount:.2f} / ${daily_budget:.2f}")
+    remaining = daily_budget - (total_amount + parlay_amount)
+    print(f"Remaining budget: ${remaining:.2f}")
     print("=" * 80)
     
     # Insert into database
@@ -224,11 +242,25 @@ if __name__ == "__main__":
         default=20,
         help='Maximum number of recommendations (default: 20)'
     )
+    parser.add_argument(
+        '--daily-budget',
+        type=float,
+        default=100.0,
+        help='Total daily betting budget (default: 100.0)'
+    )
+    parser.add_argument(
+        '--parlay-amount',
+        type=float,
+        default=10.0,
+        help='Amount reserved for daily parlay (default: 10.0)'
+    )
     
     args = parser.parse_args()
     
     generate_betting_recommendations(
         min_confidence=args.min_confidence,
         min_value=args.min_value,
-        max_recommendations=args.max_recs
+        max_recommendations=args.max_recs,
+        daily_budget=args.daily_budget,
+        parlay_amount=args.parlay_amount
     )

@@ -30,6 +30,8 @@ def initialize_database(db_conn: DatabaseConnection, drop_existing: bool = False
     create_predictions_table(db_conn)
     create_team_features_table(db_conn)
     create_bets_table(db_conn)
+    create_parlays_table(db_conn)
+    create_parlay_legs_table(db_conn)
     create_accuracy_metrics_table(db_conn)
     create_drift_metrics_table(db_conn)
     create_feature_importance_table(db_conn)
@@ -335,6 +337,114 @@ def create_bets_table(db_conn: DatabaseConnection):
         db_conn.execute(idx)
     
     logger.info("Created bets table")
+
+
+def create_parlays_table(db_conn: DatabaseConnection):
+    """Create parlays table."""
+    if db_conn.use_duckdb:
+        query = """
+        CREATE SEQUENCE IF NOT EXISTS parlays_seq START 1;
+        CREATE TABLE IF NOT EXISTS parlays (
+            id BIGINT PRIMARY KEY DEFAULT nextval('parlays_seq'),
+            parlay_date DATE NOT NULL,
+            bet_amount FLOAT NOT NULL DEFAULT 10.0,
+            num_legs INTEGER NOT NULL,
+            combined_odds FLOAT NOT NULL,
+            potential_payout FLOAT NOT NULL,
+            parlay_won BOOLEAN,
+            actual_payout FLOAT DEFAULT 0.0,
+            profit FLOAT,
+            strategy VARCHAR DEFAULT 'parlay_high_confidence',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            settled_at TIMESTAMP
+        )
+        """
+        for q in query.split(';'):
+            if q.strip():
+                db_conn.execute(q)
+    else:
+        query = """
+        CREATE TABLE IF NOT EXISTS parlays (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            parlay_date DATE NOT NULL,
+            bet_amount FLOAT NOT NULL DEFAULT 10.0,
+            num_legs INTEGER NOT NULL,
+            combined_odds FLOAT NOT NULL,
+            potential_payout FLOAT NOT NULL,
+            parlay_won BOOLEAN,
+            actual_payout FLOAT DEFAULT 0.0,
+            profit FLOAT,
+            strategy VARCHAR DEFAULT 'parlay_high_confidence',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            settled_at TIMESTAMP
+        )
+        """
+        db_conn.execute(query)
+    
+    # Create indexes
+    indexes = [
+        "CREATE INDEX IF NOT EXISTS idx_parlays_date ON parlays(parlay_date)",
+        "CREATE INDEX IF NOT EXISTS idx_parlays_settled ON parlays(settled_at)",
+        "CREATE INDEX IF NOT EXISTS idx_parlays_strategy ON parlays(strategy)"
+    ]
+    
+    for idx in indexes:
+        db_conn.execute(idx)
+    
+    logger.info("Created parlays table")
+
+
+def create_parlay_legs_table(db_conn: DatabaseConnection):
+    """Create parlay_legs table."""
+    if db_conn.use_duckdb:
+        query = """
+        CREATE SEQUENCE IF NOT EXISTS parlay_legs_seq START 1;
+        CREATE TABLE IF NOT EXISTS parlay_legs (
+            id BIGINT PRIMARY KEY DEFAULT nextval('parlay_legs_seq'),
+            parlay_id BIGINT NOT NULL,
+            game_id VARCHAR NOT NULL,
+            prediction_id BIGINT NOT NULL,
+            bet_team VARCHAR NOT NULL,
+            moneyline INTEGER NOT NULL,
+            confidence FLOAT NOT NULL,
+            leg_won BOOLEAN,
+            actual_winner VARCHAR,
+            leg_number INTEGER NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+        """
+        for q in query.split(';'):
+            if q.strip():
+                db_conn.execute(q)
+    else:
+        query = """
+        CREATE TABLE IF NOT EXISTS parlay_legs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            parlay_id BIGINT NOT NULL,
+            game_id VARCHAR NOT NULL,
+            prediction_id BIGINT NOT NULL,
+            bet_team VARCHAR NOT NULL,
+            moneyline INTEGER NOT NULL,
+            confidence FLOAT NOT NULL,
+            leg_won BOOLEAN,
+            actual_winner VARCHAR,
+            leg_number INTEGER NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+        """
+        db_conn.execute(query)
+    
+    # Create indexes
+    indexes = [
+        "CREATE INDEX IF NOT EXISTS idx_parlay_legs_parlay ON parlay_legs(parlay_id)",
+        "CREATE INDEX IF NOT EXISTS idx_parlay_legs_game ON parlay_legs(game_id)",
+        "CREATE INDEX IF NOT EXISTS idx_parlay_legs_prediction ON parlay_legs(prediction_id)"
+    ]
+    
+    for idx in indexes:
+        db_conn.execute(idx)
+    
+    logger.info("Created parlay_legs table")
 
 
 def create_accuracy_metrics_table(db_conn: DatabaseConnection):

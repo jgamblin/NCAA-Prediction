@@ -490,6 +490,32 @@ def main():
         print("✓ No upcoming games to predict")
     
     # =========================================================================
+    # STEP 4.5: Generate betting recommendations and parlays
+    # =========================================================================
+    print("\n" + "="*80)
+    print("STEP 4.5: Generating betting recommendations")
+    print("-"*80)
+    
+    try:
+        from scripts.generate_betting_recommendations import generate_betting_recommendations
+        generate_betting_recommendations()
+    except Exception as e:
+        print(f"⚠️ Betting recommendation generation failed: {e}")
+    
+    print("\n" + "="*80)
+    print("STEP 4.6: Generating daily parlay")
+    print("-"*80)
+    
+    try:
+        from scripts.parlay_tracker import generate_daily_parlay, settle_completed_parlays
+        # Settle any completed parlays first
+        settle_completed_parlays()
+        # Generate today's parlay
+        generate_daily_parlay()
+    except Exception as e:
+        print(f"⚠️ Parlay generation failed: {e}")
+    
+    # =========================================================================
     # STEP 5: Generate markdown reports
     # =========================================================================
     print("\n" + "="*80)
