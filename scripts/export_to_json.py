@@ -249,7 +249,7 @@ def export_to_json(output_dir: Path = None):
             'actual_payout': float(parlay['actual_payout']) if pd.notna(parlay['actual_payout']) else 0.0,
             'profit': float(parlay['profit']) if pd.notna(parlay['profit']) else None,
             'strategy': parlay['strategy'],
-            'settled': parlay['settled_at'] is not None,
+            'settled': pd.notna(parlay['settled_at']) and parlay['settled_at'] is not None,
             'settled_at': parlay['settled_at'].isoformat() if pd.notna(parlay['settled_at']) else None,
             'legs': []
         }
