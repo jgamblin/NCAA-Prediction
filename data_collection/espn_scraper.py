@@ -48,7 +48,8 @@ class ESPNScraper:
             date_str = str(date)
         
         # Schedule endpoint - gets ALL scheduled games for the day
-        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}&limit=1000"
+        # CRITICAL: groups=50 returns ALL games, not just featured ones
+        url = f"{self.api_base_url}/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates={date_str}&groups=50&limit=1000"
         
         try:
             response = self.session.get(url, timeout=10)
