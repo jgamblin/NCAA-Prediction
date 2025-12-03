@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "date": "2025-12-03T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 3,
+    "combined_odds": 2.2037036418914795,
+    "potential_payout": 22.037036895751953,
+    "won": null,
+    "actual_payout": 0.0,
+    "profit": null,
+    "strategy": "parlay_high_confidence",
+    "settled": true,
+    "settled_at": null,
+    "legs": [
+      {
+        "leg_number": 1,
+        "game_id": "401825395",
+        "bet_team": "Indiana",
+        "opponent": "Minnesota",
+        "moneyline": -600,
+        "confidence": 0.9120683073997498,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Minnesota",
+        "away_team": "Indiana",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401824855",
+        "bet_team": "Idaho State Bengals",
+        "opponent": "Kansas City Roos",
+        "moneyline": -225,
+        "confidence": 0.9078956842422485,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Kansas City Roos",
+        "away_team": "Idaho State Bengals",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 3,
+        "game_id": "401806378",
+        "bet_team": "LSU",
+        "opponent": "Boston College",
+        "moneyline": -325,
+        "confidence": 0.9068052172660828,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Boston College",
+        "away_team": "LSU",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  }
+]

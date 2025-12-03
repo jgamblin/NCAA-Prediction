@@ -72,6 +72,16 @@ export const fetchBettingByConfidence = () => fetchJSON('betting_by_confidence.j
 export const fetchValueBets = () => fetchJSON('value_bets.json');
 
 /**
+ * Fetch parlays (multi-leg bets)
+ */
+export const fetchParlays = () => fetchJSON('parlays.json');
+
+/**
+ * Fetch parlay statistics
+ */
+export const fetchParlayStats = () => fetchJSON('parlay_stats.json');
+
+/**
  * Fetch cumulative profit data for charts
  */
 export const fetchCumulativeProfit = () => fetchJSON('cumulative_profit.json');

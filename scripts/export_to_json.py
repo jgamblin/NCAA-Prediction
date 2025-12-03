@@ -190,6 +190,141 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Exported {len(value_bets)} value bets")
     
     # =========================================================================
+    # 5b. Export Parlays
+    # =========================================================================
+    print("\n5b. Exporting parlays...")
+    
+    # Get all parlays with their legs
+    parlays_query = """
+        SELECT 
+            p.id,
+            p.parlay_date,
+            p.bet_amount,
+            p.num_legs,
+            p.combined_odds,
+            p.potential_payout,
+            p.parlay_won,
+            p.actual_payout,
+            p.profit,
+            p.strategy,
+            p.settled_at
+        FROM parlays p
+        ORDER BY p.parlay_date DESC
+    """
+    parlays_df = db.fetch_df(parlays_query)
+    parlays = []
+    
+    for _, parlay in parlays_df.iterrows():
+        # Get legs for this parlay
+        legs_query = """
+            SELECT 
+                pl.id,
+                pl.game_id,
+                pl.bet_team,
+                pl.moneyline,
+                pl.confidence,
+                pl.leg_won,
+                pl.actual_winner,
+                pl.leg_number,
+                g.home_team,
+                g.away_team,
+                g.home_score,
+                g.away_score,
+                g.game_status
+            FROM parlay_legs pl
+            JOIN games g ON pl.game_id = g.game_id
+            WHERE pl.parlay_id = ?
+            ORDER BY pl.leg_number
+        """
+        legs_df = db.fetch_df(legs_query, (parlay['id'],))
+        
+        parlay_data = {
+            'id': int(parlay['id']),
+            'date': parlay['parlay_date'].isoformat() if parlay['parlay_date'] else None,
+            'bet_amount': float(parlay['bet_amount']),
+            'num_legs': int(parlay['num_legs']),
+            'combined_odds': float(parlay['combined_odds']),
+            'potential_payout': float(parlay['potential_payout']),
+            'won': bool(parlay['parlay_won']) if pd.notna(parlay['parlay_won']) else None,
+            'actual_payout': float(parlay['actual_payout']) if pd.notna(parlay['actual_payout']) else 0.0,
+            'profit': float(parlay['profit']) if pd.notna(parlay['profit']) else None,
+            'strategy': parlay['strategy'],
+            'settled': parlay['settled_at'] is not None,
+            'settled_at': parlay['settled_at'].isoformat() if pd.notna(parlay['settled_at']) else None,
+            'legs': []
+        }
+        
+        for _, leg in legs_df.iterrows():
+            leg_data = {
+                'leg_number': int(leg['leg_number']),
+                'game_id': leg['game_id'],
+                'bet_team': leg['bet_team'],
+                'opponent': leg['away_team'] if leg['bet_team'] == leg['home_team'] else leg['home_team'],
+                'moneyline': int(leg['moneyline']),
+                'confidence': float(leg['confidence']),
+                'won': bool(leg['leg_won']) if pd.notna(leg['leg_won']) else None,
+                'actual_winner': leg['actual_winner'] if pd.notna(leg['actual_winner']) else None,
+                'home_team': leg['home_team'],
+                'away_team': leg['away_team'],
+                'home_score': int(leg['home_score']) if pd.notna(leg['home_score']) else None,
+                'away_score': int(leg['away_score']) if pd.notna(leg['away_score']) else None,
+                'game_status': leg['game_status']
+            }
+            parlay_data['legs'].append(leg_data)
+        
+        parlays.append(parlay_data)
+    
+    with open(output_dir / 'parlays.json', 'w') as f:
+        json.dump(parlays, f, indent=2, default=json_serial)
+    print(f"   ✓ Exported {len(parlays)} parlays")
+    
+    # Parlay statistics
+    parlay_stats_query = """
+        SELECT 
+            COUNT(*) as total_parlays,
+            SUM(CASE WHEN parlay_won = true THEN 1 ELSE 0 END) as wins,
+            SUM(CASE WHEN parlay_won = false THEN 1 ELSE 0 END) as losses,
+            SUM(bet_amount) as total_wagered,
+            SUM(profit) as total_profit,
+            MAX(profit) as biggest_win,
+            MIN(profit) as biggest_loss
+        FROM parlays
+        WHERE settled_at IS NOT NULL
+    """
+    stats_df = db.fetch_df(parlay_stats_query)
+    
+    if not stats_df.empty and stats_df['total_parlays'].iloc[0] > 0:
+        total = int(stats_df['total_parlays'].iloc[0])
+        wins = int(stats_df['wins'].iloc[0]) if pd.notna(stats_df['wins'].iloc[0]) else 0
+        parlay_stats = {
+            'total_parlays': total,
+            'wins': wins,
+            'losses': int(stats_df['losses'].iloc[0]) if pd.notna(stats_df['losses'].iloc[0]) else 0,
+            'win_rate': wins / total if total > 0 else 0.0,
+            'total_wagered': float(stats_df['total_wagered'].iloc[0]),
+            'total_profit': float(stats_df['total_profit'].iloc[0]) if pd.notna(stats_df['total_profit'].iloc[0]) else 0.0,
+            'roi': (float(stats_df['total_profit'].iloc[0]) / float(stats_df['total_wagered'].iloc[0]) * 100) if float(stats_df['total_wagered'].iloc[0]) > 0 else 0.0,
+            'biggest_win': float(stats_df['biggest_win'].iloc[0]) if pd.notna(stats_df['biggest_win'].iloc[0]) else 0.0,
+            'biggest_loss': float(stats_df['biggest_loss'].iloc[0]) if pd.notna(stats_df['biggest_loss'].iloc[0]) else 0.0
+        }
+    else:
+        parlay_stats = {
+            'total_parlays': 0,
+            'wins': 0,
+            'losses': 0,
+            'win_rate': 0.0,
+            'total_wagered': 0.0,
+            'total_profit': 0.0,
+            'roi': 0.0,
+            'biggest_win': 0.0,
+            'biggest_loss': 0.0
+        }
+    
+    with open(output_dir / 'parlay_stats.json', 'w') as f:
+        json.dump(parlay_stats, f, indent=2, default=json_serial)
+    print(f"   ✓ Exported parlay statistics")
+    
+    # =========================================================================
     # 6. Export Accuracy Metrics (2025-26 Season Only)
     # =========================================================================
     print("\n6. Exporting accuracy metrics...")
