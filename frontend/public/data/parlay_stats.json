@@ -1,11 +1,11 @@
 {
-  "total_parlays": 0,
+  "total_parlays": 1,
   "wins": 0,
-  "losses": 0,
+  "losses": 1,
   "win_rate": 0.0,
-  "total_wagered": 0.0,
-  "total_profit": 0.0,
-  "roi": 0.0,
-  "biggest_win": 0.0,
-  "biggest_loss": 0.0
+  "total_wagered": 10.0,
+  "total_profit": -10.0,
+  "roi": -100.0,
+  "biggest_win": -10.0,
+  "biggest_loss": -10.0
 }
