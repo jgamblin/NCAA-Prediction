@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-04 08:07:20 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `7c29f02`
+**Last Updated**: 2025-12-04 09:09:50 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `b447d59`
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## 🧪 Performance Overview
 
-- **Overall Accuracy**: 77.0% (1534 evaluated)
+- **Overall Accuracy**: 72.4% (1105 evaluated)
 - **Last 10 Days**: 65.3% (568 games)
 
 ### Last 7 Days
