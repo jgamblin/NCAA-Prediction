@@ -4,113 +4,36 @@
 
 > Accurate, explainable, daily-updated NCAA men's basketball game probabilities with automated drift monitoring, lineage, and feature-store powered context.
 
-<!-- AUTO-UPDATED: Hero Stats - Do not manually edit this section -->
-## 📊 At a Glance
+## 🌐 Live Web Dashboard
 
-🎯 **77.0% Accuracy** across 1534 predictions  
-📈 **30,695 Historical Games** powering model  
-🤖 **Automated Daily** at 12:00 PM UTC  
-⚡ **58 Live Predictions** for today  
-🔥 **0 Day Streak** of perfect high-confidence picks
+### **[View Live Predictions →](https://jgamblin.github.io/NCAA-Prediction/)**
 
-<!-- END AUTO-UPDATED: Hero Stats -->
+Interactive dashboard with:
+- 📊 **Today's Predictions** - Live game predictions with confidence scores
+- 🎯 **Betting Tracker** - Track hypothetical bets and parlay performance
+- 📈 **Performance Analytics** - Model accuracy and ROI metrics
+- 🏀 **Team Statistics** - Deep dive into team performance
 
-## 🔎 Live Snapshot
+*Updated automatically every 3 hours*
 
-<div>
-**Current Predictions**: 347 games for December 02, 2025<br/>
-<strong>Last Updated:</strong> Automated daily at 12:00 PM UTC<br/>
-<strong>Model Lineage:</strong> config <code>7dd58a0bb0e2</code> · commit <code>439d761</code><br/>
-</div>
+## 📊 Data Artifacts
 
-### **Quick Access**  
-| Artifact | Path | Description |
-|----------|------|-------------|
-| Full Predictions CSV | [`data/NCAA_Game_Predictions.csv`](data/NCAA_Game_Predictions.csv) | Raw probabilities & confidence |
-| Markdown Summary | [`predictions.md`](predictions.md) | Human readable card view |
-| Betting Tracker | [`bets.md`](bets.md) | Hypothetical $1 bets on highest probability teams with moneylines |
-| Accuracy History | [`data/Accuracy_Report.csv`](data/Accuracy_Report.csv) | Daily rollup of prediction performance |
-| Performance Dashboard | [`performance.md`](performance.md) | Visual summary with charts (auto-generated) |
-| Drift Metrics | [`data/Drift_Metrics.csv`](data/Drift_Metrics.csv) | Global cumulative & rolling metrics |
-| Team Drift | [`data/Drift_Metrics_By_Team.csv`](data/Drift_Metrics_By_Team.csv) | Per‑team rolling performance |
-| Anomalies | [`data/Team_Anomalies.csv`](data/Team_Anomalies.csv) | Recent vs cumulative accuracy deltas |
-| Feature Store | [`data/feature_store/feature_store.csv`](data/feature_store/feature_store.csv) | Per-team rolling aggregates |
+For programmatic access, raw data files are available in the [`data/`](data/) directory:
 
----
+| File | Description |
+|------|-------------|
+| [`NCAA_Game_Predictions.csv`](data/NCAA_Game_Predictions.csv) | All predictions with probabilities & confidence |
+| [`Accuracy_Report.csv`](data/Accuracy_Report.csv) | Historical prediction performance |
+| [`predictions.md`](predictions.md) | Human-readable predictions summary |
+| [`performance.md`](performance.md) | Model performance dashboard |
 
-<!-- AUTO-UPDATED: Performance Dashboard - Do not manually edit this section -->
-## 📈 Performance Dashboard
-
-<table>
-<tr>
-<td width="33%">
-
-### Prediction Quality
-- **Overall**: 77.0% (1534 games)
-- **High Confidence**: 77.5% avg
-- **Current Season**: 85.5% tuning accuracy
-- **Algorithm**: Random Forest (calibrated)
-
-</td>
-<td width="33%">
-
-### Data Scale
-- **Total Games**: 30,695
-- **Current Season**: 1690 games
-- **Unique Teams**: 1,909
-- **Feature Store**: 12,323 rows
-
-</td>
-<td width="33%">
-
-### Monitoring
-- **Top Feature**: `home_team_encoded` (0.0%)
-- **Lineage**: `7dd58a0bb0e2` @ `426a7a8`
-- **Last Update**: 2025-12-02 21:32 UTC
-- **Calibration**: Brier N/A
-
-</td>
-</tr>
-</table>
-
-<!-- END AUTO-UPDATED: Performance Dashboard -->
-
-<!-- AUTO-UPDATED: Recent Performance - Do not manually edit this section -->
-## 📊 Last 7 Days Performance
-
-| Date | Predictions | Completed | Accuracy | Avg Confidence | Notes |
-|------|-------------|-----------|----------|----------------|-------|
-| Nov 24 | 78 | 78 | 53.8% | 80.0% | 📉 |
-| Nov 25 | 88 | 88 | 56.8% | 79.3% | 📉 |
-| Nov 26 | 68 | 68 | 58.8% | 80.0% | 📉 |
-| Nov 27 | 18 | 18 | 44.4% | 76.9% | 📉 |
-| Nov 28 | 42 | 42 | 66.7% | 80.6% | 📉 |
-| Nov 29 | 120 | 120 | 86.7% | 81.0% | ✅ |
-| Nov 30 | 76 | 76 | 57.9% | 79.4% | 📉 |
-
-_Accuracy variations reflect feature store building historical context for new season teams._
-
-<!-- END AUTO-UPDATED: Recent Performance -->
-
----
-
-## � Model Evaluation (Auto‑Updated)
-
-_This section is rewritten by the pipeline; manual edits below this heading will be overwritten._
-
-- **Overall Accuracy**: 91.7% (on 48 predictions)  
-- **Training Data**: 29,451 games (Current season: 446)
-- **Algorithm**: Random Forest (time‑weighted, calibrated)  
-- **Top Signals**: Rolling win pct diffs, point differential momentum, strength index  
-- **Monitoring**: Rolling/cumulative accuracy, log loss, Brier, anomaly deltas, conference drift  
-
-> See `data/calibration_curve.png` and `data/calibration_bins.csv` for reliability diagnostics (when generated by advanced model pipeline).
+JSON exports for the web dashboard are in [`frontend/public/data/`](frontend/public/data/).
 
 ---
 
 ## 🗂 Table of Contents
-1. [Live Snapshot](#-live-snapshot)
-2. [Model Evaluation (Auto-Updated)](#-model-evaluation-autoupdated)
+1. [Live Web Dashboard](#-live-web-dashboard)
+2. [Data Artifacts](#-data-artifacts)
 3. [Why This Project](#-why-this-project)
 4. [Quick Start](#-quick-start)
 5. [Architecture & Data Flow](#-architecture--data-flow)
@@ -120,9 +43,11 @@ _This section is rewritten by the pipeline; manual edits below this heading will
 9. [Automation & CI](#-automation--ci)
 10. [Repository Layout](#-repository-layout)
 11. [Stable Team Identifiers](#-stable-team-identifiers)
-12. [Roadmap](#-roadmap)
-13. [Contributing](#-contributing)
-14. [License & Acknowledgments](#-license--acknowledgments)
+12. [Model Evaluation](#-model-evaluation-autoupdated)
+13. [Configuration](#-configuration)
+14. [Roadmap](#-roadmap)
+15. [Contributing](#-contributing)
+16. [License & Acknowledgments](#-license--acknowledgments)
 
 ---
 
@@ -333,29 +258,32 @@ python3 data_collection/check_seasons.py
 ```
 Shows all available seasons (23 seasons from 2002-03 to 2024-25).
 
-## 📈 Model Evaluation (Auto‑Updated)
+## 📈 Model Evaluation
 
 ### Current Performance
 
-- **Overall Accuracy**: 77.0% (on 1,534 predictions)
-- **Current Season (2025-26) Tuning**: 85.5%
-- **Training Data**: 30,695 games (current season: 1,690)
+For real-time performance metrics, visit the **[Live Web Dashboard](https://jgamblin.github.io/NCAA-Prediction/)**.
 
-### Lineage
+### Model Details
 
-- Config Version: `7dd58a0bb0e2`
-- Commit Hash: `426a7a8`
-*Refreshed: 2025-12-02 21:32 UTC*
+- **Algorithm**: Random Forest (calibrated, time-weighted)
+- **Training Data**: 30,000+ historical games
+- **Features**: Rolling statistics, momentum indicators, strength indices
+- **Updates**: Model predictions refresh every 3 hours
+- **Tracking**: Full lineage with config versioning and git commits
 
 ## 🚀 Automation
 
-GitHub Actions runs predictions daily at 12:00 PM UTC (7:00 AM EST):
+GitHub Actions runs predictions every 3 hours:
 1. **Scrape ESPN** - Fetch completed and upcoming games
-2. **Merge Data** - Add completed games to training set
-3. **Track Accuracy** - Compare predictions vs actual results
-4. **Generate Predictions** - Train model and predict upcoming games
-5. **Update Markdown** - Create predictions.md with results
-6. **Auto-commit** - Push updates back to repository
+2. **Update Database** - Store games in DuckDB (177x faster than CSV)
+3. **Generate Predictions** - Train model and predict upcoming games
+4. **Track Accuracy** - Compare predictions vs actual results
+5. **Generate Betting Recommendations** - Create daily bets and parlays
+6. **Export to JSON** - Generate JSON files for web dashboard
+7. **Auto-commit** - Push updates to GitHub (triggers Pages deployment)
+
+The web dashboard automatically updates when new data is pushed.
 
 See `.github/workflows/daily-predictions.yml`
 
@@ -444,14 +372,16 @@ See [LICENSE](LICENSE)
 
 ## 🆕 Recent Updates
 
+**December 4, 2025**
+- ✅ Migrated to static README pointing to live web dashboard
+- ✅ Added parlay betting tracker with 3-leg daily parlays
+- ✅ Implemented database-backed pipeline (177x faster than CSV)
+- ✅ Created React frontend with real-time JSON data feeds
+- 🌐 **Live dashboard available at: https://jgamblin.github.io/NCAA-Prediction/**
+
 **November 4, 2025**
 - ✅ Refactored daily pipeline with extracted model class
 - ✅ Added weekly model tuning with time-weighted training
 - ✅ Implemented betting line disagreement tracker
 - ✅ Fixed all linting issues and improved code quality
 - ✅ Updated to Python 3.14 for GitHub Actions
-- 🎯 **Current season accuracy: 96.4%**
-
----
-
-**Last updated:** November 4, 2025
