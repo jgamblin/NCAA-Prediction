@@ -1,7 +1,7 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-03 15:09:04 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `0adc09b`
+**Last Updated**: 2025-12-03 18:50:22 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `c69f535`
 
 ---
 
@@ -32,7 +32,7 @@
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (64 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (13 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
