@@ -20,7 +20,15 @@ export default function BettingPage() {
         ])
         setSummary(summaryData)
         setValueBets(valueBetsData)
-        setParlays(parlaysData)
+        
+        // Filter parlays to only show today's or unsettled parlays
+        const today = new Date().toISOString().split('T')[0]
+        const filteredParlays = parlaysData.filter(parlay => {
+          const parlayDate = new Date(parlay.date).toISOString().split('T')[0]
+          return !parlay.settled || parlayDate === today
+        })
+        
+        setParlays(filteredParlays)
         setParlayStats(parlayStatsData)
       } catch (error) {
         console.error('Failed to load betting data:', error)
@@ -86,23 +94,24 @@ export default function BettingPage() {
       )}
       
       {/* Parlays Section */}
-      {parlays && parlays.length > 0 && (
-        <div className="card">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold flex items-center space-x-2">
-              <Layers className="text-purple-500" />
-              <span>Daily Parlay Bets</span>
-            </h2>
-            {parlayStats && parlayStats.total_parlays > 0 && (
-              <div className="text-sm text-gray-600">
-                <span className="font-semibold">{parlayStats.wins}W - {parlayStats.losses}L</span>
-                <span className="mx-2">|</span>
-                <span className={parlayStats.total_profit >= 0 ? 'text-green-600' : 'text-red-600'}>
-                  {parlayStats.total_profit >= 0 ? '+' : ''}${parlayStats.total_profit.toFixed(2)}
-                </span>
-              </div>
-            )}
-          </div>
+      <div className="card">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-bold flex items-center space-x-2">
+            <Layers className="text-purple-500" />
+            <span>Today's Parlay Bet</span>
+          </h2>
+          {parlayStats && parlayStats.total_parlays > 0 && (
+            <div className="text-sm text-gray-600">
+              <span className="font-semibold">{parlayStats.wins}W - {parlayStats.losses}L</span>
+              <span className="mx-2">|</span>
+              <span className={parlayStats.total_profit >= 0 ? 'text-green-600' : 'text-red-600'}>
+                {parlayStats.total_profit >= 0 ? '+' : ''}${parlayStats.total_profit.toFixed(2)}
+              </span>
+            </div>
+          )}
+        </div>
+        
+        {parlays && parlays.length > 0 ? (
           
           <div className="space-y-4">
             {parlays.map((parlay) => (
@@ -204,8 +213,19 @@ export default function BettingPage() {
               </div>
             ))}
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="text-center py-12">
+            <Layers className="mx-auto text-gray-400 mb-4" size={48} />
+            <p className="text-gray-600 font-medium">No parlay bet for today</p>
+            <p className="text-sm text-gray-500 mt-2">
+              Parlays require at least 3 eligible high-confidence games with moneylines.
+            </p>
+            <p className="text-xs text-gray-400 mt-1">
+              Check back tomorrow or view historical parlays on the Bet Analytics page!
+            </p>
+          </div>
+        )}
+      </div>
       
       {/* Info Banner */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start space-x-3">
