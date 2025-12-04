@@ -329,19 +329,15 @@ def export_to_json(output_dir: Path = None):
     # =========================================================================
     print("\n6. Exporting accuracy metrics...")
     
-    # Calculate accuracy from current season only
+    # Overall accuracy for current season (deduplicated - first prediction per game)
     current_season = "2025-26"
     today = datetime.now().date()
     
-    season_accuracy_query = """
-        WITH season_predictions AS (
+    overall_query = """
+        WITH first_predictions AS (
             SELECT 
-                p.predicted_winner,
-                p.confidence,
-                g.home_team,
-                g.away_team,
-                g.home_score,
-                g.away_score
+                p.game_id,
+                MIN(p.id) as first_prediction_id
             FROM predictions p
             JOIN games g ON p.game_id = g.game_id
             WHERE g.season = ?
@@ -350,19 +346,30 @@ def export_to_json(output_dir: Path = None):
               AND p.predicted_winner IS NOT NULL
               AND g.home_score IS NOT NULL
               AND g.away_score IS NOT NULL
+            GROUP BY p.game_id
         )
         SELECT 
             COUNT(*) as total_predictions,
             SUM(CASE 
-                WHEN (home_score > away_score AND predicted_winner = home_team) OR
-                     (away_score > home_score AND predicted_winner = away_team)
-                THEN 1 ELSE 0 
-            END) as correct_predictions,
-            AVG(confidence) as avg_confidence
-        FROM season_predictions
+                WHEN p.predicted_winner = 
+                    CASE 
+                        WHEN g.home_score > g.away_score THEN g.home_team
+                        WHEN g.away_score > g.home_score THEN g.away_team
+                    END 
+                THEN 1 ELSE 0 END) as correct_predictions,
+            AVG(p.confidence) as avg_confidence
+        FROM predictions p
+        JOIN games g ON p.game_id = g.game_id
+        JOIN first_predictions fp ON p.id = fp.first_prediction_id
+        WHERE g.season = ?
+          AND g.game_status = 'Final'
+          AND g.date <= ?
+          AND p.predicted_winner IS NOT NULL
+          AND g.home_score IS NOT NULL
+          AND g.away_score IS NOT NULL
     """
     
-    accuracy_df = db.fetch_df(season_accuracy_query, (current_season, today))
+    accuracy_df = db.fetch_df(overall_query, (current_season, today, current_season, today))
     
     if not accuracy_df.empty and accuracy_df.iloc[0]['total_predictions'] > 0:
         row = accuracy_df.iloc[0]
@@ -385,12 +392,12 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Overall accuracy ({current_season}): {overall_accuracy.get('accuracy', 0):.1%}")
     
     # High confidence accuracy (≥65%)
-    high_conf_query = season_accuracy_query.replace(
-        "FROM season_predictions",
-        "FROM season_predictions WHERE confidence >= 0.65"
+    high_conf_query = overall_query.replace(
+        "AND g.away_score IS NOT NULL",
+        "AND g.away_score IS NOT NULL\n          AND p.confidence >= 0.65"
     )
     
-    high_conf_df = db.fetch_df(high_conf_query, (current_season, today))
+    high_conf_df = db.fetch_df(high_conf_query, (current_season, today, current_season, today))
     
     if not high_conf_df.empty and high_conf_df.iloc[0]['total_predictions'] > 0:
         row = high_conf_df.iloc[0]
@@ -542,6 +549,18 @@ def export_to_json(output_dir: Path = None):
     today = datetime.now().date()
     
     season_predictions_query = """
+        WITH first_predictions AS (
+            SELECT 
+                p.game_id,
+                MIN(p.id) as first_prediction_id
+            FROM predictions p
+            JOIN games g ON p.game_id = g.game_id
+            WHERE g.season = ?
+              AND g.game_status = 'Final'
+              AND g.date <= ?
+              AND p.predicted_winner IS NOT NULL
+            GROUP BY p.game_id
+        )
         SELECT 
             p.*,
             g.date as game_date,
@@ -553,6 +572,7 @@ def export_to_json(output_dir: Path = None):
             g.season
         FROM predictions p
         JOIN games g ON p.game_id = g.game_id
+        JOIN first_predictions fp ON p.id = fp.first_prediction_id
         WHERE g.season = ?
           AND g.game_status = 'Final'
           AND g.date <= ?
@@ -560,7 +580,7 @@ def export_to_json(output_dir: Path = None):
         ORDER BY g.date DESC
     """
     
-    history_df = db.fetch_df(season_predictions_query, (current_season, today))
+    history_df = db.fetch_df(season_predictions_query, (current_season, today, current_season, today))
     
     if not history_df.empty:
         history_data = history_df.to_dict('records')
