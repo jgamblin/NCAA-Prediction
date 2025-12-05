@@ -44,10 +44,14 @@ export default function GameCard({ game, showBadge = true, badgeType = 'predicte
           {/* Game matchup */}
           <div className="flex items-center flex-wrap gap-2 sm:gap-4 mb-2">
             <span className="text-sm text-gray-500">{game.date}</span>
-            <span className="font-medium">{game.away_team}</span>
+            <span className={`font-medium ${hasPrediction && game.predicted_winner === game.away_team ? 'text-lg font-bold text-primary-600' : ''}`}>
+              {game.away_team}
+            </span>
             {isFinished && <span className="text-gray-900 font-semibold">{game.away_score}</span>}
             <span className="text-gray-400">@</span>
-            <span className="font-medium">{game.home_team}</span>
+            <span className={`font-medium ${hasPrediction && game.predicted_winner === game.home_team ? 'text-lg font-bold text-primary-600' : ''}`}>
+              {game.home_team}
+            </span>
             {isFinished && <span className="text-gray-900 font-semibold">{game.home_score}</span>}
           </div>
           
