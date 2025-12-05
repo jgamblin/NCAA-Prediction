@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-05 00:30:47 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `a4f633c`
+**Last Updated**: 2025-12-05 03:28:50 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `864fbce`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 22
-- **Average Confidence**: 71.6%
+- **Average Confidence**: 72.1%
 - **High (≥70%)**: 14 · **Medium (60-70%)**: 0 · **Other (<60%)**: 8
 
 ### 🏅 Pick Streaks
@@ -30,40 +30,40 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Barber Scotia BARBER SCOTIA** | Florida A&M Rattlers | 91.7% |
-| 2 | **Fairfield** | Manhattan | 89.7% |
-| 3 | **Eastern Michigan** | Cleary University | 85.6% |
+| 1 | **Barber Scotia BARBER SCOTIA** | Florida A&M Rattlers | 90.3% |
+| 2 | **Fairfield** | Manhattan | 88.1% |
+| 3 | **Eastern Michigan** | Cleary University | 85.7% |
 | 4 | **UConn** | East Texas A&M | 85.6% |
-| 5 | **VMI** | Christendom | 85.4% |
-| 6 | **Siena Saints** | Niagara Purple | 84.6% |
-| 7 | **High Point** | NJIT | 83.4% |
-| 8 | **Marist Red Foxes** | Mount St. Mary's | 81.8% |
-| 9 | **Virginia Commonwealth** | Samford | 78.9% |
-| 10 | **McNeese** | Northwestern State | 78.4% |
-| 11 | **South Alabama** | East Tennessee State | 77.7% |
-| 12 | **San Jose State** | San Diego Toreros | 75.3% |
-| 13 | **Saint Peter's** | Canisius Golden Griffins | 74.0% |
-| 14 | **Gonzaga** | Kentucky | 70.3% |
+| 5 | **VMI** | Christendom | 85.5% |
+| 6 | **Siena Saints** | Niagara Purple | 84.3% |
+| 7 | **High Point** | NJIT | 83.9% |
+| 8 | **Marist Red Foxes** | Mount St. Mary's | 83.3% |
+| 9 | **Virginia Commonwealth** | Samford | 79.3% |
+| 10 | **McNeese** | Northwestern State | 77.5% |
+| 11 | **San Jose State** | San Diego Toreros | 76.4% |
+| 12 | **South Alabama** | East Tennessee State | 75.2% |
+| 13 | **Gonzaga** | Kentucky | 74.6% |
+| 14 | **Saint Peter's** | Canisius Golden Griffins | 73.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Drake vs UAB | 50.1% | Toss-Up |
-| 2 | Xavier vs Cincinnati | 50.5% | Toss-Up |
-| 3 | Bryant @ Brown | 51.9% | Toss-Up |
-| 4 | Quinnipiac @ Iona | 53.6% | Toss-Up |
-| 5 | Mercyhurst @ Lafayette | 54.0% | Toss-Up |
-| 6 | South Carolina State @ Bethune-Cookman | 55.9% | Close |
-| 7 | TCU Horned Frogs vs Notre Dame | 58.3% | Close |
-| 8 | Portland vs Lewis & Clark Pioneers | 59.1% | Close |
+| 1 | Quinnipiac @ Iona | 51.1% | Toss-Up |
+| 2 | Cincinnati @ Xavier | 53.2% | Toss-Up |
+| 3 | UAB @ Drake | 54.0% | Toss-Up |
+| 4 | Bryant @ Brown | 54.7% | Toss-Up |
+| 5 | Mercyhurst @ Lafayette | 54.8% | Toss-Up |
+| 6 | TCU Horned Frogs vs Notre Dame | 57.1% | Close |
+| 7 | South Carolina State @ Bethune-Cookman | 59.5% | Close |
+| 8 | Portland vs Lewis & Clark Pioneers | 59.8% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 14
-- Away Teams Favored: 8
-- Max Confidence: 91.7%
-- Min Confidence: 50.1%
+- Home Teams Favored: 16
+- Away Teams Favored: 6
+- Max Confidence: 90.3%
+- Min Confidence: 51.1%
 
 ### 📋 Full Data
 
