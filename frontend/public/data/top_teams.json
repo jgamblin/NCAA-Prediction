@@ -22,17 +22,6 @@
     "team_losses": 1
   },
   {
-    "team_id": "Georgia",
-    "display_name": "Georgia",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.834173858165741,
-    "team_wins": 8,
-    "team_losses": 1
-  },
-  {
     "team_id": "Texas Tech",
     "display_name": "Texas Tech",
     "conference": null,
@@ -42,6 +31,17 @@
     "avg_confidence": 0.7751662135124207,
     "team_wins": 6,
     "team_losses": 2
+  },
+  {
+    "team_id": "Georgia",
+    "display_name": "Georgia",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.834173858165741,
+    "team_wins": 8,
+    "team_losses": 1
   },
   {
     "team_id": "Indiana",

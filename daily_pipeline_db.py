@@ -435,7 +435,7 @@ def main():
                 upcoming = upcoming.merge(
                     predictions_df[['game_id', 'predicted_home_win', 'home_win_probability', 
                                    'away_win_probability', 'predicted_winner', 'confidence', 
-                                   'has_insufficient_data']],
+                                   'has_insufficient_data', 'explanation']],
                     on='game_id',
                     how='left'
                 )
@@ -458,7 +458,8 @@ def main():
                         'model_version': model_version,
                         'config_version': _config_version,
                         'commit_hash': _commit_hash,
-                        'source': 'live'
+                        'source': 'live',
+                        'explanation': row.get('explanation')
                     })
                 
                 upserted_preds = pred_repo.bulk_upsert_predictions(predictions_to_insert)
