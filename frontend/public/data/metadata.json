@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-05T00:48:58.098954",
+  "last_updated": "2025-12-04T20:51:19.806308",
   "database_stats": {
     "total_games": 31036,
     "games_by_status": {
@@ -8,7 +8,7 @@
       "In Progress": 5
     },
     "total_teams": 1494,
-    "total_predictions": 4048
+    "total_predictions": 1222
   },
   "current_season": "2025-26",
   "data_source": "DuckDB via daily pipeline",
