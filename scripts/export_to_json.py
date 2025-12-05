@@ -567,6 +567,14 @@ def export_to_json(output_dir: Path = None):
     # =========================================================================
     print("\n7b. Exporting all teams...")
     
+    # Load conference mappings
+    try:
+        conf_df = pd.read_csv('data/team_conferences.csv')
+        conference_map = dict(zip(conf_df['canonical_name'], conf_df['conference']))
+    except FileNotFoundError:
+        print("   ⚠️  Conference file not found, using 'Unknown' for all teams")
+        conference_map = {}
+    
     # Get all teams from games this season (use CANONICAL names)
     all_teams_query = """
         WITH team_games AS (
@@ -661,7 +669,7 @@ def export_to_json(output_dir: Path = None):
             'correct_predictions': int(row['correct_predictions']),
             'prediction_accuracy': float(prediction_accuracy),
             'avg_confidence': float(row['avg_confidence']),
-            'conference': 'Unknown'  # TODO: Add conference data from ESPN
+            'conference': conference_map.get(row['display_name'], 'Independent')
         }
         all_teams_data.append(team_data)
     
