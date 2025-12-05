@@ -22,6 +22,17 @@
     "team_losses": 1
   },
   {
+    "team_id": "Georgia",
+    "display_name": "Georgia",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.834173858165741,
+    "team_wins": 8,
+    "team_losses": 1
+  },
+  {
     "team_id": "Texas Tech",
     "display_name": "Texas Tech",
     "conference": null,
@@ -33,15 +44,15 @@
     "team_losses": 2
   },
   {
-    "team_id": "Indiana",
-    "display_name": "Indiana",
+    "team_id": "George Washington",
+    "display_name": "George Washington",
     "conference": null,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8430395483970642,
+    "avg_confidence": 0.8260777711868286,
     "team_wins": 7,
-    "team_losses": 1
+    "team_losses": 2
   },
   {
     "team_id": "Missouri",
@@ -55,26 +66,15 @@
     "team_losses": 1
   },
   {
-    "team_id": "Georgia",
-    "display_name": "Georgia",
+    "team_id": "Indiana",
+    "display_name": "Indiana",
     "conference": null,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.834173858165741,
-    "team_wins": 8,
-    "team_losses": 1
-  },
-  {
-    "team_id": "George Washington",
-    "display_name": "George Washington",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8260777711868286,
+    "avg_confidence": 0.8430395483970642,
     "team_wins": 7,
-    "team_losses": 2
+    "team_losses": 1
   },
   {
     "team_id": "UCLA",
@@ -97,6 +97,17 @@
     "avg_confidence": 0.7109149336814881,
     "team_wins": 6,
     "team_losses": 3
+  },
+  {
+    "team_id": "UC Irvine",
+    "display_name": "UC Irvine",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.6000000238418579,
+    "avg_confidence": 0.804553496837616,
+    "team_wins": 6,
+    "team_losses": 4
   },
   {
     "team_id": "Oregon State",
