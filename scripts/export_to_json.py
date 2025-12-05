@@ -185,6 +185,14 @@ def export_to_json(output_dir: Path = None):
     print("\n5. Exporting value bets...")
     
     value_bets = betting_repo.get_value_bets(min_value_score=0.05, min_confidence=0.55)
+    
+    # Add explanations from predictions
+    for bet in value_bets:
+        if bet.get('prediction_id'):
+            pred = pred_repo.get_prediction_by_id(bet['prediction_id'])
+            if pred and pred.get('explanation'):
+                bet['explanation'] = pred['explanation']
+    
     with open(output_dir / 'value_bets.json', 'w') as f:
         json.dump(value_bets, f, indent=2, default=json_serial)
     print(f"   ✓ Exported {len(value_bets)} value bets")

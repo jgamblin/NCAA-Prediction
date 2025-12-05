@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { fetchBettingSummary, fetchValueBets, fetchParlays, fetchParlayStats } from '../services/api'
-import { DollarSign, TrendingUp, Award, TrendingDown, AlertCircle, Calendar, Layers } from 'lucide-react'
+import { DollarSign, TrendingUp, Award, TrendingDown, AlertCircle, Calendar, Layers, Lightbulb, ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function BettingPage() {
   const [summary, setSummary] = useState(null)
@@ -8,6 +8,7 @@ export default function BettingPage() {
   const [parlays, setParlays] = useState([])
   const [parlayStats, setParlayStats] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [expandedBets, setExpandedBets] = useState(new Set())
   
   useEffect(() => {
     async function loadData() {
@@ -49,6 +50,24 @@ export default function BettingPage() {
   }
   
   const hasBettingData = summary && summary.total_bets > 0
+  
+  const toggleExplanation = (betId) => {
+    setExpandedBets(prev => {
+      const next = new Set(prev)
+      if (next.has(betId)) {
+        next.delete(betId)
+      } else {
+        next.add(betId)
+      }
+      return next
+    })
+  }
+  
+  const getConfidenceBorderColor = (confidence) => {
+    if (confidence >= 0.75) return 'border-green-500'
+    if (confidence >= 0.60) return 'border-yellow-500'
+    return 'border-gray-400'
+  }
   
   return (
     <div className="space-y-6">
@@ -318,6 +337,41 @@ export default function BettingPage() {
                       <p className="font-bold text-lg text-green-600">${bet.bet_amount.toFixed(2)}</p>
                     </div>
                   </div>
+                  
+                  {/* Explanation Button */}
+                  {bet.explanation && (
+                    <div className="mt-4">
+                      <button
+                        onClick={() => toggleExplanation(bet.id)}
+                        className="flex items-center space-x-1 text-sm text-primary-600 hover:text-primary-700 font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-300 rounded px-2 py-1 -ml-2"
+                        aria-label={`${expandedBets.has(bet.id) ? 'Hide' : 'Show'} explanation for ${bet.bet_team}`}
+                        aria-expanded={expandedBets.has(bet.id)}
+                      >
+                        <Lightbulb size={16} className="flex-shrink-0" aria-hidden="true" />
+                        <span className="truncate">
+                          {expandedBets.has(bet.id) ? 'Hide explanation' : `Why ${bet.bet_team}?`}
+                        </span>
+                        {expandedBets.has(bet.id) ? (
+                          <ChevronUp size={16} className="flex-shrink-0" aria-hidden="true" />
+                        ) : (
+                          <ChevronDown size={16} className="flex-shrink-0" aria-hidden="true" />
+                        )}
+                      </button>
+                      
+                      {/* Expanded Explanation */}
+                      {expandedBets.has(bet.id) && (
+                        <div 
+                          className={`mt-3 p-3 bg-white rounded-lg border-l-4 ${getConfidenceBorderColor(bet.confidence)} transition-all animate-fadeIn`}
+                          role="region"
+                          aria-label="Prediction explanation"
+                        >
+                          <p className="text-sm text-gray-700 leading-relaxed">
+                            {bet.explanation}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                   
                   {/* Potential Payout */}
                   <div className="mt-4 pt-4 border-t border-gray-200">
