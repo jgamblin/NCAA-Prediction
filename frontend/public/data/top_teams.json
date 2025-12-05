@@ -22,17 +22,6 @@
     "team_losses": 1
   },
   {
-    "team_id": "George Washington",
-    "display_name": "George Washington",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8260777711868286,
-    "team_wins": 7,
-    "team_losses": 2
-  },
-  {
     "team_id": "Georgia",
     "display_name": "Georgia",
     "conference": null,
@@ -42,6 +31,17 @@
     "avg_confidence": 0.834173858165741,
     "team_wins": 8,
     "team_losses": 1
+  },
+  {
+    "team_id": "Texas Tech",
+    "display_name": "Texas Tech",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.7751662135124207,
+    "team_wins": 6,
+    "team_losses": 2
   },
   {
     "team_id": "Indiana",
@@ -66,17 +66,6 @@
     "team_losses": 1
   },
   {
-    "team_id": "Texas Tech",
-    "display_name": "Texas Tech",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.7751662135124207,
-    "team_wins": 6,
-    "team_losses": 2
-  },
-  {
     "team_id": "UCLA",
     "display_name": "UCLA",
     "conference": null,
@@ -86,17 +75,6 @@
     "avg_confidence": 0.7521471480528513,
     "team_wins": 6,
     "team_losses": 2
-  },
-  {
-    "team_id": "Abilene Christian",
-    "display_name": "Abilene Christian",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.6000000238418579,
-    "avg_confidence": 0.7109149336814881,
-    "team_wins": 6,
-    "team_losses": 3
   },
   {
     "team_id": "UC Irvine",
@@ -128,28 +106,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.4000000059604645,
     "avg_confidence": 0.7970734119415284,
-    "team_wins": 5,
-    "team_losses": 4
-  },
-  {
-    "team_id": "Oregon State",
-    "display_name": "Oregon State",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4000000059604645,
-    "avg_confidence": 0.7625703096389771,
-    "team_wins": 4,
-    "team_losses": 5
-  },
-  {
-    "team_id": "Florida Gulf Coast",
-    "display_name": "Florida Gulf Coast",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4000000059604645,
-    "avg_confidence": 0.8067614674568176,
     "team_wins": 5,
     "team_losses": 4
   }

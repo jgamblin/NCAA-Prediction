@@ -1,6 +1,17 @@
 [
   {
-    "display_name": "Abilene Christian",
+    "display_name": "AR-Pine Bluff",
+    "games_played": 8,
+    "wins": 0,
+    "losses": 8,
+    "win_pct": 0.0,
+    "predictions_made": 0,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.0
+  },
+  {
+    "display_name": "Abilene Chrstn",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -55,15 +66,15 @@
     "avg_confidence": 0.8301464915275574
   },
   {
-    "display_name": "Alabama A%26M",
-    "games_played": 2,
-    "wins": 1,
-    "losses": 1,
-    "win_pct": 0.5,
-    "predictions_made": 0,
+    "display_name": "Alabama",
+    "games_played": 10,
+    "wins": 7,
+    "losses": 3,
+    "win_pct": 0.7,
+    "predictions_made": 2,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "avg_confidence": 0.6850000023841858
   },
   {
     "display_name": "Alabama A&M",
@@ -77,18 +88,7 @@
     "avg_confidence": 0.8184480667114258
   },
   {
-    "display_name": "Alabama Crimson Tide",
-    "games_played": 8,
-    "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6850000023841858
-  },
-  {
-    "display_name": "Alabama State",
+    "display_name": "Alabama St",
     "games_played": 8,
     "wins": 3,
     "losses": 5,
@@ -99,7 +99,7 @@
     "avg_confidence": 0.7675350904464722
   },
   {
-    "display_name": "Alcorn State",
+    "display_name": "Alcorn St",
     "games_played": 10,
     "wins": 1,
     "losses": 9,
@@ -121,7 +121,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "American University",
+    "display_name": "American",
     "games_played": 10,
     "wins": 6,
     "losses": 4,
@@ -148,10 +148,10 @@
     "wins": 5,
     "losses": 5,
     "win_pct": 0.5,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.7637062470118204
+    "predictions_made": 2,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.7196903824806213
   },
   {
     "display_name": "Apprentice School",
@@ -166,17 +166,17 @@
   },
   {
     "display_name": "Arizona",
-    "games_played": 7,
+    "games_played": 8,
     "wins": 7,
-    "losses": 0,
-    "win_pct": 1.0,
+    "losses": 1,
+    "win_pct": 0.875,
     "predictions_made": 3,
     "correct_predictions": 3,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.7569490075111389
   },
   {
-    "display_name": "Arizona State",
+    "display_name": "Arizona St",
     "games_played": 8,
     "wins": 6,
     "losses": 2,
@@ -188,28 +188,17 @@
   },
   {
     "display_name": "Arkansas",
-    "games_played": 8,
-    "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "games_played": 11,
+    "wins": 7,
+    "losses": 4,
+    "win_pct": 0.6363636363636364,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.8,
     "avg_confidence": 0.7953403234481812
   },
   {
-    "display_name": "Arkansas Baptist",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Arkansas State",
+    "display_name": "Arkansas St",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -218,28 +207,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.8221615155537924
-  },
-  {
-    "display_name": "Arkansas-Pine Bluff",
-    "games_played": 8,
-    "wins": 0,
-    "losses": 8,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Arkansas-Pine Bluff Golden",
-    "games_played": 1,
-    "wins": 1,
-    "losses": 0,
-    "win_pct": 1.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Arlington Baptist",
@@ -254,25 +221,14 @@
   },
   {
     "display_name": "Army",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 2,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7312900722026825
-  },
-  {
-    "display_name": "Army Black",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Auburn",
@@ -280,13 +236,13 @@
     "wins": 7,
     "losses": 2,
     "win_pct": 0.7777777777777778,
-    "predictions_made": 4,
+    "predictions_made": 5,
     "correct_predictions": 3,
-    "prediction_accuracy": 0.75,
-    "avg_confidence": 0.8147396445274353
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.8002354383468628
   },
   {
-    "display_name": "Austin Peay Governors",
+    "display_name": "Austin Peay",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -317,6 +273,17 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
+  },
+  {
+    "display_name": "Bakersfield",
+    "games_played": 9,
+    "wins": 4,
+    "losses": 5,
+    "win_pct": 0.4444444444444444,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.6651708483695984
   },
   {
     "display_name": "Ball State",
@@ -353,25 +320,14 @@
   },
   {
     "display_name": "Belmont",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
+    "losses": 2,
+    "win_pct": 0.8,
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
     "avg_confidence": 0.7219770948092142
-  },
-  {
-    "display_name": "Belmont Abbey",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Benedictine University (IL)",
@@ -429,7 +385,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Bethune-Cookman",
+    "display_name": "Bethune",
     "games_played": 8,
     "wins": 2,
     "losses": 6,
@@ -506,7 +462,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Boise State",
+    "display_name": "Boise St",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -528,7 +484,7 @@
     "avg_confidence": 0.8023237586021423
   },
   {
-    "display_name": "Boston University",
+    "display_name": "Boston U",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -606,10 +562,10 @@
   },
   {
     "display_name": "Brown",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
@@ -632,10 +588,10 @@
     "wins": 3,
     "losses": 6,
     "win_pct": 0.3333333333333333,
-    "predictions_made": 3,
+    "predictions_made": 4,
     "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.7213459213574728
+    "prediction_accuracy": 0.25,
+    "avg_confidence": 0.7265640944242477
   },
   {
     "display_name": "Bucknell",
@@ -682,6 +638,61 @@
     "avg_confidence": 0.8027971088886261
   },
   {
+    "display_name": "C Arkansas",
+    "games_played": 9,
+    "wins": 4,
+    "losses": 5,
+    "win_pct": 0.4444444444444444,
+    "predictions_made": 5,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.763945710659027
+  },
+  {
+    "display_name": "C Connecticut",
+    "games_played": 8,
+    "wins": 5,
+    "losses": 3,
+    "win_pct": 0.625,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.5352516770362854
+  },
+  {
+    "display_name": "C Michigan",
+    "games_played": 8,
+    "wins": 3,
+    "losses": 5,
+    "win_pct": 0.375,
+    "predictions_made": 1,
+    "correct_predictions": 1,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8406486511230469
+  },
+  {
+    "display_name": "CA Baptist",
+    "games_played": 9,
+    "wins": 7,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
+    "predictions_made": 3,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.8119612137476603
+  },
+  {
+    "display_name": "CSU Northridge",
+    "games_played": 8,
+    "wins": 4,
+    "losses": 4,
+    "win_pct": 0.5,
+    "predictions_made": 1,
+    "correct_predictions": 1,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.7759007811546326
+  },
+  {
     "display_name": "Cal Poly",
     "games_played": 10,
     "wins": 5,
@@ -691,39 +702,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.8267751336097717
-  },
-  {
-    "display_name": "Cal State Bakersfield",
-    "games_played": 9,
-    "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6651708483695984
-  },
-  {
-    "display_name": "Cal State Fullerton",
-    "games_played": 9,
-    "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
-    "predictions_made": 5,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.2,
-    "avg_confidence": 0.7798702359199524
-  },
-  {
-    "display_name": "Cal State Northridge",
-    "games_played": 8,
-    "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.7759007811546326
   },
   {
     "display_name": "Caldwell",
@@ -746,17 +724,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.7639888823032379
-  },
-  {
-    "display_name": "California Baptist",
-    "games_played": 9,
-    "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
-    "predictions_made": 3,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.8119612137476603
   },
   {
     "display_name": "Caltech CALTECH",
@@ -782,28 +749,17 @@
   },
   {
     "display_name": "Campbell",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
+    "games_played": 8,
+    "wins": 3,
+    "losses": 5,
+    "win_pct": 0.375,
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.8500000238418579
   },
   {
-    "display_name": "Campbell Fighting",
-    "games_played": 7,
-    "wins": 3,
-    "losses": 4,
-    "win_pct": 0.42857142857142855,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Canisius Golden Griffins",
+    "display_name": "Canisius",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -840,50 +796,6 @@
     "games_played": 1,
     "wins": 0,
     "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Central Arkansas",
-    "games_played": 9,
-    "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
-    "predictions_made": 5,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.763945710659027
-  },
-  {
-    "display_name": "Central Connecticut",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.5352516770362854
-  },
-  {
-    "display_name": "Central Michigan",
-    "games_played": 8,
-    "wins": 3,
-    "losses": 5,
-    "win_pct": 0.375,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8406486511230469
-  },
-  {
-    "display_name": "Central Penn",
-    "games_played": 3,
-    "wins": 0,
-    "losses": 3,
     "win_pct": 0.0,
     "predictions_made": 0,
     "correct_predictions": 0,
@@ -935,7 +847,7 @@
     "avg_confidence": 0.7566445827484131
   },
   {
-    "display_name": "Charleston Southern",
+    "display_name": "Charleston So",
     "games_played": 11,
     "wins": 6,
     "losses": 5,
@@ -947,17 +859,17 @@
   },
   {
     "display_name": "Charlotte",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
+    "losses": 6,
+    "win_pct": 0.4,
     "predictions_made": 1,
     "correct_predictions": 1,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.6958771347999573
   },
   {
-    "display_name": "Chattanooga Mocs",
+    "display_name": "Chattanooga",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -979,7 +891,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Chicago State",
+    "display_name": "Chicago St",
     "games_played": 9,
     "wins": 1,
     "losses": 8,
@@ -1002,36 +914,14 @@
   },
   {
     "display_name": "Cincinnati",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "losses": 3,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.7985728502273559
-  },
-  {
-    "display_name": "Cincinnati Clermont",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Citadel",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.7820823192596436
   },
   {
     "display_name": "City College NY",
@@ -1067,7 +957,7 @@
     "avg_confidence": 0.7496009826660156
   },
   {
-    "display_name": "Cleveland State",
+    "display_name": "Cleveland St",
     "games_played": 10,
     "wins": 3,
     "losses": 7,
@@ -1078,26 +968,15 @@
     "avg_confidence": 0.8263058662414551
   },
   {
-    "display_name": "Coastal Carolina",
-    "games_played": 9,
+    "display_name": "Coastal",
+    "games_played": 11,
     "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
+    "losses": 6,
+    "win_pct": 0.45454545454545453,
     "predictions_made": 4,
     "correct_predictions": 2,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.7175385057926178
-  },
-  {
-    "display_name": "Coastal Georgia Mariner",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Coe Kohawks",
@@ -1134,39 +1013,17 @@
   },
   {
     "display_name": "Colorado",
-    "games_played": 8,
+    "games_played": 10,
     "wins": 8,
-    "losses": 0,
-    "win_pct": 1.0,
+    "losses": 2,
+    "win_pct": 0.8,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.7974097927411398
   },
   {
-    "display_name": "Colorado Christian",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Colorado College",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Colorado State",
+    "display_name": "Colorado St",
     "games_played": 8,
     "wins": 6,
     "losses": 2,
@@ -1178,36 +1035,14 @@
   },
   {
     "display_name": "Columbia",
-    "games_played": 9,
+    "games_played": 12,
     "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
+    "losses": 4,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.8158669273058573
-  },
-  {
-    "display_name": "Columbia International",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Concordia-Nebraska Clippers",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Converse University Valkyries",
@@ -1221,7 +1056,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Coppin State",
+    "display_name": "Coppin St",
     "games_played": 11,
     "wins": 2,
     "losses": 9,
@@ -1233,25 +1068,14 @@
   },
   {
     "display_name": "Cornell",
-    "games_played": 1,
-    "wins": 1,
-    "losses": 0,
-    "win_pct": 1.0,
+    "games_played": 9,
+    "wins": 5,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
     "predictions_made": 3,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7767003377278646
-  },
-  {
-    "display_name": "Cornell Big",
-    "games_played": 8,
-    "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Creighton",
@@ -1259,10 +1083,10 @@
     "wins": 5,
     "losses": 3,
     "win_pct": 0.625,
-    "predictions_made": 3,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.8480065862337748
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.8415567278862
   },
   {
     "display_name": "Cumberland (KY)",
@@ -1277,17 +1101,6 @@
   },
   {
     "display_name": "Curry College Colonels",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Dakota State",
     "games_played": 1,
     "wins": 0,
     "losses": 1,
@@ -1320,7 +1133,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Dartmouth Big Green",
+    "display_name": "Dartmouth",
     "games_played": 6,
     "wins": 3,
     "losses": 3,
@@ -1353,7 +1166,7 @@
     "avg_confidence": 0.7564468185106913
   },
   {
-    "display_name": "DePaul Blue",
+    "display_name": "DePaul",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -1386,18 +1199,18 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Delaware Blue Hens",
+    "display_name": "Delaware",
     "games_played": 7,
     "wins": 2,
     "losses": 5,
     "win_pct": 0.2857142857142857,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.7133336961269379
+    "predictions_made": 5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.4,
+    "avg_confidence": 0.7612368583679199
   },
   {
-    "display_name": "Delaware State",
+    "display_name": "Delaware St",
     "games_played": 10,
     "wins": 2,
     "losses": 8,
@@ -1408,7 +1221,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Denver Pioneers",
+    "display_name": "Denver",
     "games_played": 8,
     "wins": 3,
     "losses": 5,
@@ -1420,10 +1233,10 @@
   },
   {
     "display_name": "Detroit Mercy",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
@@ -1431,17 +1244,6 @@
   },
   {
     "display_name": "Dickinson (PA)",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "District Of Columbia Firebirds",
     "games_played": 1,
     "wins": 0,
     "losses": 1,
@@ -1518,51 +1320,7 @@
     "avg_confidence": 0.7681538065274557
   },
   {
-    "display_name": "East Carolina",
-    "games_played": 8,
-    "wins": 3,
-    "losses": 5,
-    "win_pct": 0.375,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8124946355819702
-  },
-  {
-    "display_name": "East Tennessee State",
-    "games_played": 8,
-    "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4,
-    "avg_confidence": 0.7228811144828796
-  },
-  {
-    "display_name": "East Texas A&M",
-    "games_played": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_pct": 0.5714285714285714,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8267861008644104
-  },
-  {
-    "display_name": "East-West University Phantoms",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Eastern Illinois",
+    "display_name": "E Illinois",
     "games_played": 7,
     "wins": 2,
     "losses": 5,
@@ -1573,7 +1331,7 @@
     "avg_confidence": 0.7998839020729065
   },
   {
-    "display_name": "Eastern Kentucky Colonels",
+    "display_name": "E Kentucky",
     "games_played": 8,
     "wins": 1,
     "losses": 7,
@@ -1584,7 +1342,7 @@
     "avg_confidence": 0.7331336140632629
   },
   {
-    "display_name": "Eastern Michigan",
+    "display_name": "E Michigan",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -1595,10 +1353,54 @@
     "avg_confidence": 0.8008342832326889
   },
   {
-    "display_name": "Eastern Oregon",
-    "games_played": 2,
-    "wins": 0,
+    "display_name": "E Texas A&M",
+    "games_played": 7,
+    "wins": 4,
+    "losses": 3,
+    "win_pct": 0.5714285714285714,
+    "predictions_made": 1,
+    "correct_predictions": 1,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8267861008644104
+  },
+  {
+    "display_name": "E Washington",
+    "games_played": 8,
+    "wins": 1,
+    "losses": 7,
+    "win_pct": 0.125,
+    "predictions_made": 2,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.5815337598323822
+  },
+  {
+    "display_name": "ETSU",
+    "games_played": 8,
+    "wins": 6,
     "losses": 2,
+    "win_pct": 0.75,
+    "predictions_made": 5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.4,
+    "avg_confidence": 0.7228811144828796
+  },
+  {
+    "display_name": "East Carolina",
+    "games_played": 8,
+    "wins": 3,
+    "losses": 5,
+    "win_pct": 0.375,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8192669153213501
+  },
+  {
+    "display_name": "East-West University Phantoms",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
     "win_pct": 0.0,
     "predictions_made": 0,
     "correct_predictions": 0,
@@ -1615,17 +1417,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Eastern Washington",
-    "games_played": 8,
-    "wins": 1,
-    "losses": 7,
-    "win_pct": 0.125,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.5815337598323822
   },
   {
     "display_name": "Ecclesia",
@@ -1727,7 +1518,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Evansville Purple Aces",
+    "display_name": "Evansville",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -1749,6 +1540,50 @@
     "avg_confidence": 0.0
   },
   {
+    "display_name": "FAU",
+    "games_played": 8,
+    "wins": 5,
+    "losses": 3,
+    "win_pct": 0.625,
+    "predictions_made": 4,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.25,
+    "avg_confidence": 0.7769431322813034
+  },
+  {
+    "display_name": "FDU",
+    "games_played": 9,
+    "wins": 2,
+    "losses": 7,
+    "win_pct": 0.2222222222222222,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.8335191607475281
+  },
+  {
+    "display_name": "FGCU",
+    "games_played": 9,
+    "wins": 5,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
+    "predictions_made": 5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.4,
+    "avg_confidence": 0.8067614674568176
+  },
+  {
+    "display_name": "FIU",
+    "games_played": 7,
+    "wins": 4,
+    "losses": 3,
+    "win_pct": 0.5714285714285714,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.8189758956432343
+  },
+  {
     "display_name": "Fairfield",
     "games_played": 8,
     "wins": 5,
@@ -1758,17 +1593,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.4,
     "avg_confidence": 0.7997470021247863
-  },
-  {
-    "display_name": "Fairleigh Dickinson",
-    "games_played": 9,
-    "wins": 2,
-    "losses": 7,
-    "win_pct": 0.2222222222222222,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8335191607475281
   },
   {
     "display_name": "Farmingdale State",
@@ -1794,17 +1618,17 @@
   },
   {
     "display_name": "Florida",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.7943468213081359
   },
   {
-    "display_name": "Florida A&M Rattlers",
+    "display_name": "Florida A&M",
     "games_played": 5,
     "wins": 0,
     "losses": 5,
@@ -1815,51 +1639,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Florida Atlantic",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 4,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.25,
-    "avg_confidence": 0.7769431322813034
-  },
-  {
-    "display_name": "Florida Gulf Coast",
-    "games_played": 9,
-    "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4,
-    "avg_confidence": 0.8067614674568176
-  },
-  {
-    "display_name": "Florida International",
-    "games_played": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_pct": 0.5714285714285714,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8189758956432343
-  },
-  {
-    "display_name": "Florida National Conquistadors",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Florida State",
+    "display_name": "Florida St",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -1936,18 +1716,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Fresno Pacific Sunbirds",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Fresno State",
+    "display_name": "Fresno St",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -1956,6 +1725,17 @@
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.8195190668106079
+  },
+  {
+    "display_name": "Fullerton",
+    "games_played": 9,
+    "wins": 3,
+    "losses": 6,
+    "win_pct": 0.3333333333333333,
+    "predictions_made": 5,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.2,
+    "avg_confidence": 0.7798702359199524
   },
   {
     "display_name": "Furman",
@@ -1969,7 +1749,29 @@
     "avg_confidence": 0.8301723003387451
   },
   {
-    "display_name": "Gardner-Webb Runnin'",
+    "display_name": "G Washington",
+    "games_played": 9,
+    "wins": 7,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
+    "predictions_made": 6,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.7853078544139862
+  },
+  {
+    "display_name": "GA Southern",
+    "games_played": 10,
+    "wins": 5,
+    "losses": 5,
+    "win_pct": 0.5,
+    "predictions_made": 5,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.2,
+    "avg_confidence": 0.7935049891471863
+  },
+  {
+    "display_name": "Gardner-Webb",
     "games_played": 10,
     "wins": 0,
     "losses": 10,
@@ -2002,51 +1804,29 @@
     "avg_confidence": 0.7842132925987244
   },
   {
-    "display_name": "George Washington",
-    "games_played": 9,
-    "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
-    "predictions_made": 6,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7853078544139862
-  },
-  {
-    "display_name": "Georgetown Hoyas",
+    "display_name": "Georgetown",
     "games_played": 8,
     "wins": 6,
     "losses": 2,
     "win_pct": 0.75,
-    "predictions_made": 1,
-    "correct_predictions": 1,
+    "predictions_made": 3,
+    "correct_predictions": 3,
     "prediction_accuracy": 1.0,
-    "avg_confidence": 0.554301917552948
+    "avg_confidence": 0.7456751267115275
   },
   {
     "display_name": "Georgia",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
+    "losses": 2,
+    "win_pct": 0.8,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.8,
     "avg_confidence": 0.834173858165741
   },
   {
-    "display_name": "Georgia Southern",
-    "games_played": 10,
-    "wins": 5,
-    "losses": 5,
-    "win_pct": 0.5,
-    "predictions_made": 5,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.2,
-    "avg_confidence": 0.7935049891471863
-  },
-  {
-    "display_name": "Georgia State",
+    "display_name": "Georgia St",
     "games_played": 9,
     "wins": 1,
     "losses": 8,
@@ -2068,17 +1848,6 @@
     "avg_confidence": 0.7547876238822937
   },
   {
-    "display_name": "Georgian Court",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Gonzaga",
     "games_played": 8,
     "wins": 7,
@@ -2091,28 +1860,17 @@
   },
   {
     "display_name": "Grambling",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
+    "games_played": 8,
+    "wins": 3,
+    "losses": 5,
+    "win_pct": 0.375,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Grambling State",
-    "games_played": 7,
-    "wins": 3,
-    "losses": 4,
-    "win_pct": 0.42857142857142855,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.5352516770362854
-  },
-  {
-    "display_name": "Grand Canyon Lopes",
+    "display_name": "Grand Canyon",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -2189,18 +1947,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Hawai'i Pacific Sea",
-    "games_played": 2,
-    "wins": 1,
-    "losses": 1,
-    "win_pct": 0.5,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Hawai'i Rainbow",
+    "display_name": "Hawai\u2019i",
     "games_played": 9,
     "wins": 7,
     "losses": 2,
@@ -2222,7 +1969,7 @@
     "avg_confidence": 0.7276213318109512
   },
   {
-    "display_name": "Hofstra Pride",
+    "display_name": "Hofstra",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -2234,39 +1981,17 @@
   },
   {
     "display_name": "Holy Cross",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 1,
     "correct_predictions": 1,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8349023461341858
   },
   {
-    "display_name": "Holy Cross College (IN) Saints",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Houston",
-    "games_played": 8,
-    "wins": 7,
-    "losses": 1,
-    "win_pct": 0.875,
-    "predictions_made": 6,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7913118004798889
-  },
-  {
-    "display_name": "Houston Christian",
+    "display_name": "Hou Christian",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -2277,26 +2002,26 @@
     "avg_confidence": 0.7058286666870117
   },
   {
+    "display_name": "Houston",
+    "games_played": 8,
+    "wins": 7,
+    "losses": 1,
+    "win_pct": 0.875,
+    "predictions_made": 8,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.375,
+    "avg_confidence": 0.783745676279068
+  },
+  {
     "display_name": "Howard",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
+    "losses": 7,
+    "win_pct": 0.36363636363636365,
     "predictions_made": 1,
     "correct_predictions": 1,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.7937494516372681
-  },
-  {
-    "display_name": "Howard Payne",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Humboldt State",
@@ -2343,7 +2068,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "IU Indianapolis",
+    "display_name": "IU Indy",
     "games_played": 10,
     "wins": 3,
     "losses": 7,
@@ -2359,13 +2084,13 @@
     "wins": 5,
     "losses": 3,
     "win_pct": 0.625,
-    "predictions_made": 4,
+    "predictions_made": 3,
     "correct_predictions": 2,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.6887375563383102
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.6476160685221354
   },
   {
-    "display_name": "Idaho State Bengals",
+    "display_name": "Idaho St",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -2377,17 +2102,17 @@
   },
   {
     "display_name": "Illinois",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "losses": 3,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 2,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.785809725522995
   },
   {
-    "display_name": "Illinois State",
+    "display_name": "Illinois St",
     "games_played": 9,
     "wins": 7,
     "losses": 2,
@@ -2396,17 +2121,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.7285972237586975
-  },
-  {
-    "display_name": "Illinois Tech Scarlet",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Incarnate Word",
@@ -2421,17 +2135,17 @@
   },
   {
     "display_name": "Indiana",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 7,
-    "losses": 1,
-    "win_pct": 0.875,
-    "predictions_made": 5,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
+    "predictions_made": 7,
     "correct_predictions": 4,
-    "prediction_accuracy": 0.8,
-    "avg_confidence": 0.8430395483970642
+    "prediction_accuracy": 0.5714285714285714,
+    "avg_confidence": 0.7748719368662152
   },
   {
-    "display_name": "Indiana State",
+    "display_name": "Indiana St",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -2442,22 +2156,11 @@
     "avg_confidence": 0.7740033715963364
   },
   {
-    "display_name": "Indiana University East IU EAST",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Iona",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "losses": 3,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 4,
     "correct_predictions": 2,
     "prediction_accuracy": 0.5,
@@ -2486,7 +2189,7 @@
     "avg_confidence": 0.7802262783050538
   },
   {
-    "display_name": "Jackson State",
+    "display_name": "Jackson St",
     "games_played": 8,
     "wins": 1,
     "losses": 7,
@@ -2498,25 +2201,14 @@
   },
   {
     "display_name": "Jacksonville",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
+    "losses": 5,
+    "win_pct": 0.4444444444444444,
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
     "avg_confidence": 0.7558398048082987
-  },
-  {
-    "display_name": "Jacksonville State",
-    "games_played": 7,
-    "wins": 3,
-    "losses": 4,
-    "win_pct": 0.42857142857142855,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.8227162758509318
   },
   {
     "display_name": "James Madison",
@@ -2552,6 +2244,17 @@
     "avg_confidence": 0.0
   },
   {
+    "display_name": "Jax State",
+    "games_played": 7,
+    "wins": 3,
+    "losses": 4,
+    "win_pct": 0.42857142857142855,
+    "predictions_made": 3,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.3333333333333333,
+    "avg_confidence": 0.8227162758509318
+  },
+  {
     "display_name": "Jessup University",
     "games_played": 1,
     "wins": 0,
@@ -2563,29 +2266,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "John Brown",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "John Jay College Bloodhounds",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Johnson & Wales (NC) JOHNSON & WALES-CHARLOTTE",
     "games_played": 1,
     "wins": 0,
     "losses": 1,
@@ -2640,7 +2321,7 @@
     "avg_confidence": 0.8588632345199585
   },
   {
-    "display_name": "Kansas City Roos",
+    "display_name": "Kansas City",
     "games_played": 8,
     "wins": 1,
     "losses": 7,
@@ -2651,7 +2332,7 @@
     "avg_confidence": 0.5199999809265137
   },
   {
-    "display_name": "Kansas State",
+    "display_name": "Kansas St",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -2673,7 +2354,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Kennesaw State",
+    "display_name": "Kennesaw St",
     "games_played": 8,
     "wins": 6,
     "losses": 2,
@@ -2684,7 +2365,7 @@
     "avg_confidence": 0.8142731487751007
   },
   {
-    "display_name": "Kent State Golden Flashes",
+    "display_name": "Kent State",
     "games_played": 9,
     "wins": 8,
     "losses": 1,
@@ -2696,36 +2377,25 @@
   },
   {
     "display_name": "Kentucky",
-    "games_played": 8,
+    "games_played": 12,
     "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
+    "losses": 7,
+    "win_pct": 0.4166666666666667,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.8462261080741882
   },
   {
-    "display_name": "Kentucky Christian",
-    "games_played": 3,
-    "wins": 0,
+    "display_name": "LMU",
+    "games_played": 10,
+    "wins": 7,
     "losses": 3,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Kentucky State Thorobreds",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "win_pct": 0.7,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.779313713312149
   },
   {
     "display_name": "LSU",
@@ -2860,7 +2530,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Lehigh Mountain",
+    "display_name": "Lehigh",
     "games_played": 10,
     "wins": 3,
     "losses": 7,
@@ -2880,28 +2550,6 @@
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.8412057757377625
-  },
-  {
-    "display_name": "Life Pacific",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Lincoln University (CA) Oaklanders",
-    "games_played": 3,
-    "wins": 0,
-    "losses": 3,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Lindenwood",
@@ -2937,7 +2585,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Long Beach State Beach",
+    "display_name": "Long Beach St",
     "games_played": 9,
     "wins": 2,
     "losses": 7,
@@ -2948,11 +2596,11 @@
     "avg_confidence": 0.5199999809265137
   },
   {
-    "display_name": "Long Island University",
-    "games_played": 8,
+    "display_name": "Long Island",
+    "games_played": 9,
     "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
+    "losses": 5,
+    "win_pct": 0.4444444444444444,
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -2964,10 +2612,10 @@
     "wins": 5,
     "losses": 5,
     "win_pct": 0.5,
-    "predictions_made": 5,
+    "predictions_made": 4,
     "correct_predictions": 3,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.8379607796669006
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.8406435549259186
   },
   {
     "display_name": "Loras Duhawks",
@@ -2981,22 +2629,11 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Louisiana Christian",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Louisiana Ragin' Cajuns",
-    "games_played": 9,
-    "wins": 1,
-    "losses": 8,
-    "win_pct": 0.1111111111111111,
+    "display_name": "Louisiana",
+    "games_played": 13,
+    "wins": 3,
+    "losses": 10,
+    "win_pct": 0.23076923076923078,
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -3036,7 +2673,7 @@
     "avg_confidence": 0.7980195879936218
   },
   {
-    "display_name": "Loyola Maryland",
+    "display_name": "Loyola MD",
     "games_played": 10,
     "wins": 4,
     "losses": 6,
@@ -3045,17 +2682,6 @@
     "correct_predictions": 1,
     "prediction_accuracy": 0.25,
     "avg_confidence": 0.7871164679527283
-  },
-  {
-    "display_name": "Loyola Marymount",
-    "games_played": 10,
-    "wins": 7,
-    "losses": 3,
-    "win_pct": 0.7,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.779313713312149
   },
   {
     "display_name": "Lynchburg",
@@ -3080,6 +2706,17 @@
     "avg_confidence": 0.0
   },
   {
+    "display_name": "MD Eastern",
+    "games_played": 11,
+    "wins": 4,
+    "losses": 7,
+    "win_pct": 0.36363636363636365,
+    "predictions_made": 4,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.25,
+    "avg_confidence": 0.8359645903110504
+  },
+  {
     "display_name": "MIT Engineers",
     "games_played": 1,
     "wins": 0,
@@ -3091,10 +2728,21 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Maine",
+    "display_name": "MTSU",
     "games_played": 8,
+    "wins": 5,
+    "losses": 3,
+    "win_pct": 0.625,
+    "predictions_made": 1,
+    "correct_predictions": 1,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8187569975852966
+  },
+  {
+    "display_name": "Maine",
+    "games_played": 11,
     "wins": 0,
-    "losses": 8,
+    "losses": 11,
     "win_pct": 0.0,
     "predictions_made": 2,
     "correct_predictions": 0,
@@ -3102,59 +2750,15 @@
     "avg_confidence": 0.785809725522995
   },
   {
-    "display_name": "Maine Black",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Maine-Augusta Moose",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Manhattan",
-    "games_played": 8,
+    "games_played": 10,
     "wins": 3,
-    "losses": 5,
-    "win_pct": 0.375,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 1,
     "correct_predictions": 1,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8436204195022583
-  },
-  {
-    "display_name": "Manhattan Christian Thunder",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Manhattanville Valiants",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Manor College",
@@ -3179,7 +2783,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Marist Red Foxes",
+    "display_name": "Marist",
     "games_played": 6,
     "wins": 4,
     "losses": 2,
@@ -3228,21 +2832,10 @@
     "wins": 6,
     "losses": 3,
     "win_pct": 0.6666666666666666,
-    "predictions_made": 5,
+    "predictions_made": 7,
     "correct_predictions": 4,
-    "prediction_accuracy": 0.8,
-    "avg_confidence": 0.8035686492919922
-  },
-  {
-    "display_name": "Maryland-Eastern Shore",
-    "games_played": 11,
-    "wins": 4,
-    "losses": 7,
-    "win_pct": 0.36363636363636365,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6692716479301453
+    "prediction_accuracy": 0.5714285714285714,
+    "avg_confidence": 0.7651980774743217
   },
   {
     "display_name": "Marywood Pacers",
@@ -3254,17 +2847,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Massachusetts",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 5,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7245143175125122
   },
   {
     "display_name": "Mayville St Comets",
@@ -3355,17 +2937,6 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Mercy",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Mercyhurst",
     "games_played": 8,
     "wins": 3,
@@ -3388,7 +2959,7 @@
     "avg_confidence": 0.6961706876754761
   },
   {
-    "display_name": "Miami (FL)",
+    "display_name": "Miami",
     "games_played": 9,
     "wins": 7,
     "losses": 2,
@@ -3399,7 +2970,7 @@
     "avg_confidence": 0.7401894181966782
   },
   {
-    "display_name": "Miami (OH)",
+    "display_name": "Miami OH",
     "games_played": 7,
     "wins": 7,
     "losses": 0,
@@ -3421,7 +2992,7 @@
     "avg_confidence": 0.7918141037225723
   },
   {
-    "display_name": "Michigan State",
+    "display_name": "Michigan St",
     "games_played": 8,
     "wins": 8,
     "losses": 0,
@@ -3452,17 +3023,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Middle Tennessee",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8187569975852966
   },
   {
     "display_name": "Midway University",
@@ -3542,7 +3102,18 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Mississippi State",
+    "display_name": "Miss Valley St",
+    "games_played": 9,
+    "wins": 1,
+    "losses": 8,
+    "win_pct": 0.1111111111111111,
+    "predictions_made": 0,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.0
+  },
+  {
+    "display_name": "Mississippi St",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -3564,51 +3135,18 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Mississippi Valley State",
-    "games_played": 9,
-    "wins": 1,
-    "losses": 8,
-    "win_pct": 0.1111111111111111,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Missouri",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
+    "losses": 3,
+    "win_pct": 0.7272727272727273,
     "predictions_made": 7,
     "correct_predictions": 4,
     "prediction_accuracy": 0.5714285714285714,
     "avg_confidence": 0.8002805539539882
   },
   {
-    "display_name": "Missouri Baptist",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Missouri Southern State",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Missouri State",
+    "display_name": "Missouri St",
     "games_played": 7,
     "wins": 4,
     "losses": 3,
@@ -3663,7 +3201,7 @@
     "avg_confidence": 0.8271548599004745
   },
   {
-    "display_name": "Montana State",
+    "display_name": "Montana St",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -3674,7 +3212,7 @@
     "avg_confidence": 0.8294008374214172
   },
   {
-    "display_name": "Morehead State",
+    "display_name": "Morehead St",
     "games_played": 9,
     "wins": 3,
     "losses": 6,
@@ -3685,7 +3223,7 @@
     "avg_confidence": 0.8355087041854858
   },
   {
-    "display_name": "Morgan State",
+    "display_name": "Morgan St",
     "games_played": 7,
     "wins": 1,
     "losses": 6,
@@ -3729,7 +3267,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Mount St. Mary's",
+    "display_name": "Mount St Marys",
     "games_played": 9,
     "wins": 2,
     "losses": 7,
@@ -3740,7 +3278,7 @@
     "avg_confidence": 0.7710355520248413
   },
   {
-    "display_name": "Murray State",
+    "display_name": "Murray St",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -3751,15 +3289,103 @@
     "avg_confidence": 0.7564046025276184
   },
   {
+    "display_name": "N Arizona",
+    "games_played": 7,
+    "wins": 4,
+    "losses": 3,
+    "win_pct": 0.5714285714285714,
+    "predictions_made": 3,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.756922721862793
+  },
+  {
+    "display_name": "N Colorado",
+    "games_played": 9,
+    "wins": 8,
+    "losses": 1,
+    "win_pct": 0.8888888888888888,
+    "predictions_made": 1,
+    "correct_predictions": 1,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8800256252288818
+  },
+  {
+    "display_name": "N Dakota St",
+    "games_played": 10,
+    "wins": 6,
+    "losses": 4,
+    "win_pct": 0.6,
+    "predictions_made": 4,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.8286413699388504
+  },
+  {
+    "display_name": "N Illinois",
+    "games_played": 8,
+    "wins": 3,
+    "losses": 5,
+    "win_pct": 0.375,
+    "predictions_made": 2,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.7521117925643921
+  },
+  {
+    "display_name": "N Kentucky",
+    "games_played": 9,
+    "wins": 7,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
+    "predictions_made": 4,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7956968992948532
+  },
+  {
+    "display_name": "N'Western St",
+    "games_played": 7,
+    "wins": 1,
+    "losses": 6,
+    "win_pct": 0.14285714285714285,
+    "predictions_made": 3,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.7301650842030843
+  },
+  {
+    "display_name": "NC A&T",
+    "games_played": 6,
+    "wins": 3,
+    "losses": 3,
+    "win_pct": 0.5,
+    "predictions_made": 3,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.3333333333333333,
+    "avg_confidence": 0.8340665499369303
+  },
+  {
+    "display_name": "NC Central",
+    "games_played": 10,
+    "wins": 3,
+    "losses": 7,
+    "win_pct": 0.3,
+    "predictions_made": 2,
+    "correct_predictions": 2,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8253536224365234
+  },
+  {
     "display_name": "NC State",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
     "win_pct": 0.625,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4,
-    "avg_confidence": 0.7448547720909119
+    "predictions_made": 4,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.25,
+    "avg_confidence": 0.7334125339984894
   },
   {
     "display_name": "NJIT",
@@ -3784,18 +3410,18 @@
     "avg_confidence": 0.8237265944480896
   },
   {
-    "display_name": "Nebraska Cornhuskers",
-    "games_played": 8,
+    "display_name": "Nebraska",
+    "games_played": 9,
     "wins": 8,
-    "losses": 0,
-    "win_pct": 1.0,
+    "losses": 1,
+    "win_pct": 0.8888888888888888,
     "predictions_made": 2,
     "correct_predictions": 2,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.7010077834129333
   },
   {
-    "display_name": "Nevada Wolf Pack",
+    "display_name": "Nevada",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -3828,7 +3454,7 @@
     "avg_confidence": 0.8184107542037964
   },
   {
-    "display_name": "New Haven Chargers",
+    "display_name": "New Haven",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -3840,28 +3466,17 @@
   },
   {
     "display_name": "New Mexico",
-    "games_played": 8,
+    "games_played": 12,
     "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "losses": 6,
+    "win_pct": 0.5,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.7252087593078613
   },
   {
-    "display_name": "New Mexico Highlands",
-    "games_played": 3,
-    "wins": 0,
-    "losses": 3,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "New Mexico State",
+    "display_name": "New Mexico St",
     "games_played": 7,
     "wins": 6,
     "losses": 1,
@@ -3873,17 +3488,17 @@
   },
   {
     "display_name": "New Orleans",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
+    "losses": 7,
+    "win_pct": 0.3,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Niagara Purple",
+    "display_name": "Niagara",
     "games_played": 7,
     "wins": 2,
     "losses": 5,
@@ -3894,7 +3509,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Nicholls State",
+    "display_name": "Nicholls",
     "games_played": 7,
     "wins": 0,
     "losses": 7,
@@ -3916,7 +3531,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Norfolk State",
+    "display_name": "Norfolk St",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -3949,62 +3564,18 @@
     "avg_confidence": 0.780462384223938
   },
   {
-    "display_name": "North Carolina A&T",
-    "games_played": 6,
-    "wins": 3,
-    "losses": 3,
-    "win_pct": 0.5,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.8340665499369303
-  },
-  {
-    "display_name": "North Carolina Central",
+    "display_name": "North Dakota",
     "games_played": 10,
     "wins": 3,
     "losses": 7,
     "win_pct": 0.3,
-    "predictions_made": 2,
-    "correct_predictions": 2,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8253536224365234
-  },
-  {
-    "display_name": "North Dakota",
-    "games_played": 9,
-    "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
   },
   {
-    "display_name": "North Dakota Fighting",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "North Dakota State",
-    "games_played": 9,
-    "wins": 6,
-    "losses": 3,
-    "win_pct": 0.6666666666666666,
-    "predictions_made": 4,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.75,
-    "avg_confidence": 0.8286413699388504
-  },
-  {
-    "display_name": "North Florida Ospreys",
+    "display_name": "North Florida",
     "games_played": 8,
     "wins": 2,
     "losses": 6,
@@ -4038,58 +3609,14 @@
   },
   {
     "display_name": "Northeastern",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 3,
-    "losses": 5,
-    "win_pct": 0.375,
+    "losses": 6,
+    "win_pct": 0.3333333333333333,
     "predictions_made": 2,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7677280902862549
-  },
-  {
-    "display_name": "Northeastern State RiverHawks",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Northern Arizona",
-    "games_played": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_pct": 0.5714285714285714,
-    "predictions_made": 3,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.756922721862793
-  },
-  {
-    "display_name": "Northern Colorado",
-    "games_played": 9,
-    "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8800256252288818
-  },
-  {
-    "display_name": "Northern Illinois",
-    "games_played": 8,
-    "wins": 3,
-    "losses": 5,
-    "win_pct": 0.375,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.7521117925643921
   },
   {
     "display_name": "Northern Iowa",
@@ -4101,17 +3628,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8376832008361816
-  },
-  {
-    "display_name": "Northern Kentucky Norse",
-    "games_played": 9,
-    "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
-    "predictions_made": 4,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7956968992948532
   },
   {
     "display_name": "Northern State",
@@ -4137,36 +3653,14 @@
   },
   {
     "display_name": "Northwestern",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
     "avg_confidence": 0.726338267326355
-  },
-  {
-    "display_name": "Northwestern Oklahoma State Rangers",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Northwestern State",
-    "games_played": 7,
-    "wins": 1,
-    "losses": 6,
-    "win_pct": 0.14285714285714285,
-    "predictions_made": 3,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.7301650842030843
   },
   {
     "display_name": "Northwood (MI) Timberwolves",
@@ -4181,47 +3675,25 @@
   },
   {
     "display_name": "Notre Dame",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 6,
-    "losses": 3,
-    "win_pct": 0.6666666666666666,
+    "losses": 5,
+    "win_pct": 0.5454545454545454,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.8228576421737671
   },
   {
-    "display_name": "Notre Dame (MD)",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Oakland",
-    "games_played": 9,
+    "games_played": 13,
     "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
+    "losses": 9,
+    "win_pct": 0.3076923076923077,
     "predictions_made": 2,
     "correct_predictions": 2,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8344814479351044
-  },
-  {
-    "display_name": "Oakland City Mighty Oaks",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Oakwood",
@@ -4247,25 +3719,14 @@
   },
   {
     "display_name": "Ohio",
-    "games_played": 8,
+    "games_played": 10,
     "wins": 2,
-    "losses": 6,
-    "win_pct": 0.25,
+    "losses": 8,
+    "win_pct": 0.2,
     "predictions_made": 2,
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.826969176530838
-  },
-  {
-    "display_name": "Ohio Christian",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Ohio State",
@@ -4279,40 +3740,18 @@
     "avg_confidence": 0.82963727414608
   },
   {
-    "display_name": "Ohio Wesleyan Battling Bishops",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Oklahoma",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
+    "losses": 3,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.8372447292009989
   },
   {
-    "display_name": "Oklahoma Christian OKLAHOMA CHRISTIAN",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Oklahoma State",
+    "display_name": "Oklahoma St",
     "games_played": 8,
     "wins": 8,
     "losses": 0,
@@ -4367,18 +3806,18 @@
     "avg_confidence": 0.8317479491233826
   },
   {
-    "display_name": "Oregon Ducks",
-    "games_played": 8,
+    "display_name": "Oregon",
+    "games_played": 10,
     "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
+    "losses": 6,
+    "win_pct": 0.4,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
     "avg_confidence": 0.6569081942240397
   },
   {
-    "display_name": "Oregon State",
+    "display_name": "Oregon St",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -4387,17 +3826,6 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.3333333333333333,
     "avg_confidence": 0.7658223112424215
-  },
-  {
-    "display_name": "Ottawa University Arizona",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Our Lady Of The Lake Saints",
@@ -4423,25 +3851,14 @@
   },
   {
     "display_name": "Pacific",
-    "games_played": 9,
-    "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
+    "games_played": 15,
+    "wins": 8,
+    "losses": 7,
+    "win_pct": 0.5333333333333333,
     "predictions_made": 3,
     "correct_predictions": 3,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8251415093739828
-  },
-  {
-    "display_name": "Pacific Lutheran",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Paine",
@@ -4477,11 +3894,11 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Penn St Abington",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
+    "display_name": "Penn",
+    "games_played": 12,
+    "wins": 5,
+    "losses": 7,
+    "win_pct": 0.4166666666666667,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -4489,58 +3906,14 @@
   },
   {
     "display_name": "Penn State",
-    "games_played": 9,
+    "games_played": 15,
     "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
+    "losses": 7,
+    "win_pct": 0.5333333333333333,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.8,
     "avg_confidence": 0.8260080456733704
-  },
-  {
-    "display_name": "Penn State-New Kensington",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Penn State-Shenango",
-    "games_played": 4,
-    "wins": 0,
-    "losses": 4,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Penn State-York",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Pennsylvania",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Pensacola Christian College PENSACOLA CHRISTIAN",
@@ -4598,26 +3971,15 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Pittsburgh",
-    "games_played": 9,
+    "display_name": "Pitt",
+    "games_played": 10,
     "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
+    "losses": 5,
+    "win_pct": 0.5,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.7887271881103516
-  },
-  {
-    "display_name": "Pittsburgh - Greensburg",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Plattsburgh St",
@@ -4653,7 +4015,7 @@
     "avg_confidence": 0.8242195248603821
   },
   {
-    "display_name": "Portland State",
+    "display_name": "Portland St",
     "games_played": 7,
     "wins": 5,
     "losses": 2,
@@ -4664,7 +4026,7 @@
     "avg_confidence": 0.8197228908538818
   },
   {
-    "display_name": "Prairie View A&M",
+    "display_name": "Prairie View",
     "games_played": 8,
     "wins": 3,
     "losses": 5,
@@ -4730,7 +4092,7 @@
     "avg_confidence": 0.8028225064277649
   },
   {
-    "display_name": "Purdue Fort Wayne",
+    "display_name": "Purdue FW",
     "games_played": 10,
     "wins": 4,
     "losses": 6,
@@ -4962,25 +4324,58 @@
   },
   {
     "display_name": "Rutgers",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
+    "losses": 5,
+    "win_pct": 0.5,
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7422186136245728
   },
   {
-    "display_name": "Rutgers-Camden Scarlet Raptors",
-    "games_played": 1,
+    "display_name": "S Dakota St",
+    "games_played": 9,
+    "wins": 5,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
+    "predictions_made": 4,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7729461491107941
+  },
+  {
+    "display_name": "S Illinois",
+    "games_played": 9,
+    "wins": 5,
+    "losses": 4,
+    "win_pct": 0.5555555555555556,
+    "predictions_made": 3,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.3333333333333333,
+    "avg_confidence": 0.7298250595728556
+  },
+  {
+    "display_name": "SC State",
+    "games_played": 8,
     "wins": 0,
-    "losses": 1,
+    "losses": 8,
     "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 3,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "avg_confidence": 0.6732296347618103
+  },
+  {
+    "display_name": "SC Upstate",
+    "games_played": 10,
+    "wins": 5,
+    "losses": 5,
+    "win_pct": 0.5,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.8225958049297333
   },
   {
     "display_name": "SE Louisiana",
@@ -4994,7 +4389,29 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "SIU Edwardsville",
+    "display_name": "SE Missouri",
+    "games_played": 9,
+    "wins": 3,
+    "losses": 6,
+    "win_pct": 0.3333333333333333,
+    "predictions_made": 2,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8268654346466064
+  },
+  {
+    "display_name": "SF Austin",
+    "games_played": 8,
+    "wins": 6,
+    "losses": 2,
+    "win_pct": 0.75,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.6268000602722168
+  },
+  {
+    "display_name": "SIUE",
     "games_played": 9,
     "wins": 6,
     "losses": 3,
@@ -5060,7 +4477,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Sacramento State",
+    "display_name": "Sacramento St",
     "games_played": 10,
     "wins": 4,
     "losses": 6,
@@ -5071,7 +4488,7 @@
     "avg_confidence": 0.8112283945083618
   },
   {
-    "display_name": "Sacred Heart Pioneers",
+    "display_name": "Sacred Heart",
     "games_played": 8,
     "wins": 3,
     "losses": 5,
@@ -5102,17 +4519,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7820823192596436
-  },
-  {
-    "display_name": "Saint Josephs Long Island",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Saint Louis",
@@ -5170,7 +4576,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Sam Houston State",
+    "display_name": "Sam Houston",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -5178,7 +4584,7 @@
     "predictions_made": 2,
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7610473036766052
+    "avg_confidence": 0.8189531564712524
   },
   {
     "display_name": "Samford",
@@ -5192,18 +4598,7 @@
     "avg_confidence": 0.8394598960876465
   },
   {
-    "display_name": "San Diego State",
-    "games_played": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_pct": 0.5714285714285714,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.7073626716931661
-  },
-  {
-    "display_name": "San Diego Toreros",
+    "display_name": "San Diego",
     "games_played": 7,
     "wins": 3,
     "losses": 4,
@@ -5214,26 +4609,26 @@
     "avg_confidence": 0.6352816820144653
   },
   {
-    "display_name": "San Francisco Dons",
-    "games_played": 9,
+    "display_name": "San Diego St",
+    "games_played": 7,
+    "wins": 4,
+    "losses": 3,
+    "win_pct": 0.5714285714285714,
+    "predictions_made": 3,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.3333333333333333,
+    "avg_confidence": 0.7073626716931661
+  },
+  {
+    "display_name": "San Francisco",
+    "games_played": 11,
     "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
+    "losses": 6,
+    "win_pct": 0.45454545454545453,
     "predictions_made": 4,
     "correct_predictions": 3,
     "prediction_accuracy": 0.75,
     "avg_confidence": 0.7303964495658875
-  },
-  {
-    "display_name": "San Francisco State",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "San Jose State",
@@ -5245,6 +4640,17 @@
     "correct_predictions": 1,
     "prediction_accuracy": 0.25,
     "avg_confidence": 0.7047573626041412
+  },
+  {
+    "display_name": "Santa Barbara",
+    "games_played": 9,
+    "wins": 7,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
+    "predictions_made": 4,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7750698775053024
   },
   {
     "display_name": "Santa Clara",
@@ -5280,22 +4686,11 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Seattle",
-    "games_played": 7,
-    "wins": 5,
-    "losses": 2,
-    "win_pct": 0.7142857142857143,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6682095527648926
-  },
-  {
     "display_name": "Seattle U",
-    "games_played": 1,
-    "wins": 1,
-    "losses": 0,
-    "win_pct": 1.0,
+    "games_played": 8,
+    "wins": 6,
+    "losses": 2,
+    "win_pct": 0.75,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -5324,7 +4719,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Siena Saints",
+    "display_name": "Siena",
     "games_played": 9,
     "wins": 7,
     "losses": 2,
@@ -5357,7 +4752,7 @@
     "avg_confidence": 0.7928846478462219
   },
   {
-    "display_name": "South Carolina Gamecocks",
+    "display_name": "South Carolina",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -5368,48 +4763,15 @@
     "avg_confidence": 0.6937101185321808
   },
   {
-    "display_name": "South Carolina State",
-    "games_played": 8,
-    "wins": 0,
-    "losses": 8,
-    "win_pct": 0.0,
-    "predictions_made": 3,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6732296347618103
-  },
-  {
-    "display_name": "South Carolina Upstate",
-    "games_played": 10,
-    "wins": 5,
-    "losses": 5,
-    "win_pct": 0.5,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8225958049297333
-  },
-  {
     "display_name": "South Dakota",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
     "win_pct": 0.5555555555555556,
-    "predictions_made": 4,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.75,
-    "avg_confidence": 0.7819225937128067
-  },
-  {
-    "display_name": "South Dakota State Jackrabbits",
-    "games_played": 9,
-    "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
-    "predictions_made": 4,
+    "predictions_made": 3,
     "correct_predictions": 2,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7729461491107941
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.7586712837219238
   },
   {
     "display_name": "South Florida",
@@ -5417,65 +4779,21 @@
     "wins": 5,
     "losses": 4,
     "win_pct": 0.5555555555555556,
-    "predictions_made": 2,
+    "predictions_made": 1,
     "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8007240295410156
-  },
-  {
-    "display_name": "Southeast Missouri State",
-    "games_played": 9,
-    "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.8268654346466064
-  },
-  {
-    "display_name": "Southeastern Louisiana",
-    "games_played": 3,
-    "wins": 2,
-    "losses": 1,
-    "win_pct": 0.6666666666666666,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8494299650192261
   },
   {
     "display_name": "Southern",
-    "games_played": 8,
-    "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
+    "games_played": 13,
+    "wins": 6,
+    "losses": 7,
+    "win_pct": 0.46153846153846156,
     "predictions_made": 2,
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.6921276152133942
-  },
-  {
-    "display_name": "Southern Arkansas Muleriders",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Southern Illinois",
-    "games_played": 9,
-    "wins": 5,
-    "losses": 4,
-    "win_pct": 0.5555555555555556,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.7298250595728556
   },
   {
     "display_name": "Southern Indiana",
@@ -5483,21 +4801,10 @@
     "wins": 3,
     "losses": 6,
     "win_pct": 0.3333333333333333,
-    "predictions_made": 2,
+    "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.604452908039093
-  },
-  {
-    "display_name": "Southern Methodist",
-    "games_played": 2,
-    "wins": 2,
-    "losses": 0,
-    "win_pct": 1.0,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.6296733021736145
+    "avg_confidence": 0.8516765236854553
   },
   {
     "display_name": "Southern Miss",
@@ -5511,7 +4818,7 @@
     "avg_confidence": 0.8140406608581543
   },
   {
-    "display_name": "Southern Utah Thunderbirds",
+    "display_name": "Southern Utah",
     "games_played": 10,
     "wins": 4,
     "losses": 6,
@@ -5520,28 +4827,6 @@
     "correct_predictions": 1,
     "prediction_accuracy": 1.0,
     "avg_confidence": 0.8442472815513611
-  },
-  {
-    "display_name": "Southern Virginia",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Southern-New Orleans",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Southwestern Adventist",
@@ -5577,6 +4862,39 @@
     "avg_confidence": 0.0
   },
   {
+    "display_name": "St Bonaventure",
+    "games_played": 9,
+    "wins": 8,
+    "losses": 1,
+    "win_pct": 0.8888888888888888,
+    "predictions_made": 4,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.6962310075759888
+  },
+  {
+    "display_name": "St John's",
+    "games_played": 7,
+    "wins": 4,
+    "losses": 3,
+    "win_pct": 0.5714285714285714,
+    "predictions_made": 3,
+    "correct_predictions": 3,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8206412394841512
+  },
+  {
+    "display_name": "St Thomas (MN)",
+    "games_played": 10,
+    "wins": 6,
+    "losses": 4,
+    "win_pct": 0.6,
+    "predictions_made": 2,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7797106802463531
+  },
+  {
     "display_name": "St. Ambrose Fighting Bees",
     "games_played": 1,
     "wins": 0,
@@ -5586,17 +4904,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
-  },
-  {
-    "display_name": "St. Bonaventure",
-    "games_played": 9,
-    "wins": 8,
-    "losses": 1,
-    "win_pct": 0.8888888888888888,
-    "predictions_made": 4,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.6962310075759888
   },
   {
     "display_name": "St. Elizabeth",
@@ -5619,17 +4926,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.0
-  },
-  {
-    "display_name": "St. John's",
-    "games_played": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_pct": 0.5714285714285714,
-    "predictions_made": 3,
-    "correct_predictions": 3,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8206412394841512
   },
   {
     "display_name": "St. Joseph's (NY)",
@@ -5676,48 +4972,15 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "St. Thomas-Minnesota Tommies",
-    "games_played": 10,
-    "wins": 6,
-    "losses": 4,
-    "win_pct": 0.6,
-    "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7797106802463531
-  },
-  {
-    "display_name": "St. Xavier  (IL)",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Stanford Cardinal",
+    "display_name": "Stanford",
     "games_played": 8,
     "wins": 7,
     "losses": 1,
     "win_pct": 0.875,
-    "predictions_made": 1,
-    "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.791814923286438
-  },
-  {
-    "display_name": "Stephen F. Austin",
-    "games_played": 8,
-    "wins": 6,
-    "losses": 2,
-    "win_pct": 0.75,
     "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.6268000602722168
+    "correct_predictions": 2,
+    "prediction_accuracy": 1.0,
+    "avg_confidence": 0.8198672831058502
   },
   {
     "display_name": "Stetson",
@@ -5753,7 +5016,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Syracuse Orange",
+    "display_name": "Syracuse",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -5764,7 +5027,7 @@
     "avg_confidence": 0.6770224372545878
   },
   {
-    "display_name": "TCU Horned Frogs",
+    "display_name": "TCU",
     "games_played": 7,
     "wins": 5,
     "losses": 2,
@@ -5775,7 +5038,7 @@
     "avg_confidence": 0.6155044734477997
   },
   {
-    "display_name": "Tarleton",
+    "display_name": "Tarleton St",
     "games_played": 10,
     "wins": 6,
     "losses": 4,
@@ -5798,28 +5061,17 @@
   },
   {
     "display_name": "Tennessee",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
+    "losses": 4,
+    "win_pct": 0.6363636363636364,
     "predictions_made": 4,
     "correct_predictions": 3,
     "prediction_accuracy": 0.75,
     "avg_confidence": 0.8220932185649872
   },
   {
-    "display_name": "Tennessee Southern Firehawks",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Tennessee State",
+    "display_name": "Tennessee St",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -5835,35 +5087,35 @@
     "wins": 3,
     "losses": 6,
     "win_pct": 0.3333333333333333,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.828342060248057
-  },
-  {
-    "display_name": "Tennessee Wesleyan",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 2,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "avg_confidence": 0.8283241093158722
+  },
+  {
+    "display_name": "Texas",
+    "games_played": 11,
+    "wins": 6,
+    "losses": 5,
+    "win_pct": 0.5454545454545454,
+    "predictions_made": 4,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.79363052546978
   },
   {
     "display_name": "Texas A&M",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
+    "losses": 4,
+    "win_pct": 0.6363636363636364,
     "predictions_made": 4,
     "correct_predictions": 3,
     "prediction_accuracy": 0.75,
     "avg_confidence": 0.8262486606836319
   },
   {
-    "display_name": "Texas A&M-Corpus Christi",
+    "display_name": "Texas A&M-CC",
     "games_played": 7,
     "wins": 2,
     "losses": 5,
@@ -5872,39 +5124,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7961093187332153
-  },
-  {
-    "display_name": "Texas A&M-San Antonio",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Texas Longhorns",
-    "games_played": 9,
-    "wins": 6,
-    "losses": 3,
-    "win_pct": 0.6666666666666666,
-    "predictions_made": 4,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.75,
-    "avg_confidence": 0.79363052546978
-  },
-  {
-    "display_name": "Texas Lutheran",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Texas Southern",
@@ -5918,7 +5137,7 @@
     "avg_confidence": 0.8323146104812622
   },
   {
-    "display_name": "Texas State",
+    "display_name": "Texas St",
     "games_played": 11,
     "wins": 6,
     "losses": 5,
@@ -5941,10 +5160,10 @@
   },
   {
     "display_name": "The Citadel",
-    "games_played": 7,
+    "games_played": 9,
     "wins": 2,
-    "losses": 5,
-    "win_pct": 0.2857142857142857,
+    "losses": 7,
+    "win_pct": 0.2222222222222222,
     "predictions_made": 0,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -6050,17 +5269,6 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Trinity College of Jacksonville",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Troy",
     "games_played": 10,
     "wins": 5,
@@ -6072,7 +5280,7 @@
     "avg_confidence": 0.8500000238418579
   },
   {
-    "display_name": "Tulane Green Wave",
+    "display_name": "Tulane",
     "games_played": 8,
     "wins": 6,
     "losses": 2,
@@ -6083,7 +5291,7 @@
     "avg_confidence": 0.70641561349233
   },
   {
-    "display_name": "Tulsa Golden Hurricane",
+    "display_name": "Tulsa",
     "games_played": 8,
     "wins": 7,
     "losses": 1,
@@ -6092,17 +5300,6 @@
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
     "avg_confidence": 0.7474464376767477
-  },
-  {
-    "display_name": "Tusculum Pioneers",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "UAB",
@@ -6116,7 +5313,7 @@
     "avg_confidence": 0.7646960616111755
   },
   {
-    "display_name": "UAlbany Great Danes",
+    "display_name": "UAlbany",
     "games_played": 9,
     "wins": 3,
     "losses": 6,
@@ -6171,26 +5368,15 @@
     "avg_confidence": 0.8294008374214172
   },
   {
-    "display_name": "UC San Diego Tritons",
+    "display_name": "UC San Diego",
     "games_played": 8,
     "wins": 7,
     "losses": 1,
     "win_pct": 0.875,
-    "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.8405341804027557
-  },
-  {
-    "display_name": "UC Santa Barbara",
-    "games_played": 9,
-    "wins": 7,
-    "losses": 2,
-    "win_pct": 0.7777777777777778,
     "predictions_made": 4,
     "correct_predictions": 2,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7750698775053024
+    "avg_confidence": 0.8319108337163925
   },
   {
     "display_name": "UC Santa Cruz Banana Slugs",
@@ -6248,7 +5434,7 @@
     "avg_confidence": 0.6883532702922821
   },
   {
-    "display_name": "UL Monroe Warhawks",
+    "display_name": "UL Monroe",
     "games_played": 8,
     "wins": 2,
     "losses": 6,
@@ -6270,15 +5456,15 @@
     "avg_confidence": 0.7603477537631989
   },
   {
-    "display_name": "UMass Lowell River",
-    "games_played": 9,
-    "wins": 3,
-    "losses": 6,
-    "win_pct": 0.3333333333333333,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.8500000238418579
+    "display_name": "UMass",
+    "games_played": 17,
+    "wins": 8,
+    "losses": 9,
+    "win_pct": 0.47058823529411764,
+    "predictions_made": 6,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7454286019007365
   },
   {
     "display_name": "UNC Asheville",
@@ -6303,7 +5489,7 @@
     "avg_confidence": 0.6483882069587708
   },
   {
-    "display_name": "UNC Wilmington Seahawks",
+    "display_name": "UNC Wilmington",
     "games_played": 9,
     "wins": 8,
     "losses": 1,
@@ -6337,10 +5523,10 @@
   },
   {
     "display_name": "USC",
-    "games_played": 8,
+    "games_played": 9,
     "wins": 8,
-    "losses": 0,
-    "win_pct": 1.0,
+    "losses": 1,
+    "win_pct": 0.8888888888888888,
     "predictions_made": 3,
     "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
@@ -6380,7 +5566,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "UT Rio Grande Valley Vaqueros",
+    "display_name": "UT Rio Grande",
     "games_played": 7,
     "wins": 2,
     "losses": 5,
@@ -6440,10 +5626,10 @@
     "wins": 6,
     "losses": 3,
     "win_pct": 0.6666666666666666,
-    "predictions_made": 5,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7439545631408692
+    "predictions_made": 4,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7234921306371689
   },
   {
     "display_name": "Utah State",
@@ -6479,15 +5665,26 @@
     "avg_confidence": 0.7492044121026993
   },
   {
+    "display_name": "VCU",
+    "games_played": 8,
+    "wins": 5,
+    "losses": 3,
+    "win_pct": 0.625,
+    "predictions_made": 3,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.3333333333333333,
+    "avg_confidence": 0.7247659166653951
+  },
+  {
     "display_name": "VMI",
     "games_played": 10,
     "wins": 3,
     "losses": 7,
     "win_pct": 0.3,
-    "predictions_made": 3,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.8471266031265259
+    "predictions_made": 2,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8491507768630981
   },
   {
     "display_name": "Valley Forge",
@@ -6501,7 +5698,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Valparaiso Beacons",
+    "display_name": "Valparaiso",
     "games_played": 8,
     "wins": 5,
     "losses": 3,
@@ -6535,36 +5732,14 @@
   },
   {
     "display_name": "Vermont",
-    "games_played": 10,
+    "games_played": 13,
     "wins": 5,
-    "losses": 5,
-    "win_pct": 0.5,
+    "losses": 8,
+    "win_pct": 0.38461538461538464,
     "predictions_made": 3,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.7153250177701315
-  },
-  {
-    "display_name": "Vermont State - Johnson",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Vermont State - Lyndon",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Villanova",
@@ -6579,36 +5754,14 @@
   },
   {
     "display_name": "Virginia",
-    "games_played": 8,
-    "wins": 7,
-    "losses": 1,
-    "win_pct": 0.875,
-    "predictions_made": 5,
+    "games_played": 10,
+    "wins": 8,
+    "losses": 2,
+    "win_pct": 0.8,
+    "predictions_made": 6,
     "correct_predictions": 4,
-    "prediction_accuracy": 0.8,
-    "avg_confidence": 0.7952880740165711
-  },
-  {
-    "display_name": "Virginia Commonwealth",
-    "games_played": 8,
-    "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
-    "predictions_made": 3,
-    "correct_predictions": 2,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7663282752037048
-  },
-  {
-    "display_name": "Virginia St",
-    "games_played": 1,
-    "wins": 1,
-    "losses": 0,
-    "win_pct": 1.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "avg_confidence": 0.7989615400632223
   },
   {
     "display_name": "Virginia Tech",
@@ -6627,10 +5780,10 @@
     "wins": 0,
     "losses": 7,
     "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 3,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
+    "avg_confidence": 0.8410647312800089
   },
   {
     "display_name": "Voorhees",
@@ -6644,7 +5797,40 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Wagner Seahawks",
+    "display_name": "W Carolina",
+    "games_played": 8,
+    "wins": 4,
+    "losses": 4,
+    "win_pct": 0.5,
+    "predictions_made": 4,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.8257846087217331
+  },
+  {
+    "display_name": "W Illinois",
+    "games_played": 9,
+    "wins": 2,
+    "losses": 7,
+    "win_pct": 0.2222222222222222,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8500000238418579
+  },
+  {
+    "display_name": "W Michigan",
+    "games_played": 9,
+    "wins": 4,
+    "losses": 5,
+    "win_pct": 0.4444444444444444,
+    "predictions_made": 3,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.819430927435557
+  },
+  {
+    "display_name": "Wagner",
     "games_played": 7,
     "wins": 1,
     "losses": 6,
@@ -6678,39 +5864,17 @@
   },
   {
     "display_name": "Washington",
-    "games_played": 8,
+    "games_played": 13,
     "wins": 5,
-    "losses": 3,
-    "win_pct": 0.625,
+    "losses": 8,
+    "win_pct": 0.38461538461538464,
     "predictions_made": 2,
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
     "avg_confidence": 0.7874327003955841
   },
   {
-    "display_name": "Washington Adventist Shock",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Washington College (MD) Shoremen",
-    "games_played": 2,
-    "wins": 0,
-    "losses": 2,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Washington State",
+    "display_name": "Washington St",
     "games_played": 9,
     "wins": 3,
     "losses": 6,
@@ -6719,17 +5883,6 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.8392744064331055
-  },
-  {
-    "display_name": "Washington and Lee",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
   },
   {
     "display_name": "Waynesburg",
@@ -6743,7 +5896,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Weber State",
+    "display_name": "Weber St",
     "games_played": 8,
     "wins": 4,
     "losses": 4,
@@ -6798,40 +5951,7 @@
     "avg_confidence": 0.8271374940872193
   },
   {
-    "display_name": "West Virginia Wesleyan",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Western Carolina",
-    "games_played": 8,
-    "wins": 4,
-    "losses": 4,
-    "win_pct": 0.5,
-    "predictions_made": 4,
-    "correct_predictions": 3,
-    "prediction_accuracy": 0.75,
-    "avg_confidence": 0.8257846087217331
-  },
-  {
-    "display_name": "Western Illinois",
-    "games_played": 9,
-    "wins": 2,
-    "losses": 7,
-    "win_pct": 0.2222222222222222,
-    "predictions_made": 1,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.8500000238418579
-  },
-  {
-    "display_name": "Western Kentucky",
+    "display_name": "Western KY",
     "games_played": 7,
     "wins": 5,
     "losses": 2,
@@ -6842,29 +5962,7 @@
     "avg_confidence": 0.7575695067644119
   },
   {
-    "display_name": "Western Michigan",
-    "games_played": 9,
-    "wins": 4,
-    "losses": 5,
-    "win_pct": 0.4444444444444444,
-    "predictions_made": 3,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.819430927435557
-  },
-  {
     "display_name": "Western New England Golden",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
-    "display_name": "Western New Mexico",
     "games_played": 1,
     "wins": 0,
     "losses": 1,
@@ -6886,17 +5984,6 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Whitman Missionaries",
-    "games_played": 1,
-    "wins": 0,
-    "losses": 1,
-    "win_pct": 0.0,
-    "predictions_made": 0,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0
-  },
-  {
     "display_name": "Whittier Poets",
     "games_played": 1,
     "wins": 0,
@@ -6908,7 +5995,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Wichita State",
+    "display_name": "Wichita St",
     "games_played": 9,
     "wins": 5,
     "losses": 4,
@@ -7029,7 +6116,7 @@
     "avg_confidence": 0.0
   },
   {
-    "display_name": "Wright State",
+    "display_name": "Wright St",
     "games_played": 9,
     "wins": 4,
     "losses": 5,
@@ -7052,10 +6139,10 @@
   },
   {
     "display_name": "Xavier",
-    "games_played": 9,
+    "games_played": 10,
     "wins": 6,
-    "losses": 3,
-    "win_pct": 0.6666666666666666,
+    "losses": 4,
+    "win_pct": 0.6,
     "predictions_made": 5,
     "correct_predictions": 3,
     "prediction_accuracy": 0.6,
@@ -7073,7 +6160,7 @@
     "avg_confidence": 0.7895650148391724
   },
   {
-    "display_name": "Youngstown State",
+    "display_name": "Youngstown St",
     "games_played": 9,
     "wins": 5,
     "losses": 4,

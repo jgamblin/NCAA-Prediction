@@ -567,7 +567,7 @@ def export_to_json(output_dir: Path = None):
     # =========================================================================
     print("\n7b. Exporting all teams...")
     
-    # Get all teams from games this season (build from games table directly)
+    # Get all teams from games this season (use CANONICAL names)
     all_teams_query = """
         WITH team_games AS (
             SELECT 
@@ -575,15 +575,15 @@ def export_to_json(output_dir: Path = None):
                 SUM(games) as games_played,
                 SUM(wins) as wins
             FROM (
-                SELECT home_team as team_name, COUNT(*) as games, 
+                SELECT home_team_canonical as team_name, COUNT(*) as games, 
                        SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
                 FROM games WHERE season = ? AND game_status = 'Final'
-                GROUP BY home_team
+                GROUP BY home_team_canonical
                 UNION ALL
-                SELECT away_team as team_name, COUNT(*) as games,
+                SELECT away_team_canonical as team_name, COUNT(*) as games,
                        SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
                 FROM games WHERE season = ? AND game_status = 'Final'
-                GROUP BY away_team
+                GROUP BY away_team_canonical
             )
             GROUP BY team_name
         ),
@@ -593,8 +593,8 @@ def export_to_json(output_dir: Path = None):
                 COUNT(DISTINCT p.game_id) as predictions_made,
                 SUM(CASE 
                     WHEN g.game_status = 'Final' 
-                    AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
-                         OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                    AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
+                         OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
                     THEN 1 ELSE 0 END) as correct_predictions,
                 AVG(p.confidence) as avg_confidence
             FROM predictions p
