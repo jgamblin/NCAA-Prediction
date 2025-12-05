@@ -832,27 +832,52 @@ class AdaptivePredictor:
         self.min_games_threshold = chosen
         print(f"Dynamic min_games_threshold set to {self.min_games_threshold} ({self.min_games_threshold_source})")
 
-    def fit(self, train_df):
+    def fit(self, train_df, use_validation=True, val_days=14):
         """
         Train the model on historical data.
 
         Args:
             train_df: DataFrame with training data
+            use_validation: If True, use validation set for calibration (default: True)
+            val_days: Days to use for validation (default: 14)
 
         Returns:
             self for method chaining
         """
+        
+        # ================================================================
+        # CRITICAL: Split into train/validation for proper calibration
+        # ================================================================
+        if use_validation and len(train_df) > 200:  # Need enough data to split
+            from model_training.train_val_split import create_validation_split
+            
+            print("\nCreating train/validation split for calibration...")
+            train_only, val_data = create_validation_split(train_df, val_days=val_days)
+            
+            # Store both for feature initialization
+            self._historical_games = train_df.copy()  # Full data for features
+            self._validation_data = val_data.copy()   # Held-out for calibration
+            
+            # Use training-only set for model training
+            train_df_for_model = train_only
+        else:
+            print("\n⚠️  Warning: Skipping validation split (not enough data or disabled)")
+            self._historical_games = train_df.copy()
+            self._validation_data = None
+            train_df_for_model = train_df
 
         # Store raw training data for Phase 2 feature calculations
-        self._historical_games = train_df.copy()
+        # (Already stored above, but keep for compatibility)
 
-        # Initialize Phase 2 features before prepare_data
-        self._init_phase2_features(train_df)
+        # Initialize Phase 2 features before prepare_data (use full data)
+        self._init_phase2_features(self._historical_games)
 
         # Initialize Phase 4 features (depends on Phase 2 for power ratings)
-        self._init_phase4_features(train_df)
+        self._init_phase4_features(self._historical_games)
 
-        train_df = self.prepare_data(train_df)
+        # Prepare training data
+        train_df_prepared = self.prepare_data(train_df_for_model.copy())
+        train_df = train_df_prepared
         self.training_data = train_df  # Store for game count lookups
 
         # --- TEAM LABEL ENCODER FIX ---
@@ -934,22 +959,76 @@ class AdaptivePredictor:
         except Exception as exc:
             print(f"Feature importance logging skipped: {exc}")
 
-        # Store home-court logit adjustment (shifts probabilities away from automatic home bias)
-        # Configure home-court probability adjustment
-        try:
-            self._configure_home_court_shift(X, y)
-        except Exception as exc:
-            print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
-            self.home_court_logit_shift_value = 0.0
-            self.home_court_logit_shift_source = 'error'
-            self.home_court_logit_shift_target = None
+        # ================================================================
+        # CALIBRATION: Use validation set if available, otherwise training
+        # ================================================================
+        if self._validation_data is not None:
+            print("\nCalibrating on validation set...")
+            
+            # Prepare validation data
+            val_prepared = self.prepare_data(self._validation_data.copy())
+            y_val = val_prepared['home_win']
+            
+            # Align validation features to trained features (same as predict)
+            trained_features = getattr(self._raw_model, 'feature_names_in_', None)
+            if trained_features is not None:
+                X_val = val_prepared.reindex(columns=list(trained_features), fill_value=0)
+            else:
+                val_features = [c for c in available if c in val_prepared.columns]
+                X_val = val_prepared[val_features]
+            
+            # Get raw probabilities on validation set
+            val_probs_raw = self._raw_model.predict_proba(X_val)[:, 1]
+            
+            # Fit isotonic regression calibrator
+            from sklearn.isotonic import IsotonicRegression
+            self.isotonic_calibrator = IsotonicRegression(out_of_bounds='clip')
+            self.isotonic_calibrator.fit(val_probs_raw, y_val)
+            
+            # Test calibration improvement
+            from model_training.calibration_metrics import expected_calibration_error
+            val_probs_calibrated = self.isotonic_calibrator.transform(val_probs_raw)
+            ece_before = expected_calibration_error(y_val.values, val_probs_raw)
+            ece_after = expected_calibration_error(y_val.values, val_probs_calibrated)
+            
+            print(f"  Validation set: {len(y_val)} games")
+            print(f"  ECE before calibration: {ece_before:.4f}")
+            print(f"  ECE after calibration:  {ece_after:.4f}")
+            print(f"  ✓ Improvement: {(ece_before - ece_after) / max(ece_before, 1e-6) * 100:.1f}%")
+            
+            # Configure temperature and home court on validation set
+            try:
+                self._configure_home_court_shift(X_val, y_val)
+            except Exception as exc:
+                print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
+                self.home_court_logit_shift_value = 0.0
+                self.home_court_logit_shift_source = 'error'
 
-        try:
-            self._configure_confidence_temperature(X, y)
-        except Exception as exc:
-            print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
-            self.confidence_temperature_value = 0.85
-            self.confidence_temperature_source = 'error'
+            try:
+                self._configure_confidence_temperature(X_val, y_val)
+            except Exception as exc:
+                print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
+                self.confidence_temperature_value = 0.85
+                self.confidence_temperature_source = 'error'
+        else:
+            print("\n⚠️  Warning: No validation set - calibrating on training data (not recommended!)")
+            self.isotonic_calibrator = None
+            
+            # Fallback to training set (not ideal)
+            try:
+                self._configure_home_court_shift(X, y)
+            except Exception as exc:
+                print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
+                self.home_court_logit_shift_value = 0.0
+                self.home_court_logit_shift_source = 'error'
+                self.home_court_logit_shift_target = None
+
+            try:
+                self._configure_confidence_temperature(X, y)
+            except Exception as exc:
+                print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
+                self.confidence_temperature_value = 0.85
+                self.confidence_temperature_source = 'error'
 
         return self
 
@@ -1053,8 +1132,19 @@ class AdaptivePredictor:
         else:
             available = [c for c in self.feature_cols if c in upcoming_valid.columns]
             X_upcoming = upcoming_valid[available]
-        base_probs = self.model.predict_proba(X_upcoming)[:, 1]
+        
+        # Get RAW probabilities from model
+        base_probs = self._raw_model.predict_proba(X_upcoming)[:, 1]
+        
+        # CRITICAL: Apply isotonic calibration FIRST (if available)
+        if hasattr(self, 'isotonic_calibrator') and self.isotonic_calibrator is not None:
+            base_probs = self.isotonic_calibrator.transform(base_probs)
+            # Isotonic calibration applied - probabilities should now be well-calibrated
+        
+        # Then apply home court shift
         home_probs_adj = self._apply_home_court_shift(base_probs)
+        
+        # Finally apply temperature scaling
         probabilities = self._apply_confidence_temperature(home_probs_adj)
         
         # Apply early season adjustment (Phase 1 Task 1.4)
