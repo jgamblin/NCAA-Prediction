@@ -145,14 +145,14 @@ class AdaptivePredictor:
         use_rest_days=True,
         model_type='random_forest',
         use_ensemble=False,
-        # XGBoost-specific hyperparameters (Week 2 tuning)
+        # XGBoost-specific hyperparameters (Week 2 tuning, optimized)
         xgb_max_depth=6,
-        xgb_learning_rate=0.1,
+        xgb_learning_rate=0.05,  # Optimized: Slower learning is more stable
         xgb_n_estimators=150,
         xgb_subsample=0.8,
         xgb_colsample_bytree=0.8,
-        xgb_reg_alpha=0.1,
-        xgb_reg_lambda=1.0,
+        xgb_reg_alpha=0.1,  # Optimized: Minimal regularization performs best
+        xgb_reg_lambda=1.0,  # Optimized: Balanced L2
         # RandomForest-specific hyperparameters (Week 2 tuning)
         rf_max_features='sqrt',
         rf_min_samples_leaf=10,
