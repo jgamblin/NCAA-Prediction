@@ -1254,6 +1254,52 @@ class AdaptivePredictor:
             print(f"✓ Generated predictions for {len(results_df)} games ({len(low_data_games)} with limited data, confidence reduced by 25%)")
         else:
             print(f"✓ Generated predictions for {len(results_df)} games")
+        
+        # Generate explanations for each prediction
+        try:
+            # Load feature importance from last training
+            if os.path.exists(self.feature_importance_path):
+                feature_importance = pd.read_csv(self.feature_importance_path)
+                explainer = PredictionExplainer(feature_importance)
+                
+                explanations = []
+                for idx, row in results_df.iterrows():
+                    # Get features for this game from upcoming_valid
+                    game_idx = upcoming_valid[upcoming_valid['game_id'] == row['game_id']].index
+                    if len(game_idx) > 0:
+                        game_idx = game_idx[0]
+                        # Extract feature values
+                        if trained_features is not None:
+                            features = X_upcoming.loc[game_idx].to_dict()
+                        else:
+                            features = upcoming_valid.loc[game_idx][available].to_dict()
+                        
+                        # Generate explanation
+                        explanation = explainer.explain_prediction(
+                            home_team=row['home_team'],
+                            away_team=row['away_team'],
+                            predicted_winner=row['predicted_winner'],
+                            confidence=row['confidence'],
+                            features=features
+                        )
+                    else:
+                        explanation = f"{row['predicted_winner']} is favored to win this matchup."
+                    
+                    explanations.append(explanation)
+                
+                results_df['explanation'] = explanations
+            else:
+                # No feature importance available, use simple explanation
+                results_df['explanation'] = results_df.apply(
+                    lambda row: f"{row['predicted_winner']} is favored to win this matchup.",
+                    axis=1
+                )
+        except Exception as e:
+            print(f"  ⚠️  Could not generate explanations: {e}")
+            results_df['explanation'] = results_df.apply(
+                lambda row: f"{row['predicted_winner']} is favored to win this matchup.",
+                axis=1
+            )
 
         return results_df
 
