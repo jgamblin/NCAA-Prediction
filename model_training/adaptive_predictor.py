@@ -440,12 +440,19 @@ class AdaptivePredictor:
         """
         df = df.copy()
 
-        # Normalize team names to handle inconsistencies
-        # (e.g., "Indiana" vs "Indiana Hoosiers")
-        if 'home_team' in df.columns:
-            df['home_team'] = df['home_team'].apply(normalize_team_name)
-        if 'away_team' in df.columns:
-            df['away_team'] = df['away_team'].apply(normalize_team_name)
+        # Use canonical team names if available (from ESPN normalization)
+        # Otherwise fall back to regular team names with normalization
+        if 'home_team_canonical' in df.columns and 'away_team_canonical' in df.columns:
+            # Use canonical names for model (already normalized)
+            df['home_team'] = df['home_team_canonical']
+            df['away_team'] = df['away_team_canonical']
+        else:
+            # Backwards compatibility: Normalize team names manually
+            # (e.g., "Indiana" vs "Indiana Hoosiers")
+            if 'home_team' in df.columns:
+                df['home_team'] = df['home_team'].apply(normalize_team_name)
+            if 'away_team' in df.columns:
+                df['away_team'] = df['away_team'].apply(normalize_team_name)
 
         # Add home_win if scores exist
         if 'home_score' in df.columns and 'away_score' in df.columns:
