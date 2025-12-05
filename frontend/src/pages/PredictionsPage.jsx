@@ -68,6 +68,11 @@ export default function PredictionsPage() {
     if (filter === 'with-predictions') return game.predicted_winner && game.confidence
     if (filter === 'no-predictions') return !game.predicted_winner
     return true
+  }).sort((a, b) => {
+    // Sort by confidence (highest first) for games with predictions
+    const confA = a.confidence || 0
+    const confB = b.confidence || 0
+    return confB - confA
   })
   
   const gamesWithPredictions = dateFilteredGames.filter(g => g.predicted_winner && g.confidence).length
@@ -81,7 +86,7 @@ export default function PredictionsPage() {
            "All Upcoming Games"}
         </h1>
         <p className="text-gray-600">
-          {dateFilteredGames.length} games ({gamesWithPredictions} with predictions)
+          {dateFilteredGames.length} games ({gamesWithPredictions} with predictions) • Sorted by confidence
         </p>
       </div>
 
