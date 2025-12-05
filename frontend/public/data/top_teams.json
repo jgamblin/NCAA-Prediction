@@ -22,15 +22,15 @@
     "team_losses": 1
   },
   {
-    "team_id": "Texas Tech",
-    "display_name": "Texas Tech",
+    "team_id": "Indiana",
+    "display_name": "Indiana",
     "conference": null,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.7751662135124207,
-    "team_wins": 6,
-    "team_losses": 2
+    "avg_confidence": 0.8430395483970642,
+    "team_wins": 7,
+    "team_losses": 1
   },
   {
     "team_id": "Missouri",
@@ -41,17 +41,6 @@
     "prediction_accuracy": 0.800000011920929,
     "avg_confidence": 0.8433424353599548,
     "team_wins": 8,
-    "team_losses": 1
-  },
-  {
-    "team_id": "Indiana",
-    "display_name": "Indiana",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8430395483970642,
-    "team_wins": 7,
     "team_losses": 1
   },
   {
@@ -77,6 +66,17 @@
     "team_losses": 2
   },
   {
+    "team_id": "Texas Tech",
+    "display_name": "Texas Tech",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.7751662135124207,
+    "team_wins": 6,
+    "team_losses": 2
+  },
+  {
     "team_id": "UCLA",
     "display_name": "UCLA",
     "conference": null,
@@ -99,6 +99,17 @@
     "team_losses": 3
   },
   {
+    "team_id": "UC Irvine",
+    "display_name": "UC Irvine",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.6000000238418579,
+    "avg_confidence": 0.804553496837616,
+    "team_wins": 6,
+    "team_losses": 4
+  },
+  {
     "team_id": "Marquette",
     "display_name": "Marquette",
     "conference": null,
@@ -106,6 +117,17 @@
     "correct_predictions": 2,
     "prediction_accuracy": 0.4000000059604645,
     "avg_confidence": 0.7970734119415284,
+    "team_wins": 5,
+    "team_losses": 4
+  },
+  {
+    "team_id": "Florida Gulf Coast",
+    "display_name": "Florida Gulf Coast",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.4000000059604645,
+    "avg_confidence": 0.8067614674568176,
     "team_wins": 5,
     "team_losses": 4
   },
@@ -119,17 +141,6 @@
     "avg_confidence": 0.7625703096389771,
     "team_wins": 4,
     "team_losses": 5
-  },
-  {
-    "team_id": "Florida Gulf Coast",
-    "display_name": "Florida Gulf Coast",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4000000059604645,
-    "avg_confidence": 0.8067614674568176,
-    "team_wins": 5,
-    "team_losses": 4
   },
   {
     "team_id": "Air Force",
