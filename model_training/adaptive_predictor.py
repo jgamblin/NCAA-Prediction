@@ -145,6 +145,17 @@ class AdaptivePredictor:
         use_rest_days=True,
         model_type='random_forest',
         use_ensemble=False,
+        # XGBoost-specific hyperparameters (Week 2 tuning)
+        xgb_max_depth=6,
+        xgb_learning_rate=0.1,
+        xgb_n_estimators=150,
+        xgb_subsample=0.8,
+        xgb_colsample_bytree=0.8,
+        xgb_reg_alpha=0.1,
+        xgb_reg_lambda=1.0,
+        # RandomForest-specific hyperparameters (Week 2 tuning)
+        rf_max_features='sqrt',
+        rf_min_samples_leaf=10,
     ):
         """
         Initialize the predictor.
@@ -176,11 +187,13 @@ class AdaptivePredictor:
             try:
                 import xgboost as xgb
                 base_model = xgb.XGBClassifier(
-                    n_estimators=n_estimators * 2,  # XGBoost typically uses more
-                    max_depth=min(max_depth, 8),    # XGBoost works better with shallower trees
-                    learning_rate=0.1,
-                    subsample=0.8,
-                    colsample_bytree=0.8,
+                    n_estimators=xgb_n_estimators,
+                    max_depth=xgb_max_depth,
+                    learning_rate=xgb_learning_rate,
+                    subsample=xgb_subsample,
+                    colsample_bytree=xgb_colsample_bytree,
+                    reg_alpha=xgb_reg_alpha,     # L1 regularization (Week 2)
+                    reg_lambda=xgb_reg_lambda,   # L2 regularization (Week 2)
                     random_state=42,
                     n_jobs=-1,
                     verbosity=0,
@@ -192,6 +205,8 @@ class AdaptivePredictor:
                     n_estimators=n_estimators,
                     max_depth=max_depth,
                     min_samples_split=min_samples_split,
+                    max_features=rf_max_features,         # Week 2 regularization
+                    min_samples_leaf=rf_min_samples_leaf, # Week 2 regularization
                     random_state=42,
                     n_jobs=-1
                 )
@@ -200,6 +215,8 @@ class AdaptivePredictor:
                 n_estimators=n_estimators,
                 max_depth=max_depth,
                 min_samples_split=min_samples_split,
+                max_features=rf_max_features,         # Week 2 regularization
+                min_samples_leaf=rf_min_samples_leaf, # Week 2 regularization
                 random_state=42,
                 n_jobs=-1
             )
