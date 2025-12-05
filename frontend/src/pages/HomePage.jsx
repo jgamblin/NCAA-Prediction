@@ -21,7 +21,14 @@ export default function HomePage() {
           fetchMetadata()
         ])
         
-        setTodayGames(games)
+        // Sort games by confidence (highest first) to show best predictions
+        const sortedGames = games.sort((a, b) => {
+          const confA = a.confidence || 0
+          const confB = b.confidence || 0
+          return confB - confA  // Descending order
+        })
+        
+        setTodayGames(sortedGames)
         setBettingSummary(betting)
         setAccuracy(acc)
         setMetadata(meta)
@@ -148,7 +155,8 @@ export default function HomePage() {
       {/* Today's Games List */}
       {todayGames.length > 0 ? (
         <div className="card">
-          <h2 className="text-2xl font-bold mb-4">Today's Games</h2>
+          <h2 className="text-2xl font-bold mb-4">Today's Top Predictions</h2>
+          <p className="text-sm text-gray-600 mb-4">Highest confidence games for today</p>
           <div className="space-y-3">
             {todayGames.slice(0, 5).map((game) => (
               <GameCard 
