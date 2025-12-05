@@ -110,7 +110,7 @@ export default function HomePage() {
               {bettingSummary?.wins || 0}W - {bettingSummary?.losses || 0}L
               {bettingSummary && bettingSummary.total_bets > 0 && (
                 <span className={`ml-2 ${bettingSummary.total_profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-                  ({bettingSummary.total_profit >= 0 ? '+' : ''}{bettingSummary.total_profit?.toFixed(2)} units)
+                  ({bettingSummary.total_profit >= 0 ? '+' : ''}${bettingSummary.total_profit?.toFixed(2)})
                 </span>
               )}
             </p>

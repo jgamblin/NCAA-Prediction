@@ -70,7 +70,7 @@ export default function BettingPage() {
           <div className="card">
             <p className="text-sm text-gray-600 mb-1">Total Profit</p>
             <p className={`text-3xl font-bold ${summary.total_profit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              {summary.total_profit >= 0 ? '+' : ''}{summary.total_profit?.toFixed(2)}
+              {summary.total_profit >= 0 ? '+' : ''}${summary.total_profit?.toFixed(2)}
             </p>
           </div>
           
