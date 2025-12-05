@@ -589,18 +589,44 @@ def export_to_json(output_dir: Path = None):
         ),
         team_predictions AS (
             SELECT 
-                p.predicted_winner as team_name,
-                COUNT(DISTINCT p.game_id) as predictions_made,
-                SUM(CASE 
-                    WHEN g.game_status = 'Final' 
-                    AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
-                         OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
-                    THEN 1 ELSE 0 END) as correct_predictions,
-                AVG(p.confidence) as avg_confidence
-            FROM predictions p
-            JOIN games g ON p.game_id = g.game_id
-            WHERE g.season = ?
-            GROUP BY p.predicted_winner
+                team_name,
+                COUNT(DISTINCT game_id) as predictions_made,
+                SUM(correct) as correct_predictions,
+                AVG(confidence) as avg_confidence
+            FROM (
+                -- Predictions for home games
+                SELECT 
+                    g.home_team_canonical as team_name,
+                    p.game_id,
+                    p.confidence,
+                    CASE 
+                        WHEN g.game_status = 'Final' 
+                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        THEN 1 ELSE 0 
+                    END as correct
+                FROM predictions p
+                JOIN games g ON p.game_id = g.game_id
+                WHERE g.season = ?
+                
+                UNION ALL
+                
+                -- Predictions for away games
+                SELECT 
+                    g.away_team_canonical as team_name,
+                    p.game_id,
+                    p.confidence,
+                    CASE 
+                        WHEN g.game_status = 'Final' 
+                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        THEN 1 ELSE 0 
+                    END as correct
+                FROM predictions p
+                JOIN games g ON p.game_id = g.game_id
+                WHERE g.season = ?
+            )
+            GROUP BY team_name
         )
         SELECT 
             tg.team_name as display_name,
@@ -614,7 +640,7 @@ def export_to_json(output_dir: Path = None):
         ORDER BY tg.team_name
     """
     
-    all_teams_df = db.fetch_df(all_teams_query, (current_season, current_season, current_season))
+    all_teams_df = db.fetch_df(all_teams_query, (current_season, current_season, current_season, current_season))
     
     all_teams_data = []
     for _, row in all_teams_df.iterrows():
