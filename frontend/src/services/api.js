@@ -102,6 +102,11 @@ export const fetchAccuracyHighConfidence = () => fetchJSON('accuracy_high_confid
 export const fetchTopTeams = () => fetchJSON('top_teams.json');
 
 /**
+ * Fetch all teams (for searchable Teams page)
+ */
+export const fetchAllTeams = () => fetchJSON('all_teams.json');
+
+/**
  * Fetch metadata (last update time, stats, etc.)
  */
 export const fetchMetadata = () => fetchJSON('metadata.json');

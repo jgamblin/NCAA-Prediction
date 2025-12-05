@@ -563,6 +563,82 @@ def export_to_json(output_dir: Path = None):
     print(f"   ✓ Exported top {len(top_teams_data)} teams")
     
     # =========================================================================
+    # 7b. Export ALL Teams (for searchable Teams page)
+    # =========================================================================
+    print("\n7b. Exporting all teams...")
+    
+    # Get all teams from games this season (build from games table directly)
+    all_teams_query = """
+        WITH team_games AS (
+            SELECT 
+                team_name,
+                SUM(games) as games_played,
+                SUM(wins) as wins
+            FROM (
+                SELECT home_team as team_name, COUNT(*) as games, 
+                       SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = ? AND game_status = 'Final'
+                GROUP BY home_team
+                UNION ALL
+                SELECT away_team as team_name, COUNT(*) as games,
+                       SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = ? AND game_status = 'Final'
+                GROUP BY away_team
+            )
+            GROUP BY team_name
+        ),
+        team_predictions AS (
+            SELECT 
+                p.predicted_winner as team_name,
+                COUNT(DISTINCT p.game_id) as predictions_made,
+                SUM(CASE 
+                    WHEN g.game_status = 'Final' 
+                    AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                         OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                    THEN 1 ELSE 0 END) as correct_predictions,
+                AVG(p.confidence) as avg_confidence
+            FROM predictions p
+            JOIN games g ON p.game_id = g.game_id
+            WHERE g.season = ?
+            GROUP BY p.predicted_winner
+        )
+        SELECT 
+            tg.team_name as display_name,
+            tg.games_played,
+            tg.wins,
+            COALESCE(tp.predictions_made, 0) as predictions_made,
+            COALESCE(tp.correct_predictions, 0) as correct_predictions,
+            COALESCE(tp.avg_confidence, 0.0) as avg_confidence
+        FROM team_games tg
+        LEFT JOIN team_predictions tp ON tg.team_name = tp.team_name
+        ORDER BY tg.team_name
+    """
+    
+    all_teams_df = db.fetch_df(all_teams_query, (current_season, current_season, current_season))
+    
+    all_teams_data = []
+    for _, row in all_teams_df.iterrows():
+        losses = row['games_played'] - row['wins']
+        prediction_accuracy = (row['correct_predictions'] / row['predictions_made']) if row['predictions_made'] > 0 else 0.0
+        
+        team_data = {
+            'display_name': row['display_name'],
+            'games_played': int(row['games_played']),
+            'wins': int(row['wins']),
+            'losses': int(losses),
+            'win_pct': float(row['wins'] / row['games_played']) if row['games_played'] > 0 else 0.0,
+            'predictions_made': int(row['predictions_made']),
+            'correct_predictions': int(row['correct_predictions']),
+            'prediction_accuracy': float(prediction_accuracy),
+            'avg_confidence': float(row['avg_confidence'])
+        }
+        all_teams_data.append(team_data)
+    
+    with open(output_dir / 'all_teams.json', 'w') as f:
+        json.dump(all_teams_data, f, indent=2, default=json_serial)
+    print(f"   ✓ Exported {len(all_teams_data)} teams")
+    
+    # =========================================================================
     # 8. Export Prediction History (Complete 2025-26 Season)
     # =========================================================================
     print("\n8. Exporting prediction history...")

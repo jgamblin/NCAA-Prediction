@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react'
-import { fetchTopTeams } from '../services/api'
-import { Users, TrendingUp } from 'lucide-react'
+import { fetchAllTeams } from '../services/api'
+import { Users, Search } from 'lucide-react'
 
 export default function TeamsPage() {
   const [teams, setTeams] = useState([])
+  const [filteredTeams, setFilteredTeams] = useState([])
+  const [searchQuery, setSearchQuery] = useState('')
   const [loading, setLoading] = useState(true)
   
   useEffect(() => {
     async function loadTeams() {
       try {
-        const data = await fetchTopTeams()
+        const data = await fetchAllTeams()
         setTeams(data)
+        setFilteredTeams(data)
       } catch (error) {
         console.error('Failed to load teams:', error)
       } finally {
@@ -20,6 +23,20 @@ export default function TeamsPage() {
     
     loadTeams()
   }, [])
+  
+  // Filter teams based on search
+  useEffect(() => {
+    let filtered = teams
+    
+    // Apply search filter
+    if (searchQuery) {
+      filtered = filtered.filter(team => 
+        team.display_name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    }
+    
+    setFilteredTeams(filtered)
+  }, [searchQuery, teams])
   
   if (loading) {
     return (
@@ -32,14 +49,29 @@ export default function TeamsPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Prediction Accuracy by Team</h1>
-        <p className="text-gray-600 mt-1">Teams we predict most accurately (minimum 5 predictions)</p>
+        <h1 className="text-3xl font-bold text-gray-900">All Teams</h1>
+        <p className="text-gray-600 mt-1">{teams.length} teams • {filteredTeams.length} showing</p>
       </div>
       
-      {teams.length === 0 ? (
+      {/* Search */}
+      <div className="card">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+          <input
+            type="text"
+            placeholder="Search teams..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+        </div>
+      </div>
+      
+      {filteredTeams.length === 0 ? (
         <div className="card text-center py-12">
           <Users className="mx-auto text-gray-400 mb-4" size={48} />
-          <p className="text-gray-600">No team data available</p>
+          <p className="text-gray-600 font-medium">No teams found</p>
+          <p className="text-sm text-gray-500 mt-2">Try a different search or filter</p>
         </div>
       ) : (
         <div className="card">
@@ -47,53 +79,65 @@ export default function TeamsPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b">
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Rank</th>
                   <th className="text-left py-3 px-4 font-semibold text-gray-700">Team</th>
+                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Record</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Our Accuracy</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Predictions</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Avg Confidence</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Team Record</th>
                 </tr>
               </thead>
               <tbody>
-                {teams.map((team, index) => (
-                  <tr key={team.team_id} className="border-b hover:bg-gray-50">
+                {filteredTeams.map((team) => (
+                  <tr key={team.display_name} className="border-b hover:bg-gray-50">
                     <td className="py-3 px-4">
-                      <div className="flex items-center space-x-2">
-                        <span className="font-bold text-gray-900">#{index + 1}</span>
-                        {index < 3 && <TrendingUp className="text-yellow-500" size={16} />}
-                      </div>
+                      <p className="font-semibold text-gray-900">{team.display_name}</p>
                     </td>
-                    <td className="py-3 px-4">
-                      <div>
-                        <p className="font-semibold text-gray-900">{team.display_name}</p>
-                        {team.conference && (
-                          <p className="text-xs text-gray-500">{team.conference}</p>
-                        )}
-                      </div>
-                    </td>
-                    <td className="py-3 px-4 text-center">
-                      <span className="font-semibold text-primary-600">
-                        {(team.prediction_accuracy * 100).toFixed(1)}%
+                    <td className="py-3 px-4 text-center text-gray-700">
+                      <span className="font-medium">{team.wins}</span>
+                      <span className="text-gray-500">-</span>
+                      <span className="font-medium">{team.losses}</span>
+                      <span className="text-xs text-gray-400 ml-2">
+                        ({(team.win_pct * 100).toFixed(0)}%)
                       </span>
                     </td>
-                    <td className="py-3 px-4 text-center text-gray-700">
-                      <span className="font-medium">{team.correct_predictions}</span>
-                      <span className="text-gray-500">/{team.predictions_made}</span>
+                    <td className="py-3 px-4 text-center">
+                      {team.predictions_made > 0 ? (
+                        <span className="font-semibold text-primary-600">
+                          {(team.prediction_accuracy * 100).toFixed(1)}%
+                        </span>
+                      ) : (
+                        <span className="text-gray-400">-</span>
+                      )}
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
-                      {(team.avg_confidence * 100).toFixed(1)}%
+                      {team.predictions_made > 0 ? (
+                        <>
+                          <span className="font-medium">{team.correct_predictions}</span>
+                          <span className="text-gray-500">/{team.predictions_made}</span>
+                        </>
+                      ) : (
+                        <span className="text-gray-400">0</span>
+                      )}
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
-                      <span className="font-medium">{team.team_wins || 0}</span>
-                      <span className="text-gray-500">-</span>
-                      <span className="font-medium">{team.team_losses || 0}</span>
+                      {team.predictions_made > 0 ? (
+                        `${(team.avg_confidence * 100).toFixed(1)}%`
+                      ) : (
+                        <span className="text-gray-400">-</span>
+                      )}
                     </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          
+          {/* Pagination hint for large result sets */}
+          {filteredTeams.length > 100 && (
+            <div className="mt-4 text-center text-sm text-gray-500">
+              Showing {filteredTeams.length} teams. Use search to narrow results.
+            </div>
+          )}
         </div>
       )}
     </div>
