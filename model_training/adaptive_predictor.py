@@ -156,6 +156,8 @@ class AdaptivePredictor:
         # RandomForest-specific hyperparameters (Week 2 tuning)
         rf_max_features='sqrt',
         rf_min_samples_leaf=10,
+        # Feature selection (Week 2.5)
+        remove_useless_features=True,
     ):
         """
         Initialize the predictor.
@@ -320,6 +322,16 @@ class AdaptivePredictor:
         
         # Phase 4 advanced features
         self.use_conference_strength = _feature_flags.get('use_conference_strength', True)
+        
+        # Week 2.5: Feature selection
+        self.remove_useless_features = remove_useless_features
+        self.useless_features = [
+            'home_team_encoded', 'away_team_encoded',
+            'home_rank', 'away_rank', 'rank_diff', 'is_ranked_matchup',
+            'is_neutral',
+            'home_conf_rating', 'away_conf_rating', 'conf_rating_diff',
+            'home_team_home_adv', 'home_team_home_margin'
+        ]
         self.use_recency_weighting = _feature_flags.get('use_recency_weighting', True)
         self._conference_strength = None  # Will be initialized during fit()
         self._recency_weighting = None  # Will be initialized during fit()
@@ -509,6 +521,14 @@ class AdaptivePredictor:
         for col in self.phase4_feature_cols:
             if col in df.columns and col not in self.feature_cols:
                 self.feature_cols.append(col)
+        
+        # Week 2.5: Remove useless features if enabled
+        if self.remove_useless_features:
+            features_to_drop = [f for f in self.useless_features if f in df.columns]
+            if features_to_drop:
+                df = df.drop(columns=features_to_drop)
+                # Also remove from feature_cols list
+                self.feature_cols = [f for f in self.feature_cols if f not in self.useless_features]
         
         return df
     
@@ -930,21 +950,14 @@ class AdaptivePredictor:
             train_df['home_team_encoded'] = train_df['home_team_id'].map(self.team_target_encoding).fillna(0.5)
             train_df['away_team_encoded'] = train_df['away_team_id'].map(self.team_target_encoding).fillna(0.5)
         else:
-            # Fallback: 0.5 for all
-            train_df['home_team_encoded'] = 0.5
-            train_df['away_team_encoded'] = 0.5
+            pass  # Use LabelEncoder values (already done above)
 
-        # Train model
-        # Filter feature columns that exist (dynamic expansion with feature store)
-        available = [c for c in self.feature_cols if c in train_df.columns]
-        if set(self.feature_cols) - set(available):
-            missing = set(self.feature_cols) - set(available)
-            if missing:
-                print(f"Note: Skipping missing feature columns: {sorted(missing)}")
-        X = train_df[available]
+        # Extract features and target
         y = train_df['home_win']
+        available = [c for c in self.feature_cols if c in train_df.columns]
+        X = train_df[available]
 
-        print(f"Training model on {len(train_df)} games...")
+        print(f"Training model on {len(train_df)} games with {len(available)} features...")
         self._raw_model.fit(X, y)
         if self.calibrate and self.calibration_method in ('sigmoid', 'isotonic'):
             try:
