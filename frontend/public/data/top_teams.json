@@ -33,28 +33,6 @@
     "team_losses": 1
   },
   {
-    "team_id": "George Washington",
-    "display_name": "George Washington",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8260777711868286,
-    "team_wins": 7,
-    "team_losses": 2
-  },
-  {
-    "team_id": "Missouri",
-    "display_name": "Missouri",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8433424353599548,
-    "team_wins": 8,
-    "team_losses": 1
-  },
-  {
     "team_id": "Georgia",
     "display_name": "Georgia",
     "conference": null,
@@ -75,6 +53,28 @@
     "avg_confidence": 0.7751662135124207,
     "team_wins": 6,
     "team_losses": 2
+  },
+  {
+    "team_id": "George Washington",
+    "display_name": "George Washington",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.8260777711868286,
+    "team_wins": 7,
+    "team_losses": 2
+  },
+  {
+    "team_id": "Missouri",
+    "display_name": "Missouri",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.8433424353599548,
+    "team_wins": 8,
+    "team_losses": 1
   },
   {
     "team_id": "UCLA",
