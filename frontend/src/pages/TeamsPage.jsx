@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import { fetchAllTeams } from '../services/api'
-import { Users, Search } from 'lucide-react'
+import { Users, Search, ChevronUp, ChevronDown } from 'lucide-react'
 
 export default function TeamsPage() {
   const [teams, setTeams] = useState([])
   const [filteredTeams, setFilteredTeams] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const [loading, setLoading] = useState(true)
+  const [sortKey, setSortKey] = useState('prediction_accuracy')
+  const [sortDirection, setSortDirection] = useState('desc')
   
   useEffect(() => {
     async function loadTeams() {
@@ -24,7 +26,55 @@ export default function TeamsPage() {
     loadTeams()
   }, [])
   
-  // Filter teams based on search
+  // Sort function
+  const sortTeams = (teamsToSort, key, direction) => {
+    return [...teamsToSort].sort((a, b) => {
+      let aVal = a[key]
+      let bVal = b[key]
+      
+      // Handle string sorting (for team names, conference)
+      if (typeof aVal === 'string' || typeof bVal === 'string') {
+        // Convert to strings and handle empty values
+        aVal = String(aVal || '')
+        bVal = String(bVal || '')
+        return direction === 'asc' 
+          ? aVal.localeCompare(bVal)
+          : bVal.localeCompare(aVal)
+      }
+      
+      // Special handling for prediction_accuracy - treat teams with 0 predictions as lowest
+      if (key === 'prediction_accuracy') {
+        const aHasPredictions = a.predictions_made > 0
+        const bHasPredictions = b.predictions_made > 0
+        
+        // If one has predictions and one doesn't, prioritize the one with predictions
+        if (aHasPredictions && !bHasPredictions) return direction === 'desc' ? -1 : 1
+        if (!aHasPredictions && bHasPredictions) return direction === 'desc' ? 1 : -1
+      }
+      
+      // Handle numeric sorting
+      if (direction === 'asc') {
+        return aVal - bVal
+      } else {
+        return bVal - aVal
+      }
+    })
+  }
+  
+  // Handle sort header click
+  const handleSort = (key) => {
+    let newDirection = 'desc'
+    
+    // If clicking same column, toggle direction
+    if (sortKey === key) {
+      newDirection = sortDirection === 'asc' ? 'desc' : 'asc'
+    }
+    
+    setSortKey(key)
+    setSortDirection(newDirection)
+  }
+  
+  // Filter and sort teams
   useEffect(() => {
     let filtered = teams
     
@@ -35,8 +85,11 @@ export default function TeamsPage() {
       )
     }
     
+    // Apply sorting
+    filtered = sortTeams(filtered, sortKey, sortDirection)
+    
     setFilteredTeams(filtered)
-  }, [searchQuery, teams])
+  }, [searchQuery, teams, sortKey, sortDirection])
   
   if (loading) {
     return (
@@ -79,12 +132,72 @@ export default function TeamsPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b">
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Team</th>
-                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Conference</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Record</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Our Accuracy</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Predictions</th>
-                  <th className="text-center py-3 px-4 font-semibold text-gray-700">Avg Confidence</th>
+                  <th 
+                    className="text-left py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('display_name')}
+                  >
+                    <div className="flex items-center">
+                      Team
+                      {sortKey === 'display_name' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
+                  <th 
+                    className="text-left py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('conference')}
+                  >
+                    <div className="flex items-center">
+                      Conference
+                      {sortKey === 'conference' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
+                  <th 
+                    className="text-center py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('win_pct')}
+                  >
+                    <div className="flex items-center justify-center">
+                      Record
+                      {sortKey === 'win_pct' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
+                  <th 
+                    className="text-center py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('prediction_accuracy')}
+                  >
+                    <div className="flex items-center justify-center">
+                      Our Accuracy
+                      {sortKey === 'prediction_accuracy' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
+                  <th 
+                    className="text-center py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('predictions_made')}
+                  >
+                    <div className="flex items-center justify-center">
+                      Predictions
+                      {sortKey === 'predictions_made' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
+                  <th 
+                    className="text-center py-3 px-4 font-semibold text-gray-700 cursor-pointer hover:bg-gray-50"
+                    onClick={() => handleSort('avg_confidence')}
+                  >
+                    <div className="flex items-center justify-center">
+                      Avg Confidence
+                      {sortKey === 'avg_confidence' && (
+                        sortDirection === 'asc' ? <ChevronUp size={16} className="ml-1" /> : <ChevronDown size={16} className="ml-1" />
+                      )}
+                    </div>
+                  </th>
                 </tr>
               </thead>
               <tbody>
