@@ -1119,6 +1119,15 @@ class AdaptivePredictor:
         
         # Apply 0.75x confidence multiplier for low-data games
         results_df.loc[results_df['has_insufficient_data'], 'confidence'] *= 0.75
+        
+        # CONFIDENCE CAP: NCAA basketball is too unpredictable for >85% confidence
+        # Historical data shows even our "best" predictions aren't more than ~80% accurate
+        results_df['confidence'] = results_df['confidence'].clip(upper=0.85)
+        
+        # Even more conservative cap for low-data teams (max 75%)
+        if results_df['has_insufficient_data'].any():
+            low_data_mask = results_df['has_insufficient_data']
+            results_df.loc[low_data_mask, 'confidence'] = results_df.loc[low_data_mask, 'confidence'].clip(upper=0.75)
 
         if low_data_games:
             print(f"✓ Generated predictions for {len(results_df)} games ({len(low_data_games)} with limited data, confidence reduced by 25%)")
