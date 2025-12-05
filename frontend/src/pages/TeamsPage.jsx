@@ -93,8 +93,8 @@ export default function TeamsPage() {
                     <td className="py-3 px-4">
                       <p className="font-semibold text-gray-900">{team.display_name}</p>
                     </td>
-                    <td className="py-3 px-4 text-gray-600">
-                      {team.conference || 'Unknown'}
+                    <td className="py-3 px-4 text-gray-600 text-sm">
+                      {team.conference}
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
                       <span className="font-medium">{team.wins}</span>

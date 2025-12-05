@@ -669,7 +669,7 @@ def export_to_json(output_dir: Path = None):
             'correct_predictions': int(row['correct_predictions']),
             'prediction_accuracy': float(prediction_accuracy),
             'avg_confidence': float(row['avg_confidence']),
-            'conference': conference_map.get(row['display_name'], 'Independent')
+            'conference': conference_map.get(row['display_name'], '')
         }
         all_teams_data.append(team_data)
     
