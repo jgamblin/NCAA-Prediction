@@ -182,6 +182,70 @@ class PredictionsRepository:
         
         return inserted
     
+    def upsert_prediction(self, prediction_data: Dict) -> Optional[int]:
+        """
+        Insert or update a prediction. Only keeps one prediction per game.
+        Replaces existing prediction if one exists for this game_id.
+        """
+        # First, try to find existing prediction
+        existing = self.get_latest_prediction(prediction_data['game_id'])
+        
+        if existing:
+            # Update existing prediction
+            query = """
+                UPDATE predictions
+                SET prediction_date = ?,
+                    home_win_prob = ?,
+                    away_win_prob = ?,
+                    predicted_winner = ?,
+                    predicted_home_win = ?,
+                    confidence = ?,
+                    model_name = ?,
+                    model_version = ?,
+                    config_version = ?,
+                    commit_hash = ?,
+                    source = ?
+                WHERE id = ?
+            """
+            
+            try:
+                with self.db.transaction() as conn:
+                    conn.execute(query, (
+                        prediction_data.get('prediction_date', datetime.now()),
+                        prediction_data['home_win_prob'],
+                        prediction_data['away_win_prob'],
+                        prediction_data['predicted_winner'],
+                        prediction_data['predicted_home_win'],
+                        prediction_data['confidence'],
+                        prediction_data.get('model_name', 'Unknown'),
+                        prediction_data.get('model_version'),
+                        prediction_data.get('config_version'),
+                        prediction_data.get('commit_hash'),
+                        prediction_data.get('source', 'live'),
+                        existing['id']
+                    ))
+                return existing['id']
+            except Exception as e:
+                print(f"Error updating prediction: {e}")
+                return None
+        else:
+            # Insert new prediction
+            return self.insert_prediction(prediction_data)
+    
+    def bulk_upsert_predictions(self, predictions: List[Dict]) -> int:
+        """
+        Bulk upsert predictions - replaces existing predictions instead of creating duplicates.
+        This is the recommended method for the daily pipeline.
+        """
+        upserted = 0
+        
+        for pred in predictions:
+            result = self.upsert_prediction(pred)
+            if result is not None:
+                upserted += 1
+        
+        return upserted
+    
     def get_predictions_with_results(self) -> pd.DataFrame:
         """Get predictions joined with actual game results."""
         query = """

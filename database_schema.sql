@@ -90,6 +90,9 @@ CREATE INDEX IF NOT EXISTS idx_predictions_confidence ON predictions(confidence)
 CREATE INDEX IF NOT EXISTS idx_predictions_model ON predictions(model_name, model_version);
 CREATE INDEX IF NOT EXISTS idx_predictions_source ON predictions(source);
 
+-- Unique constraint to enforce one prediction per game (reduces database bloat)
+CREATE UNIQUE INDEX IF NOT EXISTS idx_predictions_game_id_unique ON predictions(game_id);
+
 -- ============================================================================
 
 -- Team Features Table (replaces feature_store/feature_store.csv)

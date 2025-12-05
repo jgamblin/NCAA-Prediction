@@ -430,7 +430,21 @@ def export_to_json(output_dir: Path = None):
     
     # Get prediction accuracy for each team
     team_accuracy_query = """
-        WITH team_predictions AS (
+        WITH first_predictions AS (
+            SELECT 
+                p.game_id,
+                MIN(p.id) as first_prediction_id
+            FROM predictions p
+            JOIN games g ON p.game_id = g.game_id
+            WHERE g.season = ?
+              AND g.game_status = 'Final'
+              AND g.date <= ?
+              AND p.predicted_winner IS NOT NULL
+              AND g.home_score IS NOT NULL
+              AND g.away_score IS NOT NULL
+            GROUP BY p.game_id
+        ),
+        team_predictions AS (
             SELECT 
                 p.game_id,
                 p.predicted_winner,
@@ -449,6 +463,7 @@ def export_to_json(output_dir: Path = None):
                 END as actual_winner
             FROM predictions p
             JOIN games g ON p.game_id = g.game_id
+            JOIN first_predictions fp ON p.id = fp.first_prediction_id
             WHERE g.season = ?
               AND g.game_status = 'Final'
               AND g.date <= ?
@@ -507,7 +522,7 @@ def export_to_json(output_dir: Path = None):
     """
     
     top_teams_df = db.fetch_df(team_accuracy_query, (
-        current_season, today, current_season, today, current_season, today
+        current_season, today, current_season, today, current_season, today, current_season, today
     ))
     
     # Add display names and conferences from teams table

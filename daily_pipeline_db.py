@@ -348,22 +348,10 @@ def main():
     if len(upcoming_from_db) > 0:
         upcoming = upcoming_from_db
         print(f"✓ Loaded {len(upcoming)} scheduled games from database")
-        
-        # Filter out games we've already predicted (idempotent)
-        existing_predictions_query = """
-            SELECT DISTINCT game_id FROM predictions
-        """
-        existing_pred_ids = set(db.fetch_df(existing_predictions_query)['game_id'].tolist())
-        
-        if existing_pred_ids:
-            before_count = len(upcoming)
-            upcoming = upcoming[~upcoming['game_id'].isin(existing_pred_ids)]
-            filtered_count = before_count - len(upcoming)
-            if filtered_count > 0:
-                print(f"✓ Filtered {filtered_count} games with existing predictions (keeping {len(upcoming)} new games)")
+        print(f"  Note: Using UPSERT to maintain 1 prediction per game")
     
     if len(upcoming) > 0:
-        print(f"Generating predictions for {len(upcoming)} NEW upcoming games...")
+        print(f"Generating predictions for {len(upcoming)} upcoming games...")
         
         from adaptive_predictor import AdaptivePredictor
         
@@ -473,8 +461,8 @@ def main():
                         'source': 'live'
                     })
                 
-                inserted_preds = pred_repo.bulk_insert_predictions(predictions_to_insert)
-                print(f"✓ Stored {inserted_preds} predictions in database")
+                upserted_preds = pred_repo.bulk_upsert_predictions(predictions_to_insert)
+                print(f"✓ Stored/Updated {upserted_preds} predictions in database (1 per game)")
                 
                 # Also save to CSV for backwards compatibility
                 snapshot_path = os.path.join(data_dir, 'NCAA_Game_Predictions.csv')
