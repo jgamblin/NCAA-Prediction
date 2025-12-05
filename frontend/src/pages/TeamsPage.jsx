@@ -80,6 +80,7 @@ export default function TeamsPage() {
               <thead>
                 <tr className="border-b">
                   <th className="text-left py-3 px-4 font-semibold text-gray-700">Team</th>
+                  <th className="text-left py-3 px-4 font-semibold text-gray-700">Conference</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Record</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Our Accuracy</th>
                   <th className="text-center py-3 px-4 font-semibold text-gray-700">Predictions</th>
@@ -91,6 +92,9 @@ export default function TeamsPage() {
                   <tr key={team.display_name} className="border-b hover:bg-gray-50">
                     <td className="py-3 px-4">
                       <p className="font-semibold text-gray-900">{team.display_name}</p>
+                    </td>
+                    <td className="py-3 px-4 text-gray-600">
+                      {team.conference || 'Unknown'}
                     </td>
                     <td className="py-3 px-4 text-center text-gray-700">
                       <span className="font-medium">{team.wins}</span>

@@ -618,6 +618,10 @@ def export_to_json(output_dir: Path = None):
     
     all_teams_data = []
     for _, row in all_teams_df.iterrows():
+        # Skip teams with no games
+        if row['games_played'] == 0:
+            continue
+            
         losses = row['games_played'] - row['wins']
         prediction_accuracy = (row['correct_predictions'] / row['predictions_made']) if row['predictions_made'] > 0 else 0.0
         
@@ -630,7 +634,8 @@ def export_to_json(output_dir: Path = None):
             'predictions_made': int(row['predictions_made']),
             'correct_predictions': int(row['correct_predictions']),
             'prediction_accuracy': float(prediction_accuracy),
-            'avg_confidence': float(row['avg_confidence'])
+            'avg_confidence': float(row['avg_confidence']),
+            'conference': 'Unknown'  # TODO: Add conference data from ESPN
         }
         all_teams_data.append(team_data)
     
