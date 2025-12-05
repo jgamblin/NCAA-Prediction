@@ -1,5 +1,66 @@
 [
   {
+    "id": 3,
+    "date": "2025-12-05T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 3,
+    "combined_odds": 7.432275295257568,
+    "potential_payout": 74.32275390625,
+    "won": null,
+    "actual_payout": 0.0,
+    "profit": null,
+    "strategy": "parlay_high_confidence",
+    "settled": false,
+    "settled_at": null,
+    "legs": [
+      {
+        "leg_number": 1,
+        "game_id": "401813299",
+        "bet_team": "Fairfield",
+        "opponent": "Manhattan",
+        "moneyline": -122,
+        "confidence": 0.8890277147293091,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Manhattan",
+        "away_team": "Fairfield",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401824891",
+        "bet_team": "South Alabama",
+        "opponent": "East Tennessee State",
+        "moneyline": 180,
+        "confidence": 0.7726133465766907,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "East Tennessee State",
+        "away_team": "South Alabama",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 3,
+        "game_id": "401824034",
+        "bet_team": "Gonzaga",
+        "opponent": "Kentucky",
+        "moneyline": -218,
+        "confidence": 0.742805540561676,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Kentucky",
+        "away_team": "Gonzaga",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
     "id": 2,
     "date": "2025-12-04T00:00:00",
     "bet_amount": 10.0,
@@ -24,9 +85,9 @@
         "actual_winner": null,
         "home_team": "South Florida",
         "away_team": "Utah State",
-        "home_score": 32,
-        "away_score": 11,
-        "game_status": "In Progress"
+        "home_score": 74,
+        "away_score": 61,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -39,9 +100,9 @@
         "actual_winner": null,
         "home_team": "Green Bay",
         "away_team": "Robert Morris",
-        "home_score": 23,
-        "away_score": 26,
-        "game_status": "In Progress"
+        "home_score": 78,
+        "away_score": 80,
+        "game_status": "Final"
       },
       {
         "leg_number": 3,
@@ -54,9 +115,9 @@
         "actual_winner": null,
         "home_team": "Cal State Fullerton",
         "away_team": "Cal Poly",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 5,
+        "away_score": 10,
+        "game_status": "In Progress"
       }
     ]
   },
