@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { TrendingUp, DollarSign, Target, Calendar, ArrowRight } from 'lucide-react'
+import GameCard from '../components/GameCard'
 import { fetchTodayGames, fetchBettingSummary, fetchAccuracyOverall, fetchMetadata } from '../services/api'
 
 export default function HomePage() {
@@ -149,57 +150,14 @@ export default function HomePage() {
         <div className="card">
           <h2 className="text-2xl font-bold mb-4">Today's Games</h2>
           <div className="space-y-3">
-            {todayGames.slice(0, 5).map((game) => {
-              const isFinished = game.game_status === 'Final'
-              const hasPrediction = game.predicted_winner && game.confidence
-              
-              return (
-                <div 
-                  key={game.game_id} 
-                  className="card hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      {/* Game matchup - similar to History page */}
-                      <div className="flex items-center space-x-4 mb-2">
-                        <span className="font-medium">{game.away_team}</span>
-                        {isFinished && <span className="text-gray-900 font-semibold">{game.away_score}</span>}
-                        <span className="text-gray-400">@</span>
-                        <span className="font-medium">{game.home_team}</span>
-                        {isFinished && <span className="text-gray-900 font-semibold">{game.home_score}</span>}
-                      </div>
-                      
-                      {/* Prediction info - matching History page style */}
-                      {hasPrediction ? (
-                        <div className="text-sm">
-                          <span className="text-gray-600">Predicted: </span>
-                          <span className="font-semibold">{game.predicted_winner}</span>
-                          <span className="text-gray-600 ml-3">Confidence: </span>
-                          <span className="font-semibold">{(game.confidence * 100).toFixed(1)}%</span>
-                        </div>
-                      ) : (
-                        <div className="text-sm text-gray-500">
-                          No prediction available
-                        </div>
-                      )}
-                    </div>
-                    
-                    {/* Status badge on right */}
-                    <div className="flex items-center space-x-3">
-                      {isFinished ? (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
-                          Final
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700">
-                          Scheduled
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
+            {todayGames.slice(0, 5).map((game) => (
+              <GameCard 
+                key={game.game_id} 
+                game={game}
+                showBadge={true}
+                badgeType={game.game_status === 'Final' ? 'final' : 'scheduled'}
+              />
+            ))}
           </div>
           {todayGames.length > 5 && (
             <Link 
