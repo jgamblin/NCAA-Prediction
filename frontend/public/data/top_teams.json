@@ -33,6 +33,17 @@
     "team_losses": 1
   },
   {
+    "team_id": "Missouri",
+    "display_name": "Missouri",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.8433424353599548,
+    "team_wins": 8,
+    "team_losses": 1
+  },
+  {
     "team_id": "Indiana",
     "display_name": "Indiana",
     "conference": null,
@@ -53,17 +64,6 @@
     "avg_confidence": 0.7751662135124207,
     "team_wins": 6,
     "team_losses": 2
-  },
-  {
-    "team_id": "Missouri",
-    "display_name": "Missouri",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8433424353599548,
-    "team_wins": 8,
-    "team_losses": 1
   },
   {
     "team_id": "UCLA",
