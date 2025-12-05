@@ -22,17 +22,6 @@
     "team_losses": 1
   },
   {
-    "team_id": "Georgia",
-    "display_name": "Georgia",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 4,
-    "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.834173858165741,
-    "team_wins": 8,
-    "team_losses": 1
-  },
-  {
     "team_id": "Texas Tech",
     "display_name": "Texas Tech",
     "conference": null,
@@ -41,6 +30,17 @@
     "prediction_accuracy": 0.800000011920929,
     "avg_confidence": 0.7751662135124207,
     "team_wins": 6,
+    "team_losses": 2
+  },
+  {
+    "team_id": "George Washington",
+    "display_name": "George Washington",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 4,
+    "prediction_accuracy": 0.800000011920929,
+    "avg_confidence": 0.8260777711868286,
+    "team_wins": 7,
     "team_losses": 2
   },
   {
@@ -66,15 +66,15 @@
     "team_losses": 1
   },
   {
-    "team_id": "George Washington",
-    "display_name": "George Washington",
+    "team_id": "Georgia",
+    "display_name": "Georgia",
     "conference": null,
     "predictions_made": 5,
     "correct_predictions": 4,
     "prediction_accuracy": 0.800000011920929,
-    "avg_confidence": 0.8260777711868286,
-    "team_wins": 7,
-    "team_losses": 2
+    "avg_confidence": 0.834173858165741,
+    "team_wins": 8,
+    "team_losses": 1
   },
   {
     "team_id": "UCLA",
@@ -110,17 +110,6 @@
     "team_losses": 4
   },
   {
-    "team_id": "Air Force",
-    "display_name": "Air Force",
-    "conference": null,
-    "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4000000059604645,
-    "avg_confidence": 0.7741624712944031,
-    "team_wins": 3,
-    "team_losses": 7
-  },
-  {
     "team_id": "Marquette",
     "display_name": "Marquette",
     "conference": null,
@@ -152,5 +141,16 @@
     "avg_confidence": 0.8067614674568176,
     "team_wins": 5,
     "team_losses": 4
+  },
+  {
+    "team_id": "Air Force",
+    "display_name": "Air Force",
+    "conference": null,
+    "predictions_made": 5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 0.4000000059604645,
+    "avg_confidence": 0.7741624712944031,
+    "team_wins": 3,
+    "team_losses": 7
   }
 ]
