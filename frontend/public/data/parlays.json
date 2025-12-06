@@ -67,12 +67,12 @@
     "num_legs": 3,
     "combined_odds": 7.432275295257568,
     "potential_payout": 74.32275390625,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2025-12-06T07:42:55.576000",
     "legs": [
       {
         "leg_number": 1,
@@ -81,13 +81,13 @@
         "opponent": "Manhattan",
         "moneyline": -122,
         "confidence": 0.8890277147293091,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Manhattan",
         "home_team": "Manhattan",
         "away_team": "Fairfield",
-        "home_score": 14,
-        "away_score": 15,
-        "game_status": "In Progress"
+        "home_score": 70,
+        "away_score": 66,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -96,13 +96,13 @@
         "opponent": "East Tennessee State",
         "moneyline": 180,
         "confidence": 0.7726133465766907,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "East Tennessee State",
         "home_team": "East Tennessee State",
         "away_team": "South Alabama",
-        "home_score": 19,
-        "away_score": 24,
-        "game_status": "In Progress"
+        "home_score": 91,
+        "away_score": 65,
+        "game_status": "Final"
       },
       {
         "leg_number": 3,
@@ -111,13 +111,13 @@
         "opponent": "Kentucky",
         "moneyline": -218,
         "confidence": 0.742805540561676,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Gonzaga",
         "home_team": "Kentucky",
         "away_team": "Gonzaga",
-        "home_score": 5,
-        "away_score": 21,
-        "game_status": "In Progress"
+        "home_score": 59,
+        "away_score": 94,
+        "game_status": "Final"
       }
     ]
   },
