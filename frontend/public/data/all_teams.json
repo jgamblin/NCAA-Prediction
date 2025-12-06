@@ -5845,10 +5845,10 @@
   },
   {
     "display_name": "Texas",
-    "games_played": 11,
+    "games_played": 9,
     "wins": 6,
-    "losses": 5,
-    "win_pct": 0.5454545454545454,
+    "losses": 3,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 6,
     "correct_predictions": 4,
     "prediction_accuracy": 0.6666666666666666,
@@ -5857,10 +5857,10 @@
   },
   {
     "display_name": "Texas A&M",
-    "games_played": 11,
+    "games_played": 9,
     "wins": 7,
-    "losses": 4,
-    "win_pct": 0.6363636363636364,
+    "losses": 2,
+    "win_pct": 0.7777777777777778,
     "predictions_made": 7,
     "correct_predictions": 3,
     "prediction_accuracy": 0.42857142857142855,
@@ -5878,6 +5878,30 @@
     "prediction_accuracy": 0.6,
     "avg_confidence": 0.8160416841506958,
     "conference": "Southland"
+  },
+  {
+    "display_name": "Texas A&M-San Antonio",
+    "games_played": 2,
+    "wins": 0,
+    "losses": 2,
+    "win_pct": 0.0,
+    "predictions_made": 0,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.0,
+    "conference": ""
+  },
+  {
+    "display_name": "Texas Lutheran",
+    "games_played": 2,
+    "wins": 0,
+    "losses": 2,
+    "win_pct": 0.0,
+    "predictions_made": 0,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.0,
+    "conference": ""
   },
   {
     "display_name": "Texas Southern",
