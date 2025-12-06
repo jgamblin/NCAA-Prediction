@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { fetchUpcomingGames } from '../services/api'
 import { TrendingUp, Trophy, AlertCircle } from 'lucide-react'
+import GameCard from '../components/GameCard'
 
 export default function PredictionsPage() {
   const [predictions, setPredictions] = useState([])
@@ -67,6 +68,11 @@ export default function PredictionsPage() {
     if (filter === 'with-predictions') return game.predicted_winner && game.confidence
     if (filter === 'no-predictions') return !game.predicted_winner
     return true
+  }).sort((a, b) => {
+    // Sort by confidence (highest first) for games with predictions
+    const confA = a.confidence || 0
+    const confB = b.confidence || 0
+    return confB - confA
   })
   
   const gamesWithPredictions = dateFilteredGames.filter(g => g.predicted_winner && g.confidence).length
@@ -80,7 +86,7 @@ export default function PredictionsPage() {
            "All Upcoming Games"}
         </h1>
         <p className="text-gray-600">
-          {dateFilteredGames.length} games ({gamesWithPredictions} with predictions)
+          {dateFilteredGames.length} games ({gamesWithPredictions} with predictions) • Sorted by confidence
         </p>
       </div>
 
@@ -162,52 +168,14 @@ export default function PredictionsPage() {
         </div>
       ) : (
         <div className="space-y-3">
-          {filteredPredictions.map((game) => {
-            const hasPrediction = game.predicted_winner && game.confidence
-            
-            return (
-              <div key={game.game_id} className="card hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-between">
-                  <div className="flex-1">
-                    {/* Game matchup - matching Home page style */}
-                    <div className="flex items-center space-x-4 mb-2">
-                      <span className="text-sm text-gray-500">{game.date}</span>
-                      <span className="font-medium">{game.away_team}</span>
-                      <span className="text-gray-400">@</span>
-                      <span className="font-medium">{game.home_team}</span>
-                    </div>
-                    
-                    {/* Prediction info - matching Home page style */}
-                    {hasPrediction ? (
-                      <div className="text-sm">
-                        <span className="text-gray-600">Predicted: </span>
-                        <span className="font-semibold">{game.predicted_winner}</span>
-                        <span className="text-gray-600 ml-3">Confidence: </span>
-                        <span className="font-semibold">{(game.confidence * 100).toFixed(1)}%</span>
-                      </div>
-                    ) : (
-                      <div className="text-sm text-gray-500">
-                        No prediction available (insufficient team data)
-                      </div>
-                    )}
-                  </div>
-                  
-                  {/* Status badge on right */}
-                  <div className="flex items-center space-x-3">
-                    {hasPrediction ? (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-700">
-                        ✓ Predicted
-                      </span>
-                    ) : (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-600">
-                        Scheduled
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
+          {filteredPredictions.map((game) => (
+            <GameCard 
+              key={game.game_id} 
+              game={game}
+              showBadge={true}
+              badgeType="predicted"
+            />
+          ))}
         </div>
       )}
     </div>

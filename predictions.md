@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-05 18:48:42 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `e987bcb`
+**Last Updated**: 2025-12-05 15:30:35 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4f0492d`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 22
+- **Average Confidence**: 66.4%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 15 · **Other (<60%)**: 6
 
 ### 🏅 Pick Streaks
 
@@ -26,13 +26,53 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **nan** | Notre Dame | 83.3% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **nan** | South Carolina State | 68.7% |
+| 2 | **nan** | South Alabama | 68.7% |
+| 3 | **nan** | Quinnipiac | 68.7% |
+| 4 | **nan** | Mercyhurst | 68.7% |
+| 5 | **nan** | Bryant | 68.7% |
+| 6 | **nan** | Mount St. Mary's | 68.7% |
+| 7 | **nan** | Fairfield | 68.7% |
+| 8 | **nan** | Cleary University | 68.7% |
+| 9 | **nan** | UAB | 68.7% |
+| 10 | **nan** | Christendom | 68.7% |
+| 11 | **nan** | Cincinnati | 68.7% |
+| 12 | **nan** | San Diego Toreros | 68.7% |
+| 13 | **nan** | Lewis & Clark Pioneers | 68.7% |
+| 14 | **nan** | Samford | 66.7% |
+| 15 | **nan** | Niagara Purple | 66.7% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Kentucky vs Gonzaga | 58.5% | Close |
+| 2 | High Point vs NJIT | 58.5% | Close |
+| 3 | Saint Peter's vs Canisius Golden Griffins | 58.5% | Close |
+| 4 | UConn vs East Texas A&M | 58.5% | Close |
+| 5 | McNeese vs Northwestern State | 58.5% | Close |
+| 6 | Florida A&M Rattlers vs Barber Scotia BARBER SCOTIA | 58.5% | Close |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 0
+- Away Teams Favored: 22
+- Max Confidence: 83.3%
+- Min Confidence: 58.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (372 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (292 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

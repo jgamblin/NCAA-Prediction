@@ -1,0 +1,29 @@
+{
+  "old_model": {
+    "accuracy": 0.6628352490421456,
+    "avg_confidence": 0.8264753158330624,
+    "calibration_gap": 0.1636400667909168,
+    "ece": 0.17903939773260458,
+    "brier": 0.25493031730203364,
+    "train_accuracy": 1.0,
+    "overfit_gap": 0.33716475095785436
+  },
+  "new_model": {
+    "accuracy": 0.5478927203065134,
+    "avg_confidence": 0.7620096012578745,
+    "calibration_gap": 0.21411688095136117,
+    "ece": 0.22336348364752606,
+    "brier": 0.258762591683714,
+    "train_accuracy": 0.9166666666666666,
+    "overfit_gap": 0.36877394636015326
+  },
+  "improvements": [
+    "High confidence accuracy: 65.9% \u2192 73.7%"
+  ],
+  "regressions": [
+    "\u26a0\ufe0f  Accuracy decreased: 66.3% \u2192 54.8%",
+    "\u26a0\ufe0f  ECE increased: 0.1790 \u2192 0.2234"
+  ],
+  "improvement_score": -1,
+  "test_date": "2025-12-05T08:43:35.823292"
+}

@@ -7,6 +7,7 @@ import BettingAccuracyPage from './pages/BettingAccuracyPage'
 import TeamsPage from './pages/TeamsPage'
 import HistoryPage from './pages/HistoryPage'
 import AccuracyPage from './pages/AccuracyPage'
+import './styles/animations.css'
 
 function App() {
   return (

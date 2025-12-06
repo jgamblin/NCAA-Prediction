@@ -1,66 +1,5 @@
 [
   {
-    "id": 4,
-    "date": "2025-12-06T00:00:00",
-    "bet_amount": 10.0,
-    "num_legs": 3,
-    "combined_odds": 6.22160005569458,
-    "potential_payout": 62.215999603271484,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
-    "strategy": "parlay_high_confidence",
-    "settled": false,
-    "settled_at": null,
-    "legs": [
-      {
-        "leg_number": 1,
-        "game_id": "401823595",
-        "bet_team": "UNC Wilmington Seahawks",
-        "opponent": "Louisiana Ragin' Cajuns",
-        "moneyline": -600,
-        "confidence": 0.9366427659988403,
-        "won": null,
-        "actual_winner": null,
-        "home_team": "Louisiana Ragin' Cajuns",
-        "away_team": "UNC Wilmington Seahawks",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
-      },
-      {
-        "leg_number": 2,
-        "game_id": "401817506",
-        "bet_team": "Northern Kentucky Norse",
-        "opponent": "Purdue Fort Wayne",
-        "moneyline": 102,
-        "confidence": 0.8843791484832764,
-        "won": null,
-        "actual_winner": null,
-        "home_team": "Purdue Fort Wayne",
-        "away_team": "Northern Kentucky Norse",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
-      },
-      {
-        "leg_number": 3,
-        "game_id": "401817509",
-        "bet_team": "Robert Morris",
-        "opponent": "Milwaukee",
-        "moneyline": 164,
-        "confidence": 0.8793351054191589,
-        "won": null,
-        "actual_winner": null,
-        "home_team": "Milwaukee",
-        "away_team": "Robert Morris",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
-      }
-    ]
-  },
-  {
     "id": 3,
     "date": "2025-12-05T00:00:00",
     "bet_amount": 10.0,
@@ -85,9 +24,9 @@
         "actual_winner": null,
         "home_team": "Manhattan",
         "away_team": "Fairfield",
-        "home_score": 14,
-        "away_score": 15,
-        "game_status": "In Progress"
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
       },
       {
         "leg_number": 2,
@@ -100,9 +39,9 @@
         "actual_winner": null,
         "home_team": "East Tennessee State",
         "away_team": "South Alabama",
-        "home_score": 19,
-        "away_score": 24,
-        "game_status": "In Progress"
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
       },
       {
         "leg_number": 3,
@@ -115,9 +54,9 @@
         "actual_winner": null,
         "home_team": "Kentucky",
         "away_team": "Gonzaga",
-        "home_score": 5,
-        "away_score": 21,
-        "game_status": "In Progress"
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
       }
     ]
   },
