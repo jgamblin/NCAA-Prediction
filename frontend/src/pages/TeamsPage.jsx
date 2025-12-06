@@ -9,6 +9,7 @@ export default function TeamsPage() {
   const [loading, setLoading] = useState(true)
   const [sortKey, setSortKey] = useState('prediction_accuracy')
   const [sortDirection, setSortDirection] = useState('desc')
+  const [hideNoConference, setHideNoConference] = useState(true)
   
   useEffect(() => {
     async function loadTeams() {
@@ -85,11 +86,18 @@ export default function TeamsPage() {
       )
     }
     
+    // Apply conference filter
+    if (hideNoConference) {
+      filtered = filtered.filter(team => 
+        team.conference && team.conference.trim() !== ''
+      )
+    }
+    
     // Apply sorting
     filtered = sortTeams(filtered, sortKey, sortDirection)
     
     setFilteredTeams(filtered)
-  }, [searchQuery, teams, sortKey, sortDirection])
+  }, [searchQuery, teams, sortKey, sortDirection, hideNoConference])
   
   if (loading) {
     return (
@@ -106,17 +114,33 @@ export default function TeamsPage() {
         <p className="text-gray-600 mt-1">{teams.length} teams • {filteredTeams.length} showing</p>
       </div>
       
-      {/* Search */}
+      {/* Search and Filters */}
       <div className="card">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-          <input
-            type="text"
-            placeholder="Search teams..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-          />
+        <div className="space-y-4">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            <input
+              type="text"
+              placeholder="Search teams..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            />
+          </div>
+          
+          <div className="flex items-center">
+            <label className="flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={hideNoConference}
+                onChange={(e) => setHideNoConference(e.target.checked)}
+                className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+              />
+              <span className="ml-2 text-sm text-gray-700">
+                Hide teams without conference
+              </span>
+            </label>
+          </div>
         </div>
       </div>
       
