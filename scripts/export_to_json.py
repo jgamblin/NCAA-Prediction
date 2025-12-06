@@ -583,15 +583,15 @@ def export_to_json(output_dir: Path = None):
                 SUM(games) as games_played,
                 SUM(wins) as wins
             FROM (
-                SELECT home_team_canonical as team_name, COUNT(*) as games, 
+                SELECT home_team as team_name, COUNT(*) as games, 
                        SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
                 FROM games WHERE season = ? AND game_status = 'Final'
-                GROUP BY home_team_canonical
+                GROUP BY home_team
                 UNION ALL
-                SELECT away_team_canonical as team_name, COUNT(*) as games,
+                SELECT away_team as team_name, COUNT(*) as games,
                        SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
                 FROM games WHERE season = ? AND game_status = 'Final'
-                GROUP BY away_team_canonical
+                GROUP BY away_team
             )
             GROUP BY team_name
         ),
@@ -604,13 +604,13 @@ def export_to_json(output_dir: Path = None):
             FROM (
                 -- Predictions for home games
                 SELECT 
-                    g.home_team_canonical as team_name,
+                    g.home_team as team_name,
                     p.game_id,
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
@@ -621,13 +621,13 @@ def export_to_json(output_dir: Path = None):
                 
                 -- Predictions for away games
                 SELECT 
-                    g.away_team_canonical as team_name,
+                    g.away_team as team_name,
                     p.game_id,
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
