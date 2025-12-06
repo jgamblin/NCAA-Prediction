@@ -1,0 +1,451 @@
+database_name,espn_id,canonical_name,display_name,match_confidence,game_count,conference
+Maryland-Eastern Shore,2379,MD Eastern,Maryland Terrapins,100,14,Unknown
+Coppin State,2154,Coppin St,Coppin State Eagles,100,13,Unknown
+Princeton,163,Princeton,Princeton Tigers,100,13,Unknown
+IU Indianapolis,85,IU Indy,IU Indianapolis Jaguars,100,12,Unknown
+Purdue Fort Wayne,2870,Purdue FW,Purdue Fort Wayne Mastodons,100,12,Unknown
+Bucknell,2083,Bucknell,Bucknell Bison,100,12,Unknown
+Yale,43,Yale,Yale Bulldogs,100,12,Unknown
+Gardner-Webb Runnin',2241,Gardner-Webb,Gardner-Webb Runnin' Bulldogs,80,12,Unknown
+South Dakota State Jackrabbits,2571,S Dakota St,South Dakota State Jackrabbits,100,12,Unknown
+St. Thomas-Minnesota Tommies,2900,St Thomas (MN),St. Thomas-Minnesota Tommies,100,12,Unknown
+VMI,2678,VMI,VMI Keydets,100,12,Unknown
+Presbyterian,2506,Presbyterian,Presbyterian Blue Hose,100,12,Unknown
+Texas State,326,Texas St,Texas State Bobcats,100,12,Unknown
+Georgia Southern,290,GA Southern,Georgia Southern Eagles,100,12,Unknown
+Brown,225,Brown,Brown Bears,100,12,Unknown
+Green Bay,2739,Green Bay,Green Bay Phoenix,100,12,Unknown
+Omaha,2437,Omaha,Omaha Mavericks,100,12,Unknown
+Charleston Southern,2127,Charleston So,Charleston Southern Buccaneers,100,12,Unknown
+North Carolina Central,2428,NC Central,North Carolina Central Eagles,100,12,Unknown
+Merrimack,2771,Merrimack,Merrimack Warriors,100,12,Unknown
+Missouri,142,Missouri,Missouri Tigers,100,11,Unknown
+Holy Cross,107,Holy Cross,Holy Cross Crusaders,100,11,Unknown
+Navy,2426,Navy,Navy Midshipmen,100,11,Unknown
+Air Force,2005,Air Force,Air Force Falcons,100,11,Unknown
+American University,44,American,American University Eagles,100,11,Unknown
+Cleveland State,325,Cleveland St,Cleveland State Vikings,100,11,Unknown
+North Dakota State,2449,N Dakota St,North Dakota State Bison,100,11,Unknown
+South Carolina Upstate,2908,SC Upstate,South Carolina Upstate Spartans,100,11,Unknown
+Oral Roberts,198,Oral Roberts,Oral Roberts Golden Eagles,100,11,Unknown
+Robert Morris,2523,Robert Morris,Robert Morris Colonials,100,11,Unknown
+Hawai'i Rainbow,62,Hawai’i,Hawai'i Rainbow Warriors,60,11,Unknown
+South Dakota,233,South Dakota,South Dakota Coyotes,100,11,Unknown
+UMass Lowell River,113,UMass,Massachusetts Minutemen,80,11,Unknown
+Idaho State Bengals,304,Idaho St,Idaho State Bengals,100,11,Unknown
+William & Mary,2729,William & Mary,William & Mary Tribe,100,11,Unknown
+Cal State Fullerton,2239,Fullerton,Cal State Fullerton Titans,100,11,Unknown
+Montana,149,Montana,Montana Grizzlies,100,11,Unknown
+Providence,2507,Providence,Providence Friars,100,11,Unknown
+East Tennessee State,2193,ETSU,East Tennessee State Buccaneers,100,11,Unknown
+Vermont,261,Vermont,Vermont Catamounts,100,11,Unknown
+Radford,2515,Radford,Radford Highlanders,100,11,Unknown
+Norfolk State,2450,Norfolk St,Norfolk State Spartans,100,11,Unknown
+Xavier,2752,Xavier,Xavier Musketeers,100,11,Unknown
+Harvard,108,Harvard,Harvard Crimson,100,11,Unknown
+Howard,47,Howard,Howard Bison,100,11,Unknown
+Lehigh Mountain,2329,Lehigh,Lehigh Mountain Hawks,80,11,Unknown
+Colgate,2142,Colgate,Colgate Raiders,100,11,Unknown
+Boston College,103,Boston College,Boston College Eagles,100,11,Unknown
+Boston University,104,Boston U,Boston University Terriers,100,11,Unknown
+New Orleans,2443,New Orleans,New Orleans Privateers,100,11,Unknown
+Samford,2535,Samford,Samford Bulldogs,100,11,Unknown
+Utah Tech,3101,Utah Tech,Utah Tech Trailblazers,100,11,Unknown
+Cal Poly,13,Cal Poly,Cal Poly Mustangs,100,11,Unknown
+Denver Pioneers,2172,Denver,Denver Pioneers,100,11,Unknown
+NJIT,2885,NJIT,NJIT Highlanders,100,11,Unknown
+Southern Utah Thunderbirds,253,Southern Utah,Southern Utah Thunderbirds,100,11,Unknown
+Columbia,171,Columbia,Columbia Lions,100,11,Unknown
+Winthrop,2737,Winthrop,Winthrop Eagles,100,11,Unknown
+McNeese,2377,McNeese,McNeese Cowboys,100,11,Unknown
+West Virginia,277,West Virginia,West Virginia Mountaineers,100,11,Unknown
+George Washington,45,G Washington,George Washington Revolutionaries,100,11,Unknown
+Virginia Tech,259,Virginia Tech,Virginia Tech Hokies,100,11,Unknown
+Fresno State,278,Fresno St,Fresno State Bulldogs,100,11,Unknown
+New Haven Chargers,2441,New Haven,New Haven Chargers,100,11,Unknown
+South Carolina State,2569,SC State,South Carolina State Bulldogs,100,11,Unknown
+Furman,231,Furman,Furman Paladins,100,11,Unknown
+James Madison,256,James Madison,James Madison Dukes,100,11,Unknown
+Stetson,56,Stetson,Stetson Hatters,100,11,Unknown
+UAlbany Great Danes,399,UAlbany,UAlbany Great Danes,100,11,Unknown
+Tarleton,2627,Tarleton St,Tarleton State Texans,80,11,Unknown
+Cal State Bakersfield,2934,Bakersfield,Cal State Bakersfield Roadrunners,100,11,Unknown
+UNC Greensboro,2430,UNC Greensboro,UNC Greensboro Spartans,100,11,Unknown
+Long Beach State Beach,299,Long Beach St,Long Beach State Beach,100,11,Unknown
+Delaware State,2169,Delaware St,Delaware State Hornets,100,11,Unknown
+Siena Saints,2561,Siena,Siena Saints,100,11,Unknown
+UMBC,2378,UMBC,UMBC Retrievers,100,11,Unknown
+Fordham,2230,Fordham,Fordham Rams,100,11,Unknown
+Rhode Island,227,Rhode Island,Rhode Island Rams,100,11,Unknown
+UC Irvine,300,UC Irvine,UC Irvine Anteaters,100,11,Unknown
+St. Bonaventure,179,St Bonaventure,St. Bonaventure Bonnies,100,11,Unknown
+UConn,41,UConn,UConn Huskies,100,11,Unknown
+Troy,2653,Troy,Troy Trojans,100,11,Unknown
+Lafayette,322,Lafayette,Lafayette Leopards,100,11,Unknown
+Bryant,2803,Bryant,Bryant Bulldogs,100,11,Unknown
+Hofstra Pride,2275,Hofstra,Hofstra Pride,100,11,Unknown
+Texas Longhorns,251,Texas,Texas Longhorns,100,11,Unknown
+Longwood,2344,Longwood,Longwood Lancers,100,11,Unknown
+Stonehill,284,Stonehill,Stonehill Skyhawks,100,11,Unknown
+California Baptist,2856,CA Baptist,California Baptist Lancers,100,11,Unknown
+Northern Kentucky Norse,94,N Kentucky,Northern Kentucky Norse,100,11,Unknown
+Eastern Michigan,2199,E Michigan,Eastern Michigan Eagles,100,11,Unknown
+Iona,314,Iona,Iona Gaels,100,11,Unknown
+Loyola Maryland,2352,Loyola MD,Loyola Maryland Greyhounds,100,11,Unknown
+Notre Dame,87,Notre Dame,Notre Dame Fighting Irish,100,11,Unknown
+Oakland,2473,Oakland,Oakland Golden Grizzlies,100,10,Unknown
+Coastal Carolina,324,Coastal,Coastal Carolina Chanticleers,100,10,Unknown
+Youngstown State,2754,Youngstown St,Youngstown State Penguins,100,10,Unknown
+New Hampshire,160,New Hampshire,New Hampshire Wildcats,100,10,Unknown
+Tennessee Tech,2635,Tennessee Tech,Tennessee Tech Golden Eagles,100,10,Unknown
+Incarnate Word,2916,Incarnate Word,Incarnate Word Cardinals,100,10,Unknown
+UNC Asheville,2427,UNC Asheville,UNC Asheville Bulldogs,100,10,Unknown
+Eastern Illinois,2197,E Illinois,Eastern Illinois Panthers,100,10,Unknown
+Wright State,2750,Wright St,Wright State Raiders,100,10,Unknown
+Northern Illinois,2459,N Illinois,Northern Illinois Huskies,100,10,Unknown
+Chattanooga Mocs,236,Chattanooga,Chattanooga Mocs,100,10,Unknown
+Austin Peay Governors,2046,Austin Peay,Austin Peay Governors,100,10,Unknown
+Florida Atlantic,2226,FAU,Florida Atlantic Owls,100,10,Unknown
+Eastern Washington,331,E Washington,Eastern Washington Eagles,100,10,Unknown
+Central Arkansas,2110,C Arkansas,Central Arkansas Bears,100,10,Unknown
+Marshall,276,Marshall,Marshall Thundering Herd,100,10,Unknown
+South Alabama,6,South Alabama,South Alabama Jaguars,100,10,Unknown
+Bellarmine,91,Bellarmine,Bellarmine Knights,100,10,Unknown
+Chicago State,2130,Chicago St,Chicago State Cougars,100,10,Unknown
+Indiana State,282,Indiana St,Indiana State Sycamores,100,10,Unknown
+Saint Francis,2598,Saint Francis,Saint Francis Red Flash,100,10,Unknown
+Towson,119,Towson,Towson Tigers,100,10,Unknown
+Montana State,147,Montana St,Montana State Bobcats,100,10,Unknown
+Evansville Purple Aces,339,Evansville,Evansville Purple Aces,100,10,Unknown
+Alcorn State,2016,Alcorn St,Alcorn State Braves,100,10,Unknown
+Kansas,2305,Kansas,Kansas Jayhawks,100,10,Unknown
+SIU Edwardsville,2565,SIUE,SIU Edwardsville Cougars,100,10,Unknown
+Kansas City Roos,140,Kansas City,Kansas City Roos,100,10,Unknown
+Rice,242,Rice,Rice Owls,100,10,Unknown
+Kennesaw State,338,Kennesaw St,Kennesaw State Owls,100,10,Unknown
+Drexel,2182,Drexel,Drexel Dragons,100,10,Unknown
+South Florida,58,South Florida,South Florida Bulls,100,10,Unknown
+UT Arlington,250,UT Arlington,UT Arlington Mavericks,100,10,Unknown
+Utah Valley,3084,Utah Valley,Utah Valley Wolverines,100,10,Unknown
+Pacific,279,Pacific,Pacific Tigers,100,10,Unknown
+North Texas,249,North Texas,North Texas Mean Green,100,10,Unknown
+Santa Clara,2541,Santa Clara,Santa Clara Broncos,100,10,Unknown
+Duke,150,Duke,Duke Blue Devils,100,10,Unknown
+Wake Forest,154,Wake Forest,Wake Forest Demon Deacons,100,10,Unknown
+Ball State,2050,Ball State,Ball State Cardinals,100,10,Unknown
+La Salle,2325,La Salle,La Salle Explorers,100,10,Unknown
+Dayton,2168,Dayton,Dayton Flyers,100,10,Unknown
+UC Santa Barbara,2540,Santa Barbara,UC Santa Barbara Gauchos,100,10,Unknown
+Loyola Chicago,2350,Loyola Chicago,Loyola Chicago Ramblers,100,10,Unknown
+Duquesne,2184,Duquesne,Duquesne Dukes,100,10,Unknown
+Belmont,2057,Belmont,Belmont Bruins,100,10,Unknown
+Wisconsin,275,Wisconsin,Wisconsin Badgers,100,10,Unknown
+Auburn,2,Auburn,Auburn Tigers,100,10,Unknown
+USC,30,USC,USC Trojans,100,10,Unknown
+Tennessee,2633,Tennessee,Tennessee Volunteers,100,10,Unknown
+NC State,152,NC State,NC State Wolfpack,100,10,Unknown
+Iowa,2294,Iowa,Iowa Hawkeyes,100,10,Unknown
+Georgia State,2247,Georgia St,Georgia State Panthers,100,10,Unknown
+Old Dominion,295,Old Dominion,Old Dominion Monarchs,100,10,Unknown
+Arkansas State,2032,Arkansas St,Arkansas State Red Wolves,100,10,Unknown
+Western Illinois,2710,W Illinois,Western Illinois Leathernecks,100,10,Unknown
+Binghamton,2066,Binghamton,Binghamton Bearcats,100,10,Unknown
+Lipscomb,288,Lipscomb,Lipscomb Bisons,100,10,Unknown
+UL Monroe Warhawks,2433,UL Monroe,UL Monroe Warhawks,100,10,Unknown
+Mount St. Mary's,116,Mount St Marys,Mount St. Mary's Mountaineers,100,10,Unknown
+UT Martin,2630,UT Martin,UT Martin Skyhawks,100,10,Unknown
+Southern Indiana,84,Indiana,Indiana Hoosiers,80,10,Unknown
+Cal State Northridge,2463,CSU Northridge,Cal State Northridge Matadors,100,10,Unknown
+Tulsa Golden Hurricane,202,Tulsa,Tulsa Golden Hurricane,100,10,Unknown
+Washington State,265,Washington St,Washington State Cougars,100,10,Unknown
+Penn State,213,Penn State,Penn State Nittany Lions,100,10,Unknown
+East Carolina,151,East Carolina,East Carolina Pirates,100,10,Unknown
+Western Michigan,2711,W Michigan,Western Michigan Broncos,100,10,Unknown
+Indiana,84,Indiana,Indiana Hoosiers,100,10,Unknown
+UNC Wilmington Seahawks,350,UNC Wilmington,UNC Wilmington Seahawks,100,10,Unknown
+Kentucky,96,Kentucky,Kentucky Wildcats,100,10,Unknown
+Tulane Green Wave,2655,Tulane,Tulane Green Wave,100,10,Unknown
+Murray State,93,Murray St,Murray State Racers,100,10,Unknown
+Saint Joseph's,2603,Saint Joseph's,Saint Joseph's Hawks,100,10,Unknown
+Purdue,2509,Purdue,Purdue Boilermakers,100,10,Unknown
+Sacramento State,16,Sacramento St,Sacramento State Hornets,100,10,Unknown
+Kent State Golden Flashes,2309,Kent State,Kent State Golden Flashes,100,10,Unknown
+Maryland,120,Maryland,Maryland Terrapins,100,10,Unknown
+Houston,248,Houston,Houston Cougars,100,10,Unknown
+Akron,2006,Akron,Akron Zips,100,10,Unknown
+Charlotte,2429,Charlotte,Charlotte 49ers,100,10,Unknown
+Colorado State,36,Colorado St,Colorado State Rams,100,10,Unknown
+Wichita State,2724,Wichita St,Wichita State Shockers,100,10,Unknown
+Wyoming,2751,Wyoming,Wyoming Cowboys,100,10,Unknown
+Arizona State,9,Arizona St,Arizona State Sun Devils,100,10,Unknown
+Massachusetts,113,UMass,Massachusetts Minutemen,100,10,Unknown
+Kansas State,2306,Kansas St,Kansas State Wildcats,100,10,Unknown
+Seton Hall,2550,Seton Hall,Seton Hall Pirates,100,10,Unknown
+Utah,254,Utah,Utah Utes,100,10,Unknown
+Weber State,2692,Weber St,Weber State Wildcats,100,10,Unknown
+Pennsylvania,219,Penn,Pennsylvania Quakers,100,10,Unknown
+Buffalo,2084,Buffalo,Buffalo Bulls,100,10,Unknown
+Minnesota,135,Minnesota,Minnesota Golden Gophers,100,10,Unknown
+Pittsburgh,221,Pitt,Pittsburgh Panthers,100,10,Unknown
+Gonzaga,2250,Gonzaga,Gonzaga Bulldogs,100,10,Unknown
+Georgia Tech,59,Georgia Tech,Georgia Tech Yellow Jackets,100,10,Unknown
+Abilene Christian,2000,Abilene Chrstn,Abilene Christian Wildcats,100,10,Unknown
+Stony Brook,2619,Stony Brook,Stony Brook Seawolves,100,10,Unknown
+Bowling Green,189,Bowling Green,Bowling Green Falcons,100,10,Unknown
+Nevada Wolf Pack,2440,Nevada,Nevada Wolf Pack,100,10,Unknown
+Portland,2501,Portland,Portland Pilots,100,10,Unknown
+Miami (FL),2390,Miami,Miami Hurricanes,80,10,Unknown
+Oregon State,204,Oregon St,Oregon State Beavers,100,10,Unknown
+Iowa State,66,Iowa State,Iowa State Cyclones,100,10,Unknown
+Rutgers,164,Rutgers,Rutgers Scarlet Knights,100,10,Unknown
+Boise State,68,Boise St,Boise State Broncos,100,10,Unknown
+DePaul Blue,305,DePaul,DePaul Blue Demons,80,10,Unknown
+Marquette,269,Marquette,Marquette Golden Eagles,100,10,Unknown
+Quinnipiac,2514,Quinnipiac,Quinnipiac Bobcats,100,10,Unknown
+Southern,2582,Southern,Southern Jaguars,100,10,Unknown
+Fairleigh Dickinson,161,FDU,Fairleigh Dickinson Knights,100,10,Unknown
+Bradley,71,Bradley,Bradley Braves,100,10,Unknown
+Southern Miss,2572,Southern Miss,Southern Miss Golden Eagles,100,10,Unknown
+Wofford,2747,Wofford,Wofford Terriers,100,10,Unknown
+Fairfield,2217,Fairfield,Fairfield Stags,100,10,Unknown
+Louisiana Ragin' Cajuns,309,Louisiana,Louisiana Ragin' Cajuns,100,10,Unknown
+Western Carolina,2717,W Carolina,Western Carolina Catamounts,100,10,Unknown
+Canisius Golden Griffins,2099,Canisius,Canisius Golden Griffins,100,10,Unknown
+Mississippi Valley State,2400,Miss Valley St,Mississippi Valley State Delta Devils,100,10,Unknown
+Detroit Mercy,2174,Detroit Mercy,Detroit Mercy Titans,100,10,Unknown
+Hampton,2261,Hampton,Hampton Pirates,100,10,Unknown
+Mercyhurst,2385,Mercyhurst,Mercyhurst Lakers,100,10,Unknown
+Southeast Missouri State,2546,SE Missouri,Southeast Missouri State Redhawks,100,10,Unknown
+Jacksonville,294,Jacksonville,Jacksonville Dolphins,100,10,Unknown
+Idaho,70,Idaho,Idaho Vandals,100,10,Unknown
+East Texas A&M,2837,E Texas A&M,East Texas A&M Lions,100,10,Unknown
+Illinois State,2287,Illinois St,Illinois State Redbirds,100,10,Unknown
+Le Moyne,2330,Le Moyne,Le Moyne Dolphins,100,10,Unknown
+UC Riverside,27,UC Riverside,UC Riverside Highlanders,100,10,Unknown
+Pepperdine,2492,Pepperdine,Pepperdine Waves,100,10,Unknown
+Florida Gulf Coast,526,FGCU,Florida Gulf Coast Eagles,100,10,Unknown
+Charleston,232,Charleston,Charleston Cougars,100,10,Unknown
+Alabama State,2011,Alabama St,Alabama State Hornets,100,10,Unknown
+Morehead State,2413,Morehead St,Morehead State Eagles,100,10,Unknown
+UAB,5,UAB,UAB Blazers,100,10,Unknown
+San Francisco Dons,2539,San Francisco,San Francisco Dons,100,10,Unknown
+Monmouth,2405,Monmouth,Monmouth Hawks,100,10,Unknown
+Texas A&M,245,Texas A&M,Texas A&M Aggies,100,10,Unknown
+Manhattan,2363,Manhattan,Manhattan Jaspers,100,10,Unknown
+Little Rock,2031,Little Rock,Little Rock Trojans,100,10,Unknown
+Loyola Marymount,2351,LMU,Loyola Marymount Lions,100,10,Unknown
+Eastern Kentucky Colonels,2198,E Kentucky,Eastern Kentucky Colonels,100,10,Unknown
+Southern Illinois,79,S Illinois,Southern Illinois Salukis,100,10,Unknown
+California,25,California,California Golden Bears,100,10,Unknown
+High Point,2272,High Point,High Point Panthers,100,10,Unknown
+Clemson,228,Clemson,Clemson Tigers,100,10,Unknown
+Northern Colorado,2458,N Colorado,Northern Colorado Bears,100,10,Unknown
+New Mexico,167,New Mexico,New Mexico Lobos,100,10,Unknown
+Drake,2181,Drake,Drake Bulldogs,100,10,Unknown
+Nebraska Cornhuskers,158,Nebraska,Nebraska Cornhuskers,100,10,Unknown
+Temple,218,Temple,Temple Owls,100,10,Unknown
+George Mason,2244,George Mason,George Mason Patriots,100,10,Unknown
+Saint Mary's,2608,Saint Mary's,Saint Mary's Gaels,100,10,Unknown
+Virginia,258,Virginia,Virginia Cavaliers,100,10,Unknown
+Florida,57,Florida,Florida Gators,100,9,Unknown
+Villanova,222,Villanova,Villanova Wildcats,100,9,Unknown
+Jackson State,2296,Jackson St,Jackson State Tigers,100,9,Unknown
+Northwestern State,2466,N'Western St,Northwestern State Demons,100,9,Unknown
+North Alabama,2453,North Alabama,North Alabama Lions,100,9,Unknown
+Texas A&M-Corpus Christi,357,Texas A&M-CC,Texas A&M-Corpus Christi Islanders,100,9,Unknown
+Sam Houston State,2534,Sam Houston,Houston Cougars,100,9,Unknown
+Elon,2210,Elon,Elon Phoenix,100,9,Unknown
+Vanderbilt,238,Vanderbilt,Vanderbilt Commodores,100,9,Unknown
+Army,349,Army,Army Black Knights,100,9,Unknown
+Western Kentucky,98,Western KY,Western Kentucky Hilltoppers,100,9,Unknown
+Florida State,52,Florida St,Florida State Seminoles,100,9,Unknown
+Stephen F. Austin,2617,SF Austin,Stephen F. Austin Lumberjacks,100,9,Unknown
+Michigan,130,Michigan,Michigan Wolverines,100,9,Unknown
+Miami (OH),193,Miami OH,Miami (OH) RedHawks,100,9,Unknown
+Grand Canyon Lopes,2253,Grand Canyon,Grand Canyon Lopes,100,9,Unknown
+Louisville,97,Louisville,Louisville Cardinals,100,9,Unknown
+Georgia,61,Georgia,Georgia Bulldogs,100,9,Unknown
+UCLA,26,UCLA,UCLA Bruins,100,9,Unknown
+Baylor,239,Baylor,Baylor Bears,100,9,Unknown
+LSU,99,LSU,LSU Tigers,100,9,Unknown
+North Carolina,153,North Carolina,North Carolina Tar Heels,100,9,Unknown
+North Dakota,155,North Dakota,North Dakota Fighting Hawks,100,9,Unknown
+Mercer,2382,Mercer,Mercer Bears,100,9,Unknown
+Bethune-Cookman,2065,Bethune,Bethune-Cookman Wildcats,100,9,Unknown
+West Georgia,2698,West Georgia,West Georgia Wolves,100,9,Unknown
+North Florida Ospreys,2454,North Florida,North Florida Ospreys,100,9,Unknown
+Northeastern,111,Northeastern,Northeastern Huskies,100,9,Unknown
+Cornell Big,172,Cornell,Cornell Big Red,80,9,Unknown
+Arkansas,8,Arkansas,Arkansas Razorbacks,100,9,Unknown
+Prairie View A&M,2504,Prairie View,Prairie View A&M Panthers,100,9,Unknown
+Central Michigan,2117,C Michigan,Central Michigan Chippewas,100,9,Unknown
+Washington,264,Washington,Washington Huskies,100,9,Unknown
+Lamar,2320,Lamar,Lamar Cardinals,100,9,Unknown
+Texas Tech,2641,Texas Tech,Texas Tech Red Raiders,100,9,Unknown
+Butler,2086,Butler,Butler Bulldogs,100,9,Unknown
+TCU Horned Frogs,2628,TCU,TCU Horned Frogs,100,9,Unknown
+Richmond,257,Richmond,Richmond Spiders,100,9,Unknown
+Ohio State,194,Ohio State,Ohio State Buckeyes,100,9,Unknown
+Cincinnati,2132,Cincinnati,Cincinnati Bearcats,100,9,Unknown
+Colorado,38,Colorado,Colorado Buffaloes,100,9,Unknown
+Northern Arizona,2464,N Arizona,Northern Arizona Lumberjacks,100,9,Unknown
+Morgan State,2415,Morgan St,Morgan State Bears,100,9,Unknown
+Wagner Seahawks,2681,Wagner,Wagner Seahawks,100,9,Unknown
+Niagara Purple,315,Niagara,Niagara Purple Eagles,80,9,Unknown
+Rider,2520,Rider,Rider Broncs,100,9,Unknown
+Georgetown Hoyas,46,Georgetown,Georgetown Hoyas,100,9,Unknown
+UIC,82,UIC,UIC Flames,100,9,Unknown
+Alabama Crimson Tide,333,Alabama,Alabama Crimson Tide,100,9,Unknown
+Milwaukee,270,Milwaukee,Milwaukee Panthers,100,9,Unknown
+Tennessee State,2634,Tennessee St,Tennessee State Tigers,100,9,Unknown
+Houston Christian,2277,Hou Christian,Houston Christian Huskies,100,9,Unknown
+Mississippi State,344,Mississippi St,Mississippi State Bulldogs,100,9,Unknown
+Creighton,156,Creighton,Creighton Bluejays,100,9,Unknown
+Davidson,2166,Davidson,Davidson Wildcats,100,9,Unknown
+Ohio,195,Ohio,Ohio Bobcats,100,9,Unknown
+Missouri State,2623,Missouri St,Missouri State Bears,100,9,Unknown
+UNLV,2439,UNLV,UNLV Rebels,100,9,Unknown
+South Carolina Gamecocks,2579,South Carolina,South Carolina Gamecocks,100,9,Unknown
+Syracuse Orange,183,Syracuse,Syracuse Orange,100,9,Unknown
+Liberty,2335,Liberty,Liberty Flames,100,9,Unknown
+Ole Miss,145,Ole Miss,Ole Miss Rebels,100,9,Unknown
+Saint Louis,139,Saint Louis,Saint Louis Billikens,100,9,Unknown
+Long Island University,112358,Long Island,Long Island University Sharks,100,9,Unknown
+Delaware Blue Hens,48,Delaware,Delaware Blue Hens,100,9,Unknown
+UT Rio Grande Valley Vaqueros,292,UT Rio Grande,UT Rio Grande Valley Vaqueros,100,9,Unknown
+Nicholls State,2447,Nicholls,Nicholls Colonels,80,9,Unknown
+North Carolina A&T,2448,NC A&T,North Carolina A&T Aggies,100,9,Unknown
+Central Connecticut,2115,C Connecticut,Central Connecticut Blue Devils,100,9,Unknown
+Valparaiso Beacons,2674,Valparaiso,Valparaiso Beacons,100,9,Unknown
+Sacred Heart Pioneers,2529,Sacred Heart,Sacred Heart Pioneers,100,9,Unknown
+Oklahoma,201,Oklahoma,Oklahoma Sooners,100,9,Unknown
+Toledo,2649,Toledo,Toledo Rockets,100,9,Unknown
+UTSA,2636,UTSA,UTSA Roadrunners,100,9,Unknown
+Middle Tennessee,2393,MTSU,Middle Tennessee Blue Raiders,100,9,Unknown
+UC San Diego Tritons,28,UC San Diego,UC San Diego Tritons,100,9,Unknown
+UCF,2116,UCF,UCF Knights,100,9,Unknown
+Northwestern,77,Northwestern,Northwestern Wildcats,100,9,Unknown
+Michigan State,127,Michigan St,Michigan State Spartans,100,9,Unknown
+Utah State,328,Utah State,Utah State Aggies,100,9,Unknown
+Northern Iowa,2460,Northern Iowa,Northern Iowa Panthers,100,9,Unknown
+San Diego Toreros,301,San Diego,San Diego Toreros,100,9,Unknown
+Oregon Ducks,2483,Oregon,Oregon Ducks,100,9,Unknown
+Stanford Cardinal,24,Stanford,Stanford Cardinal,100,9,Unknown
+Oklahoma State,197,Oklahoma St,Oklahoma State Cowboys,100,9,Unknown
+Louisiana Tech,2348,Louisiana Tech,Louisiana Tech Bulldogs,100,8,Unknown
+UTEP,2638,UTEP,UTEP Miners,100,8,Unknown
+Campbell Fighting,2097,Campbell,Campbell Fighting Camels,80,8,Unknown
+Arkansas-Pine Bluff,2029,AR-Pine Bluff,Arkansas-Pine Bluff Golden Lions,100,8,Unknown
+Virginia-Lynchburg,258,Virginia,Virginia Cavaliers,80,8,Unknown
+Virginia Commonwealth,2670,VCU,Virginia Cavaliers,100,8,Unknown
+Illinois,356,Illinois,Illinois Fighting Illini,100,8,Unknown
+Marist Red Foxes,2368,Marist,Marist Red Foxes,100,8,Unknown
+Saint Peter's,2612,Saint Peter's,Saint Peter's Peacocks,100,8,Unknown
+Portland State,2502,Portland St,Portland State Vikings,100,8,Unknown
+The Citadel,2643,The Citadel,The Citadel Bulldogs,100,8,Unknown
+Florida International,2229,FIU,Florida International Panthers,100,8,Unknown
+UC Davis,302,UC Davis,UC Davis Aggies,100,8,Unknown
+Arizona,12,Arizona,Arizona Wildcats,100,8,Unknown
+San Diego State,21,San Diego St,San Diego State Aztecs,100,8,Unknown
+SMU,2567,SMU,SMU Mustangs,100,8,Unknown
+Maine,311,Maine,Maine Black Bears,100,8,Unknown
+Memphis,235,Memphis,Memphis Tigers,100,8,Unknown
+Dartmouth Big Green,159,Dartmouth,Dartmouth Big Green,100,8,Unknown
+Jacksonville State,55,Jax State,Jacksonville State Gamecocks,100,8,Unknown
+St. John's,2599,St John's,St. John's Red Storm,100,8,Unknown
+New Mexico State,166,New Mexico St,New Mexico State Aggies,100,8,Unknown
+Grambling State,2755,Grambling,Grambling Tigers,80,7,Unknown
+Texas Southern,2640,Texas Southern,Texas Southern Tigers,100,7,Unknown
+Florida A&M Rattlers,50,Florida A&M,Florida A&M Rattlers,100,7,Unknown
+Seattle,2547,Seattle U,Seattle U Redhawks,80,7,Unknown
+SE Louisiana,2545,SE Louisiana,SE Louisiana Lions,100,6,Unknown
+Alabama A&M,2010,Alabama A&M,Alabama A&M Bulldogs,100,5,Unknown
+Maine Black,311,Maine,Maine Black Bears,80,4,Unknown
+Penn State-Shenango,213,Penn State,Penn State Nittany Lions,80,4,Unknown
+New Mexico Highlands,167,New Mexico,New Mexico Lobos,80,3,Unknown
+Arkansas-Pine Bluff Golden,8,Arkansas,Arkansas Razorbacks,80,3,Unknown
+Kentucky Christian,96,Kentucky,Kentucky Wildcats,80,3,Unknown
+Southeastern Louisiana,2545,SE Louisiana,Louisiana Ragin' Cajuns,100,3,Unknown
+Vermont State - Johnson,261,Vermont,Vermont Catamounts,80,3,Unknown
+Lincoln University (CA) Oaklanders,2473,Oakland,Oakland Golden Grizzlies,80,3,Unknown
+Central Penn,219,Penn,Pennsylvania Quakers,80,3,Unknown
+Coastal Georgia Mariner,324,Coastal,Coastal Carolina Chanticleers,80,3,Unknown
+Alabama A%26M,333,Alabama,Alabama Crimson Tide,80,3,Unknown
+North Dakota Fighting,155,North Dakota,North Dakota Fighting Hawks,80,3,Unknown
+Army Black,349,Army,Army Black Knights,80,3,Unknown
+Georgian Court,61,Georgia,Georgia Bulldogs,80,2,Unknown
+Texas Lutheran,251,Texas,Texas Longhorns,80,2,Unknown
+Citadel,2643,The Citadel,The Citadel Bulldogs,80,2,Unknown
+BYU,252,BYU,BYU Cougars,100,2,Unknown
+VCU,2670,VCU,VCU Rams,100,2,Unknown
+Texas A&M-San Antonio,245,Texas A&M,Texas A&M Aggies,80,2,Unknown
+Hawai'i Pacific Sea,279,Pacific,Pacific Tigers,80,2,Unknown
+Eastern Oregon,2483,Oregon,Oregon Ducks,80,2,Unknown
+Howard Payne,47,Howard,Howard Bison,80,2,Unknown
+Notre Dame (MD),87,Notre Dame,Notre Dame Fighting Irish,80,2,Unknown
+Tennessee Wesleyan,2633,Tennessee,Tennessee Volunteers,80,2,Unknown
+Trinity College of Jacksonville,294,Jacksonville,Jacksonville Dolphins,80,2,Unknown
+Indiana University East IU EAST,84,Indiana,Indiana Hoosiers,80,2,Unknown
+Seattle U,2547,Seattle U,Seattle U Redhawks,100,2,Unknown
+Washington Adventist Shock,264,Washington,Washington Huskies,80,2,Unknown
+Tusculum Pioneers,30,USC,USC Trojans,80,2,Unknown
+Life Pacific,279,Pacific,Pacific Tigers,80,2,Unknown
+Southern Virginia,2582,Southern,Southern Jaguars,80,2,Unknown
+Colorado Christian,38,Colorado,Colorado Buffaloes,80,2,Unknown
+Washington College (MD) Shoremen,264,Washington,Washington Huskies,80,2,Unknown
+Southern Wesleyan,2582,Southern,Southern Jaguars,80,2,Unknown
+Arkansas Baptist,8,Arkansas,Arkansas Razorbacks,80,2,Unknown
+San Francisco State,2539,San Francisco,San Francisco Dons,80,2,Unknown
+Columbia International,171,Columbia,Columbia Lions,80,2,Unknown
+Southern Methodist,2582,Southern,Southern Jaguars,80,2,Unknown
+Grambling,2755,Grambling,Grambling Tigers,100,2,Unknown
+Illinois Fighting,356,Illinois,Illinois Fighting Illini,80,2,Unknown
+Johnson & Wales (NC) JOHNSON & WALES-CHARLOTTE,2429,Charlotte,Charlotte 49ers,80,1,Unknown
+West Virginia Wesleyan,258,Virginia,Virginia Cavaliers,80,1,Unknown
+Western New Mexico,167,New Mexico,New Mexico Lobos,80,1,Unknown
+Maine-Augusta Moose,311,Maine,Maine Black Bears,80,1,Unknown
+Vermont State - Lyndon,261,Vermont,Vermont Catamounts,80,1,Unknown
+Virginia St,258,Virginia,Virginia Cavaliers,80,1,Unknown
+Northeastern State RiverHawks,111,Northeastern,Northeastern Huskies,80,1,Unknown
+Manhattan Christian Thunder,2363,Manhattan,Manhattan Jaspers,80,1,Unknown
+Cornell,172,Cornell,Cornell Big Red,100,1,Unknown
+Florida National Conquistadors,57,Florida,Florida Gators,80,1,Unknown
+Penn State-New Kensington,213,Penn State,Penn State Nittany Lions,80,1,Unknown
+Oakland City Mighty Oaks,2473,Oakland,Oakland Golden Grizzlies,80,1,Unknown
+Ohio Christian,195,Ohio,Ohio Bobcats,80,1,Unknown
+Tennessee Southern Firehawks,2582,Southern,Southern Jaguars,80,1,Unknown
+Missouri Baptist,142,Missouri,Missouri Tigers,80,1,Unknown
+Cincinnati Clermont,2132,Cincinnati,Cincinnati Bearcats,80,1,Unknown
+Penn State-York,213,Penn State,Penn State Nittany Lions,80,1,Unknown
+Missouri Southern State,142,Missouri,Missouri Tigers,80,1,Unknown
+Belmont Abbey,2057,Belmont,Belmont Bruins,80,1,Unknown
+Ottawa University Arizona,12,Arizona,Arizona Wildcats,80,1,Unknown
+Illinois Tech Scarlet,356,Illinois,Illinois Fighting Illini,80,1,Unknown
+Dakota State,2449,N Dakota St,North Dakota State Bison,60,1,Unknown
+John Brown,225,Brown,Brown Bears,80,1,Unknown
+Pittsburgh - Greensburg,221,Pitt,Pittsburgh Panthers,80,1,Unknown
+Ohio Wesleyan Battling Bishops,195,Ohio,Ohio Bobcats,80,1,Unknown
+Rutgers-Camden Scarlet Raptors,164,Rutgers,Rutgers Scarlet Knights,80,1,Unknown
+Campbell,2097,Campbell,Campbell Fighting Camels,100,1,Unknown
+Holy Cross College (IN) Saints,107,Holy Cross,Holy Cross Crusaders,80,1,Unknown
+Hawai'i Hilo Vulcans,62,Hawai’i,Hawai'i Rainbow Warriors,60,1,Unknown
+Southern Arkansas Muleriders,8,Arkansas,Arkansas Razorbacks,80,1,Unknown
+Oklahoma Christian OKLAHOMA CHRISTIAN,201,Oklahoma,Oklahoma Sooners,80,1,Unknown
+Colorado College,38,Colorado,Colorado Buffaloes,80,1,Unknown
+Fresno Pacific Sunbirds,279,Pacific,Pacific Tigers,80,1,Unknown
+Washington and Lee,264,Washington,Washington Huskies,80,1,Unknown
+Pacific Lutheran,279,Pacific,Pacific Tigers,80,1,Unknown
+Penn St Abington,219,Penn,Pennsylvania Quakers,80,1,Unknown
+District Of Columbia Firebirds,171,Columbia,Columbia Lions,80,1,Unknown
+Whitman Missionaries,314,Iona,Iona Gaels,80,1,Unknown
+Southern-New Orleans,2443,New Orleans,New Orleans Privateers,80,1,Unknown
+Northwestern Oklahoma State Rangers,77,Northwestern,Northwestern Wildcats,80,1,Unknown
+Saint Josephs Long Island,112358,Long Island,Long Island University Sharks,80,1,Unknown
+Manhattanville Valiants,2363,Manhattan,Manhattan Jaspers,80,1,Unknown
+Concordia-Nebraska Clippers,158,Nebraska,Nebraska Cornhuskers,80,1,Unknown
+Mercy,2174,Detroit Mercy,Detroit Mercy Titans,80,1,Unknown
+Kentucky State Thorobreds,96,Kentucky,Kentucky Wildcats,80,1,Unknown
+St. Xavier  (IL),2752,Xavier,Xavier Musketeers,80,1,Unknown
+Louisiana Christian,309,Louisiana,Louisiana Ragin' Cajuns,80,1,Unknown
+Bryant Str-Alb,2803,Bryant,Bryant Bulldogs,80,1,Unknown
+Auburn-Montgomery Senators,2,Auburn,Auburn Tigers,80,1,Unknown

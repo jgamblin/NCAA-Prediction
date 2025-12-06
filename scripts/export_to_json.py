@@ -185,6 +185,14 @@ def export_to_json(output_dir: Path = None):
     print("\n5. Exporting value bets...")
     
     value_bets = betting_repo.get_value_bets(min_value_score=0.05, min_confidence=0.55)
+    
+    # Add explanations from predictions
+    for bet in value_bets:
+        if bet.get('prediction_id'):
+            pred = pred_repo.get_prediction_by_id(bet['prediction_id'])
+            if pred and pred.get('explanation'):
+                bet['explanation'] = pred['explanation']
+    
     with open(output_dir / 'value_bets.json', 'w') as f:
         json.dump(value_bets, f, indent=2, default=json_serial)
     print(f"   ✓ Exported {len(value_bets)} value bets")
@@ -553,6 +561,121 @@ def export_to_json(output_dir: Path = None):
     with open(output_dir / 'top_teams.json', 'w') as f:
         json.dump(top_teams_data, f, indent=2, default=json_serial)
     print(f"   ✓ Exported top {len(top_teams_data)} teams")
+    
+    # =========================================================================
+    # 7b. Export ALL Teams (for searchable Teams page)
+    # =========================================================================
+    print("\n7b. Exporting all teams...")
+    
+    # Load conference mappings
+    try:
+        conf_df = pd.read_csv('data/team_conferences.csv')
+        conference_map = dict(zip(conf_df['canonical_name'], conf_df['conference']))
+    except FileNotFoundError:
+        print("   ⚠️  Conference file not found, using 'Unknown' for all teams")
+        conference_map = {}
+    
+    # Get all teams from games this season (use CANONICAL names)
+    all_teams_query = """
+        WITH team_games AS (
+            SELECT 
+                team_name,
+                SUM(games) as games_played,
+                SUM(wins) as wins
+            FROM (
+                SELECT home_team_canonical as team_name, COUNT(*) as games, 
+                       SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = ? AND game_status = 'Final'
+                GROUP BY home_team_canonical
+                UNION ALL
+                SELECT away_team_canonical as team_name, COUNT(*) as games,
+                       SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = ? AND game_status = 'Final'
+                GROUP BY away_team_canonical
+            )
+            GROUP BY team_name
+        ),
+        team_predictions AS (
+            SELECT 
+                team_name,
+                COUNT(DISTINCT game_id) as predictions_made,
+                SUM(correct) as correct_predictions,
+                AVG(confidence) as avg_confidence
+            FROM (
+                -- Predictions for home games
+                SELECT 
+                    g.home_team_canonical as team_name,
+                    p.game_id,
+                    p.confidence,
+                    CASE 
+                        WHEN g.game_status = 'Final' 
+                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        THEN 1 ELSE 0 
+                    END as correct
+                FROM predictions p
+                JOIN games g ON p.game_id = g.game_id
+                WHERE g.season = ?
+                
+                UNION ALL
+                
+                -- Predictions for away games
+                SELECT 
+                    g.away_team_canonical as team_name,
+                    p.game_id,
+                    p.confidence,
+                    CASE 
+                        WHEN g.game_status = 'Final' 
+                        AND ((p.predicted_winner = g.home_team_canonical AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team_canonical AND g.away_score > g.home_score))
+                        THEN 1 ELSE 0 
+                    END as correct
+                FROM predictions p
+                JOIN games g ON p.game_id = g.game_id
+                WHERE g.season = ?
+            )
+            GROUP BY team_name
+        )
+        SELECT 
+            tg.team_name as display_name,
+            tg.games_played,
+            tg.wins,
+            COALESCE(tp.predictions_made, 0) as predictions_made,
+            COALESCE(tp.correct_predictions, 0) as correct_predictions,
+            COALESCE(tp.avg_confidence, 0.0) as avg_confidence
+        FROM team_games tg
+        LEFT JOIN team_predictions tp ON tg.team_name = tp.team_name
+        ORDER BY tg.team_name
+    """
+    
+    all_teams_df = db.fetch_df(all_teams_query, (current_season, current_season, current_season, current_season))
+    
+    all_teams_data = []
+    for _, row in all_teams_df.iterrows():
+        # Skip teams with no games
+        if row['games_played'] == 0:
+            continue
+            
+        losses = row['games_played'] - row['wins']
+        prediction_accuracy = (row['correct_predictions'] / row['predictions_made']) if row['predictions_made'] > 0 else 0.0
+        
+        team_data = {
+            'display_name': row['display_name'],
+            'games_played': int(row['games_played']),
+            'wins': int(row['wins']),
+            'losses': int(losses),
+            'win_pct': float(row['wins'] / row['games_played']) if row['games_played'] > 0 else 0.0,
+            'predictions_made': int(row['predictions_made']),
+            'correct_predictions': int(row['correct_predictions']),
+            'prediction_accuracy': float(prediction_accuracy),
+            'avg_confidence': float(row['avg_confidence']),
+            'conference': conference_map.get(row['display_name'], '')
+        }
+        all_teams_data.append(team_data)
+    
+    with open(output_dir / 'all_teams.json', 'w') as f:
+        json.dump(all_teams_data, f, indent=2, default=json_serial)
+    print(f"   ✓ Exported {len(all_teams_data)} teams")
     
     # =========================================================================
     # 8. Export Prediction History (Complete 2025-26 Season)

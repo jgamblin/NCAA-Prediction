@@ -45,12 +45,13 @@ def calculate_parlay_odds(moneylines: List[int]) -> tuple:
 
 def generate_daily_parlay(prediction_date: Optional[date] = None) -> Optional[int]:
     """
-    Generate a 3-leg parlay from today's top betting recommendations.
+    Generate a 2-leg CONSERVATIVE parlay from today's top betting recommendations.
     
-    Strategy:
-    - Select top 3 bets by confidence from today's recommendations
+    Strategy (CONSERVATIVE):
+    - Select top 2 bets with 80%+ confidence (down from 3 legs, up from 60%)
     - Only use bets that haven't been settled yet
     - All legs must have real moneylines
+    - Skip parlay if insufficient high-confidence picks (preserve bankroll)
     
     Returns:
         parlay_id if created, None if insufficient picks
@@ -60,7 +61,7 @@ def generate_daily_parlay(prediction_date: Optional[date] = None) -> Optional[in
     
     db = get_db_connection()
     
-    # Get today's unsettled bets (top 3 by confidence)
+    # Get today's unsettled bets (top 2 by confidence, 80%+ only - MORE CONSERVATIVE)
     query = """
         SELECT 
             b.prediction_id,
@@ -74,15 +75,17 @@ def generate_daily_parlay(prediction_date: Optional[date] = None) -> Optional[in
         WHERE g.date = ?
           AND b.settled_at IS NULL
           AND g.game_status = 'Scheduled'
+          AND b.confidence >= 0.80
         ORDER BY b.confidence DESC
-        LIMIT 3
+        LIMIT 2
     """
     
     with db.transaction() as conn:
         result = conn.execute(query, (prediction_date,)).fetchall()
     
-    if len(result) < 3:
-        print(f"⚠️  Insufficient picks for parlay: only {len(result)} eligible games")
+    if len(result) < 2:
+        print(f"⚠️  Insufficient picks for parlay: only {len(result)} eligible games with 80%+ confidence")
+        print(f"   (Skipping parlay to preserve bankroll)")
         return None
     
     # Check if we already have a parlay for this date
@@ -122,10 +125,10 @@ def generate_daily_parlay(prediction_date: Optional[date] = None) -> Optional[in
         conn.execute(parlay_query, (
             prediction_date,
             10.0,
-            3,
+            2,  # Changed from 3 to 2 legs - more conservative
             combined_odds,
             potential_payout,
-            'parlay_high_confidence'
+            'parlay_high_confidence_conservative'
         ))
         
         # Get the parlay_id
@@ -151,7 +154,7 @@ def generate_daily_parlay(prediction_date: Optional[date] = None) -> Optional[in
                 i
             ))
     
-    print(f"✓ Created 3-leg parlay (ID: {parlay_id})")
+    print(f"✓ Created 2-leg CONSERVATIVE parlay (ID: {parlay_id}) - 80%+ confidence only")
     print(f"  Combined odds: {combined_odds:.2f}")
     print(f"  Potential payout: ${potential_payout:.2f}")
     print(f"  Legs:")

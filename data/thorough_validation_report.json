@@ -1,0 +1,463 @@
+{
+  "timestamp": "2025-12-05T15:01:42.646964",
+  "summary": {
+    "teams_validated": 359,
+    "perfect_matches": 303,
+    "close_matches": 41,
+    "significant_mismatches": 15,
+    "duplicates": 0
+  },
+  "mismatches": [
+    {
+      "team": "UMass",
+      "db_record": "8-9",
+      "espn_record": "5-3",
+      "db_games": 17,
+      "espn_games": 8,
+      "diff": 9
+    },
+    {
+      "team": "BYU",
+      "db_record": "1-0",
+      "espn_record": "7-1",
+      "db_games": 1,
+      "espn_games": 8,
+      "diff": 7
+    },
+    {
+      "team": "Pacific",
+      "db_record": "8-7",
+      "espn_record": "7-2",
+      "db_games": 15,
+      "espn_games": 9,
+      "diff": 6
+    },
+    {
+      "team": "Penn State",
+      "db_record": "8-7",
+      "espn_record": "8-1",
+      "db_games": 15,
+      "espn_games": 9,
+      "diff": 6
+    },
+    {
+      "team": "Southern",
+      "db_record": "6-7",
+      "espn_record": "4-4",
+      "db_games": 13,
+      "espn_games": 8,
+      "diff": 5
+    },
+    {
+      "team": "Washington",
+      "db_record": "5-8",
+      "espn_record": "5-3",
+      "db_games": 13,
+      "espn_games": 8,
+      "diff": 5
+    },
+    {
+      "team": "Kentucky",
+      "db_record": "5-7",
+      "espn_record": "5-3",
+      "db_games": 12,
+      "espn_games": 8,
+      "diff": 4
+    },
+    {
+      "team": "Louisiana",
+      "db_record": "3-10",
+      "espn_record": "1-8",
+      "db_games": 13,
+      "espn_games": 9,
+      "diff": 4
+    },
+    {
+      "team": "New Mexico",
+      "db_record": "6-6",
+      "espn_record": "6-2",
+      "db_games": 12,
+      "espn_games": 8,
+      "diff": 4
+    },
+    {
+      "team": "Oakland",
+      "db_record": "4-9",
+      "espn_record": "4-5",
+      "db_games": 13,
+      "espn_games": 9,
+      "diff": 4
+    },
+    {
+      "team": "Penn",
+      "db_record": "5-7",
+      "espn_record": "5-3",
+      "db_games": 12,
+      "espn_games": 8,
+      "diff": 4
+    },
+    {
+      "team": "Arkansas",
+      "db_record": "7-4",
+      "espn_record": "6-2",
+      "db_games": 11,
+      "espn_games": 8,
+      "diff": 3
+    },
+    {
+      "team": "Columbia",
+      "db_record": "8-4",
+      "espn_record": "8-1",
+      "db_games": 12,
+      "espn_games": 9,
+      "diff": 3
+    },
+    {
+      "team": "SE Louisiana",
+      "db_record": "1-4",
+      "espn_record": "3-5",
+      "db_games": 5,
+      "espn_games": 8,
+      "diff": 3
+    },
+    {
+      "team": "Vermont",
+      "db_record": "5-8",
+      "espn_record": "5-5",
+      "db_games": 13,
+      "espn_games": 10,
+      "diff": 3
+    }
+  ],
+  "close_matches": [
+    {
+      "team": "Alabama",
+      "db_record": "7-3",
+      "espn_record": "6-2",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "Alabama A&M",
+      "db_record": "3-2",
+      "espn_record": "4-3",
+      "db_games": 5,
+      "espn_games": 7,
+      "diff": 2
+    },
+    {
+      "team": "Coastal",
+      "db_record": "5-6",
+      "espn_record": "5-4",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Colorado",
+      "db_record": "8-2",
+      "espn_record": "8-0",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "Howard",
+      "db_record": "4-7",
+      "espn_record": "4-5",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Manhattan",
+      "db_record": "3-7",
+      "espn_record": "3-5",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "New Orleans",
+      "db_record": "3-7",
+      "espn_record": "2-6",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "Notre Dame",
+      "db_record": "6-5",
+      "espn_record": "6-3",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Ohio",
+      "db_record": "2-8",
+      "espn_record": "2-6",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "Oregon",
+      "db_record": "4-6",
+      "espn_record": "4-4",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "SMU",
+      "db_record": "6-1",
+      "espn_record": "8-1",
+      "db_games": 7,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "San Francisco",
+      "db_record": "5-6",
+      "espn_record": "5-4",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Tennessee",
+      "db_record": "7-4",
+      "espn_record": "7-2",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Texas",
+      "db_record": "6-5",
+      "espn_record": "6-3",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Texas A&M",
+      "db_record": "7-4",
+      "espn_record": "7-2",
+      "db_games": 11,
+      "espn_games": 9,
+      "diff": 2
+    },
+    {
+      "team": "Virginia",
+      "db_record": "8-2",
+      "espn_record": "7-1",
+      "db_games": 10,
+      "espn_games": 8,
+      "diff": 2
+    },
+    {
+      "team": "AR-Pine Bluff",
+      "db_record": "0-8",
+      "espn_record": "1-8",
+      "db_games": 8,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Arizona",
+      "db_record": "7-1",
+      "espn_record": "7-0",
+      "db_games": 8,
+      "espn_games": 7,
+      "diff": 1
+    },
+    {
+      "team": "Belmont",
+      "db_record": "8-2",
+      "espn_record": "8-1",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Brown",
+      "db_record": "3-7",
+      "espn_record": "3-6",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Charlotte",
+      "db_record": "4-6",
+      "espn_record": "4-5",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Cincinnati",
+      "db_record": "6-3",
+      "espn_record": "6-2",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Detroit Mercy",
+      "db_record": "3-7",
+      "espn_record": "3-6",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Florida",
+      "db_record": "5-4",
+      "espn_record": "5-3",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Georgia",
+      "db_record": "8-2",
+      "espn_record": "8-1",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Holy Cross",
+      "db_record": "3-7",
+      "espn_record": "3-6",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Illinois",
+      "db_record": "6-3",
+      "espn_record": "6-2",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Indiana",
+      "db_record": "7-2",
+      "espn_record": "7-1",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Iona",
+      "db_record": "6-3",
+      "espn_record": "6-2",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Jacksonville",
+      "db_record": "4-5",
+      "espn_record": "4-4",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Long Island",
+      "db_record": "4-5",
+      "espn_record": "4-4",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Maine",
+      "db_record": "0-11",
+      "espn_record": "0-10",
+      "db_games": 11,
+      "espn_games": 10,
+      "diff": 1
+    },
+    {
+      "team": "N Dakota St",
+      "db_record": "6-4",
+      "espn_record": "6-3",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Nebraska",
+      "db_record": "8-1",
+      "espn_record": "8-0",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Northeastern",
+      "db_record": "3-6",
+      "espn_record": "3-5",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Northwestern",
+      "db_record": "5-4",
+      "espn_record": "5-3",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Oklahoma",
+      "db_record": "6-3",
+      "espn_record": "6-2",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Pitt",
+      "db_record": "5-5",
+      "espn_record": "5-4",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "Rutgers",
+      "db_record": "5-5",
+      "espn_record": "5-4",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    },
+    {
+      "team": "USC",
+      "db_record": "8-1",
+      "espn_record": "8-0",
+      "db_games": 9,
+      "espn_games": 8,
+      "diff": 1
+    },
+    {
+      "team": "Xavier",
+      "db_record": "6-4",
+      "espn_record": "6-3",
+      "db_games": 10,
+      "espn_games": 9,
+      "diff": 1
+    }
+  ],
+  "duplicates": []
+}

@@ -54,9 +54,9 @@ def calculate_kelly_bet(
 
 
 def generate_betting_recommendations(
-    min_confidence: float = 0.60,
-    min_value: float = 0.05,
-    max_recommendations: int = 20,
+    min_confidence: float = 0.75,  # Raised from 0.60 - more conservative
+    min_value: float = 0.15,       # Raised from 0.05 - require bigger edge
+    max_recommendations: int = 10,  # Reduced from 20 - fewer bets
     daily_budget: float = 100.0,
     parlay_amount: float = 10.0
 ):
@@ -255,20 +255,20 @@ if __name__ == "__main__":
     parser.add_argument(
         '--min-confidence',
         type=float,
-        default=0.60,
-        help='Minimum prediction confidence (default: 0.60)'
+        default=0.75,
+        help='Minimum prediction confidence (default: 0.75 - CONSERVATIVE)'
     )
     parser.add_argument(
         '--min-value',
         type=float,
-        default=0.05,
-        help='Minimum value edge over market (default: 0.05)'
+        default=0.15,
+        help='Minimum value edge over market (default: 0.15 - CONSERVATIVE)'
     )
     parser.add_argument(
         '--max-recs',
         type=int,
-        default=20,
-        help='Maximum number of recommendations (default: 20)'
+        default=10,
+        help='Maximum number of recommendations (default: 10 - CONSERVATIVE)'
     )
     parser.add_argument(
         '--daily-budget',

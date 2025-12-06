@@ -160,6 +160,7 @@ def create_predictions_table(db_conn: DatabaseConnection):
             config_version VARCHAR,
             commit_hash VARCHAR,
             source VARCHAR DEFAULT 'live',
+            explanation TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         """
@@ -183,6 +184,7 @@ def create_predictions_table(db_conn: DatabaseConnection):
             config_version VARCHAR,
             commit_hash VARCHAR,
             source VARCHAR DEFAULT 'live',
+            explanation TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         """

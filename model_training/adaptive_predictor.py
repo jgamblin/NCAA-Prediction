@@ -35,6 +35,7 @@ from datetime import datetime, timedelta
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.preprocessing import LabelEncoder
+from model_training.prediction_explainer import PredictionExplainer
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -145,6 +146,19 @@ class AdaptivePredictor:
         use_rest_days=True,
         model_type='random_forest',
         use_ensemble=False,
+        # XGBoost-specific hyperparameters (Week 2 tuning, optimized)
+        xgb_max_depth=6,
+        xgb_learning_rate=0.05,  # Optimized: Slower learning is more stable
+        xgb_n_estimators=150,
+        xgb_subsample=0.8,
+        xgb_colsample_bytree=0.8,
+        xgb_reg_alpha=0.1,  # Optimized: Minimal regularization performs best
+        xgb_reg_lambda=1.0,  # Optimized: Balanced L2
+        # RandomForest-specific hyperparameters (Week 2 tuning)
+        rf_max_features='sqrt',
+        rf_min_samples_leaf=10,
+        # Feature selection (Week 2.5)
+        remove_useless_features=True,
     ):
         """
         Initialize the predictor.
@@ -176,11 +190,13 @@ class AdaptivePredictor:
             try:
                 import xgboost as xgb
                 base_model = xgb.XGBClassifier(
-                    n_estimators=n_estimators * 2,  # XGBoost typically uses more
-                    max_depth=min(max_depth, 8),    # XGBoost works better with shallower trees
-                    learning_rate=0.1,
-                    subsample=0.8,
-                    colsample_bytree=0.8,
+                    n_estimators=xgb_n_estimators,
+                    max_depth=xgb_max_depth,
+                    learning_rate=xgb_learning_rate,
+                    subsample=xgb_subsample,
+                    colsample_bytree=xgb_colsample_bytree,
+                    reg_alpha=xgb_reg_alpha,     # L1 regularization (Week 2)
+                    reg_lambda=xgb_reg_lambda,   # L2 regularization (Week 2)
                     random_state=42,
                     n_jobs=-1,
                     verbosity=0,
@@ -192,6 +208,8 @@ class AdaptivePredictor:
                     n_estimators=n_estimators,
                     max_depth=max_depth,
                     min_samples_split=min_samples_split,
+                    max_features=rf_max_features,         # Week 2 regularization
+                    min_samples_leaf=rf_min_samples_leaf, # Week 2 regularization
                     random_state=42,
                     n_jobs=-1
                 )
@@ -200,6 +218,8 @@ class AdaptivePredictor:
                 n_estimators=n_estimators,
                 max_depth=max_depth,
                 min_samples_split=min_samples_split,
+                max_features=rf_max_features,         # Week 2 regularization
+                min_samples_leaf=rf_min_samples_leaf, # Week 2 regularization
                 random_state=42,
                 n_jobs=-1
             )
@@ -303,6 +323,16 @@ class AdaptivePredictor:
         
         # Phase 4 advanced features
         self.use_conference_strength = _feature_flags.get('use_conference_strength', True)
+        
+        # Week 2.5: Feature selection
+        self.remove_useless_features = remove_useless_features
+        self.useless_features = [
+            'home_team_encoded', 'away_team_encoded',
+            'home_rank', 'away_rank', 'rank_diff', 'is_ranked_matchup',
+            'is_neutral',
+            'home_conf_rating', 'away_conf_rating', 'conf_rating_diff',
+            'home_team_home_adv', 'home_team_home_margin'
+        ]
         self.use_recency_weighting = _feature_flags.get('use_recency_weighting', True)
         self._conference_strength = None  # Will be initialized during fit()
         self._recency_weighting = None  # Will be initialized during fit()
@@ -410,8 +440,17 @@ class AdaptivePredictor:
         """
         df = df.copy()
 
-        # Normalize team names to handle inconsistencies
-        # (e.g., "Indiana" vs "Indiana Hoosiers")
+        # ALWAYS normalize team names to ensure consistency
+        # This is critical - the model trains on normalized names like "Indiana"
+        # but ESPN might provide "Indiana Hoosiers" which breaks predictions
+        
+        # First, use canonical names if available
+        if 'home_team_canonical' in df.columns and 'away_team_canonical' in df.columns:
+            df['home_team'] = df['home_team_canonical']
+            df['away_team'] = df['away_team_canonical']
+        
+        # ALWAYS apply normalization (even if canonical columns exist)
+        # to handle any edge cases or inconsistencies
         if 'home_team' in df.columns:
             df['home_team'] = df['home_team'].apply(normalize_team_name)
         if 'away_team' in df.columns:
@@ -492,6 +531,14 @@ class AdaptivePredictor:
         for col in self.phase4_feature_cols:
             if col in df.columns and col not in self.feature_cols:
                 self.feature_cols.append(col)
+        
+        # Week 2.5: Remove useless features if enabled
+        if self.remove_useless_features:
+            features_to_drop = [f for f in self.useless_features if f in df.columns]
+            if features_to_drop:
+                df = df.drop(columns=features_to_drop)
+                # Also remove from feature_cols list
+                self.feature_cols = [f for f in self.feature_cols if f not in self.useless_features]
         
         return df
     
@@ -832,27 +879,52 @@ class AdaptivePredictor:
         self.min_games_threshold = chosen
         print(f"Dynamic min_games_threshold set to {self.min_games_threshold} ({self.min_games_threshold_source})")
 
-    def fit(self, train_df):
+    def fit(self, train_df, use_validation=True, val_days=14):
         """
         Train the model on historical data.
 
         Args:
             train_df: DataFrame with training data
+            use_validation: If True, use validation set for calibration (default: True)
+            val_days: Days to use for validation (default: 14)
 
         Returns:
             self for method chaining
         """
+        
+        # ================================================================
+        # CRITICAL: Split into train/validation for proper calibration
+        # ================================================================
+        if use_validation and len(train_df) > 200:  # Need enough data to split
+            from model_training.train_val_split import create_validation_split
+            
+            print("\nCreating train/validation split for calibration...")
+            train_only, val_data = create_validation_split(train_df, val_days=val_days)
+            
+            # Store both for feature initialization
+            self._historical_games = train_df.copy()  # Full data for features
+            self._validation_data = val_data.copy()   # Held-out for calibration
+            
+            # Use training-only set for model training
+            train_df_for_model = train_only
+        else:
+            print("\n⚠️  Warning: Skipping validation split (not enough data or disabled)")
+            self._historical_games = train_df.copy()
+            self._validation_data = None
+            train_df_for_model = train_df
 
         # Store raw training data for Phase 2 feature calculations
-        self._historical_games = train_df.copy()
+        # (Already stored above, but keep for compatibility)
 
-        # Initialize Phase 2 features before prepare_data
-        self._init_phase2_features(train_df)
+        # Initialize Phase 2 features before prepare_data (use full data)
+        self._init_phase2_features(self._historical_games)
 
         # Initialize Phase 4 features (depends on Phase 2 for power ratings)
-        self._init_phase4_features(train_df)
+        self._init_phase4_features(self._historical_games)
 
-        train_df = self.prepare_data(train_df)
+        # Prepare training data
+        train_df_prepared = self.prepare_data(train_df_for_model.copy())
+        train_df = train_df_prepared
         self.training_data = train_df  # Store for game count lookups
 
         # --- TEAM LABEL ENCODER FIX ---
@@ -888,21 +960,14 @@ class AdaptivePredictor:
             train_df['home_team_encoded'] = train_df['home_team_id'].map(self.team_target_encoding).fillna(0.5)
             train_df['away_team_encoded'] = train_df['away_team_id'].map(self.team_target_encoding).fillna(0.5)
         else:
-            # Fallback: 0.5 for all
-            train_df['home_team_encoded'] = 0.5
-            train_df['away_team_encoded'] = 0.5
+            pass  # Use LabelEncoder values (already done above)
 
-        # Train model
-        # Filter feature columns that exist (dynamic expansion with feature store)
-        available = [c for c in self.feature_cols if c in train_df.columns]
-        if set(self.feature_cols) - set(available):
-            missing = set(self.feature_cols) - set(available)
-            if missing:
-                print(f"Note: Skipping missing feature columns: {sorted(missing)}")
-        X = train_df[available]
+        # Extract features and target
         y = train_df['home_win']
+        available = [c for c in self.feature_cols if c in train_df.columns]
+        X = train_df[available]
 
-        print(f"Training model on {len(train_df)} games...")
+        print(f"Training model on {len(train_df)} games with {len(available)} features...")
         self._raw_model.fit(X, y)
         if self.calibrate and self.calibration_method in ('sigmoid', 'isotonic'):
             try:
@@ -934,22 +999,76 @@ class AdaptivePredictor:
         except Exception as exc:
             print(f"Feature importance logging skipped: {exc}")
 
-        # Store home-court logit adjustment (shifts probabilities away from automatic home bias)
-        # Configure home-court probability adjustment
-        try:
-            self._configure_home_court_shift(X, y)
-        except Exception as exc:
-            print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
-            self.home_court_logit_shift_value = 0.0
-            self.home_court_logit_shift_source = 'error'
-            self.home_court_logit_shift_target = None
+        # ================================================================
+        # CALIBRATION: Use validation set if available, otherwise training
+        # ================================================================
+        if self._validation_data is not None:
+            print("\nCalibrating on validation set...")
+            
+            # Prepare validation data
+            val_prepared = self.prepare_data(self._validation_data.copy())
+            y_val = val_prepared['home_win']
+            
+            # Align validation features to trained features (same as predict)
+            trained_features = getattr(self._raw_model, 'feature_names_in_', None)
+            if trained_features is not None:
+                X_val = val_prepared.reindex(columns=list(trained_features), fill_value=0)
+            else:
+                val_features = [c for c in available if c in val_prepared.columns]
+                X_val = val_prepared[val_features]
+            
+            # Get raw probabilities on validation set
+            val_probs_raw = self._raw_model.predict_proba(X_val)[:, 1]
+            
+            # Fit isotonic regression calibrator
+            from sklearn.isotonic import IsotonicRegression
+            self.isotonic_calibrator = IsotonicRegression(out_of_bounds='clip')
+            self.isotonic_calibrator.fit(val_probs_raw, y_val)
+            
+            # Test calibration improvement
+            from model_training.calibration_metrics import expected_calibration_error
+            val_probs_calibrated = self.isotonic_calibrator.transform(val_probs_raw)
+            ece_before = expected_calibration_error(y_val.values, val_probs_raw)
+            ece_after = expected_calibration_error(y_val.values, val_probs_calibrated)
+            
+            print(f"  Validation set: {len(y_val)} games")
+            print(f"  ECE before calibration: {ece_before:.4f}")
+            print(f"  ECE after calibration:  {ece_after:.4f}")
+            print(f"  ✓ Improvement: {(ece_before - ece_after) / max(ece_before, 1e-6) * 100:.1f}%")
+            
+            # Configure temperature and home court on validation set
+            try:
+                self._configure_home_court_shift(X_val, y_val)
+            except Exception as exc:
+                print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
+                self.home_court_logit_shift_value = 0.0
+                self.home_court_logit_shift_source = 'error'
 
-        try:
-            self._configure_confidence_temperature(X, y)
-        except Exception as exc:
-            print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
-            self.confidence_temperature_value = 0.85
-            self.confidence_temperature_source = 'error'
+            try:
+                self._configure_confidence_temperature(X_val, y_val)
+            except Exception as exc:
+                print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
+                self.confidence_temperature_value = 0.85
+                self.confidence_temperature_source = 'error'
+        else:
+            print("\n⚠️  Warning: No validation set - calibrating on training data (not recommended!)")
+            self.isotonic_calibrator = None
+            
+            # Fallback to training set (not ideal)
+            try:
+                self._configure_home_court_shift(X, y)
+            except Exception as exc:
+                print(f"Home-court shift configuration failed ({exc}); defaulting to zero shift")
+                self.home_court_logit_shift_value = 0.0
+                self.home_court_logit_shift_source = 'error'
+                self.home_court_logit_shift_target = None
+
+            try:
+                self._configure_confidence_temperature(X, y)
+            except Exception as exc:
+                print(f"Confidence temperature configuration failed ({exc}); using default 0.85")
+                self.confidence_temperature_value = 0.85
+                self.confidence_temperature_source = 'error'
 
         return self
 
@@ -1053,8 +1172,19 @@ class AdaptivePredictor:
         else:
             available = [c for c in self.feature_cols if c in upcoming_valid.columns]
             X_upcoming = upcoming_valid[available]
-        base_probs = self.model.predict_proba(X_upcoming)[:, 1]
+        
+        # Get RAW probabilities from model
+        base_probs = self._raw_model.predict_proba(X_upcoming)[:, 1]
+        
+        # CRITICAL: Apply isotonic calibration FIRST (if available)
+        if hasattr(self, 'isotonic_calibrator') and self.isotonic_calibrator is not None:
+            base_probs = self.isotonic_calibrator.transform(base_probs)
+            # Isotonic calibration applied - probabilities should now be well-calibrated
+        
+        # Then apply home court shift
         home_probs_adj = self._apply_home_court_shift(base_probs)
+        
+        # Finally apply temperature scaling
         probabilities = self._apply_confidence_temperature(home_probs_adj)
         
         # Apply early season adjustment (Phase 1 Task 1.4)
@@ -1119,11 +1249,66 @@ class AdaptivePredictor:
         
         # Apply 0.75x confidence multiplier for low-data games
         results_df.loc[results_df['has_insufficient_data'], 'confidence'] *= 0.75
+        
+        # CONFIDENCE CAP: NCAA basketball is too unpredictable for >85% confidence
+        # Historical data shows even our "best" predictions aren't more than ~80% accurate
+        results_df['confidence'] = results_df['confidence'].clip(upper=0.85)
+        
+        # Even more conservative cap for low-data teams (max 75%)
+        if results_df['has_insufficient_data'].any():
+            low_data_mask = results_df['has_insufficient_data']
+            results_df.loc[low_data_mask, 'confidence'] = results_df.loc[low_data_mask, 'confidence'].clip(upper=0.75)
 
         if low_data_games:
             print(f"✓ Generated predictions for {len(results_df)} games ({len(low_data_games)} with limited data, confidence reduced by 25%)")
         else:
             print(f"✓ Generated predictions for {len(results_df)} games")
+        
+        # Generate explanations for each prediction
+        try:
+            # Load feature importance from last training
+            if os.path.exists(self.feature_importance_path):
+                feature_importance = pd.read_csv(self.feature_importance_path)
+                explainer = PredictionExplainer(feature_importance)
+                
+                explanations = []
+                for idx, row in results_df.iterrows():
+                    # Get features for this game from upcoming_valid
+                    game_idx = upcoming_valid[upcoming_valid['game_id'] == row['game_id']].index
+                    if len(game_idx) > 0:
+                        game_idx = game_idx[0]
+                        # Extract feature values
+                        if trained_features is not None:
+                            features = X_upcoming.loc[game_idx].to_dict()
+                        else:
+                            features = upcoming_valid.loc[game_idx][available].to_dict()
+                        
+                        # Generate explanation
+                        explanation = explainer.explain_prediction(
+                            home_team=row['home_team'],
+                            away_team=row['away_team'],
+                            predicted_winner=row['predicted_winner'],
+                            confidence=row['confidence'],
+                            features=features
+                        )
+                    else:
+                        explanation = f"{row['predicted_winner']} is favored to win this matchup."
+                    
+                    explanations.append(explanation)
+                
+                results_df['explanation'] = explanations
+            else:
+                # No feature importance available, use simple explanation
+                results_df['explanation'] = results_df.apply(
+                    lambda row: f"{row['predicted_winner']} is favored to win this matchup.",
+                    axis=1
+                )
+        except Exception as e:
+            print(f"  ⚠️  Could not generate explanations: {e}")
+            results_df['explanation'] = results_df.apply(
+                lambda row: f"{row['predicted_winner']} is favored to win this matchup.",
+                axis=1
+            )
 
         return results_df
 

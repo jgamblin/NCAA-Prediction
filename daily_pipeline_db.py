@@ -359,14 +359,8 @@ def main():
         train_df = games_repo.get_completed_games_df()
         print(f"✓ Loaded {len(train_df):,} training games from database (14ms vs 2.5s from CSV)")
         
-        # Normalize team names for consistency
-        try:
-            from data_collection.team_name_utils import normalize_game_dataframe
-            train_df = normalize_game_dataframe(train_df, team_columns=['home_team', 'away_team'])
-            upcoming = normalize_game_dataframe(upcoming, team_columns=['home_team', 'away_team'])
-            print("✓ Normalized team names")
-        except Exception as exc:
-            print(f"⚠️ Normalization failed: {exc}")
+        # Team names already normalized at scraping time (line 163)
+        # No need to normalize again here
         
         # Load model params
         from config.model_params_loader import load_model_params
@@ -435,7 +429,7 @@ def main():
                 upcoming = upcoming.merge(
                     predictions_df[['game_id', 'predicted_home_win', 'home_win_probability', 
                                    'away_win_probability', 'predicted_winner', 'confidence', 
-                                   'has_insufficient_data']],
+                                   'has_insufficient_data', 'explanation']],
                     on='game_id',
                     how='left'
                 )
@@ -458,7 +452,8 @@ def main():
                         'model_version': model_version,
                         'config_version': _config_version,
                         'commit_hash': _commit_hash,
-                        'source': 'live'
+                        'source': 'live',
+                        'explanation': row.get('explanation')
                     })
                 
                 upserted_preds = pred_repo.bulk_upsert_predictions(predictions_to_insert)
@@ -480,6 +475,28 @@ def main():
                               f"in {game['away_team']} @ {game['home_team']}")
                     if len(today_games) > 5:
                         print(f"    ... and {len(today_games) - 5} more")
+                
+                # ================================================================
+                # CONFIDENCE CALIBRATION WARNING
+                # ================================================================
+                print("\n" + "="*80)
+                print("⚠️  CONFIDENCE CALIBRATION WARNING")
+                print("="*80)
+                print("\nHistorical Performance (2025-26 Season):")
+                print("  80%+ confidence picks: 67.7% actual accuracy (OVERCONFIDENT)")
+                print("  70-80% confidence:     48.4% actual accuracy (VERY OVERCONFIDENT)")
+                print("  Overall:              57.1% actual accuracy")
+                print("\nToday's Predictions:")
+                print(f"  Total predictions:     {len(upcoming)}")
+                print(f"  Average confidence:    {upcoming['confidence'].mean():.1%}")
+                print(f"  80%+ confidence picks: {len(upcoming[upcoming['confidence'] >= 0.80])}")
+                print(f"  70%+ confidence picks: {len(upcoming[upcoming['confidence'] >= 0.70])}")
+                print("\n⚠️  IMPORTANT:")
+                print("   - Confidence scores are being improved with lower temperature (0.60)")
+                print("   - Confidence capped at 85% (NCAA too unpredictable for higher)")
+                print("   - 80%+ picks historically perform closer to 68% accuracy")
+                print("   - Use confidence as relative ranking, not absolute probability")
+                print("="*80 + "\n")
                 
             else:
                 print("⚠️ No predictions generated")

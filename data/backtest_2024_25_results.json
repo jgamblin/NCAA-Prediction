@@ -1,0 +1,13 @@
+{
+  "season": "2024-25",
+  "test_games": 1888,
+  "accuracy": 0.6170550847457628,
+  "average_confidence": 0.7099324845514572,
+  "ece": 0.09287739980569447,
+  "brier_score": 0.22759491481534835,
+  "log_loss": 0.6468853994006538,
+  "high_confidence_80plus": {
+    "count": 559,
+    "accuracy": 0.7942754919499105
+  }
+}

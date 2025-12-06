@@ -114,8 +114,8 @@ class PredictionsRepository:
             INSERT INTO predictions 
             (game_id, prediction_date, home_win_prob, away_win_prob,
              predicted_winner, predicted_home_win, confidence,
-             model_name, model_version, config_version, commit_hash, source)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             model_name, model_version, config_version, commit_hash, source, explanation)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """
         
         try:
@@ -132,7 +132,8 @@ class PredictionsRepository:
                     prediction_data.get('model_version'),
                     prediction_data.get('config_version'),
                     prediction_data.get('commit_hash'),
-                    prediction_data.get('source', 'live')
+                    prediction_data.get('source', 'live'),
+                    prediction_data.get('explanation')
                 ))
                 
                 # Get the inserted ID
@@ -151,8 +152,8 @@ class PredictionsRepository:
             INSERT INTO predictions 
             (game_id, prediction_date, home_win_prob, away_win_prob,
              predicted_winner, predicted_home_win, confidence,
-             model_name, model_version, config_version, commit_hash, source)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             model_name, model_version, config_version, commit_hash, source, explanation)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """
         
         inserted = 0
@@ -172,7 +173,8 @@ class PredictionsRepository:
                             pred.get('model_version'),
                             pred.get('config_version'),
                             pred.get('commit_hash'),
-                            pred.get('source', 'live')
+                            pred.get('source', 'live'),
+                            pred.get('explanation')
                         ))
                         inserted += 1
                     except Exception as e:
@@ -204,7 +206,8 @@ class PredictionsRepository:
                     model_version = ?,
                     config_version = ?,
                     commit_hash = ?,
-                    source = ?
+                    source = ?,
+                    explanation = ?
                 WHERE id = ?
             """
             
@@ -222,6 +225,7 @@ class PredictionsRepository:
                         prediction_data.get('config_version'),
                         prediction_data.get('commit_hash'),
                         prediction_data.get('source', 'live'),
+                        prediction_data.get('explanation'),
                         existing['id']
                     ))
                 return existing['id']
