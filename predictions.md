@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-06 21:59:29 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `1150fe6`
+**Last Updated**: 2025-12-07 00:29:09 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `6a6e1de`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 48
+- **Average Confidence**: 73.2%
+- **High (≥70%)**: 36 · **Medium (60-70%)**: 2 · **Other (<60%)**: 10
 
 ### 🏅 Pick Streaks
 
@@ -26,9 +26,73 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Army** | Gallaudet | 85.0% |
+| 2 | **Mercyhurst** | Bethany (WV) | 85.0% |
+| 3 | **Louisiana Tech** | Ecclesia | 85.0% |
+| 4 | **Alabama Crimson Tide** | UTSA | 85.0% |
+| 5 | **Creighton** | Nebraska Cornhuskers | 85.0% |
+| 6 | **Gonzaga** | North Florida Ospreys | 85.0% |
+| 7 | **Campbell** | Virginia-Lynchburg | 85.0% |
+| 8 | **Utah State** | Charlotte | 85.0% |
+| 9 | **East Tennessee State** | Tusculum Pioneers | 84.6% |
+| 10 | **Siena Saints** | Canisius Golden Griffins | 84.6% |
+| 11 | **Indiana State** | Southern Indiana | 80.6% |
+| 12 | **Stephen F. Austin** | UL Monroe Warhawks | 80.6% |
+| 13 | **Saint Louis** | Central Michigan | 80.6% |
+| 14 | **Air Force** | Navy | 79.0% |
+| 15 | **Weber State** | St. Thomas-Minnesota Tommies | 79.0% |
+| 16 | **Saint Mary's** | Davidson | 79.0% |
+| 17 | **Northwestern State** | SE Louisiana | 79.0% |
+| 18 | **Iona** | Sacred Heart Pioneers | 79.0% |
+| 19 | **Texas Tech** | LSU | 79.0% |
+| 20 | **Florida Atlantic** | Florida Gulf Coast | 79.0% |
+| 21 | **Belmont** | Middle Tennessee | 79.0% |
+| 22 | **Central Arkansas** | East Texas A&M | 79.0% |
+| 23 | **UNLV** | Stanford Cardinal | 79.0% |
+| 24 | **Fairfield** | Merrimack | 78.7% |
+| 25 | **North Texas** | TCU Horned Frogs | 74.6% |
+| 26 | **Oglethorpe Stormy Petrels** | Mercer | 74.6% |
+| 27 | **Austin Peay Governors** | UT Rio Grande Valley Vaqueros | 74.6% |
+| 28 | **Aquinas Saints** | Bowling Green | 74.6% |
+| 29 | **Cameron** | Tarleton | 74.6% |
+| 30 | **Cornell** | Cornell Big | 74.6% |
+| 31 | **Marist Red Foxes** | Manhattan | 70.7% |
+| 32 | **Mississippi State** | San Francisco Dons | 70.7% |
+| 33 | **Pittsburgh** | Hofstra Pride | 70.7% |
+| 34 | **UCF** | Towson | 70.7% |
+| 35 | **North Carolina** | Georgetown Hoyas | 70.7% |
+| 36 | **Lipscomb** | Alabama A%26M | 70.7% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Saint Peter's** | Niagara Purple | 65.1% |
+| 2 | **Radford** | Saint Francis | 65.1% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Missouri @ Kansas | 53.8% | Toss-Up |
+| 2 | Central Connecticut @ Northeastern | 53.8% | Toss-Up |
+| 3 | UIC @ Yale | 53.8% | Toss-Up |
+| 4 | Green Bay @ Wright State | 53.8% | Toss-Up |
+| 5 | Seattle U vs UTEP | 53.8% | Toss-Up |
+| 6 | Quinnipiac vs Rider | 56.9% | Close |
+| 7 | Jacksonville State vs Auburn-Montgomery Senators | 56.9% | Close |
+| 8 | UT Martin vs Alabama State | 56.9% | Close |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 24
+- Away Teams Favored: 24
+- Max Confidence: 85.0%
+- Min Confidence: 53.8%
 
 ### 📋 Full Data
 
