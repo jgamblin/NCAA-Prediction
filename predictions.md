@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-06 15:25:25 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `3ce4a80`
+**Last Updated**: 2025-12-06 18:52:40 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `037e318`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 53
-- **Average Confidence**: 75.4%
-- **High (≥70%)**: 41 · **Medium (60-70%)**: 5 · **Other (<60%)**: 7
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,85 +26,13 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Troy** | LaGrange | 85.0% |
-| 2 | **Brown** | Elms College | 85.0% |
-| 3 | **Oklahoma State** | Grand Canyon Lopes | 83.5% |
-| 4 | **Rutgers** | Michigan | 81.8% |
-| 5 | **Longwood** | Morgan State | 81.8% |
-| 6 | **Baylor** | Memphis | 81.8% |
-| 7 | **Colorado** | Colorado State | 81.8% |
-| 8 | **Southeast Missouri State** | Chattanooga Mocs | 81.8% |
-| 9 | **Temple** | Saint Joseph's | 81.8% |
-| 10 | **Arkansas State** | Little Rock | 81.8% |
-| 11 | **Oklahoma** | Arizona State | 81.8% |
-| 12 | **Auburn** | Arizona | 81.8% |
-| 13 | **Sam Houston State** | Texas Southern | 81.8% |
-| 14 | **Denver Pioneers** | Idaho State Bengals | 81.8% |
-| 15 | **Ole Miss** | St. John's | 81.8% |
-| 16 | **Wichita State** | Northern Iowa | 81.8% |
-| 17 | **Montana** | North Dakota Fighting | 81.8% |
-| 18 | **UC San Diego Tritons** | Long Beach State Beach | 81.8% |
-| 19 | **Santa Clara** | New Mexico | 81.5% |
-| 20 | **Maryland** | Iowa | 81.5% |
-| 21 | **Omaha** | Portland State | 81.5% |
-| 22 | **UC Riverside** | Cal Poly | 81.5% |
-| 23 | **Wake Forest** | West Virginia | 81.5% |
-| 24 | **Bowie State** | Howard | 81.5% |
-| 25 | **Florida Memorial FLORIDA MEMORIAL** | Florida A&M Rattlers | 81.5% |
-| 26 | **Washington** | USC | 81.5% |
-| 27 | **Lindenwood** | Eastern Illinois | 81.5% |
-| 28 | **Robert Morris** | Milwaukee | 81.5% |
-| 29 | **Montana State** | Oral Roberts | 81.5% |
-| 30 | **Oregon State** | Southern Utah Thunderbirds | 80.3% |
-| 31 | **Villanova** | Pennsylvania | 80.3% |
-| 32 | **DePaul Blue** | Arkansas-Pine Bluff Golden | 80.3% |
-| 33 | **Houston Christian** | New Orleans | 78.8% |
-| 34 | **UC Santa Barbara** | Cal State Bakersfield | 74.6% |
-| 35 | **Houston** | Florida State | 74.6% |
-| 36 | **Eastern Washington** | Kansas City Roos | 74.6% |
-| 37 | **Bradley** | Northern Illinois | 74.6% |
-| 38 | **Hawai'i Rainbow** | Cal State Fullerton | 74.6% |
-| 39 | **Illinois State** | Chicago State | 74.6% |
-| 40 | **California** | Pacific | 74.0% |
-| 41 | **Northern Arizona** | North Dakota State | 72.0% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Le Moyne** | Binghamton | 63.7% |
-| 2 | **Vermont** | Pepperdine | 63.7% |
-| 3 | **Boston University** | New Hampshire | 63.7% |
-| 4 | **Texas A&M-Corpus Christi** | Lamar | 63.7% |
-| 5 | **Illinois** | Illinois Fighting | 63.7% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | UAlbany Great Danes @ Columbia | 52.8% | Toss-Up |
-| 2 | William & Mary @ George Washington | 52.8% | Toss-Up |
-| 3 | Cal State Northridge @ UC Irvine | 52.8% | Toss-Up |
-| 4 | California Baptist @ Utah | 52.8% | Toss-Up |
-| 5 | UCLA vs Oregon Ducks | 59.3% | Close |
-| 6 | Northern Colorado vs South Dakota | 59.3% | Close |
-| 7 | Lehigh Mountain vs Long Island University | 59.3% | Close |
-| 8 | Binghamton vs Le Moyne | 63.7% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 16
-- Away Teams Favored: 37
-- Max Confidence: 85.0%
-- Min Confidence: 52.8%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (309 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (288 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
