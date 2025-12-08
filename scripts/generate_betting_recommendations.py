@@ -28,12 +28,29 @@ def american_odds_to_probability(odds: int) -> float:
         return abs(odds) / (abs(odds) + 100)
 
 
-def calculate_value_score(confidence: float, implied_prob: float) -> float:
+def calculate_value_score(confidence: float, implied_prob: float, odds: int = None) -> float:
     """
-    Calculate betting value score.
+    Calculate betting value score with adjustments for underdogs.
     Positive value = our confidence is higher than market odds
+    
+    Applies penalties to underdogs since model is less accurate on them.
+    Model shows 25% win rate on underdogs vs 60% on favorites.
     """
-    return confidence - implied_prob
+    # Base edge
+    edge = confidence - implied_prob
+    
+    # Apply adjustment based on odds type
+    if odds is not None:
+        if odds > 0:  # Underdog
+            # Model is severely overconfident on underdogs (72% predicted, 25% actual)
+            # Apply heavy penalty to reduce underdog appeal
+            edge = edge * 0.5  # Cut value score in half for underdogs
+        else:  # Favorite
+            # Model is more accurate on favorites (86% predicted, 60% actual)
+            # Slight bonus to encourage favorite bets
+            edge = edge * 1.1
+    
+    return edge
 
 
 def calculate_kelly_bet(
@@ -54,9 +71,9 @@ def calculate_kelly_bet(
 
 
 def generate_betting_recommendations(
-    min_confidence: float = 0.75,  # Raised from 0.60 - more conservative
-    min_value: float = 0.15,       # Raised from 0.05 - require bigger edge
-    max_recommendations: int = 10,  # Reduced from 20 - fewer bets
+    min_confidence: float = 0.80,  # Raised from 0.75 - VERY conservative after analysis
+    min_value: float = 0.15,       # Keep at 0.15 (formula change compensates)
+    max_recommendations: int = 5,  # Reduced from 10 - much fewer bets
     daily_budget: float = 100.0,
     parlay_amount: float = 10.0
 ):
@@ -93,6 +110,37 @@ def generate_betting_recommendations(
         print(f"   No more bets today!")
         return
     
+    # Check recent performance - stop betting if on a bad streak
+    recent_bets_query = """
+        SELECT 
+            bet_won,
+            (payout - bet_amount) as profit
+        FROM bets
+        WHERE bet_won IS NOT NULL
+        ORDER BY created_at DESC
+        LIMIT 10
+    """
+    recent_bets = db.fetch_df(recent_bets_query)
+    
+    if len(recent_bets) >= 5:
+        # Calculate recent win rate
+        recent_win_rate = recent_bets['bet_won'].iloc[:5].mean()
+        recent_profit = recent_bets['profit'].iloc[:5].sum()
+        
+        # Stop betting if recent performance is terrible
+        if recent_win_rate < 0.30 and recent_profit < -30:
+            print(f"\n⚠️  Recent performance is poor:")
+            print(f"   Last 5 bets: {recent_win_rate*100:.0f}% win rate")
+            print(f"   Last 5 profit: ${recent_profit:.2f}")
+            print(f"   🛑 PAUSING BETTING until performance improves")
+            print(f"   (Performance protection triggered)")
+            return
+        
+        # Warning if on a cold streak
+        if recent_win_rate < 0.40:
+            print(f"\n⚠️  Warning: Recent win rate is {recent_win_rate*100:.0f}%")
+            print(f"   Proceeding with reduced selectivity and higher standards")
+    
     # Calculate available budget for individual bets
     bet_amount = 10.0  # Flat $10 per bet
     max_bets = int(remaining_budget / bet_amount)
@@ -113,6 +161,8 @@ def generate_betting_recommendations(
     print(f"  - Minimum confidence: {min_confidence:.1%}")
     print(f"  - Minimum value edge: {min_value:.1%}")
     print(f"  - Maximum recommendations: {max_recommendations}")
+    print(f"  - Underdog filter: Max +150 odds, 90%+ confidence required")
+    print(f"  - Heavy favorite filter: No worse than -250")
     
     # Get today's games with predictions (excluding games we already bet on)
     upcoming_query = """
@@ -144,6 +194,12 @@ def generate_betting_recommendations(
     print(f"\n📊 Analyzing {len(upcoming_predictions)} predictions...")
     
     recommendations = []
+    filtered_stats = {
+        'big_underdogs': 0,
+        'low_conf_underdogs': 0,
+        'heavy_favorites': 0,
+        'no_value': 0
+    }
     
     for _, pred in upcoming_predictions.iterrows():
         # Determine which team we're betting on and their odds
@@ -160,12 +216,33 @@ def generate_betting_recommendations(
         if pd.isna(odds) or odds == 0:
             continue
         
-        # Calculate value
+        # ===== UNDERDOG FILTER =====
+        # Skip big underdogs (odds > +150)
+        # Analysis showed 12 underdog bets with only 25% win rate cost us $28.60
+        if odds > 150:
+            filtered_stats['big_underdogs'] += 1
+            continue
+        
+        # For small underdogs (+1 to +150), require much higher confidence
+        # Model is overconfident on underdogs (72% predicted, 25% actual)
+        if odds > 0 and pred['confidence'] < 0.90:
+            filtered_stats['low_conf_underdogs'] += 1
+            continue
+        
+        # For favorites, skip heavy favorites (worse than -250)
+        # These provide minimal value and high risk
+        if odds < -250:
+            filtered_stats['heavy_favorites'] += 1
+            continue
+        # ===== END UNDERDOG FILTER =====
+        
+        # Calculate value with new formula (includes odds-based adjustments)
         implied_prob = american_odds_to_probability(odds)
-        value_score = calculate_value_score(pred['confidence'], implied_prob)
+        value_score = calculate_value_score(pred['confidence'], implied_prob, odds)
         
         # Only recommend if positive value
         if value_score < min_value:
+            filtered_stats['no_value'] += 1
             continue
         
         # Calculate recommended bet size
@@ -202,9 +279,24 @@ def generate_betting_recommendations(
     
     if not recommendations:
         print(f"\n⚠️  No betting opportunities found with +{min_value:.1%} edge")
+        print(f"\n📊 FILTERING SUMMARY:")
+        print(f"  Total candidates analyzed: {len(upcoming_predictions)}")
+        print(f"  Filtered out - Big underdogs (>+150): {filtered_stats['big_underdogs']}")
+        print(f"  Filtered out - Low confidence underdogs: {filtered_stats['low_conf_underdogs']}")
+        print(f"  Filtered out - Heavy favorites (<-250): {filtered_stats['heavy_favorites']}")
+        print(f"  Filtered out - Insufficient value: {filtered_stats['no_value']}")
+        print(f"  ✅ Passed all filters: 0")
         return
     
     print(f"\n✅ Found {len(recommendations)} betting opportunities\n")
+    print(f"📊 FILTERING SUMMARY:")
+    print(f"  Total candidates analyzed: {len(upcoming_predictions)}")
+    print(f"  Filtered out - Big underdogs (>+150): {filtered_stats['big_underdogs']}")
+    print(f"  Filtered out - Low confidence underdogs: {filtered_stats['low_conf_underdogs']}")
+    print(f"  Filtered out - Heavy favorites (<-250): {filtered_stats['heavy_favorites']}")
+    print(f"  Filtered out - Insufficient value: {filtered_stats['no_value']}")
+    print(f"  ✅ Passed all filters: {len(recommendations)}")
+    print()
     print("=" * 80)
     print("TOP BETTING RECOMMENDATIONS")
     print("=" * 80)
@@ -255,8 +347,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '--min-confidence',
         type=float,
-        default=0.75,
-        help='Minimum prediction confidence (default: 0.75 - CONSERVATIVE)'
+        default=0.80,
+        help='Minimum prediction confidence (default: 0.80 - VERY CONSERVATIVE)'
     )
     parser.add_argument(
         '--min-value',
@@ -267,8 +359,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '--max-recs',
         type=int,
-        default=10,
-        help='Maximum number of recommendations (default: 10 - CONSERVATIVE)'
+        default=5,
+        help='Maximum number of recommendations (default: 5 - VERY CONSERVATIVE)'
     )
     parser.add_argument(
         '--daily-budget',
