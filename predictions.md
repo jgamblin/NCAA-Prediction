@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-07 21:54:20 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `fd71f20`
+**Last Updated**: 2025-12-08 00:30:57 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `a166fd5`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 7
+- **Average Confidence**: 71.8%
+- **High (≥70%)**: 4 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -26,9 +26,35 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Kennesaw State** | Southern Wesleyan | 85.0% |
+| 2 | **Kansas State** | Mississippi Valley State | 85.0% |
+| 3 | **Texas Longhorns** | Southern | 80.5% |
+| 4 | **South Carolina State** | Charleston Southern | 77.6% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Incarnate Word** | New Orleans | 61.6% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Lafayette @ Pennsylvania | 56.4% | Close |
+| 2 | Grambling @ Southern Miss | 56.4% | Close |
+| 3 | New Orleans vs Incarnate Word | 61.6% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 5
+- Away Teams Favored: 2
+- Max Confidence: 85.0%
+- Min Confidence: 56.4%
 
 ### 📋 Full Data
 
