@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-07 15:26:36 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `7668449`
+**Last Updated**: 2025-12-07 18:47:53 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `ddf6641`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 16
-- **Average Confidence**: 71.6%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 2 · **Other (<60%)**: 3
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,49 +26,13 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Creighton** | Nebraska Cornhuskers | 85.0% |
-| 2 | **Gonzaga** | North Florida Ospreys | 85.0% |
-| 3 | **Northwestern State** | SE Louisiana | 78.1% |
-| 4 | **TCU Horned Frogs** | North Texas | 78.1% |
-| 5 | **Belmont** | Middle Tennessee | 77.5% |
-| 6 | **Central Arkansas** | East Texas A&M | 77.5% |
-| 7 | **Mississippi State** | San Francisco Dons | 76.4% |
-| 8 | **North Carolina** | Georgetown Hoyas | 76.4% |
-| 9 | **Lipscomb** | Alabama A%26M | 76.4% |
-| 10 | **Auburn-Montgomery Senators** | Jacksonville State | 73.6% |
-| 11 | **Cameron** | Tarleton | 73.6% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Cornell** | Cornell Big | 62.8% |
-| 2 | **Wright State** | Green Bay | 61.5% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Washington State vs Nevada Wolf Pack | 54.7% | Toss-Up |
-| 2 | Texas A&M vs SMU | 54.7% | Toss-Up |
-| 3 | Seattle U vs UTEP | 54.7% | Toss-Up |
-| 4 | Green Bay @ Wright State | 61.5% |  |
-| 5 | Samford vs Cornell Big | 62.8% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 5
-- Away Teams Favored: 11
-- Max Confidence: 85.0%
-- Min Confidence: 54.7%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (256 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (253 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
