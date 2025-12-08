@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-08 11:13:30 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `e026807`
+**Last Updated**: 2025-12-08 12:30:54 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `47d1d6c`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 7
-- **Average Confidence**: 71.8%
-- **High (≥70%)**: 4 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
+- **Games Predicted Today**: 6
+- **Average Confidence**: 69.6%
+- **High (≥70%)**: 3 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -30,10 +30,9 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Kennesaw State** | Southern Wesleyan | 85.0% |
-| 2 | **Kansas State** | Mississippi Valley State | 85.0% |
-| 3 | **Texas Longhorns** | Southern | 80.5% |
-| 4 | **South Carolina State** | Charleston Southern | 77.6% |
+| 1 | **Kansas State** | Mississippi Valley State | 85.0% |
+| 2 | **Texas Longhorns** | Southern | 80.5% |
+| 3 | **South Carolina State** | Charleston Southern | 77.6% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
@@ -51,14 +50,14 @@
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 5
+- Home Teams Favored: 4
 - Away Teams Favored: 2
 - Max Confidence: 85.0%
 - Min Confidence: 56.4%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (253 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (252 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
