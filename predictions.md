@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-09 09:28:02 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `337fd57`
+**Last Updated**: 2025-12-09 12:28:01 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4964d07`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 35
-- **Average Confidence**: 79.0%
-- **High (≥70%)**: 29 · **Medium (60-70%)**: 6 · **Other (<60%)**: 0
+- **Games Predicted Today**: 34
+- **Average Confidence**: 78.8%
+- **High (≥70%)**: 28 · **Medium (60-70%)**: 6 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,35 +30,34 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UL Monroe Warhawks** | Arkansas Baptist | 85.0% |
-| 2 | **Citadel** | Southern Wesleyan | 85.0% |
-| 3 | **Virginia** | Maryland-Eastern Shore | 85.0% |
-| 4 | **Furman** | Bob Jones | 85.0% |
-| 5 | **Winthrop** | Toccoa Falls | 85.0% |
-| 6 | **Chattanooga Mocs** | Oakwood | 85.0% |
-| 7 | **Kentucky** | North Carolina Central | 85.0% |
-| 8 | **Temple** | Georgian Court | 85.0% |
-| 9 | **Omaha** | Doane | 85.0% |
-| 10 | **West Virginia** | Little Rock | 85.0% |
-| 11 | **Lindenwood** | Culver-Stockton | 85.0% |
-| 12 | **Saint Joseph's** | Coppin State | 85.0% |
-| 13 | **Northern Kentucky Norse** | Brescia | 85.0% |
-| 14 | **USC** | San Diego Toreros | 85.0% |
-| 15 | **Arizona State** | Northern Arizona | 85.0% |
-| 16 | **California** | Dominican (CA) | 85.0% |
-| 17 | **Denver Pioneers** | Colorado Christian | 85.0% |
-| 18 | **Providence** | Brown | 81.1% |
-| 19 | **Colorado State** | Dartmouth Big Green | 81.1% |
-| 20 | **DePaul Blue** | Morgan State | 81.1% |
-| 21 | **Buffalo** | UMBC | 80.0% |
-| 22 | **Illinois** | Illinois Fighting | 80.0% |
-| 23 | **Regis Pride** | Holy Cross | 80.0% |
-| 24 | **North Carolina A&T** | Howard | 80.0% |
-| 25 | **Florida** | UConn | 77.2% |
-| 26 | **Wyoming** | South Dakota | 76.8% |
-| 27 | **Clemson** | BYU | 74.5% |
-| 28 | **Loyola Maryland** | VMI | 74.5% |
-| 29 | **Penn State** | Indiana | 74.5% |
+| 1 | **Citadel** | Southern Wesleyan | 85.0% |
+| 2 | **Virginia** | Maryland-Eastern Shore | 85.0% |
+| 3 | **Furman** | Bob Jones | 85.0% |
+| 4 | **Winthrop** | Toccoa Falls | 85.0% |
+| 5 | **Chattanooga Mocs** | Oakwood | 85.0% |
+| 6 | **Kentucky** | North Carolina Central | 85.0% |
+| 7 | **Temple** | Georgian Court | 85.0% |
+| 8 | **Omaha** | Doane | 85.0% |
+| 9 | **West Virginia** | Little Rock | 85.0% |
+| 10 | **Lindenwood** | Culver-Stockton | 85.0% |
+| 11 | **Saint Joseph's** | Coppin State | 85.0% |
+| 12 | **Northern Kentucky Norse** | Brescia | 85.0% |
+| 13 | **USC** | San Diego Toreros | 85.0% |
+| 14 | **Arizona State** | Northern Arizona | 85.0% |
+| 15 | **California** | Dominican (CA) | 85.0% |
+| 16 | **Denver Pioneers** | Colorado Christian | 85.0% |
+| 17 | **Providence** | Brown | 81.1% |
+| 18 | **Colorado State** | Dartmouth Big Green | 81.1% |
+| 19 | **DePaul Blue** | Morgan State | 81.1% |
+| 20 | **Buffalo** | UMBC | 80.0% |
+| 21 | **Illinois** | Illinois Fighting | 80.0% |
+| 22 | **Regis Pride** | Holy Cross | 80.0% |
+| 23 | **North Carolina A&T** | Howard | 80.0% |
+| 24 | **Florida** | UConn | 77.2% |
+| 25 | **Wyoming** | South Dakota | 76.8% |
+| 26 | **Clemson** | BYU | 74.5% |
+| 27 | **Loyola Maryland** | VMI | 74.5% |
+| 28 | **Penn State** | Indiana | 74.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
@@ -84,14 +83,14 @@
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 22
+- Home Teams Favored: 21
 - Away Teams Favored: 13
 - Max Confidence: 85.0%
 - Min Confidence: 60.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (291 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (290 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
