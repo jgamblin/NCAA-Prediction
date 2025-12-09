@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-09 12:28:01 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `4964d07`
+**Last Updated**: 2025-12-09 15:27:40 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `90e0f58`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 34
-- **Average Confidence**: 78.8%
-- **High (≥70%)**: 28 · **Medium (60-70%)**: 6 · **Other (<60%)**: 0
+- **Average Confidence**: 78.7%
+- **High (≥70%)**: 30 · **Medium (60-70%)**: 0 · **Other (<60%)**: 4
 
 ### 🏅 Pick Streaks
 
@@ -30,63 +30,52 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Citadel** | Southern Wesleyan | 85.0% |
-| 2 | **Virginia** | Maryland-Eastern Shore | 85.0% |
-| 3 | **Furman** | Bob Jones | 85.0% |
-| 4 | **Winthrop** | Toccoa Falls | 85.0% |
+| 1 | **Furman** | Bob Jones | 85.0% |
+| 2 | **Winthrop** | Toccoa Falls | 85.0% |
+| 3 | **Virginia** | Maryland-Eastern Shore | 85.0% |
+| 4 | **Kentucky** | North Carolina Central | 85.0% |
 | 5 | **Chattanooga Mocs** | Oakwood | 85.0% |
-| 6 | **Kentucky** | North Carolina Central | 85.0% |
-| 7 | **Temple** | Georgian Court | 85.0% |
-| 8 | **Omaha** | Doane | 85.0% |
-| 9 | **West Virginia** | Little Rock | 85.0% |
-| 10 | **Lindenwood** | Culver-Stockton | 85.0% |
-| 11 | **Saint Joseph's** | Coppin State | 85.0% |
-| 12 | **Northern Kentucky Norse** | Brescia | 85.0% |
-| 13 | **USC** | San Diego Toreros | 85.0% |
-| 14 | **Arizona State** | Northern Arizona | 85.0% |
-| 15 | **California** | Dominican (CA) | 85.0% |
-| 16 | **Denver Pioneers** | Colorado Christian | 85.0% |
-| 17 | **Providence** | Brown | 81.1% |
-| 18 | **Colorado State** | Dartmouth Big Green | 81.1% |
-| 19 | **DePaul Blue** | Morgan State | 81.1% |
-| 20 | **Buffalo** | UMBC | 80.0% |
-| 21 | **Illinois** | Illinois Fighting | 80.0% |
-| 22 | **Regis Pride** | Holy Cross | 80.0% |
-| 23 | **North Carolina A&T** | Howard | 80.0% |
-| 24 | **Florida** | UConn | 77.2% |
-| 25 | **Wyoming** | South Dakota | 76.8% |
-| 26 | **Clemson** | BYU | 74.5% |
-| 27 | **Loyola Maryland** | VMI | 74.5% |
-| 28 | **Penn State** | Indiana | 74.5% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Villanova** | Michigan | 64.4% |
-| 2 | **South Dakota State Jackrabbits** | Ball State | 64.4% |
-| 3 | **Columbia** | Stony Brook | 64.4% |
-| 4 | **Bucknell** | Rider | 64.4% |
-| 5 | **Rhode Island** | McNeese | 60.8% |
-| 6 | **San Jose State** | Long Beach State Beach | 60.8% |
+| 6 | **Citadel** | Southern Wesleyan | 85.0% |
+| 7 | **Saint Joseph's** | Coppin State | 85.0% |
+| 8 | **Northern Kentucky Norse** | Brescia | 85.0% |
+| 9 | **Lindenwood** | Culver-Stockton | 85.0% |
+| 10 | **Temple** | Georgian Court | 85.0% |
+| 11 | **USC** | San Diego Toreros | 85.0% |
+| 12 | **Denver Pioneers** | Colorado Christian | 85.0% |
+| 13 | **Omaha** | Doane | 85.0% |
+| 14 | **West Virginia** | Little Rock | 85.0% |
+| 15 | **Arizona State** | Northern Arizona | 85.0% |
+| 16 | **California** | Dominican (CA) | 85.0% |
+| 17 | **Providence** | Brown | 83.1% |
+| 18 | **DePaul Blue** | Morgan State | 83.1% |
+| 19 | **Colorado State** | Dartmouth Big Green | 83.1% |
+| 20 | **North Carolina A&T** | Howard | 76.5% |
+| 21 | **Regis Pride** | Holy Cross | 76.5% |
+| 22 | **Buffalo** | UMBC | 76.5% |
+| 23 | **Illinois** | Illinois Fighting | 76.5% |
+| 24 | **San Jose State** | Long Beach State Beach | 76.4% |
+| 25 | **Wyoming** | South Dakota | 76.4% |
+| 26 | **Rhode Island** | McNeese | 76.2% |
+| 27 | **Clemson** | BYU | 75.8% |
+| 28 | **South Dakota State Jackrabbits** | Ball State | 75.8% |
+| 29 | **Penn State** | Indiana | 75.8% |
+| 30 | **Florida** | UConn | 75.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | McNeese @ Rhode Island | 60.8% |  |
-| 2 | Long Beach State Beach @ San Jose State | 60.8% |  |
-| 3 | Ball State vs South Dakota State Jackrabbits | 64.4% |  |
-| 4 | Michigan vs Villanova | 64.4% |  |
-| 5 | Stony Brook vs Columbia | 64.4% |  |
-| 6 | Rider vs Bucknell | 64.4% |  |
+| 1 | VMI vs Loyola Maryland | 56.7% | Close |
+| 2 | Michigan vs Villanova | 56.7% | Close |
+| 3 | Stony Brook vs Columbia | 56.7% | Close |
+| 4 | Rider vs Bucknell | 56.7% | Close |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 21
 - Away Teams Favored: 13
 - Max Confidence: 85.0%
-- Min Confidence: 60.8%
+- Min Confidence: 56.7%
 
 ### 📋 Full Data
 

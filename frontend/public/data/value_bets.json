@@ -21,7 +21,7 @@
     "away_team": "Clemson",
     "home_moneyline": -250,
     "away_moneyline": 205,
-    "explanation": "Clemson is favored: they are dominant at their home venue and they have faced much tougher competition."
+    "explanation": "Clemson is confidently favored: they are dominant at their home venue and they have faced much tougher competition."
   },
   {
     "id": 63,
@@ -48,6 +48,30 @@
     "explanation": "Florida is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
   {
+    "id": 66,
+    "game_id": "401825405",
+    "prediction_id": 4446,
+    "bet_team": "Wisconsin",
+    "bet_amount": 10.0,
+    "moneyline": -118,
+    "confidence": 0.8500000238418579,
+    "value_score": 0.33958718180656433,
+    "bet_won": null,
+    "actual_winner": null,
+    "payout": 0.0,
+    "profit": null,
+    "bet_type": "moneyline",
+    "strategy": "value_betting",
+    "created_at": "2025-12-09T21:27:40.662733",
+    "settled_at": null,
+    "game_date": "2025-12-10",
+    "home_team": "Nebraska Cornhuskers",
+    "away_team": "Wisconsin",
+    "home_moneyline": -102,
+    "away_moneyline": -118,
+    "explanation": "Wisconsin is strongly favored: they have faced much tougher competition and they are dominant at their home venue."
+  },
+  {
     "id": 64,
     "game_id": "401823432",
     "prediction_id": 4389,
@@ -67,8 +91,8 @@
     "game_date": "2025-12-09",
     "home_team": "UMBC",
     "away_team": "Buffalo",
-    "home_moneyline": 130,
-    "away_moneyline": -155,
+    "home_moneyline": 136,
+    "away_moneyline": -162,
     "explanation": "Buffalo is confidently favored: they are significantly stronger overall, they have faced much tougher competition, and they have a vastly superior defense."
   },
   {
@@ -91,8 +115,8 @@
     "game_date": "2025-12-09",
     "home_team": "Howard",
     "away_team": "North Carolina A&T",
-    "home_moneyline": 110,
-    "away_moneyline": -130,
+    "home_moneyline": 120,
+    "away_moneyline": -142,
     "explanation": "North Carolina A&T is confidently favored: they have faced much tougher competition, they are significantly stronger overall, and they have a vastly superior defense."
   }
 ]
