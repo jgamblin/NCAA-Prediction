@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-08 15:30:48 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `4d19f1c`
+**Last Updated**: 2025-12-08 18:48:46 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `95cc937`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 6
-- **Average Confidence**: 68.5%
-- **High (≥70%)**: 3 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,38 +26,13 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Texas Longhorns** | Southern | 85.0% |
-| 2 | **Kansas State** | Mississippi Valley State | 85.0% |
-| 3 | **South Carolina State** | Charleston Southern | 77.8% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Incarnate Word** | New Orleans | 60.7% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Lafayette @ Pennsylvania | 51.3% | Toss-Up |
-| 2 | Grambling @ Southern Miss | 51.3% | Toss-Up |
-| 3 | New Orleans vs Incarnate Word | 60.7% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 4
-- Away Teams Favored: 2
-- Max Confidence: 85.0%
-- Min Confidence: 51.3%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (252 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (291 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
