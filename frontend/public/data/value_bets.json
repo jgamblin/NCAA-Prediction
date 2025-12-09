@@ -19,8 +19,8 @@
     "game_date": "2025-12-09",
     "home_team": "BYU",
     "away_team": "Clemson",
-    "home_moneyline": -340,
-    "away_moneyline": 270,
+    "home_moneyline": -285,
+    "away_moneyline": 230,
     "explanation": "Clemson is favored: they are dominant at their home venue and they have faced much tougher competition."
   },
   {
@@ -43,8 +43,8 @@
     "game_date": "2025-12-09",
     "home_team": "UConn",
     "away_team": "Florida",
-    "home_moneyline": -205,
-    "away_moneyline": 170,
+    "home_moneyline": -230,
+    "away_moneyline": 190,
     "explanation": "Florida is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
   {
@@ -67,8 +67,32 @@
     "game_date": "2025-12-09",
     "home_team": "UMBC",
     "away_team": "Buffalo",
-    "home_moneyline": 114,
-    "away_moneyline": -135,
+    "home_moneyline": 124,
+    "away_moneyline": -148,
     "explanation": "Buffalo is confidently favored: they are significantly stronger overall, they have faced much tougher competition, and they have a vastly superior defense."
+  },
+  {
+    "id": 65,
+    "game_id": "401827529",
+    "prediction_id": 4396,
+    "bet_team": "North Carolina A&T",
+    "bet_amount": 10.0,
+    "moneyline": -130,
+    "confidence": 0.8004375100135803,
+    "value_score": 0.2587421238422394,
+    "bet_won": null,
+    "actual_winner": null,
+    "payout": 0.0,
+    "profit": null,
+    "bet_type": "moneyline",
+    "strategy": "value_betting",
+    "created_at": "2025-12-09T15:28:01.979266",
+    "settled_at": null,
+    "game_date": "2025-12-09",
+    "home_team": "Howard",
+    "away_team": "North Carolina A&T",
+    "home_moneyline": 110,
+    "away_moneyline": -130,
+    "explanation": "North Carolina A&T is confidently favored: they have faced much tougher competition, they are significantly stronger overall, and they have a vastly superior defense."
   }
 ]
