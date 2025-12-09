@@ -17,18 +17,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4413,
-    "prediction_date": "2025-12-09T03:52:10.286932",
+    "prediction_date": "2025-12-09T06:30:31.191251",
     "home_win_prob": 0.9409379363059998,
     "away_win_prob": 0.059062033891677856,
     "predicted_winner": "Arizona State",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Arizona State is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -50,18 +50,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1490,
-    "prediction_date": "2025-12-09T03:52:10.285647",
+    "prediction_date": "2025-12-09T06:30:31.189916",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Clemson",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Clemson is favored: they are dominant at their home venue and they have faced much tougher competition."
   },
@@ -77,24 +77,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": 220,
-    "away_moneyline": -270,
+    "home_moneyline": 240,
+    "away_moneyline": -298,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4401,
-    "prediction_date": "2025-12-09T03:52:10.286217",
+    "prediction_date": "2025-12-09T06:30:31.190529",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "South Dakota State Jackrabbits",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "South Dakota State Jackrabbits is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -116,18 +116,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4415,
-    "prediction_date": "2025-12-09T03:52:10.287026",
+    "prediction_date": "2025-12-09T06:30:31.191347",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "California",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "California is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -149,18 +149,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4395,
-    "prediction_date": "2025-12-09T03:52:10.285881",
+    "prediction_date": "2025-12-09T06:30:31.190160",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Chattanooga Mocs",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Chattanooga Mocs is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -176,24 +176,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": -3600,
-    "away_moneyline": 1500,
+    "home_moneyline": -4000,
+    "away_moneyline": 1600,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4412,
-    "prediction_date": "2025-12-09T03:52:10.286886",
+    "prediction_date": "2025-12-09T06:30:31.191204",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "Colorado State",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Colorado State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -215,18 +215,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4409,
-    "prediction_date": "2025-12-09T03:52:10.286597",
+    "prediction_date": "2025-12-09T06:30:31.190909",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "DePaul Blue",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "DePaul Blue is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -248,18 +248,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4411,
-    "prediction_date": "2025-12-09T03:52:10.286793",
+    "prediction_date": "2025-12-09T06:30:31.191107",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Denver Pioneers",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Denver Pioneers is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -281,18 +281,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4393,
-    "prediction_date": "2025-12-09T03:52:10.285742",
+    "prediction_date": "2025-12-09T06:30:31.190015",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Furman",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Furman is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -314,18 +314,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4391,
-    "prediction_date": "2025-12-09T03:52:10.285528",
+    "prediction_date": "2025-12-09T06:30:31.189816",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Regis Pride",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Regis Pride is confidently favored: they have a vastly superior defense, they are significantly stronger overall, and they have a major offensive advantage."
   },
@@ -347,18 +347,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4396,
-    "prediction_date": "2025-12-09T03:52:10.285973",
+    "prediction_date": "2025-12-09T06:30:31.190257",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "North Carolina A&T",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "North Carolina A&T is confidently favored: they have faced much tougher competition, they are significantly stronger overall, and they have a vastly superior defense."
   },
@@ -380,18 +380,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1493,
-    "prediction_date": "2025-12-09T03:52:10.286647",
+    "prediction_date": "2025-12-09T06:30:31.190957",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Penn State",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Penn State is favored: they are significantly stronger overall, they have a vastly superior defense, and they are dominant at their home venue."
   },
@@ -413,18 +413,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1491,
-    "prediction_date": "2025-12-09T03:52:10.285927",
+    "prediction_date": "2025-12-09T06:30:31.190208",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Kentucky",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Kentucky is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -446,18 +446,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4400,
-    "prediction_date": "2025-12-09T03:52:10.286156",
+    "prediction_date": "2025-12-09T06:30:31.190471",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Lindenwood",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Lindenwood is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -479,18 +479,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1489,
-    "prediction_date": "2025-12-09T03:52:10.285592",
+    "prediction_date": "2025-12-09T06:30:31.189866",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Villanova",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Villanova is narrowly favored: they have faced much tougher competition and they are dominant at their home venue."
   },
@@ -512,18 +512,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4398,
-    "prediction_date": "2025-12-09T03:52:10.286065",
+    "prediction_date": "2025-12-09T06:30:31.190353",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Northern Kentucky Norse",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Northern Kentucky Norse is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -545,18 +545,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1492,
-    "prediction_date": "2025-12-09T03:52:10.286445",
+    "prediction_date": "2025-12-09T06:30:31.190767",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Illinois",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Illinois is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -578,18 +578,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4408,
-    "prediction_date": "2025-12-09T03:52:10.286535",
+    "prediction_date": "2025-12-09T06:30:31.190861",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Omaha",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Omaha is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -611,18 +611,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4407,
-    "prediction_date": "2025-12-09T03:52:10.286490",
+    "prediction_date": "2025-12-09T06:30:31.190813",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "Providence",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Providence is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -644,18 +644,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4405,
-    "prediction_date": "2025-12-09T03:52:10.286353",
+    "prediction_date": "2025-12-09T06:30:31.190672",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "Rhode Island",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Rhode Island is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have faced much tougher competition."
   },
@@ -677,18 +677,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4406,
-    "prediction_date": "2025-12-09T03:52:10.286399",
+    "prediction_date": "2025-12-09T06:30:31.190719",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Bucknell",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Bucknell is narrowly favored: they are dominant at their home venue and they have a vastly superior defense."
   },
@@ -710,18 +710,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4399,
-    "prediction_date": "2025-12-09T03:52:10.286111",
+    "prediction_date": "2025-12-09T06:30:31.190422",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Saint Joseph's",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Saint Joseph's is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -737,24 +737,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": 1000,
-    "away_moneyline": -1800,
+    "home_moneyline": 1100,
+    "away_moneyline": -2100,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1495,
-    "prediction_date": "2025-12-09T03:52:10.286840",
+    "prediction_date": "2025-12-09T06:30:31.191155",
     "home_win_prob": 0.009999999776482582,
     "away_win_prob": 0.9900000095367432,
     "predicted_winner": "USC",
     "predicted_home_win": 0,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "USC is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -776,18 +776,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4414,
-    "prediction_date": "2025-12-09T03:52:10.286980",
+    "prediction_date": "2025-12-09T06:30:31.191300",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "San Jose State",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "San Jose State is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -803,24 +803,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": 170,
-    "away_moneyline": -205,
+    "home_moneyline": 180,
+    "away_moneyline": -218,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4403,
-    "prediction_date": "2025-12-09T03:52:10.286308",
+    "prediction_date": "2025-12-09T06:30:31.190626",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Columbia",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Columbia is narrowly favored: they are significantly stronger overall, they are dominant at their home venue, and they have faced much tougher competition."
   },
@@ -842,18 +842,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4397,
-    "prediction_date": "2025-12-09T03:52:10.286019",
+    "prediction_date": "2025-12-09T06:30:31.190305",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Temple",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Temple is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -875,18 +875,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4394,
-    "prediction_date": "2025-12-09T03:52:10.285835",
+    "prediction_date": "2025-12-09T06:30:31.190112",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Citadel",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Citadel is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -908,18 +908,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-02T07:27:53.111000",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 1494,
-    "prediction_date": "2025-12-09T03:52:10.286747",
+    "prediction_date": "2025-12-09T06:30:31.191059",
     "home_win_prob": 0.22781403362751007,
     "away_win_prob": 0.7721859812736511,
     "predicted_winner": "Florida",
     "predicted_home_win": 0,
     "confidence": 0.7721859812736511,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Florida is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -941,18 +941,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4388,
-    "prediction_date": "2025-12-09T03:52:10.285337",
+    "prediction_date": "2025-12-09T06:30:31.189624",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "UL Monroe Warhawks",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "UL Monroe Warhawks is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -968,24 +968,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": 110,
-    "away_moneyline": -130,
+    "home_moneyline": 120,
+    "away_moneyline": -142,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4389,
-    "prediction_date": "2025-12-09T03:52:10.285417",
+    "prediction_date": "2025-12-09T06:30:31.189702",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Buffalo",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Buffalo is confidently favored: they are significantly stronger overall, they have faced much tougher competition, and they have a vastly superior defense."
   },
@@ -1007,18 +1007,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4390,
-    "prediction_date": "2025-12-09T03:52:10.285476",
+    "prediction_date": "2025-12-09T06:30:31.189762",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Loyola Maryland",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Loyola Maryland is favored: they are dominant at their home venue, they have a vastly superior defense, and they are significantly stronger overall."
   },
@@ -1040,18 +1040,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4404,
-    "prediction_date": "2025-12-09T03:52:10.285788",
+    "prediction_date": "2025-12-09T06:30:31.190063",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Virginia",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Virginia is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1067,24 +1067,24 @@
     "away_score": 0,
     "game_status": "Scheduled",
     "neutral_site": false,
-    "home_moneyline": -10000,
-    "away_moneyline": 3000,
+    "home_moneyline": -20000,
+    "away_moneyline": 3500,
     "venue": null,
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4402,
-    "prediction_date": "2025-12-09T03:52:10.286262",
+    "prediction_date": "2025-12-09T06:30:31.190578",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "West Virginia",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "West Virginia is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1106,18 +1106,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4392,
-    "prediction_date": "2025-12-09T03:52:10.285695",
+    "prediction_date": "2025-12-09T06:30:31.189966",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Winthrop",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Winthrop is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1139,18 +1139,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4410,
-    "prediction_date": "2025-12-09T03:52:10.286700",
+    "prediction_date": "2025-12-09T06:30:31.191010",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Wyoming",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Wyoming is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1172,18 +1172,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4416,
-    "prediction_date": "2025-12-09T03:52:10.287072",
+    "prediction_date": "2025-12-09T06:30:31.191420",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Baylor",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Baylor is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1205,18 +1205,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4447,
-    "prediction_date": "2025-12-09T03:52:10.288598",
+    "prediction_date": "2025-12-09T06:30:31.193021",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Boise State",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Boise State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1238,18 +1238,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4431,
-    "prediction_date": "2025-12-09T03:52:10.287818",
+    "prediction_date": "2025-12-09T06:30:31.192186",
     "home_win_prob": 0.4145403504371643,
     "away_win_prob": 0.5854596495628357,
     "predicted_winner": "Massachusetts",
     "predicted_home_win": 0,
     "confidence": 0.5854596495628357,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Massachusetts is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1271,18 +1271,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4427,
-    "prediction_date": "2025-12-09T03:52:10.287637",
+    "prediction_date": "2025-12-09T06:30:31.191998",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Maine",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Maine is favored: they are significantly stronger overall, they are dominant at their home venue, and they have a vastly superior defense."
   },
@@ -1304,18 +1304,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4450,
-    "prediction_date": "2025-12-09T03:52:10.288742",
+    "prediction_date": "2025-12-09T06:30:31.193181",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Cal State Fullerton",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Cal State Fullerton is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1337,18 +1337,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4449,
-    "prediction_date": "2025-12-09T03:52:10.288696",
+    "prediction_date": "2025-12-09T06:30:31.193133",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Fresno State",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Fresno State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1370,18 +1370,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4439,
-    "prediction_date": "2025-12-09T03:52:10.288220",
+    "prediction_date": "2025-12-09T06:30:31.192636",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Eastern Kentucky Colonels",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Eastern Kentucky Colonels is favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1403,18 +1403,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4424,
-    "prediction_date": "2025-12-09T03:52:10.287482",
+    "prediction_date": "2025-12-09T06:30:31.191858",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "Florida Atlantic",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Florida Atlantic is confidently favored: they are significantly stronger overall, they have a major offensive advantage, and they have a vastly superior defense."
   },
@@ -1436,18 +1436,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4434,
-    "prediction_date": "2025-12-09T03:52:10.287952",
+    "prediction_date": "2025-12-09T06:30:31.192329",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Fordham",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Fordham is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1469,18 +1469,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4433,
-    "prediction_date": "2025-12-09T03:52:10.287907",
+    "prediction_date": "2025-12-09T06:30:31.192281",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "George Washington",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "George Washington is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1502,18 +1502,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4451,
-    "prediction_date": "2025-12-09T03:52:10.288787",
+    "prediction_date": "2025-12-09T06:30:31.193235",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "Hawai'i Rainbow",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Hawai'i Rainbow is confidently favored: they are significantly stronger overall, they have a major offensive advantage, and they have a vastly superior defense."
   },
@@ -1535,18 +1535,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4421,
-    "prediction_date": "2025-12-09T03:52:10.287347",
+    "prediction_date": "2025-12-09T06:30:31.191717",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Hofstra Pride",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Hofstra Pride is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1568,18 +1568,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T12:29:18.817485",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4096,
-    "prediction_date": "2025-12-09T03:52:10.288086",
+    "prediction_date": "2025-12-09T06:30:31.192494",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Houston",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Houston is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1601,18 +1601,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4428,
-    "prediction_date": "2025-12-09T03:52:10.287683",
+    "prediction_date": "2025-12-09T06:30:31.192045",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "Bryant",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Bryant is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1634,18 +1634,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4441,
-    "prediction_date": "2025-12-09T03:52:10.288309",
+    "prediction_date": "2025-12-09T06:30:31.192736",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Weber State",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Weber State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1667,18 +1667,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4425,
-    "prediction_date": "2025-12-09T03:52:10.287526",
+    "prediction_date": "2025-12-09T06:30:31.191904",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Western Kentucky",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Western Kentucky is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1700,18 +1700,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4445,
-    "prediction_date": "2025-12-09T03:52:10.288535",
+    "prediction_date": "2025-12-09T06:30:31.192974",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Salish Kootenai",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Salish Kootenai is narrowly favored: they have a vastly superior defense, they have a major offensive advantage, and they have faced much tougher competition."
   },
@@ -1733,18 +1733,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4430,
-    "prediction_date": "2025-12-09T03:52:10.287773",
+    "prediction_date": "2025-12-09T06:30:31.192139",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "NC State",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "NC State is narrowly favored: they have faced much tougher competition, they are significantly stronger overall, and they have a vastly superior defense."
   },
@@ -1766,18 +1766,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4422,
-    "prediction_date": "2025-12-09T03:52:10.287392",
+    "prediction_date": "2025-12-09T06:30:31.191764",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "New Haven Chargers",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "New Haven Chargers is favored: they have faced much tougher competition, they have a vastly superior defense, and they are significantly stronger overall."
   },
@@ -1799,18 +1799,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4446,
-    "prediction_date": "2025-12-09T03:52:10.288490",
+    "prediction_date": "2025-12-09T06:30:31.192926",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Wisconsin",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Wisconsin is confidently favored: they have faced much tougher competition and they are dominant at their home venue."
   },
@@ -1832,18 +1832,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4436,
-    "prediction_date": "2025-12-09T03:52:10.288041",
+    "prediction_date": "2025-12-09T06:30:31.192445",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Nicholls State",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Nicholls State is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1865,18 +1865,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4437,
-    "prediction_date": "2025-12-09T03:52:10.288131",
+    "prediction_date": "2025-12-09T06:30:31.192542",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Crown College Polars",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Crown College Polars is confidently favored: they have a vastly superior defense, they are significantly stronger overall, and they have faced much tougher competition."
   },
@@ -1898,18 +1898,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4429,
-    "prediction_date": "2025-12-09T03:52:10.287728",
+    "prediction_date": "2025-12-09T06:30:31.192092",
     "home_win_prob": 0.9409379363059998,
     "away_win_prob": 0.059062033891677856,
     "predicted_winner": "Notre Dame",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Notre Dame is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1931,18 +1931,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4418,
-    "prediction_date": "2025-12-09T03:52:10.287162",
+    "prediction_date": "2025-12-09T06:30:31.191527",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Princeton",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Princeton is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1964,18 +1964,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T12:29:18.817485",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4095,
-    "prediction_date": "2025-12-09T03:52:10.287300",
+    "prediction_date": "2025-12-09T06:30:31.191670",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Purdue",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Purdue is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -1997,18 +1997,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4443,
-    "prediction_date": "2025-12-09T03:52:10.288399",
+    "prediction_date": "2025-12-09T06:30:31.192829",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Eastern Michigan",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Eastern Michigan is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2030,18 +2030,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4448,
-    "prediction_date": "2025-12-09T03:52:10.288650",
+    "prediction_date": "2025-12-09T06:30:31.193086",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "San Diego State",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "San Diego State is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2063,18 +2063,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4423,
-    "prediction_date": "2025-12-09T03:52:10.287438",
+    "prediction_date": "2025-12-09T06:30:31.191811",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "Charleston",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Charleston is narrowly favored: they have faced much tougher competition, they are significantly stronger overall, and they are dominant at their home venue."
   },
@@ -2096,18 +2096,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4438,
-    "prediction_date": "2025-12-09T03:52:10.288176",
+    "prediction_date": "2025-12-09T06:30:31.192589",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Southern Illinois",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Southern Illinois is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2129,18 +2129,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4432,
-    "prediction_date": "2025-12-09T03:52:10.287862",
+    "prediction_date": "2025-12-09T06:30:31.192233",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "St. Bonaventure",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "St. Bonaventure is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2162,18 +2162,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4444,
-    "prediction_date": "2025-12-09T03:52:10.288445",
+    "prediction_date": "2025-12-09T06:30:31.192877",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "Southern",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Southern is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2195,18 +2195,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4435,
-    "prediction_date": "2025-12-09T03:52:10.287997",
+    "prediction_date": "2025-12-09T06:30:31.192392",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Tulane Green Wave",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Tulane Green Wave is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2228,18 +2228,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4440,
-    "prediction_date": "2025-12-09T03:52:10.288264",
+    "prediction_date": "2025-12-09T06:30:31.192683",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Tulsa Golden Hurricane",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Tulsa Golden Hurricane is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2261,18 +2261,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4419,
-    "prediction_date": "2025-12-09T03:52:10.287255",
+    "prediction_date": "2025-12-09T06:30:31.191623",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "UMass Lowell River",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "UMass Lowell River is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2294,18 +2294,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4420,
-    "prediction_date": "2025-12-09T03:52:10.287208",
+    "prediction_date": "2025-12-09T06:30:31.191575",
     "home_win_prob": 0.3909837603569031,
     "away_win_prob": 0.6090162396430969,
     "predicted_winner": "Miami (OH)",
     "predicted_home_win": 0,
     "confidence": 0.6090162396430969,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Miami (OH) is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have faced much tougher competition."
   },
@@ -2327,18 +2327,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4442,
-    "prediction_date": "2025-12-09T03:52:10.288354",
+    "prediction_date": "2025-12-09T06:30:31.192783",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "Utah Valley",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Utah Valley is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have faced much tougher competition."
   },
@@ -2360,18 +2360,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4426,
-    "prediction_date": "2025-12-09T03:52:10.287584",
+    "prediction_date": "2025-12-09T06:30:31.191951",
     "home_win_prob": 0.3799387216567993,
     "away_win_prob": 0.6200612783432007,
     "predicted_winner": "New Mexico",
     "predicted_home_win": 0,
     "confidence": 0.6200612783432007,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "New Mexico is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2393,18 +2393,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-03T15:31:27.205611",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4417,
-    "prediction_date": "2025-12-09T03:52:10.287117",
+    "prediction_date": "2025-12-09T06:30:31.191478",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Yale",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Yale is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2426,18 +2426,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4464,
-    "prediction_date": "2025-12-09T03:52:10.289365",
+    "prediction_date": "2025-12-09T06:30:31.193879",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "North Dakota State",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "North Dakota State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2459,18 +2459,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4462,
-    "prediction_date": "2025-12-09T03:52:10.289276",
+    "prediction_date": "2025-12-09T06:30:31.193786",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "Alaska Anchorage",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Alaska Anchorage is narrowly favored: they have a vastly superior defense, they are significantly stronger overall, and they have faced much tougher competition."
   },
@@ -2492,18 +2492,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4456,
-    "prediction_date": "2025-12-09T03:52:10.289011",
+    "prediction_date": "2025-12-09T06:30:31.193503",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "East Carolina",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "East Carolina is narrowly favored: they have faced much tougher competition, they are dominant at their home venue, and they have a vastly superior defense."
   },
@@ -2525,18 +2525,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4454,
-    "prediction_date": "2025-12-09T03:52:10.288921",
+    "prediction_date": "2025-12-09T06:30:31.193398",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Georgia Southern",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Georgia Southern is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2558,18 +2558,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4452,
-    "prediction_date": "2025-12-09T03:52:10.288832",
+    "prediction_date": "2025-12-09T06:30:31.193286",
     "home_win_prob": 0.19956247508525848,
     "away_win_prob": 0.8004375100135803,
     "predicted_winner": "Green Bay",
     "predicted_home_win": 0,
     "confidence": 0.8004375100135803,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Green Bay is confidently favored: they are significantly stronger overall, they have faced much tougher competition, and they have a major offensive advantage."
   },
@@ -2591,18 +2591,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4459,
-    "prediction_date": "2025-12-09T03:52:10.289143",
+    "prediction_date": "2025-12-09T06:30:31.193645",
     "home_win_prob": 0.22781403362751007,
     "away_win_prob": 0.7721859812736511,
     "predicted_winner": "Iowa",
     "predicted_home_win": 0,
     "confidence": 0.7721859812736511,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Iowa is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2624,18 +2624,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4455,
-    "prediction_date": "2025-12-09T03:52:10.288965",
+    "prediction_date": "2025-12-09T06:30:31.193451",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Jacksonville",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Jacksonville is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2657,18 +2657,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4461,
-    "prediction_date": "2025-12-09T03:52:10.289231",
+    "prediction_date": "2025-12-09T06:30:31.193740",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Missouri",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Missouri is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2690,18 +2690,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4460,
-    "prediction_date": "2025-12-09T03:52:10.289187",
+    "prediction_date": "2025-12-09T06:30:31.193693",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "Saint John's (MN) Johnnies",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Saint John's (MN) Johnnies is narrowly favored: they have a major offensive advantage, they have a vastly superior defense, and they are significantly stronger overall."
   },
@@ -2723,18 +2723,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4463,
-    "prediction_date": "2025-12-09T03:52:10.289321",
+    "prediction_date": "2025-12-09T06:30:31.193832",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "Syracuse Orange",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Syracuse Orange is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2756,18 +2756,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4458,
-    "prediction_date": "2025-12-09T03:52:10.289099",
+    "prediction_date": "2025-12-09T06:30:31.193598",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "UT Rio Grande Valley Vaqueros",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "UT Rio Grande Valley Vaqueros is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2789,18 +2789,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4457,
-    "prediction_date": "2025-12-09T03:52:10.289056",
+    "prediction_date": "2025-12-09T06:30:31.193551",
     "home_win_prob": 0.9409379363059998,
     "away_win_prob": 0.059062033891677856,
     "predicted_winner": "Virginia Tech",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Virginia Tech is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2822,18 +2822,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-04T00:50:21.952720",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4453,
-    "prediction_date": "2025-12-09T03:52:10.288876",
+    "prediction_date": "2025-12-09T06:30:31.193333",
     "home_win_prob": 0.25482162833213806,
     "away_win_prob": 0.7451783418655396,
     "predicted_winner": "Bloomfield Deacons",
     "predicted_home_win": 0,
     "confidence": 0.7451783418655396,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Bloomfield Deacons is favored: they have a vastly superior defense, they are significantly stronger overall, and they have faced much tougher competition."
   },
@@ -2855,18 +2855,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4474,
-    "prediction_date": "2025-12-09T03:52:10.289841",
+    "prediction_date": "2025-12-09T06:30:31.194354",
     "home_win_prob": 0.4145403504371643,
     "away_win_prob": 0.5854596495628357,
     "predicted_winner": "East Tennessee State",
     "predicted_home_win": 0,
     "confidence": 0.5854596495628357,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "East Tennessee State is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2888,18 +2888,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4477,
-    "prediction_date": "2025-12-09T03:52:10.289979",
+    "prediction_date": "2025-12-09T06:30:31.194519",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Eastern Washington",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Eastern Washington is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2921,18 +2921,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4467,
-    "prediction_date": "2025-12-09T03:52:10.289500",
+    "prediction_date": "2025-12-09T06:30:31.194021",
     "home_win_prob": 0.11516798287630081,
     "away_win_prob": 0.8848320245742798,
     "predicted_winner": "Brevard Tornados",
     "predicted_home_win": 0,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Brevard Tornados is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2954,18 +2954,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4476,
-    "prediction_date": "2025-12-09T03:52:10.289934",
+    "prediction_date": "2025-12-09T06:30:31.194471",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "McNeese",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "McNeese is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -2987,18 +2987,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4470,
-    "prediction_date": "2025-12-09T03:52:10.289656",
+    "prediction_date": "2025-12-09T06:30:31.194164",
     "home_win_prob": 0.6076709032058716,
     "away_win_prob": 0.3923290967941284,
     "predicted_winner": "North Carolina A&T",
     "predicted_home_win": 1,
     "confidence": 0.6076709032058716,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "North Carolina A&T is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3020,18 +3020,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4468,
-    "prediction_date": "2025-12-09T03:52:10.289545",
+    "prediction_date": "2025-12-09T06:30:31.194069",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "South Carolina State",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "South Carolina State is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3053,18 +3053,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4473,
-    "prediction_date": "2025-12-09T03:52:10.289796",
+    "prediction_date": "2025-12-09T06:30:31.194307",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "South Dakota State Jackrabbits",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "South Dakota State Jackrabbits is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3086,18 +3086,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4471,
-    "prediction_date": "2025-12-09T03:52:10.289700",
+    "prediction_date": "2025-12-09T06:30:31.194211",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Stonehill",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Stonehill is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3119,18 +3119,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4475,
-    "prediction_date": "2025-12-09T03:52:10.289888",
+    "prediction_date": "2025-12-09T06:30:31.194421",
     "home_win_prob": 0.9900000095367432,
     "away_win_prob": 0.009999999776482582,
     "predicted_winner": "Texas A&M-Corpus Christi",
     "predicted_home_win": 1,
     "confidence": 0.8500000238418579,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Texas A&M-Corpus Christi is strongly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3152,18 +3152,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4472,
-    "prediction_date": "2025-12-09T03:52:10.289747",
+    "prediction_date": "2025-12-09T06:30:31.194260",
     "home_win_prob": 0.7684665322303772,
     "away_win_prob": 0.2315334975719452,
     "predicted_winner": "UConn",
     "predicted_home_win": 1,
     "confidence": 0.7684665322303772,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "UConn is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3185,18 +3185,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4465,
-    "prediction_date": "2025-12-09T03:52:10.289410",
+    "prediction_date": "2025-12-09T06:30:31.193926",
     "home_win_prob": 0.398968368768692,
     "away_win_prob": 0.6010316610336304,
     "predicted_winner": "Army",
     "predicted_home_win": 0,
     "confidence": 0.6010316610336304,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Army is narrowly favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3218,18 +3218,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4466,
-    "prediction_date": "2025-12-09T03:52:10.289455",
+    "prediction_date": "2025-12-09T06:30:31.193974",
     "home_win_prob": 0.3561561405658722,
     "away_win_prob": 0.6438438296318054,
     "predicted_winner": "William Peace Pacers",
     "predicted_home_win": 0,
     "confidence": 0.6438438296318054,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "William Peace Pacers is narrowly favored: they have a vastly superior defense, they have a major offensive advantage, and they are dominant at their home venue."
   },
@@ -3251,18 +3251,18 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-05T00:48:55.157172",
-    "updated_at": "2025-12-09T03:32:14.174645",
+    "updated_at": "2025-12-09T06:11:27.018478",
     "id": 4469,
-    "prediction_date": "2025-12-09T03:52:10.289608",
+    "prediction_date": "2025-12-09T06:30:31.194116",
     "home_win_prob": 0.8105292916297913,
     "away_win_prob": 0.18947073817253113,
     "predicted_winner": "Xavier",
     "predicted_home_win": 1,
     "confidence": 0.8105292916297913,
     "model_name": "AdaptivePredictor",
-    "model_version": "1d91987",
+    "model_version": "c2d71a9",
     "config_version": "7dd58a0bb0e2",
-    "commit_hash": "1f4429b",
+    "commit_hash": "44c0240",
     "source": "live",
     "explanation": "Xavier is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   },
@@ -3284,7 +3284,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827196",
@@ -3304,7 +3304,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812266",
@@ -3324,7 +3324,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823481",
@@ -3344,7 +3344,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819838",
@@ -3364,7 +3364,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823221",
@@ -3384,7 +3384,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401830198",
@@ -3404,7 +3404,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812651",
@@ -3424,7 +3424,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813325",
@@ -3444,7 +3444,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822867",
@@ -3464,7 +3464,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823739",
@@ -3484,7 +3484,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817226",
@@ -3504,7 +3504,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812924",
@@ -3524,7 +3524,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819868",
@@ -3544,7 +3544,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819896",
@@ -3564,7 +3564,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824362",
@@ -3584,7 +3584,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820215",
@@ -3604,7 +3604,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813442",
@@ -3624,7 +3624,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812631",
@@ -3644,7 +3644,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823176",
@@ -3664,7 +3664,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828910",
@@ -3684,7 +3684,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828548",
@@ -3704,7 +3704,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823466",
@@ -3724,7 +3724,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817151",
@@ -3744,7 +3744,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826795",
@@ -3764,7 +3764,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826711",
@@ -3784,7 +3784,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822170",
@@ -3804,7 +3804,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826704",
@@ -3824,7 +3824,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822727",
@@ -3844,7 +3844,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819848",
@@ -3864,7 +3864,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828313",
@@ -3884,7 +3884,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813763",
@@ -3904,7 +3904,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823790",
@@ -3924,7 +3924,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824902",
@@ -3944,7 +3944,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401808901",
@@ -3964,7 +3964,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401808953",
@@ -3984,7 +3984,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827524",
@@ -4004,7 +4004,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825407",
@@ -4024,7 +4024,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813261",
@@ -4044,7 +4044,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829452",
@@ -4064,7 +4064,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827208",
@@ -4084,7 +4084,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817461",
@@ -4104,7 +4104,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812361",
@@ -4124,7 +4124,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827055",
@@ -4144,7 +4144,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826903",
@@ -4164,7 +4164,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817247",
@@ -4184,7 +4184,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813404",
@@ -4204,7 +4204,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813355",
@@ -4224,7 +4224,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823412",
@@ -4244,7 +4244,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825408",
@@ -4264,7 +4264,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401809421",
@@ -4284,7 +4284,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813281",
@@ -4304,7 +4304,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817259",
@@ -4324,7 +4324,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823727",
@@ -4344,7 +4344,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813454",
@@ -4364,7 +4364,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828286",
@@ -4384,7 +4384,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817269",
@@ -4404,7 +4404,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829459",
@@ -4424,7 +4424,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820548",
@@ -4444,7 +4444,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826935",
@@ -4464,7 +4464,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817439",
@@ -4484,7 +4484,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817204",
@@ -4504,7 +4504,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813294",
@@ -4524,7 +4524,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827259",
@@ -4544,7 +4544,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828528",
@@ -4564,7 +4564,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826090",
@@ -4584,7 +4584,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824060",
@@ -4604,7 +4604,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824066",
@@ -4624,7 +4624,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825409",
@@ -4644,7 +4644,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826925",
@@ -4664,7 +4664,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823028",
@@ -4684,7 +4684,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820584",
@@ -4704,7 +4704,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826810",
@@ -4724,7 +4724,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817178",
@@ -4744,7 +4744,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823406",
@@ -4764,7 +4764,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817190",
@@ -4784,7 +4784,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824115",
@@ -4804,7 +4804,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817472",
@@ -4824,7 +4824,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819821",
@@ -4844,7 +4844,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824130",
@@ -4864,7 +4864,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826894",
@@ -4884,7 +4884,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829424",
@@ -4904,7 +4904,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401811112",
@@ -4924,7 +4924,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824309",
@@ -4944,7 +4944,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823457",
@@ -4964,7 +4964,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817483",
@@ -4984,7 +4984,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826834",
@@ -5004,7 +5004,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826789",
@@ -5024,7 +5024,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826847",
@@ -5044,7 +5044,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826952",
@@ -5064,7 +5064,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829480",
@@ -5084,7 +5084,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820401",
@@ -5104,7 +5104,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819912",
@@ -5124,7 +5124,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824029",
@@ -5144,7 +5144,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822337",
@@ -5164,7 +5164,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824940",
@@ -5184,7 +5184,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817449",
@@ -5204,7 +5204,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823548",
@@ -5224,7 +5224,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825389",
@@ -5244,7 +5244,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819921",
@@ -5264,7 +5264,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825575",
@@ -5284,7 +5284,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827072",
@@ -5304,7 +5304,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-06T11:44:41.582000",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823819",
@@ -5324,7 +5324,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401832162",
@@ -5344,7 +5344,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822327",
@@ -5364,7 +5364,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820803",
@@ -5384,7 +5384,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827487",
@@ -5404,7 +5404,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823812",
@@ -5424,7 +5424,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820814",
@@ -5444,7 +5444,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823313",
@@ -5464,7 +5464,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826737",
@@ -5484,7 +5484,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823570",
@@ -5504,7 +5504,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823650",
@@ -5524,7 +5524,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819879",
@@ -5544,7 +5544,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817161",
@@ -5564,7 +5564,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822314",
@@ -5584,7 +5584,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827008",
@@ -5604,7 +5604,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827113",
@@ -5624,7 +5624,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823234",
@@ -5644,7 +5644,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823018",
@@ -5664,7 +5664,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817512",
@@ -5684,7 +5684,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822764",
@@ -5704,7 +5704,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829344",
@@ -5724,7 +5724,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828279",
@@ -5744,7 +5744,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829351",
@@ -5764,7 +5764,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812386",
@@ -5784,7 +5784,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823348",
@@ -5804,7 +5804,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826876",
@@ -5824,7 +5824,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824140",
@@ -5844,7 +5844,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829394",
@@ -5864,7 +5864,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826769",
@@ -5884,7 +5884,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817525",
@@ -5904,7 +5904,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817535",
@@ -5924,7 +5924,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823005",
@@ -5944,7 +5944,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-07T00:33:08.434437",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823439",
@@ -5964,7 +5964,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827134",
@@ -5984,7 +5984,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826972",
@@ -6004,7 +6004,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401820475",
@@ -6024,7 +6024,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829464",
@@ -6044,7 +6044,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401808703",
@@ -6064,7 +6064,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829435",
@@ -6084,7 +6084,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823762",
@@ -6104,7 +6104,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829375",
@@ -6124,7 +6124,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825208",
@@ -6144,7 +6144,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812256",
@@ -6164,7 +6164,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813382",
@@ -6184,7 +6184,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823365",
@@ -6204,7 +6204,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-08T00:30:24.413957",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823529",
@@ -6224,7 +6224,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823497",
@@ -6244,7 +6244,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819839",
@@ -6264,7 +6264,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822346",
@@ -6284,7 +6284,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401825582",
@@ -6304,7 +6304,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823537",
@@ -6324,7 +6324,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812925",
@@ -6344,7 +6344,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813443",
@@ -6364,7 +6364,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823853",
@@ -6384,7 +6384,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826743",
@@ -6404,7 +6404,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827516",
@@ -6424,7 +6424,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817236",
@@ -6444,7 +6444,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401830199",
@@ -6464,7 +6464,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813326",
@@ -6484,7 +6484,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826980",
@@ -6504,7 +6504,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812670",
@@ -6524,7 +6524,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823379",
@@ -6544,7 +6544,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819886",
@@ -6564,7 +6564,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401808976",
@@ -6584,7 +6584,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401828471",
@@ -6604,7 +6604,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401824044",
@@ -6624,7 +6624,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401809422",
@@ -6644,7 +6644,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823472",
@@ -6664,7 +6664,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401812362",
@@ -6684,7 +6684,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827001",
@@ -6704,7 +6704,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823329",
@@ -6724,7 +6724,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401806344",
@@ -6744,7 +6744,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817270",
@@ -6764,7 +6764,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823467",
@@ -6784,7 +6784,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822338",
@@ -6804,7 +6804,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829050",
@@ -6824,7 +6824,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826781",
@@ -6844,7 +6844,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401829470",
@@ -6864,7 +6864,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401813356",
@@ -6884,7 +6884,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827064",
@@ -6904,7 +6904,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822869",
@@ -6924,7 +6924,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401817248",
@@ -6944,7 +6944,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826858",
@@ -6964,7 +6964,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401819903",
@@ -6984,7 +6984,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401826046",
@@ -7004,7 +7004,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401822868",
@@ -7024,7 +7024,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823728",
@@ -7044,7 +7044,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401830423",
@@ -7064,7 +7064,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401827530",
@@ -7084,7 +7084,7 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   },
   {
     "game_id": "401823413",
@@ -7104,6 +7104,6 @@
     "tournament": null,
     "conference_game": false,
     "created_at": "2025-12-09T00:29:43.558006",
-    "updated_at": "2025-12-09T03:32:14.174645"
+    "updated_at": "2025-12-09T06:11:27.018478"
   }
 ]
