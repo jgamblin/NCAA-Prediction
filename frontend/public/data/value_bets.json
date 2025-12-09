@@ -19,9 +19,9 @@
     "game_date": "2025-12-09",
     "home_team": "BYU",
     "away_team": "Clemson",
-    "home_moneyline": -270,
-    "away_moneyline": 220,
-    "explanation": "Clemson is confidently favored: they are dominant at their home venue and they have faced much tougher competition."
+    "home_moneyline": -340,
+    "away_moneyline": 270,
+    "explanation": "Clemson is favored: they are dominant at their home venue and they have faced much tougher competition."
   },
   {
     "id": 63,
@@ -43,8 +43,32 @@
     "game_date": "2025-12-09",
     "home_team": "UConn",
     "away_team": "Florida",
-    "home_moneyline": -218,
-    "away_moneyline": 180,
+    "home_moneyline": -205,
+    "away_moneyline": 170,
     "explanation": "Florida is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
+  },
+  {
+    "id": 64,
+    "game_id": "401823432",
+    "prediction_id": 4389,
+    "bet_team": "Buffalo",
+    "bet_amount": 10.0,
+    "moneyline": -130,
+    "confidence": 0.8004375100135803,
+    "value_score": 0.2587421238422394,
+    "bet_won": null,
+    "actual_winner": null,
+    "payout": 0.0,
+    "profit": null,
+    "bet_type": "moneyline",
+    "strategy": "value_betting",
+    "created_at": "2025-12-09T03:52:11.415122",
+    "settled_at": null,
+    "game_date": "2025-12-09",
+    "home_team": "UMBC",
+    "away_team": "Buffalo",
+    "home_moneyline": 110,
+    "away_moneyline": -130,
+    "explanation": "Buffalo is confidently favored: they are significantly stronger overall, they have faced much tougher competition, and they have a vastly superior defense."
   }
 ]
