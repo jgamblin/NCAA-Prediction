@@ -11,12 +11,12 @@
     "confidence_temperature": "auto"
   },
   "metadata": {
-    "last_tuned": "2025-12-02 06:03:42",
-    "tuner_commit": "1d91987",
+    "last_tuned": "2025-12-09 06:03:46",
+    "tuner_commit": "c2d71a9",
     "tuned_by": "tune_model.py",
     "source": "auto-tuner",
-    "cv_score": 0.6558504578252247,
-    "weighted_accuracy": 0.7055518545837747,
+    "cv_score": 0.6520581523117235,
+    "weighted_accuracy": 0.7018782001427926,
     "weighting_scheme": "current=10x prev=3x prev2=1.5x older geometric 0.5^(i-2)"
   }
 }
