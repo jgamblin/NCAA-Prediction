@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-10 12:31:00 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `c4b9723`
+**Last Updated**: 2025-12-10 15:29:15 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `68a2ba1`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 37
-- **Average Confidence**: 74.0%
-- **High (≥70%)**: 26 · **Medium (60-70%)**: 1 · **Other (<60%)**: 10
+- **Average Confidence**: 74.5%
+- **High (≥70%)**: 26 · **Medium (60-70%)**: 5 · **Other (<60%)**: 6
 
 ### 🏅 Pick Streaks
 
@@ -33,55 +33,59 @@
 | 1 | **Yale** | UAlbany Great Danes | 85.0% |
 | 2 | **UMass Lowell River** | Fisher College | 85.0% |
 | 3 | **Notre Dame** | Idaho | 85.0% |
-| 4 | **Purdue** | Minnesota | 85.0% |
-| 5 | **Hofstra Pride** | Old Westbury | 85.0% |
-| 6 | **Florida Atlantic** | Saint Leo | 85.0% |
-| 7 | **Hawai'i Rainbow** | Hawai'i Hilo Vulcans | 85.0% |
+| 4 | **Hofstra Pride** | Old Westbury | 85.0% |
+| 5 | **Cal State Fullerton** | Bethesda | 85.0% |
+| 6 | **San Diego State** | Lamar | 85.0% |
+| 7 | **Tulsa Golden Hurricane** | Arkansas-Pine Bluff Golden | 85.0% |
 | 8 | **Houston** | Jackson State | 85.0% |
 | 9 | **Tulane Green Wave** | Tougaloo | 85.0% |
 | 10 | **Nicholls State** | College Of Biblical Studies | 85.0% |
-| 11 | **San Diego State** | Lamar | 85.0% |
-| 12 | **Cal State Fullerton** | Bethesda | 85.0% |
-| 13 | **Wisconsin** | Nebraska Cornhuskers | 85.0% |
-| 14 | **Tulsa Golden Hurricane** | Arkansas-Pine Bluff Golden | 85.0% |
-| 15 | **Fresno State** | Cal State Northridge | 80.0% |
-| 16 | **Weber State** | Kansas City Roos | 80.0% |
-| 17 | **Western Kentucky** | Marshall | 77.4% |
-| 18 | **Maine** | Maine Black | 77.4% |
-| 19 | **Crown College Polars** | North Dakota Fighting | 77.4% |
-| 20 | **Eastern Kentucky Colonels** | Eastern Illinois | 77.4% |
-| 21 | **Southern Illinois** | UT Martin | 74.3% |
-| 22 | **Princeton** | Merrimack | 74.3% |
-| 23 | **Fordham** | Fairleigh Dickinson | 74.3% |
-| 24 | **George Washington** | Delaware Blue Hens | 74.3% |
-| 25 | **Boise State** | Duquesne | 74.3% |
-| 26 | **NC State** | Liberty | 73.0% |
+| 11 | **Wisconsin** | Nebraska Cornhuskers | 85.0% |
+| 12 | **Florida Atlantic** | Saint Leo | 80.8% |
+| 13 | **Hawai'i Rainbow** | Hawai'i Hilo Vulcans | 80.8% |
+| 14 | **Fordham** | Fairleigh Dickinson | 80.8% |
+| 15 | **Purdue** | Minnesota | 80.3% |
+| 16 | **Southern Illinois** | UT Martin | 78.5% |
+| 17 | **Fresno State** | Cal State Northridge | 77.3% |
+| 18 | **Weber State** | Kansas City Roos | 77.3% |
+| 19 | **George Washington** | Delaware Blue Hens | 74.6% |
+| 20 | **Boise State** | Duquesne | 74.6% |
+| 21 | **Princeton** | Merrimack | 74.6% |
+| 22 | **Western Kentucky** | Marshall | 73.7% |
+| 23 | **Eastern Kentucky Colonels** | Eastern Illinois | 73.7% |
+| 24 | **Maine** | Maine Black | 73.7% |
+| 25 | **Crown College Polars** | North Dakota Fighting | 73.7% |
+| 26 | **New Haven Chargers** | NJIT | 71.8% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **St. Bonaventure** | Colgate | 66.1% |
+| 1 | **Eastern Michigan** | Purdue Fort Wayne | 69.4% |
+| 2 | **Salish Kootenai** | Montana | 67.6% |
+| 3 | **NC State** | Liberty | 63.9% |
+| 4 | **Utah Valley** | Idaho State Bengals | 63.9% |
+| 5 | **St. Bonaventure** | Colgate | 63.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | UNC Asheville vs Miami (OH) | 55.9% | Close |
-| 2 | South Florida vs Charleston | 55.9% | Close |
-| 3 | VCU vs New Mexico | 55.9% | Close |
-| 4 | Iona vs Bryant | 55.9% | Close |
-| 5 | Utah Valley vs Idaho State Bengals | 55.9% | Close |
-| 6 | Boston College vs Massachusetts | 55.9% | Close |
-| 7 | Texas State vs Southern | 55.9% | Close |
-| 8 | NJIT vs New Haven Chargers | 57.5% | Close |
+| 1 | UNC Asheville vs Miami (OH) | 57.3% | Close |
+| 2 | South Florida vs Charleston | 57.3% | Close |
+| 3 | VCU vs New Mexico | 57.3% | Close |
+| 4 | Iona vs Bryant | 57.3% | Close |
+| 5 | Texas State vs Southern | 57.3% | Close |
+| 6 | Massachusetts @ Boston College | 58.6% | Close |
+| 7 | Colgate @ St. Bonaventure | 63.9% |  |
+| 8 | Liberty @ NC State | 63.9% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 20
-- Away Teams Favored: 17
+- Home Teams Favored: 22
+- Away Teams Favored: 15
 - Max Confidence: 85.0%
-- Min Confidence: 55.9%
+- Min Confidence: 57.3%
 
 ### 📋 Full Data
 
