@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.1301774978637695,
     "potential_payout": 31.301774978637695,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2025-12-10T03:53:18.374759",
     "legs": [
       {
         "leg_number": 1,
@@ -20,8 +20,8 @@
         "opponent": "UMBC",
         "moneyline": -130,
         "confidence": 0.8004375100135803,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Buffalo",
         "home_team": "UMBC",
         "away_team": "Buffalo",
         "home_score": 79,
@@ -35,13 +35,13 @@
         "opponent": "Howard",
         "moneyline": -130,
         "confidence": 0.8004375100135803,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Howard",
         "home_team": "Howard",
         "away_team": "North Carolina A&T",
-        "home_score": 27,
-        "away_score": 17,
-        "game_status": "In Progress"
+        "home_score": 73,
+        "away_score": 69,
+        "game_status": "Final"
       }
     ]
   },
