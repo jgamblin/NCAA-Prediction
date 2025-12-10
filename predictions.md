@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-10 09:29:05 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `e360969`
+**Last Updated**: 2025-12-10 12:31:00 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `c4b9723`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 38
-- **Average Confidence**: 74.2%
-- **High (≥70%)**: 27 · **Medium (60-70%)**: 1 · **Other (<60%)**: 10
+- **Games Predicted Today**: 37
+- **Average Confidence**: 74.0%
+- **High (≥70%)**: 26 · **Medium (60-70%)**: 1 · **Other (<60%)**: 10
 
 ### 🏅 Pick Streaks
 
@@ -30,33 +30,32 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Baylor** | Norfolk State | 85.0% |
-| 2 | **Yale** | UAlbany Great Danes | 85.0% |
-| 3 | **UMass Lowell River** | Fisher College | 85.0% |
-| 4 | **Notre Dame** | Idaho | 85.0% |
-| 5 | **Purdue** | Minnesota | 85.0% |
-| 6 | **Hofstra Pride** | Old Westbury | 85.0% |
-| 7 | **Florida Atlantic** | Saint Leo | 85.0% |
-| 8 | **Hawai'i Rainbow** | Hawai'i Hilo Vulcans | 85.0% |
-| 9 | **Houston** | Jackson State | 85.0% |
-| 10 | **Tulane Green Wave** | Tougaloo | 85.0% |
-| 11 | **Nicholls State** | College Of Biblical Studies | 85.0% |
-| 12 | **San Diego State** | Lamar | 85.0% |
-| 13 | **Cal State Fullerton** | Bethesda | 85.0% |
-| 14 | **Wisconsin** | Nebraska Cornhuskers | 85.0% |
-| 15 | **Tulsa Golden Hurricane** | Arkansas-Pine Bluff Golden | 85.0% |
-| 16 | **Fresno State** | Cal State Northridge | 80.0% |
-| 17 | **Weber State** | Kansas City Roos | 80.0% |
-| 18 | **Western Kentucky** | Marshall | 77.4% |
-| 19 | **Maine** | Maine Black | 77.4% |
-| 20 | **Crown College Polars** | North Dakota Fighting | 77.4% |
-| 21 | **Eastern Kentucky Colonels** | Eastern Illinois | 77.4% |
-| 22 | **Southern Illinois** | UT Martin | 74.3% |
-| 23 | **Princeton** | Merrimack | 74.3% |
-| 24 | **Fordham** | Fairleigh Dickinson | 74.3% |
-| 25 | **George Washington** | Delaware Blue Hens | 74.3% |
-| 26 | **Boise State** | Duquesne | 74.3% |
-| 27 | **NC State** | Liberty | 73.0% |
+| 1 | **Yale** | UAlbany Great Danes | 85.0% |
+| 2 | **UMass Lowell River** | Fisher College | 85.0% |
+| 3 | **Notre Dame** | Idaho | 85.0% |
+| 4 | **Purdue** | Minnesota | 85.0% |
+| 5 | **Hofstra Pride** | Old Westbury | 85.0% |
+| 6 | **Florida Atlantic** | Saint Leo | 85.0% |
+| 7 | **Hawai'i Rainbow** | Hawai'i Hilo Vulcans | 85.0% |
+| 8 | **Houston** | Jackson State | 85.0% |
+| 9 | **Tulane Green Wave** | Tougaloo | 85.0% |
+| 10 | **Nicholls State** | College Of Biblical Studies | 85.0% |
+| 11 | **San Diego State** | Lamar | 85.0% |
+| 12 | **Cal State Fullerton** | Bethesda | 85.0% |
+| 13 | **Wisconsin** | Nebraska Cornhuskers | 85.0% |
+| 14 | **Tulsa Golden Hurricane** | Arkansas-Pine Bluff Golden | 85.0% |
+| 15 | **Fresno State** | Cal State Northridge | 80.0% |
+| 16 | **Weber State** | Kansas City Roos | 80.0% |
+| 17 | **Western Kentucky** | Marshall | 77.4% |
+| 18 | **Maine** | Maine Black | 77.4% |
+| 19 | **Crown College Polars** | North Dakota Fighting | 77.4% |
+| 20 | **Eastern Kentucky Colonels** | Eastern Illinois | 77.4% |
+| 21 | **Southern Illinois** | UT Martin | 74.3% |
+| 22 | **Princeton** | Merrimack | 74.3% |
+| 23 | **Fordham** | Fairleigh Dickinson | 74.3% |
+| 24 | **George Washington** | Delaware Blue Hens | 74.3% |
+| 25 | **Boise State** | Duquesne | 74.3% |
+| 26 | **NC State** | Liberty | 73.0% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
@@ -79,14 +78,14 @@
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 21
+- Home Teams Favored: 20
 - Away Teams Favored: 17
 - Max Confidence: 85.0%
 - Min Confidence: 55.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (315 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (314 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
