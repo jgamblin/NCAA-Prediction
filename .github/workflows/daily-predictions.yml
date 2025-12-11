@@ -2,8 +2,8 @@ name: Daily NCAA Predictions
 
 on:
   schedule:
-    # Run every 3 hours to pick up new games and betting lines
-    - cron: '0 */3 * * *'
+    # Run every day at 12:00 PM UTC (7 AM EST)
+    - cron: '0 12 * * *'
   push:
     branches:
       - main
@@ -15,60 +15,74 @@ permissions:
 jobs:
   update-predictions:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    concurrency:
-      group: ncaa-prediction-schedule
-      cancel-in-progress: false
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.13'
-        cache: 'pip'
     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Run daily pipeline (Database Version)
-      id: pipeline
+    - name: Run daily pipeline
       run: |
-        python3 daily_pipeline_db.py 2>&1 | tee pipeline_output.log
-        echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+        python3 daily_pipeline_db.py
     
-    - name: Export data to JSON for frontend
-      id: export
+    - name: Export to JSON for frontend
       run: |
-        python3 scripts/export_to_json.py 2>&1 | tee export_output.log
-        echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+        python3 scripts/export_to_json.py
     
-    - name: Upload pipeline log on failure
-      if: failure()
-      uses: actions/upload-artifact@v4
-      with:
-        name: pipeline-failure-log-${{ github.run_id }}
-        path: pipeline_output.log
-        retention-days: 7
+    - name: Compact database to stay under GitHub limits
+      run: |
+        python3 -c "
+        import duckdb
+        import shutil
+        from pathlib import Path
+        
+        data_dir = Path('data')
+        old_db = data_dir / 'ncaa_predictions.duckdb'
+        export_dir = data_dir / 'db_export'
+        new_db = data_dir / 'ncaa_predictions_new.duckdb'
+        
+        # Clean export dir
+        if export_dir.exists():
+            shutil.rmtree(export_dir)
+        export_dir.mkdir()
+        
+        # Export to parquet
+        conn = duckdb.connect(str(old_db))
+        conn.execute(f\"EXPORT DATABASE '{export_dir}' (FORMAT PARQUET)\")
+        conn.close()
+        
+        # Import to new compact database
+        if new_db.exists():
+            new_db.unlink()
+        new_conn = duckdb.connect(str(new_db))
+        new_conn.execute(f\"IMPORT DATABASE '{export_dir}'\")
+        new_conn.execute('VACUUM')
+        new_conn.execute('CHECKPOINT')
+        new_conn.close()
+        
+        # Swap files
+        old_db.unlink()
+        new_db.rename(old_db)
+        shutil.rmtree(export_dir)
+        
+        size_mb = old_db.stat().st_size / 1024 / 1024
+        print(f'✓ Database compacted to {size_mb:.2f} MB')
+        assert size_mb < 50, f'Database still too large: {size_mb:.2f} MB'
+        "
     
     - name: Commit and push if changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        # Add CSV files (backwards compatibility) - README.md is now static
-        git add data/*.csv data/*.md predictions.md performance.md docs/performance/*.png
-        # Add database and JSON exports (new!)
-        git add data/ncaa_predictions.duckdb frontend/public/data/*.json
-        if git diff --cached --quiet; then
-          echo "No changes detected; nothing to commit."
-          exit 0
-        fi
-        git commit -m "Update predictions and stats for $(date +'%Y-%m-%d') [Database: $(du -h data/ncaa_predictions.duckdb | cut -f1)]"
-        # Force push with lease (safe force push - workflow is source of truth for data)
-        git push --force-with-lease origin HEAD:main
+        git add data/*.csv data/*.md data/ncaa_predictions.duckdb predictions.md performance.md docs/performance/*.png || true
+        git add frontend/public/data/*.json || true
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update predictions and stats for $(date +'%Y-%m-%d')" && git push)

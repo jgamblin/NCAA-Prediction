@@ -138,8 +138,8 @@ class PredictionsRepository:
                 
                 # Get the inserted ID
                 if self.db.use_duckdb:
-                    id_result = conn.execute("SELECT lastval() as id").fetchone()
-                    return id_result[0] if id_result else None
+                    # DuckDB doesn't have lastval(), just return success indicator
+                    return True
                 else:
                     return result.lastrowid
         except Exception as e:
