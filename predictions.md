@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-11 06:27:59 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `89ca11d`
+**Last Updated**: 2025-12-12 06:27:35 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `05faf6f`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 13
-- **Average Confidence**: 71.9%
-- **High (≥70%)**: 9 · **Medium (60-70%)**: 0 · **Other (<60%)**: 4
+- **Average Confidence**: 75.6%
+- **High (≥70%)**: 9 · **Medium (60-70%)**: 1 · **Other (<60%)**: 3
 
 ### 🏅 Pick Streaks
 
@@ -30,35 +30,40 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Georgia Southern** | Coastal Georgia Mariner | 85.0% |
-| 2 | **Virginia Tech** | Western Carolina | 85.0% |
-| 3 | **Jacksonville** | Trinity College of Jacksonville | 85.0% |
-| 4 | **Missouri** | Alabama State | 85.0% |
-| 5 | **Green Bay** | IU Indianapolis | 80.7% |
-| 6 | **North Dakota State** | Cal State Bakersfield | 80.7% |
-| 7 | **Syracuse Orange** | Saint Joseph's | 75.1% |
-| 8 | **Bloomfield Deacons** | Wagner Seahawks | 74.0% |
-| 9 | **Iowa** | Iowa State | 74.0% |
+| 1 | **Brevard Tornados** | Gardner-Webb Runnin' | 85.0% |
+| 2 | **North Carolina A&T** | Maryland-Eastern Shore | 85.0% |
+| 3 | **Stonehill** | Vermont State - Johnson | 85.0% |
+| 4 | **Texas A&M-Corpus Christi** | Dallas Christian | 85.0% |
+| 5 | **South Dakota State Jackrabbits** | Dakota Wesleyan | 85.0% |
+| 6 | **Eastern Washington** | California Baptist | 85.0% |
+| 7 | **Xavier** | Missouri State | 82.6% |
+| 8 | **UConn** | Texas Longhorns | 79.1% |
+| 9 | **McNeese** | East Texas A&M | 79.1% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **William Peace Pacers** | UNC Greensboro | 68.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | UT Rio Grande Valley Vaqueros vs UT Arlington | 51.2% | Toss-Up |
-| 2 | East Carolina vs Appalachian St | 52.0% | Toss-Up |
-| 3 | Denver Pioneers vs Alaska Anchorage | 52.0% | Toss-Up |
-| 4 | St. Thomas-Minnesota Tommies vs Saint John's (MN) Johnnies | 54.9% | Toss-Up |
+| 1 | Army Black @ UMBC | 54.2% | Toss-Up |
+| 2 | East Tennessee State @ Austin Peay Governors | 54.2% | Toss-Up |
+| 3 | South Carolina State @ Queens University | 55.0% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 5
-- Away Teams Favored: 8
+- Home Teams Favored: 11
+- Away Teams Favored: 2
 - Max Confidence: 85.0%
-- Min Confidence: 51.2%
+- Min Confidence: 54.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (309 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (324 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
