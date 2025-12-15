@@ -127,19 +127,19 @@ def generate_betting_recommendations(
         recent_win_rate = recent_bets['bet_won'].iloc[:5].mean()
         recent_profit = recent_bets['profit'].iloc[:5].sum()
         
-        # Stop betting if recent performance is terrible
-        if recent_win_rate < 0.30 and recent_profit < -30:
-            print(f"\n⚠️  Recent performance is poor:")
-            print(f"   Last 5 bets: {recent_win_rate*100:.0f}% win rate")
-            print(f"   Last 5 profit: ${recent_profit:.2f}")
-            print(f"   🛑 PAUSING BETTING until performance improves")
-            print(f"   (Performance protection triggered)")
-            return
+        # Performance protection disabled - continue betting regardless of recent results
+        # if recent_win_rate < 0.30 and recent_profit < -30:
+        #     print(f"\n⚠️  Recent performance is poor:")
+        #     print(f"   Last 5 bets: {recent_win_rate*100:.0f}% win rate")
+        #     print(f"   Last 5 profit: ${recent_profit:.2f}")
+        #     print(f"   🛑 PAUSING BETTING until performance improves")
+        #     print(f"   (Performance protection triggered)")
+        #     return
         
-        # Warning if on a cold streak
+        # Info message about recent performance
         if recent_win_rate < 0.40:
-            print(f"\n⚠️  Warning: Recent win rate is {recent_win_rate*100:.0f}%")
-            print(f"   Proceeding with reduced selectivity and higher standards")
+            print(f"\n📊 Recent performance: {recent_win_rate*100:.0f}% win rate (last 5 bets)")
+            print(f"   Last 5 profit: ${recent_profit:.2f}")
     
     # Calculate available budget for individual bets
     bet_amount = 10.0  # Flat $10 per bet
