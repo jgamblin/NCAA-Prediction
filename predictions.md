@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-14 06:28:04 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `96a9c73`
+**Last Updated**: 2025-12-15 06:29:00 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `06529e6`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 32
-- **Average Confidence**: 79.1%
-- **High (≥70%)**: 27 · **Medium (60-70%)**: 1 · **Other (<60%)**: 4
+- **Games Predicted Today**: 13
+- **Average Confidence**: 81.0%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,59 +30,41 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Virginia Tech** | Maryland-Eastern Shore | 85.0% |
-| 2 | **Temple** | Saint Francis | 85.0% |
-| 3 | **Iowa State** | Eastern Illinois | 85.0% |
-| 4 | **Minnesota** | Texas Southern | 85.0% |
-| 5 | **Bradley** | North Central College | 85.0% |
-| 6 | **SIU Edwardsville** | Eureka Red | 85.0% |
-| 7 | **Cleveland State** | Oakland City Mighty Oaks | 85.0% |
-| 8 | **Missouri** | Bethune-Cookman | 85.0% |
-| 9 | **Southeast Missouri State** | St. Xavier  (IL) | 85.0% |
-| 10 | **Radford** | Coppin State | 85.0% |
-| 11 | **Indiana State** | Milwaukee | 85.0% |
-| 12 | **Texas A&M** | Jacksonville | 85.0% |
-| 13 | **North Texas** | South Alabama | 85.0% |
-| 14 | **UT Martin** | Champion Christian | 85.0% |
-| 15 | **Colorado State** | Northern New Mexico | 85.0% |
-| 16 | **Iowa** | Western Michigan | 85.0% |
-| 17 | **Loyola Chicago** | Chicago State | 85.0% |
-| 18 | **Wake Forest** | Queens University | 85.0% |
-| 19 | **Idaho** | Evergreen State Geoducks | 85.0% |
-| 20 | **Buffalo** | East Carolina | 79.7% |
-| 21 | **New Mexico** | Florida Gulf Coast | 78.1% |
-| 22 | **Thiel Tomcats** | Youngstown State | 76.0% |
-| 23 | **Monmouth** | Fairfield | 76.0% |
-| 24 | **Charlotte** | Charleston | 76.0% |
-| 25 | **Ball State** | Campbell Fighting | 76.0% |
-| 26 | **Kent State Golden Flashes** | Portland | 76.0% |
-| 27 | **Saint Mary's** | Boise State | 76.0% |
+| 1 | **Samford** | Bryan (TN) | 85.0% |
+| 2 | **Arkansas-Pine Bluff** | Ecclesia | 85.0% |
+| 3 | **Wofford** | Gardner-Webb Runnin' | 85.0% |
+| 4 | **Stetson** | Rhodes Lynx | 85.0% |
+| 5 | **Virginia Commonwealth** | Niagara Purple | 85.0% |
+| 6 | **Western Kentucky** | Campbellsville | 85.0% |
+| 7 | **Southern Indiana** | East-West University Phantoms | 85.0% |
+| 8 | **Wyoming** | South Dakota State Jackrabbits | 85.0% |
+| 9 | **McNeese** | Houston Christian | 85.0% |
+| 10 | **TCU Horned Frogs** | Incarnate Word | 85.0% |
+| 11 | **North Alabama** | Alabama A%26M | 84.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UAB** | Troy | 66.6% |
+| 1 | **North Dakota State** | Minnesota Crookston | 61.6% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Vermont vs Merrimack | 59.3% | Close |
-| 2 | USC vs Washington State | 59.3% | Close |
-| 3 | Appalachian St vs High Point | 59.4% | Close |
-| 4 | Purdue Fort Wayne vs Detroit Mercy | 59.4% | Close |
+| 1 | SE Louisiana vs East Texas A&M | 56.6% | Close |
+| 2 | Minnesota Crookston @ North Dakota State | 61.6% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 19
-- Away Teams Favored: 13
+- Home Teams Favored: 8
+- Away Teams Favored: 5
 - Max Confidence: 85.0%
-- Min Confidence: 59.3%
+- Min Confidence: 56.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (345 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (374 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
