@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-15 07:57:31 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `7c982d9`
+**Last Updated**: 2025-12-16 06:30:04 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `df4bb7f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 13
-- **Average Confidence**: 81.0%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
+- **Games Predicted Today**: 45
+- **Average Confidence**: 79.0%
+- **High (≥70%)**: 34 · **Medium (60-70%)**: 6 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,41 +30,72 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Samford** | Bryan (TN) | 85.0% |
-| 2 | **Arkansas-Pine Bluff** | Ecclesia | 85.0% |
-| 3 | **Wofford** | Gardner-Webb Runnin' | 85.0% |
-| 4 | **Stetson** | Rhodes Lynx | 85.0% |
-| 5 | **Virginia Commonwealth** | Niagara Purple | 85.0% |
-| 6 | **Western Kentucky** | Campbellsville | 85.0% |
-| 7 | **Southern Indiana** | East-West University Phantoms | 85.0% |
-| 8 | **Wyoming** | South Dakota State Jackrabbits | 85.0% |
-| 9 | **McNeese** | Houston Christian | 85.0% |
-| 10 | **TCU Horned Frogs** | Incarnate Word | 85.0% |
-| 11 | **North Alabama** | Alabama A%26M | 84.5% |
+| 1 | **Duke** | Lipscomb | 85.0% |
+| 2 | **Liberty** | Midway University | 85.0% |
+| 3 | **South Carolina Upstate** | South Carolina State | 85.0% |
+| 4 | **Sacred Heart Pioneers** | UMass Lowell River | 85.0% |
+| 5 | **Dartmouth Big Green** | Holy Cross | 85.0% |
+| 6 | **Michigan State** | Toledo | 85.0% |
+| 7 | **UNC Asheville** | Kentucky Christian | 85.0% |
+| 8 | **Miami (OH)-Middletown ThunderHawks** | IU Indianapolis | 85.0% |
+| 9 | **Ohio** | Ohio Wesleyan Battling Bishops | 85.0% |
+| 10 | **Belmont** | Evansville Purple Aces | 85.0% |
+| 11 | **Oklahoma** | Kansas City Roos | 85.0% |
+| 12 | **Rhode Island** | Canisius Golden Griffins | 85.0% |
+| 13 | **Tarleton** | Mississippi Valley State | 85.0% |
+| 14 | **High Point** | Mary Baldwin Fighting Squirrels | 85.0% |
+| 15 | **Miami (FL)** | Florida International | 85.0% |
+| 16 | **North Carolina** | East Tennessee State | 85.0% |
+| 17 | **Mississippi State** | Long Island University | 85.0% |
+| 18 | **UT Rio Grande Valley Vaqueros** | Lamar | 85.0% |
+| 19 | **UConn** | Butler | 85.0% |
+| 20 | **Arizona** | Abilene Christian | 85.0% |
+| 21 | **Brigham Young** | Pacific | 85.0% |
+| 22 | **Texas Tech** | Northern Colorado | 85.0% |
+| 23 | **Omaha** | York College Nebraska | 85.0% |
+| 24 | **Texas Longhorns** | Le Moyne | 85.0% |
+| 25 | **Northern Illinois** | East-West University Phantoms | 85.0% |
+| 26 | **Northwestern** | Valparaiso Beacons | 85.0% |
+| 27 | **Kansas** | Towson | 85.0% |
+| 28 | **California Baptist** | Southern | 85.0% |
+| 29 | **Arkansas** | Queens University | 85.0% |
+| 30 | **Florida State** | Dayton | 84.4% |
+| 31 | **Stanton Elks** | UC Riverside | 84.4% |
+| 32 | **Montana State** | Cal Poly | 84.4% |
+| 33 | **St. John's** | DePaul Blue | 71.4% |
+| 34 | **Tennessee** | Louisville | 71.1% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **North Dakota State** | Minnesota Crookston | 61.6% |
+| 1 | **UNC Greensboro** | North Carolina A&T | 69.8% |
+| 2 | **Drexel** | Howard | 69.7% |
+| 3 | **Delaware Blue Hens** | Rider | 68.9% |
+| 4 | **Bowling Green** | Chicago State | 68.9% |
+| 5 | **Clemson** | South Carolina Gamecocks | 68.9% |
+| 6 | **Missouri State** | Oral Roberts | 68.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | SE Louisiana vs East Texas A&M | 56.6% | Close |
-| 2 | Minnesota Crookston @ North Dakota State | 61.6% |  |
+| 1 | Wright State vs Miami (OH) | 55.9% | Close |
+| 2 | Denver Pioneers vs Colorado-Colorado Springs Mountain | 55.9% | Close |
+| 3 | Georgia Tech vs Marist Red Foxes | 56.4% | Close |
+| 4 | Morehead State vs Little Rock | 56.4% | Close |
+| 5 | Loyola Marymount vs UC San Diego Tritons | 56.4% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 8
-- Away Teams Favored: 5
+- Home Teams Favored: 30
+- Away Teams Favored: 15
 - Max Confidence: 85.0%
-- Min Confidence: 56.6%
+- Min Confidence: 55.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (374 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (373 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
