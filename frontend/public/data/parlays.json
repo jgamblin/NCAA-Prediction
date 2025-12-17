@@ -1,11 +1,11 @@
 [
   {
-    "id": 7,
-    "date": "2025-12-16T00:00:00",
+    "id": 8,
+    "date": "2025-12-17T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.3254237174987793,
-    "potential_payout": 33.25423812866211,
+    "combined_odds": 2.8557288646698,
+    "potential_payout": 28.557289123535156,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401822871",
+        "bet_team": "Xavier",
+        "opponent": "Creighton",
+        "moneyline": -148,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Xavier",
+        "away_team": "Creighton",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401823349",
+        "bet_team": "Jacksonville",
+        "opponent": "Florida A&M Rattlers",
+        "moneyline": -142,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Florida A&M Rattlers",
+        "away_team": "Jacksonville",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "date": "2025-12-16T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.3254237174987793,
+    "potential_payout": 33.25423812866211,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2025-12-17T12:30:26.005080",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401823728",
         "bet_team": "Sacred Heart Pioneers",
         "opponent": "UMass Lowell River",
         "moneyline": -125,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "UMass Lowell River",
         "home_team": "UMass Lowell River",
         "away_team": "Sacred Heart Pioneers",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 87,
+        "away_score": 82,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Holy Cross",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Dartmouth Big Green",
         "home_team": "Holy Cross",
         "away_team": "Dartmouth Big Green",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 64,
+        "away_score": 89,
+        "game_status": "Final"
       }
     ]
   },
