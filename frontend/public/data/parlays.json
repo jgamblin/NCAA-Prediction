@@ -1,11 +1,11 @@
 [
   {
-    "id": 8,
-    "date": "2025-12-17T00:00:00",
+    "id": 9,
+    "date": "2025-12-18T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.8557288646698,
-    "potential_payout": 28.557289123535156,
+    "combined_odds": 2.534437656402588,
+    "potential_payout": 25.344377517700195,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401830220",
+        "bet_team": "Bradley",
+        "opponent": "Indiana State",
+        "moneyline": -185,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Indiana State",
+        "away_team": "Bradley",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401806348",
+        "bet_team": "Southeast Missouri State",
+        "opponent": "Tennessee Tech",
+        "moneyline": -155,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Tennessee Tech",
+        "away_team": "Southeast Missouri State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "date": "2025-12-17T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.8557288646698,
+    "potential_payout": 28.557289123535156,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2025-12-18T12:29:00.125760",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401822871",
         "bet_team": "Xavier",
         "opponent": "Creighton",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Creighton",
         "home_team": "Xavier",
         "away_team": "Creighton",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 57,
+        "away_score": 98,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Florida A&M Rattlers",
         "moneyline": -142,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Florida A&M Rattlers",
         "home_team": "Florida A&M Rattlers",
         "away_team": "Jacksonville",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 72,
+        "away_score": 65,
+        "game_status": "Final"
       }
     ]
   },
