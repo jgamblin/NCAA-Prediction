@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-18 06:29:00 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `64b733f`
+**Last Updated**: 2025-12-19 06:28:58 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `0aa2ce9`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 32
-- **Average Confidence**: 80.8%
-- **High (≥70%)**: 29 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
+- **Games Predicted Today**: 28
+- **Average Confidence**: 81.3%
+- **High (≥70%)**: 24 · **Medium (60-70%)**: 3 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,62 +30,55 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Gardner-Webb Runnin'** | Toccoa Falls | 85.0% |
-| 2 | **Hampton** | Jackson State | 85.0% |
-| 3 | **UNC Asheville** | Morris College | 85.0% |
-| 4 | **SIU Edwardsville** | Eastern Illinois | 85.0% |
-| 5 | **Georgia** | Western Carolina | 85.0% |
-| 6 | **Saint Joseph's** | Delaware State | 85.0% |
-| 7 | **Bradley** | Indiana State | 85.0% |
-| 8 | **Penn State Hazleton** | Lehigh Mountain | 85.0% |
-| 9 | **Radford** | William & Mary | 85.0% |
-| 10 | **Furman** | Manhattan | 85.0% |
-| 11 | **Oklahoma State** | Kansas City Roos | 85.0% |
-| 12 | **Winthrop** | North Dakota Fighting | 85.0% |
-| 13 | **Drake** | Murray State | 85.0% |
-| 14 | **Pepperdine** | Long Beach State Beach | 85.0% |
-| 15 | **Idaho State Bengals** | Montana-Western | 85.0% |
-| 16 | **Southeast Missouri State** | Tennessee Tech | 85.0% |
-| 17 | **Cal State Bakersfield** | Nobel | 85.0% |
-| 18 | **Western Illinois** | Lindenwood | 85.0% |
-| 19 | **Southern Indiana** | Little Rock | 85.0% |
-| 20 | **Norfolk State** | Grambling | 80.9% |
-| 21 | **Fairfield** | Central Connecticut | 80.9% |
-| 22 | **Georgia State** | Georgia Southern | 80.9% |
-| 23 | **TCU Horned Frogs** | Oral Roberts | 79.9% |
-| 24 | **Virginia Commonwealth** | American University | 79.9% |
-| 25 | **Charlotte** | Lafayette | 79.9% |
-| 26 | **Southern Miss** | Louisiana Ragin' Cajuns | 79.9% |
-| 27 | **Temple** | Davidson | 77.9% |
-| 28 | **UT Martin** | Tennessee State | 77.9% |
-| 29 | **North Florida Ospreys** | Charleston Southern | 72.5% |
+| 1 | **South Carolina State** | Brewton-Parker | 85.0% |
+| 2 | **Samford** | Reinhardt | 85.0% |
+| 3 | **Lehman College Bridges** | Fairleigh Dickinson | 85.0% |
+| 4 | **Cal State Northridge** | La Sierra | 85.0% |
+| 5 | **Towson** | Notre Dame (MD) | 85.0% |
+| 6 | **Navy** | Coppin State | 85.0% |
+| 7 | **Florida State** | Mississippi Valley State | 85.0% |
+| 8 | **Providence** | Seton Hall | 85.0% |
+| 9 | **Seattle** | Washington | 85.0% |
+| 10 | **Belmont** | UC Irvine | 85.0% |
+| 11 | **La Salle** | High Point | 85.0% |
+| 12 | **Jackson State** | Norfolk State | 85.0% |
+| 13 | **Villanova** | Wisconsin | 85.0% |
+| 14 | **Tulsa Golden Hurricane** | Western Kentucky | 85.0% |
+| 15 | **Baylor** | Alcorn State | 85.0% |
+| 16 | **LSU** | SE Louisiana | 85.0% |
+| 17 | **California** | Morgan State | 85.0% |
+| 18 | **UCLA** | Cal Poly | 85.0% |
+| 19 | **Brigham Young** | Abilene Christian | 85.0% |
+| 20 | **South Dakota State Jackrabbits** | Milwaukee | 82.4% |
+| 21 | **Dartmouth Big Green** | Sacred Heart Pioneers | 81.8% |
+| 22 | **Akron** | Eastern Michigan | 80.7% |
+| 23 | **Saint Mary's** | Florida Atlantic | 80.7% |
+| 24 | **UC San Diego Tritons** | San Diego Toreros | 80.7% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Coastal Carolina** | Appalachian St | 60.5% |
-| 2 | **Southern Utah Thunderbirds** | Northern Arizona | 60.5% |
-| 3 | **Illinois State** | Southern Illinois | 60.5% |
+| 1 | **Grambling State** | Grambling | 68.5% |
+| 2 | **North Alabama** | Loyola Marymount | 68.5% |
+| 3 | **Florida A&M Rattlers** | Tarleton | 65.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Appalachian St vs Coastal Carolina | 60.5% |  |
-| 2 | Northern Arizona vs Southern Utah Thunderbirds | 60.5% |  |
-| 3 | Southern Illinois vs Illinois State | 60.5% |  |
+| 1 | Mount St. Mary's @ Drexel | 51.6% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 12
-- Away Teams Favored: 20
+- Home Teams Favored: 19
+- Away Teams Favored: 9
 - Max Confidence: 85.0%
-- Min Confidence: 60.5%
+- Min Confidence: 51.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (270 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (238 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
