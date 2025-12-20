@@ -1,11 +1,11 @@
 [
   {
-    "id": 10,
-    "date": "2025-12-19T00:00:00",
+    "id": 11,
+    "date": "2025-12-20T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.803725481033325,
-    "potential_payout": 28.037256240844727,
+    "combined_odds": 3.1718146800994873,
+    "potential_payout": 31.71814727783203,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401813769",
+        "bet_team": "Buffalo",
+        "opponent": "Western Michigan",
+        "moneyline": -112,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Western Michigan",
+        "away_team": "Buffalo",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401813770",
+        "bet_team": "Northern Illinois",
+        "opponent": "Central Michigan",
+        "moneyline": -148,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Northern Illinois",
+        "away_team": "Central Michigan",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "date": "2025-12-19T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.803725481033325,
+    "potential_payout": 28.037256240844727,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2025-12-20T12:27:44.199347",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401822872",
         "bet_team": "Providence",
         "opponent": "Seton Hall",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Seton Hall",
         "home_team": "Providence",
         "away_team": "Seton Hall",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 67,
+        "away_score": 72,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Western Kentucky",
         "moneyline": -142,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Tulsa Golden Hurricane",
         "home_team": "Western Kentucky",
         "away_team": "Tulsa Golden Hurricane",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 81,
+        "away_score": 82,
+        "game_status": "Final"
       }
     ]
   },
