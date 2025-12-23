@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-22 06:28:59 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `6859832`
+**Last Updated**: 2025-12-23 06:29:17 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9873966`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 61
-- **Average Confidence**: 81.5%
-- **High (≥70%)**: 53 · **Medium (60-70%)**: 8 · **Other (<60%)**: 0
+- **Games Predicted Today**: 12
+- **Average Confidence**: 83.1%
+- **High (≥70%)**: 12 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,91 +30,39 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Wagner Seahawks** | Manor College | 85.0% |
-| 2 | **Florida International** | Trinity College of Jacksonville | 85.0% |
-| 3 | **Centenary (NJ)** | Saint Peter's | 85.0% |
-| 4 | **Miami (OH)** | Milligan | 85.0% |
-| 5 | **George Washington** | St. Mary's (MD) Seahawks | 85.0% |
-| 6 | **Eastern Illinois** | East-West University Phantoms | 85.0% |
-| 7 | **Tulsa Golden Hurricane** | Denver Pioneers | 85.0% |
-| 8 | **Western Michigan** | Defiance | 85.0% |
-| 9 | **Georgia** | West Georgia | 85.0% |
-| 10 | **Louisiana Tech** | Dallas Christian | 85.0% |
-| 11 | **Sacred Heart Pioneers** | Towson | 85.0% |
-| 12 | **Bowling Green** | Siena Heights Saints | 85.0% |
-| 13 | **Butler** | NJIT | 85.0% |
-| 14 | **Weber State** | Lincoln University (CA) Oaklanders | 85.0% |
-| 15 | **South Carolina Gamecocks** | South Carolina State | 85.0% |
-| 16 | **Montana State** | Northwest University | 85.0% |
-| 17 | **Seattle** | Seattle U | 85.0% |
-| 18 | **Virginia** | American University | 85.0% |
-| 19 | **Abilene Christian** | Texas Southern | 85.0% |
-| 20 | **SIU Edwardsville** | Western Illinois | 85.0% |
-| 21 | **San Diego State** | Whittier Poets | 85.0% |
-| 22 | **Texas Longhorns** | Maryland-Eastern Shore | 85.0% |
-| 23 | **Creighton** | Utah Tech | 85.0% |
-| 24 | **Arizona** | Bethune-Cookman | 85.0% |
-| 25 | **Brigham Young** | Eastern Washington | 85.0% |
-| 26 | **Georgetown Hoyas** | Coppin State | 85.0% |
-| 27 | **Wright State** | Eastern Michigan | 85.0% |
-| 28 | **LSU** | Prairie View A&M | 85.0% |
-| 29 | **North Dakota State** | UTEP | 85.0% |
-| 30 | **West Virginia** | Mississippi Valley State | 85.0% |
-| 31 | **Fairfield** | City College NY | 85.0% |
-| 32 | **Syracuse Orange** | Stonehill | 85.0% |
-| 33 | **Florida State** | Jacksonville | 85.0% |
-| 34 | **Memphis** | Alabama State | 85.0% |
-| 35 | **North Carolina** | East Carolina | 85.0% |
-| 36 | **Virginia Commonwealth** | Rider | 85.0% |
-| 37 | **Duquesne** | Canisius Golden Griffins | 85.0% |
-| 38 | **UC Irvine** | Norfolk State | 85.0% |
-| 39 | **Oklahoma** | Stetson | 85.0% |
-| 40 | **Cal State Northridge** | Sacramento State | 85.0% |
-| 41 | **Grand Canyon Lopes** | IU Indianapolis | 85.0% |
-| 42 | **Little Rock** | Williams Baptist | 85.0% |
-| 43 | **UT Arlington** | Oral Roberts | 85.0% |
-| 44 | **Wisconsin** | Central Michigan | 85.0% |
-| 45 | **Greensboro College Pride** | Elon | 83.9% |
-| 46 | **Penn State-Behrend** | Buffalo | 83.9% |
-| 47 | **Portland** | UC Santa Barbara | 83.9% |
-| 48 | **Massachusetts-Boston Beacons** | Massachusetts | 81.3% |
-| 49 | **Princeton** | Temple | 81.3% |
-| 50 | **North Texas** | Science & Arts (OK) Drovers | 76.9% |
-| 51 | **Fordham** | New Haven Chargers | 76.9% |
-| 52 | **Indiana** | Siena Saints | 76.9% |
-| 53 | **Washington** | San Diego Toreros | 76.9% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Coastal Carolina** | Saint Joseph's | 65.7% |
-| 2 | **Bryant** | High Point | 65.7% |
-| 3 | **Northeastern** | Rhode Island | 65.7% |
-| 4 | **Fairleigh Dickinson** | Boston College | 65.7% |
-| 5 | **Missouri** | Illinois Fighting | 65.7% |
-| 6 | **Kansas** | Davidson | 60.1% |
-| 7 | **Ohio** | Miami (OH)-Hamilton Harriers | 60.1% |
-| 8 | **Saint Mary's** | Northern Iowa | 60.1% |
+| 1 | **Green Bay** | Campbell Fighting | 85.0% |
+| 2 | **Binghamton** | Army Black | 85.0% |
+| 3 | **Kentucky** | Bellarmine | 85.0% |
+| 4 | **UCF** | Florida Atlantic | 85.0% |
+| 5 | **WVU Tech Golden** | Marshall | 85.0% |
+| 6 | **UCLA** | UC Riverside | 85.0% |
+| 7 | **Idaho** | Cal State Bakersfield | 85.0% |
+| 8 | **Loyola Marymount** | Morgan State | 85.0% |
+| 9 | **Villanova** | Seton Hall | 85.0% |
+| 10 | **St. John's** | Harvard | 85.0% |
+| 11 | **Ohio State** | Grambling | 73.3% |
+| 12 | **Missouri State** | Lindenwood | 73.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Miami (OH)-Hamilton Harriers @ Ohio | 60.1% |  |
-| 2 | Northern Iowa @ Saint Mary's | 60.1% |  |
-| 3 | Davidson @ Kansas | 60.1% |  |
+| 1 | Grambling @ Ohio State | 73.3% |  |
+| 2 | Lindenwood @ Missouri State | 73.3% |  |
+| 3 | Army Black vs Binghamton | 85.0% |  |
+| 4 | Campbell Fighting vs Green Bay | 85.0% |  |
+| 5 | Bellarmine @ Kentucky | 85.0% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 43
-- Away Teams Favored: 18
+- Home Teams Favored: 6
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
-- Min Confidence: 60.1%
+- Min Confidence: 73.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (185 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (165 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

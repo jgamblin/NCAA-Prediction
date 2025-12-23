@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 2.4930784702301025,
     "potential_payout": 24.930784225463867,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
+    "won": true,
+    "actual_payout": 24.930784225463867,
+    "profit": 14.930784225463867,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2025-12-23T12:29:17.091876",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Texas Southern",
         "moneyline": -205,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Abilene Christian",
         "home_team": "Texas Southern",
         "away_team": "Abilene Christian",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 68,
+        "away_score": 75,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Oral Roberts",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UT Arlington",
         "home_team": "Oral Roberts",
         "away_team": "UT Arlington",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 57,
+        "away_score": 69,
+        "game_status": "Final"
       }
     ]
   },
