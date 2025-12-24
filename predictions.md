@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-23 06:29:17 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `9873966`
+**Last Updated**: 2025-12-24 06:29:00 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `e1472ef`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 12
-- **Average Confidence**: 83.1%
-- **High (≥70%)**: 12 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,43 +26,13 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Green Bay** | Campbell Fighting | 85.0% |
-| 2 | **Binghamton** | Army Black | 85.0% |
-| 3 | **Kentucky** | Bellarmine | 85.0% |
-| 4 | **UCF** | Florida Atlantic | 85.0% |
-| 5 | **WVU Tech Golden** | Marshall | 85.0% |
-| 6 | **UCLA** | UC Riverside | 85.0% |
-| 7 | **Idaho** | Cal State Bakersfield | 85.0% |
-| 8 | **Loyola Marymount** | Morgan State | 85.0% |
-| 9 | **Villanova** | Seton Hall | 85.0% |
-| 10 | **St. John's** | Harvard | 85.0% |
-| 11 | **Ohio State** | Grambling | 73.3% |
-| 12 | **Missouri State** | Lindenwood | 73.3% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Grambling @ Ohio State | 73.3% |  |
-| 2 | Lindenwood @ Missouri State | 73.3% |  |
-| 3 | Army Black vs Binghamton | 85.0% |  |
-| 4 | Campbell Fighting vs Green Bay | 85.0% |  |
-| 5 | Bellarmine @ Kentucky | 85.0% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 6
-- Away Teams Favored: 6
-- Max Confidence: 85.0%
-- Min Confidence: 73.3%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (165 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (200 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
