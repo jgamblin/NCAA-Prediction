@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-26 06:29:51 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `6367358`
+**Last Updated**: 2025-12-27 06:29:28 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4c4ddaa`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 3
+- **Average Confidence**: 81.5%
+- **High (≥70%)**: 3 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,13 +26,32 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Columbia College (SC) Fighting Koalas** | UNC Wilmington Seahawks | 85.0% |
+| 2 | **Duquesne** | Cleary University | 85.0% |
+| 3 | **Stanford Cardinal** | Cal State Northridge | 74.6% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Cal State Northridge @ Stanford Cardinal | 74.6% |  |
+| 2 | UNC Wilmington Seahawks vs Columbia College (SC) Fighting Koalas | 85.0% |  |
+| 3 | Cleary University @ Duquesne | 85.0% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 2
+- Away Teams Favored: 1
+- Max Confidence: 85.0%
+- Min Confidence: 74.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (272 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (392 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
