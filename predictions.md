@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2025-12-27 06:29:28 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `4c4ddaa`
+**Last Updated**: 2025-12-28 06:27:28 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `de8bfdb`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 3
-- **Average Confidence**: 81.5%
-- **High (≥70%)**: 3 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 41
+- **Average Confidence**: 83.4%
+- **High (≥70%)**: 41 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,28 +30,68 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Columbia College (SC) Fighting Koalas** | UNC Wilmington Seahawks | 85.0% |
-| 2 | **Duquesne** | Cleary University | 85.0% |
-| 3 | **Stanford Cardinal** | Cal State Northridge | 74.6% |
+| 1 | **Bryant** | Worcester State | 85.0% |
+| 2 | **St. Thomas-Minnesota Tommies** | North Central (MN) | 85.0% |
+| 3 | **Texas Tech** | Winthrop | 85.0% |
+| 4 | **Baptist (Fl)** | Mercer | 85.0% |
+| 5 | **Morehead State** | Alice Lloyd College | 85.0% |
+| 6 | **Wofford** | Union (KY) | 85.0% |
+| 7 | **Dakota State** | North Dakota Fighting | 85.0% |
+| 8 | **High Point** | Pfeiffer | 85.0% |
+| 9 | **Florida Gulf Coast** | Fort Lauderdale | 85.0% |
+| 10 | **Pacific** | San Diego Toreros | 85.0% |
+| 11 | **Kansas State** | UL Monroe Warhawks | 85.0% |
+| 12 | **Columbia** | North Florida Ospreys | 85.0% |
+| 13 | **Colgate** | Harvard | 85.0% |
+| 14 | **Florida International** | Liberty | 85.0% |
+| 15 | **South Dakota** | Mount Marty College | 85.0% |
+| 16 | **Georgia Tech** | Florida A&M Rattlers | 85.0% |
+| 17 | **Radford** | Shenandoah | 85.0% |
+| 18 | **New Mexico State** | University of The Southwest | 85.0% |
+| 19 | **Norfolk State** | Louisiana Ragin' Cajuns | 85.0% |
+| 20 | **Longwood** | Averett | 85.0% |
+| 21 | **Saint Louis** | Principia College PRINCIPIA | 85.0% |
+| 22 | **Sam Houston State** | College Of Biblical Studies | 85.0% |
+| 23 | **Georgia State** | Columbia College (SC) Fighting Koalas | 85.0% |
+| 24 | **Richmond** | Charleston Southern | 85.0% |
+| 25 | **Presbyterian** | Truett-McConnell | 85.0% |
+| 26 | **Seattle** | San Francisco Dons | 85.0% |
+| 27 | **Maryland** | Old Dominion | 85.0% |
+| 28 | **Saint Mary's** | Loyola Marymount | 85.0% |
+| 29 | **Washington State** | Portland | 85.0% |
+| 30 | **Pacific Union PACIFIC UNION** | UC Davis | 85.0% |
+| 31 | **George Mason** | Pennsylvania | 85.0% |
+| 32 | **Austin Peay Governors** | Fisk | 85.0% |
+| 33 | **McPherson Mcpherson** | Kansas City Roos | 85.0% |
+| 34 | **UC San Diego Tritons** | Stanton Elks | 85.0% |
+| 35 | **Gonzaga** | Pepperdine | 85.0% |
+| 36 | **Arcadia ARCADIA** | Saint Joseph's | 82.1% |
+| 37 | **Santa Clara** | Oregon State | 82.1% |
+| 38 | **Southern Methodist** | Cal State Fullerton | 70.1% |
+| 39 | **Colorado** | Northern Colorado | 70.1% |
+| 40 | **Boston College** | Le Moyne | 70.1% |
+| 41 | **Oregon Ducks** | Omaha | 70.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Cal State Northridge @ Stanford Cardinal | 74.6% |  |
-| 2 | UNC Wilmington Seahawks vs Columbia College (SC) Fighting Koalas | 85.0% |  |
-| 3 | Cleary University @ Duquesne | 85.0% |  |
+| 1 | Le Moyne @ Boston College | 70.1% |  |
+| 2 | SMU vs Cal State Fullerton | 70.1% |  |
+| 3 | Northern Colorado @ Colorado | 70.1% |  |
+| 4 | Omaha @ Oregon Ducks | 70.1% |  |
+| 5 | Oregon State vs Santa Clara | 82.1% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 2
-- Away Teams Favored: 1
+- Home Teams Favored: 29
+- Away Teams Favored: 12
 - Max Confidence: 85.0%
-- Min Confidence: 74.6%
+- Min Confidence: 70.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (392 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (429 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

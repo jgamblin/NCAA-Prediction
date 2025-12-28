@@ -1,5 +1,51 @@
 [
   {
+    "id": 14,
+    "date": "2025-12-28T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.0077219009399414,
+    "potential_payout": 30.077220916748047,
+    "won": null,
+    "actual_payout": 0.0,
+    "profit": null,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": false,
+    "settled_at": null,
+    "legs": [
+      {
+        "leg_number": 1,
+        "game_id": "401812612",
+        "bet_team": "Colgate",
+        "opponent": "Harvard",
+        "moneyline": -185,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Colgate",
+        "away_team": "Harvard",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401828723",
+        "bet_team": "Norfolk State",
+        "opponent": "Louisiana Ragin' Cajuns",
+        "moneyline": -105,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Louisiana Ragin' Cajuns",
+        "away_team": "Norfolk State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
     "id": 13,
     "date": "2025-12-22T00:00:00",
     "bet_amount": 10.0,
