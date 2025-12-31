@@ -1,11 +1,11 @@
 [
   {
-    "id": 16,
-    "date": "2025-12-30T00:00:00",
+    "id": 17,
+    "date": "2025-12-31T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.7308671474456787,
-    "potential_payout": 27.308671951293945,
+    "combined_odds": 3.039365768432617,
+    "potential_payout": 30.393657684326172,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401809225",
+        "bet_team": "Wofford",
+        "opponent": "Western Carolina",
+        "moneyline": -118,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Western Carolina",
+        "away_team": "Wofford",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401808590",
+        "bet_team": "South Alabama",
+        "opponent": "Louisiana Ragin' Cajuns",
+        "moneyline": -155,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Louisiana Ragin' Cajuns",
+        "away_team": "South Alabama",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "date": "2025-12-30T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.7308671474456787,
+    "potential_payout": 27.308671951293945,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2025-12-31T12:28:24.037156",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401822877",
         "bet_team": "Seton Hall",
         "opponent": "Marquette",
         "moneyline": -142,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Seton Hall",
         "home_team": "Marquette",
         "away_team": "Seton Hall",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 73,
+        "away_score": 79,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Nevada Wolf Pack",
         "moneyline": -166,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Nevada Wolf Pack",
         "home_team": "Colorado State",
         "away_team": "Nevada Wolf Pack",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 62,
+        "away_score": 75,
+        "game_status": "Final"
       }
     ]
   },
