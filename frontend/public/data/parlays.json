@@ -1,11 +1,11 @@
 [
   {
-    "id": 17,
-    "date": "2025-12-31T00:00:00",
+    "id": 18,
+    "date": "2026-01-01T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.039365768432617,
-    "potential_payout": 30.393657684326172,
+    "combined_odds": 2.8654019832611084,
+    "potential_payout": 28.654020309448242,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401809227",
+        "bet_team": "Samford",
+        "opponent": "VMI",
+        "moneyline": -205,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "VMI",
+        "away_team": "Samford",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401806417",
+        "bet_team": "Tennessee Tech",
+        "opponent": "Little Rock",
+        "moneyline": -108,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Little Rock",
+        "away_team": "Tennessee Tech",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "date": "2025-12-31T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.039365768432617,
+    "potential_payout": 30.393657684326172,
+    "won": true,
+    "actual_payout": 30.393657684326172,
+    "profit": 20.393657684326172,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-01T12:29:19.062410",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401809225",
         "bet_team": "Wofford",
         "opponent": "Western Carolina",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Wofford",
         "home_team": "Western Carolina",
         "away_team": "Wofford",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 74,
+        "away_score": 79,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Louisiana Ragin' Cajuns",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "South Alabama",
         "home_team": "Louisiana Ragin' Cajuns",
         "away_team": "South Alabama",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 58,
+        "away_score": 63,
+        "game_status": "Final"
       }
     ]
   },
