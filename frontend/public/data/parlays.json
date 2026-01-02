@@ -1,11 +1,11 @@
 [
   {
-    "id": 18,
-    "date": "2026-01-01T00:00:00",
+    "id": 19,
+    "date": "2026-01-02T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.8654019832611084,
-    "potential_payout": 28.654020309448242,
+    "combined_odds": 3.1407625675201416,
+    "potential_payout": 31.407625198364258,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401812411",
+        "bet_team": "Wagner Seahawks",
+        "opponent": "Chicago State",
+        "moneyline": -110,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Chicago State",
+        "away_team": "Wagner Seahawks",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401812401",
+        "bet_team": "Stonehill",
+        "opponent": "New Haven Chargers",
+        "moneyline": -155,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Stonehill",
+        "away_team": "New Haven Chargers",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "date": "2026-01-01T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.8654019832611084,
+    "potential_payout": 28.654020309448242,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-02T12:29:36.864128",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401809227",
         "bet_team": "Samford",
         "opponent": "VMI",
         "moneyline": -205,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Samford",
         "home_team": "VMI",
         "away_team": "Samford",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 58,
+        "away_score": 78,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Little Rock",
         "moneyline": -108,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Little Rock",
         "home_team": "Little Rock",
         "away_team": "Tennessee Tech",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 77,
+        "away_score": 58,
+        "game_status": "Final"
       }
     ]
   },
