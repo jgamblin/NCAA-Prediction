@@ -52,12 +52,12 @@
     "num_legs": 2,
     "combined_odds": 3.1407625675201416,
     "potential_payout": 31.407625198364258,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-01-03T12:31:35.198417",
     "legs": [
       {
         "leg_number": 1,
@@ -66,13 +66,13 @@
         "opponent": "Chicago State",
         "moneyline": -110,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Wagner Seahawks",
         "home_team": "Chicago State",
         "away_team": "Wagner Seahawks",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 72,
+        "away_score": 79,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -81,13 +81,13 @@
         "opponent": "New Haven Chargers",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "New Haven Chargers",
         "home_team": "Stonehill",
         "away_team": "New Haven Chargers",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 55,
+        "away_score": 70,
+        "game_status": "Final"
       }
     ]
   },
