@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-02 06:29:36 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `c1da86d`
+**Last Updated**: 2026-01-02 18:10:27 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `5faa3fb`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 33
-- **Average Confidence**: 81.7%
-- **High (≥70%)**: 32 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
+- **Games Predicted Today**: 27
+- **Average Confidence**: 82.0%
+- **High (≥70%)**: 26 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,61 +30,55 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Sacred Heart Pioneers** | Niagara Purple | 85.0% |
-| 2 | **Michigan** | USC | 85.0% |
-| 3 | **Sam Houston State** | Western Kentucky | 85.0% |
-| 4 | **Fairfield** | Canisius Golden Griffins | 85.0% |
-| 5 | **Robert Morris** | Detroit Mercy | 85.0% |
-| 6 | **Wagner Seahawks** | Chicago State | 85.0% |
-| 7 | **Quinnipiac** | Manhattan | 85.0% |
-| 8 | **Saint Peter's** | Marist Red Foxes | 85.0% |
-| 9 | **Lamar** | McNeese | 85.0% |
-| 10 | **Stonehill** | New Haven Chargers | 85.0% |
-| 11 | **Nebraska Cornhuskers** | Michigan State | 85.0% |
-| 12 | **Saint Mary's** | Portland | 85.0% |
-| 13 | **Louisville** | Stanford Cardinal | 85.0% |
-| 14 | **Missouri State** | UTEP | 85.0% |
-| 15 | **Mercyhurst** | Fairleigh Dickinson | 85.0% |
-| 16 | **Jacksonville State** | Delaware Blue Hens | 85.0% |
-| 17 | **Oregon State** | Pacific | 85.0% |
-| 18 | **Iowa State** | West Virginia | 85.0% |
-| 19 | **Gonzaga** | Seattle U | 85.0% |
-| 20 | **Le Moyne** | Saint Francis | 81.2% |
-| 21 | **Mount St. Mary's** | Merrimack | 81.2% |
-| 22 | **New Mexico State** | Florida International | 81.2% |
-| 23 | **Siena Saints** | Iona | 81.2% |
-| 24 | **Central Connecticut** | Long Island University | 81.2% |
-| 25 | **Kennesaw State** | Liberty | 81.2% |
-| 26 | **Ohio State** | Rutgers | 81.2% |
-| 27 | **Oregon Ducks** | Maryland | 81.2% |
-| 28 | **Alfred State Pioneers** | Cornell Big | 79.6% |
-| 29 | **Pepperdine** | Santa Clara | 77.1% |
-| 30 | **Louisiana Tech** | Middle Tennessee | 72.1% |
-| 31 | **Loyola Marymount** | Washington State | 71.2% |
-| 32 | **Notre Dame** | California | 71.2% |
+| 1 | **Michigan** | USC | 85.0% |
+| 2 | **Robert Morris** | Detroit Mercy | 85.0% |
+| 3 | **Saint Peter's** | Marist Red Foxes | 85.0% |
+| 4 | **Quinnipiac** | Manhattan | 85.0% |
+| 5 | **Wagner Seahawks** | Chicago State | 85.0% |
+| 6 | **Stonehill** | New Haven Chargers | 85.0% |
+| 7 | **Lamar** | McNeese | 85.0% |
+| 8 | **Missouri State** | UTEP | 85.0% |
+| 9 | **Mercyhurst** | Fairleigh Dickinson | 85.0% |
+| 10 | **Jacksonville State** | Delaware Blue Hens | 85.0% |
+| 11 | **Oregon State** | Pacific | 85.0% |
+| 12 | **Nebraska Cornhuskers** | Michigan State | 85.0% |
+| 13 | **Gonzaga** | Seattle U | 85.0% |
+| 14 | **Louisville** | Stanford Cardinal | 85.0% |
+| 15 | **Saint Mary's** | Portland | 85.0% |
+| 16 | **Iowa State** | West Virginia | 85.0% |
+| 17 | **Central Connecticut** | Long Island University | 83.5% |
+| 18 | **Le Moyne** | Saint Francis | 83.5% |
+| 19 | **Kennesaw State** | Liberty | 83.5% |
+| 20 | **Ohio State** | Rutgers | 83.5% |
+| 21 | **Oregon Ducks** | Maryland | 83.5% |
+| 22 | **Pepperdine** | Santa Clara | 76.0% |
+| 23 | **Siena Saints** | Iona | 74.5% |
+| 24 | **Louisiana Tech** | Middle Tennessee | 74.5% |
+| 25 | **Loyola Marymount** | Washington State | 74.5% |
+| 26 | **Notre Dame** | California | 74.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **San Francisco Dons** | San Diego Toreros | 60.7% |
+| 1 | **San Francisco Dons** | San Diego Toreros | 63.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | San Diego Toreros @ San Francisco Dons | 60.7% |  |
+| 1 | San Diego Toreros @ San Francisco Dons | 63.1% |  |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 10
-- Away Teams Favored: 23
+- Away Teams Favored: 17
 - Max Confidence: 85.0%
-- Min Confidence: 60.7%
+- Min Confidence: 63.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (367 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (361 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
