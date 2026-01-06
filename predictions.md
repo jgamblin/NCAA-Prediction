@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-05 06:31:06 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `9898cce`
+**Last Updated**: 2026-01-06 06:29:54 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `2c3a902`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 19
-- **Average Confidence**: 76.0%
-- **High (≥70%)**: 14 · **Medium (60-70%)**: 0 · **Other (<60%)**: 5
+- **Games Predicted Today**: 29
+- **Average Confidence**: 76.6%
+- **High (≥70%)**: 24 · **Medium (60-70%)**: 0 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,41 +30,51 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Nebraska Cornhuskers** | Ohio State | 85.0% |
-| 2 | **Arkansas-Pine Bluff** | Alabama State | 85.0% |
-| 3 | **Southern** | Prairie View A&M | 85.0% |
-| 4 | **Oregon Ducks** | Rutgers | 85.0% |
-| 5 | **Brown** | Yale | 85.0% |
-| 6 | **Princeton** | Pennsylvania | 85.0% |
-| 7 | **Nicholls State** | Northwestern State | 85.0% |
-| 8 | **Lamar** | SE Louisiana | 85.0% |
-| 9 | **Grambling State** | Texas Southern | 85.0% |
-| 10 | **UT Rio Grande Valley Vaqueros** | Incarnate Word | 85.0% |
-| 11 | **Texas A&M-Corpus Christi** | Houston Christian | 85.0% |
-| 12 | **Mississippi Valley State** | Alabama A%26M | 85.0% |
-| 13 | **Milwaukee** | Green Bay | 71.2% |
-| 14 | **USC** | Michigan State | 71.2% |
+| 1 | **Massachusetts** | Ohio | 85.0% |
+| 2 | **Michigan** | Penn State | 85.0% |
+| 3 | **Louisville** | Duke | 85.0% |
+| 4 | **Florida** | Georgia | 85.0% |
+| 5 | **West Virginia** | Cincinnati | 85.0% |
+| 6 | **Miami (OH)** | Western Michigan | 85.0% |
+| 7 | **Ball State** | Eastern Michigan | 85.0% |
+| 8 | **Akron** | Central Michigan | 85.0% |
+| 9 | **Nevada Wolf Pack** | San Diego State | 85.0% |
+| 10 | **LSU** | South Carolina Gamecocks | 85.0% |
+| 11 | **Minnesota** | Iowa | 85.0% |
+| 12 | **Lindenwood** | SIU Edwardsville | 85.0% |
+| 13 | **Toledo** | Northern Illinois | 85.0% |
+| 14 | **Utah State** | Air Force | 85.0% |
+| 15 | **NC State** | Boston College | 85.0% |
+| 16 | **Houston** | Texas Tech | 85.0% |
+| 17 | **Auburn** | Texas A&M | 85.0% |
+| 18 | **San Jose State** | Fresno State | 85.0% |
+| 19 | **St. John's** | Butler | 70.4% |
+| 20 | **Bowling Green** | Kent State Golden Flashes | 70.4% |
+| 21 | **George Washington** | Dayton | 70.4% |
+| 22 | **Georgetown Hoyas** | DePaul Blue | 70.4% |
+| 23 | **New Mexico** | Colorado State | 70.4% |
+| 24 | **UNLV** | Wyoming | 70.4% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | McNeese vs Stephen F. Austin | 54.5% | Toss-Up |
-| 2 | New Orleans vs East Texas A&M | 54.5% | Toss-Up |
-| 3 | Dartmouth Big Green @ Harvard | 57.5% | Close |
-| 4 | Cornell Big vs Columbia | 57.5% | Close |
-| 5 | William & Mary @ Charleston | 57.5% | Close |
+| 1 | Georgia Tech vs Syracuse Orange | 52.2% | Toss-Up |
+| 2 | Kansas vs TCU Horned Frogs | 52.2% | Toss-Up |
+| 3 | Wisconsin vs UCLA | 52.2% | Toss-Up |
+| 4 | Oklahoma State vs UCF | 52.6% | Toss-Up |
+| 5 | Texas Longhorns @ Tennessee | 59.8% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 11
-- Away Teams Favored: 8
+- Home Teams Favored: 13
+- Away Teams Favored: 16
 - Max Confidence: 85.0%
-- Min Confidence: 54.5%
+- Min Confidence: 52.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (360 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (377 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
