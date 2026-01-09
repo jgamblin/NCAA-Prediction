@@ -1,11 +1,11 @@
 [
   {
-    "id": 25,
-    "date": "2026-01-08T00:00:00",
+    "id": 26,
+    "date": "2026-01-09T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.9650206565856934,
-    "potential_payout": 29.650205612182617,
+    "combined_odds": 3.199017286300659,
+    "potential_payout": 31.990171432495117,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401813410",
+        "bet_team": "Saint Peter's",
+        "opponent": "Mount St. Mary's",
+        "moneyline": -110,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Mount St. Mary's",
+        "away_team": "Saint Peter's",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401814510",
+        "bet_team": "Akron",
+        "opponent": "Bowling Green",
+        "moneyline": -148,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Bowling Green",
+        "away_team": "Akron",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "date": "2026-01-08T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.9650206565856934,
+    "potential_payout": 29.650205612182617,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-09T12:31:11.783892",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401808604",
         "bet_team": "Appalachian St",
         "opponent": "Georgia State",
         "moneyline": -120,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Appalachian St",
         "home_team": "Georgia State",
         "away_team": "Appalachian St",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 50,
+        "away_score": 52,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Old Dominion",
         "moneyline": -162,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Old Dominion",
         "home_team": "Coastal Carolina",
         "away_team": "Old Dominion",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 66,
+        "away_score": 70,
+        "game_status": "Final"
       }
     ]
   },
