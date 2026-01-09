@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-09 06:31:11 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `17f4ebf`
+**Last Updated**: 2026-01-09 12:02:31 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `d6ec12d`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 15
-- **Average Confidence**: 78.4%
-- **High (≥70%)**: 12 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
+- **Games Predicted Today**: 14
+- **Average Confidence**: 77.9%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -30,18 +30,17 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Bryant & Stratton (Ohio)** | Youngstown State | 85.0% |
-| 2 | **Fairfield** | Rider | 85.0% |
-| 3 | **Oakland** | Cleveland State | 85.0% |
-| 4 | **Green Bay** | IU Indianapolis | 85.0% |
-| 5 | **Merrimack** | Siena Saints | 85.0% |
-| 6 | **Saint Peter's** | Mount St. Mary's | 85.0% |
-| 7 | **Iona** | Niagara Purple | 85.0% |
-| 8 | **Marist Red Foxes** | Sacred Heart Pioneers | 85.0% |
-| 9 | **Minnesota** | USC | 85.0% |
-| 10 | **Akron** | Bowling Green | 85.0% |
-| 11 | **Northern Kentucky Norse** | Milwaukee | 75.8% |
-| 12 | **Manhattan** | Canisius Golden Griffins | 75.0% |
+| 1 | **Fairfield** | Rider | 85.0% |
+| 2 | **Oakland** | Cleveland State | 85.0% |
+| 3 | **Green Bay** | IU Indianapolis | 85.0% |
+| 4 | **Merrimack** | Siena Saints | 85.0% |
+| 5 | **Saint Peter's** | Mount St. Mary's | 85.0% |
+| 6 | **Iona** | Niagara Purple | 85.0% |
+| 7 | **Marist Red Foxes** | Sacred Heart Pioneers | 85.0% |
+| 8 | **Minnesota** | USC | 85.0% |
+| 9 | **Akron** | Bowling Green | 85.0% |
+| 10 | **Northern Kentucky Norse** | Milwaukee | 75.8% |
+| 11 | **Manhattan** | Canisius Golden Griffins | 75.0% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
@@ -60,13 +59,13 @@
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 7
-- Away Teams Favored: 8
+- Away Teams Favored: 7
 - Max Confidence: 85.0%
 - Min Confidence: 53.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (353 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (352 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
