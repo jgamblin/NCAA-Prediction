@@ -1,0 +1,108 @@
+name: Dependency Check
+
+on:
+  schedule:
+    # Run every Monday at 9am UTC
+    - cron: '0 9 * * 1'
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/package.json'
+      - 'frontend/package-lock.json'
+      - 'requirements.txt'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'frontend/package.json'
+      - 'frontend/package-lock.json'
+      - 'requirements.txt'
+  workflow_dispatch:
+
+jobs:
+  check-frontend-dependencies:
+    name: Check Frontend Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Check for security vulnerabilities
+        working-directory: frontend
+        run: |
+          echo "## 🔒 Security Audit" >> $GITHUB_STEP_SUMMARY
+          if npm audit --audit-level=high; then
+            echo "✅ No high or critical vulnerabilities found" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Security vulnerabilities detected!" >> $GITHUB_STEP_SUMMARY
+            npm audit >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+      - name: Check for outdated packages
+        working-directory: frontend
+        run: |
+          echo "## 📦 Outdated Packages" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          npm outdated || true
+          npm outdated >> $GITHUB_STEP_SUMMARY 2>&1 || echo "All packages are up to date!" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Build test
+        working-directory: frontend
+        run: |
+          echo "## 🏗️ Build Status" >> $GITHUB_STEP_SUMMARY
+          if npm run build; then
+            echo "✅ Build successful" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ Build failed" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+  check-python-dependencies:
+    name: Check Python Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check for security vulnerabilities
+        run: |
+          pip install pip-audit
+          echo "## 🔒 Python Security Audit" >> $GITHUB_STEP_SUMMARY
+          if pip-audit; then
+            echo "✅ No vulnerabilities found in Python packages" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⚠️ Vulnerabilities detected in Python packages" >> $GITHUB_STEP_SUMMARY
+            pip-audit >> $GITHUB_STEP_SUMMARY 2>&1 || true
+          fi
+
+      - name: Check for outdated packages
+        run: |
+          echo "## 📦 Outdated Python Packages" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          pip list --outdated >> $GITHUB_STEP_SUMMARY 2>&1 || echo "All packages are up to date!" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
