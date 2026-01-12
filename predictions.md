@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-11 06:31:36 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `3617a32`
+**Last Updated**: 2026-01-12 06:30:49 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `baeae4f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 20
-- **Average Confidence**: 76.5%
-- **High (≥70%)**: 14 · **Medium (60-70%)**: 5 · **Other (<60%)**: 1
+- **Games Predicted Today**: 17
+- **Average Confidence**: 74.5%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 0 · **Other (<60%)**: 6
 
 ### 🏅 Pick Streaks
 
@@ -30,52 +30,39 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Detroit Mercy** | Cleveland State | 85.0% |
-| 2 | **UAB** | East Carolina | 85.0% |
-| 3 | **Quinnipiac** | Sacred Heart Pioneers | 85.0% |
-| 4 | **Saint Peter's** | Merrimack | 85.0% |
-| 5 | **Marist Red Foxes** | Rider | 85.0% |
-| 6 | **Northern Kentucky Norse** | Green Bay | 85.0% |
-| 7 | **Milwaukee** | IU Indianapolis | 85.0% |
-| 8 | **UCF** | Cincinnati | 85.0% |
-| 9 | **Manhattan** | Niagara Purple | 85.0% |
-| 10 | **Oakland** | Wright State | 85.0% |
-| 11 | **Rutgers** | Northwestern | 85.0% |
-| 12 | **Ohio State** | Washington | 85.0% |
-| 13 | **Saint Joseph's** | Richmond | 74.0% |
-| 14 | **Iona** | Canisius Golden Griffins | 70.0% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Memphis** | Florida Atlantic | 63.1% |
-| 2 | **Charlotte** | Rice | 63.1% |
-| 3 | **Siena Saints** | Mount St. Mary's | 63.1% |
-| 4 | **Purdue Fort Wayne** | Robert Morris | 62.0% |
-| 5 | **North Texas** | Wichita State | 62.0% |
+| 1 | **Howard** | Delaware State | 85.0% |
+| 2 | **Florida A&M Rattlers** | Grambling | 85.0% |
+| 3 | **Prairie View A&M** | Arkansas-Pine Bluff Golden | 85.0% |
+| 4 | **Bethune-Cookman** | Southern | 85.0% |
+| 5 | **Norfolk State** | Maryland-Eastern Shore | 85.0% |
+| 6 | **Coppin State** | South Carolina State | 85.0% |
+| 7 | **Stephen F. Austin** | Incarnate Word | 85.0% |
+| 8 | **McNeese** | Nicholls State | 85.0% |
+| 9 | **Texas A&M-Corpus Christi** | East Texas A&M | 85.0% |
+| 10 | **Texas Southern** | Mississippi Valley State | 85.0% |
+| 11 | **New Orleans** | SE Louisiana | 77.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Iowa vs Illinois Fighting | 51.7% | Toss-Up |
-| 2 | Robert Morris vs Purdue Fort Wayne | 62.0% |  |
-| 3 | Wichita State vs North Texas | 62.0% |  |
-| 4 | Florida Atlantic vs Memphis | 63.1% |  |
-| 5 | Rice vs Charlotte | 63.1% |  |
-| 6 | Mount St. Mary's vs Siena Saints | 63.1% |  |
+| 1 | Navy @ American University | 53.1% | Toss-Up |
+| 2 | Morgan State vs North Carolina Central | 56.8% | Close |
+| 3 | Alabama State vs Alcorn State | 56.8% | Close |
+| 4 | Lamar vs Houston Christian | 56.8% | Close |
+| 5 | Northwestern State vs UT Rio Grande Valley Vaqueros | 56.8% | Close |
+| 6 | Jackson State @ Alabama A%26M | 57.6% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 8
-- Away Teams Favored: 12
+- Home Teams Favored: 11
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
-- Min Confidence: 51.7%
+- Min Confidence: 53.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (348 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (368 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
