@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-15 06:31:59 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `848f8b1`
+**Last Updated**: 2026-01-16 06:31:38 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `2dd64fe`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 49
-- **Average Confidence**: 81.3%
-- **High (≥70%)**: 39 · **Medium (60-70%)**: 10 · **Other (<60%)**: 0
+- **Games Predicted Today**: 7
+- **Average Confidence**: 76.5%
+- **High (≥70%)**: 5 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,81 +30,35 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UMass Lowell River** | NJIT | 85.0% |
-| 2 | **UMBC** | Bryant | 85.0% |
-| 3 | **VMI** | Mercer | 85.0% |
-| 4 | **Liberty** | New Mexico State | 85.0% |
-| 5 | **Robert Morris** | IU Indianapolis | 85.0% |
-| 6 | **UAlbany Great Danes** | Binghamton | 85.0% |
-| 7 | **Detroit Mercy** | Northern Kentucky Norse | 85.0% |
-| 8 | **Elon** | Northeastern | 85.0% |
-| 9 | **William & Mary** | North Carolina A&T | 85.0% |
-| 10 | **Monmouth** | Drexel | 85.0% |
-| 11 | **Hofstra Pride** | Stony Brook | 85.0% |
-| 12 | **Georgia Southern** | Old Dominion | 85.0% |
-| 13 | **UNC Greensboro** | The Citadel | 85.0% |
-| 14 | **Queens University** | Florida Gulf Coast | 85.0% |
-| 15 | **North Alabama** | North Florida Ospreys | 85.0% |
-| 16 | **St. Thomas-Minnesota Tommies** | North Dakota Fighting | 85.0% |
-| 17 | **Delaware Blue Hens** | UTEP | 85.0% |
-| 18 | **Central Arkansas** | Jacksonville | 85.0% |
-| 19 | **South Dakota** | Kansas City Roos | 85.0% |
-| 20 | **Arkansas State** | South Alabama | 85.0% |
-| 21 | **Charleston** | Towson | 85.0% |
-| 22 | **Austin Peay Governors** | Eastern Kentucky Colonels | 85.0% |
-| 23 | **Lipscomb** | Bellarmine | 85.0% |
-| 24 | **Seattle** | San Diego Toreros | 85.0% |
-| 25 | **Little Rock** | Eastern Illinois | 85.0% |
-| 26 | **Tennessee Tech** | Southern Indiana | 85.0% |
-| 27 | **UT Martin** | SIU Edwardsville | 85.0% |
-| 28 | **Tarleton** | Southern Utah Thunderbirds | 85.0% |
-| 29 | **Weber State** | Eastern Washington | 85.0% |
-| 30 | **UT Arlington** | Utah Tech | 85.0% |
-| 31 | **Southeast Missouri State** | Lindenwood | 85.0% |
-| 32 | **Hawai'i Rainbow** | Cal Poly | 85.0% |
-| 33 | **Long Beach State Beach** | UC Riverside | 85.0% |
-| 34 | **Cal State Bakersfield** | UC Santa Barbara | 85.0% |
-| 35 | **Gonzaga** | Washington State | 85.0% |
-| 36 | **Sacramento State** | Northern Arizona | 85.0% |
-| 37 | **Green Bay** | Cleveland State | 82.3% |
-| 38 | **Cal State Fullerton** | UC Davis | 82.3% |
-| 39 | **Wichita State** | Florida Atlantic | 76.9% |
+| 1 | **Creighton** | Providence | 85.0% |
+| 2 | **Kent State Golden Flashes** | Toledo | 85.0% |
+| 3 | **DePaul Blue** | Marquette | 85.0% |
+| 4 | **Ohio** | Ball State | 85.0% |
+| 5 | **Kansas** | Baylor | 79.0% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Appalachian St** | James Madison | 69.0% |
-| 2 | **Wright State** | Youngstown State | 69.0% |
-| 3 | **Vermont** | Maine Black | 69.0% |
-| 4 | **Abilene Christian** | California Baptist | 69.0% |
-| 5 | **UC San Diego Tritons** | Cal State Northridge | 69.0% |
-| 6 | **Oakland** | Milwaukee | 67.4% |
-| 7 | **West Georgia** | Stetson | 67.4% |
-| 8 | **Morehead State** | Tennessee State | 67.4% |
-| 9 | **Idaho** | Idaho State Bengals | 67.4% |
-| 10 | **Northern Colorado** | Portland State | 67.4% |
+| 1 | **Colorado State** | Boise State | 61.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Milwaukee vs Oakland | 67.4% |  |
-| 2 | Stetson vs West Georgia | 67.4% |  |
-| 3 | Idaho State Bengals vs Idaho | 67.4% |  |
-| 4 | Tennessee State vs Morehead State | 67.4% |  |
-| 5 | Portland State vs Northern Colorado | 67.4% |  |
+| 1 | Loyola Chicago @ Dayton | 54.3% | Toss-Up |
+| 2 | Boise State vs Colorado State | 61.8% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 28
-- Away Teams Favored: 21
+- Home Teams Favored: 4
+- Away Teams Favored: 3
 - Max Confidence: 85.0%
-- Min Confidence: 67.4%
+- Min Confidence: 54.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (393 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (356 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

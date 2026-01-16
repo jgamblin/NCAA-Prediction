@@ -1,11 +1,11 @@
 [
   {
-    "id": 32,
-    "date": "2026-01-15T00:00:00",
+    "id": 33,
+    "date": "2026-01-16T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.8557288646698,
-    "potential_payout": 28.557289123535156,
+    "combined_odds": 2.694915294647217,
+    "potential_payout": 26.94915199279785,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401822903",
+        "bet_team": "Creighton",
+        "opponent": "Providence",
+        "moneyline": -118,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Providence",
+        "away_team": "Creighton",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401814526",
+        "bet_team": "Kent State Golden Flashes",
+        "opponent": "Toledo",
+        "moneyline": -218,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Kent State Golden Flashes",
+        "away_team": "Toledo",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "date": "2026-01-15T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.8557288646698,
+    "potential_payout": 28.557289123535156,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-16T12:31:38.299375",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401812016",
         "bet_team": "Elon",
         "opponent": "Northeastern",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Northeastern",
         "home_team": "Northeastern",
         "away_team": "Elon",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 85,
+        "away_score": 78,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "UTEP",
         "moneyline": -142,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "UTEP",
         "home_team": "Delaware Blue Hens",
         "away_team": "UTEP",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 69,
+        "away_score": 70,
+        "game_status": "Final"
       }
     ]
   },
