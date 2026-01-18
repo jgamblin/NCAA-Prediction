@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.4443793296813965,
     "potential_payout": 34.44379425048828,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-01-18T12:30:11.135830",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "IU Indianapolis",
         "moneyline": -112,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Detroit Mercy",
         "home_team": "IU Indianapolis",
         "away_team": "Detroit Mercy",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 77,
+        "away_score": 80,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Pennsylvania",
         "moneyline": -122,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Pennsylvania",
         "home_team": "Dartmouth Big Green",
         "away_team": "Pennsylvania",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 74,
+        "away_score": 84,
+        "game_status": "Final"
       }
     ]
   },
