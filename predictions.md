@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-18 06:30:11 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `eb95908`
+**Last Updated**: 2026-01-19 06:31:17 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `c921625`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 13
-- **Average Confidence**: 72.7%
-- **High (≥70%)**: 9 · **Medium (60-70%)**: 1 · **Other (<60%)**: 3
+- **Games Predicted Today**: 41
+- **Average Confidence**: 70.0%
+- **High (≥70%)**: 20 · **Medium (60-70%)**: 8 · **Other (<60%)**: 13
 
 ### 🏅 Pick Streaks
 
@@ -30,40 +30,63 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Charlotte** | East Carolina | 85.0% |
-| 2 | **Houston** | Arizona State | 85.0% |
-| 3 | **Eastern Illinois** | Blackburn | 85.0% |
-| 4 | **Memphis** | UTSA | 85.0% |
-| 5 | **Tulsa Golden Hurricane** | UAB | 85.0% |
-| 6 | **Penn State** | Maryland | 79.0% |
-| 7 | **Purdue Fort Wayne** | Milwaukee | 76.9% |
-| 8 | **Temple** | Florida Atlantic | 70.5% |
-| 9 | **Tulane Green Wave** | North Texas | 70.5% |
+| 1 | **Saint Peter's** | Iona | 85.0% |
+| 2 | **Sacred Heart Pioneers** | Rider | 85.0% |
+| 3 | **Yale** | Columbia | 85.0% |
+| 4 | **Marist Red Foxes** | Merrimack | 85.0% |
+| 5 | **Florida A&M Rattlers** | Mississippi Valley State | 85.0% |
+| 6 | **Quinnipiac** | Manhattan | 85.0% |
+| 7 | **Howard** | Morehouse Maroon | 85.0% |
+| 8 | **Maine** | New Hampshire | 85.0% |
+| 9 | **George Mason** | George Washington | 85.0% |
+| 10 | **Montana** | Northern Arizona | 85.0% |
+| 11 | **Incarnate Word** | East Texas A&M | 85.0% |
+| 12 | **Dartmouth Big Green** | Princeton | 85.0% |
+| 13 | **UMBC** | Binghamton | 83.7% |
+| 14 | **Lamar** | New Orleans | 83.7% |
+| 15 | **Central Connecticut** | Mercyhurst | 80.7% |
+| 16 | **Stephen F. Austin** | Nicholls State | 78.6% |
+| 17 | **Arkansas-Pine Bluff** | Bethune-Cookman | 76.3% |
+| 18 | **Harvard** | Pennsylvania | 76.3% |
+| 19 | **Stonehill** | Saint Francis | 73.9% |
+| 20 | **Northwestern State** | Houston Christian | 73.6% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **American University** | Army Black | 66.1% |
+| 1 | **Brown** | Cornell Big | 67.2% |
+| 2 | **Fairleigh Dickinson** | Wagner Seahawks | 67.2% |
+| 3 | **Alcorn State** | Prairie View A&M | 67.2% |
+| 4 | **Hampton** | North Carolina A&T | 67.2% |
+| 5 | **Towson** | Drexel | 65.2% |
+| 6 | **Norfolk State** | Elizabeth City State | 65.2% |
+| 7 | **Providence** | Marquette | 63.8% |
+| 8 | **Long Island University** | Le Moyne | 63.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | South Florida vs Wichita State | 51.6% | Toss-Up |
-| 2 | Green Bay vs Oakland | 51.6% | Toss-Up |
-| 3 | San Francisco Dons vs Washington State | 53.7% | Toss-Up |
+| 1 | Monmouth vs Northeastern | 50.6% | Toss-Up |
+| 2 | Siena Saints vs Fairfield | 50.6% | Toss-Up |
+| 3 | Texas A&M-Corpus Christi vs McNeese | 50.6% | Toss-Up |
+| 4 | Alabama State vs Alabama A%26M | 50.6% | Toss-Up |
+| 5 | UT Rio Grande Valley Vaqueros vs SE Louisiana | 50.6% | Toss-Up |
+| 6 | Jackson State vs Texas Southern | 50.6% | Toss-Up |
+| 7 | Lehigh Mountain vs Loyola Maryland | 50.6% | Toss-Up |
+| 8 | UAlbany Great Danes vs Vermont | 57.3% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 6
-- Away Teams Favored: 7
+- Home Teams Favored: 17
+- Away Teams Favored: 24
 - Max Confidence: 85.0%
-- Min Confidence: 51.6%
+- Min Confidence: 50.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (370 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (378 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
