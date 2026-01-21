@@ -1,11 +1,11 @@
 [
   {
-    "id": 36,
-    "date": "2026-01-20T00:00:00",
+    "id": 37,
+    "date": "2026-01-21T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.908212661743164,
-    "potential_payout": 29.082124710083008,
+    "combined_odds": 3.1675775051116943,
+    "potential_payout": 31.67577362060547,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401820684",
+        "bet_team": "Pittsburgh",
+        "opponent": "Boston College",
+        "moneyline": -135,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Boston College",
+        "away_team": "Pittsburgh",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401828188",
+        "bet_team": "Temple",
+        "opponent": "Rice",
+        "moneyline": -122,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Rice",
+        "away_team": "Temple",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "date": "2026-01-20T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.908212661743164,
+    "potential_payout": 29.082124710083008,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-21T12:33:09.662661",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401820685",
         "bet_team": "Clemson",
         "opponent": "NC State",
         "moneyline": -180,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "NC State",
         "home_team": "Clemson",
         "away_team": "NC State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 76,
+        "away_score": 80,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Ball State",
         "moneyline": -115,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Ball State",
         "home_team": "Central Michigan",
         "away_team": "Ball State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 67,
+        "away_score": 68,
+        "game_status": "Final"
       }
     ]
   },
