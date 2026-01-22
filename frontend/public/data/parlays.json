@@ -1,11 +1,11 @@
 [
   {
-    "id": 37,
-    "date": "2026-01-21T00:00:00",
+    "id": 38,
+    "date": "2026-01-22T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.1675775051116943,
-    "potential_payout": 31.67577362060547,
+    "combined_odds": 3.3750345706939697,
+    "potential_payout": 33.750343322753906,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401828190",
+        "bet_team": "South Florida",
+        "opponent": "UAB",
+        "moneyline": -142,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "UAB",
+        "away_team": "South Florida",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401807698",
+        "bet_team": "Jacksonville",
+        "opponent": "Bellarmine",
+        "moneyline": -102,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Jacksonville",
+        "away_team": "Bellarmine",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "date": "2026-01-21T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.1675775051116943,
+    "potential_payout": 31.67577362060547,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-22T12:30:45.566323",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401820684",
         "bet_team": "Pittsburgh",
         "opponent": "Boston College",
         "moneyline": -135,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Boston College",
         "home_team": "Boston College",
         "away_team": "Pittsburgh",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 65,
+        "away_score": 62,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Rice",
         "moneyline": -122,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Temple",
         "home_team": "Rice",
         "away_team": "Temple",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 65,
+        "away_score": 69,
+        "game_status": "Final"
       }
     ]
   },
