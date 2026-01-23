@@ -1,11 +1,11 @@
 [
   {
-    "id": 38,
-    "date": "2026-01-22T00:00:00",
+    "id": 39,
+    "date": "2026-01-23T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.3750345706939697,
-    "potential_payout": 33.750343322753906,
+    "combined_odds": 2.53924560546875,
+    "potential_payout": 25.3924560546875,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401809340",
+        "bet_team": "Furman",
+        "opponent": "UNC Greensboro",
+        "moneyline": -218,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "UNC Greensboro",
+        "away_team": "Furman",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401814538",
+        "bet_team": "Massachusetts",
+        "opponent": "Buffalo",
+        "moneyline": -135,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Buffalo",
+        "away_team": "Massachusetts",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "date": "2026-01-22T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.3750345706939697,
+    "potential_payout": 33.750343322753906,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-23T12:30:25.086104",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401828190",
         "bet_team": "South Florida",
         "opponent": "UAB",
         "moneyline": -142,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "South Florida",
         "home_team": "UAB",
         "away_team": "South Florida",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 69,
+        "away_score": 82,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Bellarmine",
         "moneyline": -102,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Bellarmine",
         "home_team": "Jacksonville",
         "away_team": "Bellarmine",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 70,
+        "away_score": 77,
+        "game_status": "Final"
       }
     ]
   },
