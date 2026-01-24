@@ -1,11 +1,11 @@
 [
   {
-    "id": 39,
-    "date": "2026-01-23T00:00:00",
+    "id": 40,
+    "date": "2026-01-24T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.53924560546875,
-    "potential_payout": 25.3924560546875,
+    "combined_odds": 3.2685787677764893,
+    "potential_payout": 32.685787200927734,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401820696",
+        "bet_team": "Miami (FL)",
+        "opponent": "Syracuse Orange",
+        "moneyline": -130,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Syracuse Orange",
+        "away_team": "Miami (FL)",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401812130",
+        "bet_team": "New Hampshire",
+        "opponent": "UAlbany Great Danes",
+        "moneyline": -118,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "New Hampshire",
+        "away_team": "UAlbany Great Danes",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "date": "2026-01-23T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.53924560546875,
+    "potential_payout": 25.3924560546875,
+    "won": true,
+    "actual_payout": 25.3924560546875,
+    "profit": 15.3924560546875,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-24T12:29:40.922237",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401809340",
         "bet_team": "Furman",
         "opponent": "UNC Greensboro",
         "moneyline": -218,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Furman",
         "home_team": "UNC Greensboro",
         "away_team": "Furman",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 66,
+        "away_score": 89,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Buffalo",
         "moneyline": -135,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Massachusetts",
         "home_team": "Buffalo",
         "away_team": "Massachusetts",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 67,
+        "away_score": 68,
+        "game_status": "Final"
       }
     ]
   },
