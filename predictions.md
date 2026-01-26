@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-25 06:29:22 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `9cb0a5c`
+**Last Updated**: 2026-01-26 06:29:58 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `1d85e60`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 7
-- **Average Confidence**: 68.7%
-- **High (≥70%)**: 4 · **Medium (60-70%)**: 1 · **Other (<60%)**: 2
+- **Games Predicted Today**: 15
+- **Average Confidence**: 68.6%
+- **High (≥70%)**: 7 · **Medium (60-70%)**: 3 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,35 +30,45 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Purdue Fort Wayne** | IU Indianapolis | 85.0% |
-| 2 | **Southern Illinois** | Evansville Purple Aces | 85.0% |
-| 3 | **Mercyhurst** | Chicago State | 71.3% |
-| 4 | **New Haven Chargers** | Saint Francis | 71.3% |
+| 1 | **Florida A&M Rattlers** | Jackson State | 85.0% |
+| 2 | **Bethune-Cookman** | Alcorn State | 85.0% |
+| 3 | **Ohio State** | Penn State | 85.0% |
+| 4 | **Howard** | Coppin State | 85.0% |
+| 5 | **Long Island University** | Wagner Seahawks | 85.0% |
+| 6 | **Duke** | Louisville | 81.0% |
+| 7 | **Central Connecticut** | Stonehill | 72.3% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Wisconsin** | USC | 63.9% |
+| 1 | **Fairleigh Dickinson** | Le Moyne | 60.1% |
+| 2 | **Prairie View A&M** | Alabama A%26M | 60.1% |
+| 3 | **Brigham Young** | Arizona | 60.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Oregon Ducks @ Washington | 51.1% | Toss-Up |
-| 2 | South Florida vs Florida Atlantic | 53.0% | Toss-Up |
-| 3 | USC @ Wisconsin | 63.9% |  |
+| 1 | Norfolk State vs Morgan State | 52.7% | Toss-Up |
+| 2 | Lamar vs East Texas A&M | 52.7% | Toss-Up |
+| 3 | Texas A&M-Corpus Christi vs UT Rio Grande Valley Vaqueros | 52.7% | Toss-Up |
+| 4 | Tarleton vs Abilene Christian | 52.7% | Toss-Up |
+| 5 | Delaware State @ South Carolina State | 59.4% | Close |
+| 6 | Le Moyne @ Fairleigh Dickinson | 60.1% |  |
+| 7 | Alabama A%26M @ Prairie View A&M | 60.1% |  |
+| 8 | BYU vs Arizona | 60.1% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 4
-- Away Teams Favored: 3
+- Home Teams Favored: 9
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
-- Min Confidence: 51.1%
+- Min Confidence: 52.7%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (354 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (362 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
