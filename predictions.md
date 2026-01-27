@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-01-26 06:29:58 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `1d85e60`
+**Last Updated**: 2026-01-27 06:30:08 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `2b8fae7`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 15
-- **Average Confidence**: 68.6%
-- **High (≥70%)**: 7 · **Medium (60-70%)**: 3 · **Other (<60%)**: 5
+- **Games Predicted Today**: 35
+- **Average Confidence**: 73.6%
+- **High (≥70%)**: 22 · **Medium (60-70%)**: 5 · **Other (<60%)**: 8
 
 ### 🏅 Pick Streaks
 
@@ -30,45 +30,62 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Florida A&M Rattlers** | Jackson State | 85.0% |
-| 2 | **Bethune-Cookman** | Alcorn State | 85.0% |
-| 3 | **Ohio State** | Penn State | 85.0% |
-| 4 | **Howard** | Coppin State | 85.0% |
-| 5 | **Long Island University** | Wagner Seahawks | 85.0% |
-| 6 | **Duke** | Louisville | 81.0% |
-| 7 | **Central Connecticut** | Stonehill | 72.3% |
+| 1 | **Stephen F. Austin** | Northwestern State | 85.0% |
+| 2 | **Wake Forest** | Pittsburgh | 85.0% |
+| 3 | **Michigan State** | Rutgers | 85.0% |
+| 4 | **Nebraska Cornhuskers** | Michigan | 85.0% |
+| 5 | **Virginia** | Notre Dame | 85.0% |
+| 6 | **Syracuse Orange** | NC State | 85.0% |
+| 7 | **Boise State** | San Jose State | 85.0% |
+| 8 | **Akron** | Toledo | 85.0% |
+| 9 | **Buffalo** | Bowling Green | 85.0% |
+| 10 | **McNeese** | SE Louisiana | 85.0% |
+| 11 | **Saint Louis** | George Washington | 85.0% |
+| 12 | **UConn** | Providence | 85.0% |
+| 13 | **West Virginia** | Kansas State | 85.0% |
+| 14 | **Houston Christian** | Incarnate Word | 85.0% |
+| 15 | **Purdue** | Indiana | 85.0% |
+| 16 | **Saint Joseph's** | Loyola Chicago | 85.0% |
+| 17 | **New Mexico** | UNLV | 81.9% |
+| 18 | **UCF** | Arizona State | 78.5% |
+| 19 | **Dayton** | Rhode Island | 78.5% |
+| 20 | **Alabama Crimson Tide** | Missouri | 78.5% |
+| 21 | **Virginia Tech** | Georgia Tech | 78.5% |
+| 22 | **Miami (OH)** | Massachusetts | 78.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Fairleigh Dickinson** | Le Moyne | 60.1% |
-| 2 | **Prairie View A&M** | Alabama A%26M | 60.1% |
-| 3 | **Brigham Young** | Arizona | 60.1% |
+| 1 | **Prairie View A&M** | Alabama A%26M | 64.3% |
+| 2 | **Nicholls State** | New Orleans | 64.3% |
+| 3 | **Eastern Michigan** | Central Michigan | 62.8% |
+| 4 | **Creighton** | Marquette | 62.8% |
+| 5 | **Northern Illinois** | Western Michigan | 61.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Norfolk State vs Morgan State | 52.7% | Toss-Up |
-| 2 | Lamar vs East Texas A&M | 52.7% | Toss-Up |
-| 3 | Texas A&M-Corpus Christi vs UT Rio Grande Valley Vaqueros | 52.7% | Toss-Up |
-| 4 | Tarleton vs Abilene Christian | 52.7% | Toss-Up |
-| 5 | Delaware State @ South Carolina State | 59.4% | Close |
-| 6 | Le Moyne @ Fairleigh Dickinson | 60.1% |  |
-| 7 | Alabama A%26M @ Prairie View A&M | 60.1% |  |
-| 8 | BYU vs Arizona | 60.1% |  |
+| 1 | Texas Southern vs Alabama State | 52.5% | Toss-Up |
+| 2 | Oklahoma vs Arkansas | 52.5% | Toss-Up |
+| 3 | Lamar vs East Texas A&M | 52.5% | Toss-Up |
+| 4 | Vanderbilt vs Kentucky | 52.5% | Toss-Up |
+| 5 | Nevada Wolf Pack vs Grand Canyon Lopes | 52.5% | Toss-Up |
+| 6 | Indiana State @ UIC | 54.4% | Toss-Up |
+| 7 | Ohio @ Kent State Golden Flashes | 54.4% | Toss-Up |
+| 8 | VCU vs Richmond | 54.4% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 9
-- Away Teams Favored: 6
+- Home Teams Favored: 17
+- Away Teams Favored: 18
 - Max Confidence: 85.0%
-- Min Confidence: 52.7%
+- Min Confidence: 52.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (362 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (380 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
