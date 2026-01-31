@@ -1,11 +1,11 @@
 [
   {
-    "id": 44,
-    "date": "2026-01-30T00:00:00",
+    "id": 45,
+    "date": "2026-01-31T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.934197425842285,
-    "potential_payout": 29.34197425842285,
+    "combined_odds": 3.0797719955444336,
+    "potential_payout": 30.797719955444336,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401830287",
+        "bet_team": "Indiana State",
+        "opponent": "Valparaiso Beacons",
+        "moneyline": -135,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Indiana State",
+        "away_team": "Valparaiso Beacons",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401828405",
+        "bet_team": "Saint Joseph's",
+        "opponent": "La Salle",
+        "moneyline": -130,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "La Salle",
+        "away_team": "Saint Joseph's",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "date": "2026-01-30T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.934197425842285,
+    "potential_payout": 29.34197425842285,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-01-31T12:29:37.786415",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401823317",
         "bet_team": "Iona",
         "opponent": "Fairfield",
         "moneyline": -170,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Fairfield",
         "home_team": "Iona",
         "away_team": "Fairfield",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 70,
+        "away_score": 71,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Michigan State",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Michigan",
         "home_team": "Michigan State",
         "away_team": "Michigan",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 71,
+        "away_score": 83,
+        "game_status": "Final"
       }
     ]
   },
