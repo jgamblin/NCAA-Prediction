@@ -1,11 +1,11 @@
 [
   {
-    "id": 45,
-    "date": "2026-01-31T00:00:00",
+    "id": 46,
+    "date": "2026-02-01T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.0797719955444336,
-    "potential_payout": 30.797719955444336,
+    "combined_odds": 2.665452003479004,
+    "potential_payout": 26.654518127441406,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401823753",
+        "bet_team": "Merrimack",
+        "opponent": "Sacred Heart Pioneers",
+        "moneyline": -245,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Merrimack",
+        "away_team": "Sacred Heart Pioneers",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401825489",
+        "bet_team": "Minnesota",
+        "opponent": "Penn State",
+        "moneyline": -112,
+        "confidence": 0.809855043888092,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Penn State",
+        "away_team": "Minnesota",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "date": "2026-01-31T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.0797719955444336,
+    "potential_payout": 30.797719955444336,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-01T12:31:35.366260",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401830287",
         "bet_team": "Indiana State",
         "opponent": "Valparaiso Beacons",
         "moneyline": -135,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Valparaiso Beacons",
         "home_team": "Indiana State",
         "away_team": "Valparaiso Beacons",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 72,
+        "away_score": 76,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "La Salle",
         "moneyline": -130,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Saint Joseph's",
         "home_team": "La Salle",
         "away_team": "Saint Joseph's",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 58,
+        "away_score": 67,
+        "game_status": "Final"
       }
     ]
   },
