@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-01 06:31:35 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `7c409f8`
+**Last Updated**: 2026-02-02 06:34:21 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `af1586d`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 25
-- **Average Confidence**: 74.4%
-- **High (≥70%)**: 15 · **Medium (60-70%)**: 5 · **Other (<60%)**: 5
+- **Games Predicted Today**: 19
+- **Average Confidence**: 74.2%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 4 · **Other (<60%)**: 4
 
 ### 🏅 Pick Streaks
 
@@ -30,54 +30,46 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Rhode Island** | Duquesne | 85.0% |
-| 2 | **Purdue** | Maryland | 85.0% |
-| 3 | **Merrimack** | Sacred Heart Pioneers | 85.0% |
-| 4 | **Siena Saints** | Canisius Golden Griffins | 85.0% |
-| 5 | **Iowa State** | Kansas State | 85.0% |
-| 6 | **St. Thomas-Minnesota Tommies** | Kansas City Roos | 85.0% |
-| 7 | **Florida Atlantic** | East Carolina | 85.0% |
-| 8 | **Coastal Carolina** | UL Monroe Warhawks | 85.0% |
-| 9 | **Saint Peter's** | Rider | 85.0% |
-| 10 | **Marist Red Foxes** | Niagara Purple | 85.0% |
-| 11 | **Memphis** | Tulane Green Wave | 84.2% |
-| 12 | **Wright State** | Green Bay | 81.0% |
-| 13 | **Minnesota** | Penn State | 81.0% |
-| 14 | **Furman** | Chattanooga Mocs | 80.0% |
-| 15 | **Mount St. Mary's** | Manhattan | 80.0% |
+| 1 | **Howard** | Coppin State | 85.0% |
+| 2 | **Charleston Southern** | Gardner-Webb Runnin' | 85.0% |
+| 3 | **North Carolina** | Syracuse Orange | 85.0% |
+| 4 | **Stephen F. Austin** | McNeese | 85.0% |
+| 5 | **Sacramento State** | Weber State | 85.0% |
+| 6 | **Texas Tech** | Kansas | 85.0% |
+| 7 | **Texas A&M-Corpus Christi** | Incarnate Word | 85.0% |
+| 8 | **Florida A&M Rattlers** | Alabama State | 84.9% |
+| 9 | **New Orleans** | East Texas A&M | 79.5% |
+| 10 | **UT Rio Grande Valley Vaqueros** | Houston Christian | 76.1% |
+| 11 | **Tennessee State** | Tennessee Tech | 76.1% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Western Carolina** | Samford | 69.9% |
-| 2 | **TCU Horned Frogs** | Colorado | 67.2% |
-| 3 | **Iowa** | Oregon Ducks | 67.2% |
-| 4 | **Tulsa Golden Hurricane** | Wichita State | 62.9% |
-| 5 | **Fairfield** | Quinnipiac | 62.9% |
+| 1 | **Holy Cross** | Boston University | 70.0% |
+| 2 | **Portland State** | Idaho State Bengals | 70.0% |
+| 3 | **Lamar** | SE Louisiana | 69.7% |
+| 4 | **Alcorn State** | Grambling | 69.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Milwaukee vs Cleveland State | 50.3% | Toss-Up |
-| 2 | Florida vs Alabama Crimson Tide | 53.2% | Toss-Up |
-| 3 | Illinois Fighting @ Nebraska Cornhuskers | 56.2% | Close |
-| 4 | Northern Kentucky Norse @ Oakland | 56.2% | Close |
-| 5 | East Tennessee State @ Wofford | 57.7% | Close |
-| 6 | Wichita State @ Tulsa Golden Hurricane | 62.9% |  |
-| 7 | Quinnipiac @ Fairfield | 62.9% |  |
+| 1 | Northwestern State vs Nicholls State | 54.3% | Toss-Up |
+| 2 | Alabama A%26M vs Bethune-Cookman | 54.3% | Toss-Up |
+| 3 | Jackson State vs Southern | 54.3% | Toss-Up |
+| 4 | Maryland-Eastern Shore @ North Carolina Central | 55.2% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 12
-- Away Teams Favored: 13
+- Home Teams Favored: 13
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
-- Min Confidence: 50.3%
+- Min Confidence: 54.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (363 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (366 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
