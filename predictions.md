@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-02 06:34:21 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `af1586d`
+**Last Updated**: 2026-02-03 06:33:31 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `3e19e24`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 19
-- **Average Confidence**: 74.2%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 4 · **Other (<60%)**: 4
+- **Games Predicted Today**: 31
+- **Average Confidence**: 77.6%
+- **High (≥70%)**: 26 · **Medium (60-70%)**: 1 · **Other (<60%)**: 4
 
 ### 🏅 Pick Streaks
 
@@ -30,46 +30,59 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Howard** | Coppin State | 85.0% |
-| 2 | **Charleston Southern** | Gardner-Webb Runnin' | 85.0% |
-| 3 | **North Carolina** | Syracuse Orange | 85.0% |
-| 4 | **Stephen F. Austin** | McNeese | 85.0% |
-| 5 | **Sacramento State** | Weber State | 85.0% |
-| 6 | **Texas Tech** | Kansas | 85.0% |
-| 7 | **Texas A&M-Corpus Christi** | Incarnate Word | 85.0% |
-| 8 | **Florida A&M Rattlers** | Alabama State | 84.9% |
-| 9 | **New Orleans** | East Texas A&M | 79.5% |
-| 10 | **UT Rio Grande Valley Vaqueros** | Houston Christian | 76.1% |
-| 11 | **Tennessee State** | Tennessee Tech | 76.1% |
+| 1 | **Miami (OH)** | Buffalo | 85.0% |
+| 2 | **Akron** | Eastern Michigan | 85.0% |
+| 3 | **UConn** | Xavier | 85.0% |
+| 4 | **Duke** | Boston College | 85.0% |
+| 5 | **Virginia Commonwealth** | VCU | 85.0% |
+| 6 | **Illinois State** | Southern Illinois | 85.0% |
+| 7 | **Ohio** | Western Michigan | 85.0% |
+| 8 | **Murray State** | UIC | 85.0% |
+| 9 | **Bradley** | Valparaiso Beacons | 85.0% |
+| 10 | **Massachusetts** | Central Michigan | 85.0% |
+| 11 | **UNLV** | Fresno State | 85.0% |
+| 12 | **UCLA** | Rutgers | 85.0% |
+| 13 | **San Diego State** | Wyoming | 85.0% |
+| 14 | **Indiana State** | Evansville Purple Aces | 85.0% |
+| 15 | **Grand Canyon Lopes** | Air Force | 85.0% |
+| 16 | **Saint Louis** | Davidson | 85.0% |
+| 17 | **Virginia** | Pittsburgh | 85.0% |
+| 18 | **UT Martin** | Little Rock | 85.0% |
+| 19 | **NC State** | SMU | 82.3% |
+| 20 | **SIU Edwardsville** | Lindenwood | 75.0% |
+| 21 | **Canisius Golden Griffins** | Niagara Purple | 75.0% |
+| 22 | **Tennessee** | Ole Miss | 74.5% |
+| 23 | **Dayton** | St. Bonaventure | 74.5% |
+| 24 | **Bowling Green** | Ball State | 74.5% |
+| 25 | **Texas Longhorns** | South Carolina Gamecocks | 74.5% |
+| 26 | **Toledo** | Kent State Golden Flashes | 74.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Holy Cross** | Boston University | 70.0% |
-| 2 | **Portland State** | Idaho State Bengals | 70.0% |
-| 3 | **Lamar** | SE Louisiana | 69.7% |
-| 4 | **Alcorn State** | Grambling | 69.7% |
+| 1 | **Nevada Wolf Pack** | Boise State | 60.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Northwestern State vs Nicholls State | 54.3% | Toss-Up |
-| 2 | Alabama A%26M vs Bethune-Cookman | 54.3% | Toss-Up |
-| 3 | Jackson State vs Southern | 54.3% | Toss-Up |
-| 4 | Maryland-Eastern Shore @ North Carolina Central | 55.2% | Close |
+| 1 | La Salle @ Loyola Chicago | 50.7% | Toss-Up |
+| 2 | Drake @ Belmont | 50.7% | Toss-Up |
+| 3 | Indiana @ USC | 50.9% | Toss-Up |
+| 4 | DePaul Blue vs St. John's | 55.8% | Close |
+| 5 | Boise State vs Nevada Wolf Pack | 60.9% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 13
-- Away Teams Favored: 6
+- Home Teams Favored: 20
+- Away Teams Favored: 11
 - Max Confidence: 85.0%
-- Min Confidence: 54.3%
+- Min Confidence: 50.7%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (366 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (369 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
