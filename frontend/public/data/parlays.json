@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.0957398414611816,
     "potential_payout": 30.9573974609375,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-05T12:33:11.981913",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Florida Atlantic",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Tulsa Golden Hurricane",
         "home_team": "Florida Atlantic",
         "away_team": "Tulsa Golden Hurricane",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 76,
+        "away_score": 78,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "New Mexico State",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "New Mexico State",
         "home_team": "Louisiana Tech",
         "away_team": "New Mexico State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 63,
+        "away_score": 72,
+        "game_status": "Final"
       }
     ]
   },
