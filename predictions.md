@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-05 06:33:12 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `b478025`
+**Last Updated**: 2026-02-06 06:33:50 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `1abcc68`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 51
-- **Average Confidence**: 73.2%
-- **High (≥70%)**: 33 · **Medium (60-70%)**: 4 · **Other (<60%)**: 14
+- **Games Predicted Today**: 9
+- **Average Confidence**: 78.0%
+- **High (≥70%)**: 7 · **Medium (60-70%)**: 1 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,72 +30,37 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Vermont** | Maine Black | 85.0% |
-| 2 | **UMBC** | Binghamton | 85.0% |
-| 3 | **Michigan** | Penn State | 85.0% |
-| 4 | **Marist Red Foxes** | Rider | 85.0% |
-| 5 | **UNC Wilmington Seahawks** | William & Mary | 85.0% |
-| 6 | **Charleston** | North Carolina A&T | 85.0% |
-| 7 | **Queens University** | Jacksonville | 85.0% |
-| 8 | **Samford** | The Citadel | 85.0% |
-| 9 | **Omaha** | North Dakota Fighting | 85.0% |
-| 10 | **UT Martin** | Southern Indiana | 85.0% |
-| 11 | **Idaho State Bengals** | Northern Arizona | 85.0% |
-| 12 | **California Baptist** | Tarleton | 85.0% |
-| 13 | **Montana State** | Idaho | 85.0% |
-| 14 | **Utah Valley** | Abilene Christian | 85.0% |
-| 15 | **Long Island University** | New Haven Chargers | 84.7% |
-| 16 | **Quinnipiac** | Canisius Golden Griffins | 84.7% |
-| 17 | **Cincinnati** | West Virginia | 84.7% |
-| 18 | **Cal State Fullerton** | UC Riverside | 84.7% |
-| 19 | **Montana** | Eastern Washington | 84.7% |
-| 20 | **Tennessee State** | Eastern Illinois | 84.7% |
-| 21 | **North Dakota State** | Denver Pioneers | 84.7% |
-| 22 | **Hofstra Pride** | Northeastern | 80.7% |
-| 23 | **Mercyhurst** | Saint Francis | 80.7% |
-| 24 | **Campbell** | Drexel | 80.7% |
-| 25 | **UC Irvine** | Cal State Bakersfield | 80.7% |
-| 26 | **Memphis** | UAB | 76.9% |
-| 27 | **Ohio State** | Maryland | 76.9% |
-| 28 | **Fairfield** | Sacred Heart Pioneers | 76.9% |
-| 29 | **Merrimack** | Mount St. Mary's | 76.9% |
-| 30 | **UC Santa Barbara** | UC Davis | 76.9% |
-| 31 | **Cal State Northridge** | Cal Poly | 76.9% |
-| 32 | **West Georgia** | North Florida Ospreys | 73.5% |
-| 33 | **Bellarmine** | Stetson | 73.5% |
+| 1 | **Yale** | Brown | 85.0% |
+| 2 | **Valparaiso Beacons** | Evansville Purple Aces | 85.0% |
+| 3 | **UConn** | St. John's | 85.0% |
+| 4 | **Murray State** | Southern Illinois | 85.0% |
+| 5 | **Belmont** | UIC | 85.0% |
+| 6 | **Loyola Chicago** | Davidson | 80.8% |
+| 7 | **Virginia Commonwealth** | Dayton | 75.4% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Mercer** | Chattanooga Mocs | 65.0% |
-| 2 | **Bryant** | UAlbany Great Danes | 62.1% |
-| 3 | **Central Connecticut** | Chicago State | 62.1% |
-| 4 | **Eastern Kentucky Colonels** | Florida Gulf Coast | 62.1% |
+| 1 | **Bradley** | Northern Iowa | 64.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Little Rock vs Lindenwood | 53.0% | Toss-Up |
-| 2 | Iona @ Siena Saints | 54.9% | Toss-Up |
-| 3 | UMass Lowell River @ NJIT | 54.9% | Toss-Up |
-| 4 | Saint Peter's @ Manhattan | 54.9% | Toss-Up |
-| 5 | Monmouth @ Stony Brook | 54.9% | Toss-Up |
-| 6 | Western Illinois @ Tennessee Tech | 54.9% | Toss-Up |
-| 7 | Elon @ Hampton | 54.9% | Toss-Up |
-| 8 | Stonehill @ Fairleigh Dickinson | 54.9% | Toss-Up |
+| 1 | Drake @ Illinois State | 56.2% | Close |
+| 2 | Northern Iowa vs Bradley | 64.3% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 40
-- Away Teams Favored: 11
+- Home Teams Favored: 4
+- Away Teams Favored: 5
 - Max Confidence: 85.0%
-- Min Confidence: 53.0%
+- Min Confidence: 56.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (387 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (352 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
