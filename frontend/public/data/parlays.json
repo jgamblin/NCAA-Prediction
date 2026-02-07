@@ -1,11 +1,11 @@
 [
   {
-    "id": 50,
-    "date": "2026-02-06T00:00:00",
+    "id": 51,
+    "date": "2026-02-07T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.199017286300659,
-    "potential_payout": 31.990171432495117,
+    "combined_odds": 3.6586906909942627,
+    "potential_payout": 36.58690643310547,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401845838",
+        "bet_team": "Massachusetts",
+        "opponent": "Coastal Carolina",
+        "moneyline": -118,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Coastal Carolina",
+        "away_team": "Massachusetts",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401813428",
+        "bet_team": "Saint Peter's",
+        "opponent": "Siena Saints",
+        "moneyline": -102,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Saint Peter's",
+        "away_team": "Siena Saints",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "date": "2026-02-06T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.199017286300659,
+    "potential_payout": 31.990171432495117,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-07T12:29:52.749694",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401822932",
         "bet_team": "UConn",
         "opponent": "St. John's",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "St. John's",
         "home_team": "St. John's",
         "away_team": "UConn",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 81,
+        "away_score": 72,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Southern Illinois",
         "moneyline": -110,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Murray State",
         "home_team": "Southern Illinois",
         "away_team": "Murray State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 81,
+        "away_score": 91,
+        "game_status": "Final"
       }
     ]
   },
