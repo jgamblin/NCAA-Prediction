@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.6586906909942627,
     "potential_payout": 36.58690643310547,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-08T12:30:26.160979",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Coastal Carolina",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Coastal Carolina",
         "home_team": "Coastal Carolina",
         "away_team": "Massachusetts",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 94,
+        "away_score": 91,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Siena Saints",
         "moneyline": -102,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Saint Peter's",
         "home_team": "Saint Peter's",
         "away_team": "Siena Saints",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 70,
+        "away_score": 65,
+        "game_status": "Final"
       }
     ]
   },
