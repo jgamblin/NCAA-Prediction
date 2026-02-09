@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-08 06:30:26 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `eb3f15f`
+**Last Updated**: 2026-02-09 06:39:38 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `35276bb`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 11
-- **Average Confidence**: 73.0%
-- **High (≥70%)**: 7 · **Medium (60-70%)**: 1 · **Other (<60%)**: 3
+- **Games Predicted Today**: 28
+- **Average Confidence**: 72.6%
+- **High (≥70%)**: 17 · **Medium (60-70%)**: 2 · **Other (<60%)**: 9
 
 ### 🏅 Pick Streaks
 
@@ -30,38 +30,54 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **USC** | Penn State | 85.0% |
-| 2 | **Michigan** | Ohio State | 85.0% |
-| 3 | **Iowa** | Northwestern | 85.0% |
-| 4 | **Minnesota** | Maryland | 85.0% |
-| 5 | **Tulsa Golden Hurricane** | South Florida | 79.5% |
-| 6 | **Wichita State** | Tulane Green Wave | 76.5% |
-| 7 | **Furman** | UNC Greensboro | 75.1% |
+| 1 | **Navy** | Bucknell | 85.0% |
+| 2 | **St. John's** | Xavier | 85.0% |
+| 3 | **NC State** | Louisville | 85.0% |
+| 4 | **Davidson** | Mid-Atlantic Christian | 85.0% |
+| 5 | **Bethune-Cookman** | Texas Southern | 85.0% |
+| 6 | **Florida A&M Rattlers** | Prairie View A&M | 85.0% |
+| 7 | **Central Arkansas** | North Alabama | 85.0% |
+| 8 | **Stephen F. Austin** | East Texas A&M | 85.0% |
+| 9 | **McNeese** | Houston Christian | 85.0% |
+| 10 | **Texas A&M-Corpus Christi** | New Orleans | 85.0% |
+| 11 | **Indiana** | Oregon Ducks | 85.0% |
+| 12 | **Illinois State** | Evansville Purple Aces | 85.0% |
+| 13 | **Alcorn State** | Mississippi Valley State | 85.0% |
+| 14 | **Murray State** | Northern Iowa | 85.0% |
+| 15 | **Arizona** | Kansas | 81.2% |
+| 16 | **UT Rio Grande Valley Vaqueros** | Nicholls State | 80.3% |
+| 17 | **Drake** | Valparaiso Beacons | 71.9% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Rice** | UAB | 65.3% |
+| 1 | **Belmont** | Bradley | 65.9% |
+| 2 | **UNC Wilmington Seahawks** | Charleston | 62.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Texas Tech @ West Virginia | 55.7% | Close |
-| 2 | Charlotte @ Memphis | 55.7% | Close |
-| 3 | UCF @ Cincinnati | 55.7% | Close |
+| 1 | Saint Francis @ Chicago State | 50.0% | Toss-Up |
+| 2 | Arkansas-Pine Bluff Golden vs Jackson State | 50.0% | Toss-Up |
+| 3 | Southern Illinois @ Indiana State | 50.0% | Toss-Up |
+| 4 | Northwestern State @ Lamar | 50.0% | Toss-Up |
+| 5 | Delaware State @ North Carolina Central | 50.0% | Toss-Up |
+| 6 | Howard vs Yale | 53.7% | Toss-Up |
+| 7 | SE Louisiana vs Incarnate Word | 59.1% | Close |
+| 8 | Grambling vs Alabama A%26M | 59.1% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 6
-- Away Teams Favored: 5
+- Home Teams Favored: 17
+- Away Teams Favored: 11
 - Max Confidence: 85.0%
-- Min Confidence: 55.7%
+- Min Confidence: 50.0%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (352 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (365 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
