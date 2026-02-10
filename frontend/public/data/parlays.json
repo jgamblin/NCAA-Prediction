@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.0757362842559814,
     "potential_payout": 30.757362365722656,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-10T12:41:19.019882",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Prairie View A&M",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Florida A&M Rattlers",
         "home_team": "Florida A&M Rattlers",
         "away_team": "Prairie View A&M",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 100,
+        "away_score": 96,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "New Orleans",
         "moneyline": -115,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "New Orleans",
         "home_team": "New Orleans",
         "away_team": "Texas A&M-Corpus Christi",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 84,
+        "away_score": 78,
+        "game_status": "Final"
       }
     ]
   },
