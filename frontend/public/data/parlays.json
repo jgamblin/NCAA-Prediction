@@ -1,11 +1,11 @@
 [
   {
-    "id": 53,
-    "date": "2026-02-11T00:00:00",
+    "id": 54,
+    "date": "2026-02-12T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.0161290168762207,
-    "potential_payout": 30.161291122436523,
+    "combined_odds": 2.4467408657073975,
+    "potential_payout": 24.467409133911133,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401830299",
+        "bet_team": "Murray State",
+        "opponent": "Indiana State",
+        "moneyline": -185,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Indiana State",
+        "away_team": "Murray State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401812345",
+        "bet_team": "Le Moyne",
+        "opponent": "Mercyhurst",
+        "moneyline": -170,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Le Moyne",
+        "away_team": "Mercyhurst",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "date": "2026-02-11T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.0161290168762207,
+    "potential_payout": 30.161291122436523,
+    "won": true,
+    "actual_payout": 30.161291122436523,
+    "profit": 20.161291122436523,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-12T12:36:28.085268",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401814559",
         "bet_team": "Buffalo",
         "opponent": "Ball State",
         "moneyline": -120,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Buffalo",
         "home_team": "Ball State",
         "away_team": "Buffalo",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 53,
+        "away_score": 63,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Furman",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Mercer",
         "home_team": "Mercer",
         "away_team": "Furman",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 69,
+        "away_score": 64,
+        "game_status": "Final"
       }
     ]
   },
