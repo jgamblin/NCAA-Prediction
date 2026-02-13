@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 2.4467408657073975,
     "potential_payout": 24.467409133911133,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
+    "won": true,
+    "actual_payout": 24.467409133911133,
+    "profit": 14.467409133911133,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-13T12:34:11.706237",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Indiana State",
         "moneyline": -185,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Murray State",
         "home_team": "Indiana State",
         "away_team": "Murray State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 72,
+        "away_score": 74,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Mercyhurst",
         "moneyline": -170,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Le Moyne",
         "home_team": "Le Moyne",
         "away_team": "Mercyhurst",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 58,
+        "away_score": 57,
+        "game_status": "Final"
       }
     ]
   },

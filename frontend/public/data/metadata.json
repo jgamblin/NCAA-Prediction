@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-02-12T12:36:30.810497",
+  "last_updated": "2026-02-13T12:34:14.413108",
   "database_stats": {
-    "total_games": 34198,
+    "total_games": 34211,
     "games_by_status": {
-      "Scheduled": 422,
-      "Final": 33776
+      "Final": 33833,
+      "Scheduled": 378
     },
     "total_teams": 1534,
-    "total_predictions": 4383
+    "total_predictions": 4396
   },
   "current_season": "2025-26",
   "data_source": "DuckDB via daily pipeline",
