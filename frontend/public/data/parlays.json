@@ -1,11 +1,11 @@
 [
   {
-    "id": 56,
-    "date": "2026-02-15T00:00:00",
+    "id": 57,
+    "date": "2026-02-16T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.1967592239379883,
-    "potential_payout": 21.967592239379883,
+    "combined_odds": 2.7158384323120117,
+    "potential_payout": 27.158384323120117,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401822776",
+        "bet_team": "South Carolina State",
+        "opponent": "Coppin State",
+        "moneyline": -230,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "South Carolina State",
+        "away_team": "Coppin State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401808930",
+        "bet_team": "Nicholls State",
+        "opponent": "Houston Christian",
+        "moneyline": -112,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Houston Christian",
+        "away_team": "Nicholls State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "date": "2026-02-15T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.1967592239379883,
+    "potential_payout": 21.967592239379883,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-16T12:36:40.812792",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401813392",
         "bet_team": "Iona",
         "opponent": "Niagara Purple",
         "moneyline": -225,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Niagara Purple",
         "home_team": "Niagara Purple",
         "away_team": "Iona",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 70,
+        "away_score": 68,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "North Alabama",
         "moneyline": -192,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "North Alabama",
         "home_team": "North Alabama",
         "away_team": "Eastern Kentucky Colonels",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 84,
+        "away_score": 78,
+        "game_status": "Final"
       }
     ]
   },

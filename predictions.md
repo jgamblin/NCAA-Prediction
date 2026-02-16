@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-15 06:30:45 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `369570c`
+**Last Updated**: 2026-02-16 06:36:40 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `a3b8179`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 32
-- **Average Confidence**: 69.5%
-- **High (≥70%)**: 14 · **Medium (60-70%)**: 10 · **Other (<60%)**: 8
+- **Games Predicted Today**: 24
+- **Average Confidence**: 70.0%
+- **High (≥70%)**: 14 · **Medium (60-70%)**: 2 · **Other (<60%)**: 8
 
 ### 🏅 Pick Streaks
 
@@ -30,59 +30,51 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Charlotte** | UTSA | 85.0% |
-| 2 | **Cincinnati** | Utah | 85.0% |
-| 3 | **Sacred Heart Pioneers** | Rider | 85.0% |
-| 4 | **Tulane Green Wave** | UAB | 85.0% |
-| 5 | **Wright State** | Cleveland State | 85.0% |
-| 6 | **Saint Peter's** | Fairfield | 85.0% |
-| 7 | **Eastern Kentucky Colonels** | North Alabama | 85.0% |
-| 8 | **Iona** | Niagara Purple | 85.0% |
-| 9 | **Purdue Fort Wayne** | IU Indianapolis | 85.0% |
-| 10 | **South Florida** | Florida Atlantic | 78.2% |
-| 11 | **Green Bay** | Milwaukee | 78.2% |
-| 12 | **Denver Pioneers** | Omaha | 76.3% |
-| 13 | **Illinois State** | UIC | 76.3% |
-| 14 | **Seton Hall** | Butler | 76.3% |
+| 1 | **Long Island University** | Wagner Seahawks | 85.0% |
+| 2 | **Duke** | Syracuse Orange | 85.0% |
+| 3 | **Howard** | Delaware State | 85.0% |
+| 4 | **Alabama State** | Mississippi Valley State | 85.0% |
+| 5 | **South Carolina State** | Coppin State | 85.0% |
+| 6 | **Maryland-Eastern Shore** | Norfolk State | 85.0% |
+| 7 | **Iowa State** | Houston | 85.0% |
+| 8 | **Stephen F. Austin** | Texas A&M-Corpus Christi | 85.0% |
+| 9 | **Nicholls State** | Houston Christian | 85.0% |
+| 10 | **Colgate** | Boston University | 73.4% |
+| 11 | **Louisiana Ragin' Cajuns** | Old Dominion | 73.4% |
+| 12 | **Bethune-Cookman** | Jackson State | 73.4% |
+| 13 | **McNeese** | Northwestern State | 73.4% |
+| 14 | **Alcorn State** | Florida A&M Rattlers | 71.6% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Illinois** | Indiana | 68.5% |
-| 2 | **Marist Red Foxes** | Siena Saints | 68.5% |
-| 3 | **Valparaiso Beacons** | Indiana State | 67.9% |
-| 4 | **Youngstown State** | Detroit Mercy | 60.6% |
-| 5 | **Bradley** | Southern Illinois | 60.6% |
-| 6 | **Manhattan** | Canisius Golden Griffins | 60.6% |
-| 7 | **Oakland** | Robert Morris | 60.6% |
-| 8 | **Charleston** | Campbell Fighting | 60.6% |
-| 9 | **Belmont** | Murray State | 60.6% |
-| 10 | **San Francisco Dons** | San Diego Toreros | 60.6% |
+| 1 | **Stony Brook** | Drexel | 69.9% |
+| 2 | **Morgan State** | North Carolina Central | 60.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Merrimack @ Quinnipiac | 50.7% | Toss-Up |
-| 2 | Dayton vs Davidson | 52.7% | Toss-Up |
-| 3 | Seattle U vs Oregon State | 53.7% | Toss-Up |
-| 4 | Maryland @ Rutgers | 57.3% | Close |
-| 5 | Drake @ Northern Iowa | 57.3% | Close |
-| 6 | Towson @ Monmouth | 57.3% | Close |
-| 7 | North Texas @ Temple | 57.3% | Close |
-| 8 | Holy Cross @ Loyola Maryland | 57.3% | Close |
+| 1 | Alabama A%26M vs Arkansas-Pine Bluff Golden | 50.6% | Toss-Up |
+| 2 | UT Rio Grande Valley Vaqueros vs Lamar | 50.6% | Toss-Up |
+| 3 | Texas Southern vs Southern | 50.6% | Toss-Up |
+| 4 | Abilene Christian @ Tarleton | 50.7% | Toss-Up |
+| 5 | New Orleans @ Incarnate Word | 50.7% | Toss-Up |
+| 6 | Grambling @ Prairie View A&M | 55.2% | Close |
+| 7 | SE Louisiana @ East Texas A&M | 55.2% | Close |
+| 8 | South Alabama @ Marshall | 55.2% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 14
-- Away Teams Favored: 18
+- Home Teams Favored: 13
+- Away Teams Favored: 11
 - Max Confidence: 85.0%
-- Min Confidence: 50.7%
+- Min Confidence: 50.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (380 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (357 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
