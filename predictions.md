@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-16 06:36:40 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `a3b8179`
+**Last Updated**: 2026-02-17 06:36:47 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `c3a91f7`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 24
-- **Average Confidence**: 70.0%
-- **High (≥70%)**: 14 · **Medium (60-70%)**: 2 · **Other (<60%)**: 8
+- **Games Predicted Today**: 30
+- **Average Confidence**: 76.0%
+- **High (≥70%)**: 24 · **Medium (60-70%)**: 0 · **Other (<60%)**: 6
 
 ### 🏅 Pick Streaks
 
@@ -30,51 +30,52 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Long Island University** | Wagner Seahawks | 85.0% |
-| 2 | **Duke** | Syracuse Orange | 85.0% |
-| 3 | **Howard** | Delaware State | 85.0% |
-| 4 | **Alabama State** | Mississippi Valley State | 85.0% |
-| 5 | **South Carolina State** | Coppin State | 85.0% |
-| 6 | **Maryland-Eastern Shore** | Norfolk State | 85.0% |
-| 7 | **Iowa State** | Houston | 85.0% |
-| 8 | **Stephen F. Austin** | Texas A&M-Corpus Christi | 85.0% |
-| 9 | **Nicholls State** | Houston Christian | 85.0% |
-| 10 | **Colgate** | Boston University | 73.4% |
-| 11 | **Louisiana Ragin' Cajuns** | Old Dominion | 73.4% |
-| 12 | **Bethune-Cookman** | Jackson State | 73.4% |
-| 13 | **McNeese** | Northwestern State | 73.4% |
-| 14 | **Alcorn State** | Florida A&M Rattlers | 71.6% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Stony Brook** | Drexel | 69.9% |
-| 2 | **Morgan State** | North Carolina Central | 60.7% |
+| 1 | **Charleston Southern** | Gardner-Webb Runnin' | 85.0% |
+| 2 | **Florida State** | Boston College | 85.0% |
+| 3 | **Michigan** | Purdue | 85.0% |
+| 4 | **Eastern Michigan** | Central Michigan | 85.0% |
+| 5 | **Saint Louis** | Rhode Island | 85.0% |
+| 6 | **Florida** | South Carolina Gamecocks | 85.0% |
+| 7 | **Miami (OH)** | Massachusetts | 85.0% |
+| 8 | **Akron** | Western Michigan | 85.0% |
+| 9 | **Nevada Wolf Pack** | San Jose State | 85.0% |
+| 10 | **Ohio** | Ball State | 85.0% |
+| 11 | **Virginia Commonwealth** | George Washington | 85.0% |
+| 12 | **Texas Tech** | Arizona State | 85.0% |
+| 13 | **New Mexico** | Air Force | 85.0% |
+| 14 | **San Diego State** | Grand Canyon Lopes | 85.0% |
+| 15 | **Nebraska Cornhuskers** | Iowa | 85.0% |
+| 16 | **Michigan State** | UCLA | 84.4% |
+| 17 | **UCF** | TCU Horned Frogs | 77.0% |
+| 18 | **Villanova** | Xavier | 76.1% |
+| 19 | **Kent State Golden Flashes** | Bowling Green | 76.1% |
+| 20 | **Wisconsin** | Ohio State | 76.1% |
+| 21 | **Baylor** | Kansas State | 76.1% |
+| 22 | **Wyoming** | Fresno State | 73.9% |
+| 23 | **Miami (FL)** | Virginia Tech | 72.0% |
+| 24 | **Texas Longhorns** | LSU | 71.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Alabama A%26M vs Arkansas-Pine Bluff Golden | 50.6% | Toss-Up |
-| 2 | UT Rio Grande Valley Vaqueros vs Lamar | 50.6% | Toss-Up |
-| 3 | Texas Southern vs Southern | 50.6% | Toss-Up |
-| 4 | Abilene Christian @ Tarleton | 50.7% | Toss-Up |
-| 5 | New Orleans @ Incarnate Word | 50.7% | Toss-Up |
-| 6 | Grambling @ Prairie View A&M | 55.2% | Close |
-| 7 | SE Louisiana @ East Texas A&M | 55.2% | Close |
-| 8 | South Alabama @ Marshall | 55.2% | Close |
+| 1 | SMU vs Louisville | 50.9% | Toss-Up |
+| 2 | Georgia @ Kentucky | 50.9% | Toss-Up |
+| 3 | Minnesota @ Oregon Ducks | 50.9% | Toss-Up |
+| 4 | Northern Illinois @ Buffalo | 55.3% | Close |
+| 5 | Southeast Missouri State @ UT Martin | 55.3% | Close |
+| 6 | NC State vs North Carolina | 57.8% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 13
-- Away Teams Favored: 11
+- Home Teams Favored: 18
+- Away Teams Favored: 12
 - Max Confidence: 85.0%
-- Min Confidence: 50.6%
+- Min Confidence: 50.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (357 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (371 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
