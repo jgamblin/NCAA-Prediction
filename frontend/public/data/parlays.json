@@ -1,11 +1,11 @@
 [
   {
-    "id": 58,
-    "date": "2026-02-17T00:00:00",
+    "id": 59,
+    "date": "2026-02-18T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.3360767364501953,
-    "potential_payout": 23.360767364501953,
+    "combined_odds": 3.4542124271392822,
+    "potential_payout": 34.5421257019043,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401828433",
+        "bet_team": "George Mason",
+        "opponent": "Dayton",
+        "moneyline": -130,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "George Mason",
+        "away_team": "Dayton",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401828232",
+        "bet_team": "UAB",
+        "opponent": "Temple",
+        "moneyline": -105,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Temple",
+        "away_team": "UAB",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "date": "2026-02-17T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.3360767364501953,
+    "potential_payout": 23.360767364501953,
+    "won": true,
+    "actual_payout": 23.360767364501953,
+    "profit": 13.360767364501953,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-18T12:35:51.662404",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401825524",
         "bet_team": "Michigan",
         "opponent": "Purdue",
         "moneyline": -162,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Michigan",
         "home_team": "Purdue",
         "away_team": "Michigan",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 80,
+        "away_score": 91,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Central Michigan",
         "moneyline": -225,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Eastern Michigan",
         "home_team": "Eastern Michigan",
         "away_team": "Central Michigan",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 66,
+        "away_score": 54,
+        "game_status": "Final"
       }
     ]
   },
