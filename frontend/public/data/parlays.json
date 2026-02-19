@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.4542124271392822,
     "potential_payout": 34.5421257019043,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-19T12:36:47.301502",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Dayton",
         "moneyline": -130,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Dayton",
         "home_team": "George Mason",
         "away_team": "Dayton",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 67,
+        "away_score": 82,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Temple",
         "moneyline": -105,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UAB",
         "home_team": "Temple",
         "away_team": "UAB",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 71,
+        "away_score": 76,
+        "game_status": "Final"
       }
     ]
   },
