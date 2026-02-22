@@ -1,11 +1,11 @@
 [
   {
-    "id": 60,
-    "date": "2026-02-21T00:00:00",
+    "id": 61,
+    "date": "2026-02-22T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.3364055156707764,
-    "potential_payout": 23.364055633544922,
+    "combined_odds": 2.5219764709472656,
+    "potential_payout": 25.219764709472656,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401828679",
+        "bet_team": "American University",
+        "opponent": "Lafayette",
+        "moneyline": -198,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Lafayette",
+        "away_team": "American University",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401825535",
+        "bet_team": "Wisconsin",
+        "opponent": "Iowa",
+        "moneyline": -148,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Wisconsin",
+        "away_team": "Iowa",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "date": "2026-02-21T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.3364055156707764,
+    "potential_payout": 23.364055633544922,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-22T12:30:38.139416",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401827695",
         "bet_team": "Houston",
         "opponent": "Arizona",
         "moneyline": -238,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Arizona",
         "home_team": "Houston",
         "away_team": "Arizona",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 66,
+        "away_score": 73,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Villanova",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UConn",
         "home_team": "Villanova",
         "away_team": "UConn",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 63,
+        "away_score": 73,
+        "game_status": "Final"
       }
     ]
   },
