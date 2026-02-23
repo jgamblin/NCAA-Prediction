@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-22 06:30:38 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `895f64f`
+**Last Updated**: 2026-02-23 06:37:22 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `342d907`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 21
-- **Average Confidence**: 69.3%
-- **High (≥70%)**: 8 · **Medium (60-70%)**: 9 · **Other (<60%)**: 4
+- **Games Predicted Today**: 9
+- **Average Confidence**: 81.4%
+- **High (≥70%)**: 8 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,52 +30,31 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **American University** | Lafayette | 85.0% |
-| 2 | **Merrimack** | Iona | 85.0% |
-| 3 | **Wisconsin** | Iowa | 85.0% |
-| 4 | **Tulsa Golden Hurricane** | UTSA | 85.0% |
-| 5 | **Drexel** | Towson | 80.0% |
-| 6 | **Marist Red Foxes** | Sacred Heart Pioneers | 80.0% |
-| 7 | **Mount St. Mary's** | Canisius Golden Griffins | 80.0% |
-| 8 | **Quinnipiac** | Fairfield | 70.4% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Green Bay** | Detroit Mercy | 69.2% |
-| 2 | **Purdue Fort Wayne** | Cleveland State | 69.2% |
-| 3 | **UAB** | Memphis | 63.1% |
-| 4 | **Rider** | Niagara Purple | 63.1% |
-| 5 | **Lehigh Mountain** | Boston University | 63.1% |
-| 6 | **Michigan State** | Ohio State | 63.1% |
-| 7 | **Wright State** | Robert Morris | 63.1% |
-| 8 | **Siena Saints** | Saint Peter's | 63.1% |
-| 9 | **Oakland** | Milwaukee | 63.1% |
+| 1 | **North Carolina** | Louisville | 85.0% |
+| 2 | **Texas A&M-Corpus Christi** | SE Louisiana | 85.0% |
+| 3 | **McNeese** | UT Rio Grande Valley Vaqueros | 85.0% |
+| 4 | **Stephen F. Austin** | New Orleans | 85.0% |
+| 5 | **Grambling State** | Mississippi Valley State | 85.0% |
+| 6 | **Nicholls State** | Lamar | 84.9% |
+| 7 | **Northwestern State** | Incarnate Word | 83.1% |
+| 8 | **East Texas A&M** | Houston Christian | 83.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | North Texas vs Florida Atlantic | 52.4% | Toss-Up |
-| 2 | Holy Cross @ Bucknell | 57.5% | Close |
-| 3 | Northern Kentucky Norse @ Youngstown State | 57.5% | Close |
-| 4 | Rice @ Tulane Green Wave | 57.5% | Close |
-| 5 | Ohio State @ Michigan State | 63.1% |  |
-| 6 | Niagara Purple @ Rider | 63.1% |  |
-| 7 | Robert Morris @ Wright State | 63.1% |  |
-| 8 | Boston University @ Lehigh Mountain | 63.1% |  |
+| 1 | Kansas vs Houston | 56.6% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 16
-- Away Teams Favored: 5
+- Home Teams Favored: 6
+- Away Teams Favored: 3
 - Max Confidence: 85.0%
-- Min Confidence: 52.4%
+- Min Confidence: 56.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (364 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (361 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
