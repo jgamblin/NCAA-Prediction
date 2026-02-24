@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 2.803725481033325,
     "potential_payout": 28.037256240844727,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
+    "won": true,
+    "actual_payout": 28.037256240844727,
+    "profit": 18.037256240844727,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-02-24T12:37:53.353305",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "SE Louisiana",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Texas A&M-Corpus Christi",
         "home_team": "SE Louisiana",
         "away_team": "Texas A&M-Corpus Christi",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 68,
+        "away_score": 73,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Incarnate Word",
         "moneyline": -142,
         "confidence": 0.8308914303779602,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Northwestern State",
         "home_team": "Northwestern State",
         "away_team": "Incarnate Word",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 54,
+        "away_score": 49,
+        "game_status": "Final"
       }
     ]
   },
