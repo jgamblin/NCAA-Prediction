@@ -1,11 +1,11 @@
 [
   {
-    "id": 63,
-    "date": "2026-02-25T00:00:00",
+    "id": 64,
+    "date": "2026-02-26T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.436997890472412,
-    "potential_payout": 24.369979858398438,
+    "combined_odds": 2.789379835128784,
+    "potential_payout": 27.893796920776367,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401804949",
+        "bet_team": "Liberty",
+        "opponent": "Kennesaw State",
+        "moneyline": -135,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Kennesaw State",
+        "away_team": "Liberty",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401805205",
+        "bet_team": "Utah Tech",
+        "opponent": "Abilene Christian",
+        "moneyline": -166,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Utah Tech",
+        "away_team": "Abilene Christian",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "date": "2026-02-25T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.436997890472412,
+    "potential_payout": 24.369979858398438,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-02-26T12:37:30.714218",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401828245",
         "bet_team": "East Carolina",
         "opponent": "UTSA",
         "moneyline": -192,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "East Carolina",
         "home_team": "UTSA",
         "away_team": "East Carolina",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 81,
+        "away_score": 82,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Central Arkansas",
         "moneyline": -166,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Central Arkansas",
         "home_team": "Austin Peay Governors",
         "away_team": "Central Arkansas",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 88,
+        "away_score": 93,
+        "game_status": "Final"
       }
     ]
   },

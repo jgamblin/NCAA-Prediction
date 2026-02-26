@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-25 06:38:11 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `f2470f1`
+**Last Updated**: 2026-02-26 06:37:30 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `cec0b82`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 54
-- **Average Confidence**: 70.8%
-- **High (≥70%)**: 26 · **Medium (60-70%)**: 7 · **Other (<60%)**: 21
+- **Games Predicted Today**: 57
+- **Average Confidence**: 73.2%
+- **High (≥70%)**: 31 · **Medium (60-70%)**: 14 · **Other (<60%)**: 12
 
 ### 🏅 Pick Streaks
 
@@ -30,68 +30,80 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Furman** | The Citadel | 85.0% |
-| 2 | **Oakland** | IU Indianapolis | 85.0% |
-| 3 | **Navy** | Loyola Maryland | 85.0% |
-| 4 | **Nebraska Cornhuskers** | Maryland | 85.0% |
-| 5 | **Oregon State** | San Diego Toreros | 85.0% |
-| 6 | **Austin Peay Governors** | Central Arkansas | 85.0% |
-| 7 | **South Florida** | Rice | 85.0% |
-| 8 | **East Carolina** | UTSA | 85.0% |
-| 9 | **South Alabama** | UL Monroe Warhawks | 85.0% |
-| 10 | **Belmont** | Evansville Purple Aces | 85.0% |
-| 11 | **Wisconsin** | Oregon Ducks | 85.0% |
-| 12 | **Saint Mary's** | Santa Clara | 85.0% |
-| 13 | **California** | SMU | 85.0% |
-| 14 | **Gonzaga** | Portland | 85.0% |
-| 15 | **Creighton** | DePaul Blue | 85.0% |
-| 16 | **Colgate** | Lafayette | 82.1% |
-| 17 | **Northern Iowa** | Illinois State | 82.1% |
-| 18 | **Villanova** | Butler | 82.1% |
-| 19 | **Arkansas** | Texas A&M | 82.1% |
-| 20 | **San Diego State** | Utah State | 82.1% |
-| 21 | **American University** | Lehigh Mountain | 82.1% |
-| 22 | **Providence** | Xavier | 82.1% |
-| 23 | **Davidson** | Duquesne | 80.2% |
-| 24 | **Wake Forest** | Boston College | 80.2% |
-| 25 | **Northern Kentucky Norse** | Cleveland State | 80.2% |
-| 26 | **Tulsa Golden Hurricane** | Tulane Green Wave | 80.2% |
+| 1 | **UMBC** | Bryant | 85.0% |
+| 2 | **Long Island University** | Chicago State | 85.0% |
+| 3 | **UNC Asheville** | Gardner-Webb Runnin' | 85.0% |
+| 4 | **UNC Greensboro** | Chattanooga Mocs | 85.0% |
+| 5 | **Florida Gulf Coast** | North Florida Ospreys | 85.0% |
+| 6 | **UNC Wilmington Seahawks** | North Carolina A&T | 85.0% |
+| 7 | **William & Mary** | Northeastern | 85.0% |
+| 8 | **Liberty** | Kennesaw State | 85.0% |
+| 9 | **Montana** | Sacramento State | 85.0% |
+| 10 | **Utah Tech** | Abilene Christian | 85.0% |
+| 11 | **Idaho** | Northern Arizona | 85.0% |
+| 12 | **Sam Houston State** | Florida International | 85.0% |
+| 13 | **Utah Valley** | Tarleton | 85.0% |
+| 14 | **Samford** | VMI | 85.0% |
+| 15 | **South Dakota State Jackrabbits** | Kansas City Roos | 85.0% |
+| 16 | **California Baptist** | UT Arlington | 85.0% |
+| 17 | **UC Santa Barbara** | UC Riverside | 85.0% |
+| 18 | **Drexel** | Campbell Fighting | 83.4% |
+| 19 | **Louisiana Tech** | Missouri State | 83.4% |
+| 20 | **Stonehill** | Saint Francis | 83.4% |
+| 21 | **Radford** | South Carolina Upstate | 83.4% |
+| 22 | **Le Moyne** | Fairleigh Dickinson | 83.4% |
+| 23 | **Vermont** | UMass Lowell River | 83.4% |
+| 24 | **Montana State** | Portland State | 83.4% |
+| 25 | **SIU Edwardsville** | Western Illinois | 83.4% |
+| 26 | **Middle Tennessee** | UTEP | 83.4% |
+| 27 | **UT Martin** | Tennessee Tech | 83.4% |
+| 28 | **Southern** | Florida A&M Rattlers | 80.7% |
+| 29 | **Jacksonville** | Stetson | 80.7% |
+| 30 | **Winthrop** | Charleston Southern | 78.6% |
+| 31 | **Denver Pioneers** | Oral Roberts | 73.0% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Boston University** | Holy Cross | 64.2% |
-| 2 | **Western Carolina** | Mercer | 64.2% |
-| 3 | **Eastern Kentucky Colonels** | Queens University | 64.2% |
-| 4 | **Valparaiso Beacons** | Drake | 64.2% |
-| 5 | **Stanford Cardinal** | Pittsburgh | 64.2% |
-| 6 | **Colorado** | Kansas State | 64.2% |
-| 7 | **Iowa** | Ohio State | 64.2% |
+| 1 | **Central Connecticut** | Mercyhurst | 69.3% |
+| 2 | **Monmouth** | Stony Brook | 69.3% |
+| 3 | **Western Kentucky** | New Mexico State | 69.3% |
+| 4 | **Prairie View A&M** | Jackson State | 69.3% |
+| 5 | **Lindenwood** | Eastern Illinois | 69.3% |
+| 6 | **Texas Southern** | Alcorn State | 69.3% |
+| 7 | **North Dakota State** | St. Thomas-Minnesota Tommies | 68.5% |
+| 8 | **Purdue** | Michigan State | 62.3% |
+| 9 | **Grambling State** | Bethune-Cookman | 62.3% |
+| 10 | **Towson** | Elon | 62.3% |
+| 11 | **Memphis** | Wichita State | 62.3% |
+| 12 | **Cal Poly** | Long Beach State Beach | 62.3% |
+| 13 | **Cal State Northridge** | UC Irvine | 62.3% |
+| 14 | **UC San Diego Tritons** | Cal State Bakersfield | 62.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Morgan State @ South Carolina State | 54.7% | Toss-Up |
-| 2 | Georgia @ Vanderbilt | 54.7% | Toss-Up |
-| 3 | George Mason @ Saint Joseph's | 54.7% | Toss-Up |
-| 4 | Lipscomb @ West Georgia | 54.7% | Toss-Up |
-| 5 | UNLV @ Grand Canyon Lopes | 54.7% | Toss-Up |
-| 6 | LSU @ Ole Miss | 54.7% | Toss-Up |
-| 7 | Texas Longhorns vs Florida | 58.3% | Close |
-| 8 | Purdue Fort Wayne vs Wright State | 58.3% | Close |
+| 1 | UC Davis vs Hawai'i Rainbow | 50.4% | Toss-Up |
+| 2 | Jacksonville State vs Delaware Blue Hens | 50.4% | Toss-Up |
+| 3 | New Hampshire @ Binghamton | 54.0% | Toss-Up |
+| 4 | Maine Black @ UAlbany Great Danes | 54.0% | Toss-Up |
+| 5 | Northern Colorado @ Eastern Washington | 54.0% | Toss-Up |
+| 6 | Southeast Missouri State vs Tennessee State | 56.0% | Close |
+| 7 | St. Bonaventure vs Rhode Island | 56.0% | Close |
+| 8 | Hampton vs Charleston | 56.9% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 36
-- Away Teams Favored: 18
+- Home Teams Favored: 40
+- Away Teams Favored: 17
 - Max Confidence: 85.0%
-- Min Confidence: 54.7%
+- Min Confidence: 50.4%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (409 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (401 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
