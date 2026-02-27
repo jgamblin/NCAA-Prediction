@@ -85,4 +85,4 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add data/*.csv data/*.md data/ncaa_predictions.duckdb predictions.md performance.md docs/performance/*.png || true
         git add frontend/public/data/*.json || true
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update predictions and stats for $(date +'%Y-%m-%d')" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update predictions and stats for $(date +'%Y-%m-%d')" && git pull --rebase && git push)
