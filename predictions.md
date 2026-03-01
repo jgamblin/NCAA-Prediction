@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-02-28 06:29:58 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `94f2c77`
+**Last Updated**: 2026-03-01 06:30:31 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `50d179e`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 143
-- **Average Confidence**: 73.3%
-- **High (≥70%)**: 81 · **Medium (60-70%)**: 14 · **Other (<60%)**: 48
+- **Games Predicted Today**: 23
+- **Average Confidence**: 72.7%
+- **High (≥70%)**: 16 · **Medium (60-70%)**: 2 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,130 +30,52 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Houston** | Colorado | 85.0% |
-| 2 | **UConn** | Seton Hall | 85.0% |
-| 3 | **Iowa** | Penn State | 85.0% |
-| 4 | **Virginia Commonwealth** | Fordham | 85.0% |
-| 5 | **NC State** | Notre Dame | 85.0% |
-| 6 | **Army** | Army Black | 85.0% |
-| 7 | **Middle Tennessee** | New Mexico State | 85.0% |
-| 8 | **Long Island University** | Fairleigh Dickinson | 85.0% |
-| 9 | **Central Connecticut** | Saint Francis | 85.0% |
-| 10 | **Cincinnati** | Oklahoma State | 85.0% |
-| 11 | **George Mason** | St. Bonaventure | 85.0% |
-| 12 | **Purdue Fort Wayne** | IU Indianapolis | 85.0% |
-| 13 | **Towson** | Campbell Fighting | 85.0% |
-| 14 | **Buffalo** | Central Michigan | 85.0% |
-| 15 | **Miami (FL)** | Boston College | 85.0% |
-| 16 | **UNC Asheville** | Charleston Southern | 85.0% |
-| 17 | **South Carolina Upstate** | Gardner-Webb Runnin' | 85.0% |
-| 18 | **Auburn** | Ole Miss | 85.0% |
-| 19 | **California Baptist** | Tarleton | 85.0% |
-| 20 | **Saint Mary's** | Gonzaga | 85.0% |
-| 21 | **Saint Louis** | Duquesne | 85.0% |
-| 22 | **UCF** | Baylor | 85.0% |
-| 23 | **Central Arkansas** | Queens University | 85.0% |
-| 24 | **Chattanooga Mocs** | VMI | 85.0% |
-| 25 | **Wofford** | The Citadel | 85.0% |
-| 26 | **Western Kentucky** | UTEP | 85.0% |
-| 27 | **Louisiana Tech** | Florida International | 85.0% |
-| 28 | **Arizona State** | Utah | 85.0% |
-| 29 | **Montana State** | Sacramento State | 85.0% |
-| 30 | **Nebraska Cornhuskers** | USC | 85.0% |
-| 31 | **Iowa State** | Texas Tech | 85.0% |
-| 32 | **Arizona** | Kansas | 85.0% |
-| 33 | **Georgia** | South Carolina Gamecocks | 85.0% |
-| 34 | **Hampton** | Northeastern | 85.0% |
-| 35 | **Nicholls State** | SE Louisiana | 85.0% |
-| 36 | **Navy** | Colgate | 85.0% |
-| 37 | **Ohio** | Toledo | 85.0% |
-| 38 | **Wyoming** | Air Force | 85.0% |
-| 39 | **Portland** | San Diego Toreros | 85.0% |
-| 40 | **California** | Pittsburgh | 85.0% |
-| 41 | **Winthrop** | Presbyterian | 85.0% |
-| 42 | **Eastern Washington** | Northern Arizona | 85.0% |
-| 43 | **Texas A&M** | Texas Longhorns | 85.0% |
-| 44 | **Lindenwood** | Western Illinois | 85.0% |
-| 45 | **Stephen F. Austin** | Houston Christian | 85.0% |
-| 46 | **Mercer** | East Tennessee State | 85.0% |
-| 47 | **Norfolk State** | Coppin State | 85.0% |
-| 48 | **Maryland-Eastern Shore** | South Carolina State | 85.0% |
-| 49 | **Utah Valley** | Abilene Christian | 85.0% |
-| 50 | **UC Irvine** | UC Santa Barbara | 85.0% |
-| 51 | **North Carolina** | Virginia Tech | 85.0% |
-| 52 | **St. Thomas-Minnesota Tommies** | Omaha | 85.0% |
-| 53 | **Kansas City Roos** | Oral Roberts | 85.0% |
-| 54 | **McNeese** | New Orleans | 85.0% |
-| 55 | **Florida** | Arkansas | 85.0% |
-| 56 | **Kennesaw State** | Delaware Blue Hens | 85.0% |
-| 57 | **Alabama A%26M** | Alabama State | 85.0% |
-| 58 | **Yale** | Columbia | 85.0% |
-| 59 | **Stanford Cardinal** | SMU | 85.0% |
-| 60 | **Furman** | Western Carolina | 85.0% |
-| 61 | **Sam Houston State** | Missouri State | 85.0% |
-| 62 | **Arkansas-Pine Bluff** | Mississippi Valley State | 85.0% |
-| 63 | **Hofstra Pride** | Stony Brook | 85.0% |
-| 64 | **Liberty** | Jacksonville State | 85.0% |
-| 65 | **Boise State** | Fresno State | 83.3% |
-| 66 | **Wright State** | Northern Kentucky Norse | 83.3% |
-| 67 | **Austin Peay Governors** | Bellarmine | 83.3% |
-| 68 | **Robert Morris** | Cleveland State | 82.8% |
-| 69 | **Xavier** | Georgetown Hoyas | 82.8% |
-| 70 | **Creighton** | Providence | 82.8% |
-| 71 | **Saint Joseph's** | Rhode Island | 81.0% |
-| 72 | **Colorado State** | San Jose State | 81.0% |
-| 73 | **Florida State** | Georgia Tech | 80.5% |
-| 74 | **Washington State** | Pepperdine | 80.5% |
-| 75 | **Maine** | Maine Black | 80.5% |
-| 76 | **Valparaiso Beacons** | Evansville Purple Aces | 80.5% |
-| 77 | **Richmond** | Loyola Chicago | 80.5% |
-| 78 | **American University** | Boston University | 73.1% |
-| 79 | **UAlbany Great Danes** | New Hampshire | 73.1% |
-| 80 | **Stonehill** | Mercyhurst | 73.1% |
-| 81 | **SIU Edwardsville** | Eastern Illinois | 73.1% |
+| 1 | **Davidson** | La Salle | 85.0% |
+| 2 | **Quinnipiac** | Canisius Golden Griffins | 85.0% |
+| 3 | **Bradley** | Murray State | 85.0% |
+| 4 | **Purdue** | Ohio State | 85.0% |
+| 5 | **Siena Saints** | Rider | 85.0% |
+| 6 | **Wichita State** | UTSA | 85.0% |
+| 7 | **Southern Illinois** | Evansville Purple Aces | 85.0% |
+| 8 | **Marist Red Foxes** | Saint Peter's | 85.0% |
+| 9 | **North Texas** | UAB | 84.0% |
+| 10 | **Memphis** | East Carolina | 78.1% |
+| 11 | **Michigan State** | Indiana | 78.1% |
+| 12 | **Merrimack** | Niagara Purple | 78.1% |
+| 13 | **Northern Iowa** | Drake | 75.2% |
+| 14 | **Maryland** | Rutgers | 70.3% |
+| 15 | **Fairfield** | Mount St. Mary's | 70.3% |
+| 16 | **Marquette** | DePaul Blue | 70.3% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Wisconsin** | Washington | 66.6% |
-| 2 | **Massachusetts** | Bowling Green | 66.6% |
-| 3 | **Cal State Northridge** | UC Riverside | 66.6% |
-| 4 | **Portland State** | Montana | 66.6% |
-| 5 | **Clemson** | Louisville | 63.6% |
-| 6 | **Holy Cross** | Loyola Maryland | 63.6% |
-| 7 | **UC San Diego Tritons** | Cal Poly | 63.6% |
-| 8 | **Lehigh Mountain** | Bucknell | 63.6% |
-| 9 | **Santa Clara** | Oregon State | 63.6% |
-| 10 | **Southeast Missouri State** | Tennessee Tech | 63.6% |
-| 11 | **Utah State** | Grand Canyon Lopes | 63.6% |
-| 12 | **Howard** | Morgan State | 61.5% |
-| 13 | **Utah Tech** | Southern Utah Thunderbirds | 61.5% |
-| 14 | **Prairie View A&M** | Alcorn State | 60.6% |
+| 1 | **UIC** | Indiana State | 60.1% |
+| 2 | **Belmont** | Illinois State | 60.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Le Moyne @ New Haven Chargers | 52.1% | Toss-Up |
-| 2 | North Alabama @ West Georgia | 52.1% | Toss-Up |
-| 3 | San Diego State @ New Mexico | 52.1% | Toss-Up |
-| 4 | Oregon Ducks @ Northwestern | 52.1% | Toss-Up |
-| 5 | South Dakota State Jackrabbits @ South Dakota | 52.1% | Toss-Up |
-| 6 | Dartmouth Big Green @ Princeton | 52.1% | Toss-Up |
-| 7 | TCU Horned Frogs @ Kansas State | 52.1% | Toss-Up |
-| 8 | Weber State @ Idaho State Bengals | 52.1% | Toss-Up |
+| 1 | Tulane Green Wave @ South Florida | 53.4% | Toss-Up |
+| 2 | Rice @ Temple | 53.4% | Toss-Up |
+| 3 | Charlotte @ Florida Atlantic | 53.4% | Toss-Up |
+| 4 | Manhattan vs Iona | 54.0% | Toss-Up |
+| 5 | UNC Wilmington Seahawks vs Charleston | 54.0% | Toss-Up |
+| 6 | Indiana State vs UIC | 60.1% |  |
+| 7 | Illinois State vs Belmont | 60.1% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 106
-- Away Teams Favored: 37
+- Home Teams Favored: 10
+- Away Teams Favored: 13
 - Max Confidence: 85.0%
-- Min Confidence: 52.1%
+- Min Confidence: 53.4%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (452 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (341 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
