@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-01 06:30:31 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `50d179e`
+**Last Updated**: 2026-03-02 06:34:04 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `4396bcd`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 23
-- **Average Confidence**: 72.7%
-- **High (≥70%)**: 16 · **Medium (60-70%)**: 2 · **Other (<60%)**: 5
+- **Games Predicted Today**: 18
+- **Average Confidence**: 72.5%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 2 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,52 +30,45 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Davidson** | La Salle | 85.0% |
-| 2 | **Quinnipiac** | Canisius Golden Griffins | 85.0% |
-| 3 | **Bradley** | Murray State | 85.0% |
-| 4 | **Purdue** | Ohio State | 85.0% |
-| 5 | **Siena Saints** | Rider | 85.0% |
-| 6 | **Wichita State** | UTSA | 85.0% |
-| 7 | **Southern Illinois** | Evansville Purple Aces | 85.0% |
-| 8 | **Marist Red Foxes** | Saint Peter's | 85.0% |
-| 9 | **North Texas** | UAB | 84.0% |
-| 10 | **Memphis** | East Carolina | 78.1% |
-| 11 | **Michigan State** | Indiana | 78.1% |
-| 12 | **Merrimack** | Niagara Purple | 78.1% |
-| 13 | **Northern Iowa** | Drake | 75.2% |
-| 14 | **Maryland** | Rutgers | 70.3% |
-| 15 | **Fairfield** | Mount St. Mary's | 70.3% |
-| 16 | **Marquette** | DePaul Blue | 70.3% |
+| 1 | **Duke** | NC State | 85.0% |
+| 2 | **Maryland-Eastern Shore** | North Carolina Central | 85.0% |
+| 3 | **Howard** | Coppin State | 85.0% |
+| 4 | **UT Rio Grande Valley Vaqueros** | Northwestern State | 85.0% |
+| 5 | **Stephen F. Austin** | Incarnate Word | 85.0% |
+| 6 | **Montana State** | Northern Arizona | 77.1% |
+| 7 | **Cleveland State** | IU Indianapolis | 76.3% |
+| 8 | **Sacramento State** | Idaho State Bengals | 76.3% |
+| 9 | **Arizona** | Iowa State | 76.3% |
+| 10 | **New Orleans** | SE Louisiana | 75.3% |
+| 11 | **McNeese** | Nicholls State | 73.4% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **UIC** | Indiana State | 60.1% |
-| 2 | **Belmont** | Illinois State | 60.1% |
+| 1 | **Northern Colorado** | Montana | 66.7% |
+| 2 | **Norfolk State** | Morgan State | 65.6% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tulane Green Wave @ South Florida | 53.4% | Toss-Up |
-| 2 | Rice @ Temple | 53.4% | Toss-Up |
-| 3 | Charlotte @ Florida Atlantic | 53.4% | Toss-Up |
-| 4 | Manhattan vs Iona | 54.0% | Toss-Up |
-| 5 | UNC Wilmington Seahawks vs Charleston | 54.0% | Toss-Up |
-| 6 | Indiana State vs UIC | 60.1% |  |
-| 7 | Illinois State vs Belmont | 60.1% |  |
+| 1 | Houston Christian vs Lamar | 55.8% | Close |
+| 2 | South Carolina State @ Delaware State | 59.4% | Close |
+| 3 | East Texas A&M @ Texas A&M-Corpus Christi | 59.4% | Close |
+| 4 | Idaho @ Eastern Washington | 59.4% | Close |
+| 5 | Weber State @ Portland State | 59.4% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 10
-- Away Teams Favored: 13
+- Home Teams Favored: 12
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
-- Min Confidence: 53.4%
+- Min Confidence: 55.8%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (341 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (332 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
