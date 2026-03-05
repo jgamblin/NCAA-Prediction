@@ -1,11 +1,11 @@
 [
   {
-    "id": 68,
-    "date": "2026-03-04T00:00:00",
+    "id": 69,
+    "date": "2026-03-05T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.788194417953491,
-    "potential_payout": 27.88194465637207,
+    "combined_odds": 2.7567567825317383,
+    "potential_payout": 27.567567825317383,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401851454",
+        "bet_team": "Iona",
+        "opponent": "Sacred Heart Pioneers",
+        "moneyline": -155,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Iona",
+        "away_team": "Sacred Heart Pioneers",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401851486",
+        "bet_team": "Valparaiso Beacons",
+        "opponent": "Indiana State",
+        "moneyline": -148,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Valparaiso Beacons",
+        "away_team": "Indiana State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "date": "2026-03-04T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.788194417953491,
+    "potential_payout": 27.88194465637207,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-03-05T12:36:49.621954",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401851241",
         "bet_team": "Eastern Kentucky Colonels",
         "opponent": "Stetson",
         "moneyline": -192,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Stetson",
         "home_team": "Eastern Kentucky Colonels",
         "away_team": "Stetson",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 76,
+        "away_score": 92,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Charlotte",
         "moneyline": -120,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UAB",
         "home_team": "Charlotte",
         "away_team": "UAB",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 74,
+        "away_score": 80,
+        "game_status": "Final"
       }
     ]
   },
