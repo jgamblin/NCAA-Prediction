@@ -1,11 +1,11 @@
 [
   {
-    "id": 71,
-    "date": "2026-03-07T00:00:00",
+    "id": 72,
+    "date": "2026-03-08T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.215944766998291,
-    "potential_payout": 32.159446716308594,
+    "combined_odds": 2.612903118133545,
+    "potential_payout": 26.129032135009766,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401851251",
+        "bet_team": "Central Arkansas",
+        "opponent": "Queens University",
+        "moneyline": -155,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Central Arkansas",
+        "away_team": "Queens University",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401851465",
+        "bet_team": "Merrimack",
+        "opponent": "Marist Red Foxes",
+        "moneyline": -170,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Merrimack",
+        "away_team": "Marist Red Foxes",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "date": "2026-03-07T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.215944766998291,
+    "potential_payout": 32.159446716308594,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-03-08T12:32:18.132254",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401820790",
         "bet_team": "Miami (FL)",
         "opponent": "Louisville",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Louisville",
         "home_team": "Miami (FL)",
         "away_team": "Louisville",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 89,
+        "away_score": 92,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Cincinnati",
         "moneyline": -135,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "TCU Horned Frogs",
         "home_team": "TCU Horned Frogs",
         "away_team": "Cincinnati",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 73,
+        "away_score": 63,
+        "game_status": "Final"
       }
     ]
   },
