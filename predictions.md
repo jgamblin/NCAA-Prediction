@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-08 07:32:18 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `88130d3`
+**Last Updated**: 2026-03-09 07:34:59 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `00f89b6`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 32
-- **Average Confidence**: 68.9%
-- **High (≥70%)**: 15 · **Medium (60-70%)**: 2 · **Other (<60%)**: 15
+- **Games Predicted Today**: 14
+- **Average Confidence**: 67.5%
+- **High (≥70%)**: 5 · **Medium (60-70%)**: 4 · **Other (<60%)**: 5
 
 ### 🏅 Pick Streaks
 
@@ -30,52 +30,44 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Navy** | Boston University | 85.0% |
-| 2 | **Illinois** | Illinois Fighting | 85.0% |
-| 3 | **Central Arkansas** | Queens University | 85.0% |
-| 4 | **Portland State** | Idaho State Bengals | 85.0% |
-| 5 | **Merrimack** | Marist Red Foxes | 85.0% |
-| 6 | **Nebraska Cornhuskers** | Iowa | 85.0% |
-| 7 | **East Carolina** | UAB | 85.0% |
-| 8 | **Montana State** | Idaho | 85.0% |
-| 9 | **Hofstra Pride** | William & Mary | 85.0% |
-| 10 | **Santa Clara** | Pacific | 85.0% |
-| 11 | **South Florida** | Charlotte | 83.8% |
-| 12 | **UNC Wilmington Seahawks** | Campbell Fighting | 83.8% |
-| 13 | **Rice** | UTSA | 83.8% |
-| 14 | **Charleston** | Towson | 83.8% |
-| 15 | **Northern Iowa** | UIC | 80.8% |
+| 1 | **New Orleans** | Texas A&M-Corpus Christi | 85.0% |
+| 2 | **Grambling State** | Mississippi Valley State | 85.0% |
+| 3 | **Gonzaga** | Oregon State | 85.0% |
+| 4 | **Saint Mary's** | Santa Clara | 85.0% |
+| 5 | **Hofstra Pride** | Towson | 82.3% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Rutgers** | Penn State | 62.4% |
-| 2 | **Monmouth** | Drexel | 62.4% |
+| 1 | **Furman** | East Tennessee State | 63.7% |
+| 2 | **Nicholls State** | UT Rio Grande Valley Vaqueros | 63.7% |
+| 3 | **Detroit Mercy** | Robert Morris | 63.7% |
+| 4 | **Weber State** | Eastern Washington | 63.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Colgate @ Lehigh Mountain | 54.3% | Toss-Up |
-| 2 | Winthrop @ High Point | 54.3% | Toss-Up |
-| 3 | Memphis @ Tulane Green Wave | 54.3% | Toss-Up |
-| 4 | Temple @ Tulsa Golden Hurricane | 54.3% | Toss-Up |
-| 5 | Western Carolina @ East Tennessee State | 54.3% | Toss-Up |
-| 6 | Northern Kentucky Norse @ Green Bay | 54.3% | Toss-Up |
-| 7 | Southern Miss @ Troy | 54.3% | Toss-Up |
-| 8 | Michigan State @ Michigan | 54.3% | Toss-Up |
+| 1 | Alabama State vs Alcorn State | 50.1% | Toss-Up |
+| 2 | Georgia Southern @ Troy | 52.3% | Toss-Up |
+| 3 | Northern Colorado @ Montana | 52.8% | Toss-Up |
+| 4 | Wright State vs Northern Kentucky Norse | 55.6% | Close |
+| 5 | Campbell Fighting @ Monmouth | 57.8% | Close |
+| 6 | East Tennessee State vs Furman | 63.7% |  |
+| 7 | UT Rio Grande Valley Vaqueros vs Nicholls State | 63.7% |  |
+| 8 | Robert Morris vs Detroit Mercy | 63.7% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 29
-- Away Teams Favored: 3
+- Home Teams Favored: 7
+- Away Teams Favored: 7
 - Max Confidence: 85.0%
-- Min Confidence: 54.3%
+- Min Confidence: 50.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (212 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (180 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
