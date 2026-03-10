@@ -576,81 +576,66 @@ def export_to_json(output_dir: Path = None):
         conference_map = {}
     
     # Get all teams from games this season (use CANONICAL names)
-    # Note: Using f-string for season value instead of ? params to avoid
-    # DuckDB type resolution bugs with parameterized UNION ALL queries
-    all_teams_query = f"""
-        WITH team_games AS (
-            SELECT 
-                team_name,
-                SUM(games) as games_played,
-                SUM(wins) as wins
-            FROM (
-                SELECT home_team as team_name, COUNT(*) as games, 
-                       SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = '{current_season}' AND game_status = 'Final'
-                GROUP BY home_team
-                UNION ALL
-                SELECT away_team as team_name, COUNT(*) as games,
-                       SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = '{current_season}' AND game_status = 'Final'
-                GROUP BY away_team
-            )
-            GROUP BY team_name
-        ),
-        team_predictions AS (
-            SELECT 
-                team_name,
-                COUNT(DISTINCT game_id) as predictions_made,
-                SUM(correct) as correct_predictions,
-                AVG(confidence) as avg_confidence
-            FROM (
-                -- Predictions for home games
-                SELECT 
-                    g.home_team as team_name,
-                    p.game_id,
-                    p.confidence,
-                    CASE 
-                        WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
-                        THEN 1 ELSE 0 
-                    END as correct
-                FROM predictions p
-                JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = '{current_season}'
-                
-                UNION ALL
-                
-                -- Predictions for away games
-                SELECT 
-                    g.away_team as team_name,
-                    p.game_id,
-                    p.confidence,
-                    CASE 
-                        WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
-                        THEN 1 ELSE 0 
-                    END as correct
-                FROM predictions p
-                JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = '{current_season}'
-            )
-            GROUP BY team_name
-        )
-        SELECT 
-            tg.team_name as display_name,
-            tg.games_played,
-            tg.wins,
-            COALESCE(tp.predictions_made, 0) as predictions_made,
-            COALESCE(tp.correct_predictions, 0) as correct_predictions,
-            COALESCE(tp.avg_confidence, 0.0) as avg_confidence
-        FROM team_games tg
-        LEFT JOIN team_predictions tp ON tg.team_name = tp.team_name
-        ORDER BY tg.team_name
-    """
+    # Note: Separate queries instead of UNION ALL to avoid DuckDB internal
+    # type resolution bug with score columns across UNION branches
     
-    all_teams_df = db.fetch_df(all_teams_query)
+    home_games_df = db.fetch_df(f"""
+        SELECT home_team as team_name, COUNT(*) as games, 
+               SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
+        FROM games WHERE season = '{current_season}' AND game_status = 'Final'
+        GROUP BY home_team
+    """)
+    away_games_df = db.fetch_df(f"""
+        SELECT away_team as team_name, COUNT(*) as games,
+               SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
+        FROM games WHERE season = '{current_season}' AND game_status = 'Final'
+        GROUP BY away_team
+    """)
+    team_games_df = pd.concat([home_games_df, away_games_df]).groupby('team_name', as_index=False).agg(
+        {'games': 'sum', 'wins': 'sum'}
+    )
+    team_games_df.columns = ['team_name', 'games_played', 'wins']
+    
+    home_preds_df = db.fetch_df(f"""
+        SELECT 
+            g.home_team as team_name,
+            p.game_id,
+            p.confidence,
+            CASE 
+                WHEN g.game_status = 'Final' 
+                AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                     OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                THEN 1 ELSE 0 
+            END as correct
+        FROM predictions p
+        JOIN games g ON p.game_id = g.game_id
+        WHERE g.season = '{current_season}'
+    """)
+    away_preds_df = db.fetch_df(f"""
+        SELECT 
+            g.away_team as team_name,
+            p.game_id,
+            p.confidence,
+            CASE 
+                WHEN g.game_status = 'Final' 
+                AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                     OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                THEN 1 ELSE 0 
+            END as correct
+        FROM predictions p
+        JOIN games g ON p.game_id = g.game_id
+        WHERE g.season = '{current_season}'
+    """)
+    all_preds = pd.concat([home_preds_df, away_preds_df])
+    team_preds_df = all_preds.groupby('team_name', as_index=False).agg(
+        predictions_made=('game_id', 'nunique'),
+        correct_predictions=('correct', 'sum'),
+        avg_confidence=('confidence', 'mean')
+    )
+    
+    all_teams_df = team_games_df.merge(team_preds_df, on='team_name', how='left').fillna({
+        'predictions_made': 0, 'correct_predictions': 0, 'avg_confidence': 0.0
+    }).sort_values('team_name')
     
     all_teams_data = []
     for _, row in all_teams_df.iterrows():
@@ -662,7 +647,7 @@ def export_to_json(output_dir: Path = None):
         prediction_accuracy = (row['correct_predictions'] / row['predictions_made']) if row['predictions_made'] > 0 else 0.0
         
         team_data = {
-            'display_name': row['display_name'],
+            'display_name': row['team_name'],
             'games_played': int(row['games_played']),
             'wins': int(row['wins']),
             'losses': int(losses),
@@ -671,7 +656,7 @@ def export_to_json(output_dir: Path = None):
             'correct_predictions': int(row['correct_predictions']),
             'prediction_accuracy': float(prediction_accuracy),
             'avg_confidence': float(row['avg_confidence']),
-            'conference': conference_map.get(row['display_name'], '')
+            'conference': conference_map.get(row['team_name'], '')
         }
         all_teams_data.append(team_data)
     
