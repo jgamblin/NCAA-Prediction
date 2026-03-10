@@ -499,18 +499,18 @@ def export_to_json(output_dir: Path = None):
             FROM (
                 SELECT 
                     home_team as team,
-                    SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins,
-                    SUM(CASE WHEN home_score < away_score THEN 1 ELSE 0 END) as losses
+                    SUM(CASE WHEN CAST(home_score AS INTEGER) > CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN CAST(home_score AS INTEGER) < CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as losses
                 FROM games
-                WHERE season = ? AND game_status = 'Final' AND date <= ?
+                WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final' AND date <= ?
                 GROUP BY home_team
                 UNION ALL
                 SELECT 
                     away_team as team,
-                    SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins,
-                    SUM(CASE WHEN away_score < home_score THEN 1 ELSE 0 END) as losses
+                    SUM(CASE WHEN CAST(away_score AS INTEGER) > CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN CAST(away_score AS INTEGER) < CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as losses
                 FROM games
-                WHERE season = ? AND game_status = 'Final' AND date <= ?
+                WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final' AND date <= ?
                 GROUP BY away_team
             )
             GROUP BY team
@@ -584,13 +584,13 @@ def export_to_json(output_dir: Path = None):
                 SUM(wins) as wins
             FROM (
                 SELECT home_team as team_name, COUNT(*) as games, 
-                       SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = ? AND game_status = 'Final'
+                       SUM(CASE WHEN CAST(home_score AS INTEGER) > CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final'
                 GROUP BY home_team
                 UNION ALL
                 SELECT away_team as team_name, COUNT(*) as games,
-                       SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = ? AND game_status = 'Final'
+                       SUM(CASE WHEN CAST(away_score AS INTEGER) > CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final'
                 GROUP BY away_team
             )
             GROUP BY team_name
@@ -609,13 +609,13 @@ def export_to_json(output_dir: Path = None):
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                        AND ((p.predicted_winner = g.home_team AND CAST(g.home_score AS INTEGER) > CAST(g.away_score AS INTEGER))
+                             OR (p.predicted_winner = g.away_team AND CAST(g.away_score AS INTEGER) > CAST(g.home_score AS INTEGER)))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
                 JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = ?
+                WHERE g.season = CAST(? AS VARCHAR)
                 
                 UNION ALL
                 
@@ -626,13 +626,13 @@ def export_to_json(output_dir: Path = None):
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
-                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
+                        AND ((p.predicted_winner = g.home_team AND CAST(g.home_score AS INTEGER) > CAST(g.away_score AS INTEGER))
+                             OR (p.predicted_winner = g.away_team AND CAST(g.away_score AS INTEGER) > CAST(g.home_score AS INTEGER)))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
                 JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = ?
+                WHERE g.season = CAST(? AS VARCHAR)
             )
             GROUP BY team_name
         )
