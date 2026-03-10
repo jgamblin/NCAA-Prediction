@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-09 07:34:59 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `00f89b6`
+**Last Updated**: 2026-03-10 09:43:50 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `726a68f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 14
-- **Average Confidence**: 67.5%
-- **High (≥70%)**: 5 · **Medium (60-70%)**: 4 · **Other (<60%)**: 5
+- **Games Predicted Today**: 24
+- **Average Confidence**: 68.2%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 1 · **Other (<60%)**: 12
 
 ### 🏅 Pick Streaks
 
@@ -30,44 +30,47 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **New Orleans** | Texas A&M-Corpus Christi | 85.0% |
-| 2 | **Grambling State** | Mississippi Valley State | 85.0% |
-| 3 | **Gonzaga** | Oregon State | 85.0% |
-| 4 | **Saint Mary's** | Santa Clara | 85.0% |
-| 5 | **Hofstra Pride** | Towson | 82.3% |
+| 1 | **Cincinnati** | Utah | 85.0% |
+| 2 | **Southern Methodist** | Syracuse Orange | 85.0% |
+| 3 | **UMBC** | UMass Lowell River | 85.0% |
+| 4 | **Long Island University** | Mercyhurst | 85.0% |
+| 5 | **Brigham Young** | Kansas State | 85.0% |
+| 6 | **Virginia Tech** | Wake Forest | 85.0% |
+| 7 | **Gonzaga** | Santa Clara | 85.0% |
+| 8 | **McNeese** | UT Rio Grande Valley Vaqueros | 85.0% |
+| 9 | **Merrimack** | Siena Saints | 85.0% |
+| 10 | **Stephen F. Austin** | Texas A&M-Corpus Christi | 79.9% |
+| 11 | **Northwestern** | Penn State | 79.0% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Furman** | East Tennessee State | 63.7% |
-| 2 | **Nicholls State** | UT Rio Grande Valley Vaqueros | 63.7% |
-| 3 | **Detroit Mercy** | Robert Morris | 63.7% |
-| 4 | **Weber State** | Eastern Washington | 63.7% |
+| 1 | **Oklahoma State** | Colorado | 69.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Alabama State vs Alcorn State | 50.1% | Toss-Up |
-| 2 | Georgia Southern @ Troy | 52.3% | Toss-Up |
-| 3 | Northern Colorado @ Montana | 52.8% | Toss-Up |
-| 4 | Wright State vs Northern Kentucky Norse | 55.6% | Close |
-| 5 | Campbell Fighting @ Monmouth | 57.8% | Close |
-| 6 | East Tennessee State vs Furman | 63.7% |  |
-| 7 | UT Rio Grande Valley Vaqueros vs Nicholls State | 63.7% |  |
-| 8 | Robert Morris vs Detroit Mercy | 63.7% |  |
+| 1 | Baylor @ Arizona State | 52.2% | Toss-Up |
+| 2 | Alcorn State @ Prairie View A&M | 52.2% | Toss-Up |
+| 3 | Maryland @ Oregon Ducks | 52.2% | Toss-Up |
+| 4 | Monmouth @ Hofstra Pride | 52.2% | Toss-Up |
+| 5 | NJIT @ Vermont | 52.2% | Toss-Up |
+| 6 | Montana @ Portland State | 52.2% | Toss-Up |
+| 7 | New Mexico State @ Jacksonville State | 52.2% | Toss-Up |
+| 8 | Grambling @ Jackson State | 52.2% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 7
-- Away Teams Favored: 7
+- Home Teams Favored: 19
+- Away Teams Favored: 5
 - Max Confidence: 85.0%
-- Min Confidence: 50.1%
+- Min Confidence: 52.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (180 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (176 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

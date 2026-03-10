@@ -47,11 +47,11 @@
     "team_id": "Gonzaga",
     "display_name": "Gonzaga",
     "conference": null,
-    "predictions_made": 25,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.9599999785423279,
-    "avg_confidence": 0.832498950958252,
-    "team_wins": 28,
+    "predictions_made": 26,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.9615384340286255,
+    "avg_confidence": 0.833172069146083,
+    "team_wins": 29,
     "team_losses": 3
   },
   {
@@ -121,17 +121,6 @@
     "team_losses": 2
   },
   {
-    "team_id": "Saint Mary's",
-    "display_name": "Saint Mary's",
-    "conference": null,
-    "predictions_made": 24,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.9166666865348816,
-    "avg_confidence": 0.8067942634224892,
-    "team_wins": 27,
-    "team_losses": 4
-  },
-  {
     "team_id": "Wyoming",
     "display_name": "Wyoming",
     "conference": null,
@@ -165,17 +154,6 @@
     "team_losses": 4
   },
   {
-    "team_id": "Villanova",
-    "display_name": "Villanova",
-    "conference": null,
-    "predictions_made": 22,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.9090909361839294,
-    "avg_confidence": 0.8024361052296378,
-    "team_wins": 24,
-    "team_losses": 7
-  },
-  {
     "team_id": "Arizona",
     "display_name": "Arizona",
     "conference": null,
@@ -185,6 +163,17 @@
     "avg_confidence": 0.8151286840438843,
     "team_wins": 29,
     "team_losses": 2
+  },
+  {
+    "team_id": "Villanova",
+    "display_name": "Villanova",
+    "conference": null,
+    "predictions_made": 22,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.9090909361839294,
+    "avg_confidence": 0.8024361052296378,
+    "team_wins": 24,
+    "team_losses": 7
   },
   {
     "team_id": "Utah Valley",
@@ -231,6 +220,17 @@
     "team_losses": 4
   },
   {
+    "team_id": "Saint Mary's",
+    "display_name": "Saint Mary's",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.8085224938392639,
+    "team_wins": 27,
+    "team_losses": 5
+  },
+  {
     "team_id": "North Dakota State",
     "display_name": "North Dakota State",
     "conference": null,
@@ -249,7 +249,7 @@
     "correct_predictions": 14,
     "prediction_accuracy": 0.875,
     "avg_confidence": 0.7506190724670887,
-    "team_wins": 25,
+    "team_wins": 26,
     "team_losses": 7
   },
   {
@@ -275,6 +275,17 @@
     "team_losses": 5
   },
   {
+    "team_id": "UT Rio Grande Valley Vaqueros",
+    "display_name": "UT Rio Grande Valley Vaqueros",
+    "conference": null,
+    "predictions_made": 15,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8666666746139526,
+    "avg_confidence": 0.7524898727734883,
+    "team_wins": 19,
+    "team_losses": 13
+  },
+  {
     "team_id": "UAB",
     "display_name": "UAB",
     "conference": null,
@@ -284,17 +295,6 @@
     "avg_confidence": 0.7739067713419596,
     "team_wins": 20,
     "team_losses": 11
-  },
-  {
-    "team_id": "UT Rio Grande Valley Vaqueros",
-    "display_name": "UT Rio Grande Valley Vaqueros",
-    "conference": null,
-    "predictions_made": 15,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.7524898727734883,
-    "team_wins": 18,
-    "team_losses": 13
   },
   {
     "team_id": "Arkansas",
@@ -429,17 +429,6 @@
     "team_losses": 6
   },
   {
-    "team_id": "Merrimack",
-    "display_name": "Merrimack",
-    "conference": null,
-    "predictions_made": 18,
-    "correct_predictions": 15,
-    "prediction_accuracy": 0.8333333134651184,
-    "avg_confidence": 0.8056899077362485,
-    "team_wins": 23,
-    "team_losses": 10
-  },
-  {
     "team_id": "Louisville",
     "display_name": "Louisville",
     "conference": null,
@@ -449,6 +438,17 @@
     "avg_confidence": 0.764119158188502,
     "team_wins": 22,
     "team_losses": 9
+  },
+  {
+    "team_id": "Merrimack",
+    "display_name": "Merrimack",
+    "conference": null,
+    "predictions_made": 18,
+    "correct_predictions": 15,
+    "prediction_accuracy": 0.8333333134651184,
+    "avg_confidence": 0.8056899077362485,
+    "team_wins": 23,
+    "team_losses": 10
   },
   {
     "team_id": "UMBC",
@@ -473,17 +473,6 @@
     "team_losses": 14
   },
   {
-    "team_id": "Tulsa Golden Hurricane",
-    "display_name": "Tulsa Golden Hurricane",
-    "conference": null,
-    "predictions_made": 23,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.8260869383811951,
-    "avg_confidence": 0.7805759103401847,
-    "team_wins": 25,
-    "team_losses": 6
-  },
-  {
     "team_id": "Florida",
     "display_name": "Florida",
     "conference": null,
@@ -491,6 +480,17 @@
     "correct_predictions": 19,
     "prediction_accuracy": 0.8260869383811951,
     "avg_confidence": 0.7960375340088554,
+    "team_wins": 25,
+    "team_losses": 6
+  },
+  {
+    "team_id": "Tulsa Golden Hurricane",
+    "display_name": "Tulsa Golden Hurricane",
+    "conference": null,
+    "predictions_made": 23,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.8260869383811951,
+    "avg_confidence": 0.7805759103401847,
     "team_wins": 25,
     "team_losses": 6
   },
@@ -506,17 +506,6 @@
     "team_losses": 13
   },
   {
-    "team_id": "Kansas",
-    "display_name": "Kansas",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7523970113081091,
-    "team_wins": 22,
-    "team_losses": 9
-  },
-  {
     "team_id": "Portland State",
     "display_name": "Portland State",
     "conference": null,
@@ -526,6 +515,17 @@
     "avg_confidence": 0.7562964207985822,
     "team_wins": 20,
     "team_losses": 10
+  },
+  {
+    "team_id": "Kansas",
+    "display_name": "Kansas",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.7523970113081091,
+    "team_wins": 22,
+    "team_losses": 9
   },
   {
     "team_id": "Miami (FL)",
