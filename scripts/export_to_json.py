@@ -437,16 +437,18 @@ def export_to_json(output_dir: Path = None):
     today = datetime.now().date()
     
     # Get prediction accuracy for each team
-    team_accuracy_query = """
+    # Note: Using f-string for season/date values instead of ? params to avoid
+    # DuckDB type resolution bugs with parameterized UNION ALL queries
+    team_accuracy_query = f"""
         WITH first_predictions AS (
             SELECT 
                 p.game_id,
                 MIN(p.id) as first_prediction_id
             FROM predictions p
             JOIN games g ON p.game_id = g.game_id
-            WHERE g.season = ?
+            WHERE g.season = '{current_season}'
               AND g.game_status = 'Final'
-              AND g.date <= ?
+              AND g.date <= '{today}'
               AND p.predicted_winner IS NOT NULL
               AND g.home_score IS NOT NULL
               AND g.away_score IS NOT NULL
@@ -472,9 +474,9 @@ def export_to_json(output_dir: Path = None):
             FROM predictions p
             JOIN games g ON p.game_id = g.game_id
             JOIN first_predictions fp ON p.id = fp.first_prediction_id
-            WHERE g.season = ?
+            WHERE g.season = '{current_season}'
               AND g.game_status = 'Final'
-              AND g.date <= ?
+              AND g.date <= '{today}'
               AND p.predicted_winner IS NOT NULL
               AND g.home_score IS NOT NULL
               AND g.away_score IS NOT NULL
@@ -499,18 +501,18 @@ def export_to_json(output_dir: Path = None):
             FROM (
                 SELECT 
                     home_team as team,
-                    SUM(CASE WHEN CAST(home_score AS INTEGER) > CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as wins,
-                    SUM(CASE WHEN CAST(home_score AS INTEGER) < CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as losses
+                    SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN home_score < away_score THEN 1 ELSE 0 END) as losses
                 FROM games
-                WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final' AND date <= ?
+                WHERE season = '{current_season}' AND game_status = 'Final' AND date <= '{today}'
                 GROUP BY home_team
                 UNION ALL
                 SELECT 
                     away_team as team,
-                    SUM(CASE WHEN CAST(away_score AS INTEGER) > CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as wins,
-                    SUM(CASE WHEN CAST(away_score AS INTEGER) < CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as losses
+                    SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins,
+                    SUM(CASE WHEN away_score < home_score THEN 1 ELSE 0 END) as losses
                 FROM games
-                WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final' AND date <= ?
+                WHERE season = '{current_season}' AND game_status = 'Final' AND date <= '{today}'
                 GROUP BY away_team
             )
             GROUP BY team
@@ -529,9 +531,7 @@ def export_to_json(output_dir: Path = None):
         LIMIT 50
     """
     
-    top_teams_df = db.fetch_df(team_accuracy_query, (
-        current_season, today, current_season, today, current_season, today, current_season, today
-    ))
+    top_teams_df = db.fetch_df(team_accuracy_query)
     
     # Add display names and conferences from teams table
     teams_df = db.fetch_df("SELECT team_id, display_name, conference FROM teams")
@@ -576,7 +576,9 @@ def export_to_json(output_dir: Path = None):
         conference_map = {}
     
     # Get all teams from games this season (use CANONICAL names)
-    all_teams_query = """
+    # Note: Using f-string for season value instead of ? params to avoid
+    # DuckDB type resolution bugs with parameterized UNION ALL queries
+    all_teams_query = f"""
         WITH team_games AS (
             SELECT 
                 team_name,
@@ -584,13 +586,13 @@ def export_to_json(output_dir: Path = None):
                 SUM(wins) as wins
             FROM (
                 SELECT home_team as team_name, COUNT(*) as games, 
-                       SUM(CASE WHEN CAST(home_score AS INTEGER) > CAST(away_score AS INTEGER) THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final'
+                       SUM(CASE WHEN home_score > away_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = '{current_season}' AND game_status = 'Final'
                 GROUP BY home_team
                 UNION ALL
                 SELECT away_team as team_name, COUNT(*) as games,
-                       SUM(CASE WHEN CAST(away_score AS INTEGER) > CAST(home_score AS INTEGER) THEN 1 ELSE 0 END) as wins
-                FROM games WHERE season = CAST(? AS VARCHAR) AND game_status = 'Final'
+                       SUM(CASE WHEN away_score > home_score THEN 1 ELSE 0 END) as wins
+                FROM games WHERE season = '{current_season}' AND game_status = 'Final'
                 GROUP BY away_team
             )
             GROUP BY team_name
@@ -609,13 +611,13 @@ def export_to_json(output_dir: Path = None):
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND CAST(g.home_score AS INTEGER) > CAST(g.away_score AS INTEGER))
-                             OR (p.predicted_winner = g.away_team AND CAST(g.away_score AS INTEGER) > CAST(g.home_score AS INTEGER)))
+                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
                 JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = CAST(? AS VARCHAR)
+                WHERE g.season = '{current_season}'
                 
                 UNION ALL
                 
@@ -626,13 +628,13 @@ def export_to_json(output_dir: Path = None):
                     p.confidence,
                     CASE 
                         WHEN g.game_status = 'Final' 
-                        AND ((p.predicted_winner = g.home_team AND CAST(g.home_score AS INTEGER) > CAST(g.away_score AS INTEGER))
-                             OR (p.predicted_winner = g.away_team AND CAST(g.away_score AS INTEGER) > CAST(g.home_score AS INTEGER)))
+                        AND ((p.predicted_winner = g.home_team AND g.home_score > g.away_score)
+                             OR (p.predicted_winner = g.away_team AND g.away_score > g.home_score))
                         THEN 1 ELSE 0 
                     END as correct
                 FROM predictions p
                 JOIN games g ON p.game_id = g.game_id
-                WHERE g.season = CAST(? AS VARCHAR)
+                WHERE g.season = '{current_season}'
             )
             GROUP BY team_name
         )
@@ -648,7 +650,7 @@ def export_to_json(output_dir: Path = None):
         ORDER BY tg.team_name
     """
     
-    all_teams_df = db.fetch_df(all_teams_query, (current_season, current_season, current_season, current_season))
+    all_teams_df = db.fetch_df(all_teams_query)
     
     all_teams_data = []
     for _, row in all_teams_df.iterrows():
