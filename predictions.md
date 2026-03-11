@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-10 09:43:50 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `726a68f`
+**Last Updated**: 2026-03-11 07:34:46 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `61db4b8`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 24
-- **Average Confidence**: 68.2%
-- **High (≥70%)**: 11 · **Medium (60-70%)**: 1 · **Other (<60%)**: 12
+- **Games Predicted Today**: 38
+- **Average Confidence**: 70.9%
+- **High (≥70%)**: 22 · **Medium (60-70%)**: 4 · **Other (<60%)**: 12
 
 ### 🏅 Pick Streaks
 
@@ -30,47 +30,61 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Cincinnati** | Utah | 85.0% |
-| 2 | **Southern Methodist** | Syracuse Orange | 85.0% |
-| 3 | **UMBC** | UMass Lowell River | 85.0% |
-| 4 | **Long Island University** | Mercyhurst | 85.0% |
-| 5 | **Brigham Young** | Kansas State | 85.0% |
-| 6 | **Virginia Tech** | Wake Forest | 85.0% |
-| 7 | **Gonzaga** | Santa Clara | 85.0% |
-| 8 | **McNeese** | UT Rio Grande Valley Vaqueros | 85.0% |
-| 9 | **Merrimack** | Siena Saints | 85.0% |
-| 10 | **Stephen F. Austin** | Texas A&M-Corpus Christi | 79.9% |
-| 11 | **Northwestern** | Penn State | 79.0% |
+| 1 | **Iowa** | Maryland | 85.0% |
+| 2 | **Iowa State** | Arizona State | 85.0% |
+| 3 | **Bethune-Cookman** | Prairie View A&M | 85.0% |
+| 4 | **Louisville** | SMU | 85.0% |
+| 5 | **UCF** | Cincinnati | 85.0% |
+| 6 | **USC** | Washington | 85.0% |
+| 7 | **Boise State** | San Jose State | 85.0% |
+| 8 | **Sam Houston State** | New Mexico State | 85.0% |
+| 9 | **Nevada Wolf Pack** | Air Force | 85.0% |
+| 10 | **Liberty** | Missouri State | 85.0% |
+| 11 | **Marquette** | Xavier | 85.0% |
+| 12 | **Indiana** | Northwestern | 85.0% |
+| 13 | **Florida A&M Rattlers** | Jackson State | 85.0% |
+| 14 | **California** | Florida State | 85.0% |
+| 15 | **Colorado State** | Fresno State | 85.0% |
+| 16 | **Clemson** | Wake Forest | 81.3% |
+| 17 | **Lehigh Mountain** | Boston University | 79.7% |
+| 18 | **Kentucky** | LSU | 76.6% |
+| 19 | **Richmond** | Loyola Chicago | 76.6% |
+| 20 | **Stephen F. Austin** | McNeese | 76.6% |
+| 21 | **Oklahoma** | South Carolina Gamecocks | 76.6% |
+| 22 | **Morgan State** | Delaware State | 70.6% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Oklahoma State** | Colorado | 69.8% |
+| 1 | **St. Bonaventure** | La Salle | 63.9% |
+| 2 | **Pittsburgh** | NC State | 63.9% |
+| 3 | **Temple** | Florida Atlantic | 63.9% |
+| 4 | **UC Santa Barbara** | UC Davis | 63.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Baylor @ Arizona State | 52.2% | Toss-Up |
-| 2 | Alcorn State @ Prairie View A&M | 52.2% | Toss-Up |
-| 3 | Maryland @ Oregon Ducks | 52.2% | Toss-Up |
-| 4 | Monmouth @ Hofstra Pride | 52.2% | Toss-Up |
-| 5 | NJIT @ Vermont | 52.2% | Toss-Up |
-| 6 | Montana @ Portland State | 52.2% | Toss-Up |
-| 7 | New Mexico State @ Jacksonville State | 52.2% | Toss-Up |
-| 8 | Grambling @ Jackson State | 52.2% | Toss-Up |
+| 1 | Wyoming @ UNLV | 52.2% | Toss-Up |
+| 2 | Mississippi State @ Auburn | 52.2% | Toss-Up |
+| 3 | Ole Miss @ Texas Longhorns | 52.2% | Toss-Up |
+| 4 | Providence @ Butler | 52.2% | Toss-Up |
+| 5 | BYU @ West Virginia | 52.2% | Toss-Up |
+| 6 | Tulane Green Wave @ Memphis | 52.2% | Toss-Up |
+| 7 | Cal Poly @ UC San Diego Tritons | 52.2% | Toss-Up |
+| 8 | Tarleton @ Abilene Christian | 52.2% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 19
-- Away Teams Favored: 5
+- Home Teams Favored: 32
+- Away Teams Favored: 6
 - Max Confidence: 85.0%
 - Min Confidence: 52.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (176 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (162 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

@@ -1,11 +1,11 @@
 [
   {
-    "id": 74,
-    "date": "2026-03-10T00:00:00",
+    "id": 75,
+    "date": "2026-03-11T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.7567567825317383,
-    "potential_payout": 27.567567825317383,
+    "combined_odds": 2.18206524848938,
+    "potential_payout": 21.82065200805664,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401851718",
+        "bet_team": "Bethune-Cookman",
+        "opponent": "Prairie View A&M",
+        "moneyline": -230,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Bethune-Cookman",
+        "away_team": "Prairie View A&M",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401851369",
+        "bet_team": "Indiana",
+        "opponent": "Northwestern",
+        "moneyline": -192,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Indiana",
+        "away_team": "Northwestern",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "date": "2026-03-10T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.7567567825317383,
+    "potential_payout": 27.567567825317383,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-03-11T12:34:46.455894",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401851172",
         "bet_team": "Virginia Tech",
         "opponent": "Wake Forest",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Wake Forest",
         "home_team": "Virginia Tech",
         "away_team": "Wake Forest",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 89,
+        "away_score": 95,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Siena Saints",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Siena Saints",
         "home_team": "Merrimack",
         "away_team": "Siena Saints",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 54,
+        "away_score": 64,
+        "game_status": "Final"
       }
     ]
   },
