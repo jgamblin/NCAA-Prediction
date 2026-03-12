@@ -73,7 +73,7 @@
     "correct_predictions": 22,
     "prediction_accuracy": 0.95652174949646,
     "avg_confidence": 0.8124845727630283,
-    "team_wins": 27,
+    "team_wins": 28,
     "team_losses": 5
   },
   {
@@ -110,17 +110,6 @@
     "team_losses": 6
   },
   {
-    "team_id": "Stephen F. Austin",
-    "display_name": "Stephen F. Austin",
-    "conference": null,
-    "predictions_made": 24,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.9166666865348816,
-    "avg_confidence": 0.8186771521965662,
-    "team_wins": 28,
-    "team_losses": 4
-  },
-  {
     "team_id": "Michigan",
     "display_name": "Michigan",
     "conference": null,
@@ -140,7 +129,7 @@
     "prediction_accuracy": 0.9166666865348816,
     "avg_confidence": 0.7863401373227438,
     "team_wins": 18,
-    "team_losses": 13
+    "team_losses": 14
   },
   {
     "team_id": "St. John's",
@@ -209,6 +198,17 @@
     "team_losses": 4
   },
   {
+    "team_id": "Stephen F. Austin",
+    "display_name": "Stephen F. Austin",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.8165563201904297,
+    "team_wins": 28,
+    "team_losses": 5
+  },
+  {
     "team_id": "High Point",
     "display_name": "High Point",
     "conference": null,
@@ -261,7 +261,7 @@
     "prediction_accuracy": 0.875,
     "avg_confidence": 0.7400683462619781,
     "team_wins": 13,
-    "team_losses": 18
+    "team_losses": 19
   },
   {
     "team_id": "Houston",
@@ -275,17 +275,6 @@
     "team_losses": 5
   },
   {
-    "team_id": "UAB",
-    "display_name": "UAB",
-    "conference": null,
-    "predictions_made": 15,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.7739067713419596,
-    "team_wins": 20,
-    "team_losses": 11
-  },
-  {
     "team_id": "UT Rio Grande Valley Vaqueros",
     "display_name": "UT Rio Grande Valley Vaqueros",
     "conference": null,
@@ -297,6 +286,17 @@
     "team_losses": 14
   },
   {
+    "team_id": "UAB",
+    "display_name": "UAB",
+    "conference": null,
+    "predictions_made": 15,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8666666746139526,
+    "avg_confidence": 0.7739067713419596,
+    "team_wins": 20,
+    "team_losses": 11
+  },
+  {
     "team_id": "Arkansas",
     "display_name": "Arkansas",
     "conference": null,
@@ -306,17 +306,6 @@
     "avg_confidence": 0.761259065432982,
     "team_wins": 23,
     "team_losses": 8
-  },
-  {
-    "team_id": "Liberty",
-    "display_name": "Liberty",
-    "conference": null,
-    "predictions_made": 21,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.8571428656578064,
-    "avg_confidence": 0.8247545815649486,
-    "team_wins": 25,
-    "team_losses": 6
   },
   {
     "team_id": "Long Island University",
@@ -418,6 +407,28 @@
     "team_losses": 11
   },
   {
+    "team_id": "Louisville",
+    "display_name": "Louisville",
+    "conference": null,
+    "predictions_made": 19,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.8421052694320679,
+    "avg_confidence": 0.7686392037492049,
+    "team_wins": 23,
+    "team_losses": 9
+  },
+  {
+    "team_id": "Iowa State",
+    "display_name": "Iowa State",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.8399999737739563,
+    "avg_confidence": 0.8033534049987793,
+    "team_wins": 26,
+    "team_losses": 6
+  },
+  {
     "team_id": "North Carolina",
     "display_name": "North Carolina",
     "conference": null,
@@ -427,28 +438,6 @@
     "avg_confidence": 0.7868455457687378,
     "team_wins": 24,
     "team_losses": 7
-  },
-  {
-    "team_id": "Iowa State",
-    "display_name": "Iowa State",
-    "conference": null,
-    "predictions_made": 24,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.8333333134651184,
-    "avg_confidence": 0.8014097958803177,
-    "team_wins": 25,
-    "team_losses": 6
-  },
-  {
-    "team_id": "Louisville",
-    "display_name": "Louisville",
-    "conference": null,
-    "predictions_made": 18,
-    "correct_predictions": 15,
-    "prediction_accuracy": 0.8333333134651184,
-    "avg_confidence": 0.764119158188502,
-    "team_wins": 22,
-    "team_losses": 9
   },
   {
     "team_id": "Duquesne",
@@ -462,17 +451,6 @@
     "team_losses": 14
   },
   {
-    "team_id": "Tulsa Golden Hurricane",
-    "display_name": "Tulsa Golden Hurricane",
-    "conference": null,
-    "predictions_made": 23,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.8260869383811951,
-    "avg_confidence": 0.7805759103401847,
-    "team_wins": 25,
-    "team_losses": 6
-  },
-  {
     "team_id": "Florida",
     "display_name": "Florida",
     "conference": null,
@@ -480,6 +458,17 @@
     "correct_predictions": 19,
     "prediction_accuracy": 0.8260869383811951,
     "avg_confidence": 0.7960375340088554,
+    "team_wins": 25,
+    "team_losses": 6
+  },
+  {
+    "team_id": "Tulsa Golden Hurricane",
+    "display_name": "Tulsa Golden Hurricane",
+    "conference": null,
+    "predictions_made": 23,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.8260869383811951,
+    "avg_confidence": 0.7805759103401847,
     "team_wins": 25,
     "team_losses": 6
   },
@@ -492,18 +481,7 @@
     "prediction_accuracy": 0.8235294222831726,
     "avg_confidence": 0.7291832215645734,
     "team_wins": 19,
-    "team_losses": 13
-  },
-  {
-    "team_id": "Lipscomb",
-    "display_name": "Lipscomb",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.8386318122639376,
-    "team_wins": 19,
-    "team_losses": 13
+    "team_losses": 14
   },
   {
     "team_id": "Kansas",
@@ -517,6 +495,17 @@
     "team_losses": 9
   },
   {
+    "team_id": "Lipscomb",
+    "display_name": "Lipscomb",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.8386318122639376,
+    "team_wins": 19,
+    "team_losses": 13
+  },
+  {
     "team_id": "Miami (FL)",
     "display_name": "Miami (FL)",
     "conference": null,
@@ -528,15 +517,15 @@
     "team_losses": 7
   },
   {
-    "team_id": "Texas Longhorns",
-    "display_name": "Texas Longhorns",
+    "team_id": "Liberty",
+    "display_name": "Liberty",
     "conference": null,
-    "predictions_made": 11,
-    "correct_predictions": 9,
+    "predictions_made": 22,
+    "correct_predictions": 18,
     "prediction_accuracy": 0.8181818127632141,
-    "avg_confidence": 0.7288652279160239,
-    "team_wins": 18,
-    "team_losses": 13
+    "avg_confidence": 0.8259021016684446,
+    "team_wins": 25,
+    "team_losses": 7
   },
   {
     "team_id": "LSU",
@@ -547,6 +536,17 @@
     "prediction_accuracy": 0.8181818127632141,
     "avg_confidence": 0.776951789855957,
     "team_wins": 15,
-    "team_losses": 16
+    "team_losses": 17
+  },
+  {
+    "team_id": "Sam Houston State",
+    "display_name": "Sam Houston State",
+    "conference": null,
+    "predictions_made": 16,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8125,
+    "avg_confidence": 0.7996046878397465,
+    "team_wins": 22,
+    "team_losses": 10
   }
 ]
