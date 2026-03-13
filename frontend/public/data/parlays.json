@@ -1,11 +1,11 @@
 [
   {
-    "id": 76,
-    "date": "2026-03-12T00:00:00",
+    "id": 77,
+    "date": "2026-03-13T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 2.1967592239379883,
-    "potential_payout": 21.967592239379883,
+    "combined_odds": 2.169332504272461,
+    "potential_payout": 21.69332504272461,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401851414",
+        "bet_team": "Sam Houston State",
+        "opponent": "Kennesaw State",
+        "moneyline": -185,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Sam Houston State",
+        "away_team": "Kennesaw State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401851738",
+        "bet_team": "California Baptist",
+        "opponent": "Utah Tech",
+        "moneyline": -245,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "California Baptist",
+        "away_team": "Utah Tech",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "date": "2026-03-12T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 2.1967592239379883,
+    "potential_payout": 21.967592239379883,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-03-13T12:34:40.574212",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401851264",
         "bet_team": "George Mason",
         "opponent": "St. Bonaventure",
         "moneyline": -192,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "St. Bonaventure",
         "home_team": "George Mason",
         "away_team": "St. Bonaventure",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 57,
+        "away_score": 63,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Southern Utah Thunderbirds",
         "moneyline": -225,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UT Arlington",
         "home_team": "UT Arlington",
         "away_team": "Southern Utah Thunderbirds",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 69,
+        "away_score": 63,
+        "game_status": "Final"
       }
     ]
   },
