@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 2.169332504272461,
     "potential_payout": 21.69332504272461,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-03-15T12:32:22.892267",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Kennesaw State",
         "moneyline": -185,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Kennesaw State",
         "home_team": "Sam Houston State",
         "away_team": "Kennesaw State",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 73,
+        "away_score": 79,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Utah Tech",
         "moneyline": -245,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "California Baptist",
         "home_team": "California Baptist",
         "away_team": "Utah Tech",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 86,
+        "away_score": 72,
+        "game_status": "Final"
       }
     ]
   },

@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-13 07:34:40 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `04f6c91`
+**Last Updated**: 2026-03-15 07:32:22 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `7c83d8d`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 34
-- **Average Confidence**: 74.2%
-- **High (≥70%)**: 24 · **Medium (60-70%)**: 2 · **Other (<60%)**: 8
+- **Games Predicted Today**: 5
+- **Average Confidence**: 65.0%
+- **High (≥70%)**: 2 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
 
 ### 🏅 Pick Streaks
 
@@ -30,61 +30,27 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Saint Louis** | George Washington | 85.0% |
-| 2 | **Charlotte** | UAB | 85.0% |
-| 3 | **Sam Houston State** | Kennesaw State | 85.0% |
-| 4 | **Utah Valley** | UT Arlington | 85.0% |
-| 5 | **UConn** | Georgetown Hoyas | 85.0% |
-| 6 | **California Baptist** | Utah Tech | 85.0% |
-| 7 | **Virginia Commonwealth** | Duquesne | 84.3% |
-| 8 | **Tulsa Golden Hurricane** | North Texas | 84.3% |
-| 9 | **Howard** | South Carolina State | 84.3% |
-| 10 | **Utah State** | Nevada Wolf Pack | 84.3% |
-| 11 | **Duke** | Clemson | 84.3% |
-| 12 | **St. John's** | Seton Hall | 84.3% |
-| 13 | **Michigan State** | UCLA | 84.3% |
-| 14 | **Michigan** | Ohio State | 84.3% |
-| 15 | **San Diego State** | New Mexico | 77.0% |
-| 16 | **Florida** | Kentucky | 77.0% |
-| 17 | **Alabama Crimson Tide** | Ole Miss | 77.0% |
-| 18 | **Toledo** | Massachusetts | 76.4% |
-| 19 | **Arkansas** | Oklahoma | 76.4% |
-| 20 | **Akron** | Kent State Golden Flashes | 76.4% |
-| 21 | **UC Irvine** | Cal State Northridge | 76.4% |
-| 22 | **Houston** | Kansas | 76.4% |
-| 23 | **Hawai'i Rainbow** | Cal State Fullerton | 76.4% |
-| 24 | **Davidson** | Saint Joseph's | 70.2% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Tennessee** | Vanderbilt | 69.8% |
-| 2 | **Purdue** | Nebraska Cornhuskers | 69.8% |
+| 1 | **Yale** | Pennsylvania | 85.0% |
+| 2 | **Wichita State** | South Florida | 72.8% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | North Carolina Central vs Delaware State | 51.7% | Toss-Up |
-| 2 | Florida A&M Rattlers vs Southern | 51.7% | Toss-Up |
-| 3 | Virginia vs Miami (FL) | 51.7% | Toss-Up |
-| 4 | Illinois Fighting vs Wisconsin | 55.9% | Close |
-| 5 | St. Bonaventure @ Dayton | 57.2% | Close |
-| 6 | Prairie View A&M @ Alabama A%26M | 57.2% | Close |
-| 7 | Missouri State @ Louisiana Tech | 57.2% | Close |
-| 8 | Iowa State @ Arizona | 57.2% | Close |
+| 1 | VCU vs Dayton | 54.6% | Toss-Up |
+| 2 | Arkansas vs Vanderbilt | 56.2% | Close |
+| 3 | Michigan vs Purdue | 56.2% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 26
-- Away Teams Favored: 8
+- Home Teams Favored: 1
+- Away Teams Favored: 4
 - Max Confidence: 85.0%
-- Min Confidence: 51.7%
+- Min Confidence: 54.6%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (112 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (81 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
