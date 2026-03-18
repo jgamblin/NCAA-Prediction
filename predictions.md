@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-15 07:32:22 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `7c83d8d`
+**Last Updated**: 2026-03-18 07:40:58 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `d4a5661`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 5
-- **Average Confidence**: 65.0%
-- **High (≥70%)**: 2 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
+- **Games Predicted Today**: 10
+- **Average Confidence**: 71.7%
+- **High (≥70%)**: 7 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
 
 ### 🏅 Pick Streaks
 
@@ -30,27 +30,32 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Yale** | Pennsylvania | 85.0% |
-| 2 | **Wichita State** | South Florida | 72.8% |
+| 1 | **Navy** | Wake Forest | 85.0% |
+| 2 | **Nevada Wolf Pack** | Murray State | 85.0% |
+| 3 | **Utah Valley** | George Washington | 85.0% |
+| 4 | **New Mexico** | Sam Houston State | 79.1% |
+| 5 | **Lehigh Mountain** | Prairie View A&M | 79.1% |
+| 6 | **Miami (OH)** | SMU | 71.9% |
+| 7 | **Saint Joseph's** | Colorado State | 71.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | VCU vs Dayton | 54.6% | Toss-Up |
-| 2 | Arkansas vs Vanderbilt | 56.2% | Close |
-| 3 | Michigan vs Purdue | 56.2% | Close |
+| 1 | Dayton @ Bradley | 51.1% | Toss-Up |
+| 2 | UIC @ California | 53.7% | Toss-Up |
+| 3 | Illinois State vs Kent State Golden Flashes | 55.0% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 1
+- Home Teams Favored: 6
 - Away Teams Favored: 4
 - Max Confidence: 85.0%
-- Min Confidence: 54.6%
+- Min Confidence: 51.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (81 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (70 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
