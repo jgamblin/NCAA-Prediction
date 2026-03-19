@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-18 07:40:58 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `d4a5661`
+**Last Updated**: 2026-03-19 07:36:05 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `3fcec26`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 10
-- **Average Confidence**: 71.7%
-- **High (≥70%)**: 7 · **Medium (60-70%)**: 0 · **Other (<60%)**: 3
+- **Games Predicted Today**: 16
+- **Average Confidence**: 73.3%
+- **High (≥70%)**: 10 · **Medium (60-70%)**: 4 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -30,32 +30,46 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Navy** | Wake Forest | 85.0% |
-| 2 | **Nevada Wolf Pack** | Murray State | 85.0% |
-| 3 | **Utah Valley** | George Washington | 85.0% |
-| 4 | **New Mexico** | Sam Houston State | 79.1% |
-| 5 | **Lehigh Mountain** | Prairie View A&M | 79.1% |
-| 6 | **Miami (OH)** | SMU | 71.9% |
-| 7 | **Saint Joseph's** | Colorado State | 71.9% |
+| 1 | **Houston** | Idaho | 85.0% |
+| 2 | **Duke** | Siena Saints | 85.0% |
+| 3 | **Gonzaga** | Kennesaw State | 85.0% |
+| 4 | **Illinois** | Pennsylvania | 85.0% |
+| 5 | **Saint Louis** | Georgia | 83.0% |
+| 6 | **Nebraska Cornhuskers** | Troy | 78.5% |
+| 7 | **Wisconsin** | High Point | 78.5% |
+| 8 | **Michigan** | Howard | 78.5% |
+| 9 | **Michigan State** | North Dakota State | 78.5% |
+| 10 | **Arkansas** | Hawai'i Rainbow | 78.5% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Vanderbilt** | McNeese | 67.7% |
+| 2 | **North Carolina** | VCU | 62.3% |
+| 3 | **South Florida** | Louisville | 60.7% |
+| 4 | **TCU Horned Frogs** | Ohio State | 60.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Dayton @ Bradley | 51.1% | Toss-Up |
-| 2 | UIC @ California | 53.7% | Toss-Up |
-| 3 | Illinois State vs Kent State Golden Flashes | 55.0% | Toss-Up |
+| 1 | BYU vs Texas Longhorns | 53.1% | Toss-Up |
+| 2 | Saint Mary's vs Texas A&M | 53.1% | Toss-Up |
+| 3 | Louisville vs South Florida | 60.7% |  |
+| 4 | Ohio State vs TCU Horned Frogs | 60.7% |  |
+| 5 | VCU @ North Carolina | 62.3% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 6
-- Away Teams Favored: 4
+- Home Teams Favored: 11
+- Away Teams Favored: 5
 - Max Confidence: 85.0%
-- Min Confidence: 51.1%
+- Min Confidence: 53.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (70 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (64 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
