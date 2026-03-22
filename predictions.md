@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-21 07:30:39 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `513461e`
+**Last Updated**: 2026-03-22 07:32:32 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `cc3d310`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 10
-- **Average Confidence**: 74.0%
-- **High (≥70%)**: 7 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
+- **Games Predicted Today**: 14
+- **Average Confidence**: 77.8%
+- **High (≥70%)**: 11 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,38 +30,46 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Dayton** | UNC Wilmington Seahawks | 85.0% |
-| 2 | **Virginia Commonwealth** | VCU | 85.0% |
-| 3 | **Gonzaga** | Texas Longhorns | 85.0% |
-| 4 | **Houston** | Texas A&M | 74.0% |
-| 5 | **Duke** | TCU Horned Frogs | 74.0% |
-| 6 | **Michigan State** | Louisville | 74.0% |
-| 7 | **Arkansas** | High Point | 71.5% |
+| 1 | **Miami (FL)** | Purdue | 85.0% |
+| 2 | **Auburn** | Seattle U | 85.0% |
+| 3 | **Wichita State** | Oklahoma State | 85.0% |
+| 4 | **New Mexico** | George Washington | 81.7% |
+| 5 | **Iowa State** | Kentucky | 81.7% |
+| 6 | **Florida** | Iowa | 81.7% |
+| 7 | **Arizona** | Utah State | 81.7% |
+| 8 | **UConn** | UCLA | 81.7% |
+| 9 | **Wake Forest** | Illinois State | 77.8% |
+| 10 | **Virginia** | Tennessee | 70.5% |
+| 11 | **Tulsa Golden Hurricane** | UNLV | 70.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Vanderbilt** | Nebraska Cornhuskers | 65.3% |
-| 2 | **Liberty** | Nevada Wolf Pack | 65.3% |
-| 3 | **Saint Louis** | Michigan | 60.4% |
+| 1 | **St. John's** | Kansas | 69.1% |
+| 2 | **Texas Tech** | Alabama Crimson Tide | 69.1% |
+| 3 | **Saint Joseph's** | California | 69.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Michigan vs Saint Louis | 60.4% |  |
+| 1 | Kansas vs St. John's | 69.1% |  |
+| 2 | Alabama Crimson Tide vs Texas Tech | 69.1% |  |
+| 3 | California vs Saint Joseph's | 69.1% |  |
+| 4 | Tennessee @ Virginia | 70.5% |  |
+| 5 | UNLV @ Tulsa Golden Hurricane | 70.5% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 5
+- Home Teams Favored: 9
 - Away Teams Favored: 5
 - Max Confidence: 85.0%
-- Min Confidence: 60.4%
+- Min Confidence: 69.1%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (38 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (30 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
