@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-24 07:41:38 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `97d7621`
+**Last Updated**: 2026-03-25 07:39:00 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `0ef704a`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 2
-- **Average Confidence**: 62.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 2 · **Other (<60%)**: 0
+- **Average Confidence**: 57.4%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -26,26 +26,19 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Wichita State** | Tulsa Golden Hurricane | 62.0% |
-| 2 | **Saint Joseph's** | New Mexico | 62.0% |
-
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tulsa Golden Hurricane vs Wichita State | 62.0% |  |
-| 2 | New Mexico vs Saint Joseph's | 62.0% |  |
+| 1 | Illinois State @ Dayton | 57.4% | Close |
+| 2 | Nevada Wolf Pack @ Auburn | 57.4% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 0
-- Away Teams Favored: 2
-- Max Confidence: 62.0%
-- Min Confidence: 62.0%
+- Home Teams Favored: 2
+- Away Teams Favored: 0
+- Max Confidence: 57.4%
+- Min Confidence: 57.4%
 
 ### 📋 Full Data
 
