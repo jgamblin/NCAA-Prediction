@@ -22,5 +22,29 @@
     "home_moneyline": null,
     "away_moneyline": null,
     "explanation": "Southern Illinois is strongly favored: they are significantly stronger overall, they have a major offensive advantage, and they have a vastly superior defense."
+  },
+  {
+    "id": 380,
+    "game_id": "401856573",
+    "prediction_id": 15398,
+    "bet_team": "Iowa State",
+    "bet_amount": 10.0,
+    "moneyline": -185,
+    "confidence": 0.802841067314148,
+    "value_score": 0.16909009218215942,
+    "bet_won": null,
+    "actual_winner": null,
+    "payout": 0.0,
+    "profit": null,
+    "bet_type": "moneyline",
+    "strategy": "value_betting",
+    "created_at": "2026-03-26T12:42:41.638788",
+    "settled_at": null,
+    "game_date": "2026-03-27",
+    "home_team": "Iowa State",
+    "away_team": "Tennessee",
+    "home_moneyline": -185,
+    "away_moneyline": 154,
+    "explanation": "Iowa State is confidently favored: they are significantly stronger overall, they have a vastly superior defense, and they have a major offensive advantage."
   }
 ]

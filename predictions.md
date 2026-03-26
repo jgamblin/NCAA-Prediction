@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-25 07:39:00 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `0ef704a`
+**Last Updated**: 2026-03-26 07:42:41 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `93f17b0`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 2
-- **Average Confidence**: 57.4%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
+- **Games Predicted Today**: 4
+- **Average Confidence**: 70.0%
+- **High (≥70%)**: 3 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -26,23 +26,30 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Texas Longhorns** | Purdue | 85.0% |
+| 2 | **Arizona** | Arkansas | 71.5% |
+| 3 | **Illinois** | Illinois Fighting | 70.1% |
+
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Illinois State @ Dayton | 57.4% | Close |
-| 2 | Nevada Wolf Pack @ Auburn | 57.4% | Close |
+| 1 | Iowa @ Nebraska Cornhuskers | 53.5% | Toss-Up |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 2
-- Away Teams Favored: 0
-- Max Confidence: 57.4%
-- Min Confidence: 57.4%
+- Away Teams Favored: 2
+- Max Confidence: 85.0%
+- Min Confidence: 53.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (16 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (18 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
