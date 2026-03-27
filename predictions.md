@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-26 07:42:41 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `93f17b0`
+**Last Updated**: 2026-03-27 07:38:32 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `de7af41`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 4
-- **Average Confidence**: 70.0%
-- **High (≥70%)**: 3 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
+- **Average Confidence**: 64.6%
+- **High (≥70%)**: 2 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -30,26 +30,26 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Texas Longhorns** | Purdue | 85.0% |
-| 2 | **Arizona** | Arkansas | 71.5% |
-| 3 | **Illinois** | Illinois Fighting | 70.1% |
+| 1 | **UConn** | Michigan State | 72.3% |
+| 2 | **Iowa State** | Tennessee | 72.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Iowa @ Nebraska Cornhuskers | 53.5% | Toss-Up |
+| 1 | Duke vs St. John's | 56.9% | Close |
+| 2 | Michigan vs Alabama Crimson Tide | 56.9% | Close |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 2
 - Away Teams Favored: 2
-- Max Confidence: 85.0%
-- Min Confidence: 53.5%
+- Max Confidence: 72.3%
+- Min Confidence: 56.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (18 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (14 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
