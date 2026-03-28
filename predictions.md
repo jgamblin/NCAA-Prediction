@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-27 07:38:32 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `de7af41`
+**Last Updated**: 2026-03-28 07:33:47 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `13287a1`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 4
-- **Average Confidence**: 64.6%
-- **High (≥70%)**: 2 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
+- **Games Predicted Today**: 2
+- **Average Confidence**: 56.4%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
 
@@ -26,26 +26,19 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **UConn** | Michigan State | 72.3% |
-| 2 | **Iowa State** | Tennessee | 72.3% |
-
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Duke vs St. John's | 56.9% | Close |
-| 2 | Michigan vs Alabama Crimson Tide | 56.9% | Close |
+| 1 | Illinois Fighting vs Iowa | 56.4% | Close |
+| 2 | Arizona vs Purdue | 56.4% | Close |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 2
+- Home Teams Favored: 0
 - Away Teams Favored: 2
-- Max Confidence: 72.3%
-- Min Confidence: 56.9%
+- Max Confidence: 56.4%
+- Min Confidence: 56.4%
 
 ### 📋 Full Data
 
