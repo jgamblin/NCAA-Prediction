@@ -1,14 +1,14 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-28 07:33:47 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `13287a1`
+**Last Updated**: 2026-03-29 07:34:42 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `60b6c11`
 
 ---
 
 ## 🔎 Today Snapshot
 
 - **Games Predicted Today**: 2
-- **Average Confidence**: 56.4%
+- **Average Confidence**: 56.2%
 - **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
 
 ### 🏅 Pick Streaks
@@ -30,15 +30,15 @@
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Illinois Fighting vs Iowa | 56.4% | Close |
-| 2 | Arizona vs Purdue | 56.4% | Close |
+| 1 | Michigan vs Tennessee | 56.2% | Close |
+| 2 | Duke vs UConn | 56.2% | Close |
 
 ### 📈 Distribution Summary
 
 - Home Teams Favored: 0
 - Away Teams Favored: 2
-- Max Confidence: 56.4%
-- Min Confidence: 56.4%
+- Max Confidence: 56.2%
+- Min Confidence: 56.2%
 
 ### 📋 Full Data
 
