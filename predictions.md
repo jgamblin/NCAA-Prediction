@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-29 07:34:42 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `60b6c11`
+**Last Updated**: 2026-03-30 07:45:09 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `aabe2cf`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 2
-- **Average Confidence**: 56.2%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 2
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -28,21 +28,11 @@
 
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Michigan vs Tennessee | 56.2% | Close |
-| 2 | Duke vs UConn | 56.2% | Close |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 0
-- Away Teams Favored: 2
-- Max Confidence: 56.2%
-- Min Confidence: 56.2%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (14 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (13 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
