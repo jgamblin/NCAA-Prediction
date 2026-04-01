@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-03-31 07:43:42 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `2a68661`
+**Last Updated**: 2026-04-01 07:42:25 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `db8ebe1`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 2
+- **Average Confidence**: 71.8%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -26,9 +26,24 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Oklahoma** | Colorado | 85.0% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | Minnesota vs Baylor | 58.6% | Close |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 0
+- Away Teams Favored: 2
+- Max Confidence: 85.0%
+- Min Confidence: 58.6%
 
 ### 📋 Full Data
 
