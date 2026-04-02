@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-01 07:42:25 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `db8ebe1`
+**Last Updated**: 2026-04-02 07:43:14 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `8e6d45c`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 2
-- **Average Confidence**: 71.8%
-- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
+- **Games Predicted Today**: 4
+- **Average Confidence**: 72.0%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,24 +30,32 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Oklahoma** | Colorado | 85.0% |
+| 1 | **Auburn** | Illinois State | 85.0% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Stanford Cardinal** | West Virginia | 69.8% |
+| 2 | **New Mexico** | Tulsa Golden Hurricane | 68.3% |
+| 3 | **Rutgers** | Creighton | 64.9% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Minnesota vs Baylor | 58.6% | Close |
+| 1 | Creighton vs Rutgers | 64.9% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 0
-- Away Teams Favored: 2
+- Home Teams Favored: 1
+- Away Teams Favored: 3
 - Max Confidence: 85.0%
-- Min Confidence: 58.6%
+- Min Confidence: 64.9%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (13 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (11 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

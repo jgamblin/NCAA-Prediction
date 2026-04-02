@@ -176,17 +176,6 @@
     "team_losses": 7
   },
   {
-    "team_id": "Saint Mary's",
-    "display_name": "Saint Mary's",
-    "conference": null,
-    "predictions_made": 25,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.8085224938392639,
-    "team_wins": 27,
-    "team_losses": 6
-  },
-  {
     "team_id": "Stephen F. Austin",
     "display_name": "Stephen F. Austin",
     "conference": null,
@@ -207,6 +196,17 @@
     "avg_confidence": 0.7604656076431274,
     "team_wins": 28,
     "team_losses": 9
+  },
+  {
+    "team_id": "Saint Mary's",
+    "display_name": "Saint Mary's",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.8085224938392639,
+    "team_wins": 27,
+    "team_losses": 6
   },
   {
     "team_id": "High Point",
@@ -253,17 +253,6 @@
     "team_losses": 9
   },
   {
-    "team_id": "UT Rio Grande Valley Vaqueros",
-    "display_name": "UT Rio Grande Valley Vaqueros",
-    "conference": null,
-    "predictions_made": 15,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.7524898727734883,
-    "team_wins": 19,
-    "team_losses": 14
-  },
-  {
     "team_id": "California Baptist",
     "display_name": "California Baptist",
     "conference": null,
@@ -273,6 +262,17 @@
     "avg_confidence": 0.8215013146400452,
     "team_wins": 25,
     "team_losses": 9
+  },
+  {
+    "team_id": "UT Rio Grande Valley Vaqueros",
+    "display_name": "UT Rio Grande Valley Vaqueros",
+    "conference": null,
+    "predictions_made": 15,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8666666746139526,
+    "avg_confidence": 0.7524898727734883,
+    "team_wins": 19,
+    "team_losses": 14
   },
   {
     "team_id": "UAB",
@@ -308,17 +308,6 @@
     "team_losses": 6
   },
   {
-    "team_id": "Long Island University",
-    "display_name": "Long Island University",
-    "conference": null,
-    "predictions_made": 21,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.8571428656578064,
-    "avg_confidence": 0.7965857840719677,
-    "team_wins": 24,
-    "team_losses": 11
-  },
-  {
     "team_id": "UNC Wilmington Seahawks",
     "display_name": "UNC Wilmington Seahawks",
     "conference": null,
@@ -328,6 +317,17 @@
     "avg_confidence": 0.7903342388925099,
     "team_wins": 27,
     "team_losses": 7
+  },
+  {
+    "team_id": "Long Island University",
+    "display_name": "Long Island University",
+    "conference": null,
+    "predictions_made": 21,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.8571428656578064,
+    "avg_confidence": 0.7965857840719677,
+    "team_wins": 24,
+    "team_losses": 11
   },
   {
     "team_id": "Georgia Tech",
@@ -352,24 +352,13 @@
     "team_losses": 9
   },
   {
-    "team_id": "Central Arkansas",
-    "display_name": "Central Arkansas",
+    "team_id": "Louisville",
+    "display_name": "Louisville",
     "conference": null,
     "predictions_made": 19,
     "correct_predictions": 16,
     "prediction_accuracy": 0.8421052694320679,
-    "avg_confidence": 0.824469340474982,
-    "team_wins": 22,
-    "team_losses": 12
-  },
-  {
-    "team_id": "Kansas",
-    "display_name": "Kansas",
-    "conference": null,
-    "predictions_made": 19,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.8421052694320679,
-    "avg_confidence": 0.7571626336951005,
+    "avg_confidence": 0.7686392037492049,
     "team_wins": 24,
     "team_losses": 11
   },
@@ -385,15 +374,26 @@
     "team_losses": 11
   },
   {
-    "team_id": "Louisville",
-    "display_name": "Louisville",
+    "team_id": "Kansas",
+    "display_name": "Kansas",
     "conference": null,
     "predictions_made": 19,
     "correct_predictions": 16,
     "prediction_accuracy": 0.8421052694320679,
-    "avg_confidence": 0.7686392037492049,
+    "avg_confidence": 0.7571626336951005,
     "team_wins": 24,
     "team_losses": 11
+  },
+  {
+    "team_id": "Central Arkansas",
+    "display_name": "Central Arkansas",
+    "conference": null,
+    "predictions_made": 19,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.8421052694320679,
+    "avg_confidence": 0.824469340474982,
+    "team_wins": 22,
+    "team_losses": 12
   },
   {
     "team_id": "Tulsa Golden Hurricane",
@@ -403,17 +403,6 @@
     "correct_predictions": 21,
     "prediction_accuracy": 0.8399999737739563,
     "avg_confidence": 0.7800750064849854,
-    "team_wins": 29,
-    "team_losses": 7
-  },
-  {
-    "team_id": "Utah State",
-    "display_name": "Utah State",
-    "conference": null,
-    "predictions_made": 24,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.8333333134651184,
-    "avg_confidence": 0.7951751997073492,
     "team_wins": 29,
     "team_losses": 7
   },
@@ -429,6 +418,17 @@
     "team_losses": 10
   },
   {
+    "team_id": "Utah State",
+    "display_name": "Utah State",
+    "conference": null,
+    "predictions_made": 24,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.8333333134651184,
+    "avg_confidence": 0.7951751997073492,
+    "team_wins": 29,
+    "team_losses": 7
+  },
+  {
     "team_id": "Duquesne",
     "display_name": "Duquesne",
     "conference": null,
@@ -440,15 +440,15 @@
     "team_losses": 15
   },
   {
-    "team_id": "Saint Joseph's",
-    "display_name": "Saint Joseph's",
+    "team_id": "Santa Clara",
+    "display_name": "Santa Clara",
     "conference": null,
     "predictions_made": 17,
     "correct_predictions": 14,
     "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7488614496062783,
-    "team_wins": 24,
-    "team_losses": 12
+    "avg_confidence": 0.7421927662456737,
+    "team_wins": 26,
+    "team_losses": 9
   },
   {
     "team_id": "Oklahoma State",
@@ -462,15 +462,15 @@
     "team_losses": 15
   },
   {
-    "team_id": "Santa Clara",
-    "display_name": "Santa Clara",
+    "team_id": "Saint Joseph's",
+    "display_name": "Saint Joseph's",
     "conference": null,
     "predictions_made": 17,
     "correct_predictions": 14,
     "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7421927662456737,
-    "team_wins": 26,
-    "team_losses": 9
+    "avg_confidence": 0.7488614496062783,
+    "team_wins": 24,
+    "team_losses": 12
   },
   {
     "team_id": "Lipscomb",
