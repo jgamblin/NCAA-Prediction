@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-02 07:43:14 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `8e6d45c`
+**Last Updated**: 2026-04-03 07:36:15 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `2c17a1b`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 4
-- **Average Confidence**: 72.0%
-- **High (≥70%)**: 1 · **Medium (60-70%)**: 3 · **Other (<60%)**: 0
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,36 +26,13 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Auburn** | Illinois State | 85.0% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Stanford Cardinal** | West Virginia | 69.8% |
-| 2 | **New Mexico** | Tulsa Golden Hurricane | 68.3% |
-| 3 | **Rutgers** | Creighton | 64.9% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Creighton vs Rutgers | 64.9% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 1
-- Away Teams Favored: 3
-- Max Confidence: 85.0%
-- Min Confidence: 64.9%
+*No games available.*
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (11 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (7 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
