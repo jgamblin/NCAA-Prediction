@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-03 07:36:15 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `2c17a1b`
+**Last Updated**: 2026-04-04 07:34:28 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `f18796f`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 4
+- **Average Confidence**: 78.2%
+- **High (≥70%)**: 3 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,9 +26,32 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 🎯 High Confidence Picks (≥70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Oklahoma** | Baylor | 85.0% |
+| 2 | **Michigan** | Arizona | 85.0% |
+| 3 | **West Virginia** | Creighton | 79.5% |
+
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Illinois** | Illinois Fighting | 63.3% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | UConn vs Illinois Fighting | 63.3% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 0
+- Away Teams Favored: 4
+- Max Confidence: 85.0%
+- Min Confidence: 63.3%
 
 ### 📋 Full Data
 

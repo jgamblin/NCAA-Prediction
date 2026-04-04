@@ -1,5 +1,51 @@
 [
   {
+    "id": 78,
+    "date": "2026-04-04T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.361767053604126,
+    "potential_payout": 33.617671966552734,
+    "won": null,
+    "actual_payout": 0.0,
+    "profit": null,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": false,
+    "settled_at": null,
+    "legs": [
+      {
+        "leg_number": 1,
+        "game_id": "401858383",
+        "bet_team": "Oklahoma",
+        "opponent": "Baylor",
+        "moneyline": -118,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Baylor",
+        "away_team": "Oklahoma",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401856599",
+        "bet_team": "Michigan",
+        "opponent": "Arizona",
+        "moneyline": -122,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Arizona",
+        "away_team": "Michigan",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
     "id": 77,
     "date": "2026-03-13T00:00:00",
     "bet_amount": 10.0,
