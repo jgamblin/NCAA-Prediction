@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-04 07:34:28 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `f18796f`
+**Last Updated**: 2026-04-05 07:34:36 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `efa1cd6`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 4
-- **Average Confidence**: 78.2%
-- **High (≥70%)**: 3 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
+- **Games Predicted Today**: 2
+- **Average Confidence**: 68.8%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
 
 ### 🏅 Pick Streaks
 
@@ -30,32 +30,24 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Oklahoma** | Baylor | 85.0% |
-| 2 | **Michigan** | Arizona | 85.0% |
-| 3 | **West Virginia** | Creighton | 79.5% |
-
-### 📊 Medium Confidence Picks (60–70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **Illinois** | Illinois Fighting | 63.3% |
+| 1 | **Oklahoma** | West Virginia | 85.0% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | UConn vs Illinois Fighting | 63.3% |  |
+| 1 | Tulsa Golden Hurricane @ Auburn | 52.7% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 0
-- Away Teams Favored: 4
+- Home Teams Favored: 1
+- Away Teams Favored: 1
 - Max Confidence: 85.0%
-- Min Confidence: 63.3%
+- Min Confidence: 52.7%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (7 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (3 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 

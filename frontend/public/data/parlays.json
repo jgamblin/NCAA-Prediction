@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.361767053604126,
     "potential_payout": 33.617671966552734,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
+    "won": true,
+    "actual_payout": 33.617671966552734,
+    "profit": 23.617671966552734,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-04-05T12:34:36.100616",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Baylor",
         "moneyline": -118,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Oklahoma",
         "home_team": "Baylor",
         "away_team": "Oklahoma",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 69,
+        "away_score": 82,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Arizona",
         "moneyline": -122,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Michigan",
         "home_team": "Arizona",
         "away_team": "Michigan",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 73,
+        "away_score": 91,
+        "game_status": "Final"
       }
     ]
   },
