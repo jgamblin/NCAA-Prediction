@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-05 07:34:36 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `efa1cd6`
+**Last Updated**: 2026-04-06 07:42:05 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `e7fbce5`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 2
-- **Average Confidence**: 68.8%
-- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 1
+- **Games Predicted Today**: 1
+- **Average Confidence**: 78.2%
+- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,24 +30,24 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Oklahoma** | West Virginia | 85.0% |
+| 1 | **UConn** | Michigan | 78.2% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Tulsa Golden Hurricane @ Auburn | 52.7% | Toss-Up |
+| 1 | Michigan vs UConn | 78.2% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 1
+- Home Teams Favored: 0
 - Away Teams Favored: 1
-- Max Confidence: 85.0%
-- Min Confidence: 52.7%
+- Max Confidence: 78.2%
+- Min Confidence: 78.2%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (3 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (1 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
