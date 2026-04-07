@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-04-06 07:42:05 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `e7fbce5`
+**Last Updated**: 2026-04-07 07:22:50 CDT
+**Lineage**: config `7dd58a0bb0e2` · commit `7ff5d33`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 1
-- **Average Confidence**: 78.2%
-- **High (≥70%)**: 1 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 0
+- **Average Confidence**: 0.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,24 +26,9 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
-### 🎯 High Confidence Picks (≥70%)
-
-| # | Winner | Opponent | Confidence |
-|---|--------|---------|------------|
-| 1 | **UConn** | Michigan | 78.2% |
-
 ### 👀 Games to Watch
 
-| # | Matchup | Confidence | Note |
-|---|---------|------------|------|
-| 1 | Michigan vs UConn | 78.2% |  |
-
-### 📈 Distribution Summary
-
-- Home Teams Favored: 0
-- Away Teams Favored: 1
-- Max Confidence: 78.2%
-- Min Confidence: 78.2%
+*No games available.*
 
 ### 📋 Full Data
 
