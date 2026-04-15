@@ -451,17 +451,6 @@
     "team_losses": 12
   },
   {
-    "team_id": "Lipscomb",
-    "display_name": "Lipscomb",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.8386318122639376,
-    "team_wins": 19,
-    "team_losses": 13
-  },
-  {
     "team_id": "Santa Clara",
     "display_name": "Santa Clara",
     "conference": null,
@@ -471,6 +460,17 @@
     "avg_confidence": 0.7421927662456737,
     "team_wins": 26,
     "team_losses": 9
+  },
+  {
+    "team_id": "Lipscomb",
+    "display_name": "Lipscomb",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.8386318122639376,
+    "team_wins": 19,
+    "team_losses": 13
   },
   {
     "team_id": "Iowa State",
