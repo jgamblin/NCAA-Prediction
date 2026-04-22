@@ -66,17 +66,6 @@
     "team_losses": 4
   },
   {
-    "team_id": "Arizona",
-    "display_name": "Arizona",
-    "conference": null,
-    "predictions_made": 27,
-    "correct_predictions": 25,
-    "prediction_accuracy": 0.9259259104728699,
-    "avg_confidence": 0.80507273806466,
-    "team_wins": 36,
-    "team_losses": 3
-  },
-  {
     "team_id": "Michigan",
     "display_name": "Michigan",
     "conference": null,
@@ -85,6 +74,17 @@
     "prediction_accuracy": 0.9259259104728699,
     "avg_confidence": 0.815736989180247,
     "team_wins": 37,
+    "team_losses": 3
+  },
+  {
+    "team_id": "Arizona",
+    "display_name": "Arizona",
+    "conference": null,
+    "predictions_made": 27,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.9259259104728699,
+    "avg_confidence": 0.80507273806466,
+    "team_wins": 36,
     "team_losses": 3
   },
   {
@@ -176,17 +176,6 @@
     "team_losses": 9
   },
   {
-    "team_id": "High Point",
-    "display_name": "High Point",
-    "conference": null,
-    "predictions_made": 25,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.7556283020973206,
-    "team_wins": 31,
-    "team_losses": 5
-  },
-  {
     "team_id": "Stephen F. Austin",
     "display_name": "Stephen F. Austin",
     "conference": null,
@@ -196,6 +185,17 @@
     "avg_confidence": 0.8165563201904297,
     "team_wins": 28,
     "team_losses": 6
+  },
+  {
+    "team_id": "High Point",
+    "display_name": "High Point",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.7556283020973206,
+    "team_wins": 31,
+    "team_losses": 5
   },
   {
     "team_id": "Saint Mary's",
@@ -253,6 +253,17 @@
     "team_losses": 9
   },
   {
+    "team_id": "UT Rio Grande Valley Vaqueros",
+    "display_name": "UT Rio Grande Valley Vaqueros",
+    "conference": null,
+    "predictions_made": 15,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8666666746139526,
+    "avg_confidence": 0.7524898727734883,
+    "team_wins": 19,
+    "team_losses": 14
+  },
+  {
     "team_id": "California Baptist",
     "display_name": "California Baptist",
     "conference": null,
@@ -273,17 +284,6 @@
     "avg_confidence": 0.7739067713419596,
     "team_wins": 20,
     "team_losses": 12
-  },
-  {
-    "team_id": "UT Rio Grande Valley Vaqueros",
-    "display_name": "UT Rio Grande Valley Vaqueros",
-    "conference": null,
-    "predictions_made": 15,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.7524898727734883,
-    "team_wins": 19,
-    "team_losses": 14
   },
   {
     "team_id": "Utah Valley",
@@ -352,6 +352,28 @@
     "team_losses": 9
   },
   {
+    "team_id": "Central Arkansas",
+    "display_name": "Central Arkansas",
+    "conference": null,
+    "predictions_made": 19,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.8421052694320679,
+    "avg_confidence": 0.824469340474982,
+    "team_wins": 22,
+    "team_losses": 12
+  },
+  {
+    "team_id": "Winthrop",
+    "display_name": "Winthrop",
+    "conference": null,
+    "predictions_made": 19,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.8421052694320679,
+    "avg_confidence": 0.8109842162383231,
+    "team_wins": 23,
+    "team_losses": 11
+  },
+  {
     "team_id": "Louisville",
     "display_name": "Louisville",
     "conference": null,
@@ -372,28 +394,6 @@
     "avg_confidence": 0.7571626336951005,
     "team_wins": 24,
     "team_losses": 11
-  },
-  {
-    "team_id": "Winthrop",
-    "display_name": "Winthrop",
-    "conference": null,
-    "predictions_made": 19,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.8421052694320679,
-    "avg_confidence": 0.8109842162383231,
-    "team_wins": 23,
-    "team_losses": 11
-  },
-  {
-    "team_id": "Central Arkansas",
-    "display_name": "Central Arkansas",
-    "conference": null,
-    "predictions_made": 19,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.8421052694320679,
-    "avg_confidence": 0.824469340474982,
-    "team_wins": 22,
-    "team_losses": 12
   },
   {
     "team_id": "Tulsa Golden Hurricane",
@@ -429,15 +429,15 @@
     "team_losses": 15
   },
   {
-    "team_id": "Saint Joseph's",
-    "display_name": "Saint Joseph's",
+    "team_id": "Lipscomb",
+    "display_name": "Lipscomb",
     "conference": null,
     "predictions_made": 17,
     "correct_predictions": 14,
     "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7488614496062783,
-    "team_wins": 24,
-    "team_losses": 12
+    "avg_confidence": 0.8386318122639376,
+    "team_wins": 19,
+    "team_losses": 13
   },
   {
     "team_id": "Santa Clara",
@@ -462,15 +462,15 @@
     "team_losses": 15
   },
   {
-    "team_id": "Lipscomb",
-    "display_name": "Lipscomb",
+    "team_id": "Saint Joseph's",
+    "display_name": "Saint Joseph's",
     "conference": null,
     "predictions_made": 17,
     "correct_predictions": 14,
     "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.8386318122639376,
-    "team_wins": 19,
-    "team_losses": 13
+    "avg_confidence": 0.7488614496062783,
+    "team_wins": 24,
+    "team_losses": 12
   },
   {
     "team_id": "Iowa State",
