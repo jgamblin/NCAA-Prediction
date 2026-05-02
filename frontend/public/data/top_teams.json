@@ -176,17 +176,6 @@
     "team_losses": 5
   },
   {
-    "team_id": "Saint Mary's",
-    "display_name": "Saint Mary's",
-    "conference": null,
-    "predictions_made": 25,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.8085224938392639,
-    "team_wins": 27,
-    "team_losses": 6
-  },
-  {
     "team_id": "Arkansas",
     "display_name": "Arkansas",
     "conference": null,
@@ -196,6 +185,17 @@
     "avg_confidence": 0.7604656076431274,
     "team_wins": 28,
     "team_losses": 9
+  },
+  {
+    "team_id": "Saint Mary's",
+    "display_name": "Saint Mary's",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.8085224938392639,
+    "team_wins": 27,
+    "team_losses": 6
   },
   {
     "team_id": "Stephen F. Austin",
@@ -264,17 +264,6 @@
     "team_losses": 14
   },
   {
-    "team_id": "UAB",
-    "display_name": "UAB",
-    "conference": null,
-    "predictions_made": 15,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.7739067713419596,
-    "team_wins": 20,
-    "team_losses": 12
-  },
-  {
     "team_id": "California Baptist",
     "display_name": "California Baptist",
     "conference": null,
@@ -284,6 +273,17 @@
     "avg_confidence": 0.8215013146400452,
     "team_wins": 25,
     "team_losses": 9
+  },
+  {
+    "team_id": "UAB",
+    "display_name": "UAB",
+    "conference": null,
+    "predictions_made": 15,
+    "correct_predictions": 13,
+    "prediction_accuracy": 0.8666666746139526,
+    "avg_confidence": 0.7739067713419596,
+    "team_wins": 20,
+    "team_losses": 12
   },
   {
     "team_id": "Utah Valley",
@@ -429,28 +429,6 @@
     "team_losses": 15
   },
   {
-    "team_id": "Lipscomb",
-    "display_name": "Lipscomb",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.8386318122639376,
-    "team_wins": 19,
-    "team_losses": 13
-  },
-  {
-    "team_id": "Saint Joseph's",
-    "display_name": "Saint Joseph's",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7488614496062783,
-    "team_wins": 24,
-    "team_losses": 12
-  },
-  {
     "team_id": "Santa Clara",
     "display_name": "Santa Clara",
     "conference": null,
@@ -471,6 +449,28 @@
     "avg_confidence": 0.7291832215645734,
     "team_wins": 20,
     "team_losses": 15
+  },
+  {
+    "team_id": "Lipscomb",
+    "display_name": "Lipscomb",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.8386318122639376,
+    "team_wins": 19,
+    "team_losses": 13
+  },
+  {
+    "team_id": "Saint Joseph's",
+    "display_name": "Saint Joseph's",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.7488614496062783,
+    "team_wins": 24,
+    "team_losses": 12
   },
   {
     "team_id": "Iowa State",
