@@ -66,17 +66,6 @@
     "team_losses": 4
   },
   {
-    "team_id": "Michigan",
-    "display_name": "Michigan",
-    "conference": null,
-    "predictions_made": 27,
-    "correct_predictions": 25,
-    "prediction_accuracy": 0.9259259104728699,
-    "avg_confidence": 0.815736989180247,
-    "team_wins": 37,
-    "team_losses": 3
-  },
-  {
     "team_id": "Arizona",
     "display_name": "Arizona",
     "conference": null,
@@ -85,6 +74,17 @@
     "prediction_accuracy": 0.9259259104728699,
     "avg_confidence": 0.80507273806466,
     "team_wins": 36,
+    "team_losses": 3
+  },
+  {
+    "team_id": "Michigan",
+    "display_name": "Michigan",
+    "conference": null,
+    "predictions_made": 27,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.9259259104728699,
+    "avg_confidence": 0.815736989180247,
+    "team_wins": 37,
     "team_losses": 3
   },
   {
@@ -165,26 +165,15 @@
     "team_losses": 7
   },
   {
-    "team_id": "High Point",
-    "display_name": "High Point",
+    "team_id": "Arkansas",
+    "display_name": "Arkansas",
     "conference": null,
     "predictions_made": 25,
     "correct_predictions": 22,
     "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.7556283020973206,
-    "team_wins": 31,
-    "team_losses": 5
-  },
-  {
-    "team_id": "Saint Mary's",
-    "display_name": "Saint Mary's",
-    "conference": null,
-    "predictions_made": 25,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.8085224938392639,
-    "team_wins": 27,
-    "team_losses": 6
+    "avg_confidence": 0.7604656076431274,
+    "team_wins": 28,
+    "team_losses": 9
   },
   {
     "team_id": "Stephen F. Austin",
@@ -198,15 +187,26 @@
     "team_losses": 6
   },
   {
-    "team_id": "Arkansas",
-    "display_name": "Arkansas",
+    "team_id": "Saint Mary's",
+    "display_name": "Saint Mary's",
     "conference": null,
     "predictions_made": 25,
     "correct_predictions": 22,
     "prediction_accuracy": 0.8799999952316284,
-    "avg_confidence": 0.7604656076431274,
-    "team_wins": 28,
-    "team_losses": 9
+    "avg_confidence": 0.8085224938392639,
+    "team_wins": 27,
+    "team_losses": 6
+  },
+  {
+    "team_id": "High Point",
+    "display_name": "High Point",
+    "conference": null,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.7556283020973206,
+    "team_wins": 31,
+    "team_losses": 5
   },
   {
     "team_id": "UConn",
@@ -429,17 +429,6 @@
     "team_losses": 15
   },
   {
-    "team_id": "Santa Clara",
-    "display_name": "Santa Clara",
-    "conference": null,
-    "predictions_made": 17,
-    "correct_predictions": 14,
-    "prediction_accuracy": 0.8235294222831726,
-    "avg_confidence": 0.7421927662456737,
-    "team_wins": 26,
-    "team_losses": 9
-  },
-  {
     "team_id": "Saint Joseph's",
     "display_name": "Saint Joseph's",
     "conference": null,
@@ -471,6 +460,17 @@
     "avg_confidence": 0.8386318122639376,
     "team_wins": 19,
     "team_losses": 13
+  },
+  {
+    "team_id": "Santa Clara",
+    "display_name": "Santa Clara",
+    "conference": null,
+    "predictions_made": 17,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.8235294222831726,
+    "avg_confidence": 0.7421927662456737,
+    "team_wins": 26,
+    "team_losses": 9
   },
   {
     "team_id": "Iowa State",
@@ -517,17 +517,6 @@
     "team_losses": 13
   },
   {
-    "team_id": "Florida",
-    "display_name": "Florida",
-    "conference": null,
-    "predictions_made": 26,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.807692289352417,
-    "avg_confidence": 0.7979196332968198,
-    "team_wins": 27,
-    "team_losses": 8
-  },
-  {
     "team_id": "Purdue",
     "display_name": "Purdue",
     "conference": null,
@@ -537,6 +526,17 @@
     "avg_confidence": 0.7355948824148911,
     "team_wins": 30,
     "team_losses": 9
+  },
+  {
+    "team_id": "Florida",
+    "display_name": "Florida",
+    "conference": null,
+    "predictions_made": 26,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.807692289352417,
+    "avg_confidence": 0.7979196332968198,
+    "team_wins": 27,
+    "team_losses": 8
   },
   {
     "team_id": "New Mexico",
