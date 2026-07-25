@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { TrendingUp, DollarSign, Target, Calendar, ArrowRight } from 'lucide-react'
 import GameCard from '../components/GameCard'
 import { fetchTodayGames, fetchBettingSummary, fetchAccuracyOverall, fetchMetadata } from '../services/api'
+import { buildAppHref } from '../utils/routing'
 
 export default function HomePage() {
   const [todayGames, setTodayGames] = useState([])
@@ -92,10 +92,10 @@ export default function HomePage() {
             <p className="text-sm text-gray-600">
               {accuracy?.correct_predictions || 0} of {accuracy?.total_predictions || 0} correct
             </p>
-            <Link to="/accuracy" className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
+            <a href={buildAppHref('/accuracy')} className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
               <span>View More</span>
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -122,10 +122,10 @@ export default function HomePage() {
                 </span>
               )}
             </p>
-            <Link to="/betting" className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
+            <a href={buildAppHref('/betting')} className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
               <span>View betting analytics</span>
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
         
@@ -144,10 +144,10 @@ export default function HomePage() {
             <p className="text-sm text-gray-600">
               {todayGames.length === 0 ? 'No games scheduled' : 'games with predictions'}
             </p>
-            <Link to="/predictions" className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
+            <a href={buildAppHref('/predictions')} className="text-primary-600 text-sm font-medium flex items-center space-x-1 hover:underline">
               <span>View all predictions</span>
               <ArrowRight size={14} />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -168,12 +168,12 @@ export default function HomePage() {
             ))}
           </div>
           {todayGames.length > 5 && (
-            <Link 
-              to="/predictions"
+            <a 
+              href={buildAppHref('/predictions')}
               className="mt-4 block text-center text-primary-600 hover:text-primary-700 font-medium"
             >
               View all {todayGames.length} games →
-            </Link>
+            </a>
           )}
         </div>
       ) : (
@@ -181,10 +181,10 @@ export default function HomePage() {
           <Calendar className="mx-auto text-gray-400 mb-4" size={48} />
           <h3 className="text-xl font-semibold text-gray-700 mb-2">No games today</h3>
           <p className="text-gray-600 mb-4">Check back tomorrow for new predictions</p>
-          <Link to="/predictions" className="btn btn-primary inline-flex items-center space-x-2">
+          <a href={buildAppHref('/predictions')} className="btn btn-primary inline-flex items-center space-x-2">
             <span>View upcoming games</span>
             <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       )}
     </div>

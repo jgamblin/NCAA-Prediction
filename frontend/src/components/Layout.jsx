@@ -1,9 +1,7 @@
-import { Link, useLocation } from 'react-router-dom'
 import { Home, TrendingUp, DollarSign, Users, History, Target, Github, BarChart3 } from 'lucide-react'
+import { buildAppHref } from '../utils/routing'
 
-export default function Layout({ children }) {
-  const location = useLocation()
-  
+export default function Layout({ children, currentPath }) {
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/predictions', label: 'Predictions', icon: TrendingUp },
@@ -21,7 +19,7 @@ export default function Layout({ children }) {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3">
+            <a href={buildAppHref('/')} className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white text-2xl font-bold">🏀</span>
               </div>
@@ -29,16 +27,16 @@ export default function Layout({ children }) {
                 <h1 className="text-xl font-bold text-gray-900">NCAA Predictions</h1>
                 <p className="text-xs text-gray-500">Machine Learning Powered</p>
               </div>
-            </Link>
+            </a>
             
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-1">
               {navItems.map(({ path, label, icon: Icon }) => {
-                const isActive = location.pathname === path
+                const isActive = currentPath === path
                 return (
-                  <Link
+                  <a
                     key={path}
-                    to={path}
+                    href={buildAppHref(path)}
                     className={`
                       flex items-center space-x-2 px-4 py-2 rounded-lg
                       transition-colors duration-200
@@ -50,7 +48,7 @@ export default function Layout({ children }) {
                   >
                     <Icon size={18} />
                     <span>{label}</span>
-                  </Link>
+                  </a>
                 )
               })}
             </nav>
@@ -63,11 +61,11 @@ export default function Layout({ children }) {
         <div className="container mx-auto px-4">
           <div className="flex justify-around py-2">
             {navItems.map(({ path, label, icon: Icon }) => {
-              const isActive = location.pathname === path
+              const isActive = currentPath === path
               return (
-                <Link
+                <a
                   key={path}
-                  to={path}
+                  href={buildAppHref(path)}
                   className={`
                     flex flex-col items-center space-y-1 px-3 py-2 rounded-lg
                     ${isActive
@@ -78,7 +76,7 @@ export default function Layout({ children }) {
                 >
                   <Icon size={20} />
                   <span className="text-xs">{label}</span>
-                </Link>
+                </a>
               )
             })}
           </div>
