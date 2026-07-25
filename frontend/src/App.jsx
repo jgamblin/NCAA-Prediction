@@ -8,7 +8,29 @@ import TeamsPage from './pages/TeamsPage'
 import HistoryPage from './pages/HistoryPage'
 import AccuracyPage from './pages/AccuracyPage'
 import './styles/animations.css'
-import { getCurrentPath } from './utils/routing'
+import { buildAppHref, getCurrentPath } from './utils/routing'
+
+const routes = {
+  '/': <HomePage />,
+  '/predictions': <PredictionsPage />,
+  '/betting': <BettingPage />,
+  '/betting-accuracy': <BettingAccuracyPage />,
+  '/teams': <TeamsPage />,
+  '/history': <HistoryPage />,
+  '/accuracy': <AccuracyPage />,
+}
+
+function NotFoundPage() {
+  return (
+    <div className="card text-center py-12">
+      <h2 className="text-2xl font-bold text-gray-900">Page not found</h2>
+      <p className="mt-3 text-gray-600">The page you requested does not exist.</p>
+      <a href={buildAppHref('/')} className="btn btn-primary inline-flex items-center mt-6">
+        Return home
+      </a>
+    </div>
+  )
+}
 
 function App() {
   const [currentPath, setCurrentPath] = useState(() => getCurrentPath())
@@ -26,17 +48,7 @@ function App() {
   }, [])
 
   const currentPage = useMemo(() => {
-    const routes = {
-      '/': <HomePage />,
-      '/predictions': <PredictionsPage />,
-      '/betting': <BettingPage />,
-      '/betting-accuracy': <BettingAccuracyPage />,
-      '/teams': <TeamsPage />,
-      '/history': <HistoryPage />,
-      '/accuracy': <AccuracyPage />,
-    }
-
-    return routes[currentPath] ?? <HomePage />
+    return routes[currentPath] ?? <NotFoundPage />
   }, [currentPath])
 
   return (

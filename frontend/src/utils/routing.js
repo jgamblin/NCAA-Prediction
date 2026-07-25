@@ -1,5 +1,5 @@
-const BASE_URL = import.meta.env.BASE_URL || '/'
-const BASE_PATH = BASE_URL.endsWith('/') && BASE_URL !== '/' ? BASE_URL.slice(0, -1) : BASE_URL
+const BASE_URL_PATH = import.meta.env.BASE_URL || '/'
+const BASE_PATH = BASE_URL_PATH.endsWith('/') && BASE_URL_PATH !== '/' ? BASE_URL_PATH.slice(0, -1) : BASE_URL_PATH
 
 function normalizePath(path) {
   if (!path) {
@@ -31,5 +31,5 @@ export function getCurrentPath() {
 
 export function buildAppHref(path) {
   const normalized = normalizePath(path)
-  return `${BASE_URL}#${normalized}`
+  return `${BASE_URL_PATH}#${normalized}`
 }
