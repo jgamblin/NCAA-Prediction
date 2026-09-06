@@ -32,9 +32,13 @@ jobs:
         working-directory: frontend
         run: npx npm-check-updates@latest -u
 
-      - name: Install updated dependencies
+      - name: Refresh frontend lockfile
         working-directory: frontend
-        run: npm install
+        run: npm install --package-lock-only
+
+      - name: Install refreshed dependencies
+        working-directory: frontend
+        run: npm ci
 
       - name: Verify updated frontend dependencies
         working-directory: frontend
@@ -54,6 +58,3 @@ jobs:
             - verify the updated dependencies still pass audit and build checks
           branch: automation/update-frontend-npm-dependencies
           delete-branch: true
-          add-paths: |
-            frontend/package.json
-            frontend/package-lock.json
