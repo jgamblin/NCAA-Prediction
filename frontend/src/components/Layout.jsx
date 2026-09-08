@@ -1,4 +1,4 @@
-import { Home, TrendingUp, DollarSign, Users, History, Target, Github, BarChart3 } from 'lucide-react'
+import { Home, TrendingUp, DollarSign, Users, History, Target, GitHub, BarChart3 } from 'lucide-react'
 import { buildAppHref } from '../utils/routing'
 
 export default function Layout({ children, currentPath }) {
@@ -107,7 +107,7 @@ export default function Layout({ children, currentPath }) {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1 hover:text-primary-600 transition-colors"
               >
-                <Github size={16} />
+                <GitHub size={16} />
                 <span>View on GitHub</span>
               </a>
               <span>•</span>
