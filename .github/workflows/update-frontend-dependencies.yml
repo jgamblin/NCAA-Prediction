@@ -24,7 +24,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          # Node 24 bundles npm 11. The npm 10.8.2 that ships with Node 20
+          # crashes in arborist (#loadPeerSet, "reading 'edgesOut'") when an
+          # optional peer chain under vite has a version skew, which broke this
+          # job from 2026-10-19. npm-check-updates 23 also declares
+          # engines node ^22.22.2 || ^24.15.0 || >=26.0.0.
+          node-version: '24'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
