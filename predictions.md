@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-10-31 11:58:00 CDT
-**Lineage**: config `7dd58a0bb0e2` · commit `63b03d2`
+**Last Updated**: 2026-11-01 11:47:56 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `1fe5fc2`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 0
-- **Average Confidence**: 0.0%
-- **High (≥70%)**: 0 · **Medium (60-70%)**: 0 · **Other (<60%)**: 0
+- **Games Predicted Today**: 1
+- **Average Confidence**: 65.0%
+- **High (≥70%)**: 0 · **Medium (60-70%)**: 1 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -26,13 +26,28 @@
 | 2025-11-29 | 31 | ✅ | ❌ |
 | 2025-11-30 | 19 | ❌ | ❌ |
 
+### 📊 Medium Confidence Picks (60–70%)
+
+| # | Winner | Opponent | Confidence |
+|---|--------|---------|------------|
+| 1 | **Liberty** | High Point | 65.0% |
+
 ### 👀 Games to Watch
 
-*No games available.*
+| # | Matchup | Confidence | Note |
+|---|---------|------------|------|
+| 1 | High Point vs Liberty | 65.0% |  |
+
+### 📈 Distribution Summary
+
+- Home Teams Favored: 0
+- Away Teams Favored: 1
+- Max Confidence: 65.0%
+- Min Confidence: 65.0%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (438 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (472 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
