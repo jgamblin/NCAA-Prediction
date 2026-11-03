@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 2.1954405307769775,
     "potential_payout": 21.95440673828125,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-11-03T19:14:27.087585",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "Purdue",
         "moneyline": -198,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
-        "home_team": "Purdue",
-        "away_team": "Gonzaga",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "won": true,
+        "actual_winner": "Gonzaga",
+        "home_team": "Gonzaga",
+        "away_team": "Purdue",
+        "home_score": 78,
+        "away_score": 72,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "UCLA",
         "moneyline": -218,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "UCLA",
         "home_team": "UCLA",
         "away_team": "Arizona",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 84,
+        "away_score": 75,
+        "game_status": "Final"
       }
     ]
   },
