@@ -1,13 +1,13 @@
 [
   {
     "display_name": "Abilene Christian",
-    "games_played": 34,
-    "wins": 14,
+    "games_played": 35,
+    "wins": 15,
     "losses": 20,
-    "win_pct": 0.4117647058823529,
+    "win_pct": 0.42857142857142855,
     "predictions_made": 35,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.5714285714285714,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.6,
     "avg_confidence": 0.7432637214660645,
     "conference": "WAC"
   },
@@ -56,7 +56,7 @@
     "predictions_made": 33,
     "correct_predictions": 28,
     "prediction_accuracy": 0.8484848484848485,
-    "avg_confidence": 0.789036750793457,
+    "avg_confidence": 0.7846270203590393,
     "conference": "MAC"
   },
   {
@@ -65,10 +65,10 @@
     "wins": 20,
     "losses": 15,
     "win_pct": 0.5714285714285714,
-    "predictions_made": 36,
+    "predictions_made": 37,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.4166666666666667,
-    "avg_confidence": 0.7064101696014404,
+    "prediction_accuracy": 0.40540540540540543,
+    "avg_confidence": 0.7053356766700745,
     "conference": ""
   },
   {
@@ -80,7 +80,7 @@
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.6886582374572754,
+    "avg_confidence": 0.6889596581459045,
     "conference": ""
   },
   {
@@ -89,10 +89,10 @@
     "wins": 10,
     "losses": 23,
     "win_pct": 0.30303030303030304,
-    "predictions_made": 33,
+    "predictions_made": 34,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7611492276191711,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7548055052757263,
     "conference": ""
   },
   {
@@ -120,6 +120,18 @@
     "conference": ""
   },
   {
+    "display_name": "Albion Britons",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_pct": 0.0,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.7435958981513977,
+    "conference": ""
+  },
+  {
     "display_name": "Alcorn State",
     "games_played": 34,
     "wins": 9,
@@ -128,7 +140,7 @@
     "predictions_made": 33,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7294615507125854,
+    "avg_confidence": 0.7286441326141357,
     "conference": ""
   },
   {
@@ -185,10 +197,22 @@
     "wins": 16,
     "losses": 18,
     "win_pct": 0.47058823529411764,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5333333333333333,
-    "avg_confidence": 0.7203199863433838,
+    "prediction_accuracy": 0.5161290322580645,
+    "avg_confidence": 0.723767101764679,
+    "conference": ""
+  },
+  {
+    "display_name": "Andrew Fighting",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_pct": 0.0,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8435896039009094,
     "conference": ""
   },
   {
@@ -212,7 +236,7 @@
     "predictions_made": 33,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7608738541603088,
+    "avg_confidence": 0.7595137357711792,
     "conference": "Sun Belt"
   },
   {
@@ -272,7 +296,7 @@
     "predictions_made": 32,
     "correct_predictions": 20,
     "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7486410140991211,
+    "avg_confidence": 0.7479278445243835,
     "conference": ""
   },
   {
@@ -284,7 +308,7 @@
     "predictions_made": 39,
     "correct_predictions": 28,
     "prediction_accuracy": 0.717948717948718,
-    "avg_confidence": 0.7375145554542542,
+    "avg_confidence": 0.7355279922485352,
     "conference": "SEC"
   },
   {
@@ -320,7 +344,7 @@
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7463056445121765,
+    "avg_confidence": 0.7453315854072571,
     "conference": ""
   },
   {
@@ -353,10 +377,10 @@
     "wins": 13,
     "losses": 13,
     "win_pct": 0.5,
-    "predictions_made": 28,
+    "predictions_made": 29,
     "correct_predictions": 6,
-    "prediction_accuracy": 0.21428571428571427,
-    "avg_confidence": 0.7454864382743835,
+    "prediction_accuracy": 0.20689655172413793,
+    "avg_confidence": 0.7421091794967651,
     "conference": ""
   },
   {
@@ -404,7 +428,7 @@
     "predictions_made": 37,
     "correct_predictions": 24,
     "prediction_accuracy": 0.6486486486486487,
-    "avg_confidence": 0.7388591170310974,
+    "avg_confidence": 0.7397447228431702,
     "conference": "SEC"
   },
   {
@@ -428,7 +452,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7617835998535156,
+    "avg_confidence": 0.7605000138282776,
     "conference": ""
   },
   {
@@ -452,7 +476,7 @@
     "predictions_made": 32,
     "correct_predictions": 9,
     "prediction_accuracy": 0.28125,
-    "avg_confidence": 0.7343758344650269,
+    "avg_confidence": 0.7317519783973694,
     "conference": "Big 12"
   },
   {
@@ -464,7 +488,7 @@
     "predictions_made": 33,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.8061884045600891,
+    "avg_confidence": 0.8071813583374023,
     "conference": ""
   },
   {
@@ -485,22 +509,22 @@
     "wins": 19,
     "losses": 17,
     "win_pct": 0.5277777777777778,
-    "predictions_made": 35,
+    "predictions_made": 36,
     "correct_predictions": 26,
-    "prediction_accuracy": 0.7428571428571429,
-    "avg_confidence": 0.7616132497787476,
+    "prediction_accuracy": 0.7222222222222222,
+    "avg_confidence": 0.7610185742378235,
     "conference": "Big 12"
   },
   {
     "display_name": "Bellarmine",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 13,
-    "losses": 21,
-    "win_pct": 0.38235294117647056,
+    "losses": 22,
+    "win_pct": 0.37142857142857144,
     "predictions_made": 35,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7912994027137756,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6285714285714286,
+    "avg_confidence": 0.7898097634315491,
     "conference": "ASUN"
   },
   {
@@ -512,7 +536,7 @@
     "predictions_made": 31,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5806451612903226,
-    "avg_confidence": 0.7630985379219055,
+    "avg_confidence": 0.761489987373352,
     "conference": "Missouri Valley"
   },
   {
@@ -601,26 +625,26 @@
   },
   {
     "display_name": "Bethesda",
-    "games_played": 9,
+    "games_played": 11,
     "wins": 0,
-    "losses": 9,
+    "losses": 11,
     "win_pct": 0.0,
     "predictions_made": 11,
-    "correct_predictions": 7,
-    "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.84811931848526,
+    "correct_predictions": 9,
+    "prediction_accuracy": 0.8181818181818182,
+    "avg_confidence": 0.8410602807998657,
     "conference": ""
   },
   {
     "display_name": "Bethune-Cookman",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 17,
-    "losses": 17,
-    "win_pct": 0.5,
-    "predictions_made": 33,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7681811451911926,
+    "losses": 18,
+    "win_pct": 0.4857142857142857,
+    "predictions_made": 34,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6470588235294118,
+    "avg_confidence": 0.7705875635147095,
     "conference": "SWAC"
   },
   {
@@ -632,7 +656,7 @@
     "predictions_made": 30,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5333333333333333,
-    "avg_confidence": 0.78022700548172,
+    "avg_confidence": 0.7794047594070435,
     "conference": "America East"
   },
   {
@@ -749,10 +773,10 @@
     "wins": 21,
     "losses": 12,
     "win_pct": 0.6363636363636364,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.4838709677419355,
-    "avg_confidence": 0.7430447340011597,
+    "prediction_accuracy": 0.46875,
+    "avg_confidence": 0.7360608577728271,
     "conference": ""
   },
   {
@@ -761,10 +785,10 @@
     "wins": 13,
     "losses": 20,
     "win_pct": 0.3939393939393939,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.6333333333333333,
-    "avg_confidence": 0.7746871113777161,
+    "prediction_accuracy": 0.6129032258064516,
+    "avg_confidence": 0.7733511328697205,
     "conference": "ACC"
   },
   {
@@ -773,10 +797,10 @@
     "wins": 19,
     "losses": 17,
     "win_pct": 0.5277777777777778,
-    "predictions_made": 35,
+    "predictions_made": 36,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.45714285714285713,
-    "avg_confidence": 0.7228533029556274,
+    "prediction_accuracy": 0.4444444444444444,
+    "avg_confidence": 0.7282520532608032,
     "conference": "Patriot"
   },
   {
@@ -800,31 +824,31 @@
     "predictions_made": 32,
     "correct_predictions": 19,
     "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.764006495475769,
+    "avg_confidence": 0.7636545300483704,
     "conference": "MAC"
   },
   {
     "display_name": "Boyce",
-    "games_played": 1,
+    "games_played": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_pct": 0.0,
     "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 1.0,
     "avg_confidence": 0.8509628772735596,
     "conference": ""
   },
   {
     "display_name": "Bradley",
-    "games_played": 35,
+    "games_played": 36,
     "wins": 22,
-    "losses": 13,
-    "win_pct": 0.6285714285714286,
+    "losses": 14,
+    "win_pct": 0.6111111111111112,
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7590230703353882,
+    "avg_confidence": 0.7583518624305725,
     "conference": "Missouri Valley"
   },
   {
@@ -920,7 +944,7 @@
     "predictions_made": 30,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5333333333333333,
-    "avg_confidence": 0.7370707392692566,
+    "avg_confidence": 0.7360183596611023,
     "conference": "Ivy League"
   },
   {
@@ -944,7 +968,7 @@
     "predictions_made": 33,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7438154220581055,
+    "avg_confidence": 0.7343878149986267,
     "conference": "America East"
   },
   {
@@ -973,13 +997,13 @@
   },
   {
     "display_name": "Bucknell",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 10,
-    "losses": 24,
-    "win_pct": 0.29411764705882354,
+    "losses": 25,
+    "win_pct": 0.2857142857142857,
     "predictions_made": 34,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.5588235294117647,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.5882352941176471,
     "avg_confidence": 0.7183765172958374,
     "conference": "Patriot"
   },
@@ -1001,10 +1025,10 @@
     "wins": 17,
     "losses": 17,
     "win_pct": 0.5,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.53125,
-    "avg_confidence": 0.7623717188835144,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.7620265483856201,
     "conference": "MAC"
   },
   {
@@ -1016,7 +1040,7 @@
     "predictions_made": 33,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7185549736022949,
+    "avg_confidence": 0.7169502973556519,
     "conference": "Big East"
   },
   {
@@ -1025,10 +1049,10 @@
     "wins": 15,
     "losses": 20,
     "win_pct": 0.42857142857142855,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7671025991439819,
+    "prediction_accuracy": 0.6060606060606061,
+    "avg_confidence": 0.7579584121704102,
     "conference": "Big West"
   },
   {
@@ -1037,21 +1061,21 @@
     "wins": 9,
     "losses": 24,
     "win_pct": 0.2727272727272727,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 23,
-    "prediction_accuracy": 0.7666666666666667,
-    "avg_confidence": 0.7544084787368774,
+    "prediction_accuracy": 0.7419354838709677,
+    "avg_confidence": 0.7500237822532654,
     "conference": ""
   },
   {
     "display_name": "Cal State Fullerton",
-    "games_played": 35,
-    "wins": 18,
+    "games_played": 36,
+    "wins": 19,
     "losses": 17,
-    "win_pct": 0.5142857142857142,
+    "win_pct": 0.5277777777777778,
     "predictions_made": 33,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.5454545454545454,
     "avg_confidence": 0.7550168633460999,
     "conference": "Big West"
   },
@@ -1100,7 +1124,7 @@
     "predictions_made": 36,
     "correct_predictions": 23,
     "prediction_accuracy": 0.6388888888888888,
-    "avg_confidence": 0.736846923828125,
+    "avg_confidence": 0.7364492416381836,
     "conference": "ACC"
   },
   {
@@ -1112,7 +1136,7 @@
     "predictions_made": 33,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.765284538269043,
+    "avg_confidence": 0.7636282444000244,
     "conference": ""
   },
   {
@@ -1184,7 +1208,7 @@
     "predictions_made": 30,
     "correct_predictions": 12,
     "prediction_accuracy": 0.4,
-    "avg_confidence": 0.7808137536048889,
+    "avg_confidence": 0.7792923450469971,
     "conference": ""
   },
   {
@@ -1201,14 +1225,14 @@
   },
   {
     "display_name": "Canisius Golden Griffins",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 10,
-    "losses": 22,
-    "win_pct": 0.3125,
-    "predictions_made": 29,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5862068965517241,
-    "avg_confidence": 0.7813942432403564,
+    "losses": 23,
+    "win_pct": 0.30303030303030304,
+    "predictions_made": 30,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.7796198129653931,
     "conference": ""
   },
   {
@@ -1217,10 +1241,10 @@
     "wins": 0,
     "losses": 1,
     "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0,
+    "avg_confidence": 0.7178806662559509,
     "conference": ""
   },
   {
@@ -1325,10 +1349,10 @@
     "wins": 18,
     "losses": 14,
     "win_pct": 0.5625,
-    "predictions_made": 29,
+    "predictions_made": 30,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.6551724137931034,
-    "avg_confidence": 0.7227177023887634,
+    "prediction_accuracy": 0.6333333333333333,
+    "avg_confidence": 0.7269604206085205,
     "conference": "NEC"
   },
   {
@@ -1340,7 +1364,7 @@
     "predictions_made": 30,
     "correct_predictions": 19,
     "prediction_accuracy": 0.6333333333333333,
-    "avg_confidence": 0.8115871548652649,
+    "avg_confidence": 0.8097550868988037,
     "conference": "MAC"
   },
   {
@@ -1369,13 +1393,13 @@
   },
   {
     "display_name": "Central State Marauders",
-    "games_played": 1,
+    "games_played": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_pct": 0.0,
     "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 1.0,
     "avg_confidence": 0.7056142687797546,
     "conference": ""
   },
@@ -1433,10 +1457,10 @@
     "wins": 23,
     "losses": 11,
     "win_pct": 0.6764705882352942,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 18,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7532751560211182,
+    "prediction_accuracy": 0.5806451612903226,
+    "avg_confidence": 0.7489270567893982,
     "conference": "CAA"
   },
   {
@@ -1448,7 +1472,7 @@
     "predictions_made": 31,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5483870967741935,
-    "avg_confidence": 0.7256735563278198,
+    "avg_confidence": 0.728438138961792,
     "conference": "Big South"
   },
   {
@@ -1460,7 +1484,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7340853214263916,
+    "avg_confidence": 0.7316588163375854,
     "conference": "American"
   },
   {
@@ -1472,19 +1496,19 @@
     "predictions_made": 29,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5517241379310345,
-    "avg_confidence": 0.7614787817001343,
+    "avg_confidence": 0.7588011622428894,
     "conference": ""
   },
   {
     "display_name": "Cheyney (PA)",
-    "games_played": 3,
+    "games_played": 4,
     "wins": 0,
-    "losses": 3,
+    "losses": 4,
     "win_pct": 0.0,
     "predictions_made": 5,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.4,
-    "avg_confidence": 0.8121823072433472,
+    "correct_predictions": 3,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.7935055494308472,
     "conference": ""
   },
   {
@@ -1493,10 +1517,10 @@
     "wins": 8,
     "losses": 26,
     "win_pct": 0.23529411764705882,
-    "predictions_made": 33,
+    "predictions_made": 34,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7347759008407593,
+    "prediction_accuracy": 0.5882352941176471,
+    "avg_confidence": 0.7301344275474548,
     "conference": ""
   },
   {
@@ -1532,7 +1556,7 @@
     "predictions_made": 34,
     "correct_predictions": 24,
     "prediction_accuracy": 0.7058823529411765,
-    "avg_confidence": 0.7741286754608154,
+    "avg_confidence": 0.7753570079803467,
     "conference": "Big 12"
   },
   {
@@ -1561,13 +1585,13 @@
   },
   {
     "display_name": "City College NY",
-    "games_played": 2,
+    "games_played": 3,
     "wins": 0,
-    "losses": 2,
+    "losses": 3,
     "win_pct": 0.0,
     "predictions_made": 2,
-    "correct_predictions": 1,
-    "prediction_accuracy": 0.5,
+    "correct_predictions": 2,
+    "prediction_accuracy": 1.0,
     "avg_confidence": 0.8500000238418579,
     "conference": ""
   },
@@ -1592,7 +1616,7 @@
     "predictions_made": 36,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6111111111111112,
-    "avg_confidence": 0.7708439230918884,
+    "avg_confidence": 0.7669675350189209,
     "conference": "ACC"
   },
   {
@@ -1601,10 +1625,10 @@
     "wins": 12,
     "losses": 23,
     "win_pct": 0.34285714285714286,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7623541355133057,
+    "prediction_accuracy": 0.6363636363636364,
+    "avg_confidence": 0.760960578918457,
     "conference": ""
   },
   {
@@ -1637,10 +1661,10 @@
     "wins": 19,
     "losses": 15,
     "win_pct": 0.5588235294117647,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7472310066223145,
+    "prediction_accuracy": 0.48484848484848486,
+    "avg_confidence": 0.7445441484451294,
     "conference": ""
   },
   {
@@ -1669,14 +1693,14 @@
   },
   {
     "display_name": "Colgate",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 18,
-    "losses": 16,
-    "win_pct": 0.5294117647058824,
-    "predictions_made": 31,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.6451612903225806,
-    "avg_confidence": 0.7534590363502502,
+    "losses": 17,
+    "win_pct": 0.5142857142857142,
+    "predictions_made": 32,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.65625,
+    "avg_confidence": 0.7574467658996582,
     "conference": "Patriot"
   },
   {
@@ -1705,14 +1729,14 @@
   },
   {
     "display_name": "Colorado",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 18,
-    "losses": 16,
-    "win_pct": 0.5294117647058824,
+    "losses": 17,
+    "win_pct": 0.5142857142857142,
     "predictions_made": 31,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.6451612903225806,
-    "avg_confidence": 0.7350620627403259,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.6774193548387096,
+    "avg_confidence": 0.7426491379737854,
     "conference": "Big 12"
   },
   {
@@ -1748,7 +1772,7 @@
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7596734762191772,
+    "avg_confidence": 0.7596163749694824,
     "conference": ""
   },
   {
@@ -1772,7 +1796,7 @@
     "predictions_made": 29,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5862068965517241,
-    "avg_confidence": 0.7333713173866272,
+    "avg_confidence": 0.7332649230957031,
     "conference": "Ivy League"
   },
   {
@@ -1856,7 +1880,7 @@
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.8077586889266968,
+    "avg_confidence": 0.805090606212616,
     "conference": ""
   },
   {
@@ -1892,7 +1916,7 @@
     "predictions_made": 25,
     "correct_predictions": 5,
     "prediction_accuracy": 0.2,
-    "avg_confidence": 0.7203626036643982,
+    "avg_confidence": 0.7219728827476501,
     "conference": ""
   },
   {
@@ -1901,10 +1925,10 @@
     "wins": 18,
     "losses": 18,
     "win_pct": 0.5,
-    "predictions_made": 34,
+    "predictions_made": 35,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.5588235294117647,
-    "avg_confidence": 0.765965461730957,
+    "prediction_accuracy": 0.5428571428571428,
+    "avg_confidence": 0.7596654295921326,
     "conference": "Big East"
   },
   {
@@ -2045,34 +2069,34 @@
     "wins": 13,
     "losses": 16,
     "win_pct": 0.4482758620689655,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5666666666666667,
-    "avg_confidence": 0.7267614603042603,
+    "prediction_accuracy": 0.5483870967741935,
+    "avg_confidence": 0.7282320857048035,
     "conference": ""
   },
   {
     "display_name": "Davidson",
-    "games_played": 35,
-    "wins": 21,
+    "games_played": 36,
+    "wins": 22,
     "losses": 14,
-    "win_pct": 0.6,
+    "win_pct": 0.6111111111111112,
     "predictions_made": 35,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7643064260482788,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6571428571428571,
+    "avg_confidence": 0.7632945775985718,
     "conference": "Atlantic 10"
   },
   {
     "display_name": "Dayton",
-    "games_played": 38,
+    "games_played": 39,
     "wins": 26,
-    "losses": 12,
-    "win_pct": 0.6842105263157895,
+    "losses": 13,
+    "win_pct": 0.6666666666666666,
     "predictions_made": 37,
     "correct_predictions": 14,
     "prediction_accuracy": 0.3783783783783784,
-    "avg_confidence": 0.7116904258728027,
+    "avg_confidence": 0.7108457088470459,
     "conference": "Atlantic 10"
   },
   {
@@ -2084,7 +2108,7 @@
     "predictions_made": 31,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5161290322580645,
-    "avg_confidence": 0.7333317399024963,
+    "avg_confidence": 0.7294877171516418,
     "conference": ""
   },
   {
@@ -2117,10 +2141,10 @@
     "wins": 11,
     "losses": 22,
     "win_pct": 0.3333333333333333,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.4838709677419355,
-    "avg_confidence": 0.7585265636444092,
+    "prediction_accuracy": 0.46875,
+    "avg_confidence": 0.7613850831985474,
     "conference": ""
   },
   {
@@ -2132,19 +2156,19 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7523460984230042,
+    "avg_confidence": 0.7510486841201782,
     "conference": ""
   },
   {
     "display_name": "Denver Pioneers",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 15,
-    "losses": 18,
-    "win_pct": 0.45454545454545453,
+    "losses": 19,
+    "win_pct": 0.4411764705882353,
     "predictions_made": 30,
     "correct_predictions": 13,
     "prediction_accuracy": 0.43333333333333335,
-    "avg_confidence": 0.7215307354927063,
+    "avg_confidence": 0.718942403793335,
     "conference": ""
   },
   {
@@ -2156,7 +2180,7 @@
     "predictions_made": 31,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5161290322580645,
-    "avg_confidence": 0.7146603465080261,
+    "avg_confidence": 0.7122842073440552,
     "conference": "Horizon"
   },
   {
@@ -2189,10 +2213,10 @@
     "wins": 0,
     "losses": 1,
     "win_pct": 0.0,
-    "predictions_made": 1,
+    "predictions_made": 2,
     "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.8500000238418579,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7609362006187439,
     "conference": ""
   },
   {
@@ -2228,19 +2252,19 @@
     "predictions_made": 33,
     "correct_predictions": 16,
     "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7471475601196289,
+    "avg_confidence": 0.7431728839874268,
     "conference": "Missouri Valley"
   },
   {
     "display_name": "Drexel",
-    "games_played": 34,
-    "wins": 17,
+    "games_played": 35,
+    "wins": 18,
     "losses": 17,
-    "win_pct": 0.5,
+    "win_pct": 0.5142857142857142,
     "predictions_made": 34,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7404739856719971,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6470588235294118,
+    "avg_confidence": 0.7398028373718262,
     "conference": "CAA"
   },
   {
@@ -2252,19 +2276,19 @@
     "predictions_made": 39,
     "correct_predictions": 30,
     "prediction_accuracy": 0.7692307692307693,
-    "avg_confidence": 0.7607948780059814,
+    "avg_confidence": 0.7610063552856445,
     "conference": "ACC"
   },
   {
     "display_name": "Duquesne",
-    "games_played": 34,
-    "wins": 19,
+    "games_played": 35,
+    "wins": 20,
     "losses": 15,
-    "win_pct": 0.5588235294117647,
+    "win_pct": 0.5714285714285714,
     "predictions_made": 33,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7787355780601501,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.6363636363636364,
+    "avg_confidence": 0.7720281481742859,
     "conference": "Atlantic 10"
   },
   {
@@ -2281,14 +2305,14 @@
   },
   {
     "display_name": "East Carolina",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 12,
-    "losses": 20,
-    "win_pct": 0.375,
+    "losses": 21,
+    "win_pct": 0.36363636363636365,
     "predictions_made": 32,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7568646669387817,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6875,
+    "avg_confidence": 0.7619443535804749,
     "conference": "American"
   },
   {
@@ -2300,7 +2324,7 @@
     "predictions_made": 33,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.727543830871582,
+    "avg_confidence": 0.7268523573875427,
     "conference": ""
   },
   {
@@ -2312,18 +2336,18 @@
     "predictions_made": 35,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5428571428571428,
-    "avg_confidence": 0.7529506087303162,
+    "avg_confidence": 0.7522986531257629,
     "conference": "Southland"
   },
   {
     "display_name": "East West Phantoms",
-    "games_played": 1,
+    "games_played": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_pct": 0.0,
     "predictions_made": 2,
-    "correct_predictions": 0,
-    "prediction_accuracy": 0.0,
+    "correct_predictions": 1,
+    "prediction_accuracy": 0.5,
     "avg_confidence": 0.7581722736358643,
     "conference": ""
   },
@@ -2345,10 +2369,10 @@
     "wins": 13,
     "losses": 22,
     "win_pct": 0.37142857142857144,
-    "predictions_made": 35,
+    "predictions_made": 36,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7673299312591553,
+    "prediction_accuracy": 0.5833333333333334,
+    "avg_confidence": 0.7705365419387817,
     "conference": "Ohio Valley"
   },
   {
@@ -2360,7 +2384,7 @@
     "predictions_made": 32,
     "correct_predictions": 17,
     "prediction_accuracy": 0.53125,
-    "avg_confidence": 0.7626743316650391,
+    "avg_confidence": 0.7619612216949463,
     "conference": ""
   },
   {
@@ -2408,7 +2432,7 @@
     "predictions_made": 34,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7540543675422668,
+    "avg_confidence": 0.7551407814025879,
     "conference": "Big Sky"
   },
   {
@@ -2417,10 +2441,10 @@
     "wins": 0,
     "losses": 5,
     "win_pct": 0.0,
-    "predictions_made": 6,
+    "predictions_made": 7,
     "correct_predictions": 4,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.8331031799316406,
+    "prediction_accuracy": 0.5714285714285714,
+    "avg_confidence": 0.8355169892311096,
     "conference": ""
   },
   {
@@ -2468,7 +2492,7 @@
     "predictions_made": 33,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.7701177000999451,
+    "avg_confidence": 0.7670732140541077,
     "conference": "CAA"
   },
   {
@@ -2501,10 +2525,10 @@
     "wins": 0,
     "losses": 1,
     "win_pct": 0.0,
-    "predictions_made": 1,
+    "predictions_made": 2,
     "correct_predictions": 1,
-    "prediction_accuracy": 1.0,
-    "avg_confidence": 0.7892154455184937,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.8196077346801758,
     "conference": ""
   },
   {
@@ -2516,7 +2540,7 @@
     "predictions_made": 3,
     "correct_predictions": 1,
     "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.6470571160316467,
+    "avg_confidence": 0.6359859108924866,
     "conference": ""
   },
   {
@@ -2557,14 +2581,14 @@
   },
   {
     "display_name": "Evansville Purple Aces",
-    "games_played": 33,
-    "wins": 8,
+    "games_played": 34,
+    "wins": 9,
     "losses": 25,
-    "win_pct": 0.24242424242424243,
+    "win_pct": 0.2647058823529412,
     "predictions_made": 32,
     "correct_predictions": 20,
     "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7906877994537354,
+    "avg_confidence": 0.7870399951934814,
     "conference": ""
   },
   {
@@ -2588,18 +2612,18 @@
     "predictions_made": 35,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5428571428571428,
-    "avg_confidence": 0.7669178247451782,
+    "avg_confidence": 0.7586747407913208,
     "conference": "MAAC"
   },
   {
     "display_name": "Fairleigh Dickinson",
-    "games_played": 34,
-    "wins": 11,
+    "games_played": 35,
+    "wins": 12,
     "losses": 23,
-    "win_pct": 0.3235294117647059,
+    "win_pct": 0.34285714285714286,
     "predictions_made": 34,
-    "correct_predictions": 15,
-    "prediction_accuracy": 0.4411764705882353,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.47058823529411764,
     "avg_confidence": 0.7689687013626099,
     "conference": "NEC"
   },
@@ -2648,7 +2672,7 @@
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.785596489906311,
+    "avg_confidence": 0.7865327000617981,
     "conference": "SEC"
   },
   {
@@ -2657,10 +2681,10 @@
     "wins": 15,
     "losses": 18,
     "win_pct": 0.45454545454545453,
-    "predictions_made": 33,
+    "predictions_made": 34,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7678606510162354,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7612625360488892,
     "conference": ""
   },
   {
@@ -2672,7 +2696,7 @@
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.732122540473938,
+    "avg_confidence": 0.7308644652366638,
     "conference": ""
   },
   {
@@ -2681,10 +2705,10 @@
     "wins": 17,
     "losses": 19,
     "win_pct": 0.4722222222222222,
-    "predictions_made": 36,
+    "predictions_made": 37,
     "correct_predictions": 22,
-    "prediction_accuracy": 0.6111111111111112,
-    "avg_confidence": 0.7733584046363831,
+    "prediction_accuracy": 0.5945945945945946,
+    "avg_confidence": 0.7716657519340515,
     "conference": "ASUN"
   },
   {
@@ -2696,7 +2720,7 @@
     "predictions_made": 33,
     "correct_predictions": 16,
     "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7474671602249146,
+    "avg_confidence": 0.7467756271362305,
     "conference": ""
   },
   {
@@ -2732,7 +2756,7 @@
     "predictions_made": 33,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.8118401169776917,
+    "avg_confidence": 0.8111486434936523,
     "conference": ""
   },
   {
@@ -2744,7 +2768,7 @@
     "predictions_made": 31,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5161290322580645,
-    "avg_confidence": 0.7309973835945129,
+    "avg_confidence": 0.729960560798645,
     "conference": "Atlantic 10"
   },
   {
@@ -2833,26 +2857,26 @@
   },
   {
     "display_name": "Fresno State",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 14,
-    "losses": 19,
-    "win_pct": 0.42424242424242425,
+    "losses": 20,
+    "win_pct": 0.4117647058823529,
     "predictions_made": 31,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6774193548387096,
-    "avg_confidence": 0.7971501350402832,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.7096774193548387,
+    "avg_confidence": 0.7970876097679138,
     "conference": ""
   },
   {
     "display_name": "Furman",
-    "games_played": 37,
-    "wins": 24,
+    "games_played": 38,
+    "wins": 25,
     "losses": 13,
-    "win_pct": 0.6486486486486487,
+    "win_pct": 0.6578947368421053,
     "predictions_made": 36,
     "correct_predictions": 25,
     "prediction_accuracy": 0.6944444444444444,
-    "avg_confidence": 0.7753629684448242,
+    "avg_confidence": 0.7739778161048889,
     "conference": "Southern"
   },
   {
@@ -2876,7 +2900,7 @@
     "predictions_made": 31,
     "correct_predictions": 25,
     "prediction_accuracy": 0.8064516129032258,
-    "avg_confidence": 0.8234078884124756,
+    "avg_confidence": 0.8223364949226379,
     "conference": ""
   },
   {
@@ -2912,31 +2936,31 @@
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7585219144821167,
+    "avg_confidence": 0.7578507661819458,
     "conference": "Atlantic 10"
   },
   {
     "display_name": "George Washington",
-    "games_played": 36,
-    "wins": 20,
+    "games_played": 37,
+    "wins": 21,
     "losses": 16,
-    "win_pct": 0.5555555555555556,
+    "win_pct": 0.5675675675675675,
     "predictions_made": 37,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.5135135135135135,
-    "avg_confidence": 0.7532139420509338,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.5405405405405406,
+    "avg_confidence": 0.7504985928535461,
     "conference": "Atlantic 10"
   },
   {
     "display_name": "Georgetown Hoyas",
-    "games_played": 35,
-    "wins": 17,
+    "games_played": 36,
+    "wins": 18,
     "losses": 18,
-    "win_pct": 0.4857142857142857,
+    "win_pct": 0.5,
     "predictions_made": 34,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5294117647058824,
-    "avg_confidence": 0.7490565776824951,
+    "avg_confidence": 0.7483854293823242,
     "conference": ""
   },
   {
@@ -2948,7 +2972,7 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7628239393234253,
+    "avg_confidence": 0.7631164789199829,
     "conference": "SEC"
   },
   {
@@ -2972,19 +2996,19 @@
     "predictions_made": 39,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5128205128205128,
-    "avg_confidence": 0.7517982721328735,
+    "avg_confidence": 0.7503823637962341,
     "conference": "Sun Belt"
   },
   {
     "display_name": "Georgia State",
-    "games_played": 34,
-    "wins": 10,
+    "games_played": 35,
+    "wins": 11,
     "losses": 24,
-    "win_pct": 0.29411764705882354,
-    "predictions_made": 33,
+    "win_pct": 0.3142857142857143,
+    "predictions_made": 34,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.45454545454545453,
-    "avg_confidence": 0.7302960157394409,
+    "prediction_accuracy": 0.4411764705882353,
+    "avg_confidence": 0.7302331924438477,
     "conference": ""
   },
   {
@@ -2996,7 +3020,7 @@
     "predictions_made": 31,
     "correct_predictions": 24,
     "prediction_accuracy": 0.7741935483870968,
-    "avg_confidence": 0.7333210706710815,
+    "avg_confidence": 0.7318488955497742,
     "conference": "ACC"
   },
   {
@@ -3013,14 +3037,14 @@
   },
   {
     "display_name": "Gonzaga",
-    "games_played": 36,
-    "wins": 32,
+    "games_played": 37,
+    "wins": 33,
     "losses": 4,
-    "win_pct": 0.8888888888888888,
+    "win_pct": 0.8918918918918919,
     "predictions_made": 34,
-    "correct_predictions": 29,
-    "prediction_accuracy": 0.8529411764705882,
-    "avg_confidence": 0.8276731967926025,
+    "correct_predictions": 30,
+    "prediction_accuracy": 0.8823529411764706,
+    "avg_confidence": 0.8263671398162842,
     "conference": "WCC"
   },
   {
@@ -3061,14 +3085,14 @@
   },
   {
     "display_name": "Grand Canyon Lopes",
-    "games_played": 33,
-    "wins": 21,
+    "games_played": 34,
+    "wins": 22,
     "losses": 12,
-    "win_pct": 0.6363636363636364,
+    "win_pct": 0.6470588235294118,
     "predictions_made": 31,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.6129032258064516,
-    "avg_confidence": 0.770633339881897,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.6451612903225806,
+    "avg_confidence": 0.7668678760528564,
     "conference": ""
   },
   {
@@ -3080,7 +3104,7 @@
     "predictions_made": 33,
     "correct_predictions": 14,
     "prediction_accuracy": 0.42424242424242425,
-    "avg_confidence": 0.744860827922821,
+    "avg_confidence": 0.7334004044532776,
     "conference": "Horizon"
   },
   {
@@ -3109,14 +3133,14 @@
   },
   {
     "display_name": "Hampton",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 13,
-    "losses": 20,
-    "win_pct": 0.3939393939393939,
+    "losses": 21,
+    "win_pct": 0.38235294117647056,
     "predictions_made": 32,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7779423594474792,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6875,
+    "avg_confidence": 0.7742945551872253,
     "conference": "CAA"
   },
   {
@@ -3161,10 +3185,10 @@
     "wins": 18,
     "losses": 12,
     "win_pct": 0.6,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5483870967741935,
-    "avg_confidence": 0.7403600811958313,
+    "prediction_accuracy": 0.53125,
+    "avg_confidence": 0.7413597702980042,
     "conference": "Ivy League"
   },
   {
@@ -3212,19 +3236,19 @@
     "predictions_made": 33,
     "correct_predictions": 23,
     "prediction_accuracy": 0.696969696969697,
-    "avg_confidence": 0.7592997550964355,
+    "avg_confidence": 0.7595496773719788,
     "conference": ""
   },
   {
     "display_name": "High Point",
-    "games_played": 38,
-    "wins": 33,
+    "games_played": 39,
+    "wins": 34,
     "losses": 5,
-    "win_pct": 0.868421052631579,
-    "predictions_made": 37,
-    "correct_predictions": 25,
-    "prediction_accuracy": 0.6756756756756757,
-    "avg_confidence": 0.7551897168159485,
+    "win_pct": 0.8717948717948718,
+    "predictions_made": 38,
+    "correct_predictions": 26,
+    "prediction_accuracy": 0.6842105263157895,
+    "avg_confidence": 0.747694194316864,
     "conference": "Big South"
   },
   {
@@ -3236,7 +3260,7 @@
     "predictions_made": 33,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.75954270362854,
+    "avg_confidence": 0.7581596970558167,
     "conference": ""
   },
   {
@@ -3245,10 +3269,10 @@
     "wins": 11,
     "losses": 24,
     "win_pct": 0.3142857142857143,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5161290322580645,
-    "avg_confidence": 0.7359538674354553,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7395178079605103,
     "conference": "Patriot"
   },
   {
@@ -3301,14 +3325,14 @@
   },
   {
     "display_name": "Houston Christian",
-    "games_played": 33,
-    "wins": 13,
+    "games_played": 34,
+    "wins": 14,
     "losses": 20,
-    "win_pct": 0.3939393939393939,
+    "win_pct": 0.4117647058823529,
     "predictions_made": 32,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7613846659660339,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.625,
+    "avg_confidence": 0.7606714963912964,
     "conference": ""
   },
   {
@@ -3320,18 +3344,18 @@
     "predictions_made": 37,
     "correct_predictions": 22,
     "prediction_accuracy": 0.5945945945945946,
-    "avg_confidence": 0.7687537670135498,
+    "avg_confidence": 0.7698258757591248,
     "conference": "MEAC"
   },
   {
     "display_name": "Howard Payne",
-    "games_played": 3,
+    "games_played": 4,
     "wins": 0,
-    "losses": 3,
+    "losses": 4,
     "win_pct": 0.0,
     "predictions_made": 3,
-    "correct_predictions": 2,
-    "prediction_accuracy": 0.6666666666666666,
+    "correct_predictions": 3,
+    "prediction_accuracy": 1.0,
     "avg_confidence": 0.8504724502563477,
     "conference": ""
   },
@@ -3385,14 +3409,14 @@
   },
   {
     "display_name": "IU Indianapolis",
-    "games_played": 33,
-    "wins": 8,
+    "games_played": 34,
+    "wins": 9,
     "losses": 25,
-    "win_pct": 0.24242424242424243,
+    "win_pct": 0.2647058823529412,
     "predictions_made": 33,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.8117853999137878,
+    "avg_confidence": 0.8058950901031494,
     "conference": ""
   },
   {
@@ -3416,7 +3440,7 @@
     "predictions_made": 37,
     "correct_predictions": 21,
     "prediction_accuracy": 0.5675675675675675,
-    "avg_confidence": 0.7122597694396973,
+    "avg_confidence": 0.7112756967544556,
     "conference": "Big Sky"
   },
   {
@@ -3428,7 +3452,7 @@
     "predictions_made": 32,
     "correct_predictions": 19,
     "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7287123203277588,
+    "avg_confidence": 0.7250645160675049,
     "conference": ""
   },
   {
@@ -3452,7 +3476,7 @@
     "predictions_made": 33,
     "correct_predictions": 3,
     "prediction_accuracy": 0.09090909090909091,
-    "avg_confidence": 0.7429816126823425,
+    "avg_confidence": 0.741325318813324,
     "conference": ""
   },
   {
@@ -3464,7 +3488,7 @@
     "predictions_made": 36,
     "correct_predictions": 16,
     "prediction_accuracy": 0.4444444444444444,
-    "avg_confidence": 0.7393457889556885,
+    "avg_confidence": 0.7354694604873657,
     "conference": ""
   },
   {
@@ -3488,7 +3512,7 @@
     "predictions_made": 30,
     "correct_predictions": 18,
     "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7507809400558472,
+    "avg_confidence": 0.7486363649368286,
     "conference": "Southland"
   },
   {
@@ -3500,7 +3524,7 @@
     "predictions_made": 34,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5294117647058824,
-    "avg_confidence": 0.7818688750267029,
+    "avg_confidence": 0.7787278890609741,
     "conference": "Big Ten"
   },
   {
@@ -3512,7 +3536,7 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7701860666275024,
+    "avg_confidence": 0.7750941514968872,
     "conference": ""
   },
   {
@@ -3536,7 +3560,7 @@
     "predictions_made": 34,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.761745035648346,
+    "avg_confidence": 0.761073887348175,
     "conference": "MAAC"
   },
   {
@@ -3545,10 +3569,10 @@
     "wins": 26,
     "losses": 13,
     "win_pct": 0.6666666666666666,
-    "predictions_made": 36,
+    "predictions_made": 37,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.5833333333333334,
-    "avg_confidence": 0.7533085346221924,
+    "prediction_accuracy": 0.5675675675675675,
+    "avg_confidence": 0.7470743656158447,
     "conference": "Big Ten"
   },
   {
@@ -3557,10 +3581,10 @@
     "wins": 30,
     "losses": 9,
     "win_pct": 0.7692307692307693,
-    "predictions_made": 37,
+    "predictions_made": 38,
     "correct_predictions": 26,
-    "prediction_accuracy": 0.7027027027027027,
-    "avg_confidence": 0.7858126759529114,
+    "prediction_accuracy": 0.6842105263157895,
+    "avg_confidence": 0.7875018119812012,
     "conference": ""
   },
   {
@@ -3572,7 +3596,7 @@
     "predictions_made": 35,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5714285714285714,
-    "avg_confidence": 0.7309966087341309,
+    "avg_confidence": 0.7266964316368103,
     "conference": ""
   },
   {
@@ -3584,7 +3608,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7838395833969116,
+    "avg_confidence": 0.7871083617210388,
     "conference": "ASUN"
   },
   {
@@ -3605,10 +3629,10 @@
     "wins": 18,
     "losses": 17,
     "win_pct": 0.5142857142857142,
-    "predictions_made": 34,
+    "predictions_made": 35,
     "correct_predictions": 24,
-    "prediction_accuracy": 0.7058823529411765,
-    "avg_confidence": 0.7273229360580444,
+    "prediction_accuracy": 0.6857142857142857,
+    "avg_confidence": 0.7221269607543945,
     "conference": "Sun Belt"
   },
   {
@@ -3752,7 +3776,7 @@
     "predictions_made": 34,
     "correct_predictions": 25,
     "prediction_accuracy": 0.7352941176470589,
-    "avg_confidence": 0.7556759715080261,
+    "avg_confidence": 0.7541020512580872,
     "conference": "Big 12"
   },
   {
@@ -3776,7 +3800,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7958281636238098,
+    "avg_confidence": 0.799749493598938,
     "conference": ""
   },
   {
@@ -3812,7 +3836,7 @@
     "predictions_made": 37,
     "correct_predictions": 21,
     "prediction_accuracy": 0.5675675675675675,
-    "avg_confidence": 0.7969149351119995,
+    "avg_confidence": 0.7962982058525085,
     "conference": ""
   },
   {
@@ -3824,7 +3848,7 @@
     "predictions_made": 33,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7110647559165955,
+    "avg_confidence": 0.7087118029594421,
     "conference": ""
   },
   {
@@ -3836,7 +3860,7 @@
     "predictions_made": 38,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5263157894736842,
-    "avg_confidence": 0.706545889377594,
+    "avg_confidence": 0.7051376104354858,
     "conference": "SEC"
   },
   {
@@ -3896,15 +3920,15 @@
     "predictions_made": 33,
     "correct_predictions": 25,
     "prediction_accuracy": 0.7575757575757576,
-    "avg_confidence": 0.7543789744377136,
+    "avg_confidence": 0.7523418664932251,
     "conference": "SEC"
   },
   {
     "display_name": "LSU New Orleans",
-    "games_played": 1,
-    "wins": 0,
+    "games_played": 2,
+    "wins": 1,
     "losses": 1,
-    "win_pct": 0.0,
+    "win_pct": 0.5,
     "predictions_made": 3,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
@@ -3913,14 +3937,14 @@
   },
   {
     "display_name": "La Salle",
-    "games_played": 33,
-    "wins": 9,
+    "games_played": 34,
+    "wins": 10,
     "losses": 24,
-    "win_pct": 0.2727272727272727,
-    "predictions_made": 30,
+    "win_pct": 0.29411764705882354,
+    "predictions_made": 31,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7880265116691589,
+    "prediction_accuracy": 0.4838709677419355,
+    "avg_confidence": 0.786260187625885,
     "conference": "Atlantic 10"
   },
   {
@@ -3961,25 +3985,25 @@
   },
   {
     "display_name": "Lafayette",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 12,
-    "losses": 22,
-    "win_pct": 0.35294117647058826,
+    "losses": 23,
+    "win_pct": 0.34285714285714286,
     "predictions_made": 33,
-    "correct_predictions": 15,
-    "prediction_accuracy": 0.45454545454545453,
-    "avg_confidence": 0.7196243405342102,
+    "correct_predictions": 16,
+    "prediction_accuracy": 0.48484848484848486,
+    "avg_confidence": 0.7189328074455261,
     "conference": "Patriot"
   },
   {
     "display_name": "Lamar",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 13,
-    "losses": 19,
-    "win_pct": 0.40625,
+    "losses": 20,
+    "win_pct": 0.3939393939393939,
     "predictions_made": 33,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.5454545454545454,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.5757575757575758,
     "avg_confidence": 0.7299939393997192,
     "conference": "Southland"
   },
@@ -4040,7 +4064,7 @@
     "predictions_made": 33,
     "correct_predictions": 24,
     "prediction_accuracy": 0.7272727272727273,
-    "avg_confidence": 0.7293381690979004,
+    "avg_confidence": 0.7286466360092163,
     "conference": "NEC"
   },
   {
@@ -4064,7 +4088,7 @@
     "predictions_made": 33,
     "correct_predictions": 15,
     "prediction_accuracy": 0.45454545454545453,
-    "avg_confidence": 0.7141491770744324,
+    "avg_confidence": 0.7128911018371582,
     "conference": ""
   },
   {
@@ -4105,14 +4129,14 @@
   },
   {
     "display_name": "Liberty",
-    "games_played": 35,
-    "wins": 26,
+    "games_played": 36,
+    "wins": 27,
     "losses": 9,
-    "win_pct": 0.7428571428571429,
+    "win_pct": 0.75,
     "predictions_made": 33,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.8001143932342529,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.6060606060606061,
+    "avg_confidence": 0.7999396324157715,
     "conference": "Conference USA"
   },
   {
@@ -4165,74 +4189,74 @@
   },
   {
     "display_name": "Lindenwood",
-    "games_played": 35,
-    "wins": 19,
+    "games_played": 36,
+    "wins": 20,
     "losses": 16,
-    "win_pct": 0.5428571428571428,
+    "win_pct": 0.5555555555555556,
     "predictions_made": 34,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7567023634910583,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.5294117647058824,
+    "avg_confidence": 0.7576161026954651,
     "conference": "Ohio Valley"
   },
   {
     "display_name": "Lipscomb",
-    "games_played": 34,
-    "wins": 19,
+    "games_played": 35,
+    "wins": 20,
     "losses": 15,
-    "win_pct": 0.5588235294117647,
+    "win_pct": 0.5714285714285714,
     "predictions_made": 36,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7947582006454468,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.6944444444444444,
+    "avg_confidence": 0.7880380153656006,
     "conference": "ASUN"
   },
   {
     "display_name": "Little Rock",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 12,
-    "losses": 21,
-    "win_pct": 0.36363636363636365,
+    "losses": 22,
+    "win_pct": 0.35294117647058826,
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7302488684654236,
+    "avg_confidence": 0.7261444330215454,
     "conference": "Ohio Valley"
   },
   {
     "display_name": "Long Beach State Beach",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 10,
-    "losses": 23,
-    "win_pct": 0.30303030303030304,
+    "losses": 24,
+    "win_pct": 0.29411764705882354,
     "predictions_made": 29,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.6206896551724138,
-    "avg_confidence": 0.7208454608917236,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.6551724137931034,
+    "avg_confidence": 0.7214241623878479,
     "conference": ""
   },
   {
     "display_name": "Long Island University",
-    "games_played": 37,
+    "games_played": 38,
     "wins": 24,
-    "losses": 13,
-    "win_pct": 0.6486486486486487,
+    "losses": 14,
+    "win_pct": 0.631578947368421,
     "predictions_made": 36,
     "correct_predictions": 25,
     "prediction_accuracy": 0.6944444444444444,
-    "avg_confidence": 0.7809659242630005,
+    "avg_confidence": 0.7794391512870789,
     "conference": ""
   },
   {
     "display_name": "Longwood",
-    "games_played": 34,
-    "wins": 17,
+    "games_played": 35,
+    "wins": 18,
     "losses": 17,
-    "win_pct": 0.5,
+    "win_pct": 0.5142857142857142,
     "predictions_made": 32,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7408167123794556,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.65625,
+    "avg_confidence": 0.7396646738052368,
     "conference": "Big South"
   },
   {
@@ -4268,7 +4292,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7759342193603516,
+    "avg_confidence": 0.7752211093902588,
     "conference": ""
   },
   {
@@ -4280,19 +4304,19 @@
     "predictions_made": 37,
     "correct_predictions": 23,
     "prediction_accuracy": 0.6216216216216216,
-    "avg_confidence": 0.7642372250556946,
+    "avg_confidence": 0.7636204957962036,
     "conference": "Conference USA"
   },
   {
     "display_name": "Louisville",
-    "games_played": 36,
-    "wins": 25,
+    "games_played": 37,
+    "wins": 26,
     "losses": 11,
-    "win_pct": 0.6944444444444444,
-    "predictions_made": 35,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.6857142857142857,
-    "avg_confidence": 0.7507895231246948,
+    "win_pct": 0.7027027027027027,
+    "predictions_made": 36,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.6944444444444444,
+    "avg_confidence": 0.7535454034805298,
     "conference": "ACC"
   },
   {
@@ -4316,7 +4340,7 @@
     "predictions_made": 33,
     "correct_predictions": 16,
     "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7433687448501587,
+    "avg_confidence": 0.7440015077590942,
     "conference": "Atlantic 10"
   },
   {
@@ -4328,7 +4352,7 @@
     "predictions_made": 33,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7316278219223022,
+    "avg_confidence": 0.7326207756996155,
     "conference": ""
   },
   {
@@ -4337,11 +4361,23 @@
     "wins": 16,
     "losses": 18,
     "win_pct": 0.47058823529411764,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 14,
-    "prediction_accuracy": 0.4375,
-    "avg_confidence": 0.750507116317749,
+    "prediction_accuracy": 0.42424242424242425,
+    "avg_confidence": 0.7441932559013367,
     "conference": "WCC"
+  },
+  {
+    "display_name": "Loyola New Orleans",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_pct": 0.0,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.7308434247970581,
+    "conference": ""
   },
   {
     "display_name": "Lynchburg",
@@ -4400,7 +4436,7 @@
     "predictions_made": 28,
     "correct_predictions": 6,
     "prediction_accuracy": 0.21428571428571427,
-    "avg_confidence": 0.742706835269928,
+    "avg_confidence": 0.7418918609619141,
     "conference": ""
   },
   {
@@ -4436,7 +4472,7 @@
     "predictions_made": 32,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6875,
-    "avg_confidence": 0.7683128714561462,
+    "avg_confidence": 0.7675997614860535,
     "conference": "MAAC"
   },
   {
@@ -4505,22 +4541,22 @@
     "wins": 14,
     "losses": 20,
     "win_pct": 0.4117647058823529,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7793812155723572,
+    "prediction_accuracy": 0.48484848484848486,
+    "avg_confidence": 0.7801610827445984,
     "conference": "Big East"
   },
   {
     "display_name": "Marshall",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 20,
-    "losses": 13,
-    "win_pct": 0.6060606060606061,
+    "losses": 14,
+    "win_pct": 0.5882352941176471,
     "predictions_made": 33,
     "correct_predictions": 14,
     "prediction_accuracy": 0.42424242424242425,
-    "avg_confidence": 0.7606508135795593,
+    "avg_confidence": 0.760513424873352,
     "conference": "Sun Belt"
   },
   {
@@ -4532,15 +4568,15 @@
     "predictions_made": 2,
     "correct_predictions": 1,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.8025729656219482,
+    "avg_confidence": 0.8500000238418579,
     "conference": ""
   },
   {
     "display_name": "Maryland",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 13,
-    "losses": 21,
-    "win_pct": 0.38235294117647056,
+    "losses": 22,
+    "win_pct": 0.37142857142857144,
     "predictions_made": 33,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6060606060606061,
@@ -4549,14 +4585,14 @@
   },
   {
     "display_name": "Maryland-Eastern Shore",
-    "games_played": 34,
-    "wins": 9,
+    "games_played": 35,
+    "wins": 10,
     "losses": 25,
-    "win_pct": 0.2647058823529412,
+    "win_pct": 0.2857142857142857,
     "predictions_made": 31,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.6129032258064516,
-    "avg_confidence": 0.8054036498069763,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.6451612903225806,
+    "avg_confidence": 0.8094651699066162,
     "conference": ""
   },
   {
@@ -4592,7 +4628,7 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7624698281288147,
+    "avg_confidence": 0.7608405351638794,
     "conference": ""
   },
   {
@@ -4669,14 +4705,14 @@
   },
   {
     "display_name": "Memphis",
-    "games_played": 33,
-    "wins": 14,
+    "games_played": 34,
+    "wins": 15,
     "losses": 19,
-    "win_pct": 0.42424242424242425,
-    "predictions_made": 33,
+    "win_pct": 0.4411764705882353,
+    "predictions_made": 34,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.7314088344573975,
+    "prediction_accuracy": 0.5588235294117647,
+    "avg_confidence": 0.7333633899688721,
     "conference": "American"
   },
   {
@@ -4693,14 +4729,14 @@
   },
   {
     "display_name": "Mercer",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 20,
-    "losses": 14,
-    "win_pct": 0.5882352941176471,
+    "losses": 15,
+    "win_pct": 0.5714285714285714,
     "predictions_made": 34,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7850056290626526,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6764705882352942,
+    "avg_confidence": 0.7814816832542419,
     "conference": "Southern"
   },
   {
@@ -4729,14 +4765,14 @@
   },
   {
     "display_name": "Mercyhurst",
-    "games_played": 36,
-    "wins": 17,
+    "games_played": 37,
+    "wins": 18,
     "losses": 19,
-    "win_pct": 0.4722222222222222,
-    "predictions_made": 34,
+    "win_pct": 0.4864864864864865,
+    "predictions_made": 35,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.754392683506012,
+    "prediction_accuracy": 0.5714285714285714,
+    "avg_confidence": 0.7469336986541748,
     "conference": "NEC"
   },
   {
@@ -4748,7 +4784,7 @@
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7954273819923401,
+    "avg_confidence": 0.7964203357696533,
     "conference": "MAAC"
   },
   {
@@ -4760,18 +4796,18 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7611057758331299,
+    "avg_confidence": 0.7585863471031189,
     "conference": ""
   },
   {
     "display_name": "Miami (OH)",
-    "games_played": 35,
-    "wins": 33,
+    "games_played": 36,
+    "wins": 34,
     "losses": 2,
-    "win_pct": 0.9428571428571428,
+    "win_pct": 0.9444444444444444,
     "predictions_made": 33,
-    "correct_predictions": 25,
-    "prediction_accuracy": 0.7575757575757576,
+    "correct_predictions": 26,
+    "prediction_accuracy": 0.7878787878787878,
     "avg_confidence": 0.7853052616119385,
     "conference": "MAC"
   },
@@ -4817,10 +4853,10 @@
     "wins": 38,
     "losses": 4,
     "win_pct": 0.9047619047619048,
-    "predictions_made": 41,
+    "predictions_made": 42,
     "correct_predictions": 28,
-    "prediction_accuracy": 0.6829268292682927,
-    "avg_confidence": 0.7695901393890381,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.7687658667564392,
     "conference": "Big Ten"
   },
   {
@@ -4844,7 +4880,7 @@
     "predictions_made": 37,
     "correct_predictions": 28,
     "prediction_accuracy": 0.7567567567567568,
-    "avg_confidence": 0.760459303855896,
+    "avg_confidence": 0.7604069709777832,
     "conference": ""
   },
   {
@@ -4892,7 +4928,7 @@
     "predictions_made": 33,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7551816701889038,
+    "avg_confidence": 0.7492914199829102,
     "conference": "Conference USA"
   },
   {
@@ -4952,7 +4988,7 @@
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.5780812501907349,
+    "avg_confidence": 0.5448676347732544,
     "conference": ""
   },
   {
@@ -4964,7 +5000,7 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7470174431800842,
+    "avg_confidence": 0.7528393268585205,
     "conference": "Horizon"
   },
   {
@@ -4976,7 +5012,7 @@
     "predictions_made": 33,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.7426826357841492,
+    "avg_confidence": 0.7420573234558105,
     "conference": "Big Ten"
   },
   {
@@ -5000,7 +5036,7 @@
     "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.543694019317627,
+    "avg_confidence": 0.5409178137779236,
     "conference": ""
   },
   {
@@ -5012,7 +5048,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7597923278808594,
+    "avg_confidence": 0.7564119696617126,
     "conference": ""
   },
   {
@@ -5057,10 +5093,10 @@
     "wins": 21,
     "losses": 14,
     "win_pct": 0.6,
-    "predictions_made": 33,
+    "predictions_made": 34,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7354779839515686,
+    "prediction_accuracy": 0.47058823529411764,
+    "avg_confidence": 0.736203670501709,
     "conference": "SEC"
   },
   {
@@ -5096,7 +5132,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7552024126052856,
+    "avg_confidence": 0.760263204574585,
     "conference": ""
   },
   {
@@ -5137,14 +5173,14 @@
   },
   {
     "display_name": "Monmouth",
-    "games_played": 35,
+    "games_played": 36,
     "wins": 19,
-    "losses": 16,
-    "win_pct": 0.5428571428571428,
+    "losses": 17,
+    "win_pct": 0.5277777777777778,
     "predictions_made": 35,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7057123780250549,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6571428571428571,
+    "avg_confidence": 0.7047939896583557,
     "conference": "CAA"
   },
   {
@@ -5168,19 +5204,19 @@
     "predictions_made": 35,
     "correct_predictions": 17,
     "prediction_accuracy": 0.4857142857142857,
-    "avg_confidence": 0.7428635954856873,
+    "avg_confidence": 0.7399930357933044,
     "conference": "Big Sky"
   },
   {
     "display_name": "Montana State",
-    "games_played": 33,
-    "wins": 18,
+    "games_played": 34,
+    "wins": 19,
     "losses": 15,
-    "win_pct": 0.5454545454545454,
-    "predictions_made": 31,
-    "correct_predictions": 19,
-    "prediction_accuracy": 0.6129032258064516,
-    "avg_confidence": 0.766207218170166,
+    "win_pct": 0.5588235294117647,
+    "predictions_made": 32,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.625,
+    "avg_confidence": 0.7579430341720581,
     "conference": ""
   },
   {
@@ -5209,14 +5245,14 @@
   },
   {
     "display_name": "Morehead State",
-    "games_played": 35,
+    "games_played": 36,
     "wins": 21,
-    "losses": 14,
-    "win_pct": 0.6,
+    "losses": 15,
+    "win_pct": 0.5833333333333334,
     "predictions_made": 33,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7232447266578674,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.7197074890136719,
     "conference": ""
   },
   {
@@ -5233,14 +5269,14 @@
   },
   {
     "display_name": "Morgan State",
-    "games_played": 32,
-    "wins": 16,
+    "games_played": 33,
+    "wins": 17,
     "losses": 16,
-    "win_pct": 0.5,
+    "win_pct": 0.5151515151515151,
     "predictions_made": 33,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7563118934631348,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.6363636363636364,
+    "avg_confidence": 0.7556203603744507,
     "conference": ""
   },
   {
@@ -5336,19 +5372,19 @@
     "predictions_made": 33,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7498552799224854,
+    "avg_confidence": 0.746317982673645,
     "conference": ""
   },
   {
     "display_name": "Murray State",
-    "games_played": 34,
-    "wins": 21,
+    "games_played": 35,
+    "wins": 22,
     "losses": 13,
-    "win_pct": 0.6176470588235294,
+    "win_pct": 0.6285714285714286,
     "predictions_made": 35,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.6571428571428571,
-    "avg_confidence": 0.7760928273200989,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.6857142857142857,
+    "avg_confidence": 0.7789626717567444,
     "conference": ""
   },
   {
@@ -5360,7 +5396,7 @@
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7311195135116577,
+    "avg_confidence": 0.7270150780677795,
     "conference": "ACC"
   },
   {
@@ -5372,7 +5408,7 @@
     "predictions_made": 36,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7502960562705994,
+    "avg_confidence": 0.745349109172821,
     "conference": "America East"
   },
   {
@@ -5384,19 +5420,19 @@
     "predictions_made": 33,
     "correct_predictions": 26,
     "prediction_accuracy": 0.7878787878787878,
-    "avg_confidence": 0.8233755826950073,
+    "avg_confidence": 0.8204711079597473,
     "conference": "Patriot"
   },
   {
     "display_name": "Nebraska Cornhuskers",
-    "games_played": 36,
-    "wins": 29,
+    "games_played": 37,
+    "wins": 30,
     "losses": 7,
-    "win_pct": 0.8055555555555556,
-    "predictions_made": 32,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6875,
-    "avg_confidence": 0.7728031277656555,
+    "win_pct": 0.8108108108108109,
+    "predictions_made": 33,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.696969696969697,
+    "avg_confidence": 0.7668554782867432,
     "conference": ""
   },
   {
@@ -5408,7 +5444,7 @@
     "predictions_made": 36,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6111111111111112,
-    "avg_confidence": 0.7139444351196289,
+    "avg_confidence": 0.7137746214866638,
     "conference": ""
   },
   {
@@ -5441,10 +5477,10 @@
     "wins": 11,
     "losses": 21,
     "win_pct": 0.34375,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 23,
-    "prediction_accuracy": 0.71875,
-    "avg_confidence": 0.7779380679130554,
+    "prediction_accuracy": 0.696969696969697,
+    "avg_confidence": 0.7738890647888184,
     "conference": "America East"
   },
   {
@@ -5453,22 +5489,22 @@
     "wins": 14,
     "losses": 19,
     "win_pct": 0.42424242424242425,
-    "predictions_made": 29,
+    "predictions_made": 30,
     "correct_predictions": 14,
-    "prediction_accuracy": 0.4827586206896552,
-    "avg_confidence": 0.7065883278846741,
+    "prediction_accuracy": 0.4666666666666667,
+    "avg_confidence": 0.70644211769104,
     "conference": ""
   },
   {
     "display_name": "New Mexico",
-    "games_played": 38,
-    "wins": 27,
+    "games_played": 39,
+    "wins": 28,
     "losses": 11,
-    "win_pct": 0.7105263157894737,
+    "win_pct": 0.717948717948718,
     "predictions_made": 36,
-    "correct_predictions": 26,
-    "prediction_accuracy": 0.7222222222222222,
-    "avg_confidence": 0.781758189201355,
+    "correct_predictions": 27,
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.7776228189468384,
     "conference": "Mountain West"
   },
   {
@@ -5485,14 +5521,14 @@
   },
   {
     "display_name": "New Mexico State",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 17,
-    "losses": 16,
-    "win_pct": 0.5151515151515151,
-    "predictions_made": 33,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7718114852905273,
+    "losses": 17,
+    "win_pct": 0.5,
+    "predictions_made": 34,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.5294117647058824,
+    "avg_confidence": 0.7725371718406677,
     "conference": ""
   },
   {
@@ -5521,14 +5557,14 @@
   },
   {
     "display_name": "Niagara Purple",
-    "games_played": 31,
+    "games_played": 32,
     "wins": 8,
-    "losses": 23,
-    "win_pct": 0.25806451612903225,
-    "predictions_made": 28,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.6428571428571429,
-    "avg_confidence": 0.7689029574394226,
+    "losses": 24,
+    "win_pct": 0.25,
+    "predictions_made": 29,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.6551724137931034,
+    "avg_confidence": 0.7724195122718811,
     "conference": ""
   },
   {
@@ -5540,7 +5576,7 @@
     "predictions_made": 33,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7710696458816528,
+    "avg_confidence": 0.7694480419158936,
     "conference": ""
   },
   {
@@ -5561,10 +5597,10 @@
     "wins": 17,
     "losses": 17,
     "win_pct": 0.5,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7473233938217163,
+    "prediction_accuracy": 0.6060606060606061,
+    "avg_confidence": 0.7467427253723145,
     "conference": ""
   },
   {
@@ -5576,7 +5612,7 @@
     "predictions_made": 29,
     "correct_predictions": 13,
     "prediction_accuracy": 0.4482758620689655,
-    "avg_confidence": 0.7833073139190674,
+    "avg_confidence": 0.7804120182991028,
     "conference": "ASUN"
   },
   {
@@ -5600,31 +5636,31 @@
     "predictions_made": 35,
     "correct_predictions": 25,
     "prediction_accuracy": 0.7142857142857143,
-    "avg_confidence": 0.7805414795875549,
+    "avg_confidence": 0.7765544056892395,
     "conference": "ACC"
   },
   {
     "display_name": "North Carolina A&T",
-    "games_played": 30,
+    "games_played": 31,
     "wins": 11,
-    "losses": 19,
-    "win_pct": 0.36666666666666664,
+    "losses": 20,
+    "win_pct": 0.3548387096774194,
     "predictions_made": 33,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.764330267906189,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.5454545454545454,
+    "avg_confidence": 0.7705141305923462,
     "conference": "CAA"
   },
   {
     "display_name": "North Carolina Central",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 14,
-    "losses": 19,
-    "win_pct": 0.42424242424242425,
+    "losses": 20,
+    "win_pct": 0.4117647058823529,
     "predictions_made": 35,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7369552254676819,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6285714285714286,
+    "avg_confidence": 0.7367905378341675,
     "conference": "MEAC"
   },
   {
@@ -5665,14 +5701,14 @@
   },
   {
     "display_name": "North Dakota Fighting",
-    "games_played": 27,
-    "wins": 15,
+    "games_played": 28,
+    "wins": 16,
     "losses": 12,
-    "win_pct": 0.5555555555555556,
+    "win_pct": 0.5714285714285714,
     "predictions_made": 30,
     "correct_predictions": 10,
     "prediction_accuracy": 0.3333333333333333,
-    "avg_confidence": 0.7424669861793518,
+    "avg_confidence": 0.7359877228736877,
     "conference": ""
   },
   {
@@ -5681,10 +5717,10 @@
     "wins": 28,
     "losses": 10,
     "win_pct": 0.7368421052631579,
-    "predictions_made": 37,
+    "predictions_made": 38,
     "correct_predictions": 26,
-    "prediction_accuracy": 0.7027027027027027,
-    "avg_confidence": 0.7715696096420288,
+    "prediction_accuracy": 0.6842105263157895,
+    "avg_confidence": 0.7669405341148376,
     "conference": ""
   },
   {
@@ -5696,7 +5732,7 @@
     "predictions_made": 31,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6774193548387096,
-    "avg_confidence": 0.8074945211410522,
+    "avg_confidence": 0.8084966540336609,
     "conference": ""
   },
   {
@@ -5720,7 +5756,7 @@
     "predictions_made": 34,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7300217747688293,
+    "avg_confidence": 0.7289508581161499,
     "conference": "American"
   },
   {
@@ -5749,13 +5785,13 @@
   },
   {
     "display_name": "Northern Arizona",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 10,
-    "losses": 23,
-    "win_pct": 0.30303030303030304,
+    "losses": 24,
+    "win_pct": 0.29411764705882354,
     "predictions_made": 34,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.7058823529411765,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.7352941176470589,
     "avg_confidence": 0.8039622902870178,
     "conference": "Big Sky"
   },
@@ -5768,31 +5804,31 @@
     "predictions_made": 32,
     "correct_predictions": 13,
     "prediction_accuracy": 0.40625,
-    "avg_confidence": 0.710899829864502,
+    "avg_confidence": 0.7101867198944092,
     "conference": "Big Sky"
   },
   {
     "display_name": "Northern Illinois",
-    "games_played": 32,
-    "wins": 9,
+    "games_played": 33,
+    "wins": 10,
     "losses": 23,
-    "win_pct": 0.28125,
+    "win_pct": 0.30303030303030304,
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7749014496803284,
+    "avg_confidence": 0.7732722163200378,
     "conference": "MAC"
   },
   {
     "display_name": "Northern Iowa",
-    "games_played": 37,
+    "games_played": 38,
     "wins": 24,
-    "losses": 13,
-    "win_pct": 0.6486486486486487,
+    "losses": 14,
+    "win_pct": 0.631578947368421,
     "predictions_made": 38,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5263157894736842,
-    "avg_confidence": 0.7540247440338135,
+    "avg_confidence": 0.7477841973304749,
     "conference": ""
   },
   {
@@ -5804,7 +5840,7 @@
     "predictions_made": 35,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5428571428571428,
-    "avg_confidence": 0.7197625041007996,
+    "avg_confidence": 0.7200466990470886,
     "conference": ""
   },
   {
@@ -5864,8 +5900,20 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7702212333679199,
+    "avg_confidence": 0.7710138559341431,
     "conference": "Big Ten"
+  },
+  {
+    "display_name": "Northwestern (OK) Rangers",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_pct": 0.0,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8500000238418579,
+    "conference": ""
   },
   {
     "display_name": "Northwestern Oklahoma State Rangers",
@@ -5881,14 +5929,14 @@
   },
   {
     "display_name": "Northwestern State",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 10,
-    "losses": 24,
-    "win_pct": 0.29411764705882354,
+    "losses": 25,
+    "win_pct": 0.2857142857142857,
     "predictions_made": 35,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.6571428571428571,
-    "avg_confidence": 0.748324453830719,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.6857142857142857,
+    "avg_confidence": 0.7467235326766968,
     "conference": ""
   },
   {
@@ -5912,7 +5960,7 @@
     "predictions_made": 32,
     "correct_predictions": 20,
     "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7431299090385437,
+    "avg_confidence": 0.7428564429283142,
     "conference": "ACC"
   },
   {
@@ -5929,14 +5977,14 @@
   },
   {
     "display_name": "Oakland",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 16,
-    "losses": 18,
-    "win_pct": 0.47058823529411764,
+    "losses": 19,
+    "win_pct": 0.45714285714285713,
     "predictions_made": 35,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5142857142857142,
-    "avg_confidence": 0.7350976467132568,
+    "avg_confidence": 0.7353818416595459,
     "conference": "Horizon"
   },
   {
@@ -5989,14 +6037,14 @@
   },
   {
     "display_name": "Ohio",
-    "games_played": 33,
-    "wins": 16,
+    "games_played": 34,
+    "wins": 17,
     "losses": 17,
-    "win_pct": 0.48484848484848486,
+    "win_pct": 0.5,
     "predictions_made": 32,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7735356688499451,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.65625,
+    "avg_confidence": 0.7698878645896912,
     "conference": "MAC"
   },
   {
@@ -6020,7 +6068,7 @@
     "predictions_made": 35,
     "correct_predictions": 23,
     "prediction_accuracy": 0.6571428571428571,
-    "avg_confidence": 0.7559367418289185,
+    "avg_confidence": 0.7567434310913086,
     "conference": ""
   },
   {
@@ -6044,7 +6092,7 @@
     "predictions_made": 38,
     "correct_predictions": 21,
     "prediction_accuracy": 0.5526315789473685,
-    "avg_confidence": 0.7579142451286316,
+    "avg_confidence": 0.7587764859199524,
     "conference": "SEC"
   },
   {
@@ -6068,19 +6116,19 @@
     "predictions_made": 36,
     "correct_predictions": 28,
     "prediction_accuracy": 0.7777777777777778,
-    "avg_confidence": 0.7116040587425232,
+    "avg_confidence": 0.7109701633453369,
     "conference": ""
   },
   {
     "display_name": "Old Dominion",
-    "games_played": 35,
-    "wins": 14,
+    "games_played": 36,
+    "wins": 15,
     "losses": 21,
-    "win_pct": 0.4,
+    "win_pct": 0.4166666666666667,
     "predictions_made": 35,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7866170406341553,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6285714285714286,
+    "avg_confidence": 0.7855637669563293,
     "conference": "Sun Belt"
   },
   {
@@ -6104,7 +6152,7 @@
     "predictions_made": 35,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7361546754837036,
+    "avg_confidence": 0.7329160571098328,
     "conference": "SEC"
   },
   {
@@ -6121,22 +6169,22 @@
   },
   {
     "display_name": "Omaha",
-    "games_played": 35,
+    "games_played": 36,
     "wins": 17,
-    "losses": 18,
-    "win_pct": 0.4857142857142857,
+    "losses": 19,
+    "win_pct": 0.4722222222222222,
     "predictions_made": 33,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7823771238327026,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.5454545454545454,
+    "avg_confidence": 0.7829650640487671,
     "conference": "Summit"
   },
   {
     "display_name": "Oral Roberts",
-    "games_played": 34,
-    "wins": 10,
+    "games_played": 35,
+    "wins": 11,
     "losses": 24,
-    "win_pct": 0.29411764705882354,
+    "win_pct": 0.3142857142857143,
     "predictions_made": 34,
     "correct_predictions": 23,
     "prediction_accuracy": 0.6764705882352942,
@@ -6149,10 +6197,10 @@
     "wins": 14,
     "losses": 20,
     "win_pct": 0.4117647058823529,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7405919432640076,
+    "prediction_accuracy": 0.6451612903225806,
+    "avg_confidence": 0.7346400618553162,
     "conference": ""
   },
   {
@@ -6164,7 +6212,7 @@
     "predictions_made": 34,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7423036694526672,
+    "avg_confidence": 0.7429178357124329,
     "conference": ""
   },
   {
@@ -6217,14 +6265,14 @@
   },
   {
     "display_name": "Pacific",
-    "games_played": 34,
-    "wins": 19,
+    "games_played": 35,
+    "wins": 20,
     "losses": 15,
-    "win_pct": 0.5588235294117647,
+    "win_pct": 0.5714285714285714,
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7836670875549316,
+    "avg_confidence": 0.7841756939888,
     "conference": "WCC"
   },
   {
@@ -6257,10 +6305,10 @@
     "wins": 0,
     "losses": 1,
     "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0,
+    "avg_confidence": 0.8500000238418579,
     "conference": ""
   },
   {
@@ -6317,10 +6365,10 @@
     "wins": 14,
     "losses": 20,
     "win_pct": 0.4117647058823529,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7934865951538086,
+    "prediction_accuracy": 0.6363636363636364,
+    "avg_confidence": 0.789140522480011,
     "conference": "Big Ten"
   },
   {
@@ -6345,6 +6393,18 @@
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
     "avg_confidence": 0.8500000238418579,
+    "conference": ""
+  },
+  {
+    "display_name": "Penn State Shenango",
+    "games_played": 1,
+    "wins": 0,
+    "losses": 1,
+    "win_pct": 0.0,
+    "predictions_made": 1,
+    "correct_predictions": 0,
+    "prediction_accuracy": 0.0,
+    "avg_confidence": 0.8264428377151489,
     "conference": ""
   },
   {
@@ -6404,7 +6464,7 @@
     "predictions_made": 29,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5862068965517241,
-    "avg_confidence": 0.6995632648468018,
+    "avg_confidence": 0.6987453103065491,
     "conference": ""
   },
   {
@@ -6421,14 +6481,14 @@
   },
   {
     "display_name": "Pepperdine",
-    "games_played": 34,
-    "wins": 10,
+    "games_played": 35,
+    "wins": 11,
     "losses": 24,
-    "win_pct": 0.29411764705882354,
-    "predictions_made": 33,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7709742784500122,
+    "win_pct": 0.3142857142857143,
+    "predictions_made": 34,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.5588235294117647,
+    "avg_confidence": 0.7652681469917297,
     "conference": "WCC"
   },
   {
@@ -6476,7 +6536,7 @@
     "predictions_made": 34,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7811552882194519,
+    "avg_confidence": 0.7796884775161743,
     "conference": "ACC"
   },
   {
@@ -6524,31 +6584,31 @@
     "predictions_made": 33,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5757575757575758,
-    "avg_confidence": 0.7980645298957825,
+    "avg_confidence": 0.7959614992141724,
     "conference": "WCC"
   },
   {
     "display_name": "Portland State",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 21,
-    "losses": 11,
-    "win_pct": 0.65625,
+    "losses": 12,
+    "win_pct": 0.6363636363636364,
     "predictions_made": 32,
     "correct_predictions": 20,
     "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7340335249900818,
+    "avg_confidence": 0.7326073050498962,
     "conference": ""
   },
   {
     "display_name": "Prairie View A&M",
-    "games_played": 39,
+    "games_played": 40,
     "wins": 21,
-    "losses": 18,
-    "win_pct": 0.5384615384615384,
+    "losses": 19,
+    "win_pct": 0.525,
     "predictions_made": 38,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.6052631578947368,
-    "avg_confidence": 0.7539143562316895,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.631578947368421,
+    "avg_confidence": 0.7514992356300354,
     "conference": ""
   },
   {
@@ -6560,7 +6620,7 @@
     "predictions_made": 32,
     "correct_predictions": 23,
     "prediction_accuracy": 0.71875,
-    "avg_confidence": 0.7692750096321106,
+    "avg_confidence": 0.7656272053718567,
     "conference": "Big South"
   },
   {
@@ -6569,10 +6629,10 @@
     "wins": 11,
     "losses": 20,
     "win_pct": 0.3548387096774194,
-    "predictions_made": 29,
+    "predictions_made": 30,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.5172413793103449,
-    "avg_confidence": 0.764298141002655,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7597692012786865,
     "conference": "Ivy League"
   },
   {
@@ -6589,14 +6649,14 @@
   },
   {
     "display_name": "Providence",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 16,
-    "losses": 18,
-    "win_pct": 0.47058823529411764,
+    "losses": 19,
+    "win_pct": 0.45714285714285713,
     "predictions_made": 33,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7587354183197021,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.5757575757575758,
+    "avg_confidence": 0.7613325119018555,
     "conference": "Big East"
   },
   {
@@ -6620,19 +6680,19 @@
     "predictions_made": 41,
     "correct_predictions": 25,
     "prediction_accuracy": 0.6097560975609756,
-    "avg_confidence": 0.7382150292396545,
+    "avg_confidence": 0.7325209379196167,
     "conference": "Big Ten"
   },
   {
     "display_name": "Purdue Fort Wayne",
-    "games_played": 33,
-    "wins": 17,
+    "games_played": 34,
+    "wins": 18,
     "losses": 16,
-    "win_pct": 0.5151515151515151,
-    "predictions_made": 32,
+    "win_pct": 0.5294117647058824,
+    "predictions_made": 33,
     "correct_predictions": 14,
-    "prediction_accuracy": 0.4375,
-    "avg_confidence": 0.7304182052612305,
+    "prediction_accuracy": 0.42424242424242425,
+    "avg_confidence": 0.733350396156311,
     "conference": ""
   },
   {
@@ -6644,7 +6704,7 @@
     "predictions_made": 36,
     "correct_predictions": 24,
     "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7868235111236572,
+    "avg_confidence": 0.7868407964706421,
     "conference": "ASUN"
   },
   {
@@ -6653,10 +6713,10 @@
     "wins": 20,
     "losses": 14,
     "win_pct": 0.5882352941176471,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.46875,
-    "avg_confidence": 0.7339909672737122,
+    "prediction_accuracy": 0.45454545454545453,
+    "avg_confidence": 0.735740065574646,
     "conference": "MAAC"
   },
   {
@@ -6680,7 +6740,7 @@
     "predictions_made": 31,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6451612903225806,
-    "avg_confidence": 0.7315064668655396,
+    "avg_confidence": 0.7325087189674377,
     "conference": "Big South"
   },
   {
@@ -6793,14 +6853,14 @@
   },
   {
     "display_name": "Rhode Island",
-    "games_played": 33,
-    "wins": 17,
+    "games_played": 34,
+    "wins": 18,
     "losses": 16,
-    "win_pct": 0.5151515151515151,
-    "predictions_made": 32,
-    "correct_predictions": 13,
-    "prediction_accuracy": 0.40625,
-    "avg_confidence": 0.7298527359962463,
+    "win_pct": 0.5294117647058824,
+    "predictions_made": 33,
+    "correct_predictions": 14,
+    "prediction_accuracy": 0.42424242424242425,
+    "avg_confidence": 0.7286602854728699,
     "conference": "Atlantic 10"
   },
   {
@@ -6836,7 +6896,7 @@
     "predictions_made": 32,
     "correct_predictions": 19,
     "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7442180514335632,
+    "avg_confidence": 0.7427918314933777,
     "conference": "American"
   },
   {
@@ -6848,7 +6908,7 @@
     "predictions_made": 32,
     "correct_predictions": 14,
     "prediction_accuracy": 0.4375,
-    "avg_confidence": 0.7320191264152527,
+    "avg_confidence": 0.7313059568405151,
     "conference": "Atlantic 10"
   },
   {
@@ -6860,7 +6920,7 @@
     "predictions_made": 32,
     "correct_predictions": 24,
     "prediction_accuracy": 0.75,
-    "avg_confidence": 0.8026564121246338,
+    "avg_confidence": 0.8009483814239502,
     "conference": "MAAC"
   },
   {
@@ -6893,10 +6953,10 @@
     "wins": 22,
     "losses": 13,
     "win_pct": 0.6285714285714286,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7543707489967346,
+    "prediction_accuracy": 0.5757575757575758,
+    "avg_confidence": 0.7516087293624878,
     "conference": "Horizon"
   },
   {
@@ -6968,7 +7028,7 @@
     "predictions_made": 34,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6470588235294118,
-    "avg_confidence": 0.7700356245040894,
+    "avg_confidence": 0.7675661444664001,
     "conference": "Big Ten"
   },
   {
@@ -6985,26 +7045,26 @@
   },
   {
     "display_name": "SE Louisiana",
-    "games_played": 24,
-    "wins": 6,
+    "games_played": 25,
+    "wins": 7,
     "losses": 18,
-    "win_pct": 0.25,
+    "win_pct": 0.28,
     "predictions_made": 26,
     "correct_predictions": 16,
     "prediction_accuracy": 0.6153846153846154,
-    "avg_confidence": 0.7477794289588928,
+    "avg_confidence": 0.7434197068214417,
     "conference": "Southland"
   },
   {
     "display_name": "SIU Edwardsville",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 21,
-    "losses": 13,
-    "win_pct": 0.6176470588235294,
+    "losses": 14,
+    "win_pct": 0.6,
     "predictions_made": 33,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.757151186466217,
+    "correct_predictions": 17,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.7577229142189026,
     "conference": "Ohio Valley"
   },
   {
@@ -7016,7 +7076,7 @@
     "predictions_made": 30,
     "correct_predictions": 11,
     "prediction_accuracy": 0.36666666666666664,
-    "avg_confidence": 0.7560616731643677,
+    "avg_confidence": 0.7540947198867798,
     "conference": "ACC"
   },
   {
@@ -7093,14 +7153,14 @@
   },
   {
     "display_name": "Sacramento State",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 11,
-    "losses": 21,
-    "win_pct": 0.34375,
+    "losses": 22,
+    "win_pct": 0.3333333333333333,
     "predictions_made": 30,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.7,
-    "avg_confidence": 0.8136463165283203,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.7333333333333333,
+    "avg_confidence": 0.8135434985160828,
     "conference": ""
   },
   {
@@ -7112,7 +7172,7 @@
     "predictions_made": 32,
     "correct_predictions": 15,
     "prediction_accuracy": 0.46875,
-    "avg_confidence": 0.7902184128761292,
+    "avg_confidence": 0.787791907787323,
     "conference": ""
   },
   {
@@ -7141,14 +7201,14 @@
   },
   {
     "display_name": "Saint Joseph's",
-    "games_played": 37,
-    "wins": 25,
+    "games_played": 38,
+    "wins": 26,
     "losses": 12,
-    "win_pct": 0.6756756756756757,
+    "win_pct": 0.6842105263157895,
     "predictions_made": 36,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6111111111111112,
-    "avg_confidence": 0.7203862071037292,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6388888888888888,
+    "avg_confidence": 0.7185990810394287,
     "conference": ""
   },
   {
@@ -7181,10 +7241,10 @@
     "wins": 31,
     "losses": 6,
     "win_pct": 0.8378378378378378,
-    "predictions_made": 34,
+    "predictions_made": 35,
     "correct_predictions": 26,
-    "prediction_accuracy": 0.7647058823529411,
-    "avg_confidence": 0.792393147945404,
+    "prediction_accuracy": 0.7428571428571429,
+    "avg_confidence": 0.7865776419639587,
     "conference": "Atlantic 10"
   },
   {
@@ -7220,7 +7280,7 @@
     "predictions_made": 32,
     "correct_predictions": 26,
     "prediction_accuracy": 0.8125,
-    "avg_confidence": 0.7879605889320374,
+    "avg_confidence": 0.7835996747016907,
     "conference": "WCC"
   },
   {
@@ -7232,7 +7292,7 @@
     "predictions_made": 29,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5517241379310345,
-    "avg_confidence": 0.8075436353683472,
+    "avg_confidence": 0.8067567944526672,
     "conference": "MAAC"
   },
   {
@@ -7273,38 +7333,38 @@
   },
   {
     "display_name": "Sam Houston State",
-    "games_played": 35,
-    "wins": 22,
+    "games_played": 36,
+    "wins": 23,
     "losses": 13,
-    "win_pct": 0.6285714285714286,
+    "win_pct": 0.6388888888888888,
     "predictions_made": 34,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7698683738708496,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6470588235294118,
+    "avg_confidence": 0.7688749432563782,
     "conference": ""
   },
   {
     "display_name": "Samford",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 19,
-    "losses": 14,
-    "win_pct": 0.5757575757575758,
+    "losses": 15,
+    "win_pct": 0.5588235294117647,
     "predictions_made": 32,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.5,
+    "correct_predictions": 17,
+    "prediction_accuracy": 0.53125,
     "avg_confidence": 0.7719205021858215,
     "conference": "Southern"
   },
   {
     "display_name": "San Diego State",
-    "games_played": 34,
-    "wins": 23,
+    "games_played": 35,
+    "wins": 24,
     "losses": 11,
-    "win_pct": 0.6764705882352942,
-    "predictions_made": 33,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.696969696969697,
-    "avg_confidence": 0.7798754572868347,
+    "win_pct": 0.6857142857142857,
+    "predictions_made": 34,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.7058823529411765,
+    "avg_confidence": 0.7819378972053528,
     "conference": ""
   },
   {
@@ -7316,7 +7376,7 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7331936955451965,
+    "avg_confidence": 0.732920229434967,
     "conference": ""
   },
   {
@@ -7328,7 +7388,7 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7432180047035217,
+    "avg_confidence": 0.7417917847633362,
     "conference": ""
   },
   {
@@ -7345,26 +7405,26 @@
   },
   {
     "display_name": "San Jose State",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 10,
-    "losses": 24,
-    "win_pct": 0.29411764705882354,
-    "predictions_made": 31,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6774193548387096,
-    "avg_confidence": 0.769464910030365,
+    "losses": 25,
+    "win_pct": 0.2857142857142857,
+    "predictions_made": 32,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6875,
+    "avg_confidence": 0.7623685002326965,
     "conference": ""
   },
   {
     "display_name": "Santa Clara",
-    "games_played": 37,
-    "wins": 28,
+    "games_played": 38,
+    "wins": 29,
     "losses": 9,
-    "win_pct": 0.7567567567567568,
+    "win_pct": 0.7631578947368421,
     "predictions_made": 36,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6111111111111112,
-    "avg_confidence": 0.7701495289802551,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6388888888888888,
+    "avg_confidence": 0.7692567110061646,
     "conference": "WCC"
   },
   {
@@ -7417,14 +7477,14 @@
   },
   {
     "display_name": "Seattle U",
-    "games_played": 29,
-    "wins": 16,
+    "games_played": 30,
+    "wins": 17,
     "losses": 13,
-    "win_pct": 0.5517241379310345,
+    "win_pct": 0.5666666666666667,
     "predictions_made": 32,
     "correct_predictions": 11,
     "prediction_accuracy": 0.34375,
-    "avg_confidence": 0.7665754556655884,
+    "avg_confidence": 0.7592798471450806,
     "conference": "WCC"
   },
   {
@@ -7436,7 +7496,7 @@
     "predictions_made": 33,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7649596929550171,
+    "avg_confidence": 0.764268159866333,
     "conference": "Big East"
   },
   {
@@ -7484,7 +7544,7 @@
     "predictions_made": 32,
     "correct_predictions": 19,
     "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7136939764022827,
+    "avg_confidence": 0.7141126394271851,
     "conference": ""
   },
   {
@@ -7520,7 +7580,7 @@
     "predictions_made": 34,
     "correct_predictions": 12,
     "prediction_accuracy": 0.35294117647058826,
-    "avg_confidence": 0.7433799505233765,
+    "avg_confidence": 0.7395139932632446,
     "conference": "Sun Belt"
   },
   {
@@ -7532,7 +7592,7 @@
     "predictions_made": 32,
     "correct_predictions": 24,
     "prediction_accuracy": 0.75,
-    "avg_confidence": 0.7694727778434753,
+    "avg_confidence": 0.7701817154884338,
     "conference": ""
   },
   {
@@ -7541,10 +7601,10 @@
     "wins": 12,
     "losses": 22,
     "win_pct": 0.35294117647058826,
-    "predictions_made": 35,
+    "predictions_made": 36,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7340940237045288,
+    "prediction_accuracy": 0.5833333333333334,
+    "avg_confidence": 0.729729413986206,
     "conference": ""
   },
   {
@@ -7556,19 +7616,19 @@
     "predictions_made": 32,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7490883469581604,
+    "avg_confidence": 0.7470115423202515,
     "conference": ""
   },
   {
     "display_name": "South Dakota",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 17,
-    "losses": 17,
-    "win_pct": 0.5,
-    "predictions_made": 34,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7437739372253418,
+    "losses": 18,
+    "win_pct": 0.4857142857142857,
+    "predictions_made": 35,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6285714285714286,
+    "avg_confidence": 0.7395386695861816,
     "conference": "Summit"
   },
   {
@@ -7580,7 +7640,7 @@
     "predictions_made": 33,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7373679280281067,
+    "avg_confidence": 0.7355731129646301,
     "conference": ""
   },
   {
@@ -7592,7 +7652,7 @@
     "predictions_made": 34,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5294117647058824,
-    "avg_confidence": 0.7514916062355042,
+    "avg_confidence": 0.7508204579353333,
     "conference": "American"
   },
   {
@@ -7604,7 +7664,7 @@
     "predictions_made": 35,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5142857142857142,
-    "avg_confidence": 0.7560648322105408,
+    "avg_confidence": 0.7551463842391968,
     "conference": ""
   },
   {
@@ -7640,7 +7700,7 @@
     "predictions_made": 35,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5142857142857142,
-    "avg_confidence": 0.7084653377532959,
+    "avg_confidence": 0.7050606608390808,
     "conference": "SWAC"
   },
   {
@@ -7669,14 +7729,14 @@
   },
   {
     "display_name": "Southern Indiana",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 8,
-    "losses": 24,
-    "win_pct": 0.25,
-    "predictions_made": 30,
+    "losses": 25,
+    "win_pct": 0.24242424242424243,
+    "predictions_made": 31,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5666666666666667,
-    "avg_confidence": 0.7904958128929138,
+    "prediction_accuracy": 0.5483870967741935,
+    "avg_confidence": 0.7899104952812195,
     "conference": "Ohio Valley"
   },
   {
@@ -7700,19 +7760,19 @@
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7164483070373535,
+    "avg_confidence": 0.7163929343223572,
     "conference": "Sun Belt"
   },
   {
     "display_name": "Southern Utah Thunderbirds",
-    "games_played": 34,
-    "wins": 12,
+    "games_played": 35,
+    "wins": 13,
     "losses": 22,
-    "win_pct": 0.35294117647058826,
+    "win_pct": 0.37142857142857144,
     "predictions_made": 30,
-    "correct_predictions": 17,
-    "prediction_accuracy": 0.5666666666666667,
-    "avg_confidence": 0.7678540349006653,
+    "correct_predictions": 18,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.7660887241363525,
     "conference": ""
   },
   {
@@ -7825,14 +7885,14 @@
   },
   {
     "display_name": "St. Bonaventure",
-    "games_played": 35,
-    "wins": 17,
+    "games_played": 36,
+    "wins": 18,
     "losses": 18,
-    "win_pct": 0.4857142857142857,
+    "win_pct": 0.5,
     "predictions_made": 35,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.5714285714285714,
-    "avg_confidence": 0.7398974299430847,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.7392454147338867,
     "conference": ""
   },
   {
@@ -7877,10 +7937,10 @@
     "wins": 31,
     "losses": 7,
     "win_pct": 0.8157894736842105,
-    "predictions_made": 37,
+    "predictions_made": 38,
     "correct_predictions": 28,
-    "prediction_accuracy": 0.7567567567567568,
-    "avg_confidence": 0.7795213460922241,
+    "prediction_accuracy": 0.7368421052631579,
+    "avg_confidence": 0.782193660736084,
     "conference": ""
   },
   {
@@ -7952,7 +8012,7 @@
     "predictions_made": 5,
     "correct_predictions": 1,
     "prediction_accuracy": 0.2,
-    "avg_confidence": 0.7088078856468201,
+    "avg_confidence": 0.6955224275588989,
     "conference": ""
   },
   {
@@ -7988,7 +8048,7 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7448928356170654,
+    "avg_confidence": 0.7417531609535217,
     "conference": ""
   },
   {
@@ -8012,7 +8072,7 @@
     "predictions_made": 35,
     "correct_predictions": 26,
     "prediction_accuracy": 0.7428571428571429,
-    "avg_confidence": 0.7904080152511597,
+    "avg_confidence": 0.7897560000419617,
     "conference": ""
   },
   {
@@ -8024,7 +8084,7 @@
     "predictions_made": 34,
     "correct_predictions": 26,
     "prediction_accuracy": 0.7647058823529411,
-    "avg_confidence": 0.752385675907135,
+    "avg_confidence": 0.7546847462654114,
     "conference": "ASUN"
   },
   {
@@ -8036,7 +8096,7 @@
     "predictions_made": 32,
     "correct_predictions": 16,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.704566240310669,
+    "avg_confidence": 0.7044698596000671,
     "conference": "NEC"
   },
   {
@@ -8048,7 +8108,7 @@
     "predictions_made": 31,
     "correct_predictions": 14,
     "prediction_accuracy": 0.45161290322580644,
-    "avg_confidence": 0.761623203754425,
+    "avg_confidence": 0.760887086391449,
     "conference": "CAA"
   },
   {
@@ -8057,10 +8117,10 @@
     "wins": 17,
     "losses": 17,
     "win_pct": 0.5,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 22,
-    "prediction_accuracy": 0.7333333333333333,
-    "avg_confidence": 0.7521569132804871,
+    "prediction_accuracy": 0.7096774193548387,
+    "avg_confidence": 0.7536312937736511,
     "conference": ""
   },
   {
@@ -8072,7 +8132,7 @@
     "predictions_made": 34,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7282296419143677,
+    "avg_confidence": 0.7291434407234192,
     "conference": ""
   },
   {
@@ -8084,7 +8144,7 @@
     "predictions_made": 31,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5483870967741935,
-    "avg_confidence": 0.7209720611572266,
+    "avg_confidence": 0.7208377122879028,
     "conference": ""
   },
   {
@@ -8093,10 +8153,10 @@
     "wins": 17,
     "losses": 16,
     "win_pct": 0.5151515151515151,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 15,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7537449598312378,
+    "prediction_accuracy": 0.4838709677419355,
+    "avg_confidence": 0.7561137676239014,
     "conference": "American"
   },
   {
@@ -8108,7 +8168,7 @@
     "predictions_made": 37,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5135135135135135,
-    "avg_confidence": 0.7217831015586853,
+    "avg_confidence": 0.7222930788993835,
     "conference": "SEC"
   },
   {
@@ -8132,7 +8192,7 @@
     "predictions_made": 33,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7303636074066162,
+    "avg_confidence": 0.7299939393997192,
     "conference": ""
   },
   {
@@ -8141,10 +8201,10 @@
     "wins": 14,
     "losses": 19,
     "win_pct": 0.42424242424242425,
-    "predictions_made": 33,
+    "predictions_made": 34,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.76925128698349,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7700186371803284,
     "conference": "Ohio Valley"
   },
   {
@@ -8168,7 +8228,7 @@
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7552635669708252,
+    "avg_confidence": 0.754611611366272,
     "conference": "SEC"
   },
   {
@@ -8180,7 +8240,7 @@
     "predictions_made": 33,
     "correct_predictions": 23,
     "prediction_accuracy": 0.696969696969697,
-    "avg_confidence": 0.755466639995575,
+    "avg_confidence": 0.7547751069068909,
     "conference": ""
   },
   {
@@ -8213,10 +8273,10 @@
     "wins": 23,
     "losses": 15,
     "win_pct": 0.6052631578947368,
-    "predictions_made": 34,
+    "predictions_made": 35,
     "correct_predictions": 21,
-    "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.7415395975112915,
+    "prediction_accuracy": 0.6,
+    "avg_confidence": 0.7424198985099792,
     "conference": ""
   },
   {
@@ -8240,7 +8300,7 @@
     "predictions_made": 31,
     "correct_predictions": 14,
     "prediction_accuracy": 0.45161290322580644,
-    "avg_confidence": 0.7395555377006531,
+    "avg_confidence": 0.7429297566413879,
     "conference": "SWAC"
   },
   {
@@ -8249,10 +8309,10 @@
     "wins": 21,
     "losses": 13,
     "win_pct": 0.6176470588235294,
-    "predictions_made": 29,
+    "predictions_made": 30,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5517241379310345,
-    "avg_confidence": 0.7426474094390869,
+    "prediction_accuracy": 0.5333333333333333,
+    "avg_confidence": 0.74470454454422,
     "conference": ""
   },
   {
@@ -8329,14 +8389,14 @@
   },
   {
     "display_name": "Toledo",
-    "games_played": 36,
-    "wins": 19,
+    "games_played": 37,
+    "wins": 20,
     "losses": 17,
-    "win_pct": 0.5277777777777778,
+    "win_pct": 0.5405405405405406,
     "predictions_made": 35,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5428571428571428,
-    "avg_confidence": 0.7259237766265869,
+    "avg_confidence": 0.7238103747367859,
     "conference": "MAC"
   },
   {
@@ -8360,7 +8420,7 @@
     "predictions_made": 35,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7857847213745117,
+    "avg_confidence": 0.7860689163208008,
     "conference": "CAA"
   },
   {
@@ -8420,7 +8480,7 @@
     "predictions_made": 33,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5454545454545454,
-    "avg_confidence": 0.7450437545776367,
+    "avg_confidence": 0.7436606884002686,
     "conference": "Sun Belt"
   },
   {
@@ -8456,7 +8516,7 @@
     "predictions_made": 32,
     "correct_predictions": 15,
     "prediction_accuracy": 0.46875,
-    "avg_confidence": 0.7015664577484131,
+    "avg_confidence": 0.6982648372650146,
     "conference": ""
   },
   {
@@ -8492,7 +8552,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7755683064460754,
+    "avg_confidence": 0.7748551368713379,
     "conference": "American"
   },
   {
@@ -8501,10 +8561,10 @@
     "wins": 13,
     "losses": 21,
     "win_pct": 0.38235294117647056,
-    "predictions_made": 30,
+    "predictions_made": 31,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5333333333333333,
-    "avg_confidence": 0.7429867386817932,
+    "prediction_accuracy": 0.5161290322580645,
+    "avg_confidence": 0.7464388012886047,
     "conference": ""
   },
   {
@@ -8516,18 +8576,18 @@
     "predictions_made": 33,
     "correct_predictions": 17,
     "prediction_accuracy": 0.5151515151515151,
-    "avg_confidence": 0.7269569635391235,
+    "avg_confidence": 0.7256054282188416,
     "conference": "Big West"
   },
   {
     "display_name": "UC Irvine",
-    "games_played": 36,
-    "wins": 24,
+    "games_played": 37,
+    "wins": 25,
     "losses": 12,
-    "win_pct": 0.6666666666666666,
+    "win_pct": 0.6756756756756757,
     "predictions_made": 36,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6111111111111112,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.6388888888888888,
     "avg_confidence": 0.7740132808685303,
     "conference": "Big West"
   },
@@ -8537,46 +8597,46 @@
     "wins": 0,
     "losses": 1,
     "win_pct": 0.0,
-    "predictions_made": 0,
+    "predictions_made": 1,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.0,
+    "avg_confidence": 0.8500000238418579,
     "conference": ""
   },
   {
     "display_name": "UC Riverside",
-    "games_played": 33,
-    "wins": 11,
+    "games_played": 34,
+    "wins": 12,
     "losses": 22,
-    "win_pct": 0.3333333333333333,
+    "win_pct": 0.35294117647058826,
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7481868863105774,
+    "avg_confidence": 0.7487430572509766,
     "conference": "Big West"
   },
   {
     "display_name": "UC San Diego Tritons",
-    "games_played": 35,
-    "wins": 24,
+    "games_played": 36,
+    "wins": 25,
     "losses": 11,
-    "win_pct": 0.6857142857142857,
+    "win_pct": 0.6944444444444444,
     "predictions_made": 33,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7365594506263733,
+    "correct_predictions": 17,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.7375524044036865,
     "conference": ""
   },
   {
     "display_name": "UC Santa Barbara",
-    "games_played": 33,
-    "wins": 19,
+    "games_played": 34,
+    "wins": 20,
     "losses": 14,
-    "win_pct": 0.5757575757575758,
-    "predictions_made": 30,
+    "win_pct": 0.5882352941176471,
+    "predictions_made": 31,
     "correct_predictions": 12,
-    "prediction_accuracy": 0.4,
-    "avg_confidence": 0.7794287204742432,
+    "prediction_accuracy": 0.3870967741935484,
+    "avg_confidence": 0.7811871767044067,
     "conference": "Big West"
   },
   {
@@ -8600,7 +8660,7 @@
     "predictions_made": 34,
     "correct_predictions": 23,
     "prediction_accuracy": 0.6764705882352942,
-    "avg_confidence": 0.7552083730697632,
+    "avg_confidence": 0.7524538636207581,
     "conference": "Big 12"
   },
   {
@@ -8624,7 +8684,7 @@
     "predictions_made": 41,
     "correct_predictions": 32,
     "prediction_accuracy": 0.7804878048780488,
-    "avg_confidence": 0.78928142786026,
+    "avg_confidence": 0.7900806665420532,
     "conference": "Big East"
   },
   {
@@ -8636,7 +8696,7 @@
     "predictions_made": 36,
     "correct_predictions": 15,
     "prediction_accuracy": 0.4166666666666667,
-    "avg_confidence": 0.7428365349769592,
+    "avg_confidence": 0.7387011051177979,
     "conference": "Missouri Valley"
   },
   {
@@ -8660,7 +8720,7 @@
     "predictions_made": 34,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6176470588235294,
-    "avg_confidence": 0.6942317485809326,
+    "avg_confidence": 0.693023681640625,
     "conference": "America East"
   },
   {
@@ -8672,19 +8732,19 @@
     "predictions_made": 31,
     "correct_predictions": 19,
     "prediction_accuracy": 0.6129032258064516,
-    "avg_confidence": 0.7422618269920349,
+    "avg_confidence": 0.7405799627304077,
     "conference": ""
   },
   {
     "display_name": "UNC Asheville",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 16,
-    "losses": 18,
-    "win_pct": 0.47058823529411764,
+    "losses": 19,
+    "win_pct": 0.45714285714285713,
     "predictions_made": 35,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.6571428571428571,
-    "avg_confidence": 0.7431458234786987,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.6857142857142857,
+    "avg_confidence": 0.7418418526649475,
     "conference": "Big South"
   },
   {
@@ -8696,31 +8756,31 @@
     "predictions_made": 36,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.727212131023407,
+    "avg_confidence": 0.7258121371269226,
     "conference": "Southern"
   },
   {
     "display_name": "UNC Wilmington Seahawks",
-    "games_played": 35,
-    "wins": 28,
+    "games_played": 36,
+    "wins": 29,
     "losses": 7,
-    "win_pct": 0.8,
+    "win_pct": 0.8055555555555556,
     "predictions_made": 33,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.696969696969697,
-    "avg_confidence": 0.7696289420127869,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.7272727272727273,
+    "avg_confidence": 0.7665843963623047,
     "conference": ""
   },
   {
     "display_name": "UNLV",
-    "games_played": 36,
-    "wins": 19,
+    "games_played": 37,
+    "wins": 20,
     "losses": 17,
-    "win_pct": 0.5277777777777778,
+    "win_pct": 0.5405405405405406,
     "predictions_made": 33,
-    "correct_predictions": 16,
-    "prediction_accuracy": 0.48484848484848486,
-    "avg_confidence": 0.7362497448921204,
+    "correct_predictions": 17,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.733896791934967,
     "conference": "Mountain West"
   },
   {
@@ -8741,10 +8801,10 @@
     "wins": 19,
     "losses": 14,
     "win_pct": 0.5757575757575758,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.53125,
-    "avg_confidence": 0.778902530670166,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.7751719951629639,
     "conference": "Big Ten"
   },
   {
@@ -8756,19 +8816,19 @@
     "predictions_made": 34,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5882352941176471,
-    "avg_confidence": 0.7512668371200562,
+    "avg_confidence": 0.7505956292152405,
     "conference": "WAC"
   },
   {
     "display_name": "UT Martin",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 22,
-    "losses": 12,
-    "win_pct": 0.6470588235294118,
-    "predictions_made": 33,
+    "losses": 13,
+    "win_pct": 0.6285714285714286,
+    "predictions_made": 34,
     "correct_predictions": 20,
-    "prediction_accuracy": 0.6060606060606061,
-    "avg_confidence": 0.7488947510719299,
+    "prediction_accuracy": 0.5882352941176471,
+    "avg_confidence": 0.7509230375289917,
     "conference": "Ohio Valley"
   },
   {
@@ -8785,14 +8845,14 @@
   },
   {
     "display_name": "UT Rio Grande Valley Vaqueros",
-    "games_played": 34,
-    "wins": 20,
+    "games_played": 35,
+    "wins": 21,
     "losses": 14,
-    "win_pct": 0.5882352941176471,
+    "win_pct": 0.6,
     "predictions_made": 33,
-    "correct_predictions": 22,
-    "prediction_accuracy": 0.6666666666666666,
-    "avg_confidence": 0.7345279455184937,
+    "correct_predictions": 23,
+    "prediction_accuracy": 0.696969696969697,
+    "avg_confidence": 0.7338364124298096,
     "conference": ""
   },
   {
@@ -8801,22 +8861,22 @@
     "wins": 11,
     "losses": 21,
     "win_pct": 0.34375,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 16,
-    "prediction_accuracy": 0.5161290322580645,
-    "avg_confidence": 0.7523716688156128,
+    "prediction_accuracy": 0.5,
+    "avg_confidence": 0.7435204386711121,
     "conference": "Conference USA"
   },
   {
     "display_name": "UTSA",
-    "games_played": 31,
-    "wins": 5,
+    "games_played": 32,
+    "wins": 6,
     "losses": 26,
-    "win_pct": 0.16129032258064516,
-    "predictions_made": 31,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.7419354838709677,
-    "avg_confidence": 0.8098241090774536,
+    "win_pct": 0.1875,
+    "predictions_made": 32,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.75,
+    "avg_confidence": 0.8074318170547485,
     "conference": "American"
   },
   {
@@ -8876,19 +8936,19 @@
     "predictions_made": 31,
     "correct_predictions": 19,
     "prediction_accuracy": 0.6129032258064516,
-    "avg_confidence": 0.7726642489433289,
+    "avg_confidence": 0.7721790075302124,
     "conference": "Big 12"
   },
   {
     "display_name": "Utah State",
-    "games_played": 37,
-    "wins": 30,
+    "games_played": 38,
+    "wins": 31,
     "losses": 7,
-    "win_pct": 0.8108108108108109,
+    "win_pct": 0.8157894736842105,
     "predictions_made": 37,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.6486486486486487,
-    "avg_confidence": 0.7776234149932861,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.6756756756756757,
+    "avg_confidence": 0.779348611831665,
     "conference": ""
   },
   {
@@ -8900,43 +8960,43 @@
     "predictions_made": 34,
     "correct_predictions": 24,
     "prediction_accuracy": 0.7058823529411765,
-    "avg_confidence": 0.7443391680717468,
+    "avg_confidence": 0.7448318004608154,
     "conference": "WAC"
   },
   {
     "display_name": "Utah Valley",
-    "games_played": 35,
-    "wins": 26,
+    "games_played": 36,
+    "wins": 27,
     "losses": 9,
-    "win_pct": 0.7428571428571429,
+    "win_pct": 0.75,
     "predictions_made": 35,
-    "correct_predictions": 24,
-    "prediction_accuracy": 0.6857142857142857,
-    "avg_confidence": 0.759589433670044,
+    "correct_predictions": 25,
+    "prediction_accuracy": 0.7142857142857143,
+    "avg_confidence": 0.760525643825531,
     "conference": "WAC"
   },
   {
     "display_name": "VCU",
-    "games_played": 29,
+    "games_played": 30,
     "wins": 24,
-    "losses": 5,
-    "win_pct": 0.8275862068965517,
+    "losses": 6,
+    "win_pct": 0.8,
     "predictions_made": 31,
     "correct_predictions": 3,
     "prediction_accuracy": 0.0967741935483871,
-    "avg_confidence": 0.7683104276657104,
+    "avg_confidence": 0.7693125605583191,
     "conference": "Atlantic 10"
   },
   {
     "display_name": "VMI",
-    "games_played": 34,
+    "games_played": 35,
     "wins": 7,
-    "losses": 27,
-    "win_pct": 0.20588235294117646,
+    "losses": 28,
+    "win_pct": 0.2,
     "predictions_made": 35,
-    "correct_predictions": 25,
-    "prediction_accuracy": 0.7142857142857143,
-    "avg_confidence": 0.7863314151763916,
+    "correct_predictions": 26,
+    "prediction_accuracy": 0.7428571428571429,
+    "avg_confidence": 0.7890415191650391,
     "conference": "Southern"
   },
   {
@@ -8960,7 +9020,7 @@
     "predictions_made": 31,
     "correct_predictions": 20,
     "prediction_accuracy": 0.6451612903225806,
-    "avg_confidence": 0.7805705070495605,
+    "avg_confidence": 0.7793959975242615,
     "conference": ""
   },
   {
@@ -8972,7 +9032,7 @@
     "predictions_made": 35,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5142857142857142,
-    "avg_confidence": 0.7203480005264282,
+    "avg_confidence": 0.7188583612442017,
     "conference": "SEC"
   },
   {
@@ -8996,7 +9056,7 @@
     "predictions_made": 34,
     "correct_predictions": 19,
     "prediction_accuracy": 0.5588235294117647,
-    "avg_confidence": 0.7249851822853088,
+    "avg_confidence": 0.7236793041229248,
     "conference": "America East"
   },
   {
@@ -9032,7 +9092,7 @@
     "predictions_made": 34,
     "correct_predictions": 26,
     "prediction_accuracy": 0.7647058823529411,
-    "avg_confidence": 0.7793405055999756,
+    "avg_confidence": 0.7759072780609131,
     "conference": "Big East"
   },
   {
@@ -9044,7 +9104,7 @@
     "predictions_made": 38,
     "correct_predictions": 27,
     "prediction_accuracy": 0.7105263157894737,
-    "avg_confidence": 0.7661572694778442,
+    "avg_confidence": 0.7655567526817322,
     "conference": "ACC"
   },
   {
@@ -9092,7 +9152,7 @@
     "predictions_made": 32,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5625,
-    "avg_confidence": 0.7642278075218201,
+    "avg_confidence": 0.7598668932914734,
     "conference": "ACC"
   },
   {
@@ -9152,7 +9212,7 @@
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7861713171005249,
+    "avg_confidence": 0.7837724685668945,
     "conference": "ACC"
   },
   {
@@ -9217,14 +9277,14 @@
   },
   {
     "display_name": "Washington State",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 12,
-    "losses": 21,
-    "win_pct": 0.36363636363636365,
+    "losses": 22,
+    "win_pct": 0.35294117647058826,
     "predictions_made": 30,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7383137941360474,
+    "correct_predictions": 19,
+    "prediction_accuracy": 0.6333333333333333,
+    "avg_confidence": 0.7298433184623718,
     "conference": ""
   },
   {
@@ -9253,14 +9313,14 @@
   },
   {
     "display_name": "Weber State",
-    "games_played": 33,
+    "games_played": 34,
     "wins": 16,
-    "losses": 17,
-    "win_pct": 0.48484848484848486,
+    "losses": 18,
+    "win_pct": 0.47058823529411764,
     "predictions_made": 32,
-    "correct_predictions": 20,
-    "prediction_accuracy": 0.625,
-    "avg_confidence": 0.7244722843170166,
+    "correct_predictions": 21,
+    "prediction_accuracy": 0.65625,
+    "avg_confidence": 0.7240023016929626,
     "conference": ""
   },
   {
@@ -9296,7 +9356,7 @@
     "predictions_made": 5,
     "correct_predictions": 0,
     "prediction_accuracy": 0.0,
-    "avg_confidence": 0.740938127040863,
+    "avg_confidence": 0.7318822741508484,
     "conference": ""
   },
   {
@@ -9308,7 +9368,7 @@
     "predictions_made": 32,
     "correct_predictions": 21,
     "prediction_accuracy": 0.65625,
-    "avg_confidence": 0.7478359341621399,
+    "avg_confidence": 0.7534488439559937,
     "conference": "ASUN"
   },
   {
@@ -9320,7 +9380,7 @@
     "predictions_made": 35,
     "correct_predictions": 21,
     "prediction_accuracy": 0.6,
-    "avg_confidence": 0.7657589912414551,
+    "avg_confidence": 0.7624238729476929,
     "conference": "Big 12"
   },
   {
@@ -9337,14 +9397,14 @@
   },
   {
     "display_name": "Western Carolina",
-    "games_played": 32,
-    "wins": 15,
+    "games_played": 33,
+    "wins": 16,
     "losses": 17,
-    "win_pct": 0.46875,
+    "win_pct": 0.48484848484848486,
     "predictions_made": 33,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.6363636363636364,
-    "avg_confidence": 0.7654023766517639,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.6666666666666666,
+    "avg_confidence": 0.75807124376297,
     "conference": "Southern"
   },
   {
@@ -9361,13 +9421,13 @@
   },
   {
     "display_name": "Western Illinois",
-    "games_played": 32,
+    "games_played": 33,
     "wins": 5,
-    "losses": 27,
-    "win_pct": 0.15625,
+    "losses": 28,
+    "win_pct": 0.15151515151515152,
     "predictions_made": 30,
-    "correct_predictions": 23,
-    "prediction_accuracy": 0.7666666666666667,
+    "correct_predictions": 24,
+    "prediction_accuracy": 0.8,
     "avg_confidence": 0.7750424146652222,
     "conference": "Ohio Valley"
   },
@@ -9389,10 +9449,10 @@
     "wins": 11,
     "losses": 22,
     "win_pct": 0.3333333333333333,
-    "predictions_made": 31,
+    "predictions_made": 32,
     "correct_predictions": 23,
-    "prediction_accuracy": 0.7419354838709677,
-    "avg_confidence": 0.7519649863243103,
+    "prediction_accuracy": 0.71875,
+    "avg_confidence": 0.7543154954910278,
     "conference": "MAC"
   },
   {
@@ -9464,7 +9524,7 @@
     "predictions_made": 36,
     "correct_predictions": 20,
     "prediction_accuracy": 0.5555555555555556,
-    "avg_confidence": 0.7100936770439148,
+    "avg_confidence": 0.7072480320930481,
     "conference": ""
   },
   {
@@ -9497,10 +9557,10 @@
     "wins": 21,
     "losses": 12,
     "win_pct": 0.6363636363636364,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.53125,
-    "avg_confidence": 0.7428122758865356,
+    "prediction_accuracy": 0.5151515151515151,
+    "avg_confidence": 0.7396321296691895,
     "conference": "CAA"
   },
   {
@@ -9565,14 +9625,14 @@
   },
   {
     "display_name": "Winthrop",
-    "games_played": 35,
+    "games_played": 36,
     "wins": 23,
-    "losses": 12,
-    "win_pct": 0.6571428571428571,
+    "losses": 13,
+    "win_pct": 0.6388888888888888,
     "predictions_made": 35,
     "correct_predictions": 22,
     "prediction_accuracy": 0.6285714285714286,
-    "avg_confidence": 0.7493367791175842,
+    "avg_confidence": 0.7453497052192688,
     "conference": "Big South"
   },
   {
@@ -9581,10 +9641,10 @@
     "wins": 26,
     "losses": 11,
     "win_pct": 0.7027027027027027,
-    "predictions_made": 34,
+    "predictions_made": 35,
     "correct_predictions": 17,
-    "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7422614097595215,
+    "prediction_accuracy": 0.4857142857142857,
+    "avg_confidence": 0.7420045137405396,
     "conference": "Big Ten"
   },
   {
@@ -9596,7 +9656,7 @@
     "predictions_made": 32,
     "correct_predictions": 19,
     "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.736990749835968,
+    "avg_confidence": 0.7391580939292908,
     "conference": "Southern"
   },
   {
@@ -9620,7 +9680,7 @@
     "predictions_made": 36,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5,
-    "avg_confidence": 0.7190150022506714,
+    "avg_confidence": 0.7178532481193542,
     "conference": ""
   },
   {
@@ -9632,7 +9692,7 @@
     "predictions_made": 34,
     "correct_predictions": 26,
     "prediction_accuracy": 0.7647058823529411,
-    "avg_confidence": 0.7389158606529236,
+    "avg_confidence": 0.7331988215446472,
     "conference": "Mountain West"
   },
   {
@@ -9644,7 +9704,7 @@
     "predictions_made": 33,
     "correct_predictions": 24,
     "prediction_accuracy": 0.7272727272727273,
-    "avg_confidence": 0.7698042392730713,
+    "avg_confidence": 0.7669245004653931,
     "conference": "Big East"
   },
   {
@@ -9653,10 +9713,10 @@
     "wins": 25,
     "losses": 8,
     "win_pct": 0.7575757575757576,
-    "predictions_made": 32,
+    "predictions_made": 33,
     "correct_predictions": 19,
-    "prediction_accuracy": 0.59375,
-    "avg_confidence": 0.7817689180374146,
+    "prediction_accuracy": 0.5757575757575758,
+    "avg_confidence": 0.7828624844551086,
     "conference": "Ivy League"
   },
   {
@@ -9680,7 +9740,7 @@
     "predictions_made": 34,
     "correct_predictions": 18,
     "prediction_accuracy": 0.5294117647058824,
-    "avg_confidence": 0.7009830474853516,
+    "avg_confidence": 0.7000375986099243,
     "conference": ""
   }
 ]
