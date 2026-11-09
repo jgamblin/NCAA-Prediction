@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.2194199562072754,
     "potential_payout": 32.19419860839844,
-    "won": null,
+    "won": false,
     "actual_payout": 0.0,
-    "profit": null,
+    "profit": -10.0,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-11-09T22:04:28.175636",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "NJIT",
         "moneyline": -122,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "NJIT",
         "home_team": "NJIT",
         "away_team": "Saint Peter's",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 54,
+        "away_score": 52,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "UAlbany Great Danes",
         "moneyline": -130,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Merrimack",
         "home_team": "UAlbany Great Danes",
         "away_team": "Merrimack",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 60,
+        "away_score": 73,
+        "game_status": "Final"
       }
     ]
   },
