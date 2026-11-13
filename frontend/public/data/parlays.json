@@ -1,11 +1,11 @@
 [
   {
-    "id": 85,
-    "date": "2026-11-12T00:00:00",
+    "id": 86,
+    "date": "2026-11-13T00:00:00",
     "bet_amount": 10.0,
     "num_legs": 2,
-    "combined_odds": 3.271557331085205,
-    "potential_payout": 32.715572357177734,
+    "combined_odds": 3.299999952316284,
+    "potential_payout": 33.0,
     "won": null,
     "actual_payout": 0.0,
     "profit": null,
@@ -15,18 +15,64 @@
     "legs": [
       {
         "leg_number": 1,
+        "game_id": "401921728",
+        "bet_team": "Stanford Cardinal",
+        "opponent": "UNLV",
+        "moneyline": -120,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "UNLV",
+        "away_team": "Stanford Cardinal",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      },
+      {
+        "leg_number": 2,
+        "game_id": "401926117",
+        "bet_team": "Wright State",
+        "opponent": "Samford",
+        "moneyline": -125,
+        "confidence": 0.8500000238418579,
+        "won": null,
+        "actual_winner": null,
+        "home_team": "Samford",
+        "away_team": "Wright State",
+        "home_score": 0,
+        "away_score": 0,
+        "game_status": "Scheduled"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "date": "2026-11-12T00:00:00",
+    "bet_amount": 10.0,
+    "num_legs": 2,
+    "combined_odds": 3.271557331085205,
+    "potential_payout": 32.715572357177734,
+    "won": false,
+    "actual_payout": 0.0,
+    "profit": -10.0,
+    "strategy": "parlay_high_confidence_conservative",
+    "settled": true,
+    "settled_at": "2026-11-13T19:22:13.016071",
+    "legs": [
+      {
+        "leg_number": 1,
         "game_id": "401911239",
         "bet_team": "Richmond",
         "opponent": "Southern Illinois",
         "moneyline": -148,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": false,
+        "actual_winner": "Southern Illinois",
         "home_team": "Southern Illinois",
         "away_team": "Richmond",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 80,
+        "away_score": 70,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +81,13 @@
         "opponent": "Quinnipiac",
         "moneyline": -105,
         "confidence": 0.809829592704773,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Monmouth",
         "home_team": "Quinnipiac",
         "away_team": "Monmouth",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 70,
+        "away_score": 74,
+        "game_status": "Final"
       }
     ]
   },
