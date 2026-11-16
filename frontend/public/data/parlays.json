@@ -6,12 +6,12 @@
     "num_legs": 2,
     "combined_odds": 3.2119815349578857,
     "potential_payout": 32.119815826416016,
-    "won": null,
-    "actual_payout": 0.0,
-    "profit": null,
+    "won": true,
+    "actual_payout": 32.119815826416016,
+    "profit": 22.119815826416016,
     "strategy": "parlay_high_confidence_conservative",
-    "settled": false,
-    "settled_at": null,
+    "settled": true,
+    "settled_at": "2026-11-16T21:45:49.105853",
     "legs": [
       {
         "leg_number": 1,
@@ -20,13 +20,13 @@
         "opponent": "La Salle",
         "moneyline": -105,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "Temple",
         "home_team": "La Salle",
         "away_team": "Temple",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 71,
+        "away_score": 84,
+        "game_status": "Final"
       },
       {
         "leg_number": 2,
@@ -35,13 +35,13 @@
         "opponent": "Holy Cross",
         "moneyline": -155,
         "confidence": 0.8500000238418579,
-        "won": null,
-        "actual_winner": null,
+        "won": true,
+        "actual_winner": "UAlbany Great Danes",
         "home_team": "Holy Cross",
         "away_team": "UAlbany Great Danes",
-        "home_score": 0,
-        "away_score": 0,
-        "game_status": "Scheduled"
+        "home_score": 60,
+        "away_score": 62,
+        "game_status": "Final"
       }
     ]
   },
