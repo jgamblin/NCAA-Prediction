@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-11-19 14:07:43 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `2be9c52`
+**Last Updated**: 2026-11-20 13:45:02 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `79f340e`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 35
-- **Average Confidence**: 77.2%
-- **High (≥70%)**: 28 · **Medium (60-70%)**: 6 · **Other (<60%)**: 1
+- **Games Predicted Today**: 53
+- **Average Confidence**: 77.9%
+- **High (≥70%)**: 37 · **Medium (60-70%)**: 16 · **Other (<60%)**: 0
 
 ### 🏅 Pick Streaks
 
@@ -30,66 +30,86 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **NC State** | Murray State | 85.0% |
-| 2 | **Northern Kentucky Norse** | Berea | 85.0% |
-| 3 | **SIU Edwardsville** | North Park | 85.0% |
-| 4 | **American University** | Mary Baldwin Fighting Squirrels | 85.0% |
-| 5 | **Texas Longhorns** | Southern Utah Thunderbirds | 85.0% |
-| 6 | **Charleston** | Drake | 85.0% |
-| 7 | **Southern Miss** | Grambling | 85.0% |
-| 8 | **Oregon State** | Oregon Ducks | 85.0% |
-| 9 | **Georgia Southern** | Houston Christian | 85.0% |
-| 10 | **Illinois State** | Eureka Red | 85.0% |
-| 11 | **North Dakota** | Mayville State Comets | 85.0% |
-| 12 | **Louisville** | Stetson | 85.0% |
-| 13 | **Houston** | Kansas | 85.0% |
-| 14 | **Portland State** | Northwest Indian | 85.0% |
-| 15 | **Virginia Commonwealth** | VCU | 85.0% |
-| 16 | **Stanford Cardinal** | Sacramento State | 85.0% |
-| 17 | **UC Santa Barbara** | Pepperdine | 85.0% |
-| 18 | **Butler** | Northeastern | 74.6% |
-| 19 | **High Point** | Montana State | 74.6% |
-| 20 | **Ohio State** | UMBC | 74.6% |
-| 21 | **USC** | Tarleton | 74.6% |
-| 22 | **Washington** | Utah Tech | 74.6% |
-| 23 | **California** | East Texas A&M | 74.6% |
-| 24 | **Little Rock** | Jacksonville | 73.2% |
-| 25 | **Tulane Green Wave** | Louisiana Tech | 73.2% |
-| 26 | **Buffalo** | St. Bonaventure | 73.2% |
-| 27 | **Texas A&M** | TCU Horned Frogs | 73.2% |
-| 28 | **UTEP** | New Mexico State | 73.2% |
+| 1 | **South Dakota State Jackrabbits** | Idaho State Bengals | 85.0% |
+| 2 | **Dayton** | Utah | 85.0% |
+| 3 | **Miami (FL)** | Manhattan | 85.0% |
+| 4 | **Mercyhurst** | Canisius Golden Griffins | 85.0% |
+| 5 | **Bryant** | Worcester State | 85.0% |
+| 6 | **Illinois** | Eastern Illinois | 85.0% |
+| 7 | **Akron** | WVU Tech Golden | 85.0% |
+| 8 | **Virginia** | Loyola Maryland | 85.0% |
+| 9 | **Wisconsin** | Murray State | 85.0% |
+| 10 | **Saint Joseph's** | Drexel | 85.0% |
+| 11 | **Harvard** | Holy Cross | 85.0% |
+| 12 | **Seton Hall** | NC State | 85.0% |
+| 13 | **North Carolina** | Marshall | 85.0% |
+| 14 | **Missouri** | Le Moyne | 85.0% |
+| 15 | **Utah Valley** | East Carolina | 85.0% |
+| 16 | **Pepperdine** | West Coast Baptist | 85.0% |
+| 17 | **Lehigh Mountain** | Neumann | 85.0% |
+| 18 | **Arkansas** | Mississippi Valley State | 85.0% |
+| 19 | **UT Arlington** | Northwestern State | 85.0% |
+| 20 | **Tulsa Golden Hurricane** | Mississippi State | 85.0% |
+| 21 | **West Georgia** | Paine | 85.0% |
+| 22 | **Georgia** | Georgia Tech | 85.0% |
+| 23 | **Central Baptist** | Incarnate Word | 84.9% |
+| 24 | **Lipscomb** | Alabama A%26M | 84.0% |
+| 25 | **South Carolina State** | The Citadel | 82.7% |
+| 26 | **Kennesaw State** | SE Louisiana | 81.8% |
+| 27 | **Maryland** | Wagner Seahawks | 81.8% |
+| 28 | **Purdue** | Oakland | 81.8% |
+| 29 | **Tennessee** | Coastal Carolina | 81.8% |
+| 30 | **Monmouth** | Princeton | 81.0% |
+| 31 | **Iowa** | Xavier | 79.5% |
+| 32 | **Western Michigan** | Mount St. Mary's | 79.5% |
+| 33 | **North Texas** | Appalachian St | 79.5% |
+| 34 | **Kentucky** | Indiana | 79.5% |
+| 35 | **Stephen F. Austin** | Indiana State | 77.4% |
+| 36 | **Eastern Kentucky Colonels** | Bellarmine | 77.4% |
+| 37 | **Iona** | Kansas City Roos | 77.4% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Southeast Missouri State** | St. Thomas Tommies | 68.5% |
-| 2 | **Tusculum Pioneers** | North Alabama | 68.5% |
-| 3 | **Maine** | Maine Black | 63.0% |
-| 4 | **Robert Morris** | Toledo | 63.0% |
-| 5 | **Seton Hall** | Wisconsin | 63.0% |
-| 6 | **Rutgers** | UNLV | 63.0% |
+| 1 | **Georgia State** | Jacksonville State | 69.2% |
+| 2 | **Richmond** | Western Kentucky | 69.2% |
+| 3 | **Niagara Purple** | Delaware State | 69.2% |
+| 4 | **Cal State Bakersfield** | Idaho | 69.2% |
+| 5 | **Western Illinois** | UAlbany Great Danes | 66.3% |
+| 6 | **UT Martin** | Southern Illinois | 66.3% |
+| 7 | **Saint Louis** | Saint Mary's | 66.3% |
+| 8 | **Virginia Tech** | Northwestern | 65.4% |
+| 9 | **Pittsburgh** | Central Michigan | 65.4% |
+| 10 | **Kansas State** | Campbell Fighting | 65.4% |
+| 11 | **Boise State** | Sam Houston State | 62.7% |
+| 12 | **Southern Methodist** | South Alabama | 62.7% |
+| 13 | **Vanderbilt** | UCF | 62.7% |
+| 14 | **Liberty** | Rhode Island | 62.7% |
+| 15 | **Cal State Northridge** | Delaware Blue Hens | 62.7% |
+| 16 | **Fresno State** | Alabama State | 62.7% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Notre Dame @ Auburn | 53.3% | Toss-Up |
-| 2 | Toledo vs Robert Morris | 63.0% |  |
-| 3 | Quinnipiac vs Maine Black | 63.0% |  |
-| 4 | Wisconsin vs Seton Hall | 63.0% |  |
-| 5 | UNLV vs Rutgers | 63.0% |  |
+| 1 | Delaware Blue Hens @ Cal State Northridge | 62.7% |  |
+| 2 | Alabama State @ Fresno State | 62.7% |  |
+| 3 | UCF @ Vanderbilt | 62.7% |  |
+| 4 | Rhode Island @ Liberty | 62.7% |  |
+| 5 | SMU vs South Alabama | 62.7% |  |
+| 6 | Sam Houston State @ Boise State | 62.7% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 16
-- Away Teams Favored: 19
+- Home Teams Favored: 27
+- Away Teams Favored: 26
 - Max Confidence: 85.0%
-- Min Confidence: 53.3%
+- Min Confidence: 62.7%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (416 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (430 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
