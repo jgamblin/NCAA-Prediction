@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-11-22 13:11:48 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `c934a01`
+**Last Updated**: 2026-11-23 17:33:54 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9be4ac8`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 34
-- **Average Confidence**: 76.7%
-- **High (≥70%)**: 26 · **Medium (60-70%)**: 5 · **Other (<60%)**: 3
+- **Games Predicted Today**: 28
+- **Average Confidence**: 75.9%
+- **High (≥70%)**: 21 · **Medium (60-70%)**: 3 · **Other (<60%)**: 4
 
 ### 🏅 Pick Streaks
 
@@ -30,62 +30,56 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Cincinnati** | UMass Lowell River | 85.0% |
-| 2 | **Memphis** | Evansville Purple Aces | 85.0% |
-| 3 | **South Alabama** | West Florida Argonauts | 85.0% |
-| 4 | **Fordham** | San Diego Toreros | 85.0% |
-| 5 | **Robert Morris** | New Mexico State | 85.0% |
-| 6 | **Texas Longhorns** | Southern Indiana | 85.0% |
-| 7 | **Troy** | Nicholls State | 85.0% |
-| 8 | **Lipscomb** | Milligan | 85.0% |
-| 9 | **Eastern Kentucky Colonels** | Alice Lloyd | 85.0% |
-| 10 | **UC Irvine** | Loyola Marymount | 85.0% |
-| 11 | **California Baptist** | Portland | 85.0% |
-| 12 | **Saint Mary's** | Menlo Oaks | 85.0% |
-| 13 | **UCLA** | Delaware Blue Hens | 85.0% |
-| 14 | **Rice** | Lamar | 85.0% |
-| 15 | **USC** | Louisiana Ragin' Cajuns | 79.3% |
-| 16 | **Temple** | Stephen F. Austin | 78.0% |
-| 17 | **Virginia Tech** | Oklahoma State | 78.0% |
-| 18 | **Rhode Island** | UAB | 78.0% |
-| 19 | **Mercyhurst** | UAlbany Great Danes | 78.0% |
-| 20 | **Minnesota** | Utah | 77.2% |
-| 21 | **Utah Valley** | UT Martin | 77.2% |
-| 22 | **Boston College** | NJIT | 77.2% |
-| 23 | **Utah Tech** | South Dakota | 77.2% |
-| 24 | **Cal State Fullerton** | Portland State | 77.0% |
-| 25 | **McNeese** | Texas State | 73.6% |
-| 26 | **Wyoming** | Duquesne | 73.6% |
+| 1 | **Howard** | Notre Dame (MD) | 85.0% |
+| 2 | **La Salle** | Penn State Brandywine | 85.0% |
+| 3 | **East Tennessee State** | Kentucky State Thorobreds | 85.0% |
+| 4 | **Central Arkansas** | North Florida Ospreys | 85.0% |
+| 5 | **Georgia Southern** | Northern Kentucky Norse | 85.0% |
+| 6 | **California** | Alabama State | 85.0% |
+| 7 | **Virginia Commonwealth** | VCU | 85.0% |
+| 8 | **Illinois** | Winthrop | 85.0% |
+| 9 | **North Carolina Central** | Carolina University | 85.0% |
+| 10 | **Kansas** | Denver Pioneers | 85.0% |
+| 11 | **UNC Greensboro** | Pepperdine | 85.0% |
+| 12 | **North Carolina** | Monmouth | 85.0% |
+| 13 | **Stephen F. Austin** | Utah Valley | 85.0% |
+| 14 | **Spalding Pelicans** | Ball State | 83.1% |
+| 15 | **North Carolina A&T** | South Carolina State | 75.9% |
+| 16 | **Youngstown State** | Maryland-Eastern Shore | 73.7% |
+| 17 | **Iona** | Fairleigh Dickinson | 73.7% |
+| 18 | **Arizona** | Colorado State | 73.7% |
+| 19 | **Wichita State** | Texas A&M-Corpus Christi | 73.7% |
+| 20 | **Dickinson State Blue** | Idaho | 70.7% |
+| 21 | **Carroll (MT) Fighting Saints** | Montana | 70.7% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **George Washington** | Western Kentucky | 65.2% |
-| 2 | **William & Mary** | Youngstown State | 65.2% |
-| 3 | **Seattle** | Seattle U | 65.2% |
-| 4 | **San Jose State** | Loyola Chicago | 65.2% |
-| 5 | **Maryland-Eastern Shore** | IU Indianapolis | 62.6% |
+| 1 | **Le Moyne** | Mansfield | 68.9% |
+| 2 | **Buffalo** | RIT | 68.9% |
+| 3 | **Wisconsin Stout** | North Dakota State | 60.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Liberty vs Richmond | 56.6% | Close |
-| 2 | Samford vs UNC Asheville | 56.6% | Close |
-| 3 | Valparaiso Beacons vs Southern Miss | 56.6% | Close |
-| 4 | IU Indianapolis @ Maryland-Eastern Shore | 62.6% |  |
+| 1 | Illinois State @ Santa Clara | 56.5% | Close |
+| 2 | Seattle U vs Loyola Chicago | 56.5% | Close |
+| 3 | Eastern Washington @ UNLV | 56.5% | Close |
+| 4 | San Jose State @ UC San Diego Tritons | 56.5% | Close |
+| 5 | North Dakota State vs Wisconsin Stout | 60.1% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 14
-- Away Teams Favored: 20
+- Home Teams Favored: 18
+- Away Teams Favored: 10
 - Max Confidence: 85.0%
-- Min Confidence: 56.6%
+- Min Confidence: 56.5%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (438 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (401 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
