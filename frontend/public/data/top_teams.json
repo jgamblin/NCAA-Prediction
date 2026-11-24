@@ -88,6 +88,17 @@
     "team_losses": 7
   },
   {
+    "team_id": "Arizona",
+    "display_name": "Arizona",
+    "conference": null,
+    "predictions_made": 32,
+    "correct_predictions": 29,
+    "prediction_accuracy": 0.90625,
+    "avg_confidence": 0.8068935982882977,
+    "team_wins": 41,
+    "team_losses": 4
+  },
+  {
     "team_id": "Michigan",
     "display_name": "Michigan",
     "conference": null,
@@ -97,28 +108,6 @@
     "avg_confidence": 0.8159904864526564,
     "team_wins": 40,
     "team_losses": 5
-  },
-  {
-    "team_id": "Arizona",
-    "display_name": "Arizona",
-    "conference": null,
-    "predictions_made": 31,
-    "correct_predictions": 28,
-    "prediction_accuracy": 0.9032257795333862,
-    "avg_confidence": 0.8091616130644276,
-    "team_wins": 40,
-    "team_losses": 4
-  },
-  {
-    "team_id": "Akron",
-    "display_name": "Akron",
-    "conference": null,
-    "predictions_made": 30,
-    "correct_predictions": 27,
-    "prediction_accuracy": 0.8999999761581421,
-    "avg_confidence": 0.8168192346890767,
-    "team_wins": 33,
-    "team_losses": 8
   },
   {
     "team_id": "Saint Mary's",
@@ -132,15 +121,15 @@
     "team_losses": 7
   },
   {
-    "team_id": "South Carolina Gamecocks",
-    "display_name": "South Carolina Gamecocks",
+    "team_id": "Akron",
+    "display_name": "Akron",
     "conference": null,
-    "predictions_made": 10,
-    "correct_predictions": 9,
+    "predictions_made": 30,
+    "correct_predictions": 27,
     "prediction_accuracy": 0.8999999761581421,
-    "avg_confidence": 0.7473515033721924,
-    "team_wins": 18,
-    "team_losses": 19
+    "avg_confidence": 0.8168192346890767,
+    "team_wins": 34,
+    "team_losses": 8
   },
   {
     "team_id": "Western Michigan",
@@ -152,6 +141,17 @@
     "avg_confidence": 0.7698825597763062,
     "team_wins": 15,
     "team_losses": 22
+  },
+  {
+    "team_id": "South Carolina Gamecocks",
+    "display_name": "South Carolina Gamecocks",
+    "conference": null,
+    "predictions_made": 10,
+    "correct_predictions": 9,
+    "prediction_accuracy": 0.8999999761581421,
+    "avg_confidence": 0.7473515033721924,
+    "team_wins": 18,
+    "team_losses": 19
   },
   {
     "team_id": "High Point",
@@ -184,7 +184,7 @@
     "prediction_accuracy": 0.8846153616905212,
     "avg_confidence": 0.799473762512207,
     "team_wins": 30,
-    "team_losses": 9
+    "team_losses": 10
   },
   {
     "team_id": "McNeese",
@@ -201,11 +201,11 @@
     "team_id": "Kansas",
     "display_name": "Kansas",
     "conference": null,
-    "predictions_made": 24,
-    "correct_predictions": 21,
-    "prediction_accuracy": 0.875,
-    "avg_confidence": 0.7634595309694608,
-    "team_wins": 29,
+    "predictions_made": 25,
+    "correct_predictions": 22,
+    "prediction_accuracy": 0.8799999952316284,
+    "avg_confidence": 0.7669211506843567,
+    "team_wins": 30,
     "team_losses": 12
   },
   {
@@ -220,6 +220,28 @@
     "team_losses": 21
   },
   {
+    "team_id": "Stephen F. Austin",
+    "display_name": "Stephen F. Austin",
+    "conference": null,
+    "predictions_made": 31,
+    "correct_predictions": 27,
+    "prediction_accuracy": 0.8709677457809448,
+    "avg_confidence": 0.8095627504010354,
+    "team_wins": 34,
+    "team_losses": 7
+  },
+  {
+    "team_id": "Central Arkansas",
+    "display_name": "Central Arkansas",
+    "conference": null,
+    "predictions_made": 23,
+    "correct_predictions": 20,
+    "prediction_accuracy": 0.8695651888847351,
+    "avg_confidence": 0.8289094593213953,
+    "team_wins": 26,
+    "team_losses": 15
+  },
+  {
     "team_id": "UConn",
     "display_name": "UConn",
     "conference": null,
@@ -228,17 +250,6 @@
     "prediction_accuracy": 0.8684210777282715,
     "avg_confidence": 0.8062675124720523,
     "team_wins": 38,
-    "team_losses": 7
-  },
-  {
-    "team_id": "Stephen F. Austin",
-    "display_name": "Stephen F. Austin",
-    "conference": null,
-    "predictions_made": 30,
-    "correct_predictions": 26,
-    "prediction_accuracy": 0.8666666746139526,
-    "avg_confidence": 0.8082148412863414,
-    "team_wins": 33,
     "team_losses": 7
   },
   {
@@ -253,15 +264,15 @@
     "team_losses": 11
   },
   {
-    "team_id": "Central Arkansas",
-    "display_name": "Central Arkansas",
+    "team_id": "Santa Clara",
+    "display_name": "Santa Clara",
     "conference": null,
     "predictions_made": 22,
     "correct_predictions": 19,
     "prediction_accuracy": 0.8636363744735718,
-    "avg_confidence": 0.8279507972977378,
-    "team_wins": 25,
-    "team_losses": 15
+    "avg_confidence": 0.7501892908052965,
+    "team_wins": 32,
+    "team_losses": 10
   },
   {
     "team_id": "Utah State",
@@ -273,17 +284,6 @@
     "avg_confidence": 0.7990652302215839,
     "team_wins": 34,
     "team_losses": 7
-  },
-  {
-    "team_id": "Santa Clara",
-    "display_name": "Santa Clara",
-    "conference": null,
-    "predictions_made": 21,
-    "correct_predictions": 18,
-    "prediction_accuracy": 0.8571428656578064,
-    "avg_confidence": 0.7589889367421468,
-    "team_wins": 31,
-    "team_losses": 10
   },
   {
     "team_id": "Duquesne",
