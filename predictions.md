@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-11-25 15:08:21 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `1b97067`
+**Last Updated**: 2026-11-26 15:08:00 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9479720`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 41
-- **Average Confidence**: 75.3%
-- **High (≥70%)**: 26 · **Medium (60-70%)**: 12 · **Other (<60%)**: 3
+- **Games Predicted Today**: 13
+- **Average Confidence**: 71.8%
+- **High (≥70%)**: 8 · **Medium (60-70%)**: 2 · **Other (<60%)**: 3
 
 ### 🏅 Pick Streaks
 
@@ -30,72 +30,42 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Utah Tech** | Bethesda | 85.0% |
-| 2 | **Liberty** | Princeton | 85.0% |
-| 3 | **Portland State** | UC Riverside | 85.0% |
-| 4 | **Texas A&M** | Xavier | 85.0% |
-| 5 | **Nebraska Cornhuskers** | Southern | 85.0% |
-| 6 | **Memphis** | Penn State | 85.0% |
-| 7 | **Texas State** | Alcorn State | 85.0% |
-| 8 | **Wisconsin** | Northeastern | 85.0% |
-| 9 | **Cal State Northridge** | Weber State | 85.0% |
-| 10 | **Northwestern State** | West Florida Argonauts | 85.0% |
-| 11 | **Clemson** | Colorado State | 85.0% |
-| 12 | **Hawai'i Rainbow** | Incarnate Word | 85.0% |
-| 13 | **New Mexico** | Mississippi Valley State | 85.0% |
-| 14 | **Utah State** | SMU | 85.0% |
-| 15 | **Grand Canyon Lopes** | Colorado | 85.0% |
-| 16 | **Montana State** | Northwest Indian | 85.0% |
-| 17 | **Case Western Reserve** | Cleveland State | 80.5% |
-| 18 | **Holy Cross** | Dartmouth Big Green | 78.8% |
-| 19 | **Wake Forest** | Mississippi State | 78.8% |
-| 20 | **Eastern Washington** | Loyola Marymount | 78.8% |
-| 21 | **Omaha** | UC Davis | 78.1% |
-| 22 | **Brigham Young** | BYU | 78.1% |
-| 23 | **UConn** | Duke | 78.1% |
-| 24 | **St. Thomas Tommies** | UNC Wilmington Seahawks | 76.8% |
-| 25 | **Grambling State** | Grambling | 75.2% |
-| 26 | **Pacific** | Jacksonville State | 71.3% |
+| 1 | **Utah State** | USC | 85.0% |
+| 2 | **DePaul Blue** | Pittsburgh | 85.0% |
+| 3 | **Alabama Crimson Tide** | Kansas State | 85.0% |
+| 4 | **St. John's** | Louisville | 85.0% |
+| 5 | **Texas Tech** | Oregon Ducks | 85.0% |
+| 6 | **TCU Horned Frogs** | Creighton | 77.2% |
+| 7 | **Pacific** | Omaha | 77.2% |
+| 8 | **Jacksonville State** | UC Davis | 75.4% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Northern Illinois** | SIU Edwardsville | 68.0% |
-| 2 | **Cal State Bakersfield** | Pepperdine | 68.0% |
-| 3 | **South Carolina Upstate** | The Citadel | 68.0% |
-| 4 | **Marshall** | Prairie View A&M | 67.4% |
-| 5 | **Virginia Commonwealth** | Washington | 67.4% |
-| 6 | **NC State** | Norfolk State | 67.4% |
-| 7 | **Syracuse Orange** | UAlbany Great Danes | 67.4% |
-| 8 | **George Mason** | Longwood | 67.4% |
-| 9 | **Bethune-Cookman** | Richmond | 61.3% |
-| 10 | **Georgia State** | Florida Gulf Coast | 61.3% |
-| 11 | **Bellarmine** | Northern Kentucky Norse | 61.3% |
-| 12 | **Eastern Michigan** | UTEP | 61.3% |
+| 1 | **Tennessee** | Iowa State | 61.1% |
+| 2 | **Southern Methodist** | SMU | 61.1% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Stanford Cardinal @ Saint Louis | 50.2% | Toss-Up |
-| 2 | USC vs South Carolina Gamecocks | 55.4% | Close |
-| 3 | Charleston vs Kennesaw State | 59.8% | Close |
-| 4 | Florida Gulf Coast vs Georgia State | 61.3% |  |
-| 5 | Richmond vs Bethune-Cookman | 61.3% |  |
-| 6 | Northern Kentucky Norse vs Bellarmine | 61.3% |  |
-| 7 | UTEP vs Eastern Michigan | 61.3% |  |
+| 1 | Arkansas @ Michigan State | 50.3% | Toss-Up |
+| 2 | Saint Mary's @ UCLA | 50.3% | Toss-Up |
+| 3 | Baylor @ Gonzaga | 55.4% | Close |
+| 4 | Iowa State vs Tennessee | 61.1% |  |
+| 5 | LSU vs SMU | 61.1% |  |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 16
-- Away Teams Favored: 25
+- Home Teams Favored: 4
+- Away Teams Favored: 9
 - Max Confidence: 85.0%
-- Min Confidence: 50.2%
+- Min Confidence: 50.3%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (395 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (375 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
