@@ -1,15 +1,15 @@
 # 🏀 NCAA Basketball Predictions
 
-**Last Updated**: 2026-11-26 15:08:00 CST
-**Lineage**: config `7dd58a0bb0e2` · commit `9479720`
+**Last Updated**: 2026-11-27 14:48:39 CST
+**Lineage**: config `7dd58a0bb0e2` · commit `9cf98fc`
 
 ---
 
 ## 🔎 Today Snapshot
 
-- **Games Predicted Today**: 13
-- **Average Confidence**: 71.8%
-- **High (≥70%)**: 8 · **Medium (60-70%)**: 2 · **Other (<60%)**: 3
+- **Games Predicted Today**: 35
+- **Average Confidence**: 70.0%
+- **High (≥70%)**: 22 · **Medium (60-70%)**: 1 · **Other (<60%)**: 12
 
 ### 🏅 Pick Streaks
 
@@ -30,42 +30,58 @@
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Utah State** | USC | 85.0% |
-| 2 | **DePaul Blue** | Pittsburgh | 85.0% |
-| 3 | **Alabama Crimson Tide** | Kansas State | 85.0% |
-| 4 | **St. John's** | Louisville | 85.0% |
-| 5 | **Texas Tech** | Oregon Ducks | 85.0% |
-| 6 | **TCU Horned Frogs** | Creighton | 77.2% |
-| 7 | **Pacific** | Omaha | 77.2% |
-| 8 | **Jacksonville State** | UC Davis | 75.4% |
+| 1 | **Missouri** | Arkansas-Pine Bluff Golden | 85.0% |
+| 2 | **Virginia Tech** | Old Dominion | 85.0% |
+| 3 | **Little Rock** | Lane College | 85.0% |
+| 4 | **South Carolina Upstate** | Southern Wesleyan | 85.0% |
+| 5 | **Illinois** | Western Kentucky | 85.0% |
+| 6 | **Michigan** | Kansas State | 85.0% |
+| 7 | **Houston** | Oakland | 85.0% |
+| 8 | **Missouri State** | Oral Roberts | 85.0% |
+| 9 | **Northwestern** | Northeastern | 85.0% |
+| 10 | **North Carolina Wesleyan Battling Bishops** | East Carolina | 80.0% |
+| 11 | **Miami (FL)** | Alabama Crimson Tide | 76.7% |
+| 12 | **Villanova** | Kansas | 76.7% |
+| 13 | **Cincinnati** | Boston College | 76.7% |
+| 14 | **Maryland** | Oregon Ducks | 76.7% |
+| 15 | **Jacksonville State** | Omaha | 76.7% |
+| 16 | **UCF** | Georgia | 76.7% |
+| 17 | **North Dakota State** | North Texas | 76.7% |
+| 18 | **Pacific** | UC Davis | 76.7% |
+| 19 | **Radford** | American University | 76.7% |
+| 20 | **Tennessee** | Louisville | 73.7% |
+| 21 | **Wichita State** | Kentucky | 73.7% |
+| 22 | **Indiana** | Bowling Green | 72.5% |
 
 ### 📊 Medium Confidence Picks (60–70%)
 
 | # | Winner | Opponent | Confidence |
 |---|--------|---------|------------|
-| 1 | **Tennessee** | Iowa State | 61.1% |
-| 2 | **Southern Methodist** | SMU | 61.1% |
+| 1 | **Niagara Purple** | Lafayette | 60.3% |
 
 ### 👀 Games to Watch
 
 | # | Matchup | Confidence | Note |
 |---|---------|------------|------|
-| 1 | Arkansas @ Michigan State | 50.3% | Toss-Up |
-| 2 | Saint Mary's @ UCLA | 50.3% | Toss-Up |
-| 3 | Baylor @ Gonzaga | 55.4% | Close |
-| 4 | Iowa State vs Tennessee | 61.1% |  |
-| 5 | LSU vs SMU | 61.1% |  |
+| 1 | Drake @ Boise State | 51.0% | Toss-Up |
+| 2 | UMBC @ George Washington | 51.0% | Toss-Up |
+| 3 | Lehigh Mountain @ UC Santa Barbara | 51.0% | Toss-Up |
+| 4 | Texas Longhorns @ Saint Mary's | 51.0% | Toss-Up |
+| 5 | West Virginia @ North Carolina | 51.0% | Toss-Up |
+| 6 | San Diego State @ Texas Tech | 51.0% | Toss-Up |
+| 7 | Idaho @ Washington State | 51.0% | Toss-Up |
+| 8 | Penn State @ Mississippi State | 51.0% | Toss-Up |
 
 ### 📈 Distribution Summary
 
-- Home Teams Favored: 4
-- Away Teams Favored: 9
+- Home Teams Favored: 20
+- Away Teams Favored: 15
 - Max Confidence: 85.0%
-- Min Confidence: 50.3%
+- Min Confidence: 51.0%
 
 ### 📋 Full Data
 
-[→ View full predictions CSV (375 rows)](data/NCAA_Game_Predictions.csv)
+[→ View full predictions CSV (362 rows)](data/NCAA_Game_Predictions.csv)
 
 ---
 
